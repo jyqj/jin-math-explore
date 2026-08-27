@@ -8,6 +8,8 @@ PR 标题使用以下前缀之一：
 - `[infra]`：schema、脚本、CI 或 Skill；
 - `[P-XXXX][window]`：关闭一个研究窗口；
 - `[P-XXXX][source]`：来源或开放状态更新；
+- `[P-XXXX][genesis]`：首次创建 Project 并冻结 objective；
+- `[P-XXXX][state]`：纯运营状态变化；
 - `[P-XXXX][verify]`：独立验证；
 - `[shared][S-XXXX]`：发布跨项目共享结果；
 - `[P-XXXX][terminal]`：终局候选与审计。
@@ -20,6 +22,8 @@ PR 标题使用以下前缀之一：
 4. 计算产物必须有复现命令、版本、哈希和范围说明。
 5. 独立 verifier 不得修改被审查候选。
 6. 一个 PR 不得同时改变研究协议并依赖该新协议发布数学结论。
+
+分支名和类型边界见 [`program/git-workflow.md`](program/git-workflow.md)。
 
 ## 本地检查
 

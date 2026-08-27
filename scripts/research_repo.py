@@ -257,7 +257,7 @@ def validate_registry(root: Path) -> list[Problem]:
         project_path = value["project_path"]
         objective_sha = value["objective_sha256"]
         if op in PROJECTED_WITH_PROJECT:
-            expected_path = f"projects/{project_id}-{value['slug']}"
+            expected_path = f"projects/{project_id}--{value['slug']}"
             if project_path != expected_path or not safe_relative(project_path):
                 problems.append(Problem("project_path_invalid", f"expected {expected_path}", file_name))
                 continue
