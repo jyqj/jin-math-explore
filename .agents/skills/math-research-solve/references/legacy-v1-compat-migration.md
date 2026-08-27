@@ -1,0 +1,10 @@
+# Legacy v1 compatibility migration tombstone
+
+> [!CAUTION]
+> **Inspection-only replacement.** The historical migration/launcher procedure is retired. This filename exists so installation overwrites the old executable-looking reference.
+
+Preserve every original legacy v1/Prompt v3-v7 project byte, manifest, primary/backup receipt, checkpoint, handoff, counter, budget, executable pin, thread record, and recorded Goal-continuity failure. This reference MUST NOT New, Resume, invoke a launcher, dispatcher, migration, canary, scheduler host, child Goal, lease, Tick, or control amendment; it MUST NOT create/recover a Goal, mutate the old run, or infer authority from a path, receipt, marker, or caller `GoalStatus`.
+
+Startup v3 may inspect legacy records only to classify them read-only, including `goal_continuity_terminal -> stop_no_retry_preserve_run` and `legacy_execution_unsupported -> fail_closed_read_only_diagnosis`. Re-running migration is never a recovery path.
+
+The sole implemented additive exit is a user-explicit new active Goal plus v8 `LEGACY_SUCCESSOR` under the normalized same-target/nonexpanded research envelope derived from the frozen predecessor plus strict hash-cross-bound recorded amendments. Legacy HMAC fields are not authenticated and supply no authority. It preserves all old bytes and receipts and inherits every artifact, failure, route, audit, counter, and budget consumption into a new v8 run; it does not resume the old Goal. Legacy child-Goal/launcher/dispatcher/migration/lease/control-receipt authority is explicitly retired and replaced by direct-current-task/v8 + bounded collaboration + the guarded head helper; this is a mandatory safe contraction and never a route for invoking the retired artifacts. Legacy `rollover=false` / `rollover=never` blocks only automatic or same-run rollover, not this separately authorized successor. Any other difference, unresolved normalization gap, or expansion remains planning-only/read-only pending an implemented and authorized `RUN_SUCCESSOR`; confirmation alone cannot activate it.

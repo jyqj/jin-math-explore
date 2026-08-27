@@ -1,0 +1,1408 @@
+{
+  "schema": "jin-math-vendored-skills-lock/v1",
+  "packages": [
+    {
+      "name": "math-research-solve",
+      "version": "1.11",
+      "package_tree_sha256": "249daaa15b9f6d0dc61ca1d7e26db6b761beadb096cd60e3dc36778f88e60ca4",
+      "source_artifact": "pika_math_learning_toolkit-1.11",
+      "file_count": 249,
+      "files": [
+        {
+          "path": "SKILL.md",
+          "sha256": "1663f2cfb28daa725e4c9a9433e1cb1983bd9587c7be7ce33db65cf20b1cffe9",
+          "executable": false
+        },
+        {
+          "path": "agents/openai.yaml",
+          "sha256": "06bed13c87b15ee514363a4476ba8108e7acc2511d90f671e17a1d690c349375",
+          "executable": false
+        },
+        {
+          "path": "assets/heartbeat-prompt.md.template",
+          "sha256": "657ecee678e54bfbbbb5b1c662e6696b0cecc2d9c25458e8e56713df9f9b129b",
+          "executable": false
+        },
+        {
+          "path": "references/attempt-package-preflight-v13.md",
+          "sha256": "ea9b4b54a82b0b20cea1615dfea6e543e6c0d0493410f62beeb99f05a89fc0be",
+          "executable": false
+        },
+        {
+          "path": "references/campaign-authorization.md",
+          "sha256": "dac4408d3e32db9288dd33dd1e74d2eb8ad5964692ad10040a7fc346b90aeba3",
+          "executable": false
+        },
+        {
+          "path": "references/contract-and-artifact-template-v11.md",
+          "sha256": "887dd3e9c7cbdaca284c190a07c96ab4cd8cb598505dc5782d78941348b216b9",
+          "executable": false
+        },
+        {
+          "path": "references/contract-and-prompt-template-v10.md",
+          "sha256": "66584f93465640bd74894c1733da43af77d2c1061557271231304e546bd8b1f9",
+          "executable": false
+        },
+        {
+          "path": "references/contract-and-prompt-template-v7.md",
+          "sha256": "e3a5bee0c8645293b7da92f78bbf09efc00f7e4181ce9698d77c2ca9711ec9f0",
+          "executable": false
+        },
+        {
+          "path": "references/contract-and-prompt-template-v8.md",
+          "sha256": "61c3f0a80572150d3b3e77151cd0102d81da694d88977527bd3ffab9ba03a004",
+          "executable": false
+        },
+        {
+          "path": "references/contract-and-prompt-template.md",
+          "sha256": "eb48414305105588659042621eb11e01af7481b77d10f27c0ffb5c28f6d68a8b",
+          "executable": false
+        },
+        {
+          "path": "references/cycle-audit-protocol.md",
+          "sha256": "c75bcbcb2257fd4030b90c867587773e34e1cb60c610d8cc9d9b0c0092cccd6b",
+          "executable": false
+        },
+        {
+          "path": "references/execution-topology-protocol.md",
+          "sha256": "cef781882283c5fa60ee2bf19e011f46525c94ada0092569063de21c086cc07a",
+          "executable": false
+        },
+        {
+          "path": "references/goal-host-protocol-v8.md",
+          "sha256": "9038b4085628b512295b02e9d35e5119cc494083eee4fe96003e589609e384cd",
+          "executable": false
+        },
+        {
+          "path": "references/incremental-v8-to-v10-migration.md",
+          "sha256": "48766d0149f6043cb4793f4af5d7b403bfa98473669068300c711862f0b2811c",
+          "executable": false
+        },
+        {
+          "path": "references/legacy-math-research-prompt.md",
+          "sha256": "df972d07c6df8f669b56aea937cbd20f1bfa58268689653af2da2949194784ac",
+          "executable": false
+        },
+        {
+          "path": "references/legacy-semantic-archive.md",
+          "sha256": "097c42846ed15ef0dec22a6cc19defa2fd7cb8307ddf4466fe40094fdddfd7e6",
+          "executable": false
+        },
+        {
+          "path": "references/legacy-v1-compat-migration.md",
+          "sha256": "c556ecc37a4c246a281fdfb10361c468eb162e12acd47fe45fce9ecff084daff",
+          "executable": false
+        },
+        {
+          "path": "references/linux-platform-parity-receipt.json",
+          "sha256": "eab2832f211984da7c75375a51790e26d73866de5a4826c3174876a5f90aa138",
+          "executable": false
+        },
+        {
+          "path": "references/map-semantic-review-v1.md",
+          "sha256": "1aadf5bad6e6c1a48f37c26cdade421b1049b0f0a4ff2e8aee0cfdb6999a3f33",
+          "executable": false
+        },
+        {
+          "path": "references/migration-to-v12.md",
+          "sha256": "d7b18efc646c911892d781428223c2d87a4976745f173a36a342bfb8b5351825",
+          "executable": false
+        },
+        {
+          "path": "references/migration-to-v13.md",
+          "sha256": "748b69b15ad9abf1526db9fe00b527917dd88fca4432d6f4fcbbe6802a09f774",
+          "executable": false
+        },
+        {
+          "path": "references/migration-v10-to-v11.md",
+          "sha256": "3c1568965b1c0290a49729796453d3ddea4b90f0160ce3183e9d489ca1adcb59",
+          "executable": false
+        },
+        {
+          "path": "references/native-platform-validation.json",
+          "sha256": "691178eb1623da5681557bd29a964e79820414062d9d87b362848d741f221156",
+          "executable": false
+        },
+        {
+          "path": "references/observer-data-dictionary.md",
+          "sha256": "ea464a3724d77d7da7955af45d65e86ff62670300412fb897857e3aef034b2c2",
+          "executable": false
+        },
+        {
+          "path": "references/observer-phases.json",
+          "sha256": "4bfeb8325ebe38940c8e025993bc0eb727108092ba93801be5089907f63a7c1a",
+          "executable": false
+        },
+        {
+          "path": "references/persistence-contract-v13.md",
+          "sha256": "48db192571bb578023bcd17addc1c524c4ff0bf68a97dad4201b947ab2380fa3",
+          "executable": false
+        },
+        {
+          "path": "references/platform-parity-manifest.json",
+          "sha256": "393db2c2ef30427c3030fd6a4ab6d795126ceb1d2cd17843a0d023446ea30ba8",
+          "executable": false
+        },
+        {
+          "path": "references/platform-runtime.md",
+          "sha256": "af7eb6bf418e260d09a91f249891ffac3d5b1a0c265813de72af929f0d08b0b8",
+          "executable": false
+        },
+        {
+          "path": "references/project-core-cognition-v13.md",
+          "sha256": "9de131ec6bb8f61b967d81791cf52b66ef7cfcc9f74a76bc14b682d75e97db2e",
+          "executable": false
+        },
+        {
+          "path": "references/project-layout-v12.md",
+          "sha256": "9e3d50cd9660d5b723b4ce1491854c6e5e2246c3b6121c5b68b33a2c40d2ff48",
+          "executable": false
+        },
+        {
+          "path": "references/project-memory-and-intake-v11.md",
+          "sha256": "770da949e16b20fda9886160a2b1f8a005a0178b7c2ff0664764e81645cd6d19",
+          "executable": false
+        },
+        {
+          "path": "references/project-memory-and-intake-v12.md",
+          "sha256": "fb60b492f070df812cedf091800105e3f54cb07fd066ceae2c0fc24110366a27",
+          "executable": false
+        },
+        {
+          "path": "references/project-memory-and-intake-v13.md",
+          "sha256": "5d670cfbcb43002b0cc04faaf16d1c6700eb8dfac1309bbfc743cb2ac58510ba",
+          "executable": false
+        },
+        {
+          "path": "references/proof-search-continuity.md",
+          "sha256": "4fb4b0e14a0409fe02dea10c19743cd81e9fe86015d380bc28035a7d9ecbdcff",
+          "executable": false
+        },
+        {
+          "path": "references/research-assets-and-export-v12.md",
+          "sha256": "b71ede294d5f982fe74fe06ba93c7d0a0291c82eabc6ab7fd00c0d443dd6b408",
+          "executable": false
+        },
+        {
+          "path": "references/research-assets-and-export.md",
+          "sha256": "2774c5454f3531ffa6fcbec0e0f6fd89cdcf6d1fd437ae1d692a9e412c47496d",
+          "executable": false
+        },
+        {
+          "path": "references/research-map-protocol-v1.md",
+          "sha256": "31132982df0ea42d3fb0cf4ecf50ec26b847c345abfd570da12ce7bc520e2a25",
+          "executable": false
+        },
+        {
+          "path": "references/research-map-protocol-v4.md",
+          "sha256": "11706f35d23eecc7d0241010c1b454be7cb7ab8c9e177d59b3d7f59f8c2af8fc",
+          "executable": false
+        },
+        {
+          "path": "references/research-map-protocol.md",
+          "sha256": "b48b8c45b79b8572b458c895c113aee1060646809c416a8ae4591af81a6e3b5e",
+          "executable": false
+        },
+        {
+          "path": "references/research-project-archive.md",
+          "sha256": "d24c47870789b3d75b108bb95e64b9bd5fc6f7fbf22bbcf7a5aaa6f900878ff7",
+          "executable": false
+        },
+        {
+          "path": "references/startup-fast-path.md",
+          "sha256": "f35c92998870b443dde3027d17042a7c6a2ba70eaf252d8ae3d58eaba5d2f4f1",
+          "executable": false
+        },
+        {
+          "path": "references/state-machine-v10.md",
+          "sha256": "54f1b2f06f3b1b6633b56bbce32c8f03c5da0a1f84be78da580c0b528326c12d",
+          "executable": false
+        },
+        {
+          "path": "references/state-machine-v11.md",
+          "sha256": "cb88609f8c25debe6da97e94e366723e426d73ca81078d42230835f08bc7fee1",
+          "executable": false
+        },
+        {
+          "path": "references/state-machine-v12.md",
+          "sha256": "9de5d9711fb1e596f2a795171e8b1c1bb30a899e66367cce9fdf0d8f90b5f25d",
+          "executable": false
+        },
+        {
+          "path": "references/state-machine-v13.md",
+          "sha256": "59a42fd3543deccca4de0751ab80c57d3a14c8a807814c05762bf8b73a362b63",
+          "executable": false
+        },
+        {
+          "path": "references/state-machine-v9.md",
+          "sha256": "f6659bbf5d65c1d1cff9c140813053ef8b3753f3be168633cf7110c5e5dc11cc",
+          "executable": false
+        },
+        {
+          "path": "references/terminology-registry.json",
+          "sha256": "d9afd5ed6f0bda11e0568fe1509748ba1dd36c4be797b62c72192980479d4ec5",
+          "executable": false
+        },
+        {
+          "path": "references/terminology.md",
+          "sha256": "477b10f46713f05b5899da36094f4f186b4137f90ca7fa2d67abf3cfe4de0387",
+          "executable": false
+        },
+        {
+          "path": "references/transition-schemas-v13.md",
+          "sha256": "026f17df5e08f5feaf63549f88d624ea5f9b77429ec5b12012868c8126b80060",
+          "executable": false
+        },
+        {
+          "path": "references/window-efficiency-preflight-v13.md",
+          "sha256": "8be274a176cb062907c68197af40518039f324de7d434a5a6bf65e0ef5ff1973",
+          "executable": false
+        },
+        {
+          "path": "references/windows-production-sha256.json",
+          "sha256": "be5b2256b7047e6e8a6597d4810faccc3460a9056806b63ec10aed4251622fe3",
+          "executable": false
+        },
+        {
+          "path": "scripts/MathResearchApproveForMeArgvCompatV2.psm1",
+          "sha256": "074abf425cf7a6aef89ce9beeb2b7893ea714d4d7a2046b7775f7657cd68e259",
+          "executable": false
+        },
+        {
+          "path": "scripts/MathResearchApproveForMeArgvCompatV2.py",
+          "sha256": "d1206b69140eebab9434eb26346868bc145b12ebc312096db3b9c969262317ec",
+          "executable": false
+        },
+        {
+          "path": "scripts/MathResearchCycleLedger.psm1",
+          "sha256": "7e8af012b718a9c98515938779a7e8cd270d29593a5cc33c9b65d1a6ae404398",
+          "executable": false
+        },
+        {
+          "path": "scripts/MathResearchCycleLedgerLegacyV1Compat.psm1",
+          "sha256": "b1b6c9ea9cb4dcab8ee1cecbd26837e283c148ad21e5a225ff04d235af6665b1",
+          "executable": false
+        },
+        {
+          "path": "scripts/MathResearchCycleLedgerV2.psm1",
+          "sha256": "815d9555862a60d881c5c6ea25a49c173215471aa1addd88ebe652f5b8eaef74",
+          "executable": false
+        },
+        {
+          "path": "scripts/MathResearchCycleLedgerV2.py",
+          "sha256": "ee20b8f661233053a7159837264e1664a0943f349049b6a8cc3602fb24f33779",
+          "executable": false
+        },
+        {
+          "path": "scripts/MathResearchLauncher.psm1",
+          "sha256": "ab249896cffd998b8e681d41a2f19db19d452fdffe67f78cc25347e135536eb7",
+          "executable": false
+        },
+        {
+          "path": "scripts/MathResearchLauncherLegacyV1Compat.psm1",
+          "sha256": "7858501cca073e3e863ad4574b98a1c189537daf6390dc2a4ecd5b3824228614",
+          "executable": false
+        },
+        {
+          "path": "scripts/MathResearchLauncherV2.psm1",
+          "sha256": "e127f7fc4c6ae81cb06447319e6a597325962fcc8b5a510b5baba0d50ddeb026",
+          "executable": false
+        },
+        {
+          "path": "scripts/MathResearchLauncherV2.py",
+          "sha256": "f37559497cf02f4ad4b51bf2778fc0df6dc8cba67262964423b43b2ea729a75b",
+          "executable": false
+        },
+        {
+          "path": "scripts/MathResearchLegacyArchive.ps1",
+          "sha256": "d7b03cda24efea21891781e8ffd8b95209f8c3641bdd63bb97dcf4eae963ca1c",
+          "executable": false
+        },
+        {
+          "path": "scripts/MathResearchLegacyArchive.py",
+          "sha256": "f2cd2d75727a8f2a0a6cced2d6d9347560d99293044bd251340be52ad837fc22",
+          "executable": false
+        },
+        {
+          "path": "scripts/MathResearchLegacyV1CompatMigration.psm1",
+          "sha256": "d18afc25f4414185413047ce3eb2cc1b9e802469df329aa959f1530a5823d9bb",
+          "executable": false
+        },
+        {
+          "path": "scripts/MathResearchLegacyV1CompatMigration.py",
+          "sha256": "6df50486d4d1f3cbe1245fc2cdded213d3092048107f40b920f59b5e45f90a51",
+          "executable": false
+        },
+        {
+          "path": "scripts/MathResearchLegacyV1ControlPathAmendmentV2.psm1",
+          "sha256": "f10d1ca2d292f344fd10ab40c05b3f0700ed64cc4b1167efbafd998f610069ef",
+          "executable": false
+        },
+        {
+          "path": "scripts/MathResearchLegacyV1ControlPathAmendmentV2.py",
+          "sha256": "20a5c67e67a04c66db1d21ad6f6fa840a1d09b3590e5d02b0909912c020a0221",
+          "executable": false
+        },
+        {
+          "path": "scripts/MathResearchProjectArchive.psm1",
+          "sha256": "70e20b2ac3bfb8dd1de80cad775fb447399ca992dee76ceafca8356b76396326",
+          "executable": false
+        },
+        {
+          "path": "scripts/MathResearchProjectArchiveV2.psm1",
+          "sha256": "9cc9a848ad4101b4bdff0bf2bbfc84e72466d751fe3ec50a1a1ef25af30c5988",
+          "executable": false
+        },
+        {
+          "path": "scripts/MathResearchProjectArchiveV2.py",
+          "sha256": "96b33d78583c7a9a0d2cb9001f2bb285ca26ac68b29d301bb3fc6af615ca6b05",
+          "executable": false
+        },
+        {
+          "path": "scripts/attempt_package_preflight_v13.py",
+          "sha256": "df9095802eafc2b7675e99775c3588b28ab4d877a9f1373ac466c3eb8e99839a",
+          "executable": false
+        },
+        {
+          "path": "scripts/benchmark_math_research_startup_v9.py",
+          "sha256": "a356d0154316ca303852433b23bc55c492d2bb7e8801a60c2db90b14899551ef",
+          "executable": false
+        },
+        {
+          "path": "scripts/build_math_research_legacy_successor_v8.ps1",
+          "sha256": "9470afc5db02dac45e9c34dc3cc261f52059ffb42a13e75c6ef13ec416a00c3f",
+          "executable": false
+        },
+        {
+          "path": "scripts/build_math_research_legacy_successor_v8.py",
+          "sha256": "64b424912171a21ea7cda35af5ac979e5b70a2c1492506c9250c3889ffb5a328",
+          "executable": false
+        },
+        {
+          "path": "scripts/commit_math_research_head_v8.ps1",
+          "sha256": "deebd4ceea017f2ee587a2074d014e0c6a3c36450df0f6cb6b5caf49e5d2432c",
+          "executable": false
+        },
+        {
+          "path": "scripts/commit_math_research_head_v8.py",
+          "sha256": "b93d505d16225cbf95ffec2f2774df716841bccda662036adff363f6c7d5698b",
+          "executable": false
+        },
+        {
+          "path": "scripts/commit_math_research_merge_v11.ps1",
+          "sha256": "bf79d3a21d3108d4e8840082da69ac6f5d787ffd739d19a11e1ad0e5c1e47450",
+          "executable": false
+        },
+        {
+          "path": "scripts/commit_math_research_transition_v10.ps1",
+          "sha256": "3633dfd801ae6901b695d5f14feca9e387b37c79125eac8f65b858885b365a92",
+          "executable": false
+        },
+        {
+          "path": "scripts/commit_math_research_transition_v9.ps1",
+          "sha256": "9bd02cf33cc4f1617faa8b2fc918daddb5e7e18057513658aaa7fa47bd365ff5",
+          "executable": false
+        },
+        {
+          "path": "scripts/count_openai_tokens.js",
+          "sha256": "c5349a3bd5fae978cfe3d15552cdc30a9fca88c83aab9893a3da72f043fb8d1a",
+          "executable": false
+        },
+        {
+          "path": "scripts/finalize_attempt_package_v13.py",
+          "sha256": "976426fa0bc9ea348eb52b1142111679f6d3bb2f6a88f1410f763a91b2caa8b0",
+          "executable": false
+        },
+        {
+          "path": "scripts/invoke_math_research_assets.ps1",
+          "sha256": "224abb198be7a12616cb8249b853cadebad1f5bdf0f472a3d17ea79ccaa7fe8a",
+          "executable": false
+        },
+        {
+          "path": "scripts/invoke_math_research_canary_v2.ps1",
+          "sha256": "ef22d5e0e35405d1d988b15e26bfbf6825f90908f5dc972a161f7e8e6675982c",
+          "executable": false
+        },
+        {
+          "path": "scripts/invoke_math_research_canary_v2.py",
+          "sha256": "df161b4d76e750ba17eddeb0087481cb65cfdef73183d4fd14bdb9bf9feb26f1",
+          "executable": false
+        },
+        {
+          "path": "scripts/invoke_math_research_cycle.ps1",
+          "sha256": "01b1aadd57ce796252b078c1360160e77a17995efcdcb74c09f3ecd0fb1702e8",
+          "executable": false
+        },
+        {
+          "path": "scripts/invoke_math_research_cycle.py",
+          "sha256": "4621384490330b065a1c60e8cf451014b869cb529932ba614843f4716d113a73",
+          "executable": false
+        },
+        {
+          "path": "scripts/invoke_math_research_cycle_legacy_v1_compat.ps1",
+          "sha256": "6e0feb5ff6309be3433b0bd524cfbc48ea46f763c7d2ed0ba647cc14ee609ab2",
+          "executable": false
+        },
+        {
+          "path": "scripts/invoke_math_research_cycle_legacy_v1_compat.py",
+          "sha256": "5c481d83312b8e87f832693116eb76a5097d9a8d98a963917dd227401b12f1f2",
+          "executable": false
+        },
+        {
+          "path": "scripts/invoke_math_research_cycle_v2.ps1",
+          "sha256": "611611eac7547a05dd0ce77aecc7b238452c90d1b2da0f3825f06a1e9d2baddc",
+          "executable": false
+        },
+        {
+          "path": "scripts/invoke_math_research_cycle_v2.py",
+          "sha256": "d64d69c95a603cfa3d11c438477a179d55da6b7965bed52e34935d1541bffd37",
+          "executable": false
+        },
+        {
+          "path": "scripts/invoke_math_research_execution_topology.ps1",
+          "sha256": "5a024eb9b18d18e80cc4b8747f78ada006f4780d4f551c09ad7a1247cd496605",
+          "executable": false
+        },
+        {
+          "path": "scripts/invoke_math_research_layout_v12.ps1",
+          "sha256": "689e29b082b3b4b729e88c7c72cead4b19d8d20b896888f46f4d30f9b914ed1b",
+          "executable": false
+        },
+        {
+          "path": "scripts/invoke_math_research_legacy_v1_compat_canary_host.ps1",
+          "sha256": "c7d1f65b8707c0bc122020f1335b3240f3e9883fc9f5d59e27bce1536c294650",
+          "executable": false
+        },
+        {
+          "path": "scripts/invoke_math_research_legacy_v1_compat_canary_host.py",
+          "sha256": "9241946b611cababdc9feb993127feaf93b74b709a0fd74177ec57e51f84a334",
+          "executable": false
+        },
+        {
+          "path": "scripts/invoke_math_research_legacy_v1_compat_canary_host_v2.ps1",
+          "sha256": "70105665dc2c71d1f87690a092a5b21d38e828959680beaa5a8ceca08237485a",
+          "executable": false
+        },
+        {
+          "path": "scripts/invoke_math_research_legacy_v1_compat_canary_host_v2.py",
+          "sha256": "ed8cf4cf0c7937e37c4c40dacab273c86406b843ffe4a3921c8f75006c0001c0",
+          "executable": false
+        },
+        {
+          "path": "scripts/invoke_math_research_legacy_v1_compat_migration.ps1",
+          "sha256": "6549a827140b1c695e83a6147ac8d7b18ee8159466ad922441f0ef1549114f6e",
+          "executable": false
+        },
+        {
+          "path": "scripts/invoke_math_research_legacy_v1_compat_migration.py",
+          "sha256": "e40b3528907737595e338d53b3c46750ffa7cf2f88c88cd76b7c1e671b8dfce8",
+          "executable": false
+        },
+        {
+          "path": "scripts/invoke_math_research_legacy_v1_control_path_amendment_v2.ps1",
+          "sha256": "da09e8b6f869cef435e486ecd63412107d6cad00a0d9125c122d669fa4bf23ae",
+          "executable": false
+        },
+        {
+          "path": "scripts/invoke_math_research_legacy_v1_control_path_amendment_v2.py",
+          "sha256": "9a94e09ea0f54ff847b04a10c73d1f2ab36b3068152501058a42cba15a73746f",
+          "executable": false
+        },
+        {
+          "path": "scripts/invoke_math_research_migrate_v8_to_v10.ps1",
+          "sha256": "ef5c2c979501dff9a787b4544368454674add7dedff424279c3b81b8d57ae834",
+          "executable": false
+        },
+        {
+          "path": "scripts/invoke_math_research_project.ps1",
+          "sha256": "20e4a74582aa59fe7b6d75fe67f5ebd8617b54477180af04dee4a10485ab383b",
+          "executable": false
+        },
+        {
+          "path": "scripts/invoke_math_research_project.py",
+          "sha256": "e1c5da8b342564b83103cc41c9dda845546cd297eacdc2d4b5b18c15009abfd6",
+          "executable": false
+        },
+        {
+          "path": "scripts/invoke_math_research_project_v2.ps1",
+          "sha256": "0fd160995ecb5b08b6063d629bf2a781017325a7675b1c866e91deb84af7d832",
+          "executable": false
+        },
+        {
+          "path": "scripts/invoke_math_research_project_v2.py",
+          "sha256": "896f265ef5df2b3fb555dc1bd6c0c18565eaf44793d240c0a25867dedd5f0dc4",
+          "executable": false
+        },
+        {
+          "path": "scripts/invoke_math_research_startup_v1.ps1",
+          "sha256": "0d357b92529fad023459770390c12b0c4b9593577653e1a23c2eef67ce90ab38",
+          "executable": false
+        },
+        {
+          "path": "scripts/invoke_math_research_startup_v1.py",
+          "sha256": "cce8d601988093d9493afee34aedfa5204e0ed7f872ea3358675a62aee8cc5ff",
+          "executable": false
+        },
+        {
+          "path": "scripts/invoke_math_research_startup_v2.ps1",
+          "sha256": "cdb84631edebdaf12cabe354e794bb9b074bbaac00452ff7a3eedd9bd89ba875",
+          "executable": false
+        },
+        {
+          "path": "scripts/invoke_math_research_startup_v2.py",
+          "sha256": "abb61c899775dc2c07f71a79ed3d72e5db37c87c66e071c88ea502f64a6852ff",
+          "executable": false
+        },
+        {
+          "path": "scripts/invoke_math_research_startup_v3.ps1",
+          "sha256": "88810a80caeb691a210e3f91f881788850bcdfd79cf3bfd31911840da7f0d5d0",
+          "executable": false
+        },
+        {
+          "path": "scripts/invoke_math_research_startup_v3.py",
+          "sha256": "236e8cb882856482f8e6ad9e620fe69e7a173f3001b1d7c4ba9f37e011c65b2f",
+          "executable": false
+        },
+        {
+          "path": "scripts/invoke_math_research_startup_v4.ps1",
+          "sha256": "3cbfe0c86095c87fe651d7db56a4b9c6b6246d9d50dd4cd559169e3f445cb8fb",
+          "executable": false
+        },
+        {
+          "path": "scripts/invoke_math_research_startup_v4.py",
+          "sha256": "9467b5df617f7f101346601206bb0b288eb707b15018d451a9a6c2b2e549705f",
+          "executable": false
+        },
+        {
+          "path": "scripts/invoke_math_research_startup_v5.ps1",
+          "sha256": "6b642c641fb412e4dc3485c690d0bef9fc535fd71f5f9beb442aaed8934f3ba9",
+          "executable": false
+        },
+        {
+          "path": "scripts/invoke_math_research_startup_v5.py",
+          "sha256": "60209f791ac3b13eb13f2b59ed819d33596e21b951a610e8486a875d8509f9d8",
+          "executable": false
+        },
+        {
+          "path": "scripts/invoke_math_research_startup_v6.ps1",
+          "sha256": "59916975c8783507ca73f5842de005b0d0c61ee9285db00d002953d38284bf07",
+          "executable": false
+        },
+        {
+          "path": "scripts/invoke_math_research_startup_v6.py",
+          "sha256": "efc42f390f56abfffcbc15860026db6f8773cb0060bc97d5c631ee4563349519",
+          "executable": false
+        },
+        {
+          "path": "scripts/invoke_math_research_startup_v7.ps1",
+          "sha256": "8932130b5f3bddd66f904179b2108d05747845aeafa6c4e184ab4ac117b748ab",
+          "executable": false
+        },
+        {
+          "path": "scripts/invoke_math_research_startup_v7.py",
+          "sha256": "5d94efba2aaabd64ec42ffa3126f76bf91ec46cb21bdccd2cf988fa3a4bdbf35",
+          "executable": false
+        },
+        {
+          "path": "scripts/invoke_math_research_startup_v8.ps1",
+          "sha256": "27c58fe732697d261808f5527d136b4e66e75de66071f3ea5b8ebe4d9a075237",
+          "executable": false
+        },
+        {
+          "path": "scripts/invoke_math_research_startup_v8.py",
+          "sha256": "80ff8b4745ad471e97628d7c4ab2c1c7432859b1427217a7aba9d411d1413b7b",
+          "executable": false
+        },
+        {
+          "path": "scripts/invoke_math_research_ticket_preflight_v10.ps1",
+          "sha256": "bcbae8aa15b5c37b930492e134523a4c1e4364c7ae80d2bb706d8ab4276d66c6",
+          "executable": false
+        },
+        {
+          "path": "scripts/invoke_math_research_ticket_preflight_v8.ps1",
+          "sha256": "58741376fab0ac9a082b8e6852a0c751e4942f403d821035161c5a611ad8e5b3",
+          "executable": false
+        },
+        {
+          "path": "scripts/invoke_math_research_v13.ps1",
+          "sha256": "6b8998e56c33fa9eddde70a71cb45b2d08645741b13df139665c18e920b06e6b",
+          "executable": false
+        },
+        {
+          "path": "scripts/invoke_math_research_v13.py",
+          "sha256": "0de5b5486bce1bc750900af5beff2b7ea78cce1615d862c0c1b3377b46eea33b",
+          "executable": false
+        },
+        {
+          "path": "scripts/invoke_math_research_worker_dispatch_preflight.ps1",
+          "sha256": "a4b3f6ff12209a4481facf7cae12446706314b74330e610ab78ee8fd9ce03420",
+          "executable": false
+        },
+        {
+          "path": "scripts/launch_math_research.ps1",
+          "sha256": "6563f2a8798c351bf15d14685969a60e2f243c16be88ed6c95ab904f04e514b5",
+          "executable": false
+        },
+        {
+          "path": "scripts/launch_math_research.py",
+          "sha256": "82c26120b0b3231ab42a36aef7c00b4d28d348945cfed2d7082c39912463d38c",
+          "executable": false
+        },
+        {
+          "path": "scripts/launch_math_research_legacy_v1_compat.ps1",
+          "sha256": "9a7b6327de7d1158e01f24fa9023cbe03a200a6d616ba7e6cac50ae0c58ecd9c",
+          "executable": false
+        },
+        {
+          "path": "scripts/launch_math_research_legacy_v1_compat.py",
+          "sha256": "3590e6f89b39db045f061371b741d8d4f8c33115a7b35ce68540b4e677c4121e",
+          "executable": false
+        },
+        {
+          "path": "scripts/launch_math_research_legacy_v1_compat_v2.ps1",
+          "sha256": "01197a429dba35a49a39b6fbe42ede7bec37bc6e50ed57be033370bbde20b9dd",
+          "executable": false
+        },
+        {
+          "path": "scripts/launch_math_research_legacy_v1_compat_v2.py",
+          "sha256": "3dc5fee3453cd7ad3bbe467e6afa12fab20f77330b647ead4004b5bfa6107671",
+          "executable": false
+        },
+        {
+          "path": "scripts/launch_math_research_v2.ps1",
+          "sha256": "0dff02021e3e19d4f4722aec21c5f61bf0eb08a26d4d22ac0999ebcf6994cd79",
+          "executable": false
+        },
+        {
+          "path": "scripts/launch_math_research_v2.py",
+          "sha256": "b2be16b35f7c334fd1974d4ffa6145548354e000673fc30daffe4236ee34d38b",
+          "executable": false
+        },
+        {
+          "path": "scripts/map_semantic_review_v1.py",
+          "sha256": "90ec33f362d320dc1ed1664026682d2cbf9a2080732a03992a44614f279b9035",
+          "executable": false
+        },
+        {
+          "path": "scripts/math_research.sh",
+          "sha256": "740f503bb6d1128c62bbfe891d8a06253ae26db900257d7cb426ac325711db17",
+          "executable": false
+        },
+        {
+          "path": "scripts/math_research_assets.py",
+          "sha256": "c1d00816e186e786e5b0ced1e906095e26be73f82db4971c3d0cb5ee6db562b7",
+          "executable": false
+        },
+        {
+          "path": "scripts/math_research_commit_v13.py",
+          "sha256": "a8d5bd8f2adcef692720bbe86b458d9e46c5798f6e7eac30fa446861036b5ae5",
+          "executable": false
+        },
+        {
+          "path": "scripts/math_research_control_primitives.py",
+          "sha256": "8086fc01eda28ceee042f8a575d6c7e41654923defb727babc26ea8eb5b54099",
+          "executable": false
+        },
+        {
+          "path": "scripts/math_research_execution_topology.py",
+          "sha256": "44abef07f251f93a7586e8c1119991441de598238bc7db2e619c1a5029a3ca63",
+          "executable": false
+        },
+        {
+          "path": "scripts/math_research_head_v8.py",
+          "sha256": "eb1fa80632acb40c12de4c04ab57ce9fc20cb5ee48e1e0d1c98ff305e6faa8c5",
+          "executable": false
+        },
+        {
+          "path": "scripts/math_research_launcher_cli.py",
+          "sha256": "f992391066a62ea4a8283347a1d8970d55ce869200fcf2adaba7b726c5ba4c4a",
+          "executable": false
+        },
+        {
+          "path": "scripts/math_research_launcher_v6_cli.py",
+          "sha256": "4cefe13c28e6fae9996229a87565397c4f5d6bc5f52909c11b2ee279ab427786",
+          "executable": false
+        },
+        {
+          "path": "scripts/math_research_legacy_compat_launcher.py",
+          "sha256": "cb3b2615dea927094ed881b3aadc8f2766309ac8c6ab123753ad97ae8d2dec84",
+          "executable": false
+        },
+        {
+          "path": "scripts/math_research_migrate_v12_to_v13.py",
+          "sha256": "0860ec5b06aec86186e4a02909b9fae9538f043d4d2463bb7572e9a8e0b3a895",
+          "executable": false
+        },
+        {
+          "path": "scripts/math_research_migrate_v8_to_v10.py",
+          "sha256": "ad40d876635cb469b21ff2ea1212f6b290c5d3a1c025bac96d8531e6ccca6bbf",
+          "executable": false
+        },
+        {
+          "path": "scripts/math_research_platform.py",
+          "sha256": "86ee6502e19ad47bb1c9a0d86c9fda75c49fd75918f08bdc5ff27107efa9c2f4",
+          "executable": false
+        },
+        {
+          "path": "scripts/math_research_process_control.py",
+          "sha256": "d98ef564c97f50460a5b866a299e7da7443335d737130e30fb7e7e6a43b35711",
+          "executable": false
+        },
+        {
+          "path": "scripts/math_research_process_identity.py",
+          "sha256": "30b3139cc5771d2d03e9ec75c26883f09ef13ba85a7ebbd8b5643e27e62cffc5",
+          "executable": false
+        },
+        {
+          "path": "scripts/math_research_startup_router.py",
+          "sha256": "25b3fe3bf616cd4e83c6a2e5bed16b935d49100884421ceb8d0317c2bebe6796",
+          "executable": false
+        },
+        {
+          "path": "scripts/math_research_startup_v1.py",
+          "sha256": "b196bb52523b5fbe5dfb9d32ef4bf7b41c495fdb06cf3769aaa7bd90a1a053c0",
+          "executable": false
+        },
+        {
+          "path": "scripts/math_research_startup_v3.py",
+          "sha256": "b00d090bf3bb0c16ce715ba8eef22b1a8b99b213958c49de5911fb29fbe19923",
+          "executable": false
+        },
+        {
+          "path": "scripts/math_research_state_v10.py",
+          "sha256": "64acdd0e50c1f2cd8d11b9ef2eea6232e5329a6eb335069bef543e9877989a7d",
+          "executable": false
+        },
+        {
+          "path": "scripts/math_research_state_v11.py",
+          "sha256": "36f9158085308b5a0f45087122539ea1e4bf074308bd9ad0e427d73633e2b056",
+          "executable": false
+        },
+        {
+          "path": "scripts/math_research_state_v12.py",
+          "sha256": "5f5f5f20450e52057f9e7a5f72bb8ff5a4509e36ce82b8e590bd03bc6bec994d",
+          "executable": false
+        },
+        {
+          "path": "scripts/math_research_state_v13.py",
+          "sha256": "b8bfc862a8c220e65e1433f2cf0c7a922657434f8f522e8fd27c8f652f57de66",
+          "executable": false
+        },
+        {
+          "path": "scripts/math_research_state_v9.py",
+          "sha256": "58ff61b5c58d7ddd630ce8164eea0dd9631fa790700ac830a55b2c4e0e8b5b6d",
+          "executable": false
+        },
+        {
+          "path": "scripts/math_research_worker_dispatch_preflight.py",
+          "sha256": "74f39ca0ac5b4a38ab6af2c7d1f871a0900c99f62445b63052234c7eb8552893",
+          "executable": false
+        },
+        {
+          "path": "scripts/observer_run.ps1",
+          "sha256": "e146a1f020e897a778577744ee321cd23ff7a2857b016b7958286cd48d4ae850",
+          "executable": false
+        },
+        {
+          "path": "scripts/observer_run.py",
+          "sha256": "8df9cdf1d29d1e207ecc0b8aac6a5824d6c38c802c9fbbe3d14538238a785187",
+          "executable": false
+        },
+        {
+          "path": "scripts/prepare_math_research_merge_v11.ps1",
+          "sha256": "d2c5c71f4d872949711921633c9518a423721a4e8a641714c6f5b243c654d2f5",
+          "executable": false
+        },
+        {
+          "path": "scripts/prepare_math_research_successor_v10.ps1",
+          "sha256": "c79f700e2639693930eb2ce2cd8465f1d28ea05ec07ed868b7cad08fbf5e0631",
+          "executable": false
+        },
+        {
+          "path": "scripts/prepare_math_research_successor_v9.ps1",
+          "sha256": "11e6a4fabcbf990df9de1b8ea4f4460ddd0ce42eae6082420d18ef65dcf6239b",
+          "executable": false
+        },
+        {
+          "path": "scripts/prepare_math_research_transition_v10.ps1",
+          "sha256": "5d8092951e674cea33e4c76f203efc8ee2791719aea65c544572cef526f44950",
+          "executable": false
+        },
+        {
+          "path": "scripts/prepare_math_research_transition_v9.ps1",
+          "sha256": "48310962db956306af41731511270604e11e08ae365680a4e7c9403972cf39ba",
+          "executable": false
+        },
+        {
+          "path": "scripts/project_core_cognition_v13.py",
+          "sha256": "dbceb90dcee326d374b29762d5162b588058008d88e5c7e032b58c08b8c47071",
+          "executable": false
+        },
+        {
+          "path": "scripts/repair_v12_root_layout.py",
+          "sha256": "0176da748487b2644dde203c3910c33c1d682d0f93e6f2a66b1ab1e4775bc725",
+          "executable": false
+        },
+        {
+          "path": "scripts/research_map_v1.py",
+          "sha256": "4d2d3d810bd0d5b8e50a734a87e93fa49d2e71d32f2525e09d3b5cacb956f19f",
+          "executable": false
+        },
+        {
+          "path": "scripts/research_map_v3.py",
+          "sha256": "8119a5bca3680b2fb79c048bdb6e154afee6ce79fd76480beba194bec73870ea",
+          "executable": false
+        },
+        {
+          "path": "scripts/research_map_v4.py",
+          "sha256": "45507a30a3ba7418915ba5316ad0cafd8a800d73c23c0e93f8709f1692040653",
+          "executable": false
+        },
+        {
+          "path": "scripts/rollback_math_research_merge_v11.ps1",
+          "sha256": "bfdeae0d1b7e7ca705a1c5dedee125d23064fbc9c1b36b94cd97a54a58969be2",
+          "executable": false
+        },
+        {
+          "path": "scripts/run_platform_parity_tests.py",
+          "sha256": "3043a804b5d03a3ab02e75001afb596a5e8d5cdd515f503e9c36f53defedd22e",
+          "executable": false
+        },
+        {
+          "path": "scripts/stop_math_research.ps1",
+          "sha256": "643928924f99543f81cbec466c1a551c5732f4e83735e18b133ff0e38e83d3ff",
+          "executable": false
+        },
+        {
+          "path": "scripts/stop_math_research.py",
+          "sha256": "ae56f41c3b8b1943ce6e02199e9f009df9a65b9d0e640bd9eb91102a04d71650",
+          "executable": false
+        },
+        {
+          "path": "scripts/stop_math_research_v2.ps1",
+          "sha256": "4730766304cd2ed24cf1baa041d1e10d8391ccf3a9213eccd010a8d1c283bea7",
+          "executable": false
+        },
+        {
+          "path": "scripts/stop_math_research_v2.py",
+          "sha256": "42d84e78a6f889c5b3c1781cafbc10d1e3f54cc4977a2602d8244f816877575f",
+          "executable": false
+        },
+        {
+          "path": "scripts/test_approve_for_me_argv_compat_v2_native.py",
+          "sha256": "44cefa726e4a3ddeb9e3be9c021e0019f4b418fb0ca245c7731613ad8861bac7",
+          "executable": false
+        },
+        {
+          "path": "scripts/test_attempt_package_preflight_v13.py",
+          "sha256": "8ef40519b52f5177ac3c1d76dccdc6f88aa24fc482650bfb3fd83370105a7363",
+          "executable": false
+        },
+        {
+          "path": "scripts/test_control_path_amendment_v2_native.py",
+          "sha256": "220e1bb125741e1f1905005cd47918c39c1a81b3a7a64b0c3487c61932c800f3",
+          "executable": false
+        },
+        {
+          "path": "scripts/test_invoke_math_research_v13_native.py",
+          "sha256": "d7c325133fc985d4dd15fd32bc3bc32109a47b95c79d3da1fdfabab01f7cfc43",
+          "executable": false
+        },
+        {
+          "path": "scripts/test_legacy_cli_entrypoints_native.py",
+          "sha256": "7ee2e957116f6992bd87af110d1938ab42924c42fe1d5cc85969f1c360bbb065",
+          "executable": false
+        },
+        {
+          "path": "scripts/test_legacy_v1_compat_migration_native.py",
+          "sha256": "45a6b52d2e3a4c5763fc12f499c94bfdee2ad29665fb7a969a6e7d0d71507201",
+          "executable": false
+        },
+        {
+          "path": "scripts/test_map_semantic_review_v1.py",
+          "sha256": "33aeead3cbd147d66e561d69bc6342d67eb1bd91700a6fd0c0b7491f36ea35c1",
+          "executable": false
+        },
+        {
+          "path": "scripts/test_math_research_assets.py",
+          "sha256": "7b336685e434fa91316293f8af5a4bed45a44bc3c94f60e940c84c77b2be3432",
+          "executable": false
+        },
+        {
+          "path": "scripts/test_math_research_control_path_amendment_v2.ps1",
+          "sha256": "355d903788727435086ac3cb39d10bc75526404e99d3790e2319150c6532584e",
+          "executable": false
+        },
+        {
+          "path": "scripts/test_math_research_control_path_amendment_v2.py",
+          "sha256": "4d5eae34ac9e2b8e4adaff27df130fa089032459f2e7026ec9cb7b0d7442e913",
+          "executable": false
+        },
+        {
+          "path": "scripts/test_math_research_control_primitives.py",
+          "sha256": "97c4b493a81dd88e75abe895f772c228069fb47bcf6b0d49428bd33bb9ed2abe",
+          "executable": false
+        },
+        {
+          "path": "scripts/test_math_research_cycle_ledger.ps1",
+          "sha256": "28916e9ee27a8f620c84a25b2e16fbdf5b413977bd8c2b8051d85af7df12b0ce",
+          "executable": false
+        },
+        {
+          "path": "scripts/test_math_research_cycle_ledger.py",
+          "sha256": "e0c2f42c84e2de23dc51371aa619179b95a77537a693a39efe2ecfdd976001c7",
+          "executable": false
+        },
+        {
+          "path": "scripts/test_math_research_cycle_ledger_native.py",
+          "sha256": "3ca58ee4a34093cf8988daa8a54529ad07f3de67c2ad907cc7d041560fdca09a",
+          "executable": false
+        },
+        {
+          "path": "scripts/test_math_research_execution_topology.py",
+          "sha256": "884a5d468e6e06dacf2408522c4821e556ab9aee65e4a7b8bb546c8943239912",
+          "executable": false
+        },
+        {
+          "path": "scripts/test_math_research_head_commit_v8.ps1",
+          "sha256": "21a3d8629ac13a9cd34ec46bcba4753bd2ec88240c36bb5acc6518327d0a3b3a",
+          "executable": false
+        },
+        {
+          "path": "scripts/test_math_research_head_commit_v8.py",
+          "sha256": "4f0c24a8ba3c8d3b359d163d6c158e1ab354da5b47070f4f4c549a4e5dea7fb4",
+          "executable": false
+        },
+        {
+          "path": "scripts/test_math_research_head_v8_native.py",
+          "sha256": "3bbca7a01d19377105026d599b994a584e673607e5370cda6078da0a828342b5",
+          "executable": false
+        },
+        {
+          "path": "scripts/test_math_research_launcher.ps1",
+          "sha256": "074ec2dae9adb31e91a6f575586d6ee5acb5730c34d09c7f28343a945e2b50ac",
+          "executable": false
+        },
+        {
+          "path": "scripts/test_math_research_launcher.py",
+          "sha256": "94efc07a8cc9902bb30c52574f5b09d93371d02e58e023efbf16dcdfe595daa8",
+          "executable": false
+        },
+        {
+          "path": "scripts/test_math_research_launcher_native.py",
+          "sha256": "8d472d5e55a31155b2d95fd2bada8f617cc31a5f27011f5a80cb20fe786c122f",
+          "executable": false
+        },
+        {
+          "path": "scripts/test_math_research_launcher_v2.ps1",
+          "sha256": "1a0500b2325cbf9ccf8ce8cd2813ef9f40fc638168408af98a42cc60f0e70127",
+          "executable": false
+        },
+        {
+          "path": "scripts/test_math_research_launcher_v2.py",
+          "sha256": "ac7bee407eb66ef77a17306b96a21cbd0f6b3b869c00b772e24b8439797f2e54",
+          "executable": false
+        },
+        {
+          "path": "scripts/test_math_research_legacy_successor_v8.ps1",
+          "sha256": "a10c398a3f272d99198b3fff38fd4ad3478b78ffc54a5eafbfa18bd28456d042",
+          "executable": false
+        },
+        {
+          "path": "scripts/test_math_research_legacy_successor_v8.py",
+          "sha256": "4f0c24a8ba3c8d3b359d163d6c158e1ab354da5b47070f4f4c549a4e5dea7fb4",
+          "executable": false
+        },
+        {
+          "path": "scripts/test_math_research_legacy_v1_compat.ps1",
+          "sha256": "1fcd9782b3a9050ea2e90f8d501a232aaad21ee80e2ebc55d81064d98ca7c0dc",
+          "executable": false
+        },
+        {
+          "path": "scripts/test_math_research_legacy_v1_compat.py",
+          "sha256": "ea8cabc58ef822c79443143ebbb2faee5436cfecf454dd490bce9a2c5d1ec2d1",
+          "executable": false
+        },
+        {
+          "path": "scripts/test_math_research_migrate_v8_to_v10.py",
+          "sha256": "8e59d7ebdd8fa52215ddc14fccafc63346137170c2a11e7f7a5b2daba60fb512",
+          "executable": false
+        },
+        {
+          "path": "scripts/test_math_research_platform.py",
+          "sha256": "ee5c8dee8cc40c6e6c9b8824535bf631a7798db19ba74fa9c1f415b2a1dea2df",
+          "executable": false
+        },
+        {
+          "path": "scripts/test_math_research_process_identity.py",
+          "sha256": "92b1852fb2b27333f78c573270fb1041c71f406f37f7d67cd279fdfef48bc364",
+          "executable": false
+        },
+        {
+          "path": "scripts/test_math_research_project_archive.ps1",
+          "sha256": "5ca7b7cec308e3716c8d497be2e6eb62bda5a094d30aa5cdd0dff897b8a49aff",
+          "executable": false
+        },
+        {
+          "path": "scripts/test_math_research_project_archive.py",
+          "sha256": "7ea25e6c622937a6e96b563fa13e0c4aa1c6fafae189e3bf254d3573513930b5",
+          "executable": false
+        },
+        {
+          "path": "scripts/test_math_research_project_archive_native.py",
+          "sha256": "0b6829959928eb4edf4b7f01648fcb27987ce5884e83be5f8da0b44abb882c5f",
+          "executable": false
+        },
+        {
+          "path": "scripts/test_math_research_startup_router_native.py",
+          "sha256": "a8e3a912bdf6359c8b6c111a764a68d1dae4d5f44f1380201eff059f2c952b36",
+          "executable": false
+        },
+        {
+          "path": "scripts/test_math_research_startup_v1.ps1",
+          "sha256": "ddf3c3b49f0b6e325bbf1d9bad8f61ec5fd589a18eabf5285945dd8dbac6c3eb",
+          "executable": false
+        },
+        {
+          "path": "scripts/test_math_research_startup_v1.py",
+          "sha256": "bb43549ff3e69ffbdbd4416c50dadf1dd93248837d8fdca3eeb3f856e22a5f52",
+          "executable": false
+        },
+        {
+          "path": "scripts/test_math_research_startup_v1_native.py",
+          "sha256": "59dae2fb559485430ded2eded2255664a7a46d9bb48db8b5d20b0b9a3e15ee9f",
+          "executable": false
+        },
+        {
+          "path": "scripts/test_math_research_startup_v3.ps1",
+          "sha256": "3ca9212049c0d50bb809244edfed28c595810d74ec952fb086f61679925d4d41",
+          "executable": false
+        },
+        {
+          "path": "scripts/test_math_research_startup_v3.py",
+          "sha256": "950c24da03617f7a1541423613f5cc7546718de8b4ebdf6fcc53e07e7dbc7053",
+          "executable": false
+        },
+        {
+          "path": "scripts/test_math_research_startup_v3_native.py",
+          "sha256": "06ef6124a7a9524bde426466ea9ceb651221f614feded4e97f2ee01c2f8044d3",
+          "executable": false
+        },
+        {
+          "path": "scripts/test_math_research_state_v10.py",
+          "sha256": "fbb7264cc8fc80dea3cccb67e691e0520a5797b793b3c5cadaa1a56e1f5d14ad",
+          "executable": false
+        },
+        {
+          "path": "scripts/test_math_research_state_v11.py",
+          "sha256": "c3f8af6799ace8b7f4183907e8c42d47dd44dd579ca440313e96a4c4c32c823a",
+          "executable": false
+        },
+        {
+          "path": "scripts/test_math_research_state_v12.py",
+          "sha256": "2896eed2c96717c6535574af44b267b29cbca239ccae4fbfbc98408a10b9e79a",
+          "executable": false
+        },
+        {
+          "path": "scripts/test_math_research_state_v9.py",
+          "sha256": "41c2b8b4bb36ca2a040444024581bfa284e47350e2017b28fd5071c47be41d20",
+          "executable": false
+        },
+        {
+          "path": "scripts/test_math_research_ticket_preflight_v8.py",
+          "sha256": "b84593a6a2859b6f963b37eed6414cdd322a0925a62ffcb49b057f42d327d9ac",
+          "executable": false
+        },
+        {
+          "path": "scripts/test_math_research_v2_bundle_regression.ps1",
+          "sha256": "fc81add62cbdd7e1487e070b682bcaf75d51146c2e6e8c1ea1534e47fe568000",
+          "executable": false
+        },
+        {
+          "path": "scripts/test_math_research_v2_bundle_regression.py",
+          "sha256": "beca3de6f93c5341da86f3da7bcb703df7a5d8d38456dfc6a6b7650e23997d79",
+          "executable": false
+        },
+        {
+          "path": "scripts/test_math_research_v9.ps1",
+          "sha256": "eedd01ddfce6bd9a172067e0a242ab11f576cb8abb39f6fcda9c3c9e0325c734",
+          "executable": false
+        },
+        {
+          "path": "scripts/test_math_research_v9.py",
+          "sha256": "45471140de3487467ec21b36c73ba268cf66a69447a152c67942e59e13fe6c34",
+          "executable": false
+        },
+        {
+          "path": "scripts/test_math_research_worker_dispatch_preflight.py",
+          "sha256": "c80817ded685edffb5e1f6fe4a15ec51b2c67f74db4bd9678da6a70453edf6d5",
+          "executable": false
+        },
+        {
+          "path": "scripts/test_native_migrate_v8_to_v10.py",
+          "sha256": "e222816825da7f0c6d41581a29e610d2536327c1d849f7eb13e37d6101852249",
+          "executable": false
+        },
+        {
+          "path": "scripts/test_native_v9_v10_entrypoints.py",
+          "sha256": "02d0a4bb6c0d12edb33c9b0f238303b1fae71b3568cce627b8caa47385942e91",
+          "executable": false
+        },
+        {
+          "path": "scripts/test_observer_run_native.py",
+          "sha256": "f8fa00b7b3daafd97c0f8c3a38ca7f3c7eb23a20992111818f5942c6bcafeeb2",
+          "executable": false
+        },
+        {
+          "path": "scripts/test_research_map_synthesis.py",
+          "sha256": "aee3c7f9b2b01632f8f8ffe1ca9c394779b97bc1bcd80ce5d1837656c7faabd4",
+          "executable": false
+        },
+        {
+          "path": "scripts/test_research_map_v3.py",
+          "sha256": "13e2a4190825edc9dba42b5f8fe947bad440e81ec46a6728d23f9dc8526d43d0",
+          "executable": false
+        },
+        {
+          "path": "scripts/test_research_map_validator.py",
+          "sha256": "f056a7eee0450be58d08d2715f5dab2a7fe950fa61978e9c9149a946bace96e9",
+          "executable": false
+        },
+        {
+          "path": "scripts/test_stop_math_research_native.py",
+          "sha256": "44236db9d58bb16d429b009fc3f8e2308a27138182964a39e31fbeb5b84a5a34",
+          "executable": false
+        },
+        {
+          "path": "scripts/test_terminal_sufficient_conditions.py",
+          "sha256": "15d7d9efadb309f26fd282c713c413c6b10b3325575b89a79c05ab13a04e11df",
+          "executable": false
+        },
+        {
+          "path": "scripts/test_test_control_path_amendment_v2_native.py",
+          "sha256": "a34a71a1f199d3b30c0ac0216350ea0a295a062b9e20a729c9e2b0b24b8a3c65",
+          "executable": false
+        },
+        {
+          "path": "scripts/test_test_math_research_v9_native.py",
+          "sha256": "25bf380bf05ff87fedc16dd8ed519b0f8901a224a924b3fd89d6f4cc59205594",
+          "executable": false
+        },
+        {
+          "path": "scripts/test_v12_root_repair.py",
+          "sha256": "a7999de5f7be58e38dc6fa47f0b6ab3dbe77eab4e75f0e485fe1abfc8af9f8bb",
+          "executable": false
+        },
+        {
+          "path": "scripts/test_v13_contract_and_harness.py",
+          "sha256": "75b93bdd2c12c757a985ff4d48c877a72438eda89448fdca9da5d62fe38322c6",
+          "executable": false
+        },
+        {
+          "path": "scripts/test_validate_platform_parity.py",
+          "sha256": "f783f885b72d3cb5229ff27b68b475d8e1fe3ce531513fe3844743c36cb1635f",
+          "executable": false
+        },
+        {
+          "path": "scripts/test_validate_terminology.py",
+          "sha256": "3bed1b59ecc0c680e445b7d016f02b38a849f7056a50e9d991d22dbfceef8577",
+          "executable": false
+        },
+        {
+          "path": "scripts/test_window_authoring_preflight_v13.py",
+          "sha256": "b6c5583943bb8c6ddab08819394bd4ff7315a6fcd280ad3139b979a0b1ff6564",
+          "executable": false
+        },
+        {
+          "path": "scripts/v13_common.py",
+          "sha256": "fe3bf44fd4ad24aa9d26192de3ef7b636b082a4567258fcb07782078096fc164",
+          "executable": false
+        },
+        {
+          "path": "scripts/validate_attempt_package_v13.py",
+          "sha256": "da743af1e7cfb35fe1de129d99a8a7c441ca2b00b8029444ebf719b25ae4807b",
+          "executable": false
+        },
+        {
+          "path": "scripts/validate_platform_parity.py",
+          "sha256": "957a2a803b2b8b9e7b77f49c8313a651bf0aded28d042669e73380a9ffb69fed",
+          "executable": false
+        },
+        {
+          "path": "scripts/validate_research_map.py",
+          "sha256": "7823b80da7e0622dc10db5ac52d964fda9261293adaf5185b0a8e3663164dc56",
+          "executable": false
+        },
+        {
+          "path": "scripts/validate_research_map_v2.py",
+          "sha256": "86307accc3daf17bbfd032e87855d4189d879f78c76650d050378b097d00ed48",
+          "executable": false
+        },
+        {
+          "path": "scripts/validate_terminology.py",
+          "sha256": "e2e810f9143fee3272aa8c8d973e2883be030513330adb961ef9d76493763e14",
+          "executable": false
+        },
+        {
+          "path": "scripts/window_authoring_preflight_v13.py",
+          "sha256": "e317f8724de05e7d806985ed75efd30e315adfb6cda800a4cc72e75315b396d6",
+          "executable": false
+        },
+        {
+          "path": "startup-cost-audit.md",
+          "sha256": "112994baf0d1bb35f277dcf54a0e9c0e5d4856da3efe5b2b842aba419ec18871",
+          "executable": false
+        }
+      ]
+    },
+    {
+      "name": "math-science-computation",
+      "version": "1.11",
+      "package_tree_sha256": "5c084b5202b747275a9e5c7d44c2636a89d984ab3a13a8c4dd92f94796e676c5",
+      "source_artifact": "pika_math_learning_toolkit-1.11",
+      "file_count": 28,
+      "files": [
+        {
+          "path": "SKILL.md",
+          "sha256": "08cd95131d43890d2eb7c44fd17c344ec1db50209253ae2ec40850954756342c",
+          "executable": false
+        },
+        {
+          "path": "agents/openai.yaml",
+          "sha256": "c563040716e752c418d9dc06f7330f316044c5f899b3960e1d79cceb03065c69",
+          "executable": false
+        },
+        {
+          "path": "references/backend-inventory.md",
+          "sha256": "236a56762cc31a599c9cf82da177dc35db60c337ae154ccc57c96fcc42fdd39d",
+          "executable": false
+        },
+        {
+          "path": "references/backend-inventory.schema.json",
+          "sha256": "1f5a2de4ba553ee021cbcf15c8d8ffaf1f0bddcd94dcb718807e4133ac1f0110",
+          "executable": false
+        },
+        {
+          "path": "references/backend-routing-evidence.md",
+          "sha256": "f927ec629a472141ec1c4e652aca8c2fe7d577bed56958df61097555cde67a8c",
+          "executable": false
+        },
+        {
+          "path": "references/backend-routing.md",
+          "sha256": "31005569b415057b7400b3cb8c94c2cf25d47d988568b0f2bcaa151cadaad880",
+          "executable": false
+        },
+        {
+          "path": "references/computation-record.md",
+          "sha256": "d0afefb59f51de174317fb56140d23ba9f4e0cbce57578f763bda66ad123d3f9",
+          "executable": false
+        },
+        {
+          "path": "references/observer-data-dictionary.md",
+          "sha256": "7cb508d11aed7b818731a0cbaa30d0d1b0bade87e99615ec99716f83847091d6",
+          "executable": false
+        },
+        {
+          "path": "references/observer-phases.json",
+          "sha256": "8cb272b0fc4e8dfc80f8e3eee07727dc32318eb45befa01f77ffa80bbb50c679",
+          "executable": false
+        },
+        {
+          "path": "references/terminology-registry.json",
+          "sha256": "751eb0b3dffc2547da0d3971ebafb3930d6d2842a4e4ee7cd28d913d152d4fd9",
+          "executable": false
+        },
+        {
+          "path": "references/terminology.md",
+          "sha256": "b825c54fd8a6ab1a99abbc8655692612288710ffccdefc8c01e354a5369d2662",
+          "executable": false
+        },
+        {
+          "path": "scripts/backend_inventory.ps1",
+          "sha256": "5349b8cee27c3d91ecbb368f3634ce1b3277c7580b90cc9e0410c9d1855a3524",
+          "executable": false
+        },
+        {
+          "path": "scripts/backend_inventory.py",
+          "sha256": "14fd469dc84a729ef93e2a0a9a36b457a550e614661e0a700398437d4534e641",
+          "executable": false
+        },
+        {
+          "path": "scripts/check_backend_routing.py",
+          "sha256": "ed362ec27d60fbf44edd7150c175dc083e7d5f5c62e574a2e533a1020b16f261",
+          "executable": false
+        },
+        {
+          "path": "scripts/check_mcp_policy.py",
+          "sha256": "69578af498f791511f0a431fbac7b86e319357aad90ec10e1af511e8250a76f3",
+          "executable": false
+        },
+        {
+          "path": "scripts/computation_record.py",
+          "sha256": "f2b437ec4d657b0458a109b545539bfeb592f39cb63decfe752d1a24ba150753",
+          "executable": false
+        },
+        {
+          "path": "scripts/observer_run.ps1",
+          "sha256": "173b15740cde631a553dc66979d108957369f1993457e34d35a289081f940973",
+          "executable": false
+        },
+        {
+          "path": "scripts/observer_run.py",
+          "sha256": "87e4a10fff736a2fe2704ff54b3c958df753a33d9321e08c85b45c625a6c10d0",
+          "executable": false
+        },
+        {
+          "path": "scripts/probe_backends.ps1",
+          "sha256": "3943e58d1cd3dab3ec0ee6317b9bbf948483e7d72b8c4735dcdf5051d7863870",
+          "executable": false
+        },
+        {
+          "path": "scripts/probe_backends.py",
+          "sha256": "0177c25c02ab88e5cc36d1acbddc1949f761b7137e0822cbe295abc43827ecf6",
+          "executable": false
+        },
+        {
+          "path": "scripts/test_check_mcp_policy.py",
+          "sha256": "93351e6db0b7c46769b23e4585d817983f0e224315c9c0db359a0b275ccd3248",
+          "executable": false
+        },
+        {
+          "path": "scripts/test_native_platform_paths.py",
+          "sha256": "c7691eff2024870723378d93d7db8c81f77063dd4f4696aa77c9cfc290436064",
+          "executable": false
+        },
+        {
+          "path": "scripts/tests/test_backend_inventory.py",
+          "sha256": "879600aff2e0e209e8a7fc1aad5f6e08d7ace124902859fc0b5c7e1ea7395ccb",
+          "executable": false
+        },
+        {
+          "path": "scripts/tests/test_backend_routing.py",
+          "sha256": "bca3e91555f34a001e69f3b9f5b95ee97a88609dabbe35d12794c1dbfaa5ffa0",
+          "executable": false
+        },
+        {
+          "path": "scripts/tests/test_check_mcp_policy.py",
+          "sha256": "e365b467d23f11c14a2056dacbd0448107ce4f2ebe40f6730a6e68acac3c521c",
+          "executable": false
+        },
+        {
+          "path": "scripts/tests/test_computation_record.py",
+          "sha256": "12cd63a9e5b7dbac496ff88fbef2419306e1219c4864aa50449790c8f4c67b0e",
+          "executable": false
+        },
+        {
+          "path": "scripts/tests/test_probe_backends.py",
+          "sha256": "47c81cf508363a0e679af03c53958bae00965c6fb4f4d3e9f205e484f0570505",
+          "executable": false
+        },
+        {
+          "path": "scripts/validate_terminology.py",
+          "sha256": "fd71ad9878f90aa3924b3201debcf9b7743eee990604a31dc9e52cc50f26fba4",
+          "executable": false
+        }
+      ]
+    }
+  ]
+}

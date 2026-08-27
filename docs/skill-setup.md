@@ -6,12 +6,12 @@ Codex 从仓库根启动时会发现 `.agents/skills/` 下的仓库专用 Skills
 
 ## 基础 Skills
 
-本计划还需要 `skill-dependencies.json` 中锁定的：
+仓库已经在 `.agents/skills/` 内 vendoring `skill-dependencies.json` 中锁定的：
 
 - `math-research-solve` 1.11；
 - `math-science-computation` 1.11。
 
-默认发现位置包括：
+Codex 从仓库根运行时直接发现它们。备用发现位置仍包括：
 
 ```text
 $JIN_MATH_SKILLS_ROOT/<name>
@@ -31,6 +31,6 @@ python scripts/check_skill_dependencies.py --root .
 python scripts/check_skill_dependencies.py --root . --strict
 ```
 
-当前检查只确认 Skill 入口存在，尚未重新计算发布树哈希。安装器或后续依赖适配器必须根据 `skill-dependencies.json` 核对版本和 package tree SHA-256。
+严格检查会读取 `vendored-skills.lock.json`，重算全部文件 SHA-256、精确文件集合和 Git executable bit。`package_tree_sha256` 同时与发布包的 `SOURCE_VERSIONS.json` 元数据绑定。
 
-完整 payload 在许可证/发布方式明确前不复制进本公开仓库。修改基础 Skill 时使用独立 `[infra][skill]` PR，不得与数学 authority PR 混合。
+修改基础 Skill 时必须使用独立 `[infra][skill]` 变更，重新生成锁文件并提供与来源树的差异说明；不得与数学 authority 变更混合。

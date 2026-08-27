@@ -69,12 +69,12 @@ python scripts/build_catalog.py --root .
 - `$math-computation-handoff`：把 Project attempt 与可复现计算绑定。
 - `$math-window-pr`：发布一个已闭合研究窗口的最小 PR。
 
-基础能力依赖：
+已 vendoring 的基础能力：
 
 - `$math-research-solve` 1.11：每个问题的严格研究内核。
 - `$math-science-computation` 1.11：计算执行与可复现记录。
 
-依赖版本和发布树哈希记录在 [`skill-dependencies.json`](skill-dependencies.json)。完整第三方/外部 Skill payload 暂未复制进本公开仓库；在许可证和发布方式确定前，通过接收环境安装并进行哈希核对。
+两个完整 Skill 已原样放入 `.agents/skills/`。依赖版本和发布树哈希记录在 [`skill-dependencies.json`](skill-dependencies.json)，277 个文件的 SHA-256 与 Git executable bit 锁定在 [`vendored-skills.lock.json`](vendored-skills.lock.json)。仓库 CI 会逐文件重算，不允许 payload 静默漂移。来源和边界见 [`docs/vendored-skills.md`](docs/vendored-skills.md)。
 
 ## 当前阶段
 

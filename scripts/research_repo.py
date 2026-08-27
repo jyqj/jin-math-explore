@@ -320,6 +320,77 @@ def validate_skill_dependencies(root: Path) -> list[Problem]:
     return problems
 
 
+def validate_vendored_skills(root: Path) -> list[Problem]:
+    lock_path = root / "vendored-skills.lock.json"
+    source = "vendored-skills.lock.json"
+    try:
+        lock = load_json(lock_path)
+        dependency_manifest = load_json(root / "skill-dependencies.json")
+    except (OSError, UnicodeError, json.JSONDecodeError, DuplicateKeyError) as exc:
+        return [Problem("vendored_lock_invalid", str(exc), source)]
+    if not isinstance(lock, dict) or tuple(lock) != ("schema", "packages") or lock["schema"] != "jin-math-vendored-skills-lock/v1":
+        return [Problem("vendored_lock_invalid", "invalid closed lock manifest", source)]
+    expected_dependencies = {item["name"]: item for item in dependency_manifest["dependencies"]}
+    problems: list[Problem] = []
+    seen_packages: set[str] = set()
+    for package in lock["packages"]:
+        package_fields = ("name", "version", "package_tree_sha256", "source_artifact", "file_count", "files")
+        if not isinstance(package, dict) or tuple(package) != package_fields:
+            problems.append(Problem("vendored_package_shape_invalid", "package has unknown/missing fields", source))
+            continue
+        name = package["name"]
+        if name in seen_packages or name not in expected_dependencies:
+            problems.append(Problem("vendored_package_identity_invalid", f"unexpected or duplicate package: {name}", source))
+            continue
+        seen_packages.add(name)
+        dependency = expected_dependencies[name]
+        if package["version"] != dependency["version"] or package["package_tree_sha256"] != dependency["package_tree_sha256"]:
+            problems.append(Problem("vendored_package_version_mismatch", f"version/tree metadata differs for {name}", source))
+        if not _nonempty(package["source_artifact"]):
+            problems.append(Problem("vendored_package_source_invalid", f"source artifact missing for {name}", source))
+        files = package["files"]
+        if not isinstance(files, list) or package["file_count"] != len(files):
+            problems.append(Problem("vendored_file_count_mismatch", f"file_count differs for {name}", source))
+            continue
+        expected_files: dict[str, tuple[str, bool]] = {}
+        for row in files:
+            if not isinstance(row, dict) or tuple(row) != ("path", "sha256", "executable"):
+                problems.append(Problem("vendored_file_row_invalid", f"invalid file row for {name}", source))
+                continue
+            rel = row["path"]
+            digest = row["sha256"]
+            executable = row["executable"]
+            if not safe_relative(rel) or rel in expected_files or not isinstance(digest, str) or not SHA256.fullmatch(digest) or not isinstance(executable, bool):
+                problems.append(Problem("vendored_file_identity_invalid", f"invalid path/hash/mode for {name}: {rel}", source))
+                continue
+            expected_files[rel] = (digest, executable)
+        target = root / ".agents" / "skills" / name
+        if not target.is_dir():
+            problems.append(Problem("vendored_skill_missing", f"vendored Skill directory missing: {name}", target.relative_to(root).as_posix()))
+            continue
+        actual_files: dict[str, Path] = {}
+        for path in sorted(target.rglob("*")):
+            if path.is_symlink():
+                problems.append(Problem("vendored_symlink_forbidden", "vendored payload must contain ordinary files/directories only", path.relative_to(root).as_posix()))
+            elif path.is_file():
+                actual_files[path.relative_to(target).as_posix()] = path
+        if set(actual_files) != set(expected_files):
+            missing = sorted(set(expected_files) - set(actual_files))
+            extra = sorted(set(actual_files) - set(expected_files))
+            problems.append(Problem("vendored_inventory_mismatch", f"{name}: missing={missing[:5]} extra={extra[:5]}", target.relative_to(root).as_posix()))
+        for rel in sorted(set(actual_files) & set(expected_files)):
+            digest, executable = expected_files[rel]
+            path = actual_files[rel]
+            if sha256_file(path) != digest:
+                problems.append(Problem("vendored_file_hash_mismatch", f"{name}/{rel}", path.relative_to(root).as_posix()))
+            actual_executable = bool(path.stat().st_mode & 0o111)
+            if actual_executable != executable:
+                problems.append(Problem("vendored_file_mode_mismatch", f"{name}/{rel} executable bit differs", path.relative_to(root).as_posix()))
+    if seen_packages != set(expected_dependencies):
+        problems.append(Problem("vendored_package_set_invalid", f"expected exactly {sorted(expected_dependencies)}", source))
+    return problems
+
+
 def validate_shared_results(root: Path) -> list[Problem]:
     directory = root / "registry" / "shared-results"
     problems: list[Problem] = []
@@ -567,6 +638,7 @@ def validate_repository(root: Path) -> list[Problem]:
     problems = []
     problems.extend(validate_repository_metadata(root))
     problems.extend(validate_skill_dependencies(root))
+    problems.extend(validate_vendored_skills(root))
     problems.extend(validate_registry(root))
     if not any(item.code.startswith("registry_") for item in problems):
         problems.extend(validate_shared_results(root))

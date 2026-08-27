@@ -12,10 +12,12 @@ from research_repo import (  # noqa: E402
     catalog_payload,
     canonical_json,
     frontier_markdown,
+    pretty_json,
     sha256_bytes,
     validate_computation_handoff,
     validate_registry,
     validate_verification,
+    validate_vendored_skills,
 )
 
 
@@ -222,6 +224,33 @@ class RepositoryContractTests(unittest.TestCase):
         self.assertEqual([], validate_verification(path, project))
         candidate.write_text("Changed proof.\n", encoding="utf-8")
         self.assertIn("artifact_hash_mismatch", {item.code for item in validate_verification(path, project)})
+
+    def test_vendored_skill_lock_detects_tamper(self):
+        root = self.root()
+        dependencies = []
+        packages = []
+        for name, tree_hash in (
+            ("math-research-solve", "1" * 64),
+            ("math-science-computation", "2" * 64),
+        ):
+            skill = root / ".agents/skills" / name
+            skill.mkdir(parents=True)
+            payload = f"---\nname: {name}\ndescription: Synthetic.\n---\n".encode()
+            (skill / "SKILL.md").write_bytes(payload)
+            dependencies.append({"name": name, "version": "1.11", "package_tree_sha256": tree_hash, "required_for": ["test"]})
+            packages.append({
+                "name": name,
+                "version": "1.11",
+                "package_tree_sha256": tree_hash,
+                "source_artifact": "synthetic",
+                "file_count": 1,
+                "files": [{"path": "SKILL.md", "sha256": sha256_bytes(payload), "executable": False}],
+            })
+        (root / "skill-dependencies.json").write_bytes(pretty_json({"schema": "jin-math-skill-dependencies/v1", "dependencies": dependencies}))
+        (root / "vendored-skills.lock.json").write_bytes(pretty_json({"schema": "jin-math-vendored-skills-lock/v1", "packages": packages}))
+        self.assertEqual([], validate_vendored_skills(root))
+        (root / ".agents/skills/math-research-solve/SKILL.md").write_text("tampered\n", encoding="utf-8")
+        self.assertIn("vendored_file_hash_mismatch", {item.code for item in validate_vendored_skills(root)})
 
 
 if __name__ == "__main__":

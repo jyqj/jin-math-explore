@@ -1,0 +1,2151 @@
+{
+  "schema": "pika-platform-parity/v2",
+  "policy": {
+    "macos_linux_must_not_require_pwsh": true,
+    "every_powershell_file_requires_equivalent": true,
+    "completion_requires_success_and_blocked_tests": true,
+    "wrappers_do_not_count_without_argument_exit_and_side_effect_parity": true
+  },
+  "summary": {
+    "powershell_files": 71,
+    "complete": 71,
+    "candidate_unverified": 0,
+    "missing": 0,
+    "linux_verified": 71,
+    "darwin_verified": 0,
+    "darwin_implemented_unverified": 71
+  },
+  "entries": [
+    {
+      "skill": "math-research-solve",
+      "powershell_path": "scripts/build_math_research_legacy_successor_v8.ps1",
+      "powershell_sha256": "9470afc5db02dac45e9c34dc3cc261f52059ffb42a13e75c6ef13ec416a00c3f",
+      "role": "legacy",
+      "python_candidates": [
+        "scripts/build_math_research_legacy_successor_v8.py"
+      ],
+      "equivalent_entrypoint": "scripts/build_math_research_legacy_successor_v8.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_math_research_head_v8_native.py",
+      "blocked_test": "scripts/test_math_research_head_v8_native.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-research-solve",
+      "powershell_path": "scripts/commit_math_research_head_v8.ps1",
+      "powershell_sha256": "deebd4ceea017f2ee587a2074d014e0c6a3c36450df0f6cb6b5caf49e5d2432c",
+      "role": "production-or-maintenance",
+      "python_candidates": [
+        "scripts/commit_math_research_head_v8.py"
+      ],
+      "equivalent_entrypoint": "scripts/commit_math_research_head_v8.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_math_research_head_v8_native.py",
+      "blocked_test": "scripts/test_math_research_head_v8_native.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-research-solve",
+      "powershell_path": "scripts/commit_math_research_merge_v11.ps1",
+      "powershell_sha256": "bf79d3a21d3108d4e8840082da69ac6f5d787ffd739d19a11e1ad0e5c1e47450",
+      "role": "production-or-maintenance",
+      "python_candidates": [
+        "scripts/math_research_state_v11.py"
+      ],
+      "equivalent_entrypoint": "scripts/math_research_state_v11.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_math_research_state_v11.py",
+      "blocked_test": "scripts/test_math_research_state_v11.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-research-solve",
+      "powershell_path": "scripts/commit_math_research_transition_v10.ps1",
+      "powershell_sha256": "3633dfd801ae6901b695d5f14feca9e387b37c79125eac8f65b858885b365a92",
+      "role": "production-or-maintenance",
+      "python_candidates": [
+        "scripts/math_research_state_v10.py"
+      ],
+      "equivalent_entrypoint": "scripts/math_research_state_v10.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_native_v9_v10_entrypoints.py",
+      "blocked_test": "scripts/test_native_v9_v10_entrypoints.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-research-solve",
+      "powershell_path": "scripts/commit_math_research_transition_v9.ps1",
+      "powershell_sha256": "9bd02cf33cc4f1617faa8b2fc918daddb5e7e18057513658aaa7fa47bd365ff5",
+      "role": "production-or-maintenance",
+      "python_candidates": [
+        "scripts/math_research_state_v9.py"
+      ],
+      "equivalent_entrypoint": "scripts/math_research_state_v9.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_native_v9_v10_entrypoints.py",
+      "blocked_test": "scripts/test_native_v9_v10_entrypoints.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-research-solve",
+      "powershell_path": "scripts/invoke_math_research_assets.ps1",
+      "powershell_sha256": "224abb198be7a12616cb8249b853cadebad1f5bdf0f472a3d17ea79ccaa7fe8a",
+      "role": "production-or-maintenance",
+      "python_candidates": [
+        "scripts/math_research_assets.py"
+      ],
+      "equivalent_entrypoint": "scripts/math_research_assets.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_math_research_assets.py",
+      "blocked_test": "scripts/test_math_research_assets.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-research-solve",
+      "powershell_path": "scripts/invoke_math_research_canary_v2.ps1",
+      "powershell_sha256": "ef22d5e0e35405d1d988b15e26bfbf6825f90908f5dc972a161f7e8e6675982c",
+      "role": "production-or-maintenance",
+      "python_candidates": [
+        "scripts/invoke_math_research_canary_v2.py"
+      ],
+      "equivalent_entrypoint": "scripts/invoke_math_research_canary_v2.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_math_research_launcher_native.py",
+      "blocked_test": "scripts/test_math_research_launcher_native.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-research-solve",
+      "powershell_path": "scripts/invoke_math_research_cycle.ps1",
+      "powershell_sha256": "01b1aadd57ce796252b078c1360160e77a17995efcdcb74c09f3ecd0fb1702e8",
+      "role": "production-or-maintenance",
+      "python_candidates": [
+        "scripts/invoke_math_research_cycle.py"
+      ],
+      "equivalent_entrypoint": "scripts/invoke_math_research_cycle.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_math_research_cycle_ledger_native.py",
+      "blocked_test": "scripts/test_math_research_cycle_ledger_native.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-research-solve",
+      "powershell_path": "scripts/invoke_math_research_cycle_legacy_v1_compat.ps1",
+      "powershell_sha256": "6e0feb5ff6309be3433b0bd524cfbc48ea46f763c7d2ed0ba647cc14ee609ab2",
+      "role": "legacy",
+      "python_candidates": [
+        "scripts/invoke_math_research_cycle_legacy_v1_compat.py"
+      ],
+      "equivalent_entrypoint": "scripts/invoke_math_research_cycle_legacy_v1_compat.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_math_research_cycle_ledger_native.py",
+      "blocked_test": "scripts/test_math_research_cycle_ledger_native.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-research-solve",
+      "powershell_path": "scripts/invoke_math_research_cycle_v2.ps1",
+      "powershell_sha256": "611611eac7547a05dd0ce77aecc7b238452c90d1b2da0f3825f06a1e9d2baddc",
+      "role": "production-or-maintenance",
+      "python_candidates": [
+        "scripts/invoke_math_research_cycle_v2.py"
+      ],
+      "equivalent_entrypoint": "scripts/invoke_math_research_cycle_v2.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_math_research_cycle_ledger_native.py",
+      "blocked_test": "scripts/test_math_research_cycle_ledger_native.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-research-solve",
+      "powershell_path": "scripts/invoke_math_research_execution_topology.ps1",
+      "powershell_sha256": "5a024eb9b18d18e80cc4b8747f78ada006f4780d4f551c09ad7a1247cd496605",
+      "role": "production-or-maintenance",
+      "python_candidates": [
+        "scripts/math_research_execution_topology.py"
+      ],
+      "equivalent_entrypoint": "scripts/math_research_execution_topology.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_math_research_execution_topology.py",
+      "blocked_test": "scripts/test_math_research_execution_topology.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-research-solve",
+      "powershell_path": "scripts/invoke_math_research_layout_v12.ps1",
+      "powershell_sha256": "689e29b082b3b4b729e88c7c72cead4b19d8d20b896888f46f4d30f9b914ed1b",
+      "role": "production-or-maintenance",
+      "python_candidates": [
+        "scripts/math_research_state_v12.py"
+      ],
+      "equivalent_entrypoint": "scripts/math_research_state_v12.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_math_research_state_v12.py",
+      "blocked_test": "scripts/test_math_research_state_v12.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-research-solve",
+      "powershell_path": "scripts/invoke_math_research_legacy_v1_compat_canary_host.ps1",
+      "powershell_sha256": "c7d1f65b8707c0bc122020f1335b3240f3e9883fc9f5d59e27bce1536c294650",
+      "role": "legacy",
+      "python_candidates": [
+        "scripts/invoke_math_research_legacy_v1_compat_canary_host.py"
+      ],
+      "equivalent_entrypoint": "scripts/invoke_math_research_legacy_v1_compat_canary_host.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_math_research_launcher_native.py",
+      "blocked_test": "scripts/test_math_research_launcher_native.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-research-solve",
+      "powershell_path": "scripts/invoke_math_research_legacy_v1_compat_canary_host_v2.ps1",
+      "powershell_sha256": "70105665dc2c71d1f87690a092a5b21d38e828959680beaa5a8ceca08237485a",
+      "role": "legacy",
+      "python_candidates": [
+        "scripts/invoke_math_research_legacy_v1_compat_canary_host_v2.py"
+      ],
+      "equivalent_entrypoint": "scripts/invoke_math_research_legacy_v1_compat_canary_host_v2.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_math_research_launcher_native.py",
+      "blocked_test": "scripts/test_math_research_launcher_native.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-research-solve",
+      "powershell_path": "scripts/invoke_math_research_legacy_v1_compat_migration.ps1",
+      "powershell_sha256": "6549a827140b1c695e83a6147ac8d7b18ee8159466ad922441f0ef1549114f6e",
+      "role": "legacy",
+      "python_candidates": [
+        "scripts/invoke_math_research_legacy_v1_compat_migration.py"
+      ],
+      "equivalent_entrypoint": "scripts/invoke_math_research_legacy_v1_compat_migration.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_legacy_cli_entrypoints_native.py",
+      "blocked_test": "scripts/test_legacy_cli_entrypoints_native.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-research-solve",
+      "powershell_path": "scripts/invoke_math_research_legacy_v1_control_path_amendment_v2.ps1",
+      "powershell_sha256": "da09e8b6f869cef435e486ecd63412107d6cad00a0d9125c122d669fa4bf23ae",
+      "role": "legacy",
+      "python_candidates": [
+        "scripts/invoke_math_research_legacy_v1_control_path_amendment_v2.py"
+      ],
+      "equivalent_entrypoint": "scripts/invoke_math_research_legacy_v1_control_path_amendment_v2.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_legacy_cli_entrypoints_native.py",
+      "blocked_test": "scripts/test_legacy_cli_entrypoints_native.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-research-solve",
+      "powershell_path": "scripts/invoke_math_research_migrate_v8_to_v10.ps1",
+      "powershell_sha256": "ef5c2c979501dff9a787b4544368454674add7dedff424279c3b81b8d57ae834",
+      "role": "migration-or-recovery",
+      "python_candidates": [
+        "scripts/math_research_migrate_v8_to_v10.py"
+      ],
+      "equivalent_entrypoint": "scripts/math_research_migrate_v8_to_v10.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_native_migrate_v8_to_v10.py",
+      "blocked_test": "scripts/test_native_migrate_v8_to_v10.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-research-solve",
+      "powershell_path": "scripts/invoke_math_research_project.ps1",
+      "powershell_sha256": "20e4a74582aa59fe7b6d75fe67f5ebd8617b54477180af04dee4a10485ab383b",
+      "role": "production-or-maintenance",
+      "python_candidates": [
+        "scripts/invoke_math_research_project.py"
+      ],
+      "equivalent_entrypoint": "scripts/invoke_math_research_project.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_math_research_project_archive_native.py",
+      "blocked_test": "scripts/test_math_research_project_archive_native.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-research-solve",
+      "powershell_path": "scripts/invoke_math_research_project_v2.ps1",
+      "powershell_sha256": "0fd160995ecb5b08b6063d629bf2a781017325a7675b1c866e91deb84af7d832",
+      "role": "production-or-maintenance",
+      "python_candidates": [
+        "scripts/invoke_math_research_project_v2.py"
+      ],
+      "equivalent_entrypoint": "scripts/invoke_math_research_project_v2.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_math_research_project_archive_native.py",
+      "blocked_test": "scripts/test_math_research_project_archive_native.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-research-solve",
+      "powershell_path": "scripts/invoke_math_research_startup_v1.ps1",
+      "powershell_sha256": "0d357b92529fad023459770390c12b0c4b9593577653e1a23c2eef67ce90ab38",
+      "role": "production-or-maintenance",
+      "python_candidates": [
+        "scripts/invoke_math_research_startup_v1.py"
+      ],
+      "equivalent_entrypoint": "scripts/invoke_math_research_startup_v1.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_math_research_startup_v1_native.py",
+      "blocked_test": "scripts/test_math_research_startup_v1_native.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-research-solve",
+      "powershell_path": "scripts/invoke_math_research_startup_v2.ps1",
+      "powershell_sha256": "cdb84631edebdaf12cabe354e794bb9b074bbaac00452ff7a3eedd9bd89ba875",
+      "role": "production-or-maintenance",
+      "python_candidates": [
+        "scripts/invoke_math_research_startup_v2.py"
+      ],
+      "equivalent_entrypoint": "scripts/invoke_math_research_startup_v2.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_math_research_startup_v1_native.py",
+      "blocked_test": "scripts/test_math_research_startup_v1_native.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-research-solve",
+      "powershell_path": "scripts/invoke_math_research_startup_v3.ps1",
+      "powershell_sha256": "88810a80caeb691a210e3f91f881788850bcdfd79cf3bfd31911840da7f0d5d0",
+      "role": "production-or-maintenance",
+      "python_candidates": [
+        "scripts/invoke_math_research_startup_v3.py"
+      ],
+      "equivalent_entrypoint": "scripts/invoke_math_research_startup_v3.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_math_research_startup_v3_native.py",
+      "blocked_test": "scripts/test_math_research_startup_v3_native.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-research-solve",
+      "powershell_path": "scripts/invoke_math_research_startup_v4.ps1",
+      "powershell_sha256": "3cbfe0c86095c87fe651d7db56a4b9c6b6246d9d50dd4cd559169e3f445cb8fb",
+      "role": "production-or-maintenance",
+      "python_candidates": [
+        "scripts/invoke_math_research_startup_v4.py",
+        "scripts/math_research_state_v9.py"
+      ],
+      "equivalent_entrypoint": "scripts/invoke_math_research_startup_v4.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_math_research_startup_router_native.py",
+      "blocked_test": "scripts/test_math_research_startup_router_native.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-research-solve",
+      "powershell_path": "scripts/invoke_math_research_startup_v5.ps1",
+      "powershell_sha256": "6b642c641fb412e4dc3485c690d0bef9fc535fd71f5f9beb442aaed8934f3ba9",
+      "role": "production-or-maintenance",
+      "python_candidates": [
+        "scripts/invoke_math_research_startup_v5.py",
+        "scripts/math_research_state_v10.py"
+      ],
+      "equivalent_entrypoint": "scripts/invoke_math_research_startup_v5.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_math_research_startup_router_native.py",
+      "blocked_test": "scripts/test_math_research_startup_router_native.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-research-solve",
+      "powershell_path": "scripts/invoke_math_research_startup_v6.ps1",
+      "powershell_sha256": "59916975c8783507ca73f5842de005b0d0c61ee9285db00d002953d38284bf07",
+      "role": "production-or-maintenance",
+      "python_candidates": [
+        "scripts/invoke_math_research_startup_v6.py",
+        "scripts/math_research_state_v11.py"
+      ],
+      "equivalent_entrypoint": "scripts/invoke_math_research_startup_v6.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_math_research_startup_router_native.py",
+      "blocked_test": "scripts/test_math_research_startup_router_native.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-research-solve",
+      "powershell_path": "scripts/invoke_math_research_startup_v7.ps1",
+      "powershell_sha256": "8932130b5f3bddd66f904179b2108d05747845aeafa6c4e184ab4ac117b748ab",
+      "role": "production-or-maintenance",
+      "python_candidates": [
+        "scripts/invoke_math_research_startup_v7.py",
+        "scripts/math_research_state_v12.py"
+      ],
+      "equivalent_entrypoint": "scripts/invoke_math_research_startup_v7.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_math_research_startup_router_native.py",
+      "blocked_test": "scripts/test_math_research_startup_router_native.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-research-solve",
+      "powershell_path": "scripts/invoke_math_research_startup_v8.ps1",
+      "powershell_sha256": "27c58fe732697d261808f5527d136b4e66e75de66071f3ea5b8ebe4d9a075237",
+      "role": "production-or-maintenance",
+      "python_candidates": [
+        "scripts/invoke_math_research_startup_v8.py",
+        "scripts/math_research_state_v13.py"
+      ],
+      "equivalent_entrypoint": "scripts/invoke_math_research_startup_v8.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_math_research_startup_router_native.py",
+      "blocked_test": "scripts/test_math_research_startup_router_native.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-research-solve",
+      "powershell_path": "scripts/invoke_math_research_ticket_preflight_v10.ps1",
+      "powershell_sha256": "bcbae8aa15b5c37b930492e134523a4c1e4364c7ae80d2bb706d8ab4276d66c6",
+      "role": "production-or-maintenance",
+      "python_candidates": [
+        "scripts/math_research_state_v10.py"
+      ],
+      "equivalent_entrypoint": "scripts/math_research_state_v10.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_native_v9_v10_entrypoints.py",
+      "blocked_test": "scripts/test_native_v9_v10_entrypoints.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-research-solve",
+      "powershell_path": "scripts/invoke_math_research_ticket_preflight_v8.ps1",
+      "powershell_sha256": "58741376fab0ac9a082b8e6852a0c751e4942f403d821035161c5a611ad8e5b3",
+      "role": "production-or-maintenance",
+      "python_candidates": [
+        "scripts/math_research_state_v9.py"
+      ],
+      "equivalent_entrypoint": "scripts/math_research_state_v9.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_native_v9_v10_entrypoints.py",
+      "blocked_test": "scripts/test_native_v9_v10_entrypoints.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-research-solve",
+      "powershell_path": "scripts/invoke_math_research_v13.ps1",
+      "powershell_sha256": "6b8998e56c33fa9eddde70a71cb45b2d08645741b13df139665c18e920b06e6b",
+      "role": "production-or-maintenance",
+      "python_candidates": [
+        "scripts/invoke_math_research_v13.py",
+        "scripts/math_research_state_v13.py",
+        "scripts/math_research_commit_v13.py",
+        "scripts/math_research_migrate_v12_to_v13.py",
+        "scripts/map_semantic_review_v1.py"
+      ],
+      "equivalent_entrypoint": "scripts/invoke_math_research_v13.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_invoke_math_research_v13_native.py",
+      "blocked_test": "scripts/test_invoke_math_research_v13_native.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-research-solve",
+      "powershell_path": "scripts/invoke_math_research_worker_dispatch_preflight.ps1",
+      "powershell_sha256": "a4b3f6ff12209a4481facf7cae12446706314b74330e610ab78ee8fd9ce03420",
+      "role": "production-or-maintenance",
+      "python_candidates": [
+        "scripts/math_research_worker_dispatch_preflight.py"
+      ],
+      "equivalent_entrypoint": "scripts/math_research_worker_dispatch_preflight.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_math_research_worker_dispatch_preflight.py",
+      "blocked_test": "scripts/test_math_research_worker_dispatch_preflight.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-research-solve",
+      "powershell_path": "scripts/launch_math_research.ps1",
+      "powershell_sha256": "6563f2a8798c351bf15d14685969a60e2f243c16be88ed6c95ab904f04e514b5",
+      "role": "production-or-maintenance",
+      "python_candidates": [
+        "scripts/launch_math_research.py"
+      ],
+      "equivalent_entrypoint": "scripts/launch_math_research.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_math_research_launcher_native.py",
+      "blocked_test": "scripts/test_math_research_launcher_native.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-research-solve",
+      "powershell_path": "scripts/launch_math_research_legacy_v1_compat.ps1",
+      "powershell_sha256": "9a7b6327de7d1158e01f24fa9023cbe03a200a6d616ba7e6cac50ae0c58ecd9c",
+      "role": "legacy",
+      "python_candidates": [
+        "scripts/launch_math_research_legacy_v1_compat.py"
+      ],
+      "equivalent_entrypoint": "scripts/launch_math_research_legacy_v1_compat.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_math_research_launcher_native.py",
+      "blocked_test": "scripts/test_math_research_launcher_native.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-research-solve",
+      "powershell_path": "scripts/launch_math_research_legacy_v1_compat_v2.ps1",
+      "powershell_sha256": "01197a429dba35a49a39b6fbe42ede7bec37bc6e50ed57be033370bbde20b9dd",
+      "role": "legacy",
+      "python_candidates": [
+        "scripts/launch_math_research_legacy_v1_compat_v2.py"
+      ],
+      "equivalent_entrypoint": "scripts/launch_math_research_legacy_v1_compat_v2.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_math_research_launcher_native.py",
+      "blocked_test": "scripts/test_math_research_launcher_native.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-research-solve",
+      "powershell_path": "scripts/launch_math_research_v2.ps1",
+      "powershell_sha256": "0dff02021e3e19d4f4722aec21c5f61bf0eb08a26d4d22ac0999ebcf6994cd79",
+      "role": "production-or-maintenance",
+      "python_candidates": [
+        "scripts/launch_math_research_v2.py"
+      ],
+      "equivalent_entrypoint": "scripts/launch_math_research_v2.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_math_research_launcher_native.py",
+      "blocked_test": "scripts/test_math_research_launcher_native.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-research-solve",
+      "powershell_path": "scripts/MathResearchApproveForMeArgvCompatV2.psm1",
+      "powershell_sha256": "074abf425cf7a6aef89ce9beeb2b7893ea714d4d7a2046b7775f7657cd68e259",
+      "role": "module",
+      "python_candidates": [
+        "scripts/MathResearchApproveForMeArgvCompatV2.py"
+      ],
+      "equivalent_entrypoint": "scripts/MathResearchApproveForMeArgvCompatV2.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_approve_for_me_argv_compat_v2_native.py",
+      "blocked_test": "scripts/test_approve_for_me_argv_compat_v2_native.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-research-solve",
+      "powershell_path": "scripts/MathResearchCycleLedger.psm1",
+      "powershell_sha256": "7e8af012b718a9c98515938779a7e8cd270d29593a5cc33c9b65d1a6ae404398",
+      "role": "module",
+      "python_candidates": [],
+      "equivalent_entrypoint": "scripts/MathResearchCycleLedgerV2.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_math_research_cycle_ledger_native.py",
+      "blocked_test": "scripts/test_math_research_cycle_ledger_native.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-research-solve",
+      "powershell_path": "scripts/MathResearchCycleLedgerLegacyV1Compat.psm1",
+      "powershell_sha256": "b1b6c9ea9cb4dcab8ee1cecbd26837e283c148ad21e5a225ff04d235af6665b1",
+      "role": "module",
+      "python_candidates": [],
+      "equivalent_entrypoint": "scripts/MathResearchCycleLedgerV2.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_math_research_cycle_ledger_native.py",
+      "blocked_test": "scripts/test_math_research_cycle_ledger_native.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-research-solve",
+      "powershell_path": "scripts/MathResearchCycleLedgerV2.psm1",
+      "powershell_sha256": "815d9555862a60d881c5c6ea25a49c173215471aa1addd88ebe652f5b8eaef74",
+      "role": "module",
+      "python_candidates": [
+        "scripts/MathResearchCycleLedgerV2.py"
+      ],
+      "equivalent_entrypoint": "scripts/MathResearchCycleLedgerV2.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_math_research_cycle_ledger_native.py",
+      "blocked_test": "scripts/test_math_research_cycle_ledger_native.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-research-solve",
+      "powershell_path": "scripts/MathResearchLauncher.psm1",
+      "powershell_sha256": "ab249896cffd998b8e681d41a2f19db19d452fdffe67f78cc25347e135536eb7",
+      "role": "module",
+      "python_candidates": [],
+      "equivalent_entrypoint": "scripts/MathResearchLauncherV2.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_math_research_launcher_native.py",
+      "blocked_test": "scripts/test_math_research_launcher_native.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-research-solve",
+      "powershell_path": "scripts/MathResearchLauncherLegacyV1Compat.psm1",
+      "powershell_sha256": "7858501cca073e3e863ad4574b98a1c189537daf6390dc2a4ecd5b3824228614",
+      "role": "module",
+      "python_candidates": [],
+      "equivalent_entrypoint": "scripts/MathResearchLauncherV2.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_math_research_launcher_native.py",
+      "blocked_test": "scripts/test_math_research_launcher_native.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-research-solve",
+      "powershell_path": "scripts/MathResearchLauncherV2.psm1",
+      "powershell_sha256": "e127f7fc4c6ae81cb06447319e6a597325962fcc8b5a510b5baba0d50ddeb026",
+      "role": "module",
+      "python_candidates": [
+        "scripts/MathResearchLauncherV2.py"
+      ],
+      "equivalent_entrypoint": "scripts/MathResearchLauncherV2.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_math_research_launcher_native.py",
+      "blocked_test": "scripts/test_math_research_launcher_native.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-research-solve",
+      "powershell_path": "scripts/MathResearchLegacyArchive.ps1",
+      "powershell_sha256": "d7b03cda24efea21891781e8ffd8b95209f8c3641bdd63bb97dcf4eae963ca1c",
+      "role": "legacy",
+      "python_candidates": [
+        "scripts/MathResearchLegacyArchive.py"
+      ],
+      "equivalent_entrypoint": "scripts/MathResearchLegacyArchive.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_math_research_project_archive_native.py",
+      "blocked_test": "scripts/test_math_research_project_archive_native.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-research-solve",
+      "powershell_path": "scripts/MathResearchLegacyV1CompatMigration.psm1",
+      "powershell_sha256": "d18afc25f4414185413047ce3eb2cc1b9e802469df329aa959f1530a5823d9bb",
+      "role": "module",
+      "python_candidates": [
+        "scripts/MathResearchLegacyV1CompatMigration.py"
+      ],
+      "equivalent_entrypoint": "scripts/MathResearchLegacyV1CompatMigration.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_legacy_v1_compat_migration_native.py",
+      "blocked_test": "scripts/test_legacy_v1_compat_migration_native.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-research-solve",
+      "powershell_path": "scripts/MathResearchLegacyV1ControlPathAmendmentV2.psm1",
+      "powershell_sha256": "f10d1ca2d292f344fd10ab40c05b3f0700ed64cc4b1167efbafd998f610069ef",
+      "role": "module",
+      "python_candidates": [
+        "scripts/MathResearchLegacyV1ControlPathAmendmentV2.py"
+      ],
+      "equivalent_entrypoint": "scripts/MathResearchLegacyV1ControlPathAmendmentV2.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_control_path_amendment_v2_native.py",
+      "blocked_test": "scripts/test_control_path_amendment_v2_native.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-research-solve",
+      "powershell_path": "scripts/MathResearchProjectArchive.psm1",
+      "powershell_sha256": "70e20b2ac3bfb8dd1de80cad775fb447399ca992dee76ceafca8356b76396326",
+      "role": "module",
+      "python_candidates": [],
+      "equivalent_entrypoint": "scripts/MathResearchProjectArchiveV2.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_math_research_project_archive_native.py",
+      "blocked_test": "scripts/test_math_research_project_archive_native.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-research-solve",
+      "powershell_path": "scripts/MathResearchProjectArchiveV2.psm1",
+      "powershell_sha256": "9cc9a848ad4101b4bdff0bf2bbfc84e72466d751fe3ec50a1a1ef25af30c5988",
+      "role": "module",
+      "python_candidates": [
+        "scripts/MathResearchProjectArchiveV2.py"
+      ],
+      "equivalent_entrypoint": "scripts/MathResearchProjectArchiveV2.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_math_research_project_archive_native.py",
+      "blocked_test": "scripts/test_math_research_project_archive_native.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-research-solve",
+      "powershell_path": "scripts/observer_run.ps1",
+      "powershell_sha256": "e146a1f020e897a778577744ee321cd23ff7a2857b016b7958286cd48d4ae850",
+      "role": "support",
+      "python_candidates": [
+        "scripts/observer_run.py"
+      ],
+      "equivalent_entrypoint": "scripts/observer_run.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_observer_run_native.py",
+      "blocked_test": "scripts/test_observer_run_native.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-research-solve",
+      "powershell_path": "scripts/prepare_math_research_merge_v11.ps1",
+      "powershell_sha256": "d2c5c71f4d872949711921633c9518a423721a4e8a641714c6f5b243c654d2f5",
+      "role": "production-or-maintenance",
+      "python_candidates": [
+        "scripts/math_research_state_v11.py"
+      ],
+      "equivalent_entrypoint": "scripts/math_research_state_v11.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_math_research_state_v11.py",
+      "blocked_test": "scripts/test_math_research_state_v11.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-research-solve",
+      "powershell_path": "scripts/prepare_math_research_successor_v10.ps1",
+      "powershell_sha256": "c79f700e2639693930eb2ce2cd8465f1d28ea05ec07ed868b7cad08fbf5e0631",
+      "role": "migration-or-recovery",
+      "python_candidates": [
+        "scripts/math_research_state_v10.py"
+      ],
+      "equivalent_entrypoint": "scripts/math_research_state_v10.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_native_v9_v10_entrypoints.py",
+      "blocked_test": "scripts/test_native_v9_v10_entrypoints.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-research-solve",
+      "powershell_path": "scripts/prepare_math_research_successor_v9.ps1",
+      "powershell_sha256": "11e6a4fabcbf990df9de1b8ea4f4460ddd0ce42eae6082420d18ef65dcf6239b",
+      "role": "migration-or-recovery",
+      "python_candidates": [
+        "scripts/math_research_state_v9.py"
+      ],
+      "equivalent_entrypoint": "scripts/math_research_state_v9.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_native_v9_v10_entrypoints.py",
+      "blocked_test": "scripts/test_native_v9_v10_entrypoints.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-research-solve",
+      "powershell_path": "scripts/prepare_math_research_transition_v10.ps1",
+      "powershell_sha256": "5d8092951e674cea33e4c76f203efc8ee2791719aea65c544572cef526f44950",
+      "role": "production-or-maintenance",
+      "python_candidates": [
+        "scripts/math_research_state_v10.py"
+      ],
+      "equivalent_entrypoint": "scripts/math_research_state_v10.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_native_v9_v10_entrypoints.py",
+      "blocked_test": "scripts/test_native_v9_v10_entrypoints.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-research-solve",
+      "powershell_path": "scripts/prepare_math_research_transition_v9.ps1",
+      "powershell_sha256": "48310962db956306af41731511270604e11e08ae365680a4e7c9403972cf39ba",
+      "role": "production-or-maintenance",
+      "python_candidates": [
+        "scripts/math_research_state_v9.py"
+      ],
+      "equivalent_entrypoint": "scripts/math_research_state_v9.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_native_v9_v10_entrypoints.py",
+      "blocked_test": "scripts/test_native_v9_v10_entrypoints.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-research-solve",
+      "powershell_path": "scripts/rollback_math_research_merge_v11.ps1",
+      "powershell_sha256": "bfdeae0d1b7e7ca705a1c5dedee125d23064fbc9c1b36b94cd97a54a58969be2",
+      "role": "migration-or-recovery",
+      "python_candidates": [
+        "scripts/math_research_state_v11.py"
+      ],
+      "equivalent_entrypoint": "scripts/math_research_state_v11.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_math_research_state_v11.py",
+      "blocked_test": "scripts/test_math_research_state_v11.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-research-solve",
+      "powershell_path": "scripts/stop_math_research.ps1",
+      "powershell_sha256": "643928924f99543f81cbec466c1a551c5732f4e83735e18b133ff0e38e83d3ff",
+      "role": "production-or-maintenance",
+      "python_candidates": [
+        "scripts/stop_math_research.py"
+      ],
+      "equivalent_entrypoint": "scripts/stop_math_research.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_stop_math_research_native.py",
+      "blocked_test": "scripts/test_stop_math_research_native.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-research-solve",
+      "powershell_path": "scripts/stop_math_research_v2.ps1",
+      "powershell_sha256": "4730766304cd2ed24cf1baa041d1e10d8391ccf3a9213eccd010a8d1c283bea7",
+      "role": "production-or-maintenance",
+      "python_candidates": [
+        "scripts/stop_math_research_v2.py"
+      ],
+      "equivalent_entrypoint": "scripts/stop_math_research_v2.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_stop_math_research_native.py",
+      "blocked_test": "scripts/test_stop_math_research_native.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-research-solve",
+      "powershell_path": "scripts/test_math_research_control_path_amendment_v2.ps1",
+      "powershell_sha256": "355d903788727435086ac3cb39d10bc75526404e99d3790e2319150c6532584e",
+      "role": "test",
+      "python_candidates": [
+        "scripts/test_math_research_control_path_amendment_v2.py"
+      ],
+      "equivalent_entrypoint": "scripts/test_math_research_control_path_amendment_v2.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_test_control_path_amendment_v2_native.py",
+      "blocked_test": "scripts/test_test_control_path_amendment_v2_native.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-research-solve",
+      "powershell_path": "scripts/test_math_research_cycle_ledger.ps1",
+      "powershell_sha256": "28916e9ee27a8f620c84a25b2e16fbdf5b413977bd8c2b8051d85af7df12b0ce",
+      "role": "test",
+      "python_candidates": [
+        "scripts/test_math_research_cycle_ledger.py"
+      ],
+      "equivalent_entrypoint": "scripts/test_math_research_cycle_ledger.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_math_research_cycle_ledger_native.py",
+      "blocked_test": "scripts/test_math_research_cycle_ledger_native.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-research-solve",
+      "powershell_path": "scripts/test_math_research_head_commit_v8.ps1",
+      "powershell_sha256": "21a3d8629ac13a9cd34ec46bcba4753bd2ec88240c36bb5acc6518327d0a3b3a",
+      "role": "test",
+      "python_candidates": [
+        "scripts/test_math_research_head_commit_v8.py"
+      ],
+      "equivalent_entrypoint": "scripts/test_math_research_head_commit_v8.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_math_research_head_v8_native.py",
+      "blocked_test": "scripts/test_math_research_head_v8_native.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-research-solve",
+      "powershell_path": "scripts/test_math_research_launcher.ps1",
+      "powershell_sha256": "074ec2dae9adb31e91a6f575586d6ee5acb5730c34d09c7f28343a945e2b50ac",
+      "role": "test",
+      "python_candidates": [
+        "scripts/test_math_research_launcher.py"
+      ],
+      "equivalent_entrypoint": "scripts/test_math_research_launcher.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_math_research_launcher_native.py",
+      "blocked_test": "scripts/test_math_research_launcher_native.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-research-solve",
+      "powershell_path": "scripts/test_math_research_launcher_v2.ps1",
+      "powershell_sha256": "1a0500b2325cbf9ccf8ce8cd2813ef9f40fc638168408af98a42cc60f0e70127",
+      "role": "test",
+      "python_candidates": [
+        "scripts/test_math_research_launcher_v2.py"
+      ],
+      "equivalent_entrypoint": "scripts/test_math_research_launcher_v2.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_math_research_launcher_native.py",
+      "blocked_test": "scripts/test_math_research_launcher_native.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-research-solve",
+      "powershell_path": "scripts/test_math_research_legacy_successor_v8.ps1",
+      "powershell_sha256": "a10c398a3f272d99198b3fff38fd4ad3478b78ffc54a5eafbfa18bd28456d042",
+      "role": "test",
+      "python_candidates": [
+        "scripts/test_math_research_legacy_successor_v8.py"
+      ],
+      "equivalent_entrypoint": "scripts/test_math_research_legacy_successor_v8.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_math_research_head_v8_native.py",
+      "blocked_test": "scripts/test_math_research_head_v8_native.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-research-solve",
+      "powershell_path": "scripts/test_math_research_legacy_v1_compat.ps1",
+      "powershell_sha256": "1fcd9782b3a9050ea2e90f8d501a232aaad21ee80e2ebc55d81064d98ca7c0dc",
+      "role": "test",
+      "python_candidates": [
+        "scripts/test_math_research_legacy_v1_compat.py"
+      ],
+      "equivalent_entrypoint": "scripts/test_math_research_legacy_v1_compat.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_math_research_legacy_v1_compat.py",
+      "blocked_test": "scripts/test_math_research_legacy_v1_compat.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-research-solve",
+      "powershell_path": "scripts/test_math_research_project_archive.ps1",
+      "powershell_sha256": "5ca7b7cec308e3716c8d497be2e6eb62bda5a094d30aa5cdd0dff897b8a49aff",
+      "role": "test",
+      "python_candidates": [
+        "scripts/test_math_research_project_archive.py"
+      ],
+      "equivalent_entrypoint": "scripts/test_math_research_project_archive.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_math_research_project_archive_native.py",
+      "blocked_test": "scripts/test_math_research_project_archive_native.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-research-solve",
+      "powershell_path": "scripts/test_math_research_startup_v1.ps1",
+      "powershell_sha256": "ddf3c3b49f0b6e325bbf1d9bad8f61ec5fd589a18eabf5285945dd8dbac6c3eb",
+      "role": "test",
+      "python_candidates": [
+        "scripts/test_math_research_startup_v1.py"
+      ],
+      "equivalent_entrypoint": "scripts/test_math_research_startup_v1.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_math_research_startup_v1_native.py",
+      "blocked_test": "scripts/test_math_research_startup_v1_native.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-research-solve",
+      "powershell_path": "scripts/test_math_research_startup_v3.ps1",
+      "powershell_sha256": "3ca9212049c0d50bb809244edfed28c595810d74ec952fb086f61679925d4d41",
+      "role": "test",
+      "python_candidates": [
+        "scripts/test_math_research_startup_v3.py"
+      ],
+      "equivalent_entrypoint": "scripts/test_math_research_startup_v3.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_math_research_startup_v3_native.py",
+      "blocked_test": "scripts/test_math_research_startup_v3_native.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-research-solve",
+      "powershell_path": "scripts/test_math_research_v2_bundle_regression.ps1",
+      "powershell_sha256": "fc81add62cbdd7e1487e070b682bcaf75d51146c2e6e8c1ea1534e47fe568000",
+      "role": "test",
+      "python_candidates": [
+        "scripts/test_math_research_v2_bundle_regression.py"
+      ],
+      "equivalent_entrypoint": "scripts/test_math_research_v2_bundle_regression.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_math_research_v2_bundle_regression.py",
+      "blocked_test": "scripts/test_math_research_v2_bundle_regression.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-research-solve",
+      "powershell_path": "scripts/test_math_research_v9.ps1",
+      "powershell_sha256": "eedd01ddfce6bd9a172067e0a242ab11f576cb8abb39f6fcda9c3c9e0325c734",
+      "role": "test",
+      "python_candidates": [
+        "scripts/test_math_research_v9.py",
+        "scripts/test_math_research_state_v9.py",
+        "scripts/benchmark_math_research_startup_v9.py"
+      ],
+      "equivalent_entrypoint": "scripts/test_math_research_v9.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_test_math_research_v9_native.py",
+      "blocked_test": "scripts/test_test_math_research_v9_native.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-science-computation",
+      "powershell_path": "scripts/backend_inventory.ps1",
+      "powershell_sha256": "5349b8cee27c3d91ecbb368f3634ce1b3277c7580b90cc9e0410c9d1855a3524",
+      "role": "support",
+      "python_candidates": [
+        "scripts/backend_inventory.py"
+      ],
+      "equivalent_entrypoint": "scripts/backend_inventory.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_native_platform_paths.py",
+      "blocked_test": "scripts/test_native_platform_paths.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-science-computation",
+      "powershell_path": "scripts/observer_run.ps1",
+      "powershell_sha256": "173b15740cde631a553dc66979d108957369f1993457e34d35a289081f940973",
+      "role": "support",
+      "python_candidates": [
+        "scripts/observer_run.py"
+      ],
+      "equivalent_entrypoint": "scripts/observer_run.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_native_platform_paths.py",
+      "blocked_test": "scripts/test_native_platform_paths.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    },
+    {
+      "skill": "math-science-computation",
+      "powershell_path": "scripts/probe_backends.ps1",
+      "powershell_sha256": "3943e58d1cd3dab3ec0ee6317b9bbf948483e7d72b8c4735dcdf5051d7863870",
+      "role": "support",
+      "python_candidates": [
+        "scripts/probe_backends.py"
+      ],
+      "equivalent_entrypoint": "scripts/probe_backends.py",
+      "implementation_status": "complete",
+      "platform_status": {
+        "linux": {
+          "status": "verified",
+          "evidence": "references/linux-platform-parity-receipt.json"
+        },
+        "darwin": {
+          "status": "implemented-unverified",
+          "reason": "No real macOS runner has been used."
+        }
+      },
+      "success_test": "scripts/test_native_platform_paths.py",
+      "blocked_test": "scripts/test_native_platform_paths.py",
+      "semantic_parity_receipt": {
+        "same_inputs": true,
+        "same_outputs": true,
+        "same_side_effects": true,
+        "same_exit_codes": true,
+        "reviewed": true
+      }
+    }
+  ]
+}

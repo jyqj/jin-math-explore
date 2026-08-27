@@ -1,0 +1,4 @@
+interface:
+  display_name: "Math Research Solve"
+  short_description: "Compact long-lived rigorous math research projects"
+  default_prompt: "Use $math-research-solve v13. Fresh-check Goal, run v13 Full Startup, keep the six-field objective commitment immutable, load only the bound map packet and relevant evidence, require every research-map publication to carry an exact-candidate PASS closure from a fresh independent subagent, use the closed transition schemas and atomic three-attempt windows, close and independently verify each attempt, reconcile without new mathematics, keep research and execution heads separate, and after three isolated terminal audits PASS publish one permanently closed final head without any post-final project acknowledgement write."

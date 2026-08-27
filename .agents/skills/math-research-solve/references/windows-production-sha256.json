@@ -1,0 +1,21 @@
+{
+  "schema": "math-research-windows-production-sha256/v1",
+  "files": {
+    "build_math_research_legacy_successor_v8.ps1": "9470afc5db02dac45e9c34dc3cc261f52059ffb42a13e75c6ef13ec416a00c3f",
+    "commit_math_research_head_v8.ps1": "deebd4ceea017f2ee587a2074d014e0c6a3c36450df0f6cb6b5caf49e5d2432c",
+    "commit_math_research_transition_v9.ps1": "9bd02cf33cc4f1617faa8b2fc918daddb5e7e18057513658aaa7fa47bd365ff5",
+    "invoke_math_research_startup_v3.ps1": "88810a80caeb691a210e3f91f881788850bcdfd79cf3bfd31911840da7f0d5d0",
+    "invoke_math_research_startup_v4.ps1": "3cbfe0c86095c87fe651d7db56a4b9c6b6246d9d50dd4cd559169e3f445cb8fb",
+    "invoke_math_research_ticket_preflight_v8.ps1": "58741376fab0ac9a082b8e6852a0c751e4942f403d821035161c5a611ad8e5b3",
+    "prepare_math_research_successor_v9.ps1": "11e6a4fabcbf990df9de1b8ea4f4460ddd0ce42eae6082420d18ef65dcf6239b",
+    "prepare_math_research_transition_v9.ps1": "48310962db956306af41731511270604e11e08ae365680a4e7c9403972cf39ba",
+    "commit_math_research_transition_v10.ps1": "3633dfd801ae6901b695d5f14feca9e387b37c79125eac8f65b858885b365a92",
+    "invoke_math_research_startup_v5.ps1": "6b642c641fb412e4dc3485c690d0bef9fc535fd71f5f9beb442aaed8934f3ba9",
+    "invoke_math_research_ticket_preflight_v10.ps1": "bcbae8aa15b5c37b930492e134523a4c1e4364c7ae80d2bb706d8ab4276d66c6",
+    "prepare_math_research_successor_v10.ps1": "c79f700e2639693930eb2ce2cd8465f1d28ea05ec07ed868b7cad08fbf5e0631",
+    "prepare_math_research_transition_v10.ps1": "5d8092951e674cea33e4c76f203efc8ee2791719aea65c544572cef526f44950",
+    "invoke_math_research_assets.ps1": "224abb198be7a12616cb8249b853cadebad1f5bdf0f472a3d17ea79ccaa7fe8a",
+    "invoke_math_research_migrate_v8_to_v10.ps1": "ef5c2c979501dff9a787b4544368454674add7dedff424279c3b81b8d57ae834",
+    "invoke_math_research_v13.ps1": "6b8998e56c33fa9eddde70a71cb45b2d08645741b13df139665c18e920b06e6b"
+  }
+}

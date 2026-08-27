@@ -1,0 +1,752 @@
+{
+  "schema_version": "skill-terminology-registry/v1",
+  "skill_id": "personal:math-research-solve",
+  "terms": [
+    {
+      "canonical_id": "project_objective",
+      "display_name_zh": "项目永久数学目标",
+      "semantic_layer": "permanent_project_identity",
+      "authority_class": "immutable_mathematical_identity",
+      "constitutive_fields": [
+        "statement",
+        "domain",
+        "quantifier_order",
+        "assumptions",
+        "evidence_standard",
+        "completion_standard"
+      ],
+      "aliases": [
+        "permanent mathematical objective"
+      ],
+      "deprecated_aliases": [
+        "problem",
+        "contract target"
+      ],
+      "reserved_conflicts": [
+        "Product Goal",
+        "project.json",
+        "task",
+        "route"
+      ],
+      "change_policy": "semantic_change_requires_new_project_or_explicit_fork",
+      "definition_ref": "references/terminology.md#project_objective",
+      "introduced_in": "v13",
+      "visibility": "local",
+      "relations": [],
+      "history": [
+        "v13: canonicalized during mandatory terminology migration"
+      ]
+    },
+    {
+      "canonical_id": "task",
+      "display_name_zh": "持久工作任务",
+      "semantic_layer": "project_work",
+      "authority_class": "durable_work_record",
+      "constitutive_fields": [
+        "task_id",
+        "type",
+        "objective_binding",
+        "scope",
+        "inputs",
+        "outputs",
+        "state",
+        "permissions",
+        "evidence_requirements"
+      ],
+      "aliases": [
+        "research task"
+      ],
+      "deprecated_aliases": [
+        "job"
+      ],
+      "reserved_conflicts": [
+        "ticket",
+        "attempt",
+        "project_objective"
+      ],
+      "change_policy": "scope_or_authority_change_requires_new_review",
+      "definition_ref": "references/terminology.md#task",
+      "introduced_in": "v13",
+      "visibility": "local",
+      "relations": [],
+      "history": [
+        "v13: canonicalized during mandatory terminology migration"
+      ]
+    },
+    {
+      "canonical_id": "run",
+      "display_name_zh": "同根研究运行",
+      "semantic_layer": "project_execution",
+      "authority_class": "same_root_execution_container",
+      "constitutive_fields": [
+        "run_id",
+        "project_binding",
+        "objective_binding",
+        "state",
+        "event_chain",
+        "budgets",
+        "counters",
+        "windows",
+        "artifacts"
+      ],
+      "aliases": [
+        "Run"
+      ],
+      "deprecated_aliases": [
+        "session"
+      ],
+      "reserved_conflicts": [
+        "attempt",
+        "product Goal",
+        "project"
+      ],
+      "change_policy": "successor_preserves_objective_and_cumulative_envelope",
+      "definition_ref": "references/terminology.md#run",
+      "introduced_in": "v13",
+      "visibility": "local",
+      "relations": [],
+      "history": [
+        "v13: canonicalized during mandatory terminology migration",
+        "v13-current: Run now explicitly contains windows"
+      ]
+    },
+    {
+      "canonical_id": "attempt",
+      "display_name_zh": "计数研究尝试",
+      "semantic_layer": "research_execution",
+      "authority_class": "frozen_counted_research_unit",
+      "constitutive_fields": [
+        "attempt_id",
+        "attempt_kind",
+        "window_id",
+        "queue_item",
+        "ticket",
+        "route_decision",
+        "route",
+        "source_map_head",
+        "proof_object",
+        "mechanism_family",
+        "quantifier_strategy",
+        "evidence_standard",
+        "cognition",
+        "capsule",
+        "budget",
+        "attempt_outcome",
+        "reconciliation_package"
+      ],
+      "aliases": [
+        "research attempt"
+      ],
+      "deprecated_aliases": [
+        "round"
+      ],
+      "reserved_conflicts": [
+        "task",
+        "Run",
+        "ticket",
+        "window",
+        "round"
+      ],
+      "change_policy": "semantic_change_requires_attempt_end_and_reset",
+      "definition_ref": "references/terminology.md#attempt",
+      "introduced_in": "v13",
+      "visibility": "local",
+      "relations": [],
+      "history": [
+        "v13: canonicalized during mandatory terminology migration",
+        "v13-current: scoped to one window portfolio member and ends in a reconciliation package"
+      ]
+    },
+    {
+      "canonical_id": "route",
+      "display_name_zh": "研究路线",
+      "semantic_layer": "research_strategy",
+      "authority_class": "mutable_strategy_object",
+      "constitutive_fields": [
+        "route_id",
+        "route_family",
+        "proof_object",
+        "mechanism",
+        "quantifier_strategy",
+        "dependencies",
+        "targeted_bottleneck",
+        "evidence",
+        "obstacles",
+        "status",
+        "reopen_conditions"
+      ],
+      "aliases": [
+        "proof route"
+      ],
+      "deprecated_aliases": [
+        "idea"
+      ],
+      "reserved_conflicts": [
+        "attempt",
+        "project_objective"
+      ],
+      "change_policy": "material_change_requires_successor_route",
+      "definition_ref": "references/terminology.md#route",
+      "introduced_in": "v13",
+      "visibility": "local",
+      "relations": [],
+      "history": [
+        "v13: canonicalized during mandatory terminology migration",
+        "v13-current: why_now moved from persistent route identity to window-scoped route_decision"
+      ]
+    },
+    {
+      "canonical_id": "ticket",
+      "display_name_zh": "冻结协作票据",
+      "semantic_layer": "collaboration_control",
+      "authority_class": "bounded_worker_assignment",
+      "constitutive_fields": [
+        "ticket_id",
+        "role",
+        "bounded_question",
+        "inputs",
+        "allowed_tools",
+        "staging_path",
+        "resource_caps",
+        "stop_rule",
+        "required_outputs",
+        "failure_return",
+        "reopen_condition"
+      ],
+      "aliases": [
+        "frozen ticket"
+      ],
+      "deprecated_aliases": [
+        "worker prompt"
+      ],
+      "reserved_conflicts": [
+        "task",
+        "attempt",
+        "capability",
+        "lease",
+        "window_queue_item"
+      ],
+      "change_policy": "dispatch_freezes_bytes_new_scope_requires_new_ticket",
+      "definition_ref": "references/terminology.md#ticket",
+      "introduced_in": "v13",
+      "visibility": "local",
+      "relations": [],
+      "history": [
+        "v13: canonicalized during mandatory terminology migration",
+        "v13-current: repair is a constrained ticket subtype and queue items remain distinct"
+      ]
+    },
+    {
+      "canonical_id": "research_map",
+      "display_name_zh": "研究地图",
+      "semantic_layer": "project_navigation",
+      "authority_class": "derived_authority_navigation",
+      "constitutive_fields": [
+        "receipt",
+        "main_map",
+        "project_glossary",
+        "evidence_rules",
+        "route_landscape",
+        "route_review",
+        "milestones",
+        "results",
+        "obstacles",
+        "binding_bridge",
+        "retrieval_triggers",
+        "authority_pointers"
+      ],
+      "aliases": [
+        "research map"
+      ],
+      "deprecated_aliases": [
+        "map prototype"
+      ],
+      "reserved_conflicts": [
+        "long-term memory",
+        "project_core_cognition",
+        "Skill schema",
+        "route_decision",
+        "selected_route",
+        "next_window_portfolio"
+      ],
+      "change_policy": "authority_change_requires_map_revalidation",
+      "definition_ref": "references/terminology.md#research_map",
+      "introduced_in": "v13",
+      "visibility": "local",
+      "relations": [],
+      "history": [
+        "v13: canonicalized during mandatory terminology migration",
+        "v13-current: map is a window-boundary snapshot and no longer contains active or future route selection",
+        "v13-current: newly published maps include a project glossary while the main survey still explains central notation before first substantive use; older frozen map history remains readable"
+      ]
+    },
+    {
+      "canonical_id": "project_core_cognition",
+      "display_name_zh": "本轮项目核心认知",
+      "semantic_layer": "attempt_context",
+      "authority_class": "frozen_derived_causal_cognition",
+      "constitutive_fields": [
+        "objective",
+        "window_binding",
+        "source_map_head",
+        "method_orientation",
+        "key_objects",
+        "verified_method_spine",
+        "derived_bottleneck",
+        "route_causality",
+        "evidence_boundaries",
+        "retrieval_triggers",
+        "reset_conditions",
+        "missing_object_declarations"
+      ],
+      "aliases": [
+        "project-core cognition",
+        "本轮项目核心认知"
+      ],
+      "deprecated_aliases": [
+        "project summary"
+      ],
+      "reserved_conflicts": [
+        "research_map",
+        "continuity_capsule",
+        "project_objective"
+      ],
+      "change_policy": "frozen_per_attempt_semantic_change_requires_reset",
+      "definition_ref": "references/terminology.md#project_core_cognition",
+      "introduced_in": "v13",
+      "visibility": "local",
+      "relations": [],
+      "history": [
+        "v13: canonicalized during mandatory terminology migration",
+        "v13-current: cognition binds one window source snapshot and one attempt route_decision"
+      ]
+    },
+    {
+      "canonical_id": "checkpoint",
+      "display_name_zh": "执行检查点",
+      "semantic_layer": "execution_recovery",
+      "authority_class": "durable_authoritative_recovery_state",
+      "constitutive_fields": [
+        "project_binding",
+        "run_binding",
+        "window_binding",
+        "objective_binding",
+        "generation",
+        "event_head",
+        "counters",
+        "current_lifecycle",
+        "current_queue_item",
+        "local_progress",
+        "pointers"
+      ],
+      "aliases": [
+        "research checkpoint"
+      ],
+      "deprecated_aliases": [
+        "savepoint"
+      ],
+      "reserved_conflicts": [
+        "continuity_capsule",
+        "project head"
+      ],
+      "change_policy": "append_only_progress_frozen_semantics_preserved",
+      "definition_ref": "references/terminology.md#checkpoint",
+      "introduced_in": "v13",
+      "visibility": "local",
+      "relations": [],
+      "history": [
+        "v13: canonicalized during mandatory terminology migration",
+        "v13-current: checkpoint binds window and queue item and cannot import sibling work"
+      ]
+    },
+    {
+      "canonical_id": "continuity_capsule",
+      "display_name_zh": "连续性胶囊",
+      "semantic_layer": "attempt_continuity",
+      "authority_class": "frozen_local_continuity_carrier",
+      "constitutive_fields": [
+        "project_id",
+        "run_id",
+        "window_id",
+        "attempt_id",
+        "source_map_head",
+        "objective_hash",
+        "cognition_hash",
+        "rendering_hash",
+        "route_pointer",
+        "route_decision",
+        "local_position",
+        "open_questions",
+        "route_sets",
+        "reset_directive",
+        "generation"
+      ],
+      "aliases": [
+        "continuity capsule"
+      ],
+      "deprecated_aliases": [
+        "context summary"
+      ],
+      "reserved_conflicts": [
+        "checkpoint",
+        "project_core_cognition",
+        "handoff"
+      ],
+      "change_policy": "successor_may_update_local_position_not_semantics",
+      "definition_ref": "references/terminology.md#continuity_capsule",
+      "introduced_in": "v13",
+      "visibility": "local",
+      "relations": [],
+      "history": [
+        "v13: canonicalized during mandatory terminology migration",
+        "v13-current: capsule binds one window source snapshot and is not a sibling communication channel"
+      ]
+    },
+    {
+      "canonical_id": "window",
+      "display_name_zh": "研究窗口",
+      "semantic_layer": "research_orchestration",
+      "authority_class": "bounded_multi_attempt_cycle",
+      "constitutive_fields": ["window_id", "source_head", "source_map", "route_portfolio", "queue_items", "budgets", "state", "reconciliation_receipt", "closing_head"],
+      "aliases": ["research window", "一轮研究"],
+      "deprecated_aliases": [],
+      "reserved_conflicts": ["round", "attempt", "Run", "conversation turn"],
+      "change_policy": "source_and_portfolio_freeze_until_reconciliation",
+      "definition_ref": "references/terminology.md#window",
+      "introduced_in": "v13",
+      "visibility": "local",
+      "relations": [],
+      "history": ["v13-current: canonical current multi-attempt lifecycle boundary"]
+    },
+    {
+      "canonical_id": "route_proposal",
+      "display_name_zh": "路线提案",
+      "semantic_layer": "window_planning",
+      "authority_class": "non_authoritative_route_candidate",
+      "constitutive_fields": ["proposal_id", "source_map_head", "proposer_role", "route_fingerprint", "targeted_bottleneck", "dependencies", "success_failure_gate", "evidence_refs"],
+      "aliases": ["route proposal"],
+      "deprecated_aliases": ["idea candidate"],
+      "reserved_conflicts": ["route", "route_decision", "route_portfolio", "ticket"],
+      "change_policy": "material_change_requires_new_proposal_id",
+      "definition_ref": "references/terminology.md#route_proposal",
+      "introduced_in": "v13",
+      "visibility": "local",
+      "relations": [],
+      "history": ["v13-current: canonicalized for independent window-start proposal generation"]
+    },
+    {
+      "canonical_id": "route_portfolio",
+      "display_name_zh": "路线组合",
+      "semantic_layer": "window_planning",
+      "authority_class": "frozen_window_route_set",
+      "constitutive_fields": ["portfolio_id", "window_binding", "source_map_head", "three_members", "semantic_fingerprints", "dedup_evidence", "coverage_rationale"],
+      "aliases": ["route portfolio", "window portfolio"],
+      "deprecated_aliases": ["next route portfolio"],
+      "reserved_conflicts": ["route_review", "next_window_plan", "ticket_set"],
+      "change_policy": "freeze_at_window_start_clear_active_state_at_close",
+      "definition_ref": "references/terminology.md#route_portfolio",
+      "introduced_in": "v13",
+      "visibility": "local",
+      "relations": [],
+      "history": ["v13-current: one three-member differentiated portfolio per active window"]
+    },
+    {
+      "canonical_id": "route_review",
+      "display_name_zh": "路线复盘",
+      "semantic_layer": "research_strategy_review",
+      "authority_class": "evidence_bound_strategy_review",
+      "constitutive_fields": ["review_id", "source_authority", "route_assessments", "comparisons", "bottlenecks", "reranking_conditions", "evidence_refs", "new_math_performed"],
+      "aliases": ["route review"],
+      "deprecated_aliases": ["next route plan"],
+      "reserved_conflicts": ["route_decision", "route_portfolio", "window_reconciliation"],
+      "change_policy": "new_evidence_may_rerank_but_review_never_selects_future_routes",
+      "definition_ref": "references/terminology.md#route_review",
+      "introduced_in": "v13",
+      "visibility": "local",
+      "relations": [],
+      "history": ["v13-current: review describes the route landscape and never preplans the next window"]
+    },
+    {
+      "canonical_id": "route_decision",
+      "display_name_zh": "路线决定",
+      "semantic_layer": "attempt_activation",
+      "authority_class": "window_scoped_route_selection",
+      "constitutive_fields": ["decision_id", "window_attempt_binding", "source_map_head", "selected_route", "route_fingerprint", "why_now", "alternative_comparison", "targeted_bottleneck", "uncertainty", "success_failure_gates", "evidence_refs"],
+      "aliases": ["route decision"],
+      "deprecated_aliases": ["map selected route"],
+      "reserved_conflicts": ["route", "route_review", "route_portfolio", "next route"],
+      "change_policy": "freeze_per_attempt_expire_as_active_control_at_window_close",
+      "definition_ref": "references/terminology.md#route_decision",
+      "introduced_in": "v13",
+      "visibility": "local",
+      "relations": [],
+      "history": ["v13-current: route selection moved from closed map state to window-start attempt decision"]
+    },
+    {
+      "canonical_id": "route_delta",
+      "display_name_zh": "路线增量",
+      "semantic_layer": "attempt_reconciliation_input",
+      "authority_class": "scoped_route_fact_proposal",
+      "constitutive_fields": ["delta_id", "window_attempt_route", "claims", "evidence_verification_refs", "scope", "cannot_imply", "classification", "reopen_condition"],
+      "aliases": ["route delta"],
+      "deprecated_aliases": ["next route recommendation"],
+      "reserved_conflicts": ["route_decision", "route_review", "map patch"],
+      "change_policy": "reconciliation_accepts_rejects_or_scopes_without_rewriting_source",
+      "definition_ref": "references/terminology.md#route_delta",
+      "introduced_in": "v13",
+      "visibility": "local",
+      "relations": [],
+      "history": ["v13-current: canonical attempt-end factual route update input"]
+    },
+    {
+      "canonical_id": "attempt_outcome",
+      "display_name_zh": "尝试结果分类",
+      "semantic_layer": "attempt_lifecycle",
+      "authority_class": "closed_attempt_execution_disposition",
+      "constitutive_fields": ["window_attempt_identity", "outcome", "candidate", "verification", "scope", "completed_at", "artifact_refs"],
+      "aliases": ["attempt outcome"],
+      "deprecated_aliases": ["verdict"],
+      "reserved_conflicts": ["verification_result", "route_status", "project_completion"],
+      "change_policy": "closed_value_is_immutable_correction_requires_new_event",
+      "definition_ref": "references/terminology.md#attempt_outcome",
+      "introduced_in": "v13",
+      "visibility": "local",
+      "relations": [],
+      "history": ["v13-current: exact values candidate_found no_candidate inconclusive awaiting_input failed"]
+    },
+    {
+      "canonical_id": "verification_result",
+      "display_name_zh": "独立验证结果",
+      "semantic_layer": "evidence_verification",
+      "authority_class": "candidate_bound_promotion_gate",
+      "constitutive_fields": ["verification_id", "verifier_role", "independence_mode", "candidate_dependencies", "scope_quantifiers", "verdict", "diagnosis", "completed_at"],
+      "aliases": ["verification result", "verifier verdict"],
+      "deprecated_aliases": ["attempt result"],
+      "reserved_conflicts": ["attempt_outcome", "terminal_audit", "evidence_grade"],
+      "change_policy": "new_candidate_hash_requires_new_verification",
+      "definition_ref": "references/terminology.md#verification_result",
+      "introduced_in": "v13",
+      "visibility": "local",
+      "relations": [],
+      "history": ["v13-current: exact verdicts PASS FAIL INCONCLUSIVE with explicit independence mode"]
+    },
+    {
+      "canonical_id": "attempt_reconciliation_package",
+      "display_name_zh": "尝试结算包",
+      "semantic_layer": "attempt_window_boundary",
+      "authority_class": "hash_bound_window_reconciliation_input",
+      "constitutive_fields": ["package_id", "window_attempt_source", "attempt_outcome", "artifact_evidence_verification_hashes", "route_delta", "result_classifications", "obstacles", "cannot_imply", "reopen_conditions", "ready_state"],
+      "aliases": ["window settlement input", "窗口结算输入", "窗口结算包", "结算提案"],
+      "deprecated_aliases": [],
+      "reserved_conflicts": ["window_reconciliation", "checkpoint", "project head"],
+      "change_policy": "freeze_once_supersession_preserves_lineage",
+      "definition_ref": "references/terminology.md#attempt_reconciliation_package",
+      "introduced_in": "v13",
+      "visibility": "local",
+      "relations": [],
+      "history": ["v13-current: unified three informal settlement labels under one per-attempt object"]
+    },
+    {
+      "canonical_id": "window_reconciliation",
+      "display_name_zh": "窗口结算",
+      "semantic_layer": "window_publication",
+      "authority_class": "host_owned_global_reconciliation_transition",
+      "constitutive_fields": ["window_source_closing_heads", "three_packages", "promotion_decisions", "route_delta_applications", "route_review", "new_map_receipts", "queue_clear_proof"],
+      "aliases": ["window reconciliation"],
+      "deprecated_aliases": ["three-attempt route review"],
+      "reserved_conflicts": ["ATTEMPT_END", "route_review", "terminal_audit", "summary"],
+      "change_policy": "publish_one_validated_head_or_preserve_old_head",
+      "definition_ref": "references/terminology.md#window_reconciliation",
+      "introduced_in": "v13",
+      "visibility": "local",
+      "relations": [],
+      "history": ["v13-current: canonical global promotion map rebuild and window-close transition"]
+    },
+    {
+      "canonical_id": "window_queue_item",
+      "display_name_zh": "窗口队列项",
+      "semantic_layer": "window_execution_control",
+      "authority_class": "durable_host_orchestration_record",
+      "constitutive_fields": ["queue_item_id", "window_portfolio_attempt_decision", "solver_verifier_tickets", "dependencies", "state", "budget", "staging_package_pointers"],
+      "aliases": ["window queue item"],
+      "deprecated_aliases": ["lease item"],
+      "reserved_conflicts": ["ticket", "lease", "attempt", "agent slot"],
+      "change_policy": "host_may_requeue_without_changing_identity_or_authority",
+      "definition_ref": "references/terminology.md#window_queue_item",
+      "introduced_in": "v13",
+      "visibility": "local",
+      "relations": [],
+      "history": ["v13-current: durable current-window queue semantics without process leases", "v13-corrective-compatibility: one-time atomic queued preflight rebind discards all three stale verifier tickets before fresh queueing"]
+    },
+    {
+      "canonical_id": "research_role",
+      "display_name_zh": "研究协作角色",
+      "semantic_layer": "collaboration_roles",
+      "authority_class": "closed_logical_responsibility",
+      "constitutive_fields": ["role", "actor_session_identity", "ticket", "scope", "independence_mode", "allowed_actions", "forbidden_authority"],
+      "aliases": ["lead verifier specialist roles"],
+      "deprecated_aliases": ["fixed three-agent team"],
+      "reserved_conflicts": ["physical agent", "Goal Host", "ticket", "thread"],
+      "change_policy": "physical_agent_count_may_change_roles_and_boundaries_may_not",
+      "definition_ref": "references/terminology.md#research_role",
+      "introduced_in": "v13",
+      "visibility": "local",
+      "relations": [],
+      "history": ["v13-current: lead verifier specialist defined as logical roles with single-agent fallback"]
+    },
+    {
+      "canonical_id": "semantic_reset",
+      "display_name_zh": "语义重置",
+      "semantic_layer": "attempt_semantic_boundary",
+      "authority_class": "frozen_attempt_scope_transition",
+      "constitutive_fields": ["reset_id", "window_attempt", "changed_semantic_fields", "reason_evidence", "preserved_artifacts", "cannot_imply", "reopen_condition"],
+      "aliases": ["semantic reset"],
+      "deprecated_aliases": ["route restart"],
+      "reserved_conflicts": ["checkpoint", "repair ticket", "route rename", "project fork"],
+      "change_policy": "close_attempt_preserve_evidence_future_window_replans",
+      "definition_ref": "references/terminology.md#semantic_reset",
+      "introduced_in": "v13",
+      "visibility": "local",
+      "relations": [],
+      "history": ["v13-current: reset closes the attempt and never auto-starts a successor"]
+    },
+    {
+      "canonical_id": "result_map_role",
+      "display_name_zh": "结果地图角色",
+      "semantic_layer": "research_asset_classification",
+      "authority_class": "visibility_and_organization_classification",
+      "constitutive_fields": ["result_id", "role", "scope", "objective_relation", "reusable_value", "cannot_imply", "evidence_verification_refs"],
+      "aliases": ["result map role"],
+      "deprecated_aliases": ["result grade"],
+      "reserved_conflicts": ["attempt_outcome", "verification_result", "evidence_grade", "route_status"],
+      "change_policy": "reclassification_preserves_truth_scope_and_history",
+      "definition_ref": "references/terminology.md#result_map_role",
+      "introduced_in": "v13",
+      "visibility": "local",
+      "relations": [],
+      "history": ["v13-current: exact values milestone standalone_result route_local"]
+    },
+    {
+      "canonical_id": "objective_commitment", "display_name_zh": "目标承诺", "semantic_layer": "permanent_project_identity", "authority_class": "canonical_byte_commitment",
+      "constitutive_fields": ["six_ordered_fields", "canonical_bytes", "sha256"], "aliases": ["objective commitment"], "deprecated_aliases": ["objective file hash"], "reserved_conflicts": ["project head", "Product Goal"],
+      "change_policy": "any_byte_change_requires_new_project_or_fork", "definition_ref": "references/terminology.md#objective_commitment", "introduced_in": "v13", "visibility": "local", "relations": [], "history": ["v13-final: fixed six-field byte commitment"]
+    },
+    {
+      "canonical_id": "research_authority_head", "display_name_zh": "研究权威头", "semantic_layer": "project_authority", "authority_class": "promoted_research_cas_component",
+      "constitutive_fields": ["generation", "memory", "route_review", "map", "source_integrity"], "aliases": ["research authority head"], "deprecated_aliases": [], "reserved_conflicts": ["execution_state_head"],
+      "change_policy": "promotion_or_invalidation_only", "definition_ref": "references/terminology.md#research_authority_head", "introduced_in": "v13", "visibility": "local", "relations": [], "history": ["v13-final: split from execution state"]
+    },
+    {
+      "canonical_id": "execution_state_head", "display_name_zh": "执行状态头", "semantic_layer": "project_execution", "authority_class": "execution_cas_component",
+      "constitutive_fields": ["generation", "phase", "window", "attempts", "queues", "audits"], "aliases": ["execution state head"], "deprecated_aliases": [], "reserved_conflicts": ["research_authority_head"],
+      "change_policy": "never_promotes_research_authority", "definition_ref": "references/terminology.md#execution_state_head", "introduced_in": "v13", "visibility": "local", "relations": [], "history": ["v13-final: split from research authority"]
+    },
+    {
+      "canonical_id": "window_source_binding", "display_name_zh": "窗口来源绑定", "semantic_layer": "window_planning", "authority_class": "closed_source_union",
+      "constitutive_fields": ["kind", "validated_map_or_genesis", "source_hashes"], "aliases": ["window source binding"], "deprecated_aliases": [], "reserved_conflicts": ["route_decision"],
+      "change_policy": "frozen_for_window_genesis_once", "definition_ref": "references/terminology.md#window_source_binding", "introduced_in": "v13", "visibility": "local", "relations": [], "history": ["v13-final: closed union and migration restriction"]
+    },
+    {
+      "canonical_id": "attempt_closing", "display_name_zh": "尝试关闭阶段", "semantic_layer": "attempt_lifecycle", "authority_class": "candidate_verification_boundary",
+      "constitutive_fields": ["outcome", "candidate", "dependencies", "artifact_refs", "package_preflight_receipt", "verification", "repair_count"], "aliases": ["attempt closing"], "deprecated_aliases": [], "reserved_conflicts": ["checkpoint", "ATTEMPT_END"],
+      "change_policy": "at_most_one_same_semantic_repair_each_candidate_requires_fresh_preflight", "definition_ref": "references/terminology.md#attempt_closing", "introduced_in": "v13", "visibility": "local", "relations": [], "history": ["v13-final: explicit closing lifecycle", "v13-corrective: candidate freeze now requires a fresh attempt-package preflight receipt", "v13-corrective-compatibility: exact three-attempt legacy verifier queue may atomically rebind fresh receipts once without changing semantics, counters, or repair counts"]
+    },
+    {
+      "canonical_id": "attempt_package_preflight_receipt", "display_name_zh": "尝试包预检收据", "semantic_layer": "attempt_candidate_freeze", "authority_class": "deterministic_byte_closure_gate",
+      "constitutive_fields": ["attempt_id", "pass_status", "package_root", "candidate", "dependencies", "artifact_refs_sha256", "package_inventory_sha256", "artifact_manifest", "file_and_byte_counts", "max_total_bytes", "finalizer_version"],
+      "aliases": ["attempt-package preflight receipt"], "deprecated_aliases": [], "reserved_conflicts": ["verification_result", "artifact manifest", "commit receipt", "LIMITED_REPAIR"],
+      "change_policy": "any_bound_byte_or_pointer_change_requires_fresh_staging_and_receipt", "definition_ref": "references/terminology.md#attempt_package_preflight_receipt", "introduced_in": "v13-corrective", "visibility": "local", "relations": [],
+      "history": ["v13-corrective: introduced deterministic package closure before candidate freeze; migration and compatibility are defined in references/attempt-package-preflight-v13.md", "v13-corrective-compatibility: fresh receipts may be atomically rebound once for an exact legacy three-item verification queue; receipt reuse remains forbidden"]
+    },
+    {
+      "canonical_id": "scoped_review_gate", "display_name_zh": "范围化复核门禁", "semantic_layer": "cross_lifecycle_gate", "authority_class": "blocked_transition_gate",
+      "constitutive_fields": ["scope", "owner_lifecycle", "blocked_transition", "dependency_closure", "release_condition", "evidence_refs"], "aliases": ["review_required gate"], "deprecated_aliases": ["review state"], "reserved_conflicts": ["lifecycle state"],
+      "change_policy": "release_only_on_bound_evidence", "definition_ref": "references/terminology.md#scoped_review_gate", "introduced_in": "v13", "visibility": "local", "relations": [], "history": ["v13-final: gate not state"]
+    },
+    {
+      "canonical_id": "maintenance_reconciliation", "display_name_zh": "维护结算", "semantic_layer": "project_maintenance", "authority_class": "non_mathematical_reconciliation",
+      "constitutive_fields": ["late_verification", "source_integrity", "dependency_closure", "quarantine", "publication"], "aliases": ["maintenance reconciliation", "source integrity reconciliation"], "deprecated_aliases": [], "reserved_conflicts": ["window_reconciliation", "new mathematics"],
+      "change_policy": "no_new_math_and_no_history_rewrite", "definition_ref": "references/terminology.md#maintenance_reconciliation", "introduced_in": "v13", "visibility": "local", "relations": [], "history": ["v13-final: late and invalidated evidence route"]
+    },
+    {
+      "canonical_id": "tracked_topic_section",
+      "display_name_zh": "研究地图跟踪专题小节",
+      "semantic_layer": "research_map_publication",
+      "authority_class": "persistent_project_local_map_obligation",
+      "constitutive_fields": ["level_two_section", "topic_id", "authority_manifest_sha256", "status", "progress", "ordering_with_basis"],
+      "aliases": ["tracked topic section"],
+      "deprecated_aliases": ["latest-results appendix", "next-route ranking"],
+      "reserved_conflicts": ["route_decision", "selected route", "milestone", "standalone result", "checkpoint"],
+      "change_policy": "every_authoritative_map_publication_rebinds_and_semantically_refreshes_status_progress_and_ordering",
+      "definition_ref": "references/terminology.md#tracked_topic_section",
+      "introduced_in": "v13-maintenance",
+      "visibility": "local",
+      "relations": [
+        {
+          "type": "refines",
+          "target": "personal:math-research-solve#research_map"
+        },
+        {
+          "type": "distinct_from",
+          "target": "personal:math-research-solve#route_decision"
+        }
+      ],
+      "history": ["v13-maintenance: introduced a hash-bound project-local map subsection whose status, progress, and evidence-maturity ordering must be refreshed on every authoritative map update"]
+    },
+    {
+      "canonical_id": "terminal_sufficient_condition_register",
+      "display_name_zh": "终端充分命题登记册",
+      "semantic_layer": "research_map_publication",
+      "authority_class": "persistent_project_local_map_obligation",
+      "constitutive_fields": ["schema", "topic_binding", "project_binding", "objective_binding", "authority_manifest_binding", "coverage_claim", "difficulty_basis", "conditions", "logical_relations", "difficulty_relations", "exclusions", "candidate_source_coverage", "route_local_terminal_coverage", "shared_definition_card", "visible_route_evidence_failure_and_terminal_links", "explicit_exclusion_scope_and_route_retention", "visible_binding"],
+      "aliases": ["terminal sufficient condition register"],
+      "deprecated_aliases": ["sufficient premise checklist", "route maturity ranking"],
+      "reserved_conflicts": ["tracked_topic_section", "route_decision", "standalone result", "project completion certificate"],
+      "change_policy": "every_authoritative_map_publication_rebinds and semantically refreshes source candidates, route-local terminal coverage, inventory, relations, difficulty, and exclusions",
+      "definition_ref": "references/terminology.md#terminal_sufficient_condition_register",
+      "introduced_in": "v13-maintenance",
+      "visibility": "local",
+      "relations": [
+        {
+          "type": "refines",
+          "target": "personal:math-research-solve#tracked_topic_section"
+        },
+        {
+          "type": "distinct_from",
+          "target": "personal:math-research-solve#route_decision"
+        }
+      ],
+      "history": ["v13-maintenance: introduced an opt-in hash-bound inventory of terminal sufficient propositions with logical relations, evidence-based difficulty partial order, and explicit exclusions", "v13-maintenance-feedback: required source-by-source candidate coverage and one visible route-local terminal proposition for every expandable research branch", "v13-maintenance-callout-feedback: required every registered proposition to render as a titled self-contained proposition callout whose hypothesis and objective implication survive standalone copying", "v13-maintenance-definition-package-feedback: changed portability to a hash-bound shared-definition-plus-proposition package and required visible route/evidence/failure/terminal link closure with honest exclusion scope"]
+    },
+    {
+      "canonical_id": "map_semantic_review",
+      "display_name_zh": "研究地图独立语义审核",
+      "semantic_layer": "research_map_publication",
+      "authority_class": "fresh_subagent_semantic_publication_gate",
+      "constitutive_fields": ["protocol_binding", "candidate_map_binding", "visible_tree_inventory", "authority_inventory_and_manifest", "structural_validation_receipt", "author_principal", "fresh_reviewer_principals", "bounded_three_round_lineage", "authority_coverage", "eight_synthesis_checks", "final_exact_candidate_pass"],
+      "aliases": ["map semantic review"],
+      "deprecated_aliases": ["semantic review PASS", "thin map review receipt"],
+      "reserved_conflicts": ["structural map validation", "verification_result", "terminal audit", "lifecycle state"],
+      "change_policy": "any_candidate_protocol_inventory_manifest_or_receipt_byte_change_requires_new_ticket_and_fresh_reviewer",
+      "definition_ref": "references/terminology.md#map_semantic_review",
+      "introduced_in": "v13-maintenance",
+      "visibility": "local",
+      "relations": [
+        {
+          "type": "refines",
+          "target": "personal:math-research-solve#scoped_review_gate"
+        },
+        {
+          "type": "distinct_from",
+          "target": "personal:math-research-solve#research_authority_head"
+        }
+      ],
+      "history": ["v13-maintenance: replaced thin semantic-review pointers with a bounded fresh-subagent closure; project and map version axes unchanged"]
+    },
+    {
+      "canonical_id": "completion_publication_pair", "display_name_zh": "完成发布对", "semantic_layer": "terminal_completion", "authority_class": "terminal_project_goal_handshake",
+      "constitutive_fields": ["immutable_completion_head", "durable_pending_goal_update", "two_fresh_goal_checks", "same_goal_completion_call"], "aliases": ["completion publication pair"], "deprecated_aliases": ["single completion write", "post-final acknowledgement"], "reserved_conflicts": ["partial result", "Goal-only completion", "clear pending"],
+      "change_policy": "terminal_no_project_write_after_final_head", "definition_ref": "references/terminology.md#completion_publication_pair", "introduced_in": "v13", "visibility": "local", "relations": [], "history": ["v13-final: separated mathematical and control-plane completion", "v13-corrective: pending flag is permanent and Goal completion never writes back"]
+    }
+  ]
+}

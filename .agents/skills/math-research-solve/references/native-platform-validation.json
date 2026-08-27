@@ -1,0 +1,93 @@
+{
+  "schema": "math-research-native-platform-validation/v1",
+  "generated_on": "2026-08-18",
+  "scope_policy": "A receipt verifies only the named component and test file; it never verifies the whole Skill or package.",
+  "platforms": [
+    {
+      "system": "Windows",
+      "release": "11",
+      "machine": "AMD64",
+      "python": "3.13.13",
+      "environment": "local-native",
+      "components": [
+        {
+          "component": "control-primitives",
+          "test": "scripts/test_math_research_control_primitives.py",
+          "tests_run": 6,
+          "failures": 0,
+          "errors": 0,
+          "status": "verified"
+        },
+        {
+          "component": "process-identity",
+          "test": "scripts/test_math_research_process_identity.py",
+          "tests_run": 5,
+          "failures": 0,
+          "errors": 0,
+          "status": "verified"
+        },
+        {
+          "component": "safe-stop",
+          "test": "scripts/test_stop_math_research_native.py",
+          "tests_run": 3,
+          "tests_skipped": 3,
+          "status": "reference-platform-only",
+          "reason": "Windows continues to use the signed Job Object implementation."
+        }
+      ]
+    },
+    {
+      "system": "Linux",
+      "release": "6.6.87.2-microsoft-standard-WSL2",
+      "machine": "x86_64",
+      "python": "3.12.3",
+      "environment": "Ubuntu-on-WSL2",
+      "components": [
+        {
+          "component": "control-primitives",
+          "test": "scripts/test_math_research_control_primitives.py",
+          "tests_run": 6,
+          "failures": 0,
+          "errors": 0,
+          "status": "verified"
+        },
+        {
+          "component": "process-identity",
+          "test": "scripts/test_math_research_process_identity.py",
+          "tests_run": 5,
+          "failures": 0,
+          "errors": 0,
+          "status": "verified"
+        },
+        {
+          "component": "safe-stop",
+          "test": "scripts/test_stop_math_research_native.py",
+          "tests_run": 3,
+          "failures": 0,
+          "errors": 0,
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "system": "Darwin",
+      "status": "unverified",
+      "reason": "No real macOS runner has been used.",
+      "components": [
+        {
+          "component": "control-primitives",
+          "status": "implemented-unverified"
+        },
+        {
+          "component": "process-identity",
+          "status": "implemented-unverified",
+          "implementation_basis": "Apple libproc proc_pidinfo(PROC_PIDTBSDINFO) and proc_pidpath"
+        },
+        {
+          "component": "safe-stop",
+          "status": "implemented-unverified"
+        }
+      ]
+    }
+  ]
+}

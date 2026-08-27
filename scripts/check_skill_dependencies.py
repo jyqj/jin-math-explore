@@ -6,7 +6,7 @@ import json
 import os
 from pathlib import Path
 
-from research_repo import load_json, validate_skill_dependencies
+from research_repo import load_json, validate_skill_dependencies, validate_vendored_skills
 
 
 def candidates(root: Path, name: str) -> list[Path]:
@@ -26,7 +26,7 @@ def main() -> int:
     parser.add_argument("--strict", action="store_true", help="Fail when a dependency is not installed.")
     args = parser.parse_args()
     root = args.root.resolve()
-    contract_problems = validate_skill_dependencies(root)
+    contract_problems = validate_skill_dependencies(root) + validate_vendored_skills(root)
     if contract_problems:
         for item in contract_problems:
             print(item.render())
@@ -36,7 +36,8 @@ def main() -> int:
     missing = False
     for item in manifest["dependencies"]:
         found = next((path for path in candidates(root, item["name"]) if (path / "SKILL.md").is_file()), None)
-        status = "available_unverified_tree_hash" if found else "missing"
+        is_vendored = found == root / ".agents" / "skills" / item["name"]
+        status = "available_verified_file_inventory" if is_vendored else "available_unverified_tree_hash" if found else "missing"
         missing |= found is None
         rows.append({"name": item["name"], "required_version": item["version"], "status": status, "path": str(found) if found else None})
     print(json.dumps({"ok": not (args.strict and missing), "strict": args.strict, "dependencies": rows}, ensure_ascii=False, separators=(",", ":")))

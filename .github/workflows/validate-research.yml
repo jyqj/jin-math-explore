@@ -25,6 +25,6 @@ jobs:
       - name: Generated catalog freshness
         run: python scripts/build_catalog.py --root . --check
       - name: Skill dependency manifest
-        run: python scripts/check_skill_dependencies.py --root .
+        run: python scripts/check_skill_dependencies.py --root . --strict
       - name: Clarify validation boundary
         run: echo "CI validates mechanical contracts only; it does not prove mathematical truth."

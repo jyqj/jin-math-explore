@@ -1,0 +1,10 @@
+# Legacy semantic archive tombstone
+
+> [!CAUTION]
+> **Inspection-only replacement.** This filename is retained to overwrite an installed legacy reference and preserve historical interpretation. It provides no execution authority.
+
+Historical Prompt v3-v7 contracts, manifests, receipts, thread records, counters, budgets, launcher records, and Goal-continuity failures remain byte-read-only evidence in their original archive. This reference MUST NOT New, Resume, launch, dispatch, migrate, issue or consume a lease, create or recover a Goal, rewrite a manifest, reset a counter, submit an escalation, or reconstruct authority from a receipt, marker, caller field, or active Goal in another task.
+
+The only implemented continuation from a legacy archive is the v8 `LEGACY_SUCCESSOR` gate described by the current Contract/archive protocols: the user explicitly creates a new active Goal; a deterministic effective predecessor envelope is research-semantically/resource/privacy/external-effect equivalent to the new v8 Contract with no expansion; every old byte and receipt is preserved; all artifacts, failures, evidence, routes, audits, counters, and consumed budget are inherited; and a new v8 run is activated through the guarded v8 head protocol. Old child-Goal/launcher/dispatcher/lease/migration/control-receipt authority is not preserved: it is mandatorily retired and mapped to direct-current-task/v8 + bounded collaboration + the head helper as the sole permitted safe contraction. The fresh current Goal, not a historical receipt, is authority. This is not legacy Goal recovery or Resume.
+
+Legacy `rollover=false` / `rollover=never` blocks automatic or same-run rollover only; it does not block that normalized same-target/nonexpanded, user-authorized additive v8 successor. That successor is the sole implemented legacy-active-Contract/run to new-v8-Contract/run identity transition. Any other envelope difference, unresolved normalization gap, expansion, or later replacement of the activated v8 Contract/run is planning-only/read-only pending a separately implemented and authorized `RUN_SUCCESSOR`; confirmation alone is not executable.
