@@ -6,19 +6,36 @@
 
 ## 核心原则
 
-- **Issue 是队列，不是数学真相。** Issue 用于候选问题、来源核查、阻塞和调度。
+- **Issue 是队列，不是数学真相。** Issue 用于候选问题、来源核查、阻塞、租约和调度。
 - **项目文件是数学状态。** 每个问题拥有不可变目标、研究地图、因果记忆、尝试包和验证记录。
 - **PR 是权威变化。** `main` 只接收已闭合的研究窗口、独立验证、来源更新或基础设施变更。
 - **计算不是证明。** 有限搜索、数值实验和 CAS 输出必须声明证据等级及 `cannot_imply`。
 - **验证与求解隔离。** 验证者只读取冻结候选与依赖，不继承求解者聊天叙事。
 - **跨项目复用需重新接纳。** 其他项目的已验证结果只能通过显式导入协议进入本项目。
+- **并发先声明冲突域。** Agent 通过 Issue lease、独立 branch、base SHA 和精确写集协作；lease 不拥有数学权威。
 
-详细约束见 [`PROGRAM_CHARTER.md`](PROGRAM_CHARTER.md) 和 [`program/`](program/)。
+详细约束见 [`GOVERNANCE.md`](GOVERNANCE.md)、[`PROGRAM_CHARTER.md`](PROGRAM_CHARTER.md) 和 [`program/`](program/)。
+
+## 多 Agent 协作
+
+GitHub 在这里承担五种职责：Issue / Project 是协调平面，branch 是临时执行平面，受保护 `main` 是发布平面，Project heads / receipts 是数学平面，CI 是机械验证平面。
+
+每个 merge-intended PR 必须：
+
+1. 绑定一个 work packet Issue；
+2. 在 Issue 中取得有限期 lease，并声明 actor/run/role、base SHA 和 read/write set；
+3. 使用单写 owner 的短期 branch；
+4. 在 PR body 提交机器可读 coordination manifest；
+5. 通过 title/branch/path、manifest/write-set、repository、catalog 和 Skill lock 检查；
+6. 在最新 `main` 上 squash merge。
+
+详细协议见 [`program/multi-agent-governance.md`](program/multi-agent-governance.md)。同一 GitHub 用户可以承载多个 Agent，因此 username 或 approval 不能证明 verifier 独立；独立性按 run、上下文可见性和冻结输入记录。
 
 ## 仓库结构
 
 ```text
-program/                 全局研究计划政策
+GOVERNANCE.md            多 Agent 治理宪章
+program/                 全局研究计划与协作政策
 registry/projects/       每个长期问题一个独立注册文件
 registry/shared-results/ 可跨项目复用的已验证结果
 projects/                math-research-solve v13 项目根
@@ -45,6 +62,13 @@ python scripts/check_skill_dependencies.py --root .
 
 ```bash
 make check
+```
+
+PR 中还会运行：
+
+```bash
+python scripts/pr_policy.py --root .
+python scripts/coordination_policy.py --root .
 ```
 
 登记一个待来源核查的候选：
@@ -78,7 +102,7 @@ python scripts/build_catalog.py --root .
 
 ## 当前阶段
 
-当前是 **program foundation v0**：先建立状态所有权、证据边界、机器契约和 CI，再启动首批真实研究项目。
+当前是 **program foundation v0 + governance v1**：先建立状态所有权、证据边界、多 Agent 并发纪律、机器契约和 CI，再启动首批真实研究项目。
 
 ## 许可证
 
