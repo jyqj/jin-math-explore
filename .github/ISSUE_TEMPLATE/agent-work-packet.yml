@@ -1,0 +1,146 @@
+name: Agent work packet
+description: Define one auditable unit of human/agent/automation work with explicit authority and conflict boundaries.
+title: "[work] "
+labels: ["kind:work-packet", "stage:ready"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This Issue is an operational coordination ticket, not mathematical evidence. Read GOVERNANCE.md and program/multi-agent-governance.md before claiming it.
+  - type: dropdown
+    id: work_class
+    attributes:
+      label: Work class
+      options:
+        - program_governance
+        - infrastructure
+        - source_audit
+        - project_genesis
+        - solver_attempt
+        - computation
+        - independent_verification
+        - reconciliation
+        - project_state
+        - shared_result
+        - terminal_audit
+        - incident_response
+    validations:
+      required: true
+  - type: dropdown
+    id: required_role
+    attributes:
+      label: Required role
+      options:
+        - human_owner
+        - program_steward
+        - protocol_maintainer
+        - source_auditor
+        - solver
+        - compute_runner
+        - independent_verifier
+        - reconciler
+        - integrator
+        - automation
+    validations:
+      required: true
+  - type: textarea
+    id: parent_dependencies
+    attributes:
+      label: Parent, sub-issues, and blocked-by dependencies
+      description: Use GitHub relationships where available and repeat exact issue numbers here.
+      placeholder: "Parent: #1\nBlocked by: #3, #4"
+    validations:
+      required: true
+  - type: textarea
+    id: objective
+    attributes:
+      label: Single deliverable
+      description: State the exact artifact or state transition this packet must produce.
+    validations:
+      required: true
+  - type: textarea
+    id: non_goals
+    attributes:
+      label: Non-goals and authority boundary
+      description: State what this ticket cannot claim, promote, verify, mutate, or infer.
+    validations:
+      required: true
+  - type: input
+    id: observed_base
+    attributes:
+      label: Observed base ref / 40-hex SHA
+      placeholder: main @ 0123456789abcdef0123456789abcdef01234567
+    validations:
+      required: true
+  - type: textarea
+    id: inputs
+    attributes:
+      label: Frozen inputs and read set
+      description: List repository paths, Issue/PR locators, artifact hashes, candidate/dependency hashes, and context visibility limits.
+    validations:
+      required: true
+  - type: textarea
+    id: write_set
+    attributes:
+      label: Exact write set
+      description: One repository-relative file or directory prefix per line. No globs, parent paths, or repository-wide claims.
+      placeholder: |
+        program/example.md
+        tests/test_example.py
+    validations:
+      required: true
+  - type: input
+    id: conflict_domain
+    attributes:
+      label: Conflict domain
+      description: "Examples: global-serial, project-authority:P-0001, attempt:P-0001/W-0001/A-01, verification:P-0001/C-0001/V-01."
+    validations:
+      required: true
+  - type: dropdown
+    id: lease_mode
+    attributes:
+      label: Lease mode
+      options:
+        - exclusive_write
+        - partitioned_write
+    validations:
+      required: true
+  - type: textarea
+    id: completion_evidence
+    attributes:
+      label: Completion evidence and tests
+      description: Define exact files, hashes, commands, receipts, verdicts, or state transitions required to close this packet.
+    validations:
+      required: true
+  - type: textarea
+    id: independence
+    attributes:
+      label: Independence and information-isolation requirements
+      description: For verification, require a new run_id, frozen candidate/dependencies, and no solver-context access. Otherwise state why independence is not required.
+    validations:
+      required: true
+  - type: textarea
+    id: resources_security
+    attributes:
+      label: Resource, stopping, and security boundaries
+      description: Include compute/time limits, checkpointing, untrusted inputs, network/tool permissions, secret handling, and incident triggers.
+    validations:
+      required: true
+  - type: textarea
+    id: handoff
+    attributes:
+      label: Required handoff
+      description: Specify branch/head/base SHA, changed paths, tests, artifacts/hashes, blockers, cannot_imply, and next role/action.
+    validations:
+      required: true
+  - type: checkboxes
+    id: acknowledgements
+    attributes:
+      label: Governance acknowledgements
+      options:
+        - label: I understand that an Issue, lease, PR approval, merge, or CI PASS does not establish mathematical truth.
+          required: true
+        - label: I will post a lease claim and re-read the Issue before the first write.
+          required: true
+        - label: I will use one branch owner and keep the PR diff within the declared write set.
+          required: true
