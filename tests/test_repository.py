@@ -50,16 +50,16 @@ class RepositoryContractTests(unittest.TestCase):
             "problem_class": "internal_frontier",
             "operational_status": "active",
             "mathematical_status": "open",
-            "project_path": "projects/P-0001-synthetic-hard-problem",
+            "project_path": "projects/P-0001--synthetic-hard-problem",
             "objective_sha256": objective_sha,
             "current_window_id": None,
             "dependencies": [],
-            "source_audit": {"status": "pass", "as_of": "2026-08-28", "receipt": "projects/P-0001-synthetic-hard-problem/.research/source-audit.md"},
+            "source_audit": {"status": "pass", "as_of": "2026-08-28", "receipt": "projects/P-0001--synthetic-hard-problem/.research/source-audit.md"},
             "last_merged_window": None,
         }
 
     def make_project(self, root: Path) -> tuple[Path, dict]:
-        project = root / "projects/P-0001-synthetic-hard-problem"
+        project = root / "projects/P-0001--synthetic-hard-problem"
         (project / ".research/identity").mkdir(parents=True)
         (project / ".research/heads").mkdir(parents=True)
         (project / "研究地图").mkdir()

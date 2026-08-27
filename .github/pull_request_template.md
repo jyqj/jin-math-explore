@@ -3,6 +3,8 @@
 - [ ] `[program]` / `[infra]`
 - [ ] `[P-XXXX][window]`
 - [ ] `[P-XXXX][source]`
+- [ ] `[P-XXXX][genesis]`
+- [ ] `[P-XXXX][state]`
 - [ ] `[P-XXXX][verify]`
 - [ ] `[shared][S-XXXX]`
 - [ ] `[P-XXXX][terminal]`

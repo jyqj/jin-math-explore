@@ -19,6 +19,7 @@
 - `catalog/` 是生成物；运行 `python scripts/build_catalog.py --root .` 更新，禁止手工编辑。
 - Issue 标签只表示运营状态，不表示 claim 的数学等级。
 - 未经独立验证的跨项目结果不得进入 `registry/shared-results/`。
+- 每道数学题使用长期 Project 目录，不使用长期问题分支；分支/PR 规则见 `program/git-workflow.md`。
 
 ## 工作隔离
 

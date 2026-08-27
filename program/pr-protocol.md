@@ -23,3 +23,9 @@
 - `[infra]` PR 可以改变协议、schema、Skill 或 CI，但不得同时发布依赖新规则的数学结论。
 - `[window]` PR 使用 `main` 上已存在的协议。
 - `[terminal]` PR 不得夹带协议修改或额外研究。
+
+## Genesis and state
+
+- `[P-XXXX][genesis]` 是唯一可以新增 `objective-core.json` 的 PR 类型；目标 Project 目录和 registry entry 必须同时首次新增。
+- `[P-XXXX][state]` 只处理 park、reopen、compute-wait 等运营状态，不得修改 objective 或借机提升数学 claim。
+- 目录、分支命名和 changed-files 边界见 [`git-workflow.md`](git-workflow.md)。

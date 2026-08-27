@@ -28,3 +28,22 @@ jobs:
         run: python scripts/check_skill_dependencies.py --root . --strict
       - name: Clarify validation boundary
         run: echo "CI validates mechanical contracts only; it does not prove mathematical truth."
+
+  pr-policy:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate PR title, branch, and changed-file scope
+        env:
+          PR_TITLE: ${{ github.event.pull_request.title }}
+          PR_BRANCH: ${{ github.head_ref }}
+          PR_BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          PR_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: python scripts/pr_policy.py --root .
