@@ -1,0 +1,4 @@
+interface:
+  display_name: "Math Frontier Scout"
+  short_description: "Find hard candidate problems without overstating openness"
+  default_prompt: "Use $math-frontier-scout to produce source-bound candidate hard problems for independent audit, preserving uncertainty and never treating search failure as open-problem evidence."

@@ -1,0 +1,18 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+.idea/
+.vscode/
+.codex-log/
+.pytest_cache/
+.coverage
+coverage.xml
+dist/
+build/
+
+# Research staging and local mutable state are not authority.
+**/.research/locks/
+**/.research/journals/rollback-*/
+**/staging/
+**/.staging/
+computation/queue/*.local.json

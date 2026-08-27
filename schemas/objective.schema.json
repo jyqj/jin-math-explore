@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/jyqj/jin-math-explore/schemas/objective.schema.json",
+  "title": "Math Research Objective Core",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["statement", "domain", "quantifier_order", "assumptions", "evidence_standard", "completion_standard"],
+  "properties": {
+    "statement": {"type": "string", "minLength": 1},
+    "domain": {"type": "string", "minLength": 1},
+    "quantifier_order": {"type": "string", "minLength": 1},
+    "assumptions": {"type": "array", "items": {"type": "string"}},
+    "evidence_standard": {"type": "string", "minLength": 1},
+    "completion_standard": {"type": "string", "minLength": 1}
+  }
+}

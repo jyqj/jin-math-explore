@@ -1,0 +1,4 @@
+interface:
+  display_name: "Math Source Audit"
+  short_description: "Independently verify a hard problem's source boundary"
+  default_prompt: "Use $math-source-audit in a fresh context to verify the exact source, definitions, variants, current status and uncertainty of a candidate problem before objective freeze."

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Math Independent Verifier"
+  short_description: "Verify frozen mathematical claims without editing them"
+  default_prompt: "Use $math-independent-verifier on the exact hash-bound candidate and dependencies, return PASS/FAIL/INCONCLUSIVE, and do not repair or consume solver narrative."
+policy:
+  allow_implicit_invocation: false

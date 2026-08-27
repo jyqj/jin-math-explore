@@ -1,0 +1,17 @@
+{
+  "schema": "jin-math-skill-dependencies/v1",
+  "dependencies": [
+    {
+      "name": "math-research-solve",
+      "version": "1.11",
+      "package_tree_sha256": "249daaa15b9f6d0dc61ca1d7e26db6b761beadb096cd60e3dc36778f88e60ca4",
+      "required_for": ["active_project", "window_transition", "project_completion"]
+    },
+    {
+      "name": "math-science-computation",
+      "version": "1.11",
+      "package_tree_sha256": "5c084b5202b747275a9e5c7d44c2636a89d984ab3a13a8c4dd92f94796e676c5",
+      "required_for": ["nontrivial_computation", "cas_verification", "reproducible_computation"]
+    }
+  ]
+}

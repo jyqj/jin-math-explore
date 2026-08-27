@@ -1,0 +1,30 @@
+name: validate-research
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  mechanical-contracts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Unit tests
+        run: python -m unittest discover -s tests -v
+      - name: Repository contract
+        run: python scripts/validate_repository.py --root .
+      - name: Generated catalog freshness
+        run: python scripts/build_catalog.py --root . --check
+      - name: Skill dependency manifest
+        run: python scripts/check_skill_dependencies.py --root .
+      - name: Clarify validation boundary
+        run: echo "CI validates mechanical contracts only; it does not prove mathematical truth."

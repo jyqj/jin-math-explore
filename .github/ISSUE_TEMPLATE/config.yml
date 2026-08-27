@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Research protocol
+    url: https://github.com/jyqj/jin-math-explore/blob/main/PROGRAM_CHARTER.md
+    about: Read authority and evidence rules before opening an Issue.

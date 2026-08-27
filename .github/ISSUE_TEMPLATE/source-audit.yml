@@ -1,0 +1,37 @@
+name: Source audit
+description: Request an independent source and open-status audit for a candidate Project.
+title: "[source-audit] "
+labels: ["kind:source-audit", "stage:source-audit"]
+body:
+  - type: input
+    id: candidate_issue
+    attributes:
+      label: Candidate Issue
+      placeholder: "#123"
+    validations:
+      required: true
+  - type: textarea
+    id: frozen_candidate
+    attributes:
+      label: Candidate statement to audit
+      description: Auditor reviews this exact statement, not the scout narrative.
+    validations:
+      required: true
+  - type: textarea
+    id: source_packet
+    attributes:
+      label: Source packet
+      description: Primary sources, identifiers, locators, and as-of boundary.
+    validations:
+      required: true
+  - type: textarea
+    id: audit_questions
+    attributes:
+      label: Required audit questions
+      value: |
+        - Is the exact formulation supported by the cited source?
+        - Are there solved equivalent, stronger, weaker, or special-case variants?
+        - Is the current open-status claim supported as of the audit date?
+        - Can the six-field objective be frozen without invention?
+    validations:
+      required: true

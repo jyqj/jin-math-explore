@@ -1,0 +1,57 @@
+name: Hard problem candidate
+description: Propose a difficult long-term mathematics research candidate for independent source audit.
+title: "[candidate] "
+labels: ["kind:problem", "stage:candidate"]
+body:
+  - type: markdown
+    attributes:
+      value: "A candidate is not yet a confirmed open problem or Project. Preserve uncertainty."
+  - type: dropdown
+    id: problem_class
+    attributes:
+      label: Candidate class
+      options:
+        - known_open
+        - likely_open_needs_audit
+        - internal_frontier
+        - missing_lemma
+        - computational_conjecture
+        - generalization
+        - optimality_question
+        - counterexample_search
+    validations:
+      required: true
+  - type: textarea
+    id: statement
+    attributes:
+      label: Exact candidate statement
+      description: Include domain, quantifier order, and assumptions.
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Primary sources and current-status evidence
+      description: Give stable locators, dates, and exact theorem/problem identifiers.
+    validations:
+      required: true
+  - type: textarea
+    id: known_boundary
+    attributes:
+      label: Known results, variants, and uncertainty
+    validations:
+      required: true
+  - type: textarea
+    id: decisive_frontier
+    attributes:
+      label: Smallest decisive frontier
+      description: What bounded result, counterexample, lemma, or computation would materially change the state?
+    validations:
+      required: true
+  - type: checkboxes
+    id: discipline
+    attributes:
+      label: Evidence discipline
+      options:
+        - label: I understand that search failure or lack of a quick proof does not establish that this problem is open.
+          required: true

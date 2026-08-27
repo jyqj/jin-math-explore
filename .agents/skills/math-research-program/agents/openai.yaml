@@ -1,0 +1,4 @@
+interface:
+  display_name: "Math Research Program"
+  short_description: "Govern a portfolio of long-lived hard math projects"
+  default_prompt: "Use $math-research-program to inspect the validated project registry, schedule evidence-backed research windows, manage verification and computation debt, and rebuild the generated frontier without performing or promoting mathematics."

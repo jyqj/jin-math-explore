@@ -1,0 +1,4 @@
+interface:
+  display_name: "Math Computation Handoff"
+  short_description: "Bridge research attempts to reproducible computation"
+  default_prompt: "Use $math-computation-handoff to bind the research identity and exact computation request, delegate execution to $math-science-computation, then freeze artifact hashes and non-implication boundaries for independent review."

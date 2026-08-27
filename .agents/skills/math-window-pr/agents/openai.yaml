@@ -1,0 +1,4 @@
+interface:
+  display_name: "Math Window PR"
+  short_description: "Publish one closed research window as a reviewable PR"
+  default_prompt: "Use $math-window-pr only after a research window is fully closed; prepare the minimal hash-bound PR without new mathematics or protocol changes."
