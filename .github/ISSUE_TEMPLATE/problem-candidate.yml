@@ -1,15 +1,16 @@
 name: Hard problem candidate
-description: Propose a difficult long-term mathematics research candidate for independent source audit.
+description: Propose a difficult long-term mathematics research candidate for independent source audit and faceted classification.
 title: "[candidate] "
 labels: ["kind:problem", "stage:candidate"]
 body:
   - type: markdown
     attributes:
-      value: "A candidate is not yet a confirmed open problem or Project. Preserve uncertainty."
+      value: "A candidate is not yet a confirmed open problem or Project. Preserve uncertainty. Classification is navigation metadata, not mathematical evidence."
   - type: dropdown
-    id: problem_class
+    id: origin
     attributes:
-      label: Candidate class
+      label: Problem origin
+      description: How did this task enter the research queue? This is separate from subject area and current mathematical status.
       options:
         - known_open
         - likely_open_needs_audit
@@ -21,6 +22,73 @@ body:
         - counterexample_search
     validations:
       required: true
+  - type: input
+    id: primary_msc
+    attributes:
+      label: Provisional primary MSC2020 code
+      description: Use unclassified when uncertain; examples include 11, 11A, 11A05, 11Axx, or 11-XX.
+      placeholder: unclassified
+    validations:
+      required: true
+  - type: input
+    id: secondary_msc
+    attributes:
+      label: Secondary MSC2020 codes
+      description: Optional comma-separated cross-domain codes.
+      placeholder: 05Cxx, 68Qxx
+  - type: dropdown
+    id: goal_types
+    attributes:
+      label: Mathematical goal types
+      description: Select the logical form(s) of the intended result, not the evidence method.
+      multiple: true
+      options:
+        - existence
+        - nonexistence
+        - uniqueness
+        - classification
+        - characterization
+        - construction
+        - equivalence
+        - bound
+        - optimality
+        - asymptotic
+        - regularity
+        - convergence
+        - stability
+        - algorithm
+        - decidability
+        - computation
+        - counterexample
+        - formalization
+        - explanation
+        - other
+    validations:
+      required: true
+  - type: dropdown
+    id: portfolio_role
+    attributes:
+      label: Portfolio role
+      options:
+        - frontier_problem
+        - bridge_problem
+        - foundation_building
+        - method_development
+        - application_case
+    validations:
+      required: true
+  - type: input
+    id: object_tags
+    attributes:
+      label: Mathematical object tags
+      description: Comma-separated lowercase kebab-case objects, for example finite-graph or elliptic-pde.
+    validations:
+      required: true
+  - type: input
+    id: method_tags
+    attributes:
+      label: Known relevant method tags
+      description: Optional comma-separated lowercase kebab-case methods. A tag does not assert that the method succeeds.
   - type: textarea
     id: statement
     attributes:
@@ -42,10 +110,17 @@ body:
     validations:
       required: true
   - type: textarea
+    id: foundations
+    attributes:
+      label: Required foundations and knowledge gaps
+      description: List definitions, theorems, methods, conventions, examples, or obstructions that should become K-XXXX dependencies if selected.
+    validations:
+      required: true
+  - type: textarea
     id: decisive_frontier
     attributes:
-      label: Smallest decisive frontier
-      description: What bounded result, counterexample, lemma, or computation would materially change the state?
+      label: Smallest decisive frontier and net-progress test
+      description: What bounded result, counterexample, lemma, source audit, or computation would materially change the state, and how will that change be measured?
     validations:
       required: true
   - type: checkboxes
@@ -54,4 +129,6 @@ body:
       label: Evidence discipline
       options:
         - label: I understand that search failure or lack of a quick proof does not establish that this problem is open.
+          required: true
+        - label: I understand that classification, catalog status, and feedback metrics do not establish mathematical truth.
           required: true

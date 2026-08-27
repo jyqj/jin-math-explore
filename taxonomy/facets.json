@@ -1,0 +1,94 @@
+{
+  "schema": "jin-math-taxonomy/v1",
+  "subject_scheme": "MSC2020",
+  "problem_origins": [
+    "known_open",
+    "likely_open_needs_audit",
+    "internal_frontier",
+    "missing_lemma",
+    "computational_conjecture",
+    "generalization",
+    "optimality_question",
+    "counterexample_search"
+  ],
+  "goal_types": [
+    "existence",
+    "nonexistence",
+    "uniqueness",
+    "classification",
+    "characterization",
+    "construction",
+    "equivalence",
+    "bound",
+    "optimality",
+    "asymptotic",
+    "regularity",
+    "convergence",
+    "stability",
+    "algorithm",
+    "decidability",
+    "computation",
+    "counterexample",
+    "formalization",
+    "explanation",
+    "other"
+  ],
+  "portfolio_roles": [
+    "frontier_problem",
+    "bridge_problem",
+    "foundation_building",
+    "method_development",
+    "application_case"
+  ],
+  "classification_statuses": [
+    "provisional",
+    "reviewed"
+  ],
+  "knowledge_kinds": [
+    "definition",
+    "notation",
+    "theorem",
+    "lemma",
+    "equivalence",
+    "method",
+    "example",
+    "counterexample",
+    "obstruction",
+    "computational_fact",
+    "reference_map",
+    "knowledge_gap"
+  ],
+  "knowledge_relation_types": [
+    "generalizes",
+    "specializes",
+    "equivalent_to",
+    "contrasts_with",
+    "uses_method",
+    "applies_to",
+    "motivates",
+    "obstructs",
+    "discharges"
+  ],
+  "knowledge_authority_statuses": [
+    "reference_only",
+    "source_audited",
+    "independently_verified"
+  ],
+  "feedback_event_types": [
+    "none",
+    "source_audit",
+    "window",
+    "verification",
+    "terminal"
+  ],
+  "frontier_movements": [
+    "not_started",
+    "clarified",
+    "narrowed",
+    "reframed",
+    "expanded",
+    "unchanged",
+    "closed_by_proof",
+    "closed_by_refutation"
+  ]
+}
