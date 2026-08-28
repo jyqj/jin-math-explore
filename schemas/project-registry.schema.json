@@ -1,32 +1,389 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://github.com/jyqj/jin-math-explore/schemas/project-registry.schema.json",
-  "title": "Jin Math Project Registry Entry",
+  "title": "Jin Math Project Registry Entry v2",
   "type": "object",
   "additionalProperties": false,
-  "required": ["schema", "project_id", "slug", "title", "problem_class", "operational_status", "mathematical_status", "project_path", "objective_sha256", "current_window_id", "dependencies", "source_audit", "last_merged_window"],
+  "required": [
+    "schema",
+    "project_id",
+    "slug",
+    "title",
+    "classification",
+    "operational_status",
+    "mathematical_status",
+    "project_path",
+    "objective_sha256",
+    "current_window_id",
+    "dependencies",
+    "source_audit",
+    "last_merged_window",
+    "result_feedback"
+  ],
   "properties": {
-    "schema": {"const": "jin-math-project-registry/v1"},
-    "project_id": {"type": "string", "pattern": "^P-[0-9]{4,}$"},
-    "slug": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
-    "title": {"type": "string", "minLength": 1},
-    "problem_class": {"enum": ["known_open", "likely_open_needs_audit", "internal_frontier", "missing_lemma", "computational_conjecture", "generalization", "optimality_question", "counterexample_search"]},
-    "operational_status": {"enum": ["candidate", "source_audit", "objective_freeze", "active", "review_gate", "compute_wait", "parked", "terminal_audit", "closed"]},
-    "mathematical_status": {"enum": ["unknown", "open", "partial", "proof_candidate", "refuted", "complete"]},
-    "project_path": {"type": ["string", "null"]},
-    "objective_sha256": {"type": ["string", "null"]},
-    "current_window_id": {"type": ["string", "null"]},
-    "dependencies": {"type": "array", "items": {"type": "string", "pattern": "^P-[0-9]{4,}$"}, "uniqueItems": true},
+    "schema": {
+      "const": "jin-math-project-registry/v2"
+    },
+    "project_id": {
+      "type": "string",
+      "pattern": "^P-[0-9]{4,}$"
+    },
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "classification": {
+      "$ref": "#/$defs/projectClassification"
+    },
+    "operational_status": {
+      "enum": [
+        "candidate",
+        "source_audit",
+        "objective_freeze",
+        "active",
+        "review_gate",
+        "compute_wait",
+        "parked",
+        "terminal_audit",
+        "closed"
+      ]
+    },
+    "mathematical_status": {
+      "enum": [
+        "unknown",
+        "open",
+        "partial",
+        "proof_candidate",
+        "refuted",
+        "complete"
+      ]
+    },
+    "project_path": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "objective_sha256": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "current_window_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "dependencies": {
+      "$ref": "#/$defs/dependencies"
+    },
     "source_audit": {
+      "$ref": "#/$defs/sourceAudit"
+    },
+    "last_merged_window": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "result_feedback": {
+      "$ref": "#/$defs/resultFeedback"
+    }
+  },
+  "$defs": {
+    "mscCode": {
+      "type": "string",
+      "pattern": "^[0-9]{2}(?:-[0-9]{2}|-XX|[A-Z](?:[0-9]{2}|xx)?)?$"
+    },
+    "tag": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "subject": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["status", "as_of", "receipt"],
+      "required": [
+        "scheme",
+        "primary",
+        "secondary"
+      ],
       "properties": {
-        "status": {"enum": ["pending", "pass", "fail", "stale"]},
-        "as_of": {"type": ["string", "null"], "format": "date"},
-        "receipt": {"type": ["string", "null"]}
+        "scheme": {
+          "const": "MSC2020"
+        },
+        "primary": {
+          "anyOf": [
+            {
+              "const": "unclassified"
+            },
+            {
+              "$ref": "#/$defs/mscCode"
+            }
+          ]
+        },
+        "secondary": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/mscCode"
+          }
+        }
       }
     },
-    "last_merged_window": {"type": ["string", "null"]}
+    "projectClassification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "subject",
+        "origin",
+        "goal_types",
+        "object_tags",
+        "method_tags",
+        "portfolio_role",
+        "status"
+      ],
+      "properties": {
+        "subject": {
+          "$ref": "#/$defs/subject"
+        },
+        "origin": {
+          "enum": [
+            "known_open",
+            "likely_open_needs_audit",
+            "internal_frontier",
+            "missing_lemma",
+            "computational_conjecture",
+            "generalization",
+            "optimality_question",
+            "counterexample_search"
+          ]
+        },
+        "goal_types": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "existence",
+              "nonexistence",
+              "uniqueness",
+              "classification",
+              "characterization",
+              "construction",
+              "equivalence",
+              "bound",
+              "optimality",
+              "asymptotic",
+              "regularity",
+              "convergence",
+              "stability",
+              "algorithm",
+              "decidability",
+              "computation",
+              "counterexample",
+              "formalization",
+              "explanation",
+              "other"
+            ]
+          }
+        },
+        "object_tags": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/tag"
+          }
+        },
+        "method_tags": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/tag"
+          }
+        },
+        "portfolio_role": {
+          "enum": [
+            "frontier_problem",
+            "bridge_problem",
+            "foundation_building",
+            "method_development",
+            "application_case"
+          ]
+        },
+        "status": {
+          "enum": [
+            "provisional",
+            "reviewed"
+          ]
+        }
+      }
+    },
+    "dependencies": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "projects",
+        "knowledge",
+        "shared_results"
+      ],
+      "properties": {
+        "projects": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^P-[0-9]{4,}$"
+          }
+        },
+        "knowledge": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^K-[0-9]{4,}$"
+          }
+        },
+        "shared_results": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^S-[0-9]{4,}$"
+          }
+        }
+      }
+    },
+    "sourceAudit": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "as_of",
+        "receipt"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "pending",
+            "pass",
+            "fail",
+            "stale"
+          ]
+        },
+        "as_of": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
+        "receipt": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "resultFeedback": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "event_type",
+        "event_id",
+        "receipt",
+        "frontier_movement",
+        "verified_claims_added",
+        "verified_refutations_added",
+        "routes_eliminated",
+        "blockers_resolved",
+        "blockers_open",
+        "verification_debt",
+        "knowledge_debt",
+        "next_frontier"
+      ],
+      "properties": {
+        "event_type": {
+          "enum": [
+            "none",
+            "source_audit",
+            "window",
+            "verification",
+            "terminal"
+          ]
+        },
+        "event_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "receipt": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "frontier_movement": {
+          "enum": [
+            "not_started",
+            "clarified",
+            "narrowed",
+            "reframed",
+            "expanded",
+            "unchanged",
+            "closed_by_proof",
+            "closed_by_refutation"
+          ]
+        },
+        "verified_claims_added": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "verified_refutations_added": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "routes_eliminated": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "blockers_resolved": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "blockers_open": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "verification_debt": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "knowledge_debt": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "next_frontier": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
   }
 }
