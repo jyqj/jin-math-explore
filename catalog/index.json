@@ -7,6 +7,846 @@
     "review_gate": 0,
     "compute_wait": 0,
     "terminal_audit": 0,
-    "closed": 0
-  }
+    "closed": 0,
+    "knowledge_nodes": 16
+  },
+  "knowledge_nodes": [
+    {
+      "knowledge_id": "K-0001",
+      "kind": "definition",
+      "title": "黎曼猜想：精确定义、量词与开放状态",
+      "classification": {
+        "subject": {
+          "scheme": "MSC2020",
+          "primary": "11M26",
+          "secondary": [
+            "11M06",
+            "11N05"
+          ]
+        },
+        "object_tags": [
+          "riemann-zeta-function",
+          "nontrivial-zero",
+          "critical-line"
+        ],
+        "method_tags": [
+          "complex-analysis",
+          "source-audit"
+        ]
+      },
+      "prerequisites": [],
+      "relations": [
+        {
+          "type": "motivates",
+          "target": "K-0002"
+        },
+        {
+          "type": "motivates",
+          "target": "K-0003"
+        },
+        {
+          "type": "motivates",
+          "target": "K-0004"
+        },
+        {
+          "type": "motivates",
+          "target": "K-0005"
+        },
+        {
+          "type": "motivates",
+          "target": "K-0006"
+        },
+        {
+          "type": "motivates",
+          "target": "K-0007"
+        },
+        {
+          "type": "motivates",
+          "target": "K-0008"
+        },
+        {
+          "type": "motivates",
+          "target": "K-0009"
+        },
+        {
+          "type": "motivates",
+          "target": "K-0010"
+        },
+        {
+          "type": "motivates",
+          "target": "K-0011"
+        },
+        {
+          "type": "motivates",
+          "target": "K-0012"
+        },
+        {
+          "type": "motivates",
+          "target": "K-0013"
+        },
+        {
+          "type": "motivates",
+          "target": "K-0014"
+        },
+        {
+          "type": "motivates",
+          "target": "K-0015"
+        }
+      ],
+      "authority_status": "reference_only"
+    },
+    {
+      "knowledge_id": "K-0002",
+      "kind": "theorem",
+      "title": "ζ 函数的解析结构、零点对称性与素数定理基线",
+      "classification": {
+        "subject": {
+          "scheme": "MSC2020",
+          "primary": "11M06",
+          "secondary": [
+            "11M26",
+            "11N05"
+          ]
+        },
+        "object_tags": [
+          "riemann-zeta-function",
+          "euler-product",
+          "zero-counting-function",
+          "prime-number-theorem"
+        ],
+        "method_tags": [
+          "complex-analysis",
+          "explicit-formula"
+        ]
+      },
+      "prerequisites": [
+        "K-0001"
+      ],
+      "relations": [
+        {
+          "type": "applies_to",
+          "target": "K-0003"
+        },
+        {
+          "type": "applies_to",
+          "target": "K-0004"
+        },
+        {
+          "type": "applies_to",
+          "target": "K-0005"
+        },
+        {
+          "type": "applies_to",
+          "target": "K-0006"
+        },
+        {
+          "type": "applies_to",
+          "target": "K-0007"
+        },
+        {
+          "type": "applies_to",
+          "target": "K-0008"
+        },
+        {
+          "type": "applies_to",
+          "target": "K-0010"
+        },
+        {
+          "type": "applies_to",
+          "target": "K-0012"
+        },
+        {
+          "type": "applies_to",
+          "target": "K-0013"
+        }
+      ],
+      "authority_status": "reference_only"
+    },
+    {
+      "knowledge_id": "K-0003",
+      "kind": "theorem",
+      "title": "显式无零区域：从经典区域到 2026 年记录",
+      "classification": {
+        "subject": {
+          "scheme": "MSC2020",
+          "primary": "11M06",
+          "secondary": [
+            "11M26",
+            "11Y35"
+          ]
+        },
+        "object_tags": [
+          "riemann-zeta-function",
+          "zero-free-region"
+        ],
+        "method_tags": [
+          "trigonometric-polynomial",
+          "exponential-sum",
+          "explicit-estimate"
+        ]
+      },
+      "prerequisites": [
+        "K-0001",
+        "K-0002"
+      ],
+      "relations": [
+        {
+          "type": "uses_method",
+          "target": "K-0015"
+        },
+        {
+          "type": "motivates",
+          "target": "K-0005"
+        },
+        {
+          "type": "applies_to",
+          "target": "K-0007"
+        },
+        {
+          "type": "applies_to",
+          "target": "K-0008"
+        }
+      ],
+      "authority_status": "reference_only"
+    },
+    {
+      "knowledge_id": "K-0004",
+      "kind": "theorem",
+      "title": "临界线零点比例：Hardy 至 2026 年预印本",
+      "classification": {
+        "subject": {
+          "scheme": "MSC2020",
+          "primary": "11M26",
+          "secondary": [
+            "11M06"
+          ]
+        },
+        "object_tags": [
+          "riemann-zeta-function",
+          "critical-line-zero",
+          "simple-zero"
+        ],
+        "method_tags": [
+          "mollifier",
+          "mean-value-estimate",
+          "finite-compression",
+          "formal-verification"
+        ]
+      },
+      "prerequisites": [
+        "K-0001",
+        "K-0002"
+      ],
+      "relations": [
+        {
+          "type": "uses_method",
+          "target": "K-0015"
+        },
+        {
+          "type": "motivates",
+          "target": "K-0013"
+        },
+        {
+          "type": "contrasts_with",
+          "target": "K-0006"
+        },
+        {
+          "type": "motivates",
+          "target": "K-0016"
+        }
+      ],
+      "authority_status": "reference_only"
+    },
+    {
+      "knowledge_id": "K-0005",
+      "kind": "theorem",
+      "title": "零密度估计与 Guth–Maynard 2026 突破",
+      "classification": {
+        "subject": {
+          "scheme": "MSC2020",
+          "primary": "11M26",
+          "secondary": [
+            "11N05"
+          ]
+        },
+        "object_tags": [
+          "riemann-zeta-function",
+          "zero-density",
+          "dirichlet-polynomial",
+          "prime-short-interval"
+        ],
+        "method_tags": [
+          "large-values-estimate",
+          "dirichlet-polynomial",
+          "mean-value-estimate"
+        ]
+      },
+      "prerequisites": [
+        "K-0001",
+        "K-0002"
+      ],
+      "relations": [
+        {
+          "type": "uses_method",
+          "target": "K-0015"
+        },
+        {
+          "type": "applies_to",
+          "target": "K-0007"
+        },
+        {
+          "type": "contrasts_with",
+          "target": "K-0004"
+        },
+        {
+          "type": "motivates",
+          "target": "K-0016"
+        }
+      ],
+      "authority_status": "reference_only"
+    },
+    {
+      "knowledge_id": "K-0006",
+      "kind": "computational_fact",
+      "title": "严格有限验证：RH 至高度 \\(3\\times10^{12}\\)",
+      "classification": {
+        "subject": {
+          "scheme": "MSC2020",
+          "primary": "11Y35",
+          "secondary": [
+            "11M26",
+            "65G30"
+          ]
+        },
+        "object_tags": [
+          "riemann-zeta-function",
+          "zero-verification",
+          "interval-arithmetic"
+        ],
+        "method_tags": [
+          "turing-method",
+          "interval-arithmetic",
+          "rigorous-computation"
+        ]
+      },
+      "prerequisites": [
+        "K-0001",
+        "K-0002"
+      ],
+      "relations": [
+        {
+          "type": "contrasts_with",
+          "target": "K-0004"
+        },
+        {
+          "type": "applies_to",
+          "target": "K-0003"
+        },
+        {
+          "type": "applies_to",
+          "target": "K-0012"
+        },
+        {
+          "type": "uses_method",
+          "target": "K-0015"
+        }
+      ],
+      "authority_status": "reference_only"
+    },
+    {
+      "knowledge_id": "K-0007",
+      "kind": "equivalence",
+      "title": "素数计数误差与显式公式中的 RH 等价边界",
+      "classification": {
+        "subject": {
+          "scheme": "MSC2020",
+          "primary": "11N05",
+          "secondary": [
+            "11M26",
+            "11M06"
+          ]
+        },
+        "object_tags": [
+          "prime-counting-function",
+          "chebyshev-function",
+          "explicit-formula",
+          "riemann-zeta-function"
+        ],
+        "method_tags": [
+          "explicit-formula",
+          "contour-integration",
+          "tauberian-method"
+        ]
+      },
+      "prerequisites": [
+        "K-0001",
+        "K-0002"
+      ],
+      "relations": [
+        {
+          "type": "equivalent_to",
+          "target": "K-0001"
+        },
+        {
+          "type": "uses_method",
+          "target": "K-0015"
+        },
+        {
+          "type": "contrasts_with",
+          "target": "K-0003"
+        },
+        {
+          "type": "applies_to",
+          "target": "K-0016"
+        }
+      ],
+      "authority_status": "reference_only"
+    },
+    {
+      "knowledge_id": "K-0008",
+      "kind": "equivalence",
+      "title": "Möbius 求和、Mertens 函数与被反驳的 Mertens 猜想",
+      "classification": {
+        "subject": {
+          "scheme": "MSC2020",
+          "primary": "11N37",
+          "secondary": [
+            "11M26"
+          ]
+        },
+        "object_tags": [
+          "mobius-function",
+          "mertens-function",
+          "riemann-zeta-function"
+        ],
+        "method_tags": [
+          "dirichlet-series",
+          "perron-formula",
+          "explicit-formula"
+        ]
+      },
+      "prerequisites": [
+        "K-0001",
+        "K-0002"
+      ],
+      "relations": [
+        {
+          "type": "equivalent_to",
+          "target": "K-0001"
+        },
+        {
+          "type": "uses_method",
+          "target": "K-0015"
+        },
+        {
+          "type": "contrasts_with",
+          "target": "K-0003"
+        }
+      ],
+      "authority_status": "reference_only"
+    },
+    {
+      "knowledge_id": "K-0009",
+      "kind": "equivalence",
+      "title": "Robin 与 Lagarias 的初等不等式判据",
+      "classification": {
+        "subject": {
+          "scheme": "MSC2020",
+          "primary": "11A25",
+          "secondary": [
+            "11N37",
+            "11M26"
+          ]
+        },
+        "object_tags": [
+          "divisor-sum-function",
+          "harmonic-number",
+          "riemann-zeta-function"
+        ],
+        "method_tags": [
+          "extremal-integer",
+          "explicit-inequality"
+        ]
+      },
+      "prerequisites": [
+        "K-0001"
+      ],
+      "relations": [
+        {
+          "type": "equivalent_to",
+          "target": "K-0001"
+        },
+        {
+          "type": "uses_method",
+          "target": "K-0015"
+        }
+      ],
+      "authority_status": "reference_only"
+    },
+    {
+      "knowledge_id": "K-0010",
+      "kind": "equivalence",
+      "title": "Li 系数、Weil 正性与显式公式判据",
+      "classification": {
+        "subject": {
+          "scheme": "MSC2020",
+          "primary": "11M06",
+          "secondary": [
+            "11M26"
+          ]
+        },
+        "object_tags": [
+          "riemann-xi-function",
+          "li-coefficient",
+          "weil-form",
+          "explicit-formula"
+        ],
+        "method_tags": [
+          "positivity",
+          "test-function",
+          "hermitian-form"
+        ]
+      },
+      "prerequisites": [
+        "K-0001",
+        "K-0002"
+      ],
+      "relations": [
+        {
+          "type": "equivalent_to",
+          "target": "K-0001"
+        },
+        {
+          "type": "uses_method",
+          "target": "K-0015"
+        },
+        {
+          "type": "motivates",
+          "target": "K-0004"
+        },
+        {
+          "type": "motivates",
+          "target": "K-0016"
+        }
+      ],
+      "authority_status": "reference_only"
+    },
+    {
+      "knowledge_id": "K-0011",
+      "kind": "equivalence",
+      "title": "Nyman–Beurling、Báez-Duarte 与逼近论判据",
+      "classification": {
+        "subject": {
+          "scheme": "MSC2020",
+          "primary": "46E30",
+          "secondary": [
+            "11M26",
+            "30H20"
+          ]
+        },
+        "object_tags": [
+          "fractional-part-function",
+          "hilbert-space",
+          "riemann-zeta-function"
+        ],
+        "method_tags": [
+          "functional-analysis",
+          "closure-criterion",
+          "approximation-theory"
+        ]
+      },
+      "prerequisites": [
+        "K-0001"
+      ],
+      "relations": [
+        {
+          "type": "equivalent_to",
+          "target": "K-0001"
+        },
+        {
+          "type": "uses_method",
+          "target": "K-0015"
+        },
+        {
+          "type": "motivates",
+          "target": "K-0016"
+        }
+      ],
+      "authority_status": "reference_only"
+    },
+    {
+      "knowledge_id": "K-0012",
+      "kind": "equivalence",
+      "title": "de Bruijn–Newman 常数与热流临界性",
+      "classification": {
+        "subject": {
+          "scheme": "MSC2020",
+          "primary": "30D15",
+          "secondary": [
+            "11M26",
+            "11Y35"
+          ]
+        },
+        "object_tags": [
+          "riemann-xi-function",
+          "de-bruijn-newman-constant",
+          "heat-flow"
+        ],
+        "method_tags": [
+          "real-zero-preserver",
+          "heat-equation",
+          "rigorous-computation"
+        ]
+      },
+      "prerequisites": [
+        "K-0001",
+        "K-0002"
+      ],
+      "relations": [
+        {
+          "type": "equivalent_to",
+          "target": "K-0001"
+        },
+        {
+          "type": "uses_method",
+          "target": "K-0015"
+        },
+        {
+          "type": "applies_to",
+          "target": "K-0006"
+        },
+        {
+          "type": "motivates",
+          "target": "K-0016"
+        }
+      ],
+      "authority_status": "reference_only"
+    },
+    {
+      "knowledge_id": "K-0013",
+      "kind": "reference_map",
+      "title": "零点相关、GUE 与随机矩阵证据",
+      "classification": {
+        "subject": {
+          "scheme": "MSC2020",
+          "primary": "11M26",
+          "secondary": [
+            "15B52",
+            "60B20"
+          ]
+        },
+        "object_tags": [
+          "riemann-zeta-function",
+          "zero-spacing",
+          "random-matrix",
+          "pair-correlation"
+        ],
+        "method_tags": [
+          "pair-correlation",
+          "random-matrix-theory",
+          "numerical-experiment"
+        ]
+      },
+      "prerequisites": [
+        "K-0001",
+        "K-0002",
+        "K-0004"
+      ],
+      "relations": [
+        {
+          "type": "uses_method",
+          "target": "K-0015"
+        },
+        {
+          "type": "motivates",
+          "target": "K-0004"
+        },
+        {
+          "type": "contrasts_with",
+          "target": "K-0006"
+        },
+        {
+          "type": "motivates",
+          "target": "K-0016"
+        }
+      ],
+      "authority_status": "reference_only"
+    },
+    {
+      "knowledge_id": "K-0014",
+      "kind": "theorem",
+      "title": "有限域函数域中的 RH 类比：Weil 与 Deligne",
+      "classification": {
+        "subject": {
+          "scheme": "MSC2020",
+          "primary": "11G20",
+          "secondary": [
+            "14G10",
+            "14F20"
+          ]
+        },
+        "object_tags": [
+          "zeta-function-over-finite-field",
+          "algebraic-curve",
+          "frobenius-eigenvalue"
+        ],
+        "method_tags": [
+          "etale-cohomology",
+          "algebraic-geometry",
+          "spectral-interpretation"
+        ]
+      },
+      "prerequisites": [
+        "K-0001",
+        "K-0002"
+      ],
+      "relations": [
+        {
+          "type": "motivates",
+          "target": "K-0015"
+        },
+        {
+          "type": "contrasts_with",
+          "target": "K-0006"
+        },
+        {
+          "type": "motivates",
+          "target": "K-0016"
+        }
+      ],
+      "authority_status": "reference_only"
+    },
+    {
+      "knowledge_id": "K-0015",
+      "kind": "reference_map",
+      "title": "主要研究路线、已取得能力与结构性障碍",
+      "classification": {
+        "subject": {
+          "scheme": "MSC2020",
+          "primary": "11M26",
+          "secondary": [
+            "11M06",
+            "11N05"
+          ]
+        },
+        "object_tags": [
+          "riemann-zeta-function",
+          "proof-strategy",
+          "research-route",
+          "obstruction"
+        ],
+        "method_tags": [
+          "mollifier",
+          "zero-density",
+          "explicit-formula",
+          "spectral-theory",
+          "positivity",
+          "jensen-polynomial"
+        ]
+      },
+      "prerequisites": [
+        "K-0001",
+        "K-0002",
+        "K-0003",
+        "K-0004",
+        "K-0005",
+        "K-0006",
+        "K-0007",
+        "K-0008",
+        "K-0009",
+        "K-0010",
+        "K-0011",
+        "K-0012",
+        "K-0013",
+        "K-0014"
+      ],
+      "relations": [
+        {
+          "type": "motivates",
+          "target": "K-0016"
+        },
+        {
+          "type": "applies_to",
+          "target": "K-0003"
+        },
+        {
+          "type": "applies_to",
+          "target": "K-0004"
+        },
+        {
+          "type": "applies_to",
+          "target": "K-0005"
+        },
+        {
+          "type": "applies_to",
+          "target": "K-0007"
+        },
+        {
+          "type": "applies_to",
+          "target": "K-0010"
+        },
+        {
+          "type": "applies_to",
+          "target": "K-0011"
+        },
+        {
+          "type": "applies_to",
+          "target": "K-0012"
+        },
+        {
+          "type": "applies_to",
+          "target": "K-0013"
+        }
+      ],
+      "authority_status": "reference_only"
+    },
+    {
+      "knowledge_id": "K-0016",
+      "kind": "knowledge_gap",
+      "title": "截至 2026-08-29 的可审计 frontier、来源债务与 Project-genesis 阻塞",
+      "classification": {
+        "subject": {
+          "scheme": "MSC2020",
+          "primary": "11M26",
+          "secondary": [
+            "11M06",
+            "11N05"
+          ]
+        },
+        "object_tags": [
+          "riemann-zeta-function",
+          "research-frontier",
+          "source-debt",
+          "project-genesis"
+        ],
+        "method_tags": [
+          "source-audit",
+          "independent-verification",
+          "research-planning"
+        ]
+      },
+      "prerequisites": [
+        "K-0015"
+      ],
+      "relations": [
+        {
+          "type": "motivates",
+          "target": "K-0004"
+        },
+        {
+          "type": "motivates",
+          "target": "K-0003"
+        },
+        {
+          "type": "motivates",
+          "target": "K-0012"
+        },
+        {
+          "type": "motivates",
+          "target": "K-0015"
+        }
+      ],
+      "authority_status": "reference_only"
+    }
+  ]
 }
