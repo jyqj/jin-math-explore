@@ -205,6 +205,35 @@ def check_phase_separated_gap(
         )
 
 
+def check_hyperbolic_swap() -> None:
+    """Exact two-pair cancellation in the abstract real block model."""
+    for r in (Fraction(1, 10), Fraction(1, 2), Fraction(2, 1)):
+        # Diagonal entries of Psharp and R in the basis (e1,e2).
+        psharp = (2 * (1 + r), 2 * (1 + r))
+        negative = (2 * r, 2 * r)
+        total_matrix = tuple(p - n for p, n in zip(psharp, negative))
+        trace = sum(total_matrix)
+        frobenius_sq = sum(value * value for value in total_matrix)
+        count_budget = Fraction(8, 1)  # two reflection-pair budgets
+        combined_defect = count_budget - (4 * trace - frobenius_sq)
+
+        single_norm_sum = 1 + 2 * r
+        isolated_each = 2 * (single_norm_sum * single_norm_sum - 1)
+        isolated_sum = 2 * isolated_each
+
+        assert total_matrix == (Fraction(2, 1), Fraction(2, 1))
+        assert combined_defect == 0
+        assert isolated_sum == 16 * r + 16 * r * r
+        assert isolated_sum > 0
+        # The collapsed-orbit negative matching term vanishes exactly.
+        spectral_excess = tuple(value - 2 for value in psharp)
+        assert spectral_excess == negative
+
+    print("PASS abstract hyperbolic-swap obstruction")
+    print("  two interacting deep pairs can have zero combined c=2 defect")
+    print("  isolated positive depth penalties therefore do not add")
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--alpha", type=float, default=0.2)
@@ -216,6 +245,7 @@ def main() -> int:
     check_slow_strain(args.alpha, args.quadrature_steps)
     check_local_window_collapse(args.alpha)
     check_phase_separated_gap(args.alpha, args.image_radius)
+    check_hyperbolic_swap()
     print(
         "BOUNDARY: finite formulas and numerical asymptotics only; "
         "no compactness theorem or zeta-zero theorem is machine-proved here."
