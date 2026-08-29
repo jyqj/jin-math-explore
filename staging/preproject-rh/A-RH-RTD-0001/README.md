@@ -116,22 +116,19 @@ Every term on the right is nonnegative. Consequently, (D) is not merely another 
 
 ### Proof
 
-First observe
+First observe the exact scalar identity
 
 \[
-k_c(a)=c^2-(c-a)_+^2
-      =2ca-a^2+g_c(a),
+k_c(a)=c^2-(c-a)_+^2=ca-g_c(a).
 \]
 
-because \(g_c(a)=a^2-ca-(a-c)_+^2\) and
-\(a-c=(a-c)_+-(c-a)_+\). Summing and using
+Indeed, for \(a\le c\) both sides equal \(2ca-a^2\), while for
+\(a\ge c\) both sides equal \(c^2\). Summing and using
 \(\sum_j a_j=\operatorname{tr}P\),
 
 \[
 \sum_j k_c(a_j)
-=2c\operatorname{tr}P-
- \sum_j a_j^2+
- \sum_j g_c(a_j).
+=c\operatorname{tr}P-\sum_j g_c(a_j).
 \]
 
 The Schur-transfer identity gives
@@ -149,13 +146,13 @@ Since
 \|A_c\|_F^2,
 \]
 
-an equivalent and more direct bookkeeping route is to expand \(\Delta_c\) and group all scalar/atomic terms into \(J_c\). This yields
+expanding \(\Delta_c\) and collecting the atomic terms yields
 
 \[
 \Delta_c
 =J_c+c^2b+
 \|Q\|_F^2+2\operatorname{tr}(PQ)-2c\operatorname{tr}Q
--
++
 \|A_c\|_F^2.
 \tag{1}
 \]
@@ -165,8 +162,8 @@ Using \(Q=Q_+-Q_-\), \(Q_+Q_-=0\), and
 
 \[
 \begin{aligned}
-\|Q_-\|_F^2-2\operatorname{tr}(PQ_-)+2c\operatorname{tr}Q_- -\|A_c\|_F^2
-&=\|Q_-\|_F^2-2\operatorname{tr}((P-cI)Q_-)-\|A_c\|_F^2\\
+\|Q_-\|_F^2-2\operatorname{tr}(PQ_-)+2c\operatorname{tr}Q_- +\|A_c\|_F^2
+&=\|Q_-\|_F^2-2\operatorname{tr}((P-cI)Q_-)+\|A_c\|_F^2\\
 &=\|Q_--A_c\|_F^2+2\operatorname{tr}(B_cQ_-).
 \end{aligned}
 \tag{2}
