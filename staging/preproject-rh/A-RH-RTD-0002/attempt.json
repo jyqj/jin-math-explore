@@ -99,7 +99,7 @@
     {
       "claim_id": "C-RTD-COLLECTIVE-PAIR-NOGO",
       "statement": "Abstract hyperbolic pair blocks can cancel their negative directions exactly, so scalar per-scale trace, Frobenius and inertia data do not recover individual pair depth.",
-      "evidence_grade": "verified_refutation_candidate",
+      "evidence_grade": "exact_check",
       "evidence": [
         "README.md#11-collective-pair-cancellation-no-go-model",
         "check_offline_pair.py"
