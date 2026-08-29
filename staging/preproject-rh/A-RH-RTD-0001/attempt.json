@@ -1,0 +1,68 @@
+{
+  "schema": "jin-math-preproject-attempt/v1",
+  "attempt_id": "A-RH-RTD-0001",
+  "title": "Exact defect decomposition and compatibility bounds for the Zeta23 rank-trace certificate",
+  "status": "proof_candidate",
+  "actor": {
+    "kind": "agent",
+    "id": "openai-gpt-5.6-pro",
+    "run_id": "run-20260829-rh-rank-trace-defect-01",
+    "role": "solver"
+  },
+  "base": {
+    "repository": "jyqj/jin-math-explore",
+    "ref": "infra/i-0021/riemann-prior-art-baseline-v1",
+    "sha": "cd3ee76330ec4c7ae731cebb37933a3b03458dc9"
+  },
+  "source_dependencies": [
+    {
+      "repository": "anthropics/formal-math",
+      "sha": "2bafb8c88f177284a2123b5fefa2ff84e2365eb6",
+      "paths": [
+        "zeta23/Zeta23/ZeroSide/RankTraceMult.lean",
+        "zeta23/Zeta23/ZeroSide/TightMult.lean",
+        "zeta23/Zeta23/ZeroSide/Mult.lean",
+        "zeta23/Zeta23/Assembly/SeamMult.lean"
+      ]
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "C-RTD-EXACT-DECOMPOSITION",
+      "statement": "The multiplicity-aware rank-trace defect equals a sum of six nonnegative terms: the Schur-transfer defect, positive-range overlap, negative-part matching error, below-threshold overlap, positive-eigenvalue quantization error, and unused positive-inertia budget.",
+      "evidence_grade": "proof_candidate",
+      "evidence": [
+        "README.md#3-candidate-theorem-exact-nonnegative-defect-decomposition"
+      ]
+    },
+    {
+      "claim_id": "C-RTD-DUAL-COMPRESSION",
+      "statement": "Two certificates at the same parameter satisfy a quantitative compatibility lower bound controlled by the separation of their thresholded positive parts minus the separation of their negative parts.",
+      "evidence_grade": "proof_candidate",
+      "evidence": [
+        "README.md#5-dual-compression-compatibility-inequality"
+      ]
+    },
+    {
+      "claim_id": "C-RTD-C2-C3-NOGO",
+      "statement": "The orthogonal five-atom model diag(1,1,1,1,2), Q=0 simultaneously saturates the c=2 simple-zero and c=3 distinct-zero scalar inequalities, so merely combining those two scalar inequalities cannot improve the 2/3 and 5/6 constants.",
+      "evidence_grade": "exact_check",
+      "evidence": [
+        "README.md#7-exact-no-go-model-for-merely-combining-the-c2-and-c3-inequalities",
+        "check_identity.py"
+      ]
+    }
+  ],
+  "validation": {
+    "command": "python3 check_identity.py --seed 20260829 --trials 500",
+    "expected": "exact no-go assertions pass; all random identity and compatibility residuals are below 2e-8"
+  },
+  "next_frontier": "Prove or refute a two-window separation estimate for actual Weil/Gabor zeta compressions that makes the dual-compression compatibility lower bound macroscopically positive.",
+  "cannot_imply": [
+    "This attempt does not improve any unconditional zeta-zero proportion.",
+    "This attempt does not prove or refute the Riemann hypothesis.",
+    "Random numerical tests do not establish the candidate theorem.",
+    "The algebraic defect identity alone does not show that genuine zeta compressions have positive aggregate defect.",
+    "No claim is repository-verified before an isolated independent-verifier run returns PASS on the frozen artifact hashes."
+  ]
+}
