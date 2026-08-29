@@ -1,0 +1,226 @@
+{
+  "schema": "jin-math-preproject-attempt/v1",
+  "attempt_id": "A-RH-XSR-0002",
+  "title": "Threshold optimality, critical-lattice variance detection, and cross-scale rigidity for the Zeta23 rank-trace route",
+  "status": "frozen_for_review",
+  "issue": 28,
+  "actor": {
+    "kind": "agent",
+    "id": "openai-gpt-5.6-pro",
+    "run_id": "run-20260829-rh-cross-scale-rigidity-02",
+    "role": "solver"
+  },
+  "base": {
+    "repository": "jyqj/jin-math-explore",
+    "ref": "attempt/preproject-rh/rank-trace-defect-01",
+    "sha": "2f2ecdac7aec73d3996d3484e7a56b051a718f11",
+    "frozen_parent_attempt": "A-RH-RTD-0001"
+  },
+  "branch": "attempt/preproject-rh/cross-scale-rigidity-02",
+  "source_dependencies": [
+    {
+      "repository": "anthropics/formal-math",
+      "sha": "2bafb8c88f177284a2123b5fefa2ff84e2365eb6",
+      "paths": [
+        "zeta23/Zeta23/Assembly/Certificate.lean",
+        "zeta23/Zeta23/Poisson.lean",
+        "zeta23/Zeta23/Taper.lean",
+        "zeta23/Zeta23/ZeroSide/RankTraceMult.lean",
+        "zeta23/Zeta23/ZeroSide/TightMult.lean"
+      ]
+    }
+  ],
+  "artifacts": {
+    "research_note": "staging/preproject-rh/A-RH-XSR-0002/README.md",
+    "deterministic_harness": "staging/preproject-rh/A-RH-XSR-0002/explore_cross_scale.py",
+    "harness_git_blob": "aef35e513f142b84777156b06c9c4683dcf0a834"
+  },
+  "claims": [
+    {
+      "claim_id": "C-XSR-THRESHOLD-OPTIMALITY",
+      "statement": "For 1 <= c <= 2, the simple-zero coefficient obtained from the same first and second moments is B_c(kappa)=1-(kappa-1)/(2c-1-c^2/2), which is maximized at c=2. Every nonnegative mixture of these scalar threshold inequalities is also bounded by 2-kappa.",
+      "scope": "abstract scalar rank-trace moment model",
+      "evidence_grade": "exact_derivation",
+      "evidence": [
+        "README.md#1-exact-scalar-no-go-c2-is-optimal-for-the-simple-zero-certificate",
+        "explore_cross_scale.py"
+      ]
+    },
+    {
+      "claim_id": "C-XSR-BREGMAN-RIGIDITY",
+      "statement": "The Schur-transfer defect has an exact rowwise Bregman decomposition and equality classification. For Q=0 and b=0, the full defect is the off-diagonal atom-Gram energy plus the squared atom-load excess above c.",
+      "scope": "finite-dimensional atomic positive semidefinite matrices",
+      "evidence_grade": "proof_candidate_exact_algebra",
+      "evidence": [
+        "README.md#2-exact-rowwise-jensenbregman-decomposition"
+      ]
+    },
+    {
+      "claim_id": "C-XSR-CROSS-POISSON",
+      "statement": "For two compactly supported tapers on a common critical grid, the cross-Poisson kernel is independent of the lattice origin. Phase shifts, linear combinations, and Gram-level direct sums of same-scale tapers do not by themselves create new macroscopic scalar information.",
+      "scope": "full infinite common grid with the stated support and summability hypotheses",
+      "evidence_grade": "proof_candidate",
+      "evidence": [
+        "README.md#3-exact-common-grid-cross-poisson-kernel-and-same-scale-collapse",
+        "pinned Zeta23/Poisson.lean for the same-taper case"
+      ]
+    },
+    {
+      "claim_id": "C-XSR-SAME-SCALE-EDGE-NOGO",
+      "statement": "For a fixed-width smooth edge taper on an exact critical lattice, the normalized off-diagonal frame energy is O(w/L), so same-scale edge-profile optimization cannot create a fixed macroscopic gap as L tends to infinity.",
+      "scope": "exact critical lattice and bounded integer loads",
+      "evidence_grade": "exact_derivation",
+      "evidence": [
+        "README.md#4-same-scale-edge-smoothing-no-go"
+      ]
+    },
+    {
+      "claim_id": "C-XSR-IDEAL-LATTICE-2332",
+      "statement": "In the ideal rectangular critical-lattice occupancy model with mean integer load one and the Zeta23 second-moment budget kappa(lambda)=1/lambda+lambda/3, lambda=3/4 forces variance at most 9/32, simple-load density at least 23/32, and occupied-cell density at least 55/64.",
+      "scope": "ideal rectangular periodic critical-lattice model",
+      "evidence_grade": "exact_model_theorem",
+      "evidence": [
+        "README.md#5-ideal-rectangular-critical-lattice-theorem",
+        "explore_cross_scale.py"
+      ]
+    },
+    {
+      "claim_id": "C-XSR-GOLDEN-RATIO-GAP",
+      "statement": "If the ideal critical-lattice simple-load density is at most 2/3, every relative scale lambda in ((sqrt(5)-1)/2,1) violates the corresponding second-moment budget by at least g(lambda)=(1-lambda)(lambda^2+lambda-1)/(3lambda^2); at lambda=3/4 the gap is 5/108.",
+      "scope": "ideal rectangular critical-lattice model",
+      "evidence_grade": "exact_model_theorem",
+      "evidence": [
+        "README.md#54-excluding-the-23-tangent-extremizer",
+        "explore_cross_scale.py"
+      ]
+    },
+    {
+      "claim_id": "C-XSR-RECTANGULAR-MOMENT-CEILING",
+      "statement": "The continuum of all rectangular scalar first/second-moment scale constraints cannot force a universal ideal-lattice simple-load density above 23/32: a half-frequency spectral extremizer of mass 9/32 is approached by integer alternating-block sequences.",
+      "scope": "ideal rectangular critical-lattice scalar spectral-measure model",
+      "evidence_grade": "constructive_proof_candidate",
+      "evidence": [
+        "README.md#6-a-new-ceiling-2332-is-asymptotically-sharp-for-all-rectangular-second-moments",
+        "explore_cross_scale.py"
+      ]
+    },
+    {
+      "claim_id": "C-XSR-PERIOD-SIX-SIGNAL",
+      "statement": "For the period-six load pattern with four simple cells, one double cell and one vacancy, the best ideal cross-scale bound is approximately 0.721843050317375 at lambda approximately 0.728504383258803. This value is not arrangement-universal: an explicit period-twelve pattern has smaller defect at lambda=3/4.",
+      "scope": "specific ideal periodic occupancy models",
+      "evidence_grade": "exact_closed_form_plus_exact_counterexample",
+      "evidence": [
+        "README.md#7-period-six-exploration-stronger-signal-non-universal-constant",
+        "explore_cross_scale.py"
+      ]
+    },
+    {
+      "claim_id": "C-XSR-OFFLINE-PAIR-DEPTH",
+      "statement": "For one isolated rectangular off-line reflection pair of multiplicity m and normalized depth y=L(beta-1/2), the pure c=2 defect is 4(m-1)^2+2m^2((sinh(y)/y)^2-1), at least 4(m-1)^2+(2/3)m^2y^2.",
+      "scope": "single isolated reflection pair in the ideal rectangular full-grid model",
+      "evidence_grade": "exact_model_theorem",
+      "evidence": [
+        "README.md#8-ideal-off-line-reflection-pair-exact-depth-penalty",
+        "explore_cross_scale.py"
+      ]
+    },
+    {
+      "claim_id": "C-XSR-KADEC-STABILITY",
+      "statement": "Under an a priori one-quarter-lattice displacement bound and loads at most two, the second-scale defect differs from its exact-lattice value by at most C times the square root of the first-scale defect, with a convergent explicit series for C. A coarse lambda=3/4 bound gives a positive conditional tradeoff margin above 2.2e-6.",
+      "scope": "periodic Kadec-neighborhood model with a priori matching",
+      "evidence_grade": "proof_candidate",
+      "evidence": [
+        "README.md#91-explicit-kadec-neighborhood-estimate",
+        "explore_cross_scale.py"
+      ]
+    },
+    {
+      "claim_id": "C-XSR-COMPACTNESS-GAP",
+      "statement": "A uniform two-scale compactness gap should follow if zero first-scale defect forces a stationary local weak limit supported on one integer coset with marks at most two; the topology, intensity preservation and lower-semicontinuity steps remain open.",
+      "scope": "candidate inverse theorem for periodic marked configurations",
+      "evidence_grade": "incomplete_proof_candidate",
+      "evidence": [
+        "README.md#92-qualitative-compactness-gap-theorem-candidate"
+      ]
+    },
+    {
+      "claim_id": "C-XSR-SMOOTH-TAPER-TRANSFER",
+      "statement": "At an exact critical lattice, fixed-width smooth Zeta23 tapers converge to the rectangular lattice symbol uniformly with error O(sqrt(w/L)) for load sequences with bounded second moment.",
+      "scope": "exact lattice; fixed relative scale; bounded second moment",
+      "evidence_grade": "proof_candidate",
+      "evidence": [
+        "README.md#93-smooth-taper-transfer-at-an-exact-lattice"
+      ]
+    }
+  ],
+  "validation": {
+    "deterministic_default_command": "python3 explore_cross_scale.py",
+    "deterministic_default_result": {
+      "status": "PASS",
+      "threshold_continuum_maximum": "c=2",
+      "universal_optimum_scale": "3/4",
+      "variance_cap": "9/32",
+      "ideal_simple_bound": "23/32",
+      "ideal_distinct_bound": "55/64",
+      "period_six_optimum_lambda": "0.728504383258803",
+      "period_six_optimum_simple_bound": "0.721843050317375",
+      "period_64_max_sampled_all_scale_excess": "0.000995308 near lambda=0.74525",
+      "coarse_kadec_constant_lambda_3_4": "30.986 approximately",
+      "conditional_tradeoff_margin": "greater than 2.2e-6"
+    },
+    "heuristic_command": "python3 explore_cross_scale.py --jitter-search --jitter-lambda 0.9 --starts 12 --periods 240 --rounds 50",
+    "heuristic_result": {
+      "status": "COMPLETED",
+      "min_max_gap": "0.019220519",
+      "first_scale_defect": "0.019220518",
+      "second_scale_excess": "0.019220519",
+      "displacements": [
+        "0",
+        "-0.1680341",
+        "-0.1445718",
+        "-0.1085521",
+        "-0.0630122"
+      ],
+      "boundary": "Finite-period coordinate search only; not global optimization and not proof."
+    },
+    "remote_script_git_blob": "aef35e513f142b84777156b06c9c4683dcf0a834",
+    "boundary": "The deterministic harness verifies algebraic formulas, exact finite patterns and reproducible numerical scans. It does not verify the inverse theorem or any claim about actual zeta zeros."
+  },
+  "correction_ledger": [
+    {
+      "stage": "parent attempt",
+      "correction": "The first draft scalar identity/sign in A-RH-RTD-0001 was corrected before that package was frozen."
+    },
+    {
+      "stage": "period-six exploration",
+      "correction": "The value 0.721843050317375 was initially a strong period-six signal, then explicitly downgraded after a period-twelve counterexample showed it is not arrangement-universal. The surviving universal ideal-model bound is 23/32."
+    },
+    {
+      "stage": "Gram-energy refinement",
+      "correction": "The Q=0 full defect formula does not require the provisional extra hypothesis P <= cI; the exact load-excess term cancels the spectral-excess subtraction."
+    }
+  ],
+  "next_frontier": {
+    "title": "Two-scale sinc-rigidity / collapsed-lattice inverse theorem",
+    "statement": "Derive, from o(N) genuine first-scale Zeta23 c=2 defect, an o(N)-loss decomposition into a common near-critical lattice of load-one cells, load-two tangent cells for on-line doubles or shallow simple off-line pairs, and a positive penalty for deep or multiple off-line pairs; then transfer the lambda=3/4 lattice symbol lower bound through the smooth taper, finite grid and tail matrix.",
+    "target_prime_side_budget": "frob(G_{3/4})^2 <= (19/12+o(1))N",
+    "ideal_contradiction_if_simple_at_most_2_3": "5/108 per unit multiplicity before stability losses"
+  },
+  "unresolved": [
+    "Independent verification of A-RH-RTD-0001 and A-RH-XSR-0002.",
+    "A rigorous inverse theorem converting small first-scale atomic Gram energy into one globally matched near-critical lattice after discarding o(N) mass.",
+    "A multi-pair extension of the isolated off-line depth penalty, including interactions between reflection blocks.",
+    "Precise bookkeeping for the leak-free normalization term k_c(m)-k_c(m||v||^2).",
+    "Uniform transfer through the actual finite Zeta23 grid, smooth taper, tail perturbation and two separate prime-side asymptotics.",
+    "A proof or counterexample for the qualitative compactness-gap candidate with period-independent eta."
+  ],
+  "cannot_imply": [
+    "The ideal critical-lattice bounds 23/32 and 55/64 are not unconditional theorems about Riemann-zeta zeros.",
+    "The period-six number 0.721843050317375 is not a universal bound.",
+    "The deterministic and jitter computations do not prove a stability or inverse theorem.",
+    "The single-pair depth formula does not control interacting collections of off-line pairs by itself.",
+    "No published zeta-zero proportion has been improved by this solver package.",
+    "This attempt does not prove or refute the Riemann hypothesis.",
+    "No claim is repository-verified before an isolated independent-verifier run returns PASS on the frozen artifact hashes."
+  ]
+}
