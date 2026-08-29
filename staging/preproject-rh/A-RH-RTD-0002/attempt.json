@@ -1,0 +1,146 @@
+{
+  "schema": "jin-math-preproject-attempt/v1",
+  "attempt_id": "A-RH-RTD-0002",
+  "title": "Threshold closure, clock no-go models, complete-frame pair inertia, and a normalized two-scale certificate",
+  "status": "proof_candidate",
+  "actor": {
+    "kind": "agent",
+    "id": "openai-gpt-5.6-pro",
+    "run_id": "run-20260829-rh-window-collapse-02",
+    "role": "solver"
+  },
+  "base": {
+    "repository": "jyqj/jin-math-explore",
+    "ref": "attempt/preproject-rh/rank-trace-defect-01",
+    "sha": "2f2ecdac7aec73d3996d3484e7a56b051a718f11"
+  },
+  "source_dependencies": [
+    {
+      "repository": "anthropics/formal-math",
+      "sha": "2bafb8c88f177284a2123b5fefa2ff84e2365eb6",
+      "paths": [
+        "zeta23/Zeta23/Defs.lean",
+        "zeta23/Zeta23/Poisson.lean",
+        "zeta23/Zeta23/Taper.lean",
+        "zeta23/Zeta23/ZeroSide/RankTraceMult.lean",
+        "zeta23/Zeta23/Assembly/Certificate.lean",
+        "zeta23/Zeta23/FinalMult.lean"
+      ]
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "C-RTD-THRESHOLD-ENVELOPE",
+      "statement": "For 1 <= kappa < 2, no scalar rank-trace threshold c > 0 and no nonnegative mixture of such threshold certificates improves the simple-zero lower bound 2-kappa; c=2 is optimal.",
+      "evidence_grade": "proof_candidate",
+      "evidence": [
+        "README.md#1-arbitrary-threshold-envelope",
+        "progress.md#2026-08-29--milestone-1-h1-refuted-by-an-exact-scalar-envelope",
+        "check_clock_model.py"
+      ]
+    },
+    {
+      "claim_id": "C-RTD-PHASE-INVARIANCE",
+      "statement": "At complete-frame level, changing only the sampling-grid phase preserves the atom Gram kernel by the bilinear Poisson identity.",
+      "evidence_grade": "proof_candidate",
+      "evidence": [
+        "README.md#2-complete-frame-grid-phase-invariance",
+        "progress.md#2026-08-29--milestone-2-h2-refuted-at-the-complete-frame-level"
+      ]
+    },
+    {
+      "claim_id": "C-RTD-SAME-SCALE-NOGO",
+      "statement": "Every fixed finite direct sum or nonnegative mixture of same-scale tapers is Gram-equivalent to one effective taper, and fixed-width plateau tapers admit an asymptotically sharp 2/3-simple, 5/6-distinct clock-multiplicity model.",
+      "evidence_grade": "proof_candidate",
+      "evidence": [
+        "README.md#3-same-scale-taper-collapse",
+        "README.md#4-fixed-width-taper-clock-near-extremizer",
+        "progress.md#2026-08-29--milestone-3-same-scale-finite-taper-h3-refuted-by-a-clock-multiplicity-model",
+        "check_clock_model.py"
+      ]
+    },
+    {
+      "claim_id": "C-RTD-TWO-SCALE-NORMALIZED",
+      "statement": "In the ideal integer-occupancy model with reference density theta and relative scale alpha, the simple-cell proportion is at least theta-(1-theta)^2/theta-alpha*theta/(3*omega_alpha)-epsilon/omega_alpha, where omega_alpha=(2alpha-1)/alpha^2. The optimal relative scale is alpha=3/4.",
+      "evidence_grade": "proof_candidate",
+      "evidence": [
+        "normalized-two-scale-budget.md#4-conditional-normalized-theorem",
+        "normalized-two-scale-budget.md#5-optimal-relative-scale",
+        "check_clock_model.py"
+      ]
+    },
+    {
+      "claim_id": "C-RTD-TWO-SCALE-GAIN",
+      "statement": "At relative scale 3/4, the ideal two-scale bound exceeds the same-scale Zeta23 H(theta) certificate by exactly 5*theta/96-(9/8)*epsilon; epsilon<5*theta/108 preserves a strict gain. The theta->1 zero-error limit is 23/32.",
+      "evidence_grade": "exact_check",
+      "evidence": [
+        "normalized-two-scale-budget.md#6-exact-comparison-with-the-one-scale-zeta23-certificate",
+        "check_clock_model.py"
+      ]
+    },
+    {
+      "claim_id": "C-RTD-CLOCK-EXCLUSION",
+      "statement": "At theta=1 and relative scale 3/4, every arrangement of the 0/1/2 Nyquist extremal occupancy distribution incurs the exact ideal second-moment excess 5/108 over the Zeta23 prime-side constant.",
+      "evidence_grade": "exact_check",
+      "evidence": [
+        "normalized-two-scale-budget.md#7-exact-nyquist-extremizer-margin",
+        "check_clock_model.py"
+      ]
+    },
+    {
+      "claim_id": "C-RTD-ISOLATED-PAIR-DEPTH",
+      "statement": "For an isolated aligned off-line reflection pair in the ideal centered box model, the c=2 defect is 2*((sinh(a)/a)^2-1), at least (2/3)*a^2, and contracts by at most lambda^2 under scale restriction.",
+      "evidence_grade": "exact_check",
+      "evidence": [
+        "README.md#10-isolated-aligned-pair-depth-penalty",
+        "check_offline_pair.py"
+      ]
+    },
+    {
+      "claim_id": "C-RTD-COLLECTIVE-PAIR-NOGO",
+      "statement": "Abstract hyperbolic pair blocks can cancel their negative directions exactly, so scalar per-scale trace, Frobenius and inertia data do not recover individual pair depth.",
+      "evidence_grade": "verified_refutation_candidate",
+      "evidence": [
+        "README.md#11-collective-pair-cancellation-no-go-model",
+        "check_offline_pair.py"
+      ]
+    },
+    {
+      "claim_id": "C-RTD-COMPLETE-PAIR-INERTIA",
+      "statement": "For a real even taper nonzero on an interval, complete analysis vectors at finitely many distinct complex frequencies are linearly independent; consequently p distinct off-line reflection pairs produce a complete pair form with exact inertia (p,p). A full-column-rank finite section has the same inertia.",
+      "evidence_grade": "proof_candidate",
+      "evidence": [
+        "pair-inertia-and-finite-sections.md#2-linear-independence-theorem",
+        "pair-inertia-and-finite-sections.md#3-exact-inertia-of-complete-off-line-pair-forms",
+        "pair-inertia-and-finite-sections.md#4-finite-sections"
+      ]
+    },
+    {
+      "claim_id": "C-RTD-FINITE-SECTION-BOUND",
+      "statement": "If the pair synthesis Gram matrix satisfies U_d^*U_d >= A I and the minimum pair multiplicity is m_min, then the finite pair form has ||Q_{d,-}||_F^2 >= p*A^2*m_min^2; divided-difference coordinates isolate a quadratic horizontal-depth coefficient.",
+      "evidence_grade": "proof_candidate",
+      "evidence": [
+        "pair-inertia-and-finite-sections.md#5-a-quantitative-singular-value-implication",
+        "pair-inertia-and-finite-sections.md#6-coalescing-pairs-and-divided-differences"
+      ]
+    }
+  ],
+  "validation": {
+    "commands": [
+      "python3 check_clock_model.py --kappa 1.3333333333333333 --grid 20001 --blocks 80 --permutations 200 --occupancy-trials 1000 --dimension 96 --max-occupancy 3 --seed 20260829",
+      "python3 check_offline_pair.py --max-depth 5 --grid 10001 --lambda 0.75"
+    ],
+    "expected": "all threshold, symbol, normalized occupancy, exact-fraction, finite-circulant, clock, taper-scaling, isolated-pair and abstract cancellation checks PASS"
+  },
+  "next_frontier": "Prove a critical-lattice extraction and finite-section pair-stability theorem that isolates the on-line short-scale quadratic form and keeps total normalized loss below the fixed-theta budget (-27*theta^2+128*theta-96)/(108*theta), or construct an admissible countermodel showing that the current Zeta23 observables cannot meet that budget.",
+  "cannot_imply": [
+    "This attempt does not improve any unconditional zeta-zero proportion.",
+    "The ideal 23/32 limit is not a theorem about actual zeta zeros.",
+    "The full Frobenius bound for an indefinite P+Q matrix does not automatically upper-bound the on-line PSD block P.",
+    "The complete-frame inertia theorem does not provide a uniform lower Riesz bound for the growing finite sections used in Zeta23.",
+    "Deterministic computations do not prove the missing extraction, taper, off-line, finite-section or seam estimates.",
+    "The parent A-RH-RTD-0001 defect decomposition remains unverified while Issue #25 is open.",
+    "This attempt does not prove or refute the Riemann hypothesis.",
+    "No claim is repository-verified before an isolated independent-verifier run returns PASS on frozen artifact hashes."
+  ]
+}
