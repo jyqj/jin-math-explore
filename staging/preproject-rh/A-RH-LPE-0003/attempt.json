@@ -1,0 +1,124 @@
+{
+  "schema": "jin-math-preproject-attempt/v1",
+  "attempt_id": "A-RH-LPE-0003",
+  "title": "Critical-lattice phase extraction, blockwise occupancy, and finite-section control",
+  "status": "active",
+  "actor": {
+    "kind": "agent",
+    "id": "openai-gpt-5.6-pro",
+    "run_id": "run-20260829-rh-lattice-extraction-03",
+    "role": "solver"
+  },
+  "base": {
+    "repository": "jyqj/jin-math-explore",
+    "ref": "attempt/preproject-rh/window-collapse-02",
+    "sha": "698d28d4e074f09fdb7dfdaffc65df1cdc94727b"
+  },
+  "parent_verification": {
+    "attempt": "A-RH-RTD-0002",
+    "issue": 29,
+    "status": "pending"
+  },
+  "sibling_isolation": {
+    "issue": 28,
+    "staging_read": false,
+    "reason": "The sibling attempt has a separate live lease and is not an input to this run."
+  },
+  "claims": [
+    {
+      "claim_id": "C-LPE-LOCAL-PHASE-SYNC",
+      "statement": "For a connected weighted graph with Poincare constant lambda_G and edge coordinate radius R, some phase tau satisfies sum_i w_i dist_T(x_i-tau,Z)^2 <= pi^2 R^2 E_sinc/(2 lambda_G).",
+      "evidence_grade": "proof_candidate",
+      "evidence": [
+        "phase-synchronization.md#2-weighted-local-phase-synchronization-theorem",
+        "check_phase_synchronization.py"
+      ]
+    },
+    {
+      "claim_id": "C-LPE-COMPLETE-BLOCK",
+      "statement": "For complete block weights a_ij=w_i w_j, the exact weighted graph gap is sum_i w_i, so bounded-block sinc energy directly controls distance to one local lattice phase.",
+      "evidence_grade": "proof_candidate",
+      "evidence": [
+        "phase-synchronization.md#3-complete-block-specialization",
+        "check_phase_synchronization.py"
+      ]
+    },
+    {
+      "claim_id": "C-LPE-RANDOM-PARTITION",
+      "statement": "If a positive-integer-weighted real configuration has total ideal long-scale sinc energy E=eN, then for every fixed local radius r there is a shifted block partition deleting at most [(pi^2/2)R^2 e/eta^2+2r/R]N mass so every retained r-neighborhood lies eta-close to one blockwise lattice translate. Choosing R=e^(-1/5), eta=e^(1/5) gives O_r(e^(1/5)) deletion and error.",
+      "evidence_grade": "proof_candidate",
+      "evidence": [
+        "phase-synchronization.md#4-random-partition-local-extraction",
+        "check_phase_synchronization.py"
+      ]
+    },
+    {
+      "claim_id": "C-LPE-OVERLAP-STITCHING",
+      "statement": "An overlap of mass Q with phase errors E_tau and E_sigma obeys Q dist_T(tau-sigma,Z)^2 <= 2(E_tau+E_sigma); a connected block graph gives the stated global weighted phase bound.",
+      "evidence_grade": "proof_candidate",
+      "evidence": [
+        "phase-synchronization.md#5-overlap-stitching",
+        "check_phase_synchronization.py"
+      ]
+    },
+    {
+      "claim_id": "C-LPE-BLOCKWISE-TWO-SCALE",
+      "statement": "In the periodized ideal model, block phases and local block densities may vary: nonnegative cross-block deletion plus Cauchy recovers s1/N >= 2-1/theta-alpha theta/(3 omega_alpha)-epsilon/omega_alpha.",
+      "evidence_grade": "proof_candidate",
+      "evidence": [
+        "phase-synchronization.md#6-blockwise-two-scale-occupancy-inequality"
+      ]
+    },
+    {
+      "claim_id": "C-LPE-TOEPLITZ-BOUNDARY",
+      "statement": "For a finite sinc-squared Toeplitz block, the missing-row-sum expansion yields an exact lower bound with boundary quantities B_d and C_d, with explicit B_d=O(log d) and C_d=O(1) estimates.",
+      "evidence_grade": "proof_candidate",
+      "evidence": [
+        "phase-synchronization.md#7-finite-toeplitz-boundary-correction",
+        "check_phase_synchronization.py"
+      ]
+    },
+    {
+      "claim_id": "C-LPE-KERNEL-STABILITY",
+      "statement": "At relative scale alpha=3/4, points displaced by at most eta<=1/4 from assigned lattice cells change the short sinc-squared quadratic form by at most 25.226 eta times the cell second moment.",
+      "evidence_grade": "proof_candidate",
+      "evidence": [
+        "phase-synchronization.md#8-kernel-perturbation-from-approximate-cells",
+        "check_phase_synchronization.py"
+      ]
+    },
+    {
+      "claim_id": "C-LPE-DISCONNECTED-NOGO",
+      "statement": "Two disconnected integer cosets have zero local edge sinc energy but positive best common-phase loss, so connectedness, overlap, or block locality is necessary.",
+      "evidence_grade": "exact_check",
+      "evidence": [
+        "phase-synchronization.md#91-disconnected-two-coset-model",
+        "check_phase_synchronization.py"
+      ]
+    },
+    {
+      "claim_id": "C-LPE-LOW-GAP-NOGO",
+      "statement": "The path x_j=j+j/n has sinc energy Theta(1/n), graph gap Theta(1/n^2), and common-phase loss Theta(n), showing that inverse-gap dependence is necessary in a global graph argument.",
+      "evidence_grade": "proof_candidate",
+      "evidence": [
+        "phase-synchronization.md#92-low-gap-path-model",
+        "check_phase_synchronization.py"
+      ]
+    }
+  ],
+  "validation": {
+    "command": "python3 check_phase_synchronization.py --trials 250 --size 24 --overlap-points 16 --seed 20260829 --max-power 9",
+    "result": "PASS for local synchronization, complete blocks, overlap stitching, finite-Toeplitz correction, approximate-cell kernel stability, random-partition extraction, disconnected cosets and low-gap path scaling",
+    "boundary": "Deterministic checks validate finite formulas and implementations only; they do not prove any Zeta23 analytic input."
+  },
+  "next_frontier": "Derive effective on-line complete sinc/taper energy o(N) from near equality of the full indefinite Zeta23 P+Q certificate, or construct an admissible countermodel satisfying complete-frame pair inertia and finite-section constraints. Then combine the extraction, Toeplitz and kernel-stability losses with the A-RH-RTD-0002 fixed-theta budget.",
+  "cannot_imply": [
+    "The parent attempts remain pending independent verification.",
+    "The long-scale on-line energy E=o(N) is an unresolved Zeta23 implication, not an assumption proved here.",
+    "The blockwise ideal theorem does not by itself control the smooth taper, finite grid, off-line pairs, tails or normalization.",
+    "The 25.226 coefficient is a coarse valid finite bound, not an optimized constant and not a zeta theorem.",
+    "No unconditional zeta-zero proportion has been improved.",
+    "This attempt does not prove or refute the Riemann hypothesis.",
+    "No claim is repository-verified before a fresh isolated verifier returns PASS on frozen artifact hashes."
+  ]
+}
