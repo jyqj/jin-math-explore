@@ -8,7 +8,7 @@ This note resolves an ambiguity exposed by the abstract two-pair cancellation mo
 
 ## 1. Complete analysis vectors
 
-Let `phi` be a real taper supported in `[-L/2,L/2]` and nonzero almost everywhere on some nonempty open subinterval `J`. Use the paper Fourier convention
+Let `phi` be a real, even taper supported in `[-L/2,L/2]` and nonzero almost everywhere on some nonempty open subinterval `J`. The linear-independence theorem below only needs the nonvanishing hypothesis; evenness is used later to identify the conjugate-frequency columns in the off-line pair form. Use the paper Fourier convention
 
 \[
 \widehat\phi(z)=\int_{-L/2}^{L/2}\phi(u)e^{izu}\,du.
@@ -89,7 +89,7 @@ whose columns are
 V(z_1),V(\overline z_1),\ldots,V(z_p),V(\overline z_p).
 \]
 
-For real `phi`,
+For real even `phi`,
 
 \[
 V(\overline z)=\overline{V(z)}.
@@ -297,7 +297,7 @@ A qualitative version may be sufficient for the stationary-limit contradiction: 
 Established as a proof candidate:
 
 - complete analysis vectors at finitely many distinct complex frequencies are linearly independent;
-- the complete off-line pair form has exact inertia `(p,p)`;
+- the complete off-line pair form has exact inertia `(p,p)` for the real-even taper used in the pair representation;
 - a full-rank finite section also has inertia `(p,p)`;
 - a finite-section lower singular value gives the explicit negative-part bound (5.2);
 - normalized divided differences isolate the quadratic depth coefficient.
