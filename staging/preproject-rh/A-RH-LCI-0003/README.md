@@ -473,7 +473,6 @@ F_\lambda(t)=
 \frac{(\lambda-t)_++(\lambda-(1-t))_+}{\lambda^2},
 \qquad0\le t\le1,
 \tag{7.2}
-\]
 
 with
 
@@ -624,7 +623,188 @@ regressions. It is not a proof of the compactness theorem.
 
 ---
 
-## 10. Open bridge to Zeta23
+## 10. Alternative collapsed-orbit defect and an exact off-line obstruction
+
+The off-line pair contribution has additional structure. Write one reflection
+pair vector as
+
+\[
+v_p=x_p+i y_p
+\]
+
+with real vectors `x_p,y_p` and multiplicity `n_p`. Its real symmetric
+contribution is
+
+\[
+n_p(v_pv_p^T+\bar v_p\bar v_p^T)
+=
+2n_p(x_px_p^T-y_py_p^T).
+\tag{10.1}
+\]
+
+Define the collapsed positive and negative matrices
+
+\[
+P^\sharp
+=
+P_{\rm on}+\sum_p2n_px_px_p^T,
+\qquad
+R^\sharp
+=
+\sum_p2n_py_py_p^T,
+\qquad
+A=P^\sharp-R^\sharp.
+\tag{10.2}
+\]
+
+Treat the real parts of the pairs as additional positive atoms of weight
+`2n_p`, and take `Q=-Rsharp`, whose positive inertia is zero. Let
+
+\[
+a_i=m_i\|u_i\|^2,
+\qquad
+b_p=2n_p\|x_p\|^2,
+\]
+
+and define
+
+\[
+\begin{aligned}
+\mathcal L_2^\sharp
+={}&
+\sum_{i\ {\rm on}}
+[k_2(m_i)-k_2(a_i)]\\
+&+\sum_p[4-k_2(b_p)].
+\end{aligned}
+\tag{10.3}
+\]
+
+The first sum is nonnegative from `||u_i||<=1`; the second is nonnegative
+because `k_2<=4`. If
+
+\[
+J_2^\sharp
+=
+\operatorname{tr}g_2(P^\sharp)
+-\sum_{i\ {\rm on}}g_2(a_i)
+-\sum_pg_2(b_p),
+\tag{10.4}
+\]
+
+then applying the exact defect identity of `A-RH-RTD-0001` to
+`(Psharp,-Rsharp)` gives the alternative exact decomposition
+
+\[
+\boxed{
+\begin{aligned}
+\Delta_2^{\rm count}
+={}&
+\mathcal L_2^\sharp+J_2^\sharp\\
+&+\|R^\sharp-(P^\sharp-2I)_+\|_F^2\\
+&+2\operatorname{tr}((2I-P^\sharp)_+R^\sharp).
+\end{aligned}
+}
+\tag{10.5}
+\]
+
+This is useful because it identifies the precise cancellation mode that an
+off-line extension must exclude: the negative imaginary-part energy can match
+the supra-threshold spectrum of the collapsed positive frame.
+
+### Exact hyperbolic-swap countermodel
+
+The isolated-pair depth penalty from the parent attempt does **not** add over
+interacting pairs. Fix `r>0` in a real two-dimensional space and set
+
+\[
+\begin{array}{ll}
+x_1=\sqrt{1+r}\,e_1,&y_1=\sqrt r\,e_2,\\
+x_2=\sqrt{1+r}\,e_2,&y_2=\sqrt r\,e_1.
+\end{array}
+\tag{10.6}
+\]
+
+Each pair separately satisfies
+
+\[
+\langle x_i,y_i\rangle=0,
+\qquad
+\|x_i\|^2-\|y_i\|^2=1,
+\tag{10.7}
+\]
+
+the elementary hyperbolic normalization of a rectangular reflection pair.
+But together,
+
+\[
+2(x_1x_1^T-y_1y_1^T)
++
+2(x_2x_2^T-y_2y_2^T)
+=
+2I_2.
+\tag{10.8}
+\]
+
+There are two pair budgets, so
+
+\[
+\boxed{
+8-
+\left[
+4\operatorname{tr}(2I_2)-\|2I_2\|_F^2
+\right]
+=8-(16-8)=0.
+}
+\tag{10.9}
+\]
+
+By contrast, the parent isolated-pair formula assigns each pair the strictly
+positive depth cost
+
+\[
+2[(1+2r)^2-1]=8r+8r^2.
+\tag{10.10}
+\]
+
+In (10.5),
+
+\[
+P^\sharp=2(1+r)I_2,
+\qquad
+R^\sharp=2rI_2=(P^\sharp-2I)_+,
+\]
+
+and every term vanishes. Thus the cancellation is not a bookkeeping artifact.
+
+### Consequence
+
+No proof using only
+
+- scalar rank–trace data,
+- positive inertia,
+- per-pair norm difference,
+- and an additive isolated-pair depth estimate
+
+can extend the `5/108` compactness gap to arbitrary interacting off-line
+pairs. The next source-specific target must exclude positive-density
+**hyperbolic swap cycles** for genuine Weil/Gabor evaluation vectors.
+
+A useful candidate theorem is:
+
+> If genuine off-line pair vectors produce
+> `Rsharp approximately (Psharp-2I)_+` and simultaneously make the collapsed
+> Schur gap small, then their normalized depths tend to zero in density, except
+> for mass that collapses into tangent load-two lattice cells.
+
+Potential observables that are absent from the scalar certificate include
+cross-Gram matrices between real and imaginary pair components, commutators
+with the sampling/translation operator, and asymmetric or derivative-weighted
+test windows. These are now higher-priority than attempting to sum the
+isolated depth formula.
+
+---
+
+## 11. Open bridge to Zeta23
 
 The ideal theorem still omits five source-level effects:
 
@@ -650,7 +830,7 @@ small first-scale six-term defect implies that, at a typical root,
 
 ---
 
-## 11. Quantitative route
+## 12. Quantitative route
 
 For `|t|<=R`,
 
@@ -659,7 +839,7 @@ q_1(t)
 \ge
 \frac{4}{\pi^2R^2}
 \operatorname{dist}(t,\mathbb Z)^2.
-\tag{11.1}
+\tag{12.1}
 \]
 
 This can assign a local phase on blocks of length `R`. The next constructive
@@ -680,21 +860,23 @@ A preliminary target is an estimate of the form
 C\left(
 R^{3/2}\sqrt{D_1/L}+\frac{\log R}{R}
 \right).
-\tag{11.2}
+\tag{12.2}
 \]
 
-The exponent and constants in (11.2) have not been closed. It is recorded as a
+The exponent and constants in (12.2) have not been closed. It is recorded as a
 research target, not a theorem.
 
 ---
 
-## 12. Authority and non-implication boundary
+## 13. Authority and non-implication boundary
 
 Exact in this package:
 
 - the slow-strain formulas (1.3)--(1.6);
 - the refutation of global fixed-phase `l^2` matching;
 - the stationary lattice Fourier calculation (7.4)--(8.3);
+- the exact collapsed-orbit decomposition (10.5);
+- the hyperbolic-swap countermodel (10.6)--(10.10);
 - deterministic finite-model checks.
 
 Proof candidate requiring independent audit:
