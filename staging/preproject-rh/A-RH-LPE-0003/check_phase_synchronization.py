@@ -177,6 +177,44 @@ def toeplitz_checks(rng, trials, size, alpha=0.75):
     print(f"PASS Toeplitz boundary correction; worst lower-form={worst:.3e}")
 
 
+def kernel_stability_checks(rng, trials, size, alpha=0.75):
+    c = math.pi * alpha
+    hnorm = (
+        3 * c
+        + 16 / c * (math.pi**2 / 6 - 1)
+        + 32 / c**2 * (1.2020569031595942 - 1)
+    )
+    coefficient = 2 * hnorm
+    if coefficient >= 25.226:
+        raise AssertionError(coefficient)
+    worst = -math.inf
+    for _ in range(trials):
+        eta = rng.uniform(1e-4, 0.24)
+        cells = np.sort(rng.choice(np.arange(4 * size), size, replace=False))
+        occupancies = rng.integers(0, 4, size)
+        if np.sum(occupancies) == 0:
+            occupancies[0] = 1
+        atom_cells = np.repeat(cells, occupancies)
+        deviations = rng.uniform(-eta, eta, len(atom_cells))
+        positions = atom_cells.astype(float) + deviations
+        actual = float(np.sum(np.square(np.sinc(alpha * (
+            positions[:, None] - positions[None, :]
+        )))))
+        lattice = float(np.sum(np.square(np.sinc(alpha * (
+            atom_cells[:, None] - atom_cells[None, :]
+        )))))
+        second_moment = float(np.sum(np.square(occupancies)))
+        bound = coefficient * eta * second_moment
+        violation = abs(actual - lattice) - bound
+        worst = max(worst, violation)
+        if violation > TOL * max(1.0, bound):
+            raise AssertionError((actual, lattice, bound))
+    print(
+        "PASS approximate-cell kernel stability; "
+        f"C={coefficient:.9f}; worst |delta Q|-bound={worst:.3e}"
+    )
+
+
 def partition_loss(positions, weights, length, shift, eta):
     all_edges = np.outer(weights, weights)
     np.fill_diagonal(all_edges, 0.0)
@@ -284,6 +322,7 @@ def main():
     complete_block_checks(rng, args.trials, args.size)
     overlap_checks(rng, args.trials, args.overlap_points)
     toeplitz_checks(rng, args.trials, args.size)
+    kernel_stability_checks(rng, args.trials, args.size)
     partition_checks(rng, args.trials, args.size)
     countermodels(args.max_power)
     print(
