@@ -36,7 +36,9 @@
     "principal-angle-and-depth.md",
     "check_angle_depth.py",
     "weighted-tail-scaling.md",
-    "check_weighted_tail.py"
+    "check_weighted_tail.py",
+    "periodic-confluent-clock.md",
+    "check_periodic_confluent.py"
   ],
   "claims": [
     {
@@ -94,10 +96,21 @@
         "weighted-tail-scaling.md#2-substitution-of-the-zeta23-scales",
         "check_weighted_tail.py"
       ]
+    },
+    {
+      "claim_id": "C-LCI-PERIODIC-CONFLUENT-ANGLE",
+      "statement": "For every placement of one load-two reflection pair and one empty residue in the period-six (1,1,1,1,2,0) clock law, the ideal polyphase determinant is nonzero at positive normalized depth and extends nonvanishingly through the divided-difference limit. At zero depth the squared principal angle is at least 3/38 over all phases and placements; every bounded depth interval has a positive Riesz lower bound by compactness.",
+      "evidence_grade": "proof_candidate",
+      "evidence": [
+        "periodic-confluent-clock.md#2-exact-determinant-reduction",
+        "periodic-confluent-clock.md#3-exact-shallow-principal-angle-constant",
+        "check_periodic_confluent.py"
+      ]
     }
   ],
   "current_frontier": [
     "lower-bound the positive/negative Gram Schur complement for growing genuine finite sections, or construct a source-compatible collapse model",
+    "classify stationary critical-density marked lattice laws with simple density at most 2/3 and determine whether their averaged positive/normalized-negative Schur gap can vanish",
     "formalize the centered frequency-square complete-frame identity in Zeta23 normalization and quantify the short-scale finite-section tail",
     "derive the prime-side centered frequency-square trace lower bound at lambda=3/4, or isolate the exact obstructing prime sum",
     "use lambda=1 for scalar local compactness and lambda=3/4 for both depth control and the 5/108 aliasing gap",
@@ -107,14 +120,16 @@
     "commands": [
       "python3 staging/preproject-rh/A-RH-LCI-0003/check_compactness_models.py",
       "python3 staging/preproject-rh/A-RH-LCI-0003/check_angle_depth.py",
-      "python3 staging/preproject-rh/A-RH-LCI-0003/check_weighted_tail.py"
+      "python3 staging/preproject-rh/A-RH-LCI-0003/check_weighted_tail.py",
+      "python3 staging/preproject-rh/A-RH-LCI-0003/check_periodic_confluent.py"
     ],
     "latest_local_results": {
       "angle_depth": "PASS",
       "weighted_tail": "PASS",
       "weighted_tail_lambda_3_4_exponent": "-1/8",
       "weighted_tail_lambda_1_complex": "O(log T) with the current worst-case complex decay",
-      "weighted_tail_lambda_1_real_exponent": "-1/2"
+      "weighted_tail_lambda_1_real_exponent": "-1/2",
+      "periodic_confluent": "PASS; exact shallow angle floor 3/38 and determinant regression through normalized depth 4"
     },
     "boundary": "Deterministic checks validate exact finite formulas, asymptotic scaling and numerical quadrature only; proof candidates still require isolated independent verification."
   },
@@ -123,6 +138,7 @@
     "No uniform Riesz or principal-angle lower bound for actual zeta finite sections has been proved.",
     "No prime-side weighted trace asymptotic has been proved.",
     "The single-vector weighted tail bound has not yet been assembled into the full signed matrix estimate.",
+    "The period-six angle theorem does not cover arbitrary stationary/random-coset mark laws or unbounded normalized depth.",
     "The ideal 5/108 margin has not been transferred through all Zeta23 source-level errors.",
     "No unconditional zeta-zero proportion is improved.",
     "This attempt does not prove or refute the Riemann hypothesis."
