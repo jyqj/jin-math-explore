@@ -19,8 +19,10 @@
       "repository": "anthropics/formal-math",
       "sha": "2bafb8c88f177284a2123b5fefa2ff84e2365eb6",
       "paths": [
+        "zeta23/Zeta23/Defs.lean",
         "zeta23/Zeta23/Poisson.lean",
         "zeta23/Zeta23/Taper.lean",
+        "zeta23/Zeta23/Tail.lean",
         "zeta23/Zeta23/PrimeSideA/Basic.lean",
         "zeta23/Zeta23/PrimeSideA/Bridge.lean",
         "zeta23/Zeta23/ZeroSide.lean",
@@ -32,7 +34,9 @@
     "README.md",
     "check_compactness_models.py",
     "principal-angle-and-depth.md",
-    "check_angle_depth.py"
+    "check_angle_depth.py",
+    "weighted-tail-scaling.md",
+    "check_weighted_tail.py"
   ],
   "claims": [
     {
@@ -80,25 +84,45 @@
         "principal-angle-and-depth.md#4-centered-frequency-square-trace",
         "check_angle_depth.py"
       ]
+    },
+    {
+      "claim_id": "C-LCI-WEIGHTED-TAIL-SCALE",
+      "statement": "Under the complex-argument r^-2 coefficient decay used by Zeta23, the centered frequency-square finite-section tail scales as O(log T T^{(lambda-1)/2}); it vanishes at lambda=3/4 but the same bound is only O(log T) at lambda=1. For real on-line arguments the endpoint bound is O(log T T^-1/2).",
+      "evidence_grade": "proof_candidate",
+      "evidence": [
+        "weighted-tail-scaling.md#1-abstract-grid-tail-estimate",
+        "weighted-tail-scaling.md#2-substitution-of-the-zeta23-scales",
+        "check_weighted_tail.py"
+      ]
     }
   ],
   "current_frontier": [
     "lower-bound the positive/negative Gram Schur complement for growing genuine finite sections, or construct a source-compatible collapse model",
-    "formalize the weighted complete-frame Parseval identity in Zeta23 normalization and quantify finite-section tails",
-    "derive the prime-side centered frequency-square trace lower bound, or isolate the exact obstructing prime sum",
-    "combine local compactness, shallow-pair collapse, angle control, and weighted depth control within the 5/108 budget"
+    "formalize the centered frequency-square complete-frame identity in Zeta23 normalization and quantify the short-scale finite-section tail",
+    "derive the prime-side centered frequency-square trace lower bound at lambda=3/4, or isolate the exact obstructing prime sum",
+    "use lambda=1 for scalar local compactness and lambda=3/4 for both depth control and the 5/108 aliasing gap",
+    "combine local compactness, shallow-pair collapse, angle control, weighted depth control and boundary-mass charging within the 5/108 budget"
   ],
   "validation": {
     "commands": [
       "python3 staging/preproject-rh/A-RH-LCI-0003/check_compactness_models.py",
-      "python3 staging/preproject-rh/A-RH-LCI-0003/check_angle_depth.py"
+      "python3 staging/preproject-rh/A-RH-LCI-0003/check_angle_depth.py",
+      "python3 staging/preproject-rh/A-RH-LCI-0003/check_weighted_tail.py"
     ],
-    "boundary": "Deterministic checks validate exact finite formulas and numerical quadrature only; proof candidates still require isolated independent verification."
+    "latest_local_results": {
+      "angle_depth": "PASS",
+      "weighted_tail": "PASS",
+      "weighted_tail_lambda_3_4_exponent": "-1/8",
+      "weighted_tail_lambda_1_complex": "O(log T) with the current worst-case complex decay",
+      "weighted_tail_lambda_1_real_exponent": "-1/2"
+    },
+    "boundary": "Deterministic checks validate exact finite formulas, asymptotic scaling and numerical quadrature only; proof candidates still require isolated independent verification."
   },
   "cannot_imply": [
     "This active attempt is not frozen or independently verified.",
     "No uniform Riesz or principal-angle lower bound for actual zeta finite sections has been proved.",
     "No prime-side weighted trace asymptotic has been proved.",
+    "The single-vector weighted tail bound has not yet been assembled into the full signed matrix estimate.",
     "The ideal 5/108 margin has not been transferred through all Zeta23 source-level errors.",
     "No unconditional zeta-zero proportion is improved.",
     "This attempt does not prove or refute the Riemann hypothesis."
