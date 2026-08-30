@@ -1,0 +1,106 @@
+{
+  "schema": "jin-math-preproject-attempt/v1",
+  "attempt_id": "A-RH-LCI-0003",
+  "title": "Local compactness, hyperbolic-swap obstruction, and quantitative angle/depth bridges for Zeta23",
+  "status": "active",
+  "actor": {
+    "kind": "agent",
+    "id": "openai-gpt-5.6-pro",
+    "run_id": "run-20260829-rh-local-compactness-03",
+    "role": "solver"
+  },
+  "base": {
+    "repository": "jyqj/jin-math-explore",
+    "ref": "attempt/preproject-rh/cross-scale-rigidity-02",
+    "sha": "325f67106496248915a0647d4eae4b15ff10b42f"
+  },
+  "source_dependencies": [
+    {
+      "repository": "anthropics/formal-math",
+      "sha": "2bafb8c88f177284a2123b5fefa2ff84e2365eb6",
+      "paths": [
+        "zeta23/Zeta23/Poisson.lean",
+        "zeta23/Zeta23/Taper.lean",
+        "zeta23/Zeta23/PrimeSideA/Basic.lean",
+        "zeta23/Zeta23/PrimeSideA/Bridge.lean",
+        "zeta23/Zeta23/ZeroSide.lean",
+        "zeta23/Zeta23/ZeroSide/RankTraceMult.lean"
+      ]
+    }
+  ],
+  "artifacts": [
+    "README.md",
+    "check_compactness_models.py",
+    "principal-angle-and-depth.md",
+    "check_angle_depth.py"
+  ],
+  "claims": [
+    {
+      "claim_id": "C-LCI-SLOW-STRAIN-NOGO",
+      "statement": "Vanishing first-scale defect does not force global mean-square proximity to one fixed lattice phase; a slowly strained lattice has O(1) total defect and Theta(N) best fixed-coset squared displacement.",
+      "evidence_grade": "exact_check",
+      "evidence": [
+        "README.md#1-exact-slow-strain-obstruction",
+        "check_compactness_models.py"
+      ]
+    },
+    {
+      "claim_id": "C-LCI-LOCAL-COMPACTNESS-GAP",
+      "statement": "In the ideal finite-periodic all-on-line rectangular model, small first-scale defect forces random-coset local limits and yields the qualitative 5/108 second-scale exclusion at simple density at most 2/3.",
+      "evidence_grade": "proof_candidate",
+      "evidence": [
+        "README.md#3-rooted-tightness-and-intensity-preservation",
+        "README.md#8-qualitative-two-scale-exclusion"
+      ]
+    },
+    {
+      "claim_id": "C-LCI-HYPERBOLIC-SWAP-NOGO",
+      "statement": "Per-pair isolated depth penalties are not additive for arbitrary interacting indefinite blocks; an exact two-pair hyperbolic-swap model has zero combined c=2 defect.",
+      "evidence_grade": "exact_check",
+      "evidence": [
+        "README.md#10-alternative-collapsed-orbit-defect-and-an-exact-off-line-obstruction",
+        "check_compactness_models.py"
+      ]
+    },
+    {
+      "claim_id": "C-LCI-RIESZ-ANGLE-DEFECT",
+      "statement": "A combined synthesis Riesz lower bound and a negative-family upper bound imply a principal-angle gap, which lower-bounds the collapsed operator defect by (2 eta - eta^2)||Rsharp||_F^2; the exact angle coefficient is sharp for two lines.",
+      "evidence_grade": "proof_candidate",
+      "evidence": [
+        "principal-angle-and-depth.md#1-riesz-lower-bound---principal-angle",
+        "principal-angle-and-depth.md#2-principal-angle---collapsed-defect",
+        "check_angle_depth.py"
+      ]
+    },
+    {
+      "claim_id": "C-LCI-CENTERED-FREQUENCY-DEPTH",
+      "statement": "A centered frequency-square weighted trace has an exact additive negative contribution -2 sum n_p delta_p^2 from off-line depth and gives a local conditional mean-square depth bound once a source-side lower estimate is available.",
+      "evidence_grade": "proof_candidate",
+      "evidence": [
+        "principal-angle-and-depth.md#4-centered-frequency-square-trace",
+        "check_angle_depth.py"
+      ]
+    }
+  ],
+  "current_frontier": [
+    "lower-bound the positive/negative Gram Schur complement for growing genuine finite sections, or construct a source-compatible collapse model",
+    "formalize the weighted complete-frame Parseval identity in Zeta23 normalization and quantify finite-section tails",
+    "derive the prime-side centered frequency-square trace lower bound, or isolate the exact obstructing prime sum",
+    "combine local compactness, shallow-pair collapse, angle control, and weighted depth control within the 5/108 budget"
+  ],
+  "validation": {
+    "commands": [
+      "python3 staging/preproject-rh/A-RH-LCI-0003/check_compactness_models.py",
+      "python3 staging/preproject-rh/A-RH-LCI-0003/check_angle_depth.py"
+    ],
+    "boundary": "Deterministic checks validate exact finite formulas and numerical quadrature only; proof candidates still require isolated independent verification."
+  },
+  "cannot_imply": [
+    "This active attempt is not frozen or independently verified.",
+    "No uniform Riesz or principal-angle lower bound for actual zeta finite sections has been proved.",
+    "No prime-side weighted trace asymptotic has been proved.",
+    "The ideal 5/108 margin has not been transferred through all Zeta23 source-level errors.",
+    "No unconditional zeta-zero proportion is improved.",
+    "This attempt does not prove or refute the Riemann hypothesis."
+  ]
+}
