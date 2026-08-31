@@ -1,0 +1,84 @@
+{
+  "schema": "jin-math-goldbach-prior-art/v1",
+  "as_of": "2026-08-31",
+  "authority": {
+    "status": "reference_only",
+    "project_genesis": false,
+    "mathematical_claim_upgrade": false,
+    "cannot_imply": [
+      "Does not prove or refute the binary Goldbach conjecture.",
+      "Does not independently verify recent preprints.",
+      "Does not promote bounded computation or interval arithmetic to an unbounded theorem.",
+      "Does not create a v13 Project or registry authority."
+    ]
+  },
+  "legacy_snapshot": {
+    "version": "0.3",
+    "as_of": "2026-08-14",
+    "claim_count": 100,
+    "claim_ids_unique": true,
+    "source_file": "secondary_conclusions_v0.3.json",
+    "source_sha256": "03b7c7847f1c9633da9419f084683670e800b83bf1cee9eb730b68c5cb6d1ed1",
+    "ledger_file": "Goldbach_Research_Ledger_v0.3.md",
+    "ledger_sha256": "7c235de78814873f789d1276eb961a49f555e249f9c03d0be2da692345243169",
+    "payload_embedded": false,
+    "preservation_mode": "content-addressed commitment plus curated migration index",
+    "import_requirement": "Any later byte-for-byte import must match source_sha256 before becoming the canonical embedded legacy payload."
+  },
+  "status_legend": {
+    "E": "established source result",
+    "P": "preprint claim",
+    "D": "derived in the prior project",
+    "H": "heuristic",
+    "A": "audit result",
+    "R": "risk or unresolved gap",
+    "T": "research target"
+  },
+  "source_locks": [
+    {"key":"LiLiu2026","identifier":"arXiv:2606.05224v2","last_revised":"2026-08-08","status":"preprint_claim","url":"https://arxiv.org/abs/2606.05224"},
+    {"key":"BhowmikGrimmelt2026","identifier":"arXiv:2607.27282v2","last_revised":"2026-08-13","status":"survey_to_appear","url":"https://arxiv.org/abs/2607.27282"},
+    {"key":"BordignonJohnstonStarichkova","identifier":"arXiv:2207.09452v6","last_revised":"2025-06-25","status":"to_appear","url":"https://arxiv.org/abs/2207.09452"},
+    {"key":"Helfgott2014","identifier":"arXiv:1312.7748v2","last_revised":"2014-01-17","status":"established","url":"https://arxiv.org/abs/1312.7748"},
+    {"key":"Zhao2026","identifier":"arXiv:2511.05631v2","last_revised":"2026-01-23","status":"preprint_claim","url":"https://arxiv.org/abs/2511.05631"},
+    {"key":"AlsetriShao2024","identifier":"arXiv:2405.18576v2","last_revised":"2024-09-19","status":"to_appear","url":"https://arxiv.org/abs/2405.18576"},
+    {"key":"Cantarini2026","identifier":"arXiv:2607.09110v1","last_revised":"2026-07-10","status":"conditional_preprint","url":"https://arxiv.org/abs/2607.09110"},
+    {"key":"GrimmeltTeravainen2026","identifier":"arXiv:2508.16400v2","last_revised":"2026-07-29","status":"preprint","url":"https://arxiv.org/abs/2508.16400"}
+  ],
+  "material_claims": [
+    {"id":"GB-E001","status":"E","statement":"No repository-recognized unconditional proof covering every even integer greater than 2 is recorded; binary Goldbach remains open in this baseline.","scope":"All even integers N>2.","evidence_refs":["BhowmikGrimmelt2026"],"cannot_imply":["A search failure alone cannot prove openness; new resolution claims require separate audit."]},
+    {"id":"GB-E002","status":"E","statement":"The inherited literature record reports bounded verification for all even integers through 4*10^18.","scope":"Finite bounded check.","evidence_refs":["OliveiraSilvaHerzogPardi2014"],"cannot_imply":["Cannot exclude counterexamples above the verified bound."]},
+    {"id":"GB-E003","status":"E","statement":"Every odd integer greater than 5 is a sum of three primes.","scope":"Ternary Goldbach.","evidence_refs":["Helfgott2014"],"cannot_imply":["Does not prove the two-prime statement."]},
+    {"id":"GB-E004","status":"E","statement":"Every sufficiently large even integer is a prime plus an integer with at most two prime factors.","scope":"Chen-type p+P2.","evidence_refs":["Chen1973"],"cannot_imply":["P2 need not be prime."]},
+    {"id":"GB-E005","status":"E","statement":"An explicit Chen-type result holds above exp(exp(32.7)).","scope":"Explicit p+P2 threshold.","evidence_refs":["BordignonJohnstonStarichkova"],"cannot_imply":["Does not prove p+p or provide a practical small threshold."]},
+    {"id":"GB-P001","status":"P","statement":"Zhao v2 claims E(X)=O(X^(7/10)) with ineffective implicit constant.","scope":"Binary Goldbach exceptional set.","evidence_refs":["Zhao2026"],"cannot_imply":["Even a valid fixed positive exponent allows infinitely many exceptions."]},
+    {"id":"GB-P002","status":"P","statement":"Li-Liu v2 claims unconditional Proposition (1+1.9).","scope":"Every sufficiently large even N under the preprint's definitions.","evidence_refs":["LiLiu2026"],"cannot_imply":["Not independently verified by this baseline.","Does not prove binary Goldbach."]},
+    {"id":"GB-P004","status":"P","statement":"Li-Liu v2 claims Proposition (1+1.4) under an Elliott-Halberstam-type assumption.","scope":"Conditional result.","evidence_refs":["LiLiu2026"],"cannot_imply":["Cannot be used unconditionally."]},
+    {"id":"GB-D001-D004","status":"D","statement":"For m=rq and r<=q^(a-1), beta=(a-1)/a and delta=2/a-1 give r<=m^beta and q/r>=m^delta, with a=2/(1+delta).","scope":"Algebraic coordinate transform.","evidence_refs":["legacy:Goldbach_Research_Ledger_v0.3.md"],"cannot_imply":["Does not establish existence of representations."]},
+    {"id":"GB-D008","status":"D","statement":"The critical-strip model functional is B(a)=-log(a-1)=2 artanh(delta).","scope":"Specified positive-weight strip model.","evidence_refs":["legacy:Goldbach_Research_Ledger_v0.3.md"],"cannot_imply":["Does not rule out all sieve or cancellation mechanisms."]},
+    {"id":"GB-D025","status":"D","statement":"A bound E(X)<<X^theta for fixed theta>0 is logically insufficient for the all-even-integers conjecture.","scope":"Quantifier comparison.","evidence_refs":["legacy:Goldbach_Research_Ledger_v0.3.md"],"cannot_imply":["Does not diminish the mathematical value of a better exceptional-set exponent."]},
+    {"id":"GB-A014","status":"A","statement":"The independent MPFR audit certified M/4 >= 0.0007813644678227735... > 0.0004.","scope":"Frozen numerical main-term formulas.","evidence_refs":["legacy:mpfr_interval_certificate_v0.3.json"],"cannot_imply":["Does not verify external analytic theorem applications or the complete proof."]},
+    {"id":"GB-A017","status":"A","statement":"After listed local index repairs, the Proposition 4.3 coefficient algebra and final vector matched.","scope":"Finite symbolic algebra.","evidence_refs":["legacy:prop43_symbolic_certificate_v0.3.json"],"cannot_imply":["Conditional on repairs being correctly propagated through the analytic proof."]},
+    {"id":"GB-D037-D038","status":"D","statement":"The printed G7 rectangle exceeds the Lemma 2.5 asymptotic legal cutoff by 157/3498; a nonnegative legal-domain truncation is proposed but its boundary-layer loss remains to be proved.","scope":"G7 theorem-domain interface.","evidence_refs":["legacy:analytic_domain_certificate_v0.3.json"],"cannot_imply":["The proposed repair is not yet a closed proof."]},
+    {"id":"GB-R008","status":"R","statement":"Lemma 3.5 applications to G9, G11 and G12 lack a complete per-dyadic-block hypothesis instantiation.","scope":"Mean-value theorem interface.","evidence_refs":["legacy:External_Theorem_Interface_Audit_v0.3.md"],"cannot_imply":["Does not prove the calls fail; it identifies missing verification."]},
+    {"id":"GB-R007","status":"R","statement":"The final combination lacks a complete signed common error budget and common N0 with correct quantifier order.","scope":"Global error propagation.","evidence_refs":["legacy:External_Theorem_Interface_Audit_v0.3.md"],"cannot_imply":["Does not by itself refute the theorem; constants may be recoverable."]}
+  ],
+  "dependency_frontier": [
+    {"branch":"numerical_main_term_mpmath","status":"closed_conditional"},
+    {"branch":"numerical_main_term_mpfr","status":"closed_conditional"},
+    {"branch":"parameter_inequalities","status":"closed_exact"},
+    {"branch":"proposition_4_3_algebra","status":"closed_conditional_on_repairs"},
+    {"branch":"g7_lemma_2_5_domain","status":"repair_required","next_attempt":"A-GB-G7-0001"},
+    {"branch":"lemma_3_5_g9_g11_g12","status":"open","next_attempt":"A-GB-L35-0001"},
+    {"branch":"common_signed_error_and_N0","status":"open","next_attempt":"A-GB-ERR-0001"},
+    {"branch":"whole_1_plus_1_9_candidate","status":"not_closed"},
+    {"branch":"binary_goldbach","status":"not_addressed_by_this_proof"}
+  ],
+  "next_window": {
+    "stage": "Stage 4 analytic interface closure",
+    "attempts": [
+      {"attempt_id":"A-GB-L35-0001","proof_object":"per-block theorem-call matrix","mechanism_family":"mean-value theorem instantiation","quantifier_strategy":"uniform dyadic coverage"},
+      {"attempt_id":"A-GB-G7-0001","proof_object":"boundary-layer lemma","mechanism_family":"nonnegative sieve truncation","quantifier_strategy":"moving-domain asymptotics"},
+      {"attempt_id":"A-GB-ERR-0001","proof_object":"signed error ledger","mechanism_family":"global error absorption","quantifier_strategy":"epsilon then common N0"}
+    ]
+  }
+}
