@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Deterministic structural checks for A-GB-L35-0001 CP-0001.
+"""Deterministic structural checks for A-GB-L35-0001 CP-0002.
 
 A PASS establishes package consistency only. It does not verify Lemma 3.5,
 the Li-Liu proof, or the binary Goldbach conjecture.
@@ -95,6 +95,16 @@ def main() -> int:
                 f"{call['call_id']}: missing open point")
 
     require(has_nonpass, "checkpoint unexpectedly has no open work")
+    by_id = {item["id"]: item for item in catalog}
+    require(by_id["condition_3_2"]["status"] == "PASS",
+            "prime-beta condition (3.2) was not frozen")
+    require(by_id["sieve_coefficient_transfer"]["status"] == "PASS",
+            "coefficient bridge was not frozen")
+    findings = {item["id"] for item in matrix["findings"]}
+    require({"F-L35-007", "F-L35-008", "F-L35-009", "F-L35-010"} <= findings,
+            "CP-0002 findings are incomplete")
+    require(matrix["g9_reconstruction"]["status"] == "PARTIAL",
+            "G9 reconstruction status differs")
     require(matrix["provisional_verdict"] == "INCONCLUSIVE",
             "open checkpoint must remain INCONCLUSIVE")
     require(attempt["verdict"] == "INCONCLUSIVE",
@@ -114,7 +124,7 @@ def main() -> int:
         require(sha256(name) == expected, f"artifact hash mismatch: {name}")
 
     print(
-        "PASS: A-GB-L35-0001 CP-0001 is structurally consistent; "
+        "PASS: A-GB-L35-0001 CP-0002 is structurally consistent; "
         "mathematical truth was not assessed."
     )
     return 0
