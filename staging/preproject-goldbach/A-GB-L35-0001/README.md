@@ -3,46 +3,53 @@
 **Issue:** `#34`  
 **Branch:** `attempt/preproject-goldbach/l35-call-compiler-01`  
 **Baseline:** `70484b065fc3b6a64f06955a5f9c895531750891`  
-**Checkpoint:** `CP-0001`  
+**Checkpoint:** `CP-0002`  
 **Current verdict:** `INCONCLUSIVE`
 
-This pre-genesis solver package compiles the uses of Lemma 3.5 in the low-\(p_1\) parts of
-\(G_9,G_{11},G_{12}\). It records exact obligations and the earliest unsupported
-interface. It is not a Project result or an independent verification receipt.
+This pre-genesis solver package compiles the uses of Lemma 3.5 in the low-\(p_1\)
+parts of \(G_9,G_{11},G_{12}\). It records exact obligations and the earliest
+unsupported interface. It is not a Project result or an independent
+verification receipt.
 
-## What CP-0001 establishes
+## Progress through CP-0002
 
-1. The theorem's assumptions on \(\beta_n\) are asymmetric; an omitted
-   \(\alpha/\beta\) orientation must be reconstructed.
-2. The structurally preferred orientation is
-
-   \[
-   \beta_n=\mathbf 1_{\{n=p_1\}},\qquad
-   \alpha_m=\#\{\text{complementary switched factorizations of }m\}.
-   \]
-
-   This is still a hypothesis until the switched remainder is written block by block.
-3. Under this orientation, the roughness condition on \(\beta\) is elementary for
-   sufficiently large prime blocks, while condition (3.2) should be reduced to a
-   precise prime-in-arithmetic-progressions lemma.
-4. The algebraic coefficient signature is exact:
+1. The theorem's assumptions on \(\beta_n\) are asymmetric. The structurally
+   preferred orientation is
 
    \[
-   \theta(\nu)=\frac{5(1-\nu)}9,\qquad
-   \frac4{\theta(\nu)}=\frac{36}{5(1-\nu)},\qquad
-   \frac4{\theta(1/10)}=8.
+   \beta=p_1,\qquad \alpha=\text{complementary switched product}.
    \]
 
-   This explains the displayed \(36/5\) and the continuous splice at \(1/10\),
-   conditional on the local-variable mapping.
-5. A previously implicit obligation is now explicit: the global residue
-   \(a=N_{\rm global}\) must lie in Lemma 3.5's local uniform range \(|a|\le X\)
-   for every dyadic box, or a constant-multiple extension must be justified.
+2. For a frozen dyadic prime block, the prime-supported \(\beta\)-sequence
+   satisfies condition (3.2) by Siegel--Walfisz, including the exclusions for
+   divisors of \(d\) and the global even integer. The small-prime-factor
+   exclusion is also automatic for sufficiently large blocks.
+3. For \(G_9\), the residual factor is prime outside a squareful-\(p_1\) branch
+   of size \(O(N^{1-\alpha}\log N)\) and a divisor-of-\(N\) branch of size
+   \(N^{o(1)}\). Thus the switched product is structurally
+   \(p_1(p_2p_3)\).
+4. The condition \(z\le Q^{1/2}\) in Lemma 2.5 is met after the safe
+   upper-bound enlargement
+
+   \[
+   S(\mathscr B,\mathscr P,N^{1/2})
+   \le S(\mathscr B,\mathscr P,Q^{1/2}).
+   \]
+
+   At \(z=Q^{1/2}\), \(s=2\), giving exactly
+
+   \[
+   \frac4{\theta(\nu)}=\frac{36}{5(1-\nu)},
+   \qquad \frac4{\theta(1/10)}=8.
+   \]
+5. For \(G_{11},G_{12}\), the complementary \(\alpha\)-sequence contains a
+   Buchstab-counted rough residual; it must not be silently replaced by an
+   additional prime.
 
 ## Earliest unresolved step
 
-Write the low-\(p_1\) switched remainder before summing over prime ranges, then freeze
-for each box:
+Convert the G9 ordering and hyperbolic constraints into a rigorous Cartesian
+upper cover with frozen
 
 ```text
 M, N_beta, X=M*N_beta
@@ -51,14 +58,15 @@ residue a
 well-factorable lambda and level Q
 ```
 
-Only after this step can the call matrix move from structural inference to theorem
-verification.
+for every box. Then prove a constant-multiple extension of Lemma 3.5 from
+\(|a|\le X\) to the actual relation \(|N_{\rm global}|\le C_\varepsilon X\),
+or redesign the decomposition so the stated range applies literally.
 
 ## Files
 
 - `source-lock.json` — frozen source/version and legacy commitments.
 - `call-matrix.json` — requirements, three calls, findings and current verdict.
-- `progress.md` — append-only checkpoint narrative.
+- `progress.md` — append-only checkpoint derivation.
 - `attempt.json` — artifact hashes and authority boundary.
 - `check_call_matrix.py` — deterministic structural validator.
 
