@@ -44,152 +44,109 @@
     "fixed-depth-block-angle.md",
     "check_fixed_depth_angle.py",
     "pair-vacancy-spectral-rigidity.md",
-    "check_pair_vacancy_spectrum.py"
+    "check_pair_vacancy_spectrum.py",
+    "mixed-state-moderate-depth.md",
+    "check_mixed_state_depth.py"
   ],
   "claims": [
     {
       "claim_id": "C-LCI-SLOW-STRAIN-NOGO",
       "statement": "Vanishing first-scale defect does not force global mean-square proximity to one fixed lattice phase; a slowly strained lattice has O(1) total defect and Theta(N) best fixed-coset squared displacement.",
       "evidence_grade": "exact_check",
-      "evidence": [
-        "README.md#1-exact-slow-strain-obstruction",
-        "check_compactness_models.py"
-      ]
+      "evidence": ["README.md#1-exact-slow-strain-obstruction", "check_compactness_models.py"]
     },
     {
       "claim_id": "C-LCI-LOCAL-COMPACTNESS-GAP",
       "statement": "In the ideal finite-periodic all-on-line rectangular model, small first-scale defect forces random-coset local limits and yields the qualitative 5/108 second-scale exclusion at simple density at most 2/3.",
       "evidence_grade": "proof_candidate",
-      "evidence": [
-        "README.md#3-rooted-tightness-and-intensity-preservation",
-        "README.md#8-qualitative-two-scale-exclusion"
-      ]
+      "evidence": ["README.md#3-rooted-tightness-and-intensity-preservation", "README.md#8-qualitative-two-scale-exclusion"]
     },
     {
       "claim_id": "C-LCI-HYPERBOLIC-SWAP-NOGO",
       "statement": "Per-pair isolated depth penalties are not additive for arbitrary interacting indefinite blocks; an exact two-pair hyperbolic-swap model has zero combined c=2 defect.",
       "evidence_grade": "exact_check",
-      "evidence": [
-        "README.md#10-alternative-collapsed-orbit-defect-and-an-exact-off-line-obstruction",
-        "check_compactness_models.py"
-      ]
+      "evidence": ["README.md#10-alternative-collapsed-orbit-defect-and-an-exact-off-line-obstruction", "check_compactness_models.py"]
     },
     {
       "claim_id": "C-LCI-RIESZ-ANGLE-DEFECT",
       "statement": "A combined synthesis Riesz lower bound and a negative-family upper bound imply a principal-angle gap, which lower-bounds the collapsed operator defect by (2 eta - eta^2)||Rsharp||_F^2; the exact angle coefficient is sharp for two lines.",
       "evidence_grade": "proof_candidate",
-      "evidence": [
-        "principal-angle-and-depth.md#1-riesz-lower-bound---principal-angle",
-        "principal-angle-and-depth.md#2-principal-angle---collapsed-defect",
-        "check_angle_depth.py"
-      ]
+      "evidence": ["principal-angle-and-depth.md#1-riesz-lower-bound---principal-angle", "principal-angle-and-depth.md#2-principal-angle---collapsed-defect", "check_angle_depth.py"]
     },
     {
       "claim_id": "C-LCI-CENTERED-FREQUENCY-DEPTH",
       "statement": "A centered frequency-square weighted trace has an exact additive negative contribution -2 sum n_p delta_p^2 from off-line depth and gives a local conditional mean-square depth bound once a source-side lower estimate is available.",
       "evidence_grade": "proof_candidate",
-      "evidence": [
-        "principal-angle-and-depth.md#4-centered-frequency-square-trace",
-        "check_angle_depth.py"
-      ]
+      "evidence": ["principal-angle-and-depth.md#4-centered-frequency-square-trace", "check_angle_depth.py"]
     },
     {
       "claim_id": "C-LCI-WEIGHTED-TAIL-SCALE",
       "statement": "Under the complex-argument r^-2 coefficient decay used by Zeta23, the centered frequency-square finite-section tail scales as O(log T T^{(lambda-1)/2}); it vanishes at lambda=3/4 but the same bound is only O(log T) at lambda=1. For real on-line arguments the endpoint bound is O(log T T^-1/2).",
       "evidence_grade": "proof_candidate",
-      "evidence": [
-        "weighted-tail-scaling.md#1-abstract-grid-tail-estimate",
-        "weighted-tail-scaling.md#2-substitution-of-the-zeta23-scales",
-        "check_weighted_tail.py"
-      ]
+      "evidence": ["weighted-tail-scaling.md#1-abstract-grid-tail-estimate", "weighted-tail-scaling.md#2-substitution-of-the-zeta23-scales", "check_weighted_tail.py"]
     },
     {
       "claim_id": "C-LCI-PERIODIC-CONFLUENT-ANGLE",
       "statement": "For every placement of one load-two reflection pair and one empty residue in the period-six (1,1,1,1,2,0) clock law, the ideal polyphase determinant is nonzero at positive normalized depth and extends nonvanishingly through the divided-difference limit. At zero depth the squared principal angle is at least 3/38 over all phases and placements; every bounded depth interval has a positive Riesz lower bound by compactness.",
       "evidence_grade": "proof_candidate",
-      "evidence": [
-        "periodic-confluent-clock.md#2-exact-determinant-reduction",
-        "periodic-confluent-clock.md#3-exact-shallow-principal-angle-constant",
-        "check_periodic_confluent.py"
-      ]
+      "evidence": ["periodic-confluent-clock.md#2-exact-determinant-reduction", "periodic-confluent-clock.md#3-exact-shallow-principal-angle-constant", "check_periodic_confluent.py"]
     },
     {
       "claim_id": "C-LCI-SHALLOW-CAUCHY-NONDEGENERACY",
       "statement": "For every finite period and every disjoint equal-size pair/vacancy residue sets in the shallow divided-difference model, the missing-residue projection is a square Cauchy matrix with nonzero determinant; every fixed finite shallow polyphase system is nondegenerate.",
       "evidence_grade": "proof_candidate",
-      "evidence": [
-        "shallow-cauchy-angle.md#2-exact-missing-residue-projection",
-        "check_shallow_cauchy.py"
-      ]
+      "evidence": ["shallow-cauchy-angle.md#2-exact-missing-residue-projection", "check_shallow_cauchy.py"]
     },
     {
       "claim_id": "C-LCI-PHASE-SEPARATED-ANGLE-COLLAPSE",
       "statement": "Critical density and simple density 2/3 do not imply a period-independent shallow principal-angle gap. For period 6m with a pair arc opposite a vacancy arc, the raw missing-residue column-average gap is at most 4m/(36m^2-1), while the smallest squared principal angle has the explicit exponential upper bound [6m^2/(5(1-r)^2)]r^(2m-2), r=sqrt(2-sqrt(3)).",
       "evidence_grade": "proof_candidate",
-      "evidence": [
-        "shallow-cauchy-angle.md#4-phase-separated-period-6m-family",
-        "shallow-cauchy-angle.md#5-exponential-collapse-of-the-smallest-angle",
-        "check_shallow_cauchy.py"
-      ]
+      "evidence": ["shallow-cauchy-angle.md#4-phase-separated-period-6m-family", "shallow-cauchy-angle.md#5-exponential-collapse-of-the-smallest-angle", "check_shallow_cauchy.py"]
     },
     {
       "claim_id": "C-LCI-LOCAL-MATCHING-AVERAGE-GAP",
       "statement": "If pair residues admit a bijective vacancy matching of circular radius at most R<P/2, then the raw shallow missing-residue column-average transport gap is at least 3/[(P^2+2)sin^2(pi R/P)], tending to at least 3/(pi^2 R^2) for fixed R. This does not control the fully optimized distance to the whole positive span.",
       "evidence_grade": "proof_candidate",
-      "evidence": [
-        "shallow-cauchy-angle.md#3-exact-column-average-transport-identity",
-        "fixed-depth-block-angle.md#6-relation-to-the-earlier-cauchy-and-local-matching-results",
-        "check_shallow_cauchy.py"
-      ]
+      "evidence": ["shallow-cauchy-angle.md#3-exact-column-average-transport-identity", "fixed-depth-block-angle.md#6-relation-to-the-earlier-cauchy-and-local-matching-results", "check_shallow_cauchy.py"]
     },
     {
       "claim_id": "C-LCI-FIXED-DEPTH-VANDERMONDE",
       "statement": "At every positive normalized depth, the finite periodic fiber transforms pairwise to a normalized Vandermonde system with nodes on three distinct circles. Its determinant is P^(-P/2)(2a)^(-k) times the Vandermonde product, so every fixed finite positive-depth fiber is exactly nondegenerate.",
       "evidence_grade": "proof_candidate",
-      "evidence": [
-        "fixed-depth-block-angle.md#2-every-finite-positive-depth-fiber-is-exactly-nondegenerate",
-        "check_fixed_depth_angle.py"
-      ]
+      "evidence": ["fixed-depth-block-angle.md#2-every-finite-positive-depth-fiber-is-exactly-nondegenerate", "check_fixed_depth_angle.py"]
     },
     {
       "claim_id": "C-LCI-FIXED-DEPTH-BLOCK-COLLAPSE",
       "statement": "For every fixed normalized depth a>=0, a consecutive pair-residue block A of length k<=P/2 and any disjoint equally large vacancy set have smallest squared principal angle at most 24 cosh(a/2)^2 Q_a^2 P^2[log k+2]/[k(P^2-1)], Q_a=tanh(a/2)/a with Q_0=1/2. At k=P/6 this is O_a(log P/P), so no density-only global angle gap exists even at fixed positive depth.",
       "evidence_grade": "proof_candidate",
-      "evidence": [
-        "fixed-depth-block-angle.md#3-a-cyclic-fourier-leakage-lemma",
-        "fixed-depth-block-angle.md#4-constructing-a-positive-approximation",
-        "fixed-depth-block-angle.md#5-explicit-fixed-depth-angle-collapse",
-        "check_fixed_depth_angle.py"
-      ]
+      "evidence": ["fixed-depth-block-angle.md#3-a-cyclic-fourier-leakage-lemma", "fixed-depth-block-angle.md#4-constructing-a-positive-approximation", "fixed-depth-block-angle.md#5-explicit-fixed-depth-angle-collapse", "check_fixed_depth_angle.py"]
     },
     {
       "claim_id": "C-LCI-PAIR-VACANCY-SPECTRAL-RIGIDITY",
       "statement": "For a fixed-depth pure pair/vacancy periodic subsystem, the normalized c=2 count defect is exactly sum_l H_a(l/P)|mhat(l)|^2 with H_a(theta)=2[theta cosh(2a(1-theta))+(1-theta)cosh(2a theta)-1]. For a>0 the symbol is positive off the constant mode and controls nearest-neighbor interface density; every stationary zero-defect law is a mixture of homogeneous all-pair and all-vacancy phases.",
       "evidence_grade": "proof_candidate",
-      "evidence": [
-        "pair-vacancy-spectral-rigidity.md#2-exact-defect-symbol",
-        "pair-vacancy-spectral-rigidity.md#4-quantitative-boundary-control",
-        "pair-vacancy-spectral-rigidity.md#5-stationary-rigidity-theorem",
-        "check_pair_vacancy_spectrum.py"
-      ]
+      "evidence": ["pair-vacancy-spectral-rigidity.md#2-exact-defect-symbol", "pair-vacancy-spectral-rigidity.md#4-quantitative-boundary-control", "pair-vacancy-spectral-rigidity.md#5-stationary-rigidity-theorem", "check_pair_vacancy_spectrum.py"]
     },
     {
       "claim_id": "C-LCI-HOMOGENEOUS-PAIR-SCALE-INVARIANCE",
       "statement": "For any real taper and any normalized depth, the signed frame operator of a homogeneous off-line reflection-pair lattice is exactly 2 M_{psi^2}, identical to a tangent load-two lattice. Hence depth disappears inside a homogeneous pair phase at every scale.",
       "evidence_grade": "proof_candidate",
-      "evidence": [
-        "pair-vacancy-spectral-rigidity.md#6-homogeneous-pair-phase-is-scale-invariant",
-        "check_pair_vacancy_spectrum.py"
-      ]
+      "evidence": ["pair-vacancy-spectral-rigidity.md#6-homogeneous-pair-phase-is-scale-invariant", "check_pair_vacancy_spectrum.py"]
+    },
+    {
+      "claim_id": "C-LCI-MIXED-MODERATE-DEPTH-RIGIDITY",
+      "statement": "For one fixed normalized depth 0<a<2pi, arbitrary tangent loads 0,1,2 outside the pair set cannot hide pair interfaces. The exact finite pair-versus-tangent kernel is negative off diagonal, so the all-load-two tangent background minimizes the defect. The defect is bounded below by sum_l L_a(l/P)|Ahat(l)|^2 with L_a(theta)=4[theta(cosh(a(1-theta))-1)^2+(1-theta)(cosh(a theta)-1)^2], yielding stationary zero-defect dichotomy: either no positive-depth pairs or a homogeneous all-pair phase.",
+      "evidence_grade": "proof_candidate",
+      "evidence": ["mixed-state-moderate-depth.md#2-exact-finite-period-interaction-and-the-2pi-sign-range", "mixed-state-moderate-depth.md#3-exact-extremal-symbol", "mixed-state-moderate-depth.md#5-stationary-mixed-state-classification", "check_mixed_state_depth.py"]
     }
   ],
   "current_frontier": [
-    "extend the fixed-depth pair/vacancy spectral theorem to stationary laws containing simple sites, tangent doubles, vacancies, and off-line pairs in the same configuration",
-    "allow pair depths to vary by site and isolate whether vanishing defect forces locally constant positive-depth phases or tangent collapse",
-    "use homogeneous pair/load-two scale invariance to fold fixed-depth pair phases into the lambda=3/4 stationary occupancy inequality",
-    "formalize the centered frequency-square complete-frame identity and retain it only for variable or unbounded-depth exceptional mass",
-    "assemble smooth-taper, finite-section, tail, boundary, and normalization losses inside the 5/108 margin",
-    "freeze the attempt only after the mixed-state collapsed-orbit compactness frontier is either proved or reduced to a precise countermodel"
+    "combine the fixed-moderate-depth mixed-state dichotomy with the existing tangent local-compactness theorem and homogeneous pair/load-two scale invariance",
+    "treat normalized depth tending to zero as tangent load-two mass with an explicit collapse error",
+    "classify mixed configurations with one or more depths at or above 2pi, where the favorable pair-versus-tangent sign changes",
+    "decide whether a shorter auxiliary scale lowers high normalized depth into the moderate regime or whether the centered weighted trace is required",
+    "transfer the ideal spectral symbols through smooth tapers, finite sections, tails, normalization leakage and random-root limits",
+    "close the lambda=3/4 occupancy inequality with all exceptional masses below the 5/108 budget"
   ],
   "validation": {
     "commands": [
@@ -199,7 +156,8 @@
       "python3 staging/preproject-rh/A-RH-LCI-0003/check_periodic_confluent.py",
       "python3 staging/preproject-rh/A-RH-LCI-0003/check_shallow_cauchy.py --samples 100 --max-blocks 8",
       "python3 staging/preproject-rh/A-RH-LCI-0003/check_fixed_depth_angle.py --samples 80 --max-blocks 8",
-      "python3 staging/preproject-rh/A-RH-LCI-0003/check_pair_vacancy_spectrum.py --samples 80 --grid 2000 --max-period 240 --depth 1"
+      "python3 staging/preproject-rh/A-RH-LCI-0003/check_pair_vacancy_spectrum.py --samples 80 --grid 2000 --max-period 240 --depth 1",
+      "python3 staging/preproject-rh/A-RH-LCI-0003/check_mixed_state_depth.py --samples 60 --depth-grid 100 --theta-grid 1000"
     ],
     "latest_local_results": {
       "angle_depth": "PASS",
@@ -210,18 +168,18 @@
       "periodic_confluent": "PASS; exact shallow angle floor 3/38 and determinant regression through normalized depth 4",
       "shallow_cauchy": "PASS; arbitrary-period Cauchy determinant, raw local-matching transport lower bound, O(1/P) separated average collapse, and exponential smallest-angle upper bound",
       "fixed_depth_block": "PASS; arbitrary-depth generalized Vandermonde residual 1.112e-12, cyclic leakage/constructive angle inequalities, and fixed-depth scans at a=0,0.5,1,2,4",
-      "pair_vacancy_spectrum": "PASS; maximum direct/spectral residual 3.730e-14, maximum phase variation 1.421e-14, symbol positivity, boundary control, and homogeneous pair/load-two operator residual 1.036e-12"
+      "pair_vacancy_spectrum": "PASS; maximum direct/spectral residual 3.730e-14, maximum phase variation 1.421e-14, symbol positivity, boundary control, and homogeneous pair/load-two operator residual 1.036e-12",
+      "mixed_moderate_depth": "PASS; exact finite kernel residual 2.554e-14, favorable sign for periods 2..80 below 2pi, mixed lower-bound slack -5.329e-15, symbol positivity, interface control, and high-depth scope guard"
     },
     "boundary": "Deterministic checks validate exact finite formulas, asymptotic scaling and numerical linear algebra only; proof candidates still require isolated independent verification."
   },
   "cannot_imply": [
     "This active attempt is not frozen or independently verified.",
-    "The pair/vacancy spectral theorem assumes one fixed normalized depth and no simple sites inside that subsystem.",
-    "Homogeneous pair/load-two scale invariance does not by itself classify mixed or variable-depth local limits.",
-    "Finite-period Cauchy or Vandermonde nondegeneracy does not provide a period-independent lower Riesz bound.",
-    "The ideal periodic and stationary models are not actual zeta-zero configurations.",
-    "No full signed-matrix weighted trace or mixed-state compactness theorem has been proved.",
-    "The ideal 5/108 margin has not been transferred through all Zeta23 source-level errors.",
+    "The mixed-state theorem assumes one common normalized pair depth strictly between 0 and 2pi.",
+    "The favorable-sign comparison is not asserted for depth at or above 2pi or for multiple site-dependent depths.",
+    "The ideal finite and stationary Fourier models are not actual zeta-zero configurations.",
+    "Smooth-taper, finite-section, tail, normalization and random-root transfer remain unproved.",
+    "No full source-level 5/108 error budget has been closed.",
     "No unconditional zeta-zero proportion is improved.",
     "This attempt does not prove or refute the Riemann hypothesis."
   ]
