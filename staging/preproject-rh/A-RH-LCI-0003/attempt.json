@@ -38,7 +38,9 @@
     "weighted-tail-scaling.md",
     "check_weighted_tail.py",
     "periodic-confluent-clock.md",
-    "check_periodic_confluent.py"
+    "check_periodic_confluent.py",
+    "shallow-cauchy-angle.md",
+    "check_shallow_cauchy.py"
   ],
   "claims": [
     {
@@ -106,22 +108,51 @@
         "periodic-confluent-clock.md#3-exact-shallow-principal-angle-constant",
         "check_periodic_confluent.py"
       ]
+    },
+    {
+      "claim_id": "C-LCI-SHALLOW-CAUCHY-NONDEGENERACY",
+      "statement": "For every finite period and every disjoint equal-size pair/vacancy residue sets in the shallow divided-difference model, the missing-residue projection is a square Cauchy matrix with nonzero determinant; every fixed finite shallow polyphase system is nondegenerate.",
+      "evidence_grade": "proof_candidate",
+      "evidence": [
+        "shallow-cauchy-angle.md#2-exact-missing-residue-projection",
+        "check_shallow_cauchy.py"
+      ]
+    },
+    {
+      "claim_id": "C-LCI-PHASE-SEPARATED-ANGLE-COLLAPSE",
+      "statement": "Critical density and simple density 2/3 do not imply a period-independent shallow principal-angle gap. For period 6m with a pair arc opposite a vacancy arc, the column-average gap is at most 4m/(36m^2-1), while the smallest squared principal angle has the explicit exponential upper bound [6m^2/(5(1-r)^2)]r^(2m-2), r=sqrt(2-sqrt(3)).",
+      "evidence_grade": "proof_candidate",
+      "evidence": [
+        "shallow-cauchy-angle.md#4-phase-separated-period-6m-family",
+        "shallow-cauchy-angle.md#5-exponential-collapse-of-the-smallest-angle",
+        "check_shallow_cauchy.py"
+      ]
+    },
+    {
+      "claim_id": "C-LCI-LOCAL-MATCHING-AVERAGE-GAP",
+      "statement": "If pair residues admit a bijective vacancy matching of circular radius at most R<P/2, then the shallow column-average gap is at least 3/[(P^2+2)sin^2(pi R/P)], tending to at least 3/(pi^2 R^2) for fixed R.",
+      "evidence_grade": "proof_candidate",
+      "evidence": [
+        "shallow-cauchy-angle.md#3-exact-column-average-transport-identity",
+        "check_shallow_cauchy.py"
+      ]
     }
   ],
   "current_frontier": [
-    "lower-bound the positive/negative Gram Schur complement for growing genuine finite sections, or construct a source-compatible collapse model",
-    "classify stationary critical-density marked lattice laws with simple density at most 2/3 and determine whether their averaged positive/normalized-negative Schur gap can vanish",
-    "formalize the centered frequency-square complete-frame identity in Zeta23 normalization and quantify the short-scale finite-section tail",
-    "derive the prime-side centered frequency-square trace lower bound at lambda=3/4, or isolate the exact obstructing prime sum",
-    "use lambda=1 for scalar local compactness and lambda=3/4 for both depth control and the 5/108 aliasing gap",
-    "combine local compactness, shallow-pair collapse, angle control, weighted depth control and boundary-mass charging within the 5/108 budget"
+    "replace the refuted global density-only angle target by a blockwise/local pair-vacancy transport theorem with exceptional mass",
+    "determine whether bounded local matching plus a separation or Hall condition gives an operator-level Schur gap rather than only a column-average gap",
+    "test fixed positive normalized depth for long phase-separated blocks and distinguish shallow diagonal collapse from a genuinely deep countermodel",
+    "formalize the centered frequency-square complete-frame identity in Zeta23 normalization and assemble the lambda=3/4 signed matrix tail",
+    "derive the prime-side centered frequency-square trace lower bound at lambda=3/4, or isolate the exact obstructing weighted prime sum",
+    "combine lambda=1 local compactness, lambda=3/4 depth control, local matched-block angle estimates and the 5/108 Fourier-variance gap"
   ],
   "validation": {
     "commands": [
       "python3 staging/preproject-rh/A-RH-LCI-0003/check_compactness_models.py",
       "python3 staging/preproject-rh/A-RH-LCI-0003/check_angle_depth.py",
       "python3 staging/preproject-rh/A-RH-LCI-0003/check_weighted_tail.py",
-      "python3 staging/preproject-rh/A-RH-LCI-0003/check_periodic_confluent.py"
+      "python3 staging/preproject-rh/A-RH-LCI-0003/check_periodic_confluent.py",
+      "python3 staging/preproject-rh/A-RH-LCI-0003/check_shallow_cauchy.py --samples 100 --max-blocks 8"
     ],
     "latest_local_results": {
       "angle_depth": "PASS",
@@ -129,16 +160,18 @@
       "weighted_tail_lambda_3_4_exponent": "-1/8",
       "weighted_tail_lambda_1_complex": "O(log T) with the current worst-case complex decay",
       "weighted_tail_lambda_1_real_exponent": "-1/2",
-      "periodic_confluent": "PASS; exact shallow angle floor 3/38 and determinant regression through normalized depth 4"
+      "periodic_confluent": "PASS; exact shallow angle floor 3/38 and determinant regression through normalized depth 4",
+      "shallow_cauchy": "PASS; arbitrary-period Cauchy determinant, local-matching average lower bound, O(1/P) phase-separated average collapse, and exponential smallest-angle upper bound"
     },
     "boundary": "Deterministic checks validate exact finite formulas, asymptotic scaling and numerical quadrature only; proof candidates still require isolated independent verification."
   },
   "cannot_imply": [
     "This active attempt is not frozen or independently verified.",
-    "No uniform Riesz or principal-angle lower bound for actual zeta finite sections has been proved.",
+    "Finite-period Cauchy nondegeneracy does not provide a period-independent lower Riesz bound.",
+    "The phase-separated countermodel is an ideal shallow/confluent periodic model, not an actual zeta-zero configuration.",
+    "The local matching theorem controls a column-average gap only; it does not yet give an operator-level Schur lower bound.",
     "No prime-side weighted trace asymptotic has been proved.",
     "The single-vector weighted tail bound has not yet been assembled into the full signed matrix estimate.",
-    "The period-six angle theorem does not cover arbitrary stationary/random-coset mark laws or unbounded normalized depth.",
     "The ideal 5/108 margin has not been transferred through all Zeta23 source-level errors.",
     "No unconditional zeta-zero proportion is improved.",
     "This attempt does not prove or refute the Riemann hypothesis."
