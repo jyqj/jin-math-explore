@@ -42,7 +42,9 @@
     "shallow-cauchy-angle.md",
     "check_shallow_cauchy.py",
     "fixed-depth-block-angle.md",
-    "check_fixed_depth_angle.py"
+    "check_fixed_depth_angle.py",
+    "pair-vacancy-spectral-rigidity.md",
+    "check_pair_vacancy_spectrum.py"
   ],
   "claims": [
     {
@@ -159,15 +161,35 @@
         "fixed-depth-block-angle.md#5-explicit-fixed-depth-angle-collapse",
         "check_fixed_depth_angle.py"
       ]
+    },
+    {
+      "claim_id": "C-LCI-PAIR-VACANCY-SPECTRAL-RIGIDITY",
+      "statement": "For a fixed-depth pure pair/vacancy periodic subsystem, the normalized c=2 count defect is exactly sum_l H_a(l/P)|mhat(l)|^2 with H_a(theta)=2[theta cosh(2a(1-theta))+(1-theta)cosh(2a theta)-1]. For a>0 the symbol is positive off the constant mode and controls nearest-neighbor interface density; every stationary zero-defect law is a mixture of homogeneous all-pair and all-vacancy phases.",
+      "evidence_grade": "proof_candidate",
+      "evidence": [
+        "pair-vacancy-spectral-rigidity.md#2-exact-defect-symbol",
+        "pair-vacancy-spectral-rigidity.md#4-quantitative-boundary-control",
+        "pair-vacancy-spectral-rigidity.md#5-stationary-rigidity-theorem",
+        "check_pair_vacancy_spectrum.py"
+      ]
+    },
+    {
+      "claim_id": "C-LCI-HOMOGENEOUS-PAIR-SCALE-INVARIANCE",
+      "statement": "For any real taper and any normalized depth, the signed frame operator of a homogeneous off-line reflection-pair lattice is exactly 2 M_{psi^2}, identical to a tangent load-two lattice. Hence depth disappears inside a homogeneous pair phase at every scale.",
+      "evidence_grade": "proof_candidate",
+      "evidence": [
+        "pair-vacancy-spectral-rigidity.md#6-homogeneous-pair-phase-is-scale-invariant",
+        "check_pair_vacancy_spectrum.py"
+      ]
     }
   ],
   "current_frontier": [
-    "treat the global density-only angle strategy as refuted and restrict future angle claims to uniformly bounded or quantitatively invertible local blocks",
-    "derive an operator-level local Schur gap from a bounded-size matching/Hall condition, with an explicit exceptional-mass ledger",
-    "formalize the centered frequency-square complete-frame identity in Zeta23 normalization and assemble the lambda=3/4 signed matrix tail",
-    "derive the prime-side centered frequency-square trace lower bound at lambda=3/4, or isolate the exact obstructing weighted prime sum",
-    "combine lambda=1 local compactness, lambda=3/4 total-depth control, local bounded-block inversion and the 5/108 Fourier-variance gap",
-    "quantify whether phase-separated fixed-depth blocks are automatically charged by the centered trace before any local angle theorem is invoked"
+    "extend the fixed-depth pair/vacancy spectral theorem to stationary laws containing simple sites, tangent doubles, vacancies, and off-line pairs in the same configuration",
+    "allow pair depths to vary by site and isolate whether vanishing defect forces locally constant positive-depth phases or tangent collapse",
+    "use homogeneous pair/load-two scale invariance to fold fixed-depth pair phases into the lambda=3/4 stationary occupancy inequality",
+    "formalize the centered frequency-square complete-frame identity and retain it only for variable or unbounded-depth exceptional mass",
+    "assemble smooth-taper, finite-section, tail, boundary, and normalization losses inside the 5/108 margin",
+    "freeze the attempt only after the mixed-state collapsed-orbit compactness frontier is either proved or reduced to a precise countermodel"
   ],
   "validation": {
     "commands": [
@@ -176,7 +198,8 @@
       "python3 staging/preproject-rh/A-RH-LCI-0003/check_weighted_tail.py",
       "python3 staging/preproject-rh/A-RH-LCI-0003/check_periodic_confluent.py",
       "python3 staging/preproject-rh/A-RH-LCI-0003/check_shallow_cauchy.py --samples 100 --max-blocks 8",
-      "python3 staging/preproject-rh/A-RH-LCI-0003/check_fixed_depth_angle.py --samples 80 --max-blocks 8"
+      "python3 staging/preproject-rh/A-RH-LCI-0003/check_fixed_depth_angle.py --samples 80 --max-blocks 8",
+      "python3 staging/preproject-rh/A-RH-LCI-0003/check_pair_vacancy_spectrum.py --samples 80 --grid 2000 --max-period 240 --depth 1"
     ],
     "latest_local_results": {
       "angle_depth": "PASS",
@@ -186,18 +209,18 @@
       "weighted_tail_lambda_1_real_exponent": "-1/2",
       "periodic_confluent": "PASS; exact shallow angle floor 3/38 and determinant regression through normalized depth 4",
       "shallow_cauchy": "PASS; arbitrary-period Cauchy determinant, raw local-matching transport lower bound, O(1/P) separated average collapse, and exponential smallest-angle upper bound",
-      "fixed_depth_block": "PASS; arbitrary-depth generalized Vandermonde residual 1.112e-12, cyclic leakage/constructive angle inequalities, and fixed-depth scans at a=0,0.5,1,2,4"
+      "fixed_depth_block": "PASS; arbitrary-depth generalized Vandermonde residual 1.112e-12, cyclic leakage/constructive angle inequalities, and fixed-depth scans at a=0,0.5,1,2,4",
+      "pair_vacancy_spectrum": "PASS; maximum direct/spectral residual 3.730e-14, maximum phase variation 1.421e-14, symbol positivity, boundary control, and homogeneous pair/load-two operator residual 1.036e-12"
     },
     "boundary": "Deterministic checks validate exact finite formulas, asymptotic scaling and numerical linear algebra only; proof candidates still require isolated independent verification."
   },
   "cannot_imply": [
     "This active attempt is not frozen or independently verified.",
+    "The pair/vacancy spectral theorem assumes one fixed normalized depth and no simple sites inside that subsystem.",
+    "Homogeneous pair/load-two scale invariance does not by itself classify mixed or variable-depth local limits.",
     "Finite-period Cauchy or Vandermonde nondegeneracy does not provide a period-independent lower Riesz bound.",
-    "The fixed-depth block countermodels are ideal periodic Gabor fibers, not actual zeta-zero configurations.",
-    "The raw local-matching transport lower bound does not survive unrestricted optimization over growing positive pair blocks.",
-    "No source-level local bounded-block Schur theorem has been proved.",
-    "No prime-side weighted trace asymptotic has been proved.",
-    "The single-vector weighted tail bound has not yet been assembled into the full signed matrix estimate.",
+    "The ideal periodic and stationary models are not actual zeta-zero configurations.",
+    "No full signed-matrix weighted trace or mixed-state compactness theorem has been proved.",
     "The ideal 5/108 margin has not been transferred through all Zeta23 source-level errors.",
     "No unconditional zeta-zero proportion is improved.",
     "This attempt does not prove or refute the Riemann hypothesis."
