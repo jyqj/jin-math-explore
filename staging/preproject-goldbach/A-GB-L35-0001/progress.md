@@ -2,210 +2,210 @@
 
 ## CP-0001 — source extraction and structural orientation
 
-### Inputs read
-
-- merged Goldbach baseline at `70484b065fc3b6a64f06955a5f9c895531750891`;
-- Li–Liu `arXiv:2606.05224v2`;
-- Lemma 3.5 and equation (3.2);
-- Lemma 2.5 well-factorable upper-sieve remainder;
-- definitions of \(G_9,G_{11},G_{12}\);
-- equations (5.44)–(5.50);
-- content commitments for the v0.3 interface audit and dependency graph.
-
-### Source facts
-
-Lemma 3.5 requires dyadic, fixed-order sequences \(\alpha_m,\beta_n\);
-the exact equidistribution condition (3.2) and a small-prime exclusion for
-\(\beta_n\); an order-1 well-factorable weight; and
-
+The source-level call sites for Lemma 3.5 in \(G_9,G_{11},G_{12}\) were located.
+The assumptions on \(\beta_n\) are asymmetric, and the structurally preferred
+orientation was identified as
 \[
-Q=X^{5(1-\nu)/9-\varepsilon},
-\qquad
-\nu=\frac{\log N_\beta}{\log X}\le\frac1{10}.
+\beta=p_1,\qquad \alpha=\text{the complementary switched product}.
 \]
-
-The paper explicitly changes from Lemma 3.1 to Lemma 3.5 for the low-\(p_1\)
-part of \(G_9\), then states the final integral. For \(G_{11},G_{12}\), it uses
-“Similarly as before” and gives final integrals.
-
-### New structured inference
-
-The candidate orientation
-
+The coefficient identity
 \[
-\beta=p_1,\qquad
-\alpha=(\text{all complementary switched factors})
+\theta(\nu)=\frac{5(1-\nu)}9,\qquad
+\frac4{\theta(\nu)}=\frac{36}{5(1-\nu)},\qquad
+\frac4{\theta(1/10)}=8
 \]
+was checked exactly.  The checkpoint remained inconclusive because the actual
+bilinear cells and uniform constants had not been frozen.
 
-is preferred over its reverse:
+## CP-0002 — G9 residual reduction and prime-beta sublemma
 
-- it makes the short variable track \(p_1\);
-- it explains the \(p_1=N^{1/10}\) theorem switch;
-- a prime-supported \(\beta\) meets the roughness condition for large blocks;
-- the level formula yields the observed \(36/[5(1-u)]\) signature.
+For a \(G_9\) term write
+\[
+N_{\rm global}-b=p_1p_2r.
+\]
+Outside a squareful-\(p_1\) branch
+\(O(N_{\rm global}^{1-\alpha}\log N_{\rm global})\) and a branch supported on
+prime divisors of \(N_{\rm global}\) of size \(N_{\rm global}^{o(1)}\), the
+sifted residual is a prime \(p_3\ge p_2\).  Thus the switched product has the
+form \(p_1(p_2p_3)\).
 
-This inference is not yet a verified application.
+For a frozen dyadic prime block,
+\[
+\beta_n=\mathbf 1_{\{n\ {\rm prime}\}}\mathbf 1_{(n,N_{\rm global})=1},
+\]
+Siegel--Walfisz proves condition (3.2), and the small-prime exclusion is
+automatic.  Upper-bound monotonicity permits lowering the sifting threshold to
+\(Q^{1/2}\), giving the exact \(36/5\) coefficient genealogy.
 
-### New interface risk
+The earliest remaining issues were a Cartesian box decomposition, the relation
+between the global residue and the local product scale, and the exact
+\(\nu\le1/10\) endpoint.
 
-The congruence residue is the global even integer \(N_{\rm global}\), whereas
-Lemma 3.5 states uniformity for \(|a|\le X\), with \(X\) the local product of
-dyadic scales. The proof must either establish the stated inequality for every
-box or justify a constant-multiple extension while tracking its
-\(\varepsilon\)-dependence.
+## CP-0003 — primary-source normalization, residue bridge, and G9 interior cells
 
-No counterexample has been produced; the status is an open proof obligation.
+### 1. Primary-source normalization correction
 
-### Next checkpoint
+Li--Liu state Lemma 3.5 with sequences supported in \([M,2M]\), \([N,2N]\)
+and \(X=MN\).  The cited primary source, Fouvry's Corollaire 2(i), instead
+normalizes the scale as
+\[
+x=4MN,\qquad \nu=\frac{\log N}{\log x},
+\]
+and is uniform for \(|a|\le x\).
 
-1. Derive the exact switched remainder for the low-\(p_1\) portion of \(G_9\).
-2. Partition \(p_1,p_2\) and the inner prime into dyadic boxes.
-3. Write the resulting \(\alpha,\beta,M,N_\beta,X,a,\lambda\) explicitly.
-4. Prove the prime-\(\beta\) version of (3.2), including factors dividing
-   \(d\) and \(N_{\rm global}\).
-5. Repeat the reconstruction for \(G_{11},G_{12}\) only after the \(G_9\)
-   template is complete.
+The factor \(4\) is asymptotically harmless for the exponent and log-saving
+because the theorem contains an arbitrary exponent loss, but it is not
+harmless bookkeeping: it must be restored when checking the residue range and
+the exact definition of \(\nu\).
+
+### 2. Fixed-multiple residue lemma
+
+**Lemma candidate.**  For every fixed \(C\ge1\), Fouvry Corollaire 2(i)
+continues to hold uniformly for
+\[
+|a|\le Cx
+\]
+with an implied constant depending on \(C\).
+
+**Proof audit.**  At the end of the proof under condition (C.2), Fouvry states
+that the size of \(a\) enters only:
+
+1. in the integration-by-parts derivative bounds; and
+2. through the divisor function \(\tau(a)\).
+
+Replacing \(|a|\le x\) by \(|a|\le Cx\) multiplies the derivative bounds by a
+fixed factor.  Moreover, for every auxiliary \(\delta>0\),
+\[
+\tau(a)\ll_\delta |a|^\delta
+       \le C^\delta x^\delta,
+\]
+which is absorbed by the arbitrary internal power/log slack.  No other step of
+the source proof uses the magnitude of \(a\).
+
+This is a complete solver derivation but still requires a fresh verifier to
+check every occurrence of \(a\) in the primary proof.
+
+### 3. Application to the Goldbach residue
+
+Use a fine multiplicative cell ratio
+\[
+\rho=\exp((\log N_{\rm global})^{-J}),\qquad J\ge4,
+\]
+so that \(\rho^3\le4\) for large \(N_{\rm global}\).  In a \(G_9\) cell let
+\[
+p_1\in[P,\rho P),\quad
+p_2\in[U,\rho U),\quad
+p_3\in[V,\rho V).
+\]
+Set \(M=UV\).  Then
+\[
+t=p_1p_2p_3\le \rho^3 PM\le4PM=x.
+\]
+The Goldbach construction also has \(t\ge\varepsilon_0N_{\rm global}\), hence
+\[
+N_{\rm global}\le\varepsilon_0^{-1}x.
+\]
+The fixed-multiple lemma applies with \(C=\varepsilon_0^{-1}\).  Its constant
+is allowed to depend on the paper's fixed \(\varepsilon_0\).
+
+Thus the earlier residue-range obstruction is repaired; it is no longer the
+first unresolved step.
+
+### 4. Exact treatment of the \(\nu=1/10\) endpoint
+
+The primary-source short exponent is
+\[
+\nu=\frac{\log P}{\log x}.
+\]
+Put
+\[
+c_{\varepsilon}=\varepsilon_0^{1/10}.
+\]
+For enhanced-level cells with
+\[
+p_1\le c_\varepsilon N_{\rm global}^{1/10},
+\]
+we have
+\[
+P^{10}\le\varepsilon_0N_{\rm global}\le x,
+\]
+so \(\nu\le1/10\) exactly.
+
+The discarded transition slice
+\[
+c_\varepsilon N_{\rm global}^{1/10}
+   <p_1\le N_{\rm global}^{1/10}
+\]
+has fixed multiplicative width.  Mertens' theorem for primes gives
+\[
+\sum_{\text{transition slice}}\frac1p
+  =O_\varepsilon\!\left(\frac1{\log N_{\rm global}}\right).
+\]
+Sending this slice to the coefficient-\(8\) treatment changes the \(G_9\)
+upper bound by
+\[
+O_\varepsilon\!\left(\frac{N_{\rm global}}{\log^3N_{\rm global}}\right).
+\]
+The lower bound \(\nu\ge\varepsilon_{\rm lemma}\) follows from
+\(p_1\ge N_{\rm global}^{4/53}\) and \(x\le4N_{\rm global}\) for sufficiently
+large \(N_{\rm global}\).
+
+This closes the range condition, with the transition error handed to
+`A-GB-ERR-0001`.
+
+### 5. G9 interior cell compiler
+
+For every \(p_1\)-cell define
+\[
+\beta_P(n)=
+\mathbf1_{\{n\ {\rm prime},\ P\le n<\rho P,\ (n,N_{\rm global})=1\}}.
+\]
+For \(p_2,p_3\)-cells define
+\[
+\alpha_{U,V}(m)=
+\#\{(p_2,p_3):p_2p_3=m,\ U\le p_2<\rho U,\
+V\le p_3<\rho V,\ p_2\le p_3,\ (m,N_{\rm global})=1\}.
+\]
+Then
+\[
+|\beta_P(n)|\le1,\qquad
+|\alpha_{U,V}(m)|\le\tau_2(m),
+\]
+and the supports lie in \([P,2P]\) and \([UV,2UV]\).  On every cell whose
+whole product box lies in
+\[
+\varepsilon_0N_{\rm global}\le p_1p_2p_3\le N_{\rm global},
+\]
+all dyadic-support, order, local-scale, prime-\(\beta\), residue and \(\nu\)
+requirements are explicit.
+
+The condition
+\[
+p_2\le (N_{\rm global}/p_1)^{1/2}
+\]
+does not create a separate interior constraint: it follows from
+\(p_3\ge p_2\) and \(p_1p_2p_3\le N_{\rm global}\).
+
+There are only polylogarithmically many fine cells.  Since Lemma 3.5 allows
+arbitrary log saving \(A\), the sum of the **interior theorem errors** is
+absorbed by choosing \(A\) larger than the mesh exponent.
+
+### 6. Earliest remaining obstruction
+
+The first unresolved G9 step is now:
+
+1. give a signed, source-backed treatment of cells crossing
+   \(p_1p_2p_3=\varepsilon_0N_{\rm global}\) or
+   \(p_1p_2p_3=N_{\rm global}\), or replace the hard product cutoff by a
+   smooth hyperbolic/Mellin partition;
+2. bind every interior cell to the actual order-1 well-factorable remainder
+   weight from Lemma 2.5 and verify the exact level \(Q\);
+3. carry the top-slice and mesh-boundary losses into the common error ledger;
+4. reconstruct the Buchstab-counted rough residual for \(G_{11},G_{12}\).
 
 ### Current verdict
 
-`INCONCLUSIVE`: the source-level call sites are located and a coherent
-orientation is identified, but the bilinear forms and uniform constants have
-not yet been frozen.
-
-
-## CP-0002 — G9 switched reduction and prime-beta sublemma
-
-### 1. G9 residual classification
-
-For a term of \(G_9\), write
-
-\[
-N_{\rm global}-b=p_1p_2r,
-\]
-
-where \(b\) is the prime defining \(\mathscr A\). Since
-\(p_2\ge N_{\rm global}^{1/3}\), a composite \(r\) has a prime factor
-
-\[
-s\le \sqrt r\le\sqrt{\frac{N_{\rm global}}{p_1p_2}}<p_2.
-\]
-
-Such an \(s\) is removed by the sieve unless \(s\mid N_{\rm global}p_1\).
-The two exceptional branches are controllable:
-
-- \(s=p_1\) places the element in \(\mathscr A_{p_1^2p_2}\); summing the
-  trivial count gives
-  \(O(N_{\rm global}^{1-\alpha}\log N_{\rm global})\).
-- if \(s\mid N_{\rm global}\), then the prime \(b\equiv0\pmod s\), hence
-  \(b=s\); summing divisor factorizations over primes dividing
-  \(N_{\rm global}\) gives \(N_{\rm global}^{o(1)}\).
-
-The case \(r=1\) is impossible for sufficiently large \(N_{\rm global}\),
-because the definition of \(\mathscr A\) requires
-\(p_1p_2\ge\varepsilon N_{\rm global}\), whereas
-\(p_1p_2\le N_{\rm global}^{2/3}\).
-
-Thus, up to the displayed negligible branches, \(r=p_3\) is prime and
-\(p_3\ge p_2\). This identifies the switched product as
-
-\[
-p_1(p_2p_3)\equiv N_{\rm global}\pmod q.
-\]
-
-### 2. Prime-beta proof of condition (3.2)
-
-Fix a dyadic block \(Y\le n<2Y\) and put
-
-\[
-\beta_n=\mathbf 1_{\{n\text{ prime}\}}\mathbf 1_{(n,N_{\rm global})=1}.
-\]
-
-For a fixed residue modulus \(h\) and \((h,n_0)=1\), Siegel--Walfisz on the
-interval \([Y,2Y)\) gives equidistribution of the prime indicator. Removing
-primes dividing \(d\) changes the two sides by at most a constant multiple of
-the number of prime divisors of \(d\) in the interval. For \(h\ge2\), this
-number is bounded by \(\tau_h(d)\); for \(h=1\), the two sides are identical.
-The fixed exclusion of prime divisors of \(N_{\rm global}\) contributes only
-\(O(1)\) primes because \(Y\) is a fixed positive power of
-\(N_{\rm global}\). Therefore, for every fixed \(B,h\),
-
-\[
-\sum_{\substack{n\equiv n_0\pmod h\\(n,d)=1}}\beta_n
-=\frac1{\varphi(h)}\sum_{(n,dh)=1}\beta_n
-+O_{B,h}\!\left(
-\frac{Y\tau_h(d)}{(\log 2Y)^B}
-\right).
-\]
-
-This closes condition (3.2) **if** the call compiler proves that the theorem's
-\(\beta\)-sequence is exactly the smallest-prime block.
-
-The roughness hypothesis is then elementary for large \(Y\), since a prime
-\(n\) has no proper prime factor and
-\(n>\exp((\log\log n)^2)\).
-
-### 3. Sieve-level coefficient bridge
-
-The original switched prime contribution is bounded by a sift at
-\(N_{\rm global}^{1/2}\). Lemma 2.5, however, states
-\(z\le Q^{1/2}\). For an upper bound one may use monotonicity:
-
-\[
-S(\mathscr B,\mathscr P,N_{\rm global}^{1/2})
-\le S(\mathscr B,\mathscr P,Q^{1/2}).
-\]
-
-At \(z=Q^{1/2}\), the linear-sieve parameter is \(s=2\), so
-\(F(2)=e^\gamma\). Combining this with the dimension-one product at
-\(z=Q^{1/2}\) yields the main coefficient \(4/\theta\). Hence
-
-\[
-\theta(\nu)=\frac{5(1-\nu)}9
-\quad\Longrightarrow\quad
-\frac4{\theta(\nu)}=\frac{36}{5(1-\nu)},
-\]
-
-and the splice at \(\nu=1/10\) is exactly \(8\).
-
-### 4. Remaining G9 compiler gap
-
-For dyadic scales \(p_1\asymp P\) and \(p_2p_3\asymp M\), the natural
-sequences are
-
-\[
-\beta_n=\mathbf1_{n=p_1},\qquad
-\alpha_m=\#\{(p_2,p_3):p_2p_3=m\}.
-\]
-
-Then \(\alpha_m\le\tau_2(m)\), and \(X=MP\) is comparable with the global
-scale. However, the ordering, hyperbolic and product constraints couple
-\(p_1\) to \(p_2,p_3\). They must be replaced by a rigorous Cartesian upper
-cover, with boundary boxes separately bounded.
-
-A second unresolved point remains: a box meeting
-\(\varepsilon N_{\rm global}\le p_1p_2p_3\le N_{\rm global}\) only gives
-
-\[
-N_{\rm global}\le C_\varepsilon X,
-\]
-
-whereas the stated Lemma 3.5 assumes \(|a|\le X\). A constant-multiple version
-is plausible but has not yet been proved from the cited primary theorem.
-
-### 5. Correction for G11/G12
-
-The final residual in \(G_{11},G_{12}\) is counted through Buchstab's function.
-Consequently, the complementary \(\alpha\)-sequence should be modeled as
-\(p_2p_3p_4r\) with a \(p_2\)-rough integer \(r\), not automatically as a
-product with one additional prime.
-
-### Current verdict
-
-`INCONCLUSIVE`, with two genuine sub-obligations closed conditionally:
-
-- prime-supported \(\beta\) satisfies (3.2) and the roughness condition;
-- the \(36/5\) and \(8\) coefficient transfer follows exactly after the local
-  level has been instantiated.
-
-The earliest remaining step is the Cartesian G9 box compiler plus the
-constant-multiple residue-range bridge.
+`INCONCLUSIVE`, but the frontier moved: the residue-size and \(\nu\)-endpoint
+questions are repaired by a primary-source normalization audit and explicit
+range split.  The active obstruction is the product-boundary partition and
+cellwise sieve-weight binding.
