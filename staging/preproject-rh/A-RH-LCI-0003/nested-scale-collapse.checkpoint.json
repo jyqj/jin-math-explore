@@ -1,0 +1,67 @@
+{
+  "schema": "jin-math-preproject-checkpoint/v1",
+  "checkpoint_id": "CP-RH-LCI-NESTED-SCALE-COLLAPSE-01",
+  "parent_attempt": "A-RH-LCI-0003",
+  "issue": 32,
+  "status": "solver_proof_candidate",
+  "actor": {
+    "kind": "agent",
+    "id": "openai-gpt-5.6-pro",
+    "run_id": "run-20260829-rh-local-compactness-03",
+    "role": "solver"
+  },
+  "observed_parent_head": "6188a92950c2d5fa6e1be6a6e19ec3bd7feee4a7",
+  "corrects_source_interpretation_of": "CP-RH-LCI-MULTISCALE-DEPTH-01",
+  "artifacts": [
+    "source-compatible-nested-scale-collapse.md",
+    "check_nested_scale_collapse.py",
+    "nested-scale-collapse.checkpoint.json"
+  ],
+  "claims": [
+    {
+      "claim_id": "C-LCI-PARTIAL-FRAME-DEPTH-SYMBOL",
+      "evidence_grade": "proof_candidate",
+      "statement": "On one master critical lattice, the ideal d-row partial Fourier section has exact depth-heterogeneity excess E_d=8 sum_{n<d}(d-n)|sum_r z_r(n) cosh(a_r n/P)|^2."
+    },
+    {
+      "claim_id": "C-LCI-NESTED-SUPPORT-CHANNEL-COLLAPSE",
+      "evidence_grade": "proof_candidate",
+      "statement": "Every finite weighted bank of nested row sections collapses to scalar weights W_n multiplying the same depth moment at each master frequency. Proper shorter supports do not create independent cosh(alpha theta a) channels."
+    },
+    {
+      "claim_id": "C-LCI-SOURCE-THREE-DEPTH-ENDPOINT-BARRIER",
+      "evidence_grade": "proof_candidate",
+      "statement": "One full support plus any finite fixed-ratio proper nested supports cannot yield a first-order interface gap for three arbitrary depth classes: an endpoint-null direction satisfies Q_theta=O(theta^3), hence Q_theta/theta tends to zero."
+    },
+    {
+      "claim_id": "C-LCI-ALIGNED-SURROGATE-SOURCE-CORRECTION",
+      "evidence_grade": "scope_correction",
+      "statement": "The preceding M-1 aligned-channel theorem remains mathematically valid only for genuinely independent depth-response channels. Ordinary Zeta23 support ratios 1 and 3/4 do not automatically instantiate those channels in the master-lattice partial-frame model."
+    }
+  ],
+  "validation": {
+    "command": "python3 staging/preproject-rh/A-RH-LCI-0003/check_nested_scale_collapse.py",
+    "result": {
+      "partial_symbol": "PASS; maximum direct/spectral residual 2.274e-13 over 100 random configurations",
+      "bank_collapse": "PASS; maximum direct/collapsed residual 1.819e-11",
+      "channel_rank": "PASS; proper nested supports had numerical channel rank one at master frequency 3/120",
+      "three_depth_endpoint": "PASS; combined Q_theta/theta decreased to 2.965e-08 at theta=1e-4"
+    },
+    "boundary": "Checks cover ideal nested partial Fourier frames. They do not prove the smooth-taper, tail, normalization, or prime-side transfer."
+  },
+  "current_frontier": [
+    "derive the centered frequency-square trace as a genuinely independent source-compatible depth channel",
+    "determine whether asymmetric or derivative taper families add independent endpoint moments",
+    "investigate almost-full supports P-d=o(P), where conjugate frequencies can re-enter but scale separation vanishes",
+    "retain lambda=3/4 for occupancy and weighted-tail advantages, not as an independent zeroth-order depth moment",
+    "close the common random-root, smooth-taper, finite-section, tail, normalization, and 5/108 budget"
+  ],
+  "cannot_imply": [
+    "The partial-frame excess is not the complete short-scale rank-trace defect.",
+    "The endpoint null direction is a symbol-level proof obstruction, not a zeta-zero counterexample.",
+    "No theorem is asserted for almost-full supports whose ratios tend to one.",
+    "No centered weighted prime-side trace has been proved.",
+    "No unconditional zeta-zero proportion is improved.",
+    "This checkpoint does not prove or refute the Riemann hypothesis."
+  ]
+}
