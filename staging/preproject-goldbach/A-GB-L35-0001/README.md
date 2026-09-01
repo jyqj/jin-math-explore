@@ -3,72 +3,49 @@
 **Issue:** `#34`  
 **Branch:** `attempt/preproject-goldbach/l35-call-compiler-01`  
 **Baseline:** `70484b065fc3b6a64f06955a5f9c895531750891`  
-**Checkpoint:** `CP-0002`  
+**Checkpoint:** `CP-0003`  
 **Current verdict:** `INCONCLUSIVE`
 
-This pre-genesis solver package compiles the uses of Lemma 3.5 in the low-\(p_1\)
-parts of \(G_9,G_{11},G_{12}\). It records exact obligations and the earliest
-unsupported interface. It is not a Project result or an independent
-verification receipt.
+This pre-genesis package compiles the uses of Lemma 3.5 in the low-\(p_1\)
+parts of \(G_9,G_{11},G_{12}\).  It is solver output, not a Project result or
+an independent verification receipt.
 
-## Progress through CP-0002
+## New progress at CP-0003
 
-1. The theorem's assumptions on \(\beta_n\) are asymmetric. The structurally
-   preferred orientation is
-
+1. The cited primary theorem was inspected.  Fouvry's normalization is
+   \(x=4MN\), not \(X=MN\).
+2. A fixed-multiple extension
    \[
-   \beta=p_1,\qquad \alpha=\text{complementary switched product}.
+   |a|\le Cx
    \]
-
-2. For a frozen dyadic prime block, the prime-supported \(\beta\)-sequence
-   satisfies condition (3.2) by Siegel--Walfisz, including the exclusions for
-   divisors of \(d\) and the global even integer. The small-prime-factor
-   exclusion is also automatic for sufficiently large blocks.
-3. For \(G_9\), the residual factor is prime outside a squareful-\(p_1\) branch
-   of size \(O(N^{1-\alpha}\log N)\) and a divisor-of-\(N\) branch of size
-   \(N^{o(1)}\). Thus the switched product is structurally
-   \(p_1(p_2p_3)\).
-4. The condition \(z\le Q^{1/2}\) in Lemma 2.5 is met after the safe
-   upper-bound enlargement
-
+   was derived from the primary proof for fixed \(C\).  In the Goldbach cells,
+   \(N_{\rm global}\le x/\varepsilon_0\), repairing the earlier residue-range
+   obstruction.
+3. The enhanced-level range is trimmed to
    \[
-   S(\mathscr B,\mathscr P,N^{1/2})
-   \le S(\mathscr B,\mathscr P,Q^{1/2}).
+   p_1\le\varepsilon_0^{1/10}N_{\rm global}^{1/10},
    \]
-
-   At \(z=Q^{1/2}\), \(s=2\), giving exactly
-
-   \[
-   \frac4{\theta(\nu)}=\frac{36}{5(1-\nu)},
-   \qquad \frac4{\theta(1/10)}=8.
-   \]
-5. For \(G_{11},G_{12}\), the complementary \(\alpha\)-sequence contains a
-   Buchstab-counted rough residual; it must not be silently replaced by an
-   additional prime.
+   which gives \(\nu\le1/10\) exactly.  The remaining constant-ratio slice is
+   handed to the coefficient-\(8\) method with
+   \(O_\varepsilon(N/\log^3N)\) cost.
+4. A fine multiplicative compiler now gives valid **G9 interior cells** with
+   prime-supported \(\beta\), \(\alpha\le\tau_2\), explicit primary scale
+   \(x=4MP\), and polylogarithmically summable theorem errors.
 
 ## Earliest unresolved step
 
-Convert the G9 ordering and hyperbolic constraints into a rigorous Cartesian
-upper cover with frozen
-
-```text
-M, N_beta, X=M*N_beta
-alpha_m, beta_n
-residue a
-well-factorable lambda and level Q
-```
-
-for every box. Then prove a constant-multiple extension of Lemma 3.5 from
-\(|a|\le X\) to the actual relation \(|N_{\rm global}|\le C_\varepsilon X\),
-or redesign the decomposition so the stated range applies literally.
+Treat the two product-boundary cell families without losing the signed sieve
+remainder, and bind each interior cell to the exact Lemma 2.5 well-factorable
+weight and level \(Q\).  The Buchstab rough residual for \(G_{11},G_{12}\)
+also remains open.
 
 ## Files
 
-- `source-lock.json` — frozen source/version and legacy commitments.
-- `call-matrix.json` — requirements, three calls, findings and current verdict.
-- `progress.md` — append-only checkpoint derivation.
+- `source-lock.json` — Li--Liu and Fouvry source/version/normalization record.
+- `call-matrix.json` — requirements, calls, findings and active obstruction.
+- `progress.md` — append-only mathematical checkpoint derivation.
 - `attempt.json` — artifact hashes and authority boundary.
-- `check_call_matrix.py` — deterministic structural validator.
+- `check_call_matrix.py` — deterministic package checker.
 
 ## Reproduction
 
@@ -76,4 +53,5 @@ or redesign the decomposition so the stated range applies literally.
 python -S staging/preproject-goldbach/A-GB-L35-0001/check_call_matrix.py
 ```
 
-A checker PASS means only that the checkpoint package is internally consistent.
+A checker PASS establishes internal consistency only.  It does not verify the
+fixed-multiple source lemma, the complete Li--Liu proof, or binary Goldbach.
