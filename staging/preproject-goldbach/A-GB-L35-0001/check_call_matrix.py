@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Deterministic structural checks for A-GB-L35-0001 CP-0002.
+"""Deterministic structural checks for A-GB-L35-0001 CP-0003.
 
-A PASS establishes package consistency only. It does not verify Lemma 3.5,
-the Li-Liu proof, or the binary Goldbach conjecture.
+PASS means package consistency only.  Mathematical truth, the Fouvry extension,
+the Li-Liu theorem and binary Goldbach are not verified by this script.
 """
 from __future__ import annotations
 
@@ -59,72 +59,108 @@ def main() -> int:
 
     for value in (source, matrix, attempt):
         require(value["attempt_id"] == ATTEMPT_ID, "attempt_id mismatch")
+        require(value["checkpoint"] == "CP-0003", "checkpoint mismatch")
     require(source["baseline_commit"] == BASELINE, "source baseline mismatch")
     require(matrix["baseline_commit"] == BASELINE, "matrix baseline mismatch")
     require(attempt["base_commit"] == BASELINE, "attempt baseline mismatch")
-    require(source["paper"]["identifier"] == "arXiv:2606.05224v2",
-            "wrong source version")
-    require(source["paper"]["silent_version_substitution_allowed"] is False,
+
+    paper = source["paper"]
+    require(paper["identifier"] == "arXiv:2606.05224v2",
+            "wrong Li-Liu source version")
+    require(paper["silent_version_substitution_allowed"] is False,
             "silent source substitution must be forbidden")
 
+    primary = source["primary_mean_value_source"]
+    require(primary["doi"] == "10.24033/asens.1547",
+            "wrong primary mean-value source")
+    normalization = primary["normalization"]
+    require(normalization["source_scale"] ==
+            "x=4*M*N for supports [M,2M] and [N,2N]",
+            "primary scale normalization missing")
+
     catalog = matrix["requirement_catalog"]
-    requirement_ids = [item["id"] for item in catalog]
-    require(len(requirement_ids) == len(set(requirement_ids)),
-            "duplicate requirement")
-    require(set(requirement_ids) == REQUIRED_REQUIREMENTS,
-            "requirement set differs")
-    has_nonpass = False
+    by_id = {item["id"]: item for item in catalog}
+    require(set(by_id) == REQUIRED_REQUIREMENTS, "requirement set differs")
+    require(len(by_id) == len(catalog), "duplicate requirement")
     for item in catalog:
         require(item["status"] in ALLOWED_STATUS,
                 f"{item['id']}: invalid status")
         if item["status"] != "PASS":
-            has_nonpass = True
             require(bool(item.get("next_action")),
                     f"{item['id']}: missing next_action")
 
+    require(by_id["condition_3_2"]["status"] == "PASS",
+            "prime-beta condition (3.2) not frozen")
+    require(by_id["small_prime_exclusion"]["status"] == "PASS",
+            "roughness condition not frozen")
+    require(by_id["nu_range"]["status"] == "PASS",
+            "nu range split not frozen")
+    require(by_id["residue_scale_uniformity"]["status"] == "PASS",
+            "fixed-multiple residue bridge not frozen")
+    require(by_id["sieve_coefficient_transfer"]["status"] == "PASS",
+            "coefficient bridge not frozen")
+
+    bridge = matrix["normalization_and_residue_bridge"]
+    require(bridge["status"] ==
+            "DERIVED_PASS_AWAITING_INDEPENDENT_VERIFICATION",
+            "residue bridge authority boundary differs")
+    require(bridge["fouvry_scale"] == "x=4*M*P",
+            "Fouvry cell scale differs")
+    require(bridge["application"].find("epsilon0^-1") >= 0,
+            "fixed-multiple application missing")
+
+    transition = matrix["nu_transition"]
+    require(transition["status"] == "DERIVED_PASS_WITH_ERROR_HANDOFF",
+            "nu transition status differs")
+    require(transition["handoff"] == "A-GB-ERR-0001",
+            "top-slice error handoff missing")
+
+    compiler = matrix["g9_box_compiler"]
+    require(compiler["status"] == "INTERIOR_PASS_BOUNDARY_OPEN",
+            "G9 compiler status differs")
+    require(compiler["order_bound"] == "beta<=1, alpha<=tau_2",
+            "G9 order bound differs")
+    require(bool(compiler["boundary_open"]),
+            "boundary obligations unexpectedly absent")
+
     calls = matrix["calls"]
     call_ids = [item["call_id"] for item in calls]
-    require(len(call_ids) == len(set(call_ids)), "duplicate call ID")
-    require(set(call_ids) == REQUIRED_CALLS, "call set differs")
-    for call in calls:
-        require(call["status"] == "INCOMPLETE",
-                f"{call['call_id']}: initial checkpoint must be incomplete")
-        require(set(call["requirements_applied"]) == REQUIRED_REQUIREMENTS,
-                f"{call['call_id']}: requirement coverage differs")
-        require(bool(call["call_specific_open_point"]),
-                f"{call['call_id']}: missing open point")
+    require(set(call_ids) == REQUIRED_CALLS and len(call_ids) == 3,
+            "call inventory differs")
+    require(next(c for c in calls if c["target"] == "G9")["status"] == "PARTIAL",
+            "G9 should be partial at CP-0003")
+    require(all(c["status"] == "INCOMPLETE"
+                for c in calls if c["target"] in {"G11", "G12"}),
+            "G11/G12 should remain incomplete")
 
-    require(has_nonpass, "checkpoint unexpectedly has no open work")
-    by_id = {item["id"]: item for item in catalog}
-    require(by_id["condition_3_2"]["status"] == "PASS",
-            "prime-beta condition (3.2) was not frozen")
-    require(by_id["sieve_coefficient_transfer"]["status"] == "PASS",
-            "coefficient bridge was not frozen")
     findings = {item["id"] for item in matrix["findings"]}
-    require({"F-L35-007", "F-L35-008", "F-L35-009", "F-L35-010"} <= findings,
-            "CP-0002 findings are incomplete")
-    require(matrix["g9_reconstruction"]["status"] == "PARTIAL",
-            "G9 reconstruction status differs")
+    require({"F-L35-011", "F-L35-012", "F-L35-013",
+             "F-L35-014", "F-L35-015"} <= findings,
+            "CP-0003 findings incomplete")
+
+    nu = Fraction(1, 10)
+    theta = Fraction(5) * (1 - nu) / 9
+    require(Fraction(4) / theta == 8,
+            "coefficient boundary identity failed")
+    require(Fraction(4, 53) < Fraction(1, 10),
+            "low-p1 interval is empty")
+
     require(matrix["provisional_verdict"] == "INCONCLUSIVE",
             "open checkpoint must remain INCONCLUSIVE")
     require(attempt["verdict"] == "INCONCLUSIVE",
             "attempt verdict must remain INCONCLUSIVE")
     require(attempt["authority"]["mathematical_claim_upgrade"] is False,
             "checkpoint must not upgrade authority")
-
-    nu = Fraction(1, 10)
-    theta = Fraction(5) * (1 - nu) / 9
-    require(Fraction(4) / theta == 8,
-            "coefficient boundary identity failed")
-    require(matrix["coefficient_check"]["boundary_value"] == "8",
-            "stored boundary value mismatch")
+    require(attempt["authority"]["independent_verification"] is False,
+            "checkpoint must not claim independent verification")
 
     for name, expected in attempt["artifact_sha256"].items():
         require(name != "attempt.json", "self hash is forbidden")
-        require(sha256(name) == expected, f"artifact hash mismatch: {name}")
+        require(sha256(name) == expected,
+                f"artifact hash mismatch: {name}")
 
     print(
-        "PASS: A-GB-L35-0001 CP-0002 is structurally consistent; "
+        "PASS: A-GB-L35-0001 CP-0003 is structurally consistent; "
         "mathematical truth was not assessed."
     )
     return 0
