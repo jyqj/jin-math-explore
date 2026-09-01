@@ -46,7 +46,9 @@
     "pair-vacancy-spectral-rigidity.md",
     "check_pair_vacancy_spectrum.py",
     "mixed-state-moderate-depth.md",
-    "check_mixed_state_depth.py"
+    "check_mixed_state_depth.py",
+    "all-depth-and-two-depth-rigidity.md",
+    "check_all_depth_rigidity.py"
   ],
   "claims": [
     {
@@ -138,15 +140,33 @@
       "statement": "For one fixed normalized depth 0<a<2pi, arbitrary tangent loads 0,1,2 outside the pair set cannot hide pair interfaces. The exact finite pair-versus-tangent kernel is negative off diagonal, so the all-load-two tangent background minimizes the defect. The defect is bounded below by sum_l L_a(l/P)|Ahat(l)|^2 with L_a(theta)=4[theta(cosh(a(1-theta))-1)^2+(1-theta)(cosh(a theta)-1)^2], yielding stationary zero-defect dichotomy: either no positive-depth pairs or a homogeneous all-pair phase.",
       "evidence_grade": "proof_candidate",
       "evidence": ["mixed-state-moderate-depth.md#2-exact-finite-period-interaction-and-the-2pi-sign-range", "mixed-state-moderate-depth.md#3-exact-extremal-symbol", "mixed-state-moderate-depth.md#5-stationary-mixed-state-classification", "check_mixed_state_depth.py"]
+    },
+    {
+      "claim_id": "C-LCI-ALL-DEPTH-COMMON-RIGIDITY",
+      "statement": "For every fixed common normalized depth a>0, arbitrary tangent loads 0,1,2 outside the pair set cannot support positive pair-interface density at zero ideal defect. The old favorable-sign range 0<a<2pi overlaps a new high-depth absorption range a>a_*=4 arccoth(pi/(2 sqrt 2))=5.895547...; hence all a>0 are covered by an explicit positive interface coefficient.",
+      "evidence_grade": "proof_candidate",
+      "evidence": ["all-depth-and-two-depth-rigidity.md#2-a-stronger-all-load-two-interface-inequality", "all-depth-and-two-depth-rigidity.md#4-absorbing-arbitrary-tangent-loads-at-high-depth", "all-depth-and-two-depth-rigidity.md#5-all-fixed-common-depths-are-covered", "check_all_depth_rigidity.py"]
+    },
+    {
+      "claim_id": "C-LCI-TWO-DEPTH-SPECTRAL-RIGIDITY",
+      "statement": "For a binary pair lattice with depths a>b>=0, the ideal defect has the exact symbol L_{a,b}(theta)=4[theta(cosh(a(1-theta))-cosh(b(1-theta)))^2+(1-theta)(cosh(a theta)-cosh(b theta))^2]. It controls pair-depth interface count by one half of [cosh(a/2)-cosh(b/2)]^2; every stationary binary-depth zero-defect law is a mixture of homogeneous depth phases.",
+      "evidence_grade": "proof_candidate",
+      "evidence": ["all-depth-and-two-depth-rigidity.md#6-exact-binary-two-depth-symbol", "check_all_depth_rigidity.py"]
+    },
+    {
+      "claim_id": "C-LCI-TWO-DEPTH-GLOBAL-NOGO",
+      "statement": "A half-cycle depth-a phase and a half-cycle depth-b phase have only two interfaces and ideal defect density O_{a,b}(log P/P). Thus small defect does not force global proximity to one depth; the correct variable-depth topology is a random local mixture of homogeneous phases.",
+      "evidence_grade": "proof_candidate",
+      "evidence": ["all-depth-and-two-depth-rigidity.md#7-macroscopic-depth-separation-is-locally-invisible", "check_all_depth_rigidity.py"]
     }
   ],
   "current_frontier": [
-    "combine the fixed-moderate-depth mixed-state dichotomy with the existing tangent local-compactness theorem and homogeneous pair/load-two scale invariance",
-    "treat normalized depth tending to zero as tangent load-two mass with an explicit collapse error",
-    "classify mixed configurations with one or more depths at or above 2pi, where the favorable pair-versus-tangent sign changes",
-    "decide whether a shorter auxiliary scale lowers high normalized depth into the moderate regime or whether the centered weighted trace is required",
-    "transfer the ideal spectral symbols through smooth tapers, finite sections, tails, normalization leakage and random-root limits",
-    "close the lambda=3/4 occupancy inequality with all exceptional masses below the 5/108 budget"
+    "treat the common fixed-depth mixed sector as closed in the ideal model for every a>0; preserve the old 2pi sign result only as one component of the combined proof",
+    "prove or refute a variable-depth local compactness theorem for a continuum or growing alphabet of depths; the target conclusion must allow a random homogeneous depth phase",
+    "use the exact binary two-depth symbol as the finite-alphabet base case and retain the O(log P/P) phase-separated family as a global-matching obstruction",
+    "formalize the centered frequency-square complete-frame identity in Zeta23 normalization and determine whether it controls continuously varying depth before local phase extraction",
+    "transfer the ideal all-depth interface estimates through smooth tapers, finite sections, tails, normalization leakage and random-root limits",
+    "combine lambda=1 local compactness, collapsed homogeneous pair/load-two phases and the lambda=3/4 5/108 Fourier-variance gap"
   ],
   "validation": {
     "commands": [
@@ -157,7 +177,8 @@
       "python3 staging/preproject-rh/A-RH-LCI-0003/check_shallow_cauchy.py --samples 100 --max-blocks 8",
       "python3 staging/preproject-rh/A-RH-LCI-0003/check_fixed_depth_angle.py --samples 80 --max-blocks 8",
       "python3 staging/preproject-rh/A-RH-LCI-0003/check_pair_vacancy_spectrum.py --samples 80 --grid 2000 --max-period 240 --depth 1",
-      "python3 staging/preproject-rh/A-RH-LCI-0003/check_mixed_state_depth.py --samples 60 --depth-grid 100 --theta-grid 1000"
+      "python3 staging/preproject-rh/A-RH-LCI-0003/check_mixed_state_depth.py --samples 60 --depth-grid 100 --theta-grid 1000",
+      "python3 staging/preproject-rh/A-RH-LCI-0003/check_all_depth_rigidity.py --samples 160 --max-period 70 --depth-grid 30 --theta-grid 800"
     ],
     "latest_local_results": {
       "angle_depth": "PASS",
@@ -169,16 +190,18 @@
       "shallow_cauchy": "PASS; arbitrary-period Cauchy determinant, raw local-matching transport lower bound, O(1/P) separated average collapse, and exponential smallest-angle upper bound",
       "fixed_depth_block": "PASS; arbitrary-depth generalized Vandermonde residual 1.112e-12, cyclic leakage/constructive angle inequalities, and fixed-depth scans at a=0,0.5,1,2,4",
       "pair_vacancy_spectrum": "PASS; maximum direct/spectral residual 3.730e-14, maximum phase variation 1.421e-14, symbol positivity, boundary control, and homogeneous pair/load-two operator residual 1.036e-12",
-      "mixed_moderate_depth": "PASS; exact finite kernel residual 2.554e-14, favorable sign for periods 2..80 below 2pi, mixed lower-bound slack -5.329e-15, symbol positivity, interface control, and high-depth scope guard"
+      "mixed_moderate_depth": "PASS; exact finite kernel residual 2.554e-14, favorable sign below 2pi, mixed lower-bound regression and high-depth scope guard",
+      "all_depth_two_depth": "PASS; a_*=5.895547244879<2pi, positive-kernel moment bound, high-depth absorption, exact binary-depth symbol, interface lower bound, and phase-separated O(log P/P) signal"
     },
     "boundary": "Deterministic checks validate exact finite formulas, asymptotic scaling and numerical linear algebra only; proof candidates still require isolated independent verification."
   },
   "cannot_imply": [
     "This active attempt is not frozen or independently verified.",
-    "The mixed-state theorem assumes one common normalized pair depth strictly between 0 and 2pi.",
-    "The favorable-sign comparison is not asserted for depth at or above 2pi or for multiple site-dependent depths.",
+    "The all-depth theorem assumes one common positive pair depth; the binary theorem assumes exactly two pair depths.",
+    "No theorem yet covers an arbitrary continuum or growing alphabet of site-dependent depths.",
+    "The phase-separated two-depth family proves that small ideal defect cannot select one global deterministic depth.",
     "The ideal finite and stationary Fourier models are not actual zeta-zero configurations.",
-    "Smooth-taper, finite-section, tail, normalization and random-root transfer remain unproved.",
+    "Smooth-taper, finite-section, tail, normalization, prime-side and random-root transfer remain unproved.",
     "No full source-level 5/108 error budget has been closed.",
     "No unconditional zeta-zero proportion is improved.",
     "This attempt does not prove or refute the Riemann hypothesis."
