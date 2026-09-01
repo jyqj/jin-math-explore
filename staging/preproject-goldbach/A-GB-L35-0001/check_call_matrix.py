@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Deterministic structural checks for A-GB-L35-0001 CP-0003.
+"""Deterministic structural checks for A-GB-L35-0001 CP-0004.
 
-PASS means package consistency only.  Mathematical truth, the Fouvry extension,
-the Li-Liu theorem and binary Goldbach are not verified by this script.
+PASS establishes frozen-package consistency only.  It does not independently
+verify the solver lemmas, the Li-Liu theorem, or binary Goldbach.
 """
 from __future__ import annotations
 
@@ -36,7 +36,6 @@ REQUIRED_REQUIREMENTS = {
     "block_summability",
     "sieve_coefficient_transfer",
 }
-ALLOWED_STATUS = {"PASS", "PARTIAL", "OPEN", "FAIL", "NA"}
 
 
 def load(name: str) -> Any:
@@ -59,100 +58,90 @@ def main() -> int:
 
     for value in (source, matrix, attempt):
         require(value["attempt_id"] == ATTEMPT_ID, "attempt_id mismatch")
-        require(value["checkpoint"] == "CP-0003", "checkpoint mismatch")
+        require(value["checkpoint"] == "CP-0004", "checkpoint mismatch")
     require(source["baseline_commit"] == BASELINE, "source baseline mismatch")
     require(matrix["baseline_commit"] == BASELINE, "matrix baseline mismatch")
     require(attempt["base_commit"] == BASELINE, "attempt baseline mismatch")
 
-    paper = source["paper"]
-    require(paper["identifier"] == "arXiv:2606.05224v2",
+    require(source["paper"]["identifier"] == "arXiv:2606.05224v2",
             "wrong Li-Liu source version")
-    require(paper["silent_version_substitution_allowed"] is False,
+    require(source["paper"]["silent_version_substitution_allowed"] is False,
             "silent source substitution must be forbidden")
-
     primary = source["primary_mean_value_source"]
     require(primary["doi"] == "10.24033/asens.1547",
             "wrong primary mean-value source")
-    normalization = primary["normalization"]
-    require(normalization["source_scale"] ==
+    require(primary["normalization"]["source_scale"] ==
             "x=4*M*N for supports [M,2M] and [N,2N]",
             "primary scale normalization missing")
 
     catalog = matrix["requirement_catalog"]
     by_id = {item["id"]: item for item in catalog}
-    require(set(by_id) == REQUIRED_REQUIREMENTS, "requirement set differs")
     require(len(by_id) == len(catalog), "duplicate requirement")
-    for item in catalog:
-        require(item["status"] in ALLOWED_STATUS,
-                f"{item['id']}: invalid status")
-        if item["status"] != "PASS":
-            require(bool(item.get("next_action")),
-                    f"{item['id']}: missing next_action")
-
-    require(by_id["condition_3_2"]["status"] == "PASS",
-            "prime-beta condition (3.2) not frozen")
-    require(by_id["small_prime_exclusion"]["status"] == "PASS",
-            "roughness condition not frozen")
-    require(by_id["nu_range"]["status"] == "PASS",
-            "nu range split not frozen")
-    require(by_id["residue_scale_uniformity"]["status"] == "PASS",
-            "fixed-multiple residue bridge not frozen")
-    require(by_id["sieve_coefficient_transfer"]["status"] == "PASS",
-            "coefficient bridge not frozen")
-
-    bridge = matrix["normalization_and_residue_bridge"]
-    require(bridge["status"] ==
-            "DERIVED_PASS_AWAITING_INDEPENDENT_VERIFICATION",
-            "residue bridge authority boundary differs")
-    require(bridge["fouvry_scale"] == "x=4*M*P",
-            "Fouvry cell scale differs")
-    require(bridge["application"].find("epsilon0^-1") >= 0,
-            "fixed-multiple application missing")
-
-    transition = matrix["nu_transition"]
-    require(transition["status"] == "DERIVED_PASS_WITH_ERROR_HANDOFF",
-            "nu transition status differs")
-    require(transition["handoff"] == "A-GB-ERR-0001",
-            "top-slice error handoff missing")
-
-    compiler = matrix["g9_box_compiler"]
-    require(compiler["status"] == "INTERIOR_PASS_BOUNDARY_OPEN",
-            "G9 compiler status differs")
-    require(compiler["order_bound"] == "beta<=1, alpha<=tau_2",
-            "G9 order bound differs")
-    require(bool(compiler["boundary_open"]),
-            "boundary obligations unexpectedly absent")
+    require(set(by_id) == REQUIRED_REQUIREMENTS, "requirement set differs")
+    require(all(item["status"] == "PASS" for item in catalog),
+            "frozen solver candidate has a non-PASS requirement")
 
     calls = matrix["calls"]
     call_ids = [item["call_id"] for item in calls]
     require(set(call_ids) == REQUIRED_CALLS and len(call_ids) == 3,
             "call inventory differs")
-    require(next(c for c in calls if c["target"] == "G9")["status"] == "PARTIAL",
-            "G9 should be partial at CP-0003")
-    require(all(c["status"] == "INCOMPLETE"
-                for c in calls if c["target"] in {"G11", "G12"}),
-            "G11/G12 should remain incomplete")
+    require(all(item["status"] == "SOLVER_PASS" for item in calls),
+            "not every call has a solver PASS")
+
+    boundary = matrix["boundary_compiler"]
+    require(boundary["status"] == "SOLVER_PASS",
+            "boundary compiler not frozen")
+    require(boundary["mesh"]["fixed_J"] == "J>=4", "mesh threshold differs")
+    require("A-GB-ERR-0001" in
+            (by_id["nu_range"].get("handoff", ""),
+             by_id["sieve_coefficient_transfer"].get("handoff", "")),
+            "common-error handoff missing")
+
+    binding = matrix["sieve_binding"]
+    require(binding["status"] == "SOLVER_PASS",
+            "sieve binding not frozen")
+    require(binding["remainder"]["identity"] ==
+            "r_C(q)=E_C(q)-H_C(q)",
+            "remainder identity differs")
+    require(binding["handoff"] ==
+            "A-GB-ERR-0001",
+            "coprimality correction handoff missing")
+
+    rough = matrix["rough_residual"]
+    require(rough["status"] == "SOLVER_PASS_FOR_LEMMA_3_5_INTERFACE",
+            "rough residual compiler status differs")
+    require(rough["alpha"] == "<=tau_4",
+            "rough residual order bound differs")
 
     findings = {item["id"] for item in matrix["findings"]}
-    require({"F-L35-011", "F-L35-012", "F-L35-013",
-             "F-L35-014", "F-L35-015"} <= findings,
-            "CP-0003 findings incomplete")
+    require({"F-L35-016", "F-L35-017", "F-L35-018",
+             "F-L35-019", "F-L35-020"} <= findings,
+            "CP-0004 findings incomplete")
 
     nu = Fraction(1, 10)
     theta = Fraction(5) * (1 - nu) / 9
     require(Fraction(4) / theta == 8,
             "coefficient boundary identity failed")
-    require(Fraction(4, 53) < Fraction(1, 10),
-            "low-p1 interval is empty")
+    require(Fraction(4, 53) < nu, "low-p1 interval is empty")
+    require(3 * Fraction(4, 33) + Fraction(3, 11) ==
+            Fraction(7, 11), "G12 exponent sum differs")
+    require(Fraction(7, 11) < 1, "G12 +1 boundary count is not power-saving")
 
-    require(matrix["provisional_verdict"] == "INCONCLUSIVE",
-            "open checkpoint must remain INCONCLUSIVE")
-    require(attempt["verdict"] == "INCONCLUSIVE",
-            "attempt verdict must remain INCONCLUSIVE")
+    require(matrix["overall_status"] == "FROZEN_SOLVER_CANDIDATE",
+            "matrix is not frozen")
+    require(matrix["provisional_verdict"] == "PASS",
+            "matrix verdict differs")
+    require(attempt["status"] == "frozen_candidate",
+            "attempt is not frozen")
+    require(attempt["verdict"] == "PASS", "attempt verdict differs")
     require(attempt["authority"]["mathematical_claim_upgrade"] is False,
-            "checkpoint must not upgrade authority")
+            "attempt must not upgrade authority")
+    require(attempt["authority"]["project_authority_changed"] is False,
+            "attempt must not alter Project authority")
     require(attempt["authority"]["independent_verification"] is False,
-            "checkpoint must not claim independent verification")
+            "attempt must not claim independent verification")
+    require(attempt["verification_required"] is True,
+            "frozen candidate must require verification")
 
     for name, expected in attempt["artifact_sha256"].items():
         require(name != "attempt.json", "self hash is forbidden")
@@ -160,8 +149,8 @@ def main() -> int:
                 f"artifact hash mismatch: {name}")
 
     print(
-        "PASS: A-GB-L35-0001 CP-0003 is structurally consistent; "
-        "mathematical truth was not assessed."
+        "PASS: A-GB-L35-0001 CP-0004 frozen solver candidate is "
+        "structurally consistent; mathematical truth was not assessed."
     )
     return 0
 
