@@ -1,0 +1,72 @@
+{
+  "schema": "jin-math-preproject-checkpoint/v1",
+  "checkpoint_id": "CP-RH-LCI-MULTISCALE-DEPTH-01",
+  "parent_attempt": "A-RH-LCI-0003",
+  "issue": 32,
+  "status": "solver_proof_candidate",
+  "actor": {
+    "kind": "agent",
+    "id": "openai-gpt-5.6-pro",
+    "run_id": "run-20260829-rh-local-compactness-03",
+    "role": "solver"
+  },
+  "observed_parent_head": "e4fca5e5abe933d860dbd8fed7aa6e8673714a4b",
+  "artifacts": [
+    "finite-alphabet-multiscale-rigidity.md",
+    "check_multiscale_depth_alphabet.py",
+    "multiscale-depth-alphabet.checkpoint.json"
+  ],
+  "claims": [
+    {
+      "claim_id": "C-LCI-FINITE-ALPHABET-SYMBOL",
+      "evidence_grade": "proof_candidate",
+      "statement": "For an arbitrary finite depth alphabet in the aligned ideal all-pair lattice, the scale-alpha count defect has an exact matrix-valued Fourier symbol with two hyperbolic moment channels per spatial frequency."
+    },
+    {
+      "claim_id": "C-LCI-FINITE-CHANNEL-RANK-BARRIER",
+      "evidence_grade": "proof_candidate",
+      "statement": "A q-scale zeroth-order bank has at most 2q channels at each frequency. If M>=2q+2 depth classes, an exact invisible tangent direction exists pointwise. If q<M-1, Q_theta/theta tends to zero along an endpoint-null direction, so no first-order interface coercivity is possible by this symbol mechanism."
+    },
+    {
+      "claim_id": "C-LCI-COSH-TOTAL-POSITIVITY",
+      "evidence_grade": "proof_candidate",
+      "statement": "For strictly increasing nonnegative scale and depth nodes, the generalized cosh moment matrix has positive determinant, via the even-power expansion and generalized Vandermonde Cauchy-Binet formula."
+    },
+    {
+      "claim_id": "C-LCI-MINIMAL-SCALE-INTERFACE-RIGIDITY",
+      "evidence_grade": "proof_candidate",
+      "statement": "For a prescribed M-depth alphabet, M-1 distinct aligned scales are necessary and sufficient within this mechanism for a uniform symbol bound Q_theta(z)>=c_* min(theta,1-theta)||z||^2 and hence a nearest-neighbor depth-interface bound. Stationary zero combined defect is a mixture of homogeneous depth phases."
+    },
+    {
+      "claim_id": "C-LCI-CONTINUUM-SCALE-INJECTIVITY",
+      "evidence_grade": "proof_candidate",
+      "statement": "An interval of aligned scales is characteristic for compactly supported depth distributions: a finite signed measure whose cosh scale transform vanishes on an interval is zero. No quantitative finite-scale coercivity follows from this alone."
+    }
+  ],
+  "validation": {
+    "command": "python3 staging/preproject-rh/A-RH-LCI-0003/check_multiscale_depth_alphabet.py",
+    "result": {
+      "exact_symbol": "PASS; maximum direct/spectral residual 6.040e-14 over 120 random configurations",
+      "cosh_vandermonde": "PASS; smallest sampled row-normalized determinant 7.992e-13",
+      "pointwise_rank_barrier": "PASS; one scale/four depths channel residual 2.220e-16 and quadratic energy 2.721e-33",
+      "low_frequency_barrier": "PASS; two scales/four depths Q_theta/theta decreased to 3.390e-12 at theta=1e-4",
+      "three_depth_two_scale": "PASS; sampled coercivity ratio 7.362319e-05 and random interface checks passed"
+    },
+    "boundary": "Floating-point checks validate finite identities and regression examples only; total positivity, compactness, and interface theorems require independent proof audit."
+  },
+  "current_frontier": [
+    "derive a source-compatible common residue/depth field across lambda=1 and lambda=3/4 compressions",
+    "use the two-scale theorem only for at most three coarse depth classes; do not assume four-bin coercivity",
+    "combine a coarse three-class scale certificate with the centered frequency-square trace to control within-class depth spread",
+    "determine whether prime-side trace estimates can be made simultaneous or integrated in the scale parameter",
+    "transfer the ideal symbol through smooth taper, finite section, tail, normalization leakage, and random-root limits inside the 5/108 budget"
+  ],
+  "cannot_imply": [
+    "The aligned-scale theorem does not establish that actual Zeta23 compressions share one depth-label lattice.",
+    "The pointwise null vectors are proof-method obstructions, not physical zeta-zero counterexamples.",
+    "No simultaneous small-defect estimate at M-1 source scales has been proved.",
+    "No explicit useful lower bound for c_* uniform in a growing alphabet has been proved.",
+    "No unconditional zeta-zero proportion is improved.",
+    "This checkpoint does not prove or refute the Riemann hypothesis."
+  ]
+}
