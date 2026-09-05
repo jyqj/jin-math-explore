@@ -1,0 +1,56 @@
+{
+  "schema": "jin-math-computation-handoff/v1",
+  "problem_id": "preproject-rh",
+  "window_id": "pre-genesis-sequential",
+  "attempt_id": "A-RH-CWR-0006",
+  "claim_id": null,
+  "objective_sha256": "d0007a5d19724806302f483632fe507fdfb50e0e4fc17378e8a105312bd65ec5",
+  "question": "Check the all-scale Toeplitz projection countermodel, cyclic-wrap identities, spectrum-preserving repair, the conditional compression ledger, and local real-atom matching with collision/deletion control.",
+  "domain": "Finite Hermitian Toeplitz matrices, unitary spectral matching, and finite real positive-mass sinc configurations.",
+  "assumptions": [
+    "Every analytic hypothesis is explicit in README.",
+    "Parent is frozen but not independently verified."
+  ],
+  "requested_evidence": "numerical_evidence",
+  "backend": {
+    "name": "Python/NumPy/mpmath/Fraction",
+    "version": "3.13.5",
+    "interface": "local foreground subprocess",
+    "inventory_snapshot_sha256": null
+  },
+  "exact_input": {
+    "seed": 2026090506,
+    "samples": 120,
+    "max_period": 120,
+    "scope": "objective_sha256 pins the bounded task README, NOT a canonical v13 Project objective."
+  },
+  "reproduction_command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python check_cyclic_wrap.py --samples 120 --max-period 120 --output validation.json",
+  "code_artifacts": [
+    {
+      "path": "check_cyclic_wrap.py",
+      "sha256": "bc486665fd4aa2d3fe5f4d09c41157a69ea63e1d3eff8924b5ae53b2b8c1bee6"
+    }
+  ],
+  "result_artifacts": [
+    {
+      "path": "validation.json",
+      "sha256": "0f93645b2dfa23f1e51e5f46fe2e5e6db62210784ba096c10b4c590df228c8d0"
+    }
+  ],
+  "computation_record": {
+    "path": "computation-record.json",
+    "sha256": "7b77d8670bb6e788fa070e8696824b8bc9b36813a1873cb821738845dd4be684"
+  },
+  "evidence_grade": "numerical_evidence",
+  "cannot_imply": [
+    "Solver proof candidates and self-checks only; no independent-verifier receipt or Lean proof.",
+    "The exact countermodel refutes only a relaxed projection-compression implication. It is not a zeta-zero configuration and does not refute the parent grid theorem or Lamzouri Proposition 2.1.",
+    "Analytic all-period claims are justified by README proofs, not by extrapolating finite rational checks.",
+    "The rounding lemma assumes the exact target spectrum and preserves it; an actual source projection may need additional rank/trace accounting.",
+    "The source cyclic-wrap estimate has not been established. A normalized one-step commutator bound is insufficient.",
+    "Local matching is restricted to real positive atoms and assumes their local sinc energy is controlled; no deduction from a global signed off-line defect is made.",
+    "Small discarded count does not imply negligible operator error without a proved Bessel bound.",
+    "No full repository CI/test suite, bundled inventory/record validator, upstream formal build or isolated verifier was run; direct GitHub DNS failed and package-local checks are reported separately.",
+    "No unconditional zero-proportion improvement, RH proof/refutation, or literature-wide novelty claim."
+  ]
+}

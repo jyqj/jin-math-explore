@@ -1,0 +1,128 @@
+{
+  "record_version": 1,
+  "execution_profile": "reproducible",
+  "status": "completed",
+  "task_file": {
+    "path": "README.md",
+    "sha256": "d0007a5d19724806302f483632fe507fdfb50e0e4fc17378e8a105312bd65ec5"
+  },
+  "task": {
+    "question": "Check the all-scale Toeplitz projection countermodel, cyclic-wrap identities, spectrum-preserving repair, the conditional compression ledger, and local real-atom matching with collision/deletion control.",
+    "domain": "Finite Hermitian Toeplitz matrices, unitary spectral matching, and finite real positive-mass sinc configurations.",
+    "assumptions": [
+      "Every analytic hypothesis is explicit in README.",
+      "Parent is frozen but not independently verified."
+    ],
+    "deliverables": [
+      "README.md",
+      "check_cyclic_wrap.py",
+      "validation.json",
+      "source-scope.md",
+      "computation-record.json",
+      "computation-handoff.json",
+      "checkpoint.json"
+    ]
+  },
+  "backend": {
+    "name": "Python",
+    "version": "3.13.5",
+    "interface": "local bounded foreground subprocess",
+    "libraries": {
+      "python": "3.13.5",
+      "numpy": "2.3.5",
+      "mpmath": "1.3.0"
+    }
+  },
+  "backend_decision": {
+    "selected": "Python/NumPy/mpmath and fractions.Fraction",
+    "selection_reason": "Small reproducible finite matrix and rational calculations; Python is the deliverable and no external CAS is required.",
+    "candidates": [
+      {
+        "name": "Mathematica",
+        "suitable_in_principle": true,
+        "readiness": "wolframscript and WolframKernel not on PATH; no broader installation claim"
+      },
+      {
+        "name": "SageMath",
+        "suitable_in_principle": true,
+        "readiness": "sage not on PATH"
+      },
+      {
+        "name": "Python",
+        "readiness": "Executable and imports live checked; final script executed successfully"
+      }
+    ],
+    "fallback_reason": "not-required; selected backend completed",
+    "inventory_boundary": "Direct readiness check, no bundled persistent inventory snapshot; connector API remains available after direct git DNS failure."
+  },
+  "precision": {
+    "mode": "exact integer/rational subchecks; binary64 matrix regressions; 70-decimal scalar evaluation",
+    "samples": 120,
+    "seed": 2026090506,
+    "matrix_acceptance": "Scale-aware tolerances frozen in code; not interval certification"
+  },
+  "execution": {
+    "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python check_cyclic_wrap.py --samples 120 --max-period 120 --output validation.json",
+    "exit_status": 0,
+    "input": "Exact period family and fixed seed/ranges in code and output",
+    "rerun_reason": "The final run added the exact one-step commutator formula after the initial development run; only final output is frozen."
+  },
+  "code_artifacts": [
+    {
+      "path": "check_cyclic_wrap.py",
+      "sha256": "bc486665fd4aa2d3fe5f4d09c41157a69ea63e1d3eff8924b5ae53b2b8c1bee6"
+    }
+  ],
+  "result_artifacts": [
+    {
+      "path": "validation.json",
+      "sha256": "0f93645b2dfa23f1e51e5f46fe2e5e6db62210784ba096c10b4c590df228c8d0"
+    }
+  ],
+  "result_summary": {
+    "all_assertions": "PASS",
+    "exact": {
+      "status": "PASS",
+      "integer_periods": "multiples of 6 in [6,120]",
+      "rational_all_row_counts_tested": 1260,
+      "polynomial_factorization": "alpha^3-6alpha+5=(1-alpha)(5-alpha-alpha^2)",
+      "countermodel_simple_spectral_fraction": "2/3",
+      "countermodel_normalized_wrap_squared": "5/18",
+      "countermodel_one_step_shift_squared": "4",
+      "conditional_zero_remainder_wrap_threshold": "0.00073696587917960292800410488562016178061548772305526707505339717353",
+      "threshold_formula": "(59-24*sqrt(6))/288"
+    },
+    "metrics": {
+      "max_wrap_formula_residual": 7.638334409421077e-14,
+      "max_shift_average_residual": 7.460698725481052e-14,
+      "max_projection_rounding_ratio": 0.9535435712396971,
+      "max_general_rounding_ratio": 0.5573232980907176,
+      "max_twisted_formula_residual": 6.750155989720952e-14,
+      "max_one_step_formula_residual": 7.105427357601002e-15,
+      "min_conditional_budget_slack": 0.9032317984318341,
+      "max_discarded_bessel_ratio": 1.0000000000000002
+    },
+    "local_matching_samples": 120
+  },
+  "verification": {
+    "evidence_level": "numerical-evidence",
+    "methods": [
+      "Exact integer polynomial/spectrum-budget witnesses and 1260 rational row-count checks.",
+      "Direct matrices against wrap, shift, spectral and rounding identities.",
+      "120 seeded matrix and 120 real-point matching regressions.",
+      "Package-local safe-path, JSON and SHA-256 checks."
+    ],
+    "exact_subcheck_boundary": "Finite exact checks do not independently certify universal theorem statements."
+  },
+  "limitations": [
+    "Solver proof candidates and self-checks only; no independent-verifier receipt or Lean proof.",
+    "The exact countermodel refutes only a relaxed projection-compression implication. It is not a zeta-zero configuration and does not refute the parent grid theorem or Lamzouri Proposition 2.1.",
+    "Analytic all-period claims are justified by README proofs, not by extrapolating finite rational checks.",
+    "The rounding lemma assumes the exact target spectrum and preserves it; an actual source projection may need additional rank/trace accounting.",
+    "The source cyclic-wrap estimate has not been established. A normalized one-step commutator bound is insufficient.",
+    "Local matching is restricted to real positive atoms and assumes their local sinc energy is controlled; no deduction from a global signed off-line defect is made.",
+    "Small discarded count does not imply negligible operator error without a proved Bessel bound.",
+    "No full repository CI/test suite, bundled inventory/record validator, upstream formal build or isolated verifier was run; direct GitHub DNS failed and package-local checks are reported separately.",
+    "No unconditional zero-proportion improvement, RH proof/refutation, or literature-wide novelty claim."
+  ]
+}

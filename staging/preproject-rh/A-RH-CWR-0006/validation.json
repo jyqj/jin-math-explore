@@ -1,0 +1,47 @@
+{
+  "backend": {
+    "python": "3.13.5",
+    "numpy": "2.3.5",
+    "mpmath": "1.3.0"
+  },
+  "exact": {
+    "status": "PASS",
+    "integer_periods": "multiples of 6 in [6,120]",
+    "rational_all_row_counts_tested": 1260,
+    "polynomial_factorization": "alpha^3-6alpha+5=(1-alpha)(5-alpha-alpha^2)",
+    "countermodel_simple_spectral_fraction": "2/3",
+    "countermodel_normalized_wrap_squared": "5/18",
+    "countermodel_one_step_shift_squared": "4",
+    "conditional_zero_remainder_wrap_threshold": "0.00073696587917960292800410488562016178061548772305526707505339717353",
+    "threshold_formula": "(59-24*sqrt(6))/288"
+  },
+  "numerical": {
+    "status": "PASS",
+    "samples": 120,
+    "seed": 2026090506,
+    "periods": "3..28",
+    "metrics": {
+      "max_wrap_formula_residual": 7.638334409421077e-14,
+      "max_shift_average_residual": 7.460698725481052e-14,
+      "max_projection_rounding_ratio": 0.9535435712396971,
+      "max_general_rounding_ratio": 0.5573232980907176,
+      "max_twisted_formula_residual": 6.750155989720952e-14,
+      "max_one_step_formula_residual": 7.105427357601002e-15,
+      "min_conditional_budget_slack": 0.9032317984318341,
+      "max_discarded_bessel_ratio": 1.0000000000000002
+    },
+    "local_matching_samples": 120,
+    "local_collision_example": {
+      "energy": 2.003902095069319,
+      "phase_cost": 0.0006999999999999924,
+      "phase_bound": 13.119303961946633,
+      "bad_mass": 0.0,
+      "collision_mass": 1.0,
+      "collision_bound": 1.1449034651124432,
+      "retained": 5,
+      "mass": 6.0
+    },
+    "scope_guard": "k collinear discarded unit atoms in dimension k^2 have count fraction 1/k but normalized HS energy 1"
+  },
+  "boundary": "Integer/rational subchecks plus seeded numerical tests; analytic statements remain solver proof candidates. No actual-zeta realization, source error closure, Lean build or independent verification."
+}

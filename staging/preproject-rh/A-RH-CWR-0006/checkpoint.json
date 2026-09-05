@@ -1,0 +1,172 @@
+{
+  "schema": "jin-math-preproject-checkpoint/v1",
+  "checkpoint_id": "CP-RH-CWR-CYCLIC-REPAIR-01",
+  "attempt_id": "A-RH-CWR-0006",
+  "parent_attempt": "A-RH-CTP-0005",
+  "issue": 48,
+  "status": "solver_proof_candidate",
+  "frozen": true,
+  "freeze_policy": "Files become immutable at publishing commit; commit identifier recorded in Issue #48 to avoid self-reference. Repairs require a successor.",
+  "actor": {
+    "kind": "agent",
+    "id": "openai-gpt-6-pro",
+    "run_id": "run-20260905-rh-cyclic-wrap-06",
+    "role": "solver"
+  },
+  "branch": "attempt/preproject-rh/cyclic-wrap-06",
+  "observed_parent_head": "75ad472d97ed52b0fa8978b177fbe3ed98b592b7",
+  "observed_main_head": "39002c5a6af8c7b7f093589e6a76cfd218fcbb99",
+  "source_dependencies": [
+    {
+      "identifier": "arXiv:2609.02882v1",
+      "url": "https://arxiv.org/html/2609.02882v1",
+      "scope": "Proposition 2.1 and its proof reread; context only, no source-formal replay",
+      "formal_replay": false
+    }
+  ],
+  "parent_artifact": {
+    "repository_path": "staging/preproject-rh/A-RH-CTP-0005/README.md",
+    "sha256": "13d8192092241ebd75bb15b22b6af3a5df6a6a6aa816d6239f8a57bdf82a3f3e"
+  },
+  "artifacts": [
+    "README.md",
+    "check_cyclic_wrap.py",
+    "validation.json",
+    "source-scope.md",
+    "computation-record.json",
+    "computation-handoff.json",
+    "checkpoint.json"
+  ],
+  "artifact_hashes": [
+    {
+      "path": "README.md",
+      "sha256": "d0007a5d19724806302f483632fe507fdfb50e0e4fc17378e8a105312bd65ec5"
+    },
+    {
+      "path": "check_cyclic_wrap.py",
+      "sha256": "bc486665fd4aa2d3fe5f4d09c41157a69ea63e1d3eff8924b5ae53b2b8c1bee6"
+    },
+    {
+      "path": "validation.json",
+      "sha256": "0f93645b2dfa23f1e51e5f46fe2e5e6db62210784ba096c10b4c590df228c8d0"
+    },
+    {
+      "path": "source-scope.md",
+      "sha256": "70c20992266fe4461c3b440a7f928794d076ca350e348a63ba2d5417c32573ba"
+    },
+    {
+      "path": "computation-record.json",
+      "sha256": "7b77d8670bb6e788fa070e8696824b8bc9b36813a1873cb821738845dd4be684"
+    },
+    {
+      "path": "computation-handoff.json",
+      "sha256": "952080bbe2aede7537253c296e1ee3cbaccc1b781b9141d09dad211448d628b5"
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "C-CWR-ALL-SCALE-TOEPLITZ-NOGO",
+      "statement": "For P=6k, Q=I+T with T supported at offsets +/-5k has spectrum 0^k,1^(4k),2^k, zero projection remainder and satisfies every rectangular scalar second-moment budget while its 3/4 centered compression vanishes.",
+      "evidence_grade": "proof_candidate",
+      "evidence": [
+        "README.md Section 1",
+        "check_cyclic_wrap.py"
+      ],
+      "quantifier_scope": "Only the finite domains and explicit hypotheses in the named section; not actual zeta zeros.",
+      "novelty_boundary": "No literature-wide novelty claim.",
+      "independent_verifier_receipt": null
+    },
+    {
+      "claim_id": "C-CWR-WRAP-IDENTITY",
+      "statement": "Equations (6)-(9) give exact cyclic-wrap, one-step commutator and averaged-shift identities for Hermitian Toeplitz matrices; the far-lag example has normalized wrap 5/18 and normalized one-step error 4/P.",
+      "evidence_grade": "proof_candidate",
+      "evidence": [
+        "README.md Section 2",
+        "check_cyclic_wrap.py"
+      ],
+      "quantifier_scope": "Only the finite domains and explicit hypotheses in the named section; not actual zeta zeros.",
+      "novelty_boundary": "No literature-wide novelty claim.",
+      "independent_verifier_receipt": null
+    },
+    {
+      "claim_id": "C-CWR-SPECTRAL-ROUNDING",
+      "statement": "A Hermitian 0/1/2-spectrum Q has a spectrum-preserving circulant M with squared discrepancy at most twice its circulantization error. General A,Q satisfy (11); the Toeplitz compression bound is (12).",
+      "evidence_grade": "proof_candidate",
+      "evidence": [
+        "README.md Section 3",
+        "check_cyclic_wrap.py"
+      ],
+      "quantifier_scope": "Only the finite domains and explicit hypotheses in the named section; not actual zeta zeros.",
+      "novelty_boundary": "No literature-wide novelty claim.",
+      "independent_verifier_receipt": null
+    },
+    {
+      "claim_id": "C-CWR-CONDITIONAL-LEDGER",
+      "statement": "With the explicitly supplied exact spectral counts, projection remainder and moment bounds, equation (13) is necessary. A zero-remainder s=2/3 state at alpha=3/4 needs wrap squared at least (59-24 sqrt(6))/288.",
+      "evidence_grade": "proof_candidate",
+      "evidence": [
+        "README.md Section 4",
+        "check_cyclic_wrap.py"
+      ],
+      "quantifier_scope": "Only the finite domains and explicit hypotheses in the named section; not actual zeta zeros.",
+      "novelty_boundary": "No literature-wide novelty claim.",
+      "independent_verifier_receipt": null
+    },
+    {
+      "claim_id": "C-CWR-LOCAL-REAL-MATCHING",
+      "statement": "For real atoms in diameter R with masses 1 or 2, equations (16)-(17) give a local phase, displacement bound and collision-cleaned injection after quantified mass deletion.",
+      "evidence_grade": "proof_candidate",
+      "evidence": [
+        "README.md Section 5",
+        "check_cyclic_wrap.py"
+      ],
+      "quantifier_scope": "Only the finite domains and explicit hypotheses in the named section; not actual zeta zeros.",
+      "novelty_boundary": "No literature-wide novelty claim.",
+      "independent_verifier_receipt": null
+    },
+    {
+      "claim_id": "C-CWR-DELETION-BESSEL",
+      "statement": "A proved Bessel upper bound H<=B I yields ||H||_F^2<=B W_discarded. k collinear atoms in dimension k^2 refute a count-fraction-only operator estimate.",
+      "evidence_grade": "proof_candidate",
+      "evidence": [
+        "README.md Section 5",
+        "check_cyclic_wrap.py"
+      ],
+      "quantifier_scope": "Only the finite domains and explicit hypotheses in the named section; not actual zeta zeros.",
+      "novelty_boundary": "No literature-wide novelty claim.",
+      "independent_verifier_receipt": null
+    }
+  ],
+  "computation_handoff": {
+    "path": "computation-handoff.json",
+    "sha256": "952080bbe2aede7537253c296e1ee3cbaccc1b781b9141d09dad211448d628b5"
+  },
+  "validation": {
+    "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python check_cyclic_wrap.py --samples 120 --max-period 120 --output validation.json",
+    "result": "PASS all program assertions; actual final output in validation.json",
+    "evidence_grade": "numerical_evidence",
+    "repository_ci_run": false,
+    "lean_build_run": false,
+    "isolated_verifier_run": false
+  },
+  "current_frontier": [
+    "Prove source-compatible local cyclic-wrap control, not merely Toeplitz or a normalized one-step commutator bound.",
+    "Track source projection trace and simple-rank deficits before using the spectrum-preserving repair.",
+    "Obtain positive local real-atom energy from the actual signed source form or explicitly isolate a controlled positive sector.",
+    "Combine local matching with uniform exceptional Bessel control and the predecessor taper/normalization ledger.",
+    "Independently audit the frozen finite package before authority promotion."
+  ],
+  "cannot_imply": [
+    "Solver proof candidates and self-checks only; no independent-verifier receipt or Lean proof.",
+    "The exact countermodel refutes only a relaxed projection-compression implication. It is not a zeta-zero configuration and does not refute the parent grid theorem or Lamzouri Proposition 2.1.",
+    "Analytic all-period claims are justified by README proofs, not by extrapolating finite rational checks.",
+    "The rounding lemma assumes the exact target spectrum and preserves it; an actual source projection may need additional rank/trace accounting.",
+    "The source cyclic-wrap estimate has not been established. A normalized one-step commutator bound is insufficient.",
+    "Local matching is restricted to real positive atoms and assumes their local sinc energy is controlled; no deduction from a global signed off-line defect is made.",
+    "Small discarded count does not imply negligible operator error without a proved Bessel bound.",
+    "No full repository CI/test suite, bundled inventory/record validator, upstream formal build or isolated verifier was run; direct GitHub DNS failed and package-local checks are reported separately.",
+    "No unconditional zero-proportion improvement, RH proof/refutation, or literature-wide novelty claim."
+  ],
+  "independent_verifier_required": true,
+  "independent_verifier_receipt": null
+}
