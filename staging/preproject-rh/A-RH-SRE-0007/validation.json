@@ -1,0 +1,64 @@
+{
+  "backend": {
+    "python": "3.13.5",
+    "numpy": "2.3.5",
+    "mpmath": "1.3.0"
+  },
+  "exact": {
+    "status": "PASS",
+    "exact_clustered_cases": 99,
+    "deletion_constant": "5.127813823118944103403322711220308630924996542264827258938580432501971",
+    "retained_energy_constant": "6.145723681172986205778819600068696412985754162282104224681816852075234",
+    "clustered_example": {
+      "k": 10000,
+      "defect_over_mass": "999933326667/20000000000000000",
+      "raw_energy_over_mass": "3333/20000",
+      "raw_energy_over_defect": "1000000000000/300009999"
+    },
+    "shallow_pair": {
+      "a": "0.001",
+      "defect": "0.0000006666667555555619047621869488621666401323544212009820884877084504564461",
+      "defect_over_a_squared": "0.6666667555555619047621869488621666401323544212009820884877084504564461",
+      "scope": "one genuine off-real conjugate pair has D -> 0 as depth -> 0"
+    }
+  },
+  "numerical": {
+    "status": "PASS",
+    "samples": 120,
+    "seed": 2026090507,
+    "quadrature_nodes": 160,
+    "near_zero_equality_case": {
+      "defect": 7.105427357601002e-15,
+      "mass": 12.0,
+      "raw_energy": 8.509616436074581e-32,
+      "retained_energy": 8.509616436074581e-32,
+      "removed": 0,
+      "retained": 8,
+      "local_extra": 0,
+      "intrusive_simple_anchors": 0,
+      "slack_identity_residual": 7.105427357601002e-15,
+      "gram_decomposition_residual": 2.212952522637493e-15,
+      "gram_integral_residual": 3.374623894073413e-14,
+      "kernel_hs_residual": 7.105427357601002e-15,
+      "z_bound_ratio": 0.0,
+      "trace_bound_ratio": 0.0,
+      "retained_energy_over_defect": 0.0,
+      "removed_over_defect": 0.0,
+      "retained_bessel_norm": 1.0000000000000004
+    },
+    "max_metrics": {
+      "slack_identity_residual": 3.4924596548080444e-10,
+      "gram_decomposition_residual": 7.160994314773704e-14,
+      "gram_integral_residual": 7.247954274508562e-14,
+      "kernel_hs_residual": 3.1781382858753204e-08,
+      "z_bound_ratio": 1.0000000000000164,
+      "trace_bound_ratio": 0.25000000695913366,
+      "retained_energy_over_defect": 1.00000000000004,
+      "removed_over_defect": 0.3892093113786045,
+      "retained_bessel_norm": 1.613549009007682
+    },
+    "near_saturation_cases": 36,
+    "cases_with_nonempty_retained": 120
+  },
+  "boundary": "Proof candidates plus exact scalar and floating-point finite tests. Quadrature is not interval-certified. No actual-zeta near-saturation assertion, full-multiset matching, Lean build or independent verification."
+}
