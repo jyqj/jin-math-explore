@@ -1,0 +1,162 @@
+{
+  "schema": "jin-math-preproject-checkpoint/v1",
+  "checkpoint_id": "CP-RH-AOC-ANCHOR-COVERAGE-01",
+  "attempt_id": "A-RH-AOC-0008",
+  "parent_attempt": "A-RH-SRE-0007",
+  "issue": 58,
+  "status": "solver_proof_candidate",
+  "frozen": true,
+  "freeze_policy": "Seven files immutable after publication; commit identifier recorded externally in Issue #58. Repairs require a successor.",
+  "actor": {
+    "kind": "agent",
+    "id": "openai-gpt-6-pro",
+    "run_id": "run-20260905-rh-anchor-coverage-08",
+    "role": "solver"
+  },
+  "solver_context_access": true,
+  "branch": "attempt/preproject-rh/anchor-coverage-08",
+  "observed_parent_head": "ddb7b51cfbcc805110c35dcaf03f2c2bc65b0ec7",
+  "observed_main_head": "39002c5a6af8c7b7f093589e6a76cfd218fcbb99",
+  "source_dependencies": [
+    {
+      "locator": "arXiv:2609.02882v1",
+      "scope": "Proposition 2.1 setup; primary abstract/HTML reread 2026-09-05; no formal rebuild."
+    }
+  ],
+  "parent_artifact": {
+    "repository": "jyqj/jin-math-explore",
+    "commit": "ddb7b51cfbcc805110c35dcaf03f2c2bc65b0ec7",
+    "path": "staging/preproject-rh/A-RH-SRE-0007/README.md",
+    "sha256": "31b43e92673ece01af51c4f8c97b9c22ad1db4cfd2e457693a37f3d472d3a902",
+    "authority": "Frozen proof candidate; no independent receipt at startup."
+  },
+  "artifacts": [
+    "README.md",
+    "check_anchor_coverage.py",
+    "validation.json",
+    "source-scope.md",
+    "computation-record.json",
+    "computation-handoff.json",
+    "checkpoint.json"
+  ],
+  "artifact_hashes": [
+    {
+      "path": "README.md",
+      "sha256": "71f47327488854ff554077944199d0273fe32240694530fd5d2586a01f0efdfa"
+    },
+    {
+      "path": "check_anchor_coverage.py",
+      "sha256": "5a56c2be795e10e23880904fcfaaeb64ae388e2b980fa5688f66312d33c13a39"
+    },
+    {
+      "path": "validation.json",
+      "sha256": "3c27c04f67401eaa13c03b180b73e882d5c3d9bf207b8b070a2f0bc4d60c273d"
+    },
+    {
+      "path": "source-scope.md",
+      "sha256": "65cb767951c6d8a51ddd38852135786c066c85b3e728f6fc85e2038a305c782b"
+    },
+    {
+      "path": "computation-record.json",
+      "sha256": "69c7068e52abafb1e29856b7e7e1f60f85516754f112f524573f2bb255a97f4b"
+    },
+    {
+      "path": "computation-handoff.json",
+      "sha256": "9d1356f755fb93c28e0e3c62b827624c2a1fc8ce702936319d6d71594f320f70"
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "C-AOC-MULTIPLICITY-MASS",
+      "evidence_grade": "proof_candidate",
+      "statement": "For every finite genuine conjugation-invariant box multiset, high-multiplicity mass is at most 3D/2 and repeated-pair mass at most D.",
+      "domain_and_assumptions": "README Section 1; integer multiplicities and distinct aggregated locations",
+      "dependency": "Pinned parent and source setup; required slack re-derived in README (1).",
+      "evidence_refs": [
+        "README.md",
+        "check_anchor_coverage.py",
+        "validation.json"
+      ],
+      "cannot_imply": "No actual-zeta coverage, source-budget closure, independent verification or RH conclusion."
+    },
+    {
+      "claim_id": "C-AOC-POSITIVE-CROSS-ENERGY",
+      "evidence_grade": "proof_candidate",
+      "statement": "For the selected separated and depth-bounded pair family and separated simple anchors, the positive g/h cross energy is at most Lambda D/2, with explicit Lambda in (4).",
+      "domain_and_assumptions": "README Sections 2-3; selected Bessel, depth and multiplicity hypotheses",
+      "dependency": "Pinned parent and source setup; required slack re-derived in README (1).",
+      "evidence_refs": [
+        "README.md",
+        "check_anchor_coverage.py",
+        "validation.json"
+      ],
+      "cannot_imply": "No actual-zeta coverage, source-budget closure, independent verification or RH conclusion."
+    },
+    {
+      "claim_id": "C-AOC-COVERED-PAIR-MASS",
+      "evidence_grade": "proof_candidate",
+      "statement": "The exact modulus identity (6) implies covered squared-depth bound (7) and the mass bound (8) with uncovered mass H_R retained.",
+      "domain_and_assumptions": "README Section 4; selected family and fixed R,a0,A0",
+      "dependency": "Pinned parent and source setup; required slack re-derived in README (1).",
+      "evidence_refs": [
+        "README.md",
+        "check_anchor_coverage.py",
+        "validation.json"
+      ],
+      "cannot_imply": "No actual-zeta coverage, source-budget closure, independent verification or RH conclusion."
+    },
+    {
+      "claim_id": "C-AOC-GENUINE-HOLE-OBSTRUCTION",
+      "evidence_grade": "proof_candidate",
+      "statement": "The simple block 0..4k-1 and pairs centered at 5k..6k-1 with depth log(2) have non-real fraction 1/3, simple fraction 2/3, no fixed-radius anchor coverage, and 0<=D<=(9/8)(1+log k).",
+      "domain_and_assumptions": "README Section 5; all integers k>=1; genuine finite exponentials, not zeta zeros",
+      "dependency": "Pinned parent and source setup; required slack re-derived in README (1).",
+      "evidence_refs": [
+        "README.md",
+        "check_anchor_coverage.py",
+        "validation.json"
+      ],
+      "cannot_imply": "No actual-zeta coverage, source-budget closure, independent verification or RH conclusion."
+    },
+    {
+      "claim_id": "C-AOC-SHORT-SCALE-DETECTION",
+      "evidence_grade": "proof_candidate",
+      "statement": "For the hole family and each fixed 0<alpha<1, the continuously normalized shorter-box moment divided by 6k tends to 4/(3alpha), exceeding the target budget by (1-alpha^2)/(3alpha); at alpha=3/4 the gap is 7/36.",
+      "domain_and_assumptions": "README Section 6; fixed alpha, continuous nested box normalization",
+      "dependency": "Pinned parent and source setup; required slack re-derived in README (1).",
+      "evidence_refs": [
+        "README.md",
+        "check_anchor_coverage.py",
+        "validation.json"
+      ],
+      "cannot_imply": "No actual-zeta coverage, source-budget closure, independent verification or RH conclusion."
+    }
+  ],
+  "computation_handoff": {
+    "path": "computation-handoff.json",
+    "sha256": "9d1356f755fb93c28e0e3c62b827624c2a1fc8ce702936319d6d71594f320f70"
+  },
+  "validation": {
+    "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python check_anchor_coverage.py --samples 120 --output validation.json",
+    "exit_status": 0,
+    "scope": "198 finite integer checks, 120 seeded exponential cases, powers-of-two phase sums through k=256, small direct sums and integral consistency."
+  },
+  "current_frontier": [
+    "Control short-scale energy of general hole phases; do not infer hole coverage from one-scale near equality.",
+    "Derive source selected-center separation/local occupancy or pay explicit exceptions.",
+    "Connect simple extraction, covered pair mass and hole energy with source localization, discarded operator energy and normalization."
+  ],
+  "cannot_imply": [
+    "All analytic claims are solver proof candidates; no independent-verifier receipt or formal build.",
+    "Pair-center separation or bounded local occupancy is an explicit hypothesis, not extracted from the signed defect.",
+    "The covered-pair bound leaves the hole mass H_R explicit; the genuine example refutes automatic H_R=o(N) from the one-scale hypotheses.",
+    "The hole example is a genuine finite exponential multiset, not actual zeta zeros. Its long budget holds only asymptotically and it violates the fixed shorter-scale budget.",
+    "No general decomposition into homogeneous hole phases, actual arithmetic D=o(N), weighted-to-unweighted/profile transfer, or completed two-scale error budget.",
+    "Multiplicity deletion cost does not imply small discarded Hilbert-Schmidt operator energy.",
+    "No unconditional zeta-zero proportion, RH proof/refutation, or literature-wide novelty claim.",
+    "No full repository CI, bundled inventory/record runner or upstream Lean build; only package-local structure/hash checks and bounded computation.",
+    "Gauss-Legendre and mpmath quadrature are not interval certificates; numerical tests do not prove all-size statements."
+  ],
+  "independent_verifier_required": true,
+  "independent_verifier_receipt": null
+}

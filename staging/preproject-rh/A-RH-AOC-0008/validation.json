@@ -1,0 +1,125 @@
+{
+  "backend": {
+    "python": "3.13.5",
+    "numpy": "2.3.5",
+    "mpmath": "1.3.0"
+  },
+  "scalar_and_phase": {
+    "status": "PASS",
+    "integer_multiplicity_cases": 198,
+    "modulus_identity_max_residual": "3.11150763893057085357203202689006212029512608436058356655056e-61",
+    "special_lambda": "12.3731431547079875086390914787155786039598460028194539148289",
+    "phase_depth": "log(2)",
+    "phase_rows": [
+      {
+        "k": 1,
+        "defect": "0.318201264342920878955412056011503293541893214227186066104201",
+        "defect_over_mass": "0.0530335440571534798259020093352505489236488690378643443507002",
+        "defect_upper": "1.125",
+        "short_moment_over_mass": "1.52842246502816265828835746083984997950690864516560882964267",
+        "nearest_simple_distance": 2,
+        "nonreal_mass_fraction": "1/3"
+      },
+      {
+        "k": 2,
+        "defect": "0.460759681806988570500223701452667191692723855842095321550875",
+        "defect_over_mass": "0.0383966401505823808750186417877222659743936546535079434625729",
+        "defect_upper": "1.90479057812993847309438613664044863908493765115528716088576",
+        "short_moment_over_mass": "1.57999135888288406695006347916774627815478139569448050720454",
+        "nearest_simple_distance": 3,
+        "nonreal_mass_fraction": "1/3"
+      },
+      {
+        "k": 4,
+        "defect": "0.614032609611026620172654519580074458852595825500312315266416",
+        "defect_over_mass": "0.0255846920671261091738606049825031024521914927291796798027673",
+        "defect_upper": "2.68458115625987694618877227328089727816987530231057432177153",
+        "short_moment_over_mass": "1.65833239385865569512892147990533509755261307569760605329493",
+        "nearest_simple_distance": 5,
+        "nonreal_mass_fraction": "1/3"
+      },
+      {
+        "k": 8,
+        "defect": "0.770778436426046137119160410536135677278266993331532720439136",
+        "defect_over_mass": "0.016057884092209294523315841886169493276630562361073598342482",
+        "defect_upper": "3.4643717343898154192831584099213459172548129534658614826573",
+        "short_moment_over_mass": "1.70472288951947514756495256595763638394745717148828146080111",
+        "nearest_simple_distance": 9,
+        "nonreal_mass_fraction": "1/3"
+      },
+      {
+        "k": 16,
+        "defect": "0.92847246795589902391925527755789131317296862333571611932905",
+        "defect_over_mass": "0.00967158820787394816582557580789470117888508982641370957634427",
+        "defect_upper": "4.24416231251975389237754454656179455633975060462114864354306",
+        "short_moment_over_mass": "1.73469135049344243276830571104215898160520832267108452680566",
+        "nearest_simple_distance": 17,
+        "nonreal_mass_fraction": "1/3"
+      },
+      {
+        "k": 32,
+        "defect": "1.08640951320195908965845545403223474693051897829555389682417",
+        "defect_over_mass": "0.00565838288126020359197112215641788930692978634528934321262586",
+        "defect_upper": "5.02395289064969236547193068320224319542468825577643580442882",
+        "short_moment_over_mass": "1.75297536953088923209355491982149030537947495356569101861213",
+        "nearest_simple_distance": 33,
+        "nonreal_mass_fraction": "1/3"
+      },
+      {
+        "k": 64,
+        "defect": "1.24440770452135749902042547780435292761103150494352349752919",
+        "defect_over_mass": "0.00324064506385770182036569134844883574898706121079042577481559",
+        "defect_upper": "5.80374346877963083856631681984269183450962590693172296531459",
+        "short_moment_over_mass": "1.76374986669151674054751107324014788980597311464284896819964",
+        "nearest_simple_distance": 65,
+        "nonreal_mass_fraction": "1/3"
+      },
+      {
+        "k": 128,
+        "defect": "1.40242120724043832148047720734691642002121848894707140324697",
+        "defect_over_mass": "0.00182606928026098739776103803039963075523596157414983255631117",
+        "defect_upper": "6.58353404690956931166070295648314047359456355808701012620035",
+        "short_moment_over_mass": "1.76995084324208386082164244380302576495213350874350773388219",
+        "nearest_simple_distance": 129,
+        "nonreal_mass_fraction": "1/3"
+      },
+      {
+        "k": 256,
+        "defect": "1.56043853936998177302716746399235939539499767993832988543406",
+        "defect_over_mass": "0.0010159105074023318834812288177033589813769516145431835191628",
+        "defect_upper": "7.36332462503950778475508909312358911267950120924229728708612",
+        "short_moment_over_mass": "1.77345786825937201794591448642783132715667396098255418477652",
+        "nearest_simple_distance": 257,
+        "nonreal_mass_fraction": "1/3"
+      }
+    ],
+    "phase_max_direct_residual": 1.4210854715202004e-14,
+    "short_limit": "16/9",
+    "short_budget": "19/12",
+    "short_limit_excess": "7/36"
+  },
+  "pair_block_integral": {
+    "status": "PASS",
+    "k_values": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "max_residual": "4.936157918492027621353092880913726967403e-40",
+    "scope": "mpmath quadrature consistency, not interval certification"
+  },
+  "numerical": {
+    "status": "PASS",
+    "samples": 120,
+    "seed": 2026090508,
+    "quadrature_nodes": 160,
+    "max_kernel_residual": 1.6697754290362354e-13,
+    "max_cross_over_bound": 0.08169860636083752,
+    "max_g_bessel_ratio": 0.29722432171600577,
+    "max_h_bessel_ratio": 0.11626018862098556,
+    "total_covered_pairs": 228,
+    "cases_with_unselected_deep_pair": 40
+  },
+  "boundary": "Solver derivations plus exact integer checks, high-precision finite sums and seeded quadrature tests. No independent verification, actual-zeta coverage, arithmetic moment estimate or RH result."
+}

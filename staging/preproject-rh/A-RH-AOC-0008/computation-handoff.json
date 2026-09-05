@@ -1,0 +1,68 @@
+{
+  "schema": "jin-math-computation-handoff/v1",
+  "problem_id": "preproject-rh",
+  "window_id": "pre-genesis-sequential",
+  "attempt_id": "A-RH-AOC-0008",
+  "claim_id": null,
+  "objective_sha256": "71f47327488854ff554077944199d0273fe32240694530fd5d2586a01f0efdfa",
+  "question": "Derive a positive simple-anchor/pair cross-energy and covered-depth bound from the signed defect, and test the missing coverage by genuine finite exponential hole phases and their short moments.",
+  "domain": "Finite conjugation-invariant box exponential multisets; selected separated real anchors and reflection pairs; continuous nested box operators.",
+  "assumptions": [
+    "Finite distinct locations with multiplicities aggregated; pair members have equal integer multiplicities.",
+    "Selected anchors are 1/2-separated; selected pair centers are q-separated, have depths <=A0 and multiplicities <=M. These conditions need not hold for unselected pairs.",
+    "The hole family and short-limit theorem use exactly the locations and a=log(2) in README Sections 5-6."
+  ],
+  "requested_evidence": "numerical_evidence",
+  "backend": {
+    "name": "Python/NumPy/mpmath/Fraction",
+    "version": "3.13.5",
+    "interface": "local foreground subprocess",
+    "inventory_snapshot_sha256": null
+  },
+  "exact_input": {
+    "seed": 2026090508,
+    "samples": 120,
+    "quadrature_nodes": 160,
+    "phase_k": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32,
+      64,
+      128,
+      256
+    ],
+    "scope": "objective_sha256 pins this bounded task README, not a canonical v13 Project objective."
+  },
+  "reproduction_command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python check_anchor_coverage.py --samples 120 --output validation.json",
+  "code_artifacts": [
+    {
+      "path": "check_anchor_coverage.py",
+      "sha256": "5a56c2be795e10e23880904fcfaaeb64ae388e2b980fa5688f66312d33c13a39"
+    }
+  ],
+  "result_artifacts": [
+    {
+      "path": "validation.json",
+      "sha256": "3c27c04f67401eaa13c03b180b73e882d5c3d9bf207b8b070a2f0bc4d60c273d"
+    }
+  ],
+  "computation_record": {
+    "path": "computation-record.json",
+    "sha256": "69c7068e52abafb1e29856b7e7e1f60f85516754f112f524573f2bb255a97f4b"
+  },
+  "evidence_grade": "numerical_evidence",
+  "cannot_imply": [
+    "All analytic claims are solver proof candidates; no independent-verifier receipt or formal build.",
+    "Pair-center separation or bounded local occupancy is an explicit hypothesis, not extracted from the signed defect.",
+    "The covered-pair bound leaves the hole mass H_R explicit; the genuine example refutes automatic H_R=o(N) from the one-scale hypotheses.",
+    "The hole example is a genuine finite exponential multiset, not actual zeta zeros. Its long budget holds only asymptotically and it violates the fixed shorter-scale budget.",
+    "No general decomposition into homogeneous hole phases, actual arithmetic D=o(N), weighted-to-unweighted/profile transfer, or completed two-scale error budget.",
+    "Multiplicity deletion cost does not imply small discarded Hilbert-Schmidt operator energy.",
+    "No unconditional zeta-zero proportion, RH proof/refutation, or literature-wide novelty claim.",
+    "No full repository CI, bundled inventory/record runner or upstream Lean build; only package-local structure/hash checks and bounded computation.",
+    "Gauss-Legendre and mpmath quadrature are not interval certificates; numerical tests do not prove all-size statements."
+  ]
+}
