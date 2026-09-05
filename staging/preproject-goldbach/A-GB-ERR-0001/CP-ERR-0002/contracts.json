@@ -1,0 +1,102 @@
+{
+  "schema": "jin-math-g45-contract/v1",
+  "attempt_id": "A-GB-ERR-0001",
+  "checkpoint": "CP-ERR-0002",
+  "local_status": "conditional_solver_candidate",
+  "global_closure": false,
+  "independent_verification": false,
+  "sequence_action": "enlarge_for_upper_bound_only",
+  "epsilon0_uniformity": "all 0<epsilon0<1; local onset no longer depends on epsilon0",
+  "normalized_F": {
+    "sup": "1",
+    "lipschitz": "1",
+    "domain": [
+      "2",
+      "45/8"
+    ]
+  },
+  "sieve_constant": {
+    "name": "C_s",
+    "uniform_in_eta": true,
+    "numeric_value": null,
+    "depends_at_most_on": [
+      "fixed product-condition K"
+    ],
+    "status": "U-LS external quantified input adopted; original-proof audit incomplete",
+    "may_assume_at_least_one": true
+  },
+  "normalization_log_power": 2,
+  "primitive_defects": {
+    "q_N": "abs(Li(N)*V_N(N^a)/((2*exp(-gamma_E)/a)*S(N))-1); O_a(1/log(N)+N^-a)",
+    "r_N": "sup_{a<=u<=1/3} abs(sum_{N^a<=p<=N^u}1/p-log(u/a)); O_a(1/log(N))",
+    "h": "B*loglog(N)/log(N)",
+    "e_N": "C_s*(eta+eta^-8*exp(K)*(2*a*log(N))^(-1/3))",
+    "BV": "2*C_BV,A0*exp(8*eta^-3)*(log(N))^(2-A0)"
+  },
+  "side_conditions": [
+    "N even >=4 and sufficiently large for adopted sources",
+    "z=N^a>=2",
+    "0<eta<1/8; fixed before N",
+    "A0>2; B chosen from classical BV",
+    "h<=5/318",
+    "q_N<=1",
+    "r_N<=1"
+  ],
+  "rows": {
+    "G4": {
+      "needed_direction": "upper",
+      "coefficients": {
+        "b": "1/3",
+        "s_min": "53/24",
+        "legal_h_max": "5/318",
+        "K_normalization": "2173/12",
+        "K_level_shift": "148877/24",
+        "K_prime_measure": "2809/6",
+        "K_reciprocal": "212",
+        "K_sieve": "3445/6"
+      },
+      "reciprocal_cost_present": true,
+      "uncompressed_formula": "proof.md equation (21)",
+      "deficit_formula": "A_b*q_N+B_b*h+C_b*r_N+212*N^-a+D_b*e_N+BV",
+      "main_coefficient": "g_b=(4/a)*integral_a^b phi((1/2-u)/a)*du/u",
+      "certified_rational_cap": "2360573/100000",
+      "source_equations": [
+        "5.17-5.25"
+      ]
+    },
+    "G5": {
+      "needed_direction": "upper",
+      "coefficients": {
+        "b": "3/11",
+        "s_min": "265/88",
+        "legal_h_max": "89/1166",
+        "K_normalization": "6095/44",
+        "K_level_shift": "446631/88",
+        "K_prime_measure": "8427/22",
+        "K_reciprocal": "212",
+        "K_sieve": "10759/22"
+      },
+      "reciprocal_cost_present": true,
+      "uncompressed_formula": "proof.md equation (21)",
+      "deficit_formula": "A_b*q_N+B_b*h+C_b*r_N+212*N^-a+D_b*e_N+BV",
+      "main_coefficient": "g_b=(4/a)*integral_a^b phi((1/2-u)/a)*du/u",
+      "certified_rational_cap": "1951913/100000",
+      "source_equations": [
+        "5.26-5.27"
+      ]
+    }
+  },
+  "findings": [
+    "F-ERR-009",
+    "F-ERR-010",
+    "F-ERR-011",
+    "F-ERR-012",
+    "F-ERR-013",
+    "F-ERR-014"
+  ],
+  "cannot_imply": [
+    "The uniform C_s hypothesis is not proved by the Python checker.",
+    "The enlarged-set step is not valid for lower bounds.",
+    "These two contracts do not settle all twelve terms or the Li-Liu theorem."
+  ]
+}

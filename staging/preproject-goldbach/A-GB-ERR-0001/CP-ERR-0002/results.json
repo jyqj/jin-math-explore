@@ -1,0 +1,239 @@
+{
+  "schema": "jin-math-g45-certificate/v1",
+  "attempt_id": "A-GB-ERR-0001",
+  "checkpoint": "CP-ERR-0002",
+  "backend": {
+    "python": "3.13.5",
+    "mpmath": "1.3.0",
+    "iv_dps": 50
+  },
+  "method": "Fubini reduction; interval midpoint plus derivative remainder for J; natural interval cubature for common K",
+  "midpoint_subintervals_per_piece": 4096,
+  "midpoint_evaluations": 12288,
+  "cubature_grid_per_axis": 64,
+  "cubature_cells": 4096,
+  "constants": {
+    "alpha": "4/53",
+    "A": "53/8",
+    "s_max": "45/8",
+    "normalized_F_sup": "1",
+    "normalized_F_Lipschitz": "1",
+    "second_derivative_envelope": "560/9",
+    "midpoint_D2": "64",
+    "coefficients": {
+      "G4": {
+        "b": "1/3",
+        "s_min": "53/24",
+        "legal_h_max": "5/318",
+        "K_normalization": "2173/12",
+        "K_level_shift": "148877/24",
+        "K_prime_measure": "2809/6",
+        "K_reciprocal": "212",
+        "K_sieve": "3445/6"
+      },
+      "G5": {
+        "b": "3/11",
+        "s_min": "265/88",
+        "legal_h_max": "89/1166",
+        "K_normalization": "6095/44",
+        "K_level_shift": "446631/88",
+        "K_prime_measure": "8427/22",
+        "K_reciprocal": "212",
+        "K_sieve": "10759/22"
+      }
+    },
+    "pair_fixed_sieve_coefficient": "35086/33"
+  },
+  "common_K": {
+    "binary": [
+      [
+        0,
+        505155953076582870952868421910096566310950208512011,
+        -181,
+        169
+      ],
+      [
+        0,
+        714621382022538100250872176802243203419375155255049,
+        -181,
+        169
+      ]
+    ],
+    "outward_decimal": [
+      "0.000164814819882333",
+      "0.000233156104851948"
+    ]
+  },
+  "integrals": {
+    "G4": {
+      "b": "1/3",
+      "sigma": "53/24",
+      "source_upper_bound": "590159/25000",
+      "base": {
+        "binary": [
+          [
+            0,
+            452783613819665364947310156898174281277121660195775,
+            -164,
+            169
+          ],
+          [
+            0,
+            226391806909832682473655078449087140638560830097889,
+            -163,
+            168
+          ]
+        ],
+        "outward_decimal": [
+          "19.362945029203433108",
+          "19.362945029203433109"
+        ]
+      },
+      "J_midpoint_raw": {
+        "binary": [
+          [
+            0,
+            396831135864699236056622948900133718847108183939075,
+            -166,
+            169
+          ],
+          [
+            0,
+            49603891983087404507077868612516714855888522992597,
+            -163,
+            166
+          ]
+        ],
+        "outward_decimal": [
+          "4.242545023219878223",
+          "4.242545023219878224"
+        ]
+      },
+      "J_error_exact": "3087/1073741824",
+      "J_breakpoints": [
+        "2",
+        "37/8"
+      ],
+      "enclosure": {
+        "binary": [
+          [
+            0,
+            275997592295499668494231814915013945808869438704021,
+            -163,
+            168
+          ],
+          [
+            0,
+            275998458571605379433341271211820444942944803691045,
+            -163,
+            168
+          ]
+        ],
+        "outward_decimal": [
+          "23.605651992250405827",
+          "23.605726083520951118"
+        ]
+      },
+      "slack_to_source_bound_lower": "0.000633916479048882"
+    },
+    "G5": {
+      "b": "3/11",
+      "sigma": "265/88",
+      "source_upper_bound": "243997/12500",
+      "base": {
+        "binary": [
+          [
+            0,
+            11163197989766241942487477774540496229882169723137,
+            -159,
+            163
+          ],
+          [
+            0,
+            178611167836259871079799644392647939678114715570193,
+            -163,
+            167
+          ]
+        ],
+        "outward_decimal": [
+          "15.276340039075507642",
+          "15.276340039075507643"
+        ]
+      },
+      "J_midpoint_raw": {
+        "binary": [
+          [
+            0,
+            396831079961324668569139402926311464603501779916273,
+            -166,
+            169
+          ],
+          [
+            0,
+            396831079961324668569139402926311464603501779917991,
+            -166,
+            169
+          ]
+        ],
+        "outward_decimal": [
+          "4.242544425553611347",
+          "4.242544425553611348"
+        ]
+      },
+      "J_error_exact": "368697/129922760704",
+      "J_breakpoints": [
+        "2",
+        "177/88",
+        "37/8"
+      ],
+      "enclosure": {
+        "binary": [
+          [
+            0,
+            114108473334333272757014885801374635768094091434421,
+            -162,
+            167
+          ],
+          [
+            0,
+            456435624150898475507923119835502307467664458930269,
+            -164,
+            169
+          ]
+        ],
+        "outward_decimal": [
+          "19.519046441632147662",
+          "19.519120458550824599"
+        ]
+      },
+      "slack_to_source_bound_lower": "0.000639541449175401"
+    }
+  },
+  "certified_rational_caps": {
+    "G4": "23.60573",
+    "G5": "19.51913"
+  },
+  "conditional_budget_only": {
+    "source_budget_reserve": "3/25000",
+    "pair_numeric_gain_lower": "0.001273457928224283",
+    "resulting_reserve_lower": "0.001393457928224283",
+    "resulting_D_over_S_before_analytic_errors_lower": "0.000748364482056070",
+    "rational_cap_pair_gain": "63/50000",
+    "rational_cap_reserve": "69/50000",
+    "rational_cap_reserve_ratio": "23/2",
+    "imported_into_global_ledger": false
+  },
+  "analytic_contract_status": "solver_candidate_under_declared_uniform_LS_BV_PNT_inputs",
+  "global_closure": false,
+  "independent_verification": false,
+  "trust_basis": [
+    "mpmath.iv 1.3.0 interval arithmetic/log",
+    "manual Fubini identities and piecewise derivative bound in proof.md",
+    "exact Fraction decisions and outward decimal serialization"
+  ],
+  "cannot_imply": [
+    "No external analytic theorem is proved by this program.",
+    "Enclosing fixed integrals does not verify their transfer to the twelve-term theorem.",
+    "The conditional budget gain is not a claim of a better Goldbach exponent or an independently verified result."
+  ]
+}

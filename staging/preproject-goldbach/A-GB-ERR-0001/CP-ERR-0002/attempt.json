@@ -1,0 +1,70 @@
+{
+  "schema": "jin-math-preproject-attempt/v1",
+  "attempt_id": "A-GB-ERR-0001",
+  "checkpoint": "CP-ERR-0002",
+  "issue": 50,
+  "actor": {
+    "kind": "agent",
+    "id": "openai-chatgpt",
+    "run_id": "run-20260905-goldbach-error-g45-02",
+    "role": "solver"
+  },
+  "base_commit": "39002c5a6af8c7b7f093589e6a76cfd218fcbb99",
+  "predecessor_commit": "388c958afb2c89c571e43483b2154eb56e2e2e67",
+  "branch": "attempt/preproject-goldbach/error-g45-02",
+  "status": "frozen_local_candidate",
+  "overall_verdict": "INCONCLUSIVE",
+  "verdict_scope": "Actual twelve-term global closure remains incomplete; the G4/G5 local contracts are complete solver candidates under U-LS/U-BV/U-PNT.",
+  "subresults": {
+    "native_G4_G5_contracts": "CONDITIONAL_SOLVER_CANDIDATE_COMPLETE",
+    "fixed_integral_enclosures": "PASS",
+    "global_twelve_term_threshold": "NOT_INSTANTIATED",
+    "independent_review": "PENDING"
+  },
+  "artifact_sha256": {
+    "README.md": "5c4f29dae53ab80d985acafe317e5ae99e2519f6e8839c5c1a7cbdde837a3738",
+    "proof.md": "5f78f572bb90b07f00add35163079ce15834f45aa117d39f34d1bbe0d45188d4",
+    "source-lock.json": "791dbbd0a655607af9b2cff88b87734a9fdc3d390dc3e3f1a3ab2e85928ba400",
+    "contracts.json": "49d25511c5007175b309609e1a64ad8d2edcac310b77f6ad86acbb1f2478581c",
+    "error-handoff.json": "d265b80901aba6cb9a15f0d74bd6f4e78a6896bc4ca305ea15fcbae4c4a3b4a0",
+    "check_g45.py": "567a46f1fe3316d808a644a0b1b77dd754c5a522a93a321447dc4cfface01f0a",
+    "results.json": "24d7dfff2575f5527624c38b401cd693ac8f6278f34d716516e4eda899bdde37",
+    "computation-handoff.json": "d8df44366e3badbb6305782d17111d1b7384184c1fdc6f80099795cdcfcdc884"
+  },
+  "authority": {
+    "status": "pre_genesis_solver_output",
+    "independent_verification": false,
+    "mathematical_claim_upgrade": false,
+    "project_authority_changed": false
+  },
+  "findings": [
+    "F-ERR-009",
+    "F-ERR-010",
+    "F-ERR-011",
+    "F-ERR-012",
+    "F-ERR-013",
+    "F-ERR-014"
+  ],
+  "predecessor_preserved": true,
+  "old_signed_ledger_modified": false,
+  "sibling_unverified_math_imported": false,
+  "limiting_source_input": "U-LS: an eta-independent finite C_s is an explicit adopted external hypothesis; original Iwaniec proof audit and numeric value are not supplied.",
+  "next_frontier": "G1/G2 native lower contracts: do not apply the upper-bound sequence-enlargement argument to lower bounds; retain cutoff loss and finite-level drift.",
+  "verification_required": true,
+  "verification_scope": [
+    "uniform U-LS source hypothesis and weight normalization",
+    "upper-sequence monotonicity and epsilon0 independence",
+    "fixed legal slack and normalized F envelope",
+    "exact AP remainder and unique large-prime factor aggregation",
+    "Stieltjes and singular-product uniformity",
+    "uncompressed and simplified native error contracts",
+    "Fubini identities, G5 split and common K cubature",
+    "manual midpoint derivative bound and actual numerical replay",
+    "conditional-only budget update and no double counting"
+  ],
+  "cannot_imply": [
+    "Local conditional contracts are not independent verification of their external inputs.",
+    "The two fixed integral improvements do not validate the other ten terms, combination, or global N0.",
+    "No proof or refutation of the Li-Liu theorem or binary Goldbach; no exponent improvement."
+  ]
+}

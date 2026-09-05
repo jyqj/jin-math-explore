@@ -1,0 +1,75 @@
+{
+  "protocol": "jin-math-computation-handoff/v1",
+  "job_id": "J-GB-ERR-G45-CERT-0002",
+  "attempt_id": "A-GB-ERR-0001",
+  "checkpoint": "CP-ERR-0002",
+  "actor": {
+    "kind": "agent",
+    "id": "openai-chatgpt",
+    "run_id": "run-20260905-goldbach-error-g45-02",
+    "role": "solver"
+  },
+  "profile": "reproducible",
+  "object": "G4/G5 fixed main integrals, rational one-sided error coefficients, bounded injectivity controls and conditional budget sensitivity.",
+  "backend": {
+    "python": "3.13.5",
+    "mpmath": "1.3.0",
+    "iv_dps": 50
+  },
+  "selection_reason": "Portable small interval-log and exact-rational certificate; no large CAS or optional independent evaluator needed.",
+  "actual_execution": {
+    "command": "python check_g45.py --compute",
+    "exit_code": 0,
+    "midpoint_evaluations": 12288,
+    "interval_cubature_cells": 4096,
+    "elapsed_seconds": 1.42,
+    "peak_memory_kb": 97192
+  },
+  "check_commands": [
+    "python check_g45.py --check",
+    "python check_g45.py --require-global"
+  ],
+  "expected_global_check_exit": 1,
+  "method": "Fubini reduction; interval midpoint plus derivative remainder for J; natural interval cubature for common K",
+  "actual_enclosures": {
+    "G4": [
+      "23.605651992250405827",
+      "23.605726083520951118"
+    ],
+    "G5": [
+      "19.519046441632147662",
+      "19.519120458550824599"
+    ]
+  },
+  "certified_rational_caps": {
+    "G4": "23.60573",
+    "G5": "19.51913"
+  },
+  "negative_controls": [
+    "wrong upper/lower direction",
+    "eta-dependent fixed coefficient",
+    "omitted reciprocal correction",
+    "missing log-square normalization",
+    "unauthorized global upgrade",
+    "illegal level shift"
+  ],
+  "finite_injective_pairs": 336,
+  "code_sha256": "567a46f1fe3316d808a644a0b1b77dd754c5a522a93a321447dc4cfface01f0a",
+  "result_sha256": "24d7dfff2575f5527624c38b401cd693ac8f6278f34d716516e4eda899bdde37",
+  "evidence_grade": "validated_numerical_enclosure_conditional_on_manual_integral_and_derivative_proofs",
+  "trust_basis": [
+    "mpmath.iv 1.3.0 interval arithmetic/log",
+    "manual Fubini identities and piecewise derivative bound in proof.md",
+    "exact Fraction decisions and outward decimal serialization"
+  ],
+  "previous_payload_hashes_checked": 9,
+  "old_MPFR_suite_reexecuted": false,
+  "independent_verification": false,
+  "repository_wide_tests_run": false,
+  "PDF_byte_hashes_acquired": false,
+  "cannot_imply": [
+    "The saved-result check alone does not reexecute quadrature.",
+    "The uniform external C_s assumption and source-to-sieve transfer are not proved by interval arithmetic.",
+    "Conditional reserve sensitivity is not a verified global result or a better exponent."
+  ]
+}

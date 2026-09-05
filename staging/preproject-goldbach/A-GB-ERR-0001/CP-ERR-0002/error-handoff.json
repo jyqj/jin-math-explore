@@ -1,0 +1,57 @@
+{
+  "schema": "jin-math-g45-error-handoff/v1",
+  "attempt_id": "A-GB-ERR-0001",
+  "checkpoint": "CP-ERR-0002",
+  "normalization": "C(N)*N/log(N)^2; G4 and G5 have weight -1 in 4D",
+  "local_transfer": "proof.md (21)-(23)",
+  "pair_coefficients": {
+    "K_normalization": "10547/33",
+    "K_level_shift": "744385/66",
+    "K_prime_measure": "28090/33",
+    "K_reciprocal": "424",
+    "K_sieve": "35086/33"
+  },
+  "pair_deficit": "(10547/33)*q_N+(744385/66)*h+(28090/33)*r_N+424*N^-a+(35086/33)*e_N+4*L*C_BV,A0*log(N)^(2-A0)",
+  "fixed_parameter_loss": {
+    "expression": "(35086/33)*C_s*eta",
+    "coefficient_proven_independent_in_transfer": true,
+    "source_gate": "U-LS provides eta-independent C_s; numeric value not supplied"
+  },
+  "N_decaying": [
+    "normalization defect q_N",
+    "level drift h",
+    "prime CDF defect r_N",
+    "reciprocal N^-a",
+    "C_s*eta^-8*exp(K)*(2*a*log(N))^(-1/3)",
+    "fixed L times BV log saving"
+  ],
+  "quantifier_order": [
+    "Adopt fixed U-LS constant C_s and product K, with a,b4,b5 fixed.",
+    "Choose positive local pair budget b45.",
+    "Choose fixed eta <= min(1/16,b45/(2*(35086/33)*C_s)).",
+    "Choose A0>2 and B from BV.",
+    "Only then choose source/legal/common local N0."
+  ],
+  "epsilon0_dependency": "removed by upper-bound sequence enlargement; local N0 uniform in epsilon0",
+  "deduplication": [
+    "This native deficit replaces the G4/G5 portions of the old compressed fixed-relative/PNT/level/reciprocal mechanisms.",
+    "Do not add ERR-RECIPROCAL-G45 a second time.",
+    "L multiplies the BV remainder, not the fixed eta term.",
+    "No global deficit is set to zero because an independent-review gate is missing."
+  ],
+  "conditional_numeric_replacement": {
+    "new_caps": {
+      "G4": "23.60573",
+      "G5": "19.51913"
+    },
+    "pair_gain": "63/50000",
+    "potential_reserve": "69/50000",
+    "applied_to_global_ledger": false
+  },
+  "global_absorption_complete": false,
+  "explicit_N0": null,
+  "cannot_imply": [
+    "A local pair threshold is not the common twelve-term N0.",
+    "No proof of the Li-Liu main theorem or binary Goldbach."
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "schema": "jin-math-preproject-source-lock/v1",
+  "attempt_id": "A-GB-ERR-0001",
+  "checkpoint": "CP-ERR-0002",
+  "as_of": "2026-09-05",
+  "base_commit": "39002c5a6af8c7b7f093589e6a76cfd218fcbb99",
+  "predecessor_commit": "388c958afb2c89c571e43483b2154eb56e2e2e67",
+  "sources": [
+    {
+      "id": "LLv2",
+      "identifier": "arXiv:2606.05224v2",
+      "title": "Theorem (1+1.9) on the Goldbach Conjecture",
+      "authors": [
+        "Jiamin Li",
+        "Jianya Liu"
+      ],
+      "html": "https://arxiv.org/html/2606.05224v2",
+      "pdf": "https://arxiv.org/pdf/2606.05224v2",
+      "pdf_sha256": null,
+      "revision": "2026-08-08",
+      "no_silent_version_substitution": true,
+      "visual_printed_pages": [
+        7,
+        9,
+        34,
+        35,
+        36
+      ],
+      "objects": [
+        "Lemma 2.2 F formulas",
+        "Lemma 2.5 upper bound and error",
+        "G4/G5 definitions",
+        "5.17-5.27"
+      ],
+      "access": "parsed text plus rendered PDF screenshots; original source bytes not acquired"
+    },
+    {
+      "id": "Vaughan-BV",
+      "author": "R. C. Vaughan",
+      "title": "The Bombieri-Vinogradov Theorem",
+      "url": "https://personal.science.psu.edu/rcv4/Bombieri.pdf",
+      "locator": "Main Theorem and prime-counting reformulation pp.1-3",
+      "sha256": null,
+      "status": "adopted classical input; not reproved"
+    },
+    {
+      "id": "Iwaniec1980-locator",
+      "title": "A new form of the error term in the linear sieve",
+      "author": "Henryk Iwaniec",
+      "doi": "10.4064/aa-37-1-307-320",
+      "journal": "Acta Arithmetica 37 (1980), 307-320",
+      "publisher": "https://www.impan.pl/en/publishing-house/journals-and-series/acta-arithmetica/all/37/0/102638/a-new-form-of-the-error-term-in-the-linear-sieve",
+      "download_attempt": "publisher download link returned 403",
+      "status": "metadata only, not original proof verification"
+    }
+  ],
+  "external_inputs": [
+    {
+      "id": "U-LS",
+      "statement": "There exists finite C_s independent of eta,N,p, at most depending on fixed K, with the uniform bound LS in proof.md; bounded weights and level as in Lemma 2.5.",
+      "status": "explicit quantified source hypothesis; source restatement adopted, original proof audit not completed"
+    },
+    {
+      "id": "U-BV",
+      "statement": "Absolute-value classical BV at D=N^(1/2)/log(N)^B, with A0>2 and constants independent of eta,epsilon0."
+    },
+    {
+      "id": "U-PNT",
+      "statement": "Fixed-exponent prime-reciprocal cumulative asymptotic and Mertens product; implied constants independent of eta,epsilon0."
+    }
+  ],
+  "predecessor_integrity": {
+    "archive_sha256": "7cbd228138feeae1246b5f746afd1e4d9a94881afa45400339e65ce71460c97e",
+    "manifest_sha256": "b66ab041359ed96046d78f7d419905f478c94572647813af1c31730658c82d2e",
+    "bound_artifact_count": 9,
+    "all_nine_matched": true,
+    "full_legacy_suite_replayed": false
+  },
+  "pending_reviews": [
+    {
+      "issue": 35,
+      "comments_seen": 0,
+      "receipt_imported": false
+    },
+    {
+      "issue": 42,
+      "comments_seen": 0,
+      "receipt_imported": false
+    }
+  ],
+  "limitations": [
+    "Local Git clone failed: Could not resolve host github.com; repository-wide tests not run.",
+    "No PDF byte identity claim.",
+    "No unverified sibling theorem imported.",
+    "This solver has conversation context; independent verification is not claimed."
+  ]
+}
