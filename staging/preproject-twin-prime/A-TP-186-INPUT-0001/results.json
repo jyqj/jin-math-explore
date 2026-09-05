@@ -1,0 +1,765 @@
+{
+  "ok": true,
+  "scope": "exact_table_arithmetic_and_finite_admissibility_only",
+  "physical_integrals_verified": false,
+  "full_prime_gap_theorem_verified": false,
+  "component_counts": {
+    "outer_pairs": 52,
+    "outer_integral_bounds": 104,
+    "inner_integral_bounds": 45,
+    "cap_bounds": 3,
+    "total_scalar_input_inequalities": 152
+  },
+  "coefficients": {
+    "rho": "2624989/10000000",
+    "d0": "44415113/5000000000",
+    "one_minus_bh": "1000843183/1000000000"
+  },
+  "groups": {
+    "outer_2": {
+      "rows": 17,
+      "original_budget_units_1e12": 38927522,
+      "new_budget_units_1e18": 38927511676220
+    },
+    "outer_5_2": {
+      "rows": 35,
+      "original_budget_units_1e12": 622829241,
+      "new_budget_units_1e18": 622829215866024
+    },
+    "inner_base_2": {
+      "rows": 7,
+      "original_budget_units_1e12": 55254,
+      "new_budget_units_1e18": 55249880751
+    },
+    "inner_base_5_2": {
+      "rows": 10,
+      "original_budget_units_1e12": 435544,
+      "new_budget_units_1e18": 435537712297
+    },
+    "inner_enlarged_2": {
+      "rows": 11,
+      "original_budget_units_1e12": 1405159,
+      "new_budget_units_1e18": 1405153482185
+    },
+    "inner_enlarged_5_2": {
+      "rows": 17,
+      "original_budget_units_1e12": 32422390,
+      "new_budget_units_1e18": 32422379957759
+    }
+  },
+  "original_loss": {
+    "fraction": "69607511/100000000000",
+    "decimal_display_only": "0.00069607511"
+  },
+  "new_loss": {
+    "fraction": "174018762143809/250000000000000000",
+    "decimal_display_only": "0.000696075048575236"
+  },
+  "loss_improvement": {
+    "fraction": "15356191/250000000000000000",
+    "decimal_display_only": "6.1424764E-11"
+  },
+  "new_young_choices": 52,
+  "fixed_table_young_family": {
+    "infimum_lower_bound": {
+      "fraction": "69607504857518601636962823/100000000000000000000000000000",
+      "decimal_display_only": "0.00069607504857518601636962823"
+    },
+    "remaining_improvement_upper_bound": {
+      "fraction": "4998363037177/100000000000000000000000000000",
+      "decimal_display_only": "4.998363037177E-17"
+    },
+    "scope": "positive Young parameters only; fixed root/face/inner/cap bounds and coefficients"
+  },
+  "raw_ratio": {
+    "fraction": "236901989461568647/236853178900000000",
+    "decimal_display_only": "1.0002060794024185545773985809907"
+  },
+  "coarse_margin": {
+    "fraction": "23281049307621/1000000000000000000",
+    "decimal_display_only": "0.000023281049307621"
+  },
+  "original_cap_margin": {
+    "fraction": "69162467338708766984467/2960664736250000000000000000",
+    "decimal_display_only": "0.000023360452297044096623511097828039"
+  },
+  "new_cap_margin": {
+    "fraction": "13300483668513155683214200121/569358603125000000000000000000000",
+    "decimal_display_only": "0.000023360468420977029007133613988982"
+  },
+  "margin_improvement": {
+    "fraction": "119343899106420617101573/7401661840625000000000000000000000",
+    "decimal_display_only": "1.6123932932383622516160943111581E-11"
+  },
+  "sensitivity": {
+    "relative_J_lower_loss_coefficient": {
+      "fraction": "236901989461568647/236853178900000000",
+      "decimal_display_only": "1.0002060794024185545773985809907"
+    },
+    "relative_I_upper_increase_coefficient": "1",
+    "relative_aggregate_loss_increase_coefficient": {
+      "fraction": "1352423761329547726118215398427/7401661840625000000000000000000000",
+      "decimal_display_only": "0.00018271893399757754839144737672619"
+    },
+    "positive_margin_budget": {
+      "fraction": "13300483668513155683214200121/569358603125000000000000000000000",
+      "decimal_display_only": "0.000023360468420977029007133613988982"
+    },
+    "extra_loss_fraction_to_zero": {
+      "fraction": "172906287690671023881784601573/1352423761329547726118215398427",
+      "decimal_display_only": "0.12784919389518076704922737159607"
+    },
+    "extra_loss_fraction_preserving_1_over_50000": {
+      "fraction": "24873050878171023881784601573/1352423761329547726118215398427",
+      "decimal_display_only": "0.018391462490808869512275663617679"
+    },
+    "boundary_is_strict_for_positivity": true
+  },
+  "tuple_certificate": {
+    "cardinality": 40,
+    "diameter": 186,
+    "omitted_residues": {
+      "2": [
+        1
+      ],
+      "3": [
+        1
+      ],
+      "5": [
+        4
+      ],
+      "7": [
+        3
+      ],
+      "11": [
+        7
+      ],
+      "13": [
+        5
+      ],
+      "17": [
+        11
+      ],
+      "19": [
+        8
+      ],
+      "23": [
+        16
+      ],
+      "29": [
+        9,
+        18
+      ],
+      "31": [
+        4,
+        18
+      ],
+      "37": [
+        3,
+        7,
+        17,
+        25,
+        33
+      ]
+    },
+    "primes_above_40": "at most 40 represented residues cannot cover p>40"
+  },
+  "row_certificates": [
+    {
+      "group": "outer_2",
+      "index_zero_based": 0,
+      "original_young": "60119/62500",
+      "new_young": "476731294623/500000000000",
+      "new_budget_units_1e18": 21
+    },
+    {
+      "group": "outer_2",
+      "index_zero_based": 1,
+      "original_young": "62803/125000",
+      "new_young": "502510110723/1000000000000",
+      "new_budget_units_1e18": 2297
+    },
+    {
+      "group": "outer_2",
+      "index_zero_based": 2,
+      "original_young": "483341/1000000",
+      "new_young": "241670637369/500000000000",
+      "new_budget_units_1e18": 11051173
+    },
+    {
+      "group": "outer_2",
+      "index_zero_based": 3,
+      "original_young": "547373/1000000",
+      "new_young": "547373630381/1000000000000",
+      "new_budget_units_1e18": 3345662280
+    },
+    {
+      "group": "outer_2",
+      "index_zero_based": 4,
+      "original_young": "112783/200000",
+      "new_young": "563915429077/1000000000000",
+      "new_budget_units_1e18": 42719571223
+    },
+    {
+      "group": "outer_2",
+      "index_zero_based": 5,
+      "original_young": "583181/1000000",
+      "new_young": "583181908269/1000000000000",
+      "new_budget_units_1e18": 350960093354
+    },
+    {
+      "group": "outer_2",
+      "index_zero_based": 6,
+      "original_young": "604629/1000000",
+      "new_young": "604629790553/1000000000000",
+      "new_budget_units_1e18": 3244206337609
+    },
+    {
+      "group": "outer_2",
+      "index_zero_based": 7,
+      "original_young": "620671/1000000",
+      "new_young": "620671973309/1000000000000",
+      "new_budget_units_1e18": 4144521914500
+    },
+    {
+      "group": "outer_2",
+      "index_zero_based": 8,
+      "original_young": "629321/1000000",
+      "new_young": "125864263331/200000000000",
+      "new_budget_units_1e18": 9138325806204
+    },
+    {
+      "group": "outer_2",
+      "index_zero_based": 9,
+      "original_young": "635211/1000000",
+      "new_young": "317605847513/500000000000",
+      "new_budget_units_1e18": 1539746843500
+    },
+    {
+      "group": "outer_2",
+      "index_zero_based": 10,
+      "original_young": "308163/500000",
+      "new_young": "154081558409/250000000000",
+      "new_budget_units_1e18": 10214337309592
+    },
+    {
+      "group": "outer_2",
+      "index_zero_based": 11,
+      "original_young": "296931/500000",
+      "new_young": "118772486471/200000000000",
+      "new_budget_units_1e18": 5482539260769
+    },
+    {
+      "group": "outer_2",
+      "index_zero_based": 12,
+      "original_young": "573977/1000000",
+      "new_young": "286988817177/500000000000",
+      "new_budget_units_1e18": 2701469322362
+    },
+    {
+      "group": "outer_2",
+      "index_zero_based": 13,
+      "original_young": "276589/500000",
+      "new_young": "138294723711/250000000000",
+      "new_budget_units_1e18": 1268536249803
+    },
+    {
+      "group": "outer_2",
+      "index_zero_based": 14,
+      "original_young": "531463/1000000",
+      "new_young": "16608248909/31250000000",
+      "new_budget_units_1e18": 562832526308
+    },
+    {
+      "group": "outer_2",
+      "index_zero_based": 15,
+      "original_young": "254431/500000",
+      "new_young": "254431421929/500000000000",
+      "new_budget_units_1e18": 233380190398
+    },
+    {
+      "group": "outer_2",
+      "index_zero_based": 16,
+      "original_young": "57377/125000",
+      "new_young": "459016452077/1000000000000",
+      "new_budget_units_1e18": 579534827
+    },
+    {
+      "group": "outer_5_2",
+      "index_zero_based": 0,
+      "original_young": "3633261/500000",
+      "new_young": "726738018923/100000000000",
+      "new_budget_units_1e18": 393
+    },
+    {
+      "group": "outer_5_2",
+      "index_zero_based": 1,
+      "original_young": "1241454497/1000000",
+      "new_young": "28653097563789/1000000000000",
+      "new_budget_units_1e18": 58
+    },
+    {
+      "group": "outer_5_2",
+      "index_zero_based": 2,
+      "original_young": "3020811/2500",
+      "new_young": "7461903242471/200000000000",
+      "new_budget_units_1e18": 75
+    },
+    {
+      "group": "outer_5_2",
+      "index_zero_based": 3,
+      "original_young": "1152630107/1000000",
+      "new_young": "13128719711/312500000",
+      "new_budget_units_1e18": 85
+    },
+    {
+      "group": "outer_5_2",
+      "index_zero_based": 4,
+      "original_young": "1126190783/1000000",
+      "new_young": "3608800008313/62500000000",
+      "new_budget_units_1e18": 116
+    },
+    {
+      "group": "outer_5_2",
+      "index_zero_based": 5,
+      "original_young": "1096246679/1000000",
+      "new_young": "37924266637603/500000000000",
+      "new_budget_units_1e18": 152
+    },
+    {
+      "group": "outer_5_2",
+      "index_zero_based": 6,
+      "original_young": "105898369/100000",
+      "new_young": "50751847257021/500000000000",
+      "new_budget_units_1e18": 204
+    },
+    {
+      "group": "outer_5_2",
+      "index_zero_based": 7,
+      "original_young": "12097707/12500",
+      "new_young": "34291945118351/250000000000",
+      "new_budget_units_1e18": 275
+    },
+    {
+      "group": "outer_5_2",
+      "index_zero_based": 8,
+      "original_young": "867471653/1000000",
+      "new_young": "22852789764053/500000000000",
+      "new_budget_units_1e18": 92
+    },
+    {
+      "group": "outer_5_2",
+      "index_zero_based": 9,
+      "original_young": "301892911/500000",
+      "new_young": "53448573414077/500000000000",
+      "new_budget_units_1e18": 214
+    },
+    {
+      "group": "outer_5_2",
+      "index_zero_based": 10,
+      "original_young": "16094451/500000",
+      "new_young": "6326729012689/200000000000",
+      "new_budget_units_1e18": 1013
+    },
+    {
+      "group": "outer_5_2",
+      "index_zero_based": 11,
+      "original_young": "1308239/1000000",
+      "new_young": "1308201502501/1000000000000",
+      "new_budget_units_1e18": 37577
+    },
+    {
+      "group": "outer_5_2",
+      "index_zero_based": 12,
+      "original_young": "386321/1000000",
+      "new_young": "386321396683/1000000000000",
+      "new_budget_units_1e18": 5459310
+    },
+    {
+      "group": "outer_5_2",
+      "index_zero_based": 13,
+      "original_young": "373849/1000000",
+      "new_young": "373849239299/1000000000000",
+      "new_budget_units_1e18": 13394357
+    },
+    {
+      "group": "outer_5_2",
+      "index_zero_based": 14,
+      "original_young": "377891/1000000",
+      "new_young": "188945949233/500000000000",
+      "new_budget_units_1e18": 196667556
+    },
+    {
+      "group": "outer_5_2",
+      "index_zero_based": 15,
+      "original_young": "24071/62500",
+      "new_young": "385136389337/1000000000000",
+      "new_budget_units_1e18": 2546485124
+    },
+    {
+      "group": "outer_5_2",
+      "index_zero_based": 16,
+      "original_young": "395013/1000000",
+      "new_young": "395013049617/1000000000000",
+      "new_budget_units_1e18": 30063714426
+    },
+    {
+      "group": "outer_5_2",
+      "index_zero_based": 17,
+      "original_young": "81167/200000",
+      "new_young": "405835126561/1000000000000",
+      "new_budget_units_1e18": 285798932850
+    },
+    {
+      "group": "outer_5_2",
+      "index_zero_based": 18,
+      "original_young": "83901/200000",
+      "new_young": "52438190129/125000000000",
+      "new_budget_units_1e18": 2522661182293
+    },
+    {
+      "group": "outer_5_2",
+      "index_zero_based": 19,
+      "original_young": "432001/1000000",
+      "new_young": "216000928289/500000000000",
+      "new_budget_units_1e18": 16720798306942
+    },
+    {
+      "group": "outer_5_2",
+      "index_zero_based": 20,
+      "original_young": "445139/1000000",
+      "new_young": "111284801817/250000000000",
+      "new_budget_units_1e18": 12907718035300
+    },
+    {
+      "group": "outer_5_2",
+      "index_zero_based": 21,
+      "original_young": "457321/1000000",
+      "new_young": "114330313389/250000000000",
+      "new_budget_units_1e18": 25790568033216
+    },
+    {
+      "group": "outer_5_2",
+      "index_zero_based": 22,
+      "original_young": "21039/40000",
+      "new_young": "65746985107/125000000000",
+      "new_budget_units_1e18": 60116960397442
+    },
+    {
+      "group": "outer_5_2",
+      "index_zero_based": 23,
+      "original_young": "518733/1000000",
+      "new_young": "1013151619/1953125000",
+      "new_budget_units_1e18": 72504765137123
+    },
+    {
+      "group": "outer_5_2",
+      "index_zero_based": 24,
+      "original_young": "16099/31250",
+      "new_young": "515168115491/1000000000000",
+      "new_budget_units_1e18": 71471326227804
+    },
+    {
+      "group": "outer_5_2",
+      "index_zero_based": 25,
+      "original_young": "512357/1000000",
+      "new_young": "512357718039/1000000000000",
+      "new_budget_units_1e18": 64233827023947
+    },
+    {
+      "group": "outer_5_2",
+      "index_zero_based": 26,
+      "original_young": "50977/100000",
+      "new_young": "63721345503/125000000000",
+      "new_budget_units_1e18": 54915392819947
+    },
+    {
+      "group": "outer_5_2",
+      "index_zero_based": 27,
+      "original_young": "12683/25000",
+      "new_young": "101464079121/200000000000",
+      "new_budget_units_1e18": 45639917659852
+    },
+    {
+      "group": "outer_5_2",
+      "index_zero_based": 28,
+      "original_young": "504951/1000000",
+      "new_young": "252475626883/500000000000",
+      "new_budget_units_1e18": 37277307199409
+    },
+    {
+      "group": "outer_5_2",
+      "index_zero_based": 29,
+      "original_young": "125651/250000",
+      "new_young": "502604443437/1000000000000",
+      "new_budget_units_1e18": 30131605359240
+    },
+    {
+      "group": "outer_5_2",
+      "index_zero_based": 30,
+      "original_young": "62907/125000",
+      "new_young": "31453560983/62500000000",
+      "new_budget_units_1e18": 50903175855149
+    },
+    {
+      "group": "outer_5_2",
+      "index_zero_based": 31,
+      "original_young": "7782/15625",
+      "new_young": "249024294187/500000000000",
+      "new_budget_units_1e18": 32311735552383
+    },
+    {
+      "group": "outer_5_2",
+      "index_zero_based": 32,
+      "original_young": "246111/500000",
+      "new_young": "98444432343/200000000000",
+      "new_budget_units_1e18": 19992701818254
+    },
+    {
+      "group": "outer_5_2",
+      "index_zero_based": 33,
+      "original_young": "48581/100000",
+      "new_young": "242905089193/500000000000",
+      "new_budget_units_1e18": 12007620473021
+    },
+    {
+      "group": "outer_5_2",
+      "index_zero_based": 34,
+      "original_young": "433769/1000000",
+      "new_young": "433769998683/1000000000000",
+      "new_budget_units_1e18": 13062510090825
+    },
+    {
+      "group": "inner_base_2",
+      "index_zero_based": 0,
+      "new_budget_units_1e18": 229
+    },
+    {
+      "group": "inner_base_2",
+      "index_zero_based": 1,
+      "new_budget_units_1e18": 13425898
+    },
+    {
+      "group": "inner_base_2",
+      "index_zero_based": 2,
+      "new_budget_units_1e18": 160960518
+    },
+    {
+      "group": "inner_base_2",
+      "index_zero_based": 3,
+      "new_budget_units_1e18": 8026708443
+    },
+    {
+      "group": "inner_base_2",
+      "index_zero_based": 4,
+      "new_budget_units_1e18": 3777444911
+    },
+    {
+      "group": "inner_base_2",
+      "index_zero_based": 5,
+      "new_budget_units_1e18": 43271128035
+    },
+    {
+      "group": "inner_base_2",
+      "index_zero_based": 6,
+      "new_budget_units_1e18": 212717
+    },
+    {
+      "group": "inner_base_5_2",
+      "index_zero_based": 0,
+      "new_budget_units_1e18": 1
+    },
+    {
+      "group": "inner_base_5_2",
+      "index_zero_based": 1,
+      "new_budget_units_1e18": 28685
+    },
+    {
+      "group": "inner_base_5_2",
+      "index_zero_based": 2,
+      "new_budget_units_1e18": 264941
+    },
+    {
+      "group": "inner_base_5_2",
+      "index_zero_based": 3,
+      "new_budget_units_1e18": 691075824
+    },
+    {
+      "group": "inner_base_5_2",
+      "index_zero_based": 4,
+      "new_budget_units_1e18": 1172369996
+    },
+    {
+      "group": "inner_base_5_2",
+      "index_zero_based": 5,
+      "new_budget_units_1e18": 2599925549
+    },
+    {
+      "group": "inner_base_5_2",
+      "index_zero_based": 6,
+      "new_budget_units_1e18": 49285625840
+    },
+    {
+      "group": "inner_base_5_2",
+      "index_zero_based": 7,
+      "new_budget_units_1e18": 269009176733
+    },
+    {
+      "group": "inner_base_5_2",
+      "index_zero_based": 8,
+      "new_budget_units_1e18": 106677299367
+    },
+    {
+      "group": "inner_base_5_2",
+      "index_zero_based": 9,
+      "new_budget_units_1e18": 6101945361
+    },
+    {
+      "group": "inner_enlarged_2",
+      "index_zero_based": 0,
+      "new_budget_units_1e18": 468184
+    },
+    {
+      "group": "inner_enlarged_2",
+      "index_zero_based": 1,
+      "new_budget_units_1e18": 382069681
+    },
+    {
+      "group": "inner_enlarged_2",
+      "index_zero_based": 2,
+      "new_budget_units_1e18": 386536507
+    },
+    {
+      "group": "inner_enlarged_2",
+      "index_zero_based": 3,
+      "new_budget_units_1e18": 99969866154
+    },
+    {
+      "group": "inner_enlarged_2",
+      "index_zero_based": 4,
+      "new_budget_units_1e18": 247940896485
+    },
+    {
+      "group": "inner_enlarged_2",
+      "index_zero_based": 5,
+      "new_budget_units_1e18": 381378440894
+    },
+    {
+      "group": "inner_enlarged_2",
+      "index_zero_based": 6,
+      "new_budget_units_1e18": 266387216695
+    },
+    {
+      "group": "inner_enlarged_2",
+      "index_zero_based": 7,
+      "new_budget_units_1e18": 337381549554
+    },
+    {
+      "group": "inner_enlarged_2",
+      "index_zero_based": 8,
+      "new_budget_units_1e18": 34456322616
+    },
+    {
+      "group": "inner_enlarged_2",
+      "index_zero_based": 9,
+      "new_budget_units_1e18": 36851994030
+    },
+    {
+      "group": "inner_enlarged_2",
+      "index_zero_based": 10,
+      "new_budget_units_1e18": 18121385
+    },
+    {
+      "group": "inner_enlarged_5_2",
+      "index_zero_based": 0,
+      "new_budget_units_1e18": 3
+    },
+    {
+      "group": "inner_enlarged_5_2",
+      "index_zero_based": 1,
+      "new_budget_units_1e18": 107217235865
+    },
+    {
+      "group": "inner_enlarged_5_2",
+      "index_zero_based": 2,
+      "new_budget_units_1e18": 2
+    },
+    {
+      "group": "inner_enlarged_5_2",
+      "index_zero_based": 3,
+      "new_budget_units_1e18": 62
+    },
+    {
+      "group": "inner_enlarged_5_2",
+      "index_zero_based": 4,
+      "new_budget_units_1e18": 138
+    },
+    {
+      "group": "inner_enlarged_5_2",
+      "index_zero_based": 5,
+      "new_budget_units_1e18": 177621245
+    },
+    {
+      "group": "inner_enlarged_5_2",
+      "index_zero_based": 6,
+      "new_budget_units_1e18": 328078974
+    },
+    {
+      "group": "inner_enlarged_5_2",
+      "index_zero_based": 7,
+      "new_budget_units_1e18": 50710604017
+    },
+    {
+      "group": "inner_enlarged_5_2",
+      "index_zero_based": 8,
+      "new_budget_units_1e18": 143225583395
+    },
+    {
+      "group": "inner_enlarged_5_2",
+      "index_zero_based": 9,
+      "new_budget_units_1e18": 1325068757055
+    },
+    {
+      "group": "inner_enlarged_5_2",
+      "index_zero_based": 10,
+      "new_budget_units_1e18": 698442551487
+    },
+    {
+      "group": "inner_enlarged_5_2",
+      "index_zero_based": 11,
+      "new_budget_units_1e18": 4237697700570
+    },
+    {
+      "group": "inner_enlarged_5_2",
+      "index_zero_based": 12,
+      "new_budget_units_1e18": 11641869696384
+    },
+    {
+      "group": "inner_enlarged_5_2",
+      "index_zero_based": 13,
+      "new_budget_units_1e18": 3644680995961
+    },
+    {
+      "group": "inner_enlarged_5_2",
+      "index_zero_based": 14,
+      "new_budget_units_1e18": 6141228449719
+    },
+    {
+      "group": "inner_enlarged_5_2",
+      "index_zero_based": 15,
+      "new_budget_units_1e18": 3693978643467
+    },
+    {
+      "group": "inner_enlarged_5_2",
+      "index_zero_based": 16,
+      "new_budget_units_1e18": 737754039415
+    }
+  ],
+  "cannot_imply": [
+    "These table integers are valid physical integral upper bounds.",
+    "Lean inputs are discharged.",
+    "H1<=186 has been independently verified.",
+    "H1<186 or twin primes."
+  ],
+  "inputs_sha256": "4f398b1576b29b292a9ab709734ffcd28b95d7ba388e9dd063e11ccfed1a1467"
+}

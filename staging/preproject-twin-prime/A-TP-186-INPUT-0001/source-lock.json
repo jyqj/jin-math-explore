@@ -1,0 +1,67 @@
+{
+  "format": "preproject-source-lock/v1",
+  "as_of": "2026-09-05",
+  "baseline_commit": "f9fd9596be5099f9f82caab0885812eb1bd7396d",
+  "upstream_repository": "openai/PrimeGaps186",
+  "upstream_commit": "61340d0b74163003b32756bb16e91d9209a5e330",
+  "git_objects": [
+    {
+      "path": "Challenge.lean",
+      "git_blob_sha1": "2331eeeb808008cee37bac7aa0fb17e36f1f3c17",
+      "size_bytes": 41330,
+      "read_scope": "lines 1-470, 590-770, 770-end via connector; specification, not solution",
+      "payload_sha256": null
+    },
+    {
+      "path": "PrimeGaps186.lean",
+      "git_blob_sha1": "a8d0b8a138c7309f85e3967b24c3b502be5a3917",
+      "size_bytes": 10312565,
+      "read_scope": "not read: fetch_file empty, raw fetch too large/unsupported",
+      "payload_sha256": null
+    },
+    {
+      "path": "prime_gap_186_certificate.py",
+      "git_blob_sha1": "93121b6b12a6b69fdb2a1166c30f9d614160c042",
+      "size_bytes": 112171,
+      "read_scope": "metadata only; original certificate not executed",
+      "payload_sha256": null
+    },
+    {
+      "path": "short_gaps_numerics.pdf",
+      "git_blob_sha1": "5dc49e0fe5840b49d893264e55410d1b96b4d78f",
+      "size_bytes": 218865,
+      "read_scope": "metadata only; web read failed",
+      "payload_sha256": null
+    },
+    {
+      "path": "comparator/main.json",
+      "git_blob_sha1": "dd84079b39f22551fabeeed0bf24431310c278eb",
+      "read_scope": "baseline read; three domain axioms plus three foundational axioms",
+      "payload_sha256": null
+    }
+  ],
+  "papers": [
+    {
+      "id": "OpenAI2026",
+      "url": "https://cdn.openai.com/pdf/51126fac-1b68-4128-9666-c908bcc16033/short_gaps.pdf",
+      "version": "manuscript date 2026-08-30; 39 pages; observed 2026-09-05",
+      "checked_locator": "equation (1.3), equations (4.30)-(4.45), Proposition 4.6, Lemma 4.8; PDF pages 1,29-31 rendered",
+      "payload_sha256": null
+    },
+    {
+      "id": "Katz1988",
+      "url": "https://web.math.princeton.edu/~nmk/Katz-GKM.pdf",
+      "version": "Annals of Mathematics Studies 116 (1988)",
+      "checked_locator": "Theorem 4.1.1(1)-(2); book pp.48-49, PDF page29 rendered",
+      "payload_sha256": null
+    },
+    {
+      "id": "FKM2013",
+      "url": "https://people.math.ethz.ch/~kowalski/friedlander-iwaniec-sum.pdf",
+      "version": "2013-06-14",
+      "checked_locator": "p.1, Proposition2 and normalized Kl2 definition; rendered",
+      "payload_sha256": null
+    }
+  ],
+  "byte_lock_boundary": "Git blob IDs observed via connector are retained. No raw-source SHA256 or full source-byte equality is claimed. Source excerpts were not substituted for full-file hashes."
+}
