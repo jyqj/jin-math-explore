@@ -1,0 +1,60 @@
+{
+  "schema": "jin-math-computation-handoff/v1",
+  "problem_id": "preproject-rh",
+  "window_id": "pre-genesis-sequential",
+  "attempt_id": "A-RH-PER-0010",
+  "claim_id": null,
+  "objective_sha256": "a88782ba3c1d2c6c75a51dd6abe1f5f5e24d5ebc7ac846a80dc45852f795ee75",
+  "question": "Control rapidly interlaced periodic box-exponential patterns by exact moment reconstruction and quantitative phase locking.",
+  "domain": "Finite signed Hilbert operators and exact-repetition limits of conjugation-invariant exponential multisets.",
+  "assumptions": [
+    "Finite period Q>=1, m in {0,1,2}, sum m=Q, tau in [0,1), a>=0 and a=0 for m!=2; exact M-fold repetition in continuous normalized boxes.",
+    "Phase-locking and quantitative short comparison use s=#{m=1}/Q>0 and a fixed cap A>=max a; equality uses the finite signed Q-dimensional reconstruction.",
+    "The short moment 1/alpha+alpha/3 is an explicitly assumed target budget, not proved for the source by this task."
+  ],
+  "requested_evidence": "numerical_evidence",
+  "backend": {
+    "name": "Python/NumPy/mpmath/Fraction",
+    "version": "3.13.5",
+    "interface": "local foreground process",
+    "inventory_snapshot_sha256": null
+  },
+  "exact_input": {
+    "seed": 2026090610,
+    "samples": 120,
+    "rational_weight_Q_range": [
+      1,
+      64
+    ],
+    "grid_points": 972,
+    "objective_boundary": "Hash pins this bounded README task, not a canonical v13 Project objective."
+  },
+  "reproduction_command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python check_periodic_rigidity.py --samples 120 --output validation.json",
+  "code_artifacts": [
+    {
+      "path": "check_periodic_rigidity.py",
+      "sha256": "c8692537bef45c78fbbe1f5671d9a970cf6cc88cd30016208d1a25b63d20bcf0"
+    }
+  ],
+  "result_artifacts": [
+    {
+      "path": "validation.json",
+      "sha256": "0c1de20fca5acda36406549c4ddf9b678f7d007ef31649a6b655093e7747fce2"
+    }
+  ],
+  "computation_record": {
+    "path": "computation-record.json",
+    "sha256": "ab0e3c1b49bc1eeb950f80d211eea33ab9d9bfafc29ce23a0323a7d8e110750f"
+  },
+  "evidence_grade": "numerical_evidence",
+  "cannot_imply": [
+    "Analytic statements are solver proof candidates, not independently verified or formally proved.",
+    "The supplied exact periodic, one-orbit-per-cell, marks-0/1/2 and mean-mass-one representation is a hypothesis, not a zeta extraction.",
+    "Quantitative anchor estimates require a positive simple fraction and bounded normalized depth; exact equality classification itself does not require positive simple fraction.",
+    "Period growth costs are explicit. Small defect alone without Q^2*delta control is not enough for the stated quantitative implication.",
+    "Rounded collisions are aggregated; no preservation of the simple count of the rounded model or upper mark bound two is assumed.",
+    "The 972-point phase grid is numerical evidence only, not global optimization, interval certification or a proof covering continuous parameters.",
+    "No actual arithmetic moment estimate, source profile/weight/localization transfer, exceptional operator-energy bound, unconditional zeta proportion or RH result.",
+    "No full repository CI, bundled inventory/record runner, upstream Lean build or independent verification was executed."
+  ]
+}

@@ -1,0 +1,239 @@
+{
+  "backend": {
+    "python": "3.13.5",
+    "numpy": "2.3.5",
+    "mpmath": "1.3.0"
+  },
+  "exact": {
+    "status": "PASS",
+    "tangent_period_six": [
+      {
+        "pair_vacancy_distance": 1,
+        "short_moment": "398/243",
+        "excess": "53/972"
+      },
+      {
+        "pair_vacancy_distance": 2,
+        "short_moment": "134/81",
+        "excess": "23/324"
+      },
+      {
+        "pair_vacancy_distance": 3,
+        "short_moment": "404/243",
+        "excess": "77/972"
+      }
+    ],
+    "exact_spectral_weight_checks": 192,
+    "bound_minus_budget": "5/108",
+    "seven_energy_constant_certificate": "(8/3)^2 > 7"
+  },
+  "regression": {
+    "status": "PASS",
+    "samples": 120,
+    "seed": 2026090610,
+    "near_equality_cases": 40,
+    "random_rounding_collision_cases": 39,
+    "metrics": {
+      "min_delta": 2.9396360901046137e-09,
+      "max_lock_ratio": 0.001514511182369589,
+      "max_anchor_ratio": 0.07232661385162258,
+      "max_coefficient_ratio": 0.014656741902352331,
+      "max_short_transfer_ratio": 0.0067429552333754085,
+      "max_integral_residual": 3.367972567502875e-12,
+      "max_repetition_error_ratio": 0.002794401969529993,
+      "max_rounded_floor_residual": 0.0,
+      "max_fiber_moment_residual": 3.552713678800501e-15
+    },
+    "collision_guard": {
+      "original_marks": [
+        2.0,
+        2.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "rounded_marks": [
+        0.0,
+        4.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "original_mass_square": 10.0,
+      "rounded_mass_square": 18.0
+    }
+  },
+  "grid": {
+    "status": "PASS",
+    "points": 972,
+    "short_budget_feasible": 13,
+    "minimum_distance_to_short_cutoff": 0.0006943385426476656,
+    "smallest_delta_among_grid_feasible": {
+      "delta": 0.083362825309105,
+      "short_moment": 1.579737232163052,
+      "vacancy": 3,
+      "phases": [
+        0.0,
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333,
+        0.0,
+        0.0
+      ],
+      "depth": 0.0
+    },
+    "scope": "A specified finite floating-point grid only; no continuous optimization certificate."
+  },
+  "thresholds": {
+    "status": "PASS",
+    "precision_digits": 70,
+    "cap": "log(2)",
+    "rows": [
+      {
+        "period": 6,
+        "threshold": "0.00000002634355332250395168490846160690420771610984245711284795701295452178651",
+        "Q_squared_threshold": "0.0000009483679196101422606567046178485514777799543284560625264524663627843144",
+        "residual": "5.659799424266695229693199556804869862926581998836961368489134306209688e-73"
+      },
+      {
+        "period": 12,
+        "threshold": "0.000000006602159828562450658205095793565947593870468014216285131799159676607116",
+        "Q_squared_threshold": "0.0000009507110153129928947815337942734964535173473940471450589790789934314247",
+        "residual": "5.659799424266695229693199556804869862926581998836961368489134306209688e-73"
+      },
+      {
+        "period": 24,
+        "threshold": "0.000000001653238230166140442671849021871671913941943695410197286884017973911185",
+        "Q_squared_threshold": "0.0000009522652205756968949789850365980830224305595685562736372451943529728428",
+        "residual": "5.659799424266695229693199556804869862926581998836961368489134306209688e-73"
+      },
+      {
+        "period": 48,
+        "threshold": "0.0000000004137761507956718549549983545372914711992648304666586769727888138917649",
+        "Q_squared_threshold": "0.0000009533402514332279538163162088539195496431061693951815917453054272066264",
+        "residual": "0.0"
+      },
+      {
+        "period": 96,
+        "threshold": "0.0000000001035259661406099945616161289324286176385698764108113496328675311325162",
+        "Q_squared_threshold": "0.0000009540953039518617098798542442412621401570599810020373982165071669172692",
+        "residual": "0.0"
+      }
+    ],
+    "scope": "High-precision evaluation of an analytically derived conservative threshold; not an interval certificate."
+  },
+  "examples": {
+    "anchorless_fiber_cases": [
+      {
+        "depth": 0.0,
+        "delta": 1.3322676295501878e-15
+      },
+      {
+        "depth": 0.1,
+        "delta": 0.0025020840279039724
+      },
+      {
+        "depth": 0.6931471805599453,
+        "delta": 0.1250000000000009
+      }
+    ],
+    "fixed_period": {
+      "period": 6,
+      "depth": "log(2)",
+      "limiting_long": 1.3711297679965941,
+      "limiting_short": 1.66347988252476,
+      "prefixes": [
+        {
+          "repetitions": 1,
+          "long_moment": 1.378562812136457,
+          "short_moment": 1.5769464848704826,
+          "short_error": 0.08653339765427748
+        },
+        {
+          "repetitions": 2,
+          "long_moment": 1.3758460121073774,
+          "short_moment": 1.6105092857928165,
+          "short_error": 0.0529705967319436
+        },
+        {
+          "repetitions": 4,
+          "long_moment": 1.3739936833471205,
+          "short_moment": 1.631779674290706,
+          "short_error": 0.03170020823405406
+        },
+        {
+          "repetitions": 8,
+          "long_moment": 1.3728154533298842,
+          "short_moment": 1.6450264637934684,
+          "short_error": 0.018453418731291693
+        },
+        {
+          "repetitions": 16,
+          "long_moment": 1.3720995825019162,
+          "short_moment": 1.6529523062489975,
+          "short_error": 0.010527576275762618
+        },
+        {
+          "repetitions": 32,
+          "long_moment": 1.3716781748197395,
+          "short_moment": 1.6575657732028617,
+          "short_error": 0.0059141093218983976
+        },
+        {
+          "repetitions": 64,
+          "long_moment": 1.3714357229047014,
+          "short_moment": 1.660197681803252,
+          "short_error": 0.0032822007215080884
+        }
+      ]
+    },
+    "growing_period_hole": [
+      {
+        "period": 6,
+        "delta": 0.03779643466326088,
+        "Q_squared_delta": 1.3606716478773917,
+        "short_moment": 1.6634798825247594
+      },
+      {
+        "period": 12,
+        "delta": 0.028063454518461928,
+        "Q_squared_delta": 4.041137450658518,
+        "short_moment": 1.6719846622037795
+      },
+      {
+        "period": 24,
+        "delta": 0.01898686207865996,
+        "Q_squared_delta": 10.936432557308137,
+        "short_moment": 1.7140252558726656
+      },
+      {
+        "period": 48,
+        "delta": 0.012031649447509007,
+        "Q_squared_delta": 27.720920327060753,
+        "short_moment": 1.7378689896563921
+      },
+      {
+        "period": 96,
+        "delta": 0.007293227607686248,
+        "Q_squared_delta": 67.21438563243646,
+        "short_moment": 1.7538821907310538
+      },
+      {
+        "period": 192,
+        "delta": 0.004286378552649017,
+        "Q_squared_delta": 158.01305896485337,
+        "short_moment": 1.7638736594287443
+      },
+      {
+        "period": 384,
+        "delta": 0.0024632054402735637,
+        "Q_squared_delta": 363.2144214009786,
+        "short_moment": 1.7698495903491165
+      }
+    ],
+    "scope": "The growing-period family is a scope guard; its short moment is not claimed to satisfy the target budget."
+  },
+  "boundary": "Solver analytic candidates plus bounded rational and numerical self-checks. No independent verification, actual-zeta source transfer, period-independent theorem, optimized proportion or RH claim."
+}
