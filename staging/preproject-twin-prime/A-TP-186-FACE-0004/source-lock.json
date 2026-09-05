@@ -1,0 +1,47 @@
+{
+  "format": "tp-face-source-lock/v1",
+  "as_of": "2026-09-05",
+  "base_commit": "39002c5a6af8c7b7f093589e6a76cfd218fcbb99",
+  "local_parent": {
+    "archive": "twin-prime-attempt-03-2026-09-05.zip",
+    "sha256": "f7f339ae129851bf547bbb691c70ece6688bf993a2da67d10772dab1b1034907",
+    "file_count": 14,
+    "all_14_hashes_recomputed": true,
+    "not_same_as_remote_parent": true
+  },
+  "remote_parent": {
+    "issue": 49,
+    "commit": "cec587a86e3155e187a34945d1cd33b1726371f1",
+    "read_scope": "frozen compute_envelopes.py lines1-250 and low-kernel-proof.md; #49 release/handoff and #52 frozen ticket",
+    "independent_review": 52,
+    "review_not_executed_here": true,
+    "code_use": "adapted exact arithmetic/positive renewal/Kronecker ideas; not a claimed byte-identical copy"
+  },
+  "primary_sources": [
+    {
+      "id": "UP-CODE",
+      "repository": "openai/PrimeGaps186",
+      "commit": "61340d0b74163003b32756bb16e91d9209a5e330",
+      "path": "prime_gap_186_certificate.py",
+      "git_blob": "93121b6b12a6b69fdb2a1166c30f9d614160c042",
+      "current_read_scope": "lines820-1140: fiber_splits, shell_mask, survival, fixed trial profile/normalizer and frozen_shell_affine; earlier pinned source cover/face definitions retained in conversation",
+      "full_raw_sha256": null
+    },
+    {
+      "id": "UP-SPEC",
+      "repository": "openai/PrimeGaps186",
+      "commit": "61340d0b74163003b32756bb16e91d9209a5e330",
+      "path": "Challenge.lean",
+      "git_blob": "2331eeeb808008cee37bac7aa0fb17e36f1f3c17",
+      "read_scope": "77 coefficient entries, trialStepFunction, trialMarginal, physicalSourceOuterFace and fixed first-row caps from pinned preceding source reads",
+      "full_raw_sha256": null
+    }
+  ],
+  "external_mathematics": [
+    "Physical capped Poisson measure total law has density rho(t/z) dt; cap restriction has no leftover ratio.",
+    "Poisson marking/Mecke and renewal identity; semantic correspondence to the Lean specification remains reviewable."
+  ],
+  "input_sha256": "2d22687c4842fa19b742a5dc4991cdbfdecbc12392d7eb0be938f6db222a5fbd",
+  "source_byte_debt": "Connector returned text slices; raw network acquisition failed DNS; no PDF or full Lean proof byte hash is invented.",
+  "independent_verification": false
+}

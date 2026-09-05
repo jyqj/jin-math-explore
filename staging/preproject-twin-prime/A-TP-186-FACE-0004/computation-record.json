@@ -1,0 +1,447 @@
+{
+  "format": "tp-face-computation-record/v1",
+  "profile": "reproducible_exact_certificate",
+  "actor": {
+    "id": "openai-chatgpt",
+    "run_id": "run-20260905-twin-prime-face-04",
+    "role": "solver"
+  },
+  "backend": {
+    "python": "3.13.5",
+    "GMP": "6.3.0",
+    "gcc": "14.2.0",
+    "interface": "reviewable C/GMP through ctypes plus Python integers/Fraction",
+    "flint_used": false,
+    "original_lean_built": false
+  },
+  "commands": [
+    {
+      "command": "python3 -B marginals.py --output-dir generated",
+      "wall_seconds": 55.352,
+      "completion_observation": "complete result and stdout JSON agree; process ended; exit code was not captured by the detached monitor",
+      "output": "generated/marginal-result.json"
+    },
+    {
+      "command": "python3 -B compute_face.py --generated generated --output face-result.json",
+      "wall_seconds": 526.933,
+      "peak_rss_kib": 3276636,
+      "completion_observation": "complete result and stdout JSON agree; process ended; exit code was not captured by the detached monitor",
+      "output": "results.json"
+    },
+    {
+      "command": "python3 -B check_face.py --self-test; python3 -O -B check_face.py --self-test",
+      "exit_codes": [
+        0,
+        0
+      ],
+      "stdout_byte_equal": true
+    },
+    {
+      "command": "python3 -B check_face.py --check-result face-result.json; python3 -O -B check_face.py --check-result face-result.json",
+      "exit_codes": [
+        0,
+        0
+      ],
+      "stdout_byte_equal": true,
+      "scope": "final rational factors only"
+    }
+  ],
+  "marginal_record": {
+    "status": "CERTIFIED_MARGINAL_ARRAY_CANDIDATE",
+    "input_sha256": "2d22687c4842fa19b742a5dc4991cdbfdecbc12392d7eb0be938f6db222a5fbd",
+    "work_bits": 224,
+    "output_bits": 160,
+    "radii": 95639,
+    "signatures": 11,
+    "stored_prefixes": 2,
+    "stored_coefficient_intervals": 2104058,
+    "cap_cell_intervals": 294792,
+    "max_cap_mass_width_units": 14423607848,
+    "direct_exact_checks": 460,
+    "direct_check_scope": "signed-center exact dot equality at seven selected production radii per fiber polynomial; not an independent integral proof",
+    "records": [
+      {
+        "shell": 0,
+        "cap_mass": {
+          "path": "cap-68225.bin.zlib",
+          "sha256": "1188fcb871d2397cf6b2eedae2060be3a196f3e0d8936c8624975c2de3dee440",
+          "decoded_sha256": "551fe84204bfd537b2eff1fcec65b677ce2b8737db47561e09ec54a310c2a4d9",
+          "bytes": 999299,
+          "header": {
+            "kind": "genuine_cap_cell_mass",
+            "cap_cells": 68225,
+            "count": 98264,
+            "bits": 224,
+            "keys": [
+              "mass_over_h"
+            ],
+            "lengths": [
+              98264
+            ],
+            "encoding": "i256_low_u128_width_le"
+          }
+        },
+        "max_shell_width_units": 509
+      },
+      {
+        "shell": 1,
+        "cap_mass": {
+          "path": "cap-49152.bin.zlib",
+          "sha256": "189cbbcadf9f9238c08eca2ba9194dc22714ad977ba57fac910506ed246fc67b",
+          "decoded_sha256": "734d3b3b1c99e555510d1e09f5dfb75a6be9107b3d9f44abb9c4c52fd20ca0db",
+          "bytes": 1635831,
+          "header": {
+            "kind": "genuine_cap_cell_mass",
+            "cap_cells": 49152,
+            "count": 98264,
+            "bits": 224,
+            "keys": [
+              "mass_over_h"
+            ],
+            "lengths": [
+              98264
+            ],
+            "encoding": "i256_low_u128_width_le"
+          }
+        },
+        "max_shell_width_units": 2,
+        "prefix": {
+          "path": "prefix-2.bin.zlib",
+          "sha256": "8fb9e2e0422e9d8169c9f5fe0162eb5d0dbc184f252dbc2b9ae01f557706befd",
+          "decoded_sha256": "6ffc8cac19d673f17031484f71d7aa96541c1816ccdbde7c051efa3f0a5b4591",
+          "bytes": 25457079,
+          "header": {
+            "kind": "genuine_marginal_coefficient",
+            "physical_h_omitted": true,
+            "retained_profile_product_omitted": true,
+            "prefix": 2,
+            "rmin": 0,
+            "rmax": 95638,
+            "signatures": [
+              [],
+              [
+                2
+              ],
+              [
+                3
+              ],
+              [
+                4
+              ],
+              [
+                5
+              ],
+              [
+                6
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                3
+              ],
+              [
+                2,
+                2,
+                2
+              ]
+            ],
+            "bits": 160,
+            "keys": [
+              "0",
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7",
+              "8",
+              "9",
+              "10"
+            ],
+            "lengths": [
+              95639,
+              95639,
+              95639,
+              95639,
+              95639,
+              95639,
+              95639,
+              95639,
+              95639,
+              95639,
+              95639
+            ],
+            "encoding": "i256_low_u128_width_le"
+          }
+        }
+      },
+      {
+        "shell": 2,
+        "cap_mass": {
+          "path": "cap-46580.bin.zlib",
+          "sha256": "3a2cadddefb086d3651fb2ef7f0ae20a028769e830bf35b7a5b9d790d7afffae",
+          "decoded_sha256": "26482cc17ceae9d0dff433aeddc7c9419c5ad49c54fbc77548c1f3e003d1cfdd",
+          "bytes": 1721129,
+          "header": {
+            "kind": "genuine_cap_cell_mass",
+            "cap_cells": 46580,
+            "count": 98264,
+            "bits": 224,
+            "keys": [
+              "mass_over_h"
+            ],
+            "lengths": [
+              98264
+            ],
+            "encoding": "i256_low_u128_width_le"
+          }
+        },
+        "max_shell_width_units": 2,
+        "prefix": {
+          "path": "prefix-3.bin.zlib",
+          "sha256": "0525f9e9b74a4182a42e6717ec29626a1070b3c15d6fca80a5b44228f0bd5a24",
+          "decoded_sha256": "1831b5cf7e84856ebb8faa40388d3642ab54a4c135ec5a0553b0914e1611f14d",
+          "bytes": 25468992,
+          "header": {
+            "kind": "genuine_marginal_coefficient",
+            "physical_h_omitted": true,
+            "retained_profile_product_omitted": true,
+            "prefix": 3,
+            "rmin": 0,
+            "rmax": 95638,
+            "signatures": [
+              [],
+              [
+                2
+              ],
+              [
+                3
+              ],
+              [
+                4
+              ],
+              [
+                5
+              ],
+              [
+                6
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                3
+              ],
+              [
+                2,
+                2,
+                2
+              ]
+            ],
+            "bits": 160,
+            "keys": [
+              "0",
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7",
+              "8",
+              "9",
+              "10"
+            ],
+            "lengths": [
+              95639,
+              95639,
+              95639,
+              95639,
+              95639,
+              95639,
+              95639,
+              95639,
+              95639,
+              95639,
+              95639
+            ],
+            "encoding": "i256_low_u128_width_le"
+          }
+        }
+      }
+    ],
+    "wall_seconds": 55.352,
+    "full_face_evaluated": false,
+    "independent_verification": false
+  },
+  "finite_tests": {
+    "checks": {
+      "angular_erasure_identities": 11,
+      "cap_exact_primitive_comparisons": 68,
+      "positive_GMP_products": 25,
+      "renewal_exact_rolling_comparisons": 53,
+      "signed_array_roundtrip": true,
+      "sliding_exact_windows": 153,
+      "two_mark_location_face_identity": true
+    },
+    "full_integral_recomputed": false,
+    "independent_verification": false,
+    "ok": true,
+    "rejected": [
+      "mutated_coefficients",
+      "negative_convolution",
+      "bool_convolution",
+      "zero_convolution_length",
+      "cap_outside_delay_range",
+      "negative_delay",
+      "oversized_delay",
+      "invalid_log_domain",
+      "negative_weight_radius",
+      "invalid_renewal_domain",
+      "corrupt_array_magic"
+    ],
+    "scope": "finite_exact_algebra_and_backend_tests_only"
+  },
+  "production_array_checks": {
+    "scope": "production_array_hash_and_selected_exact_endpoint_checks",
+    "checks": [
+      [
+        68225,
+        0
+      ],
+      [
+        68225,
+        68224
+      ],
+      [
+        68225,
+        68225
+      ],
+      [
+        68225,
+        68226
+      ],
+      [
+        68225,
+        98263
+      ],
+      [
+        49152,
+        0
+      ],
+      [
+        49152,
+        49151
+      ],
+      [
+        49152,
+        49152
+      ],
+      [
+        49152,
+        49153
+      ],
+      [
+        49152,
+        98263
+      ],
+      [
+        46580,
+        0
+      ],
+      [
+        46580,
+        46579
+      ],
+      [
+        46580,
+        46580
+      ],
+      [
+        46580,
+        46581
+      ],
+      [
+        46580,
+        93159
+      ],
+      [
+        46580,
+        93160
+      ],
+      [
+        46580,
+        98263
+      ]
+    ],
+    "prefix_widths": {
+      "2": 511,
+      "3": 512
+    },
+    "output_bits": 160,
+    "all_80_delay_coefficients_checked": true,
+    "ok": true
+  },
+  "source_hashes": {
+    "exact_backend.py": "88d13057bfdf0ce3f123d428ec949d052dbc35f76fa34965ac99531632ed4a59",
+    "marginals.py": "fff9738a3d752e6d73d5507a12fdc7a3bbee5c3de2bdd3953c630e5d96d72e26",
+    "compute_face.py": "4c83991e9f2832d5d3df091f13bc5857cac38e02fe11a3659cfd3766dd13d4c9",
+    "check_face.py": "c3443cf03b023242640da1ae1a0e3a6fcd3ec16603bae0b29c196739e0b092fe",
+    "inputs.json": "2d22687c4842fa19b742a5dc4991cdbfdecbc12392d7eb0be938f6db222a5fbd"
+  },
+  "result_sha256": "a8fa366b59b1f776e87c1468d8bce6ea8d3c6bb6fbdae43289d86d950834b648",
+  "generated_data_location": "local archive / regenerated from committed source; NOT on GitHub",
+  "failures_and_repairs": [
+    {
+      "item": "interactive streaming execution requested",
+      "outcome": "runtime rejected session support; no mathematical process was started by that call",
+      "recovery": "explicit PID monitor with logs; no duplicate running computation"
+    },
+    {
+      "item": "small cap fixture count69 at cap32",
+      "outcome": "correctly rejected outside y<=1/8 primitive domain",
+      "recovery": "valid count68 fixture then separate expected-rejection test"
+    },
+    {
+      "item": "first self-test draft",
+      "outcome": "NameError from missing Counter import",
+      "recovery": "added import and reran normal and -O; production numerical code and input unchanged"
+    }
+  ],
+  "not_performed": [
+    "full -O integral rerun",
+    "full repository CI",
+    "independent mathematical verification",
+    "original FLINT numerical engine",
+    "original Lean build",
+    "the other151 scalar targets"
+  ],
+  "evidence_grade": "exact_check_plus_continuum_domination_proof_candidate",
+  "cannot_imply": [
+    "Mechanical tests alone prove the analytic correspondence.",
+    "A smaller prime-gap bound.",
+    "The twin-prime conjecture."
+  ]
+}

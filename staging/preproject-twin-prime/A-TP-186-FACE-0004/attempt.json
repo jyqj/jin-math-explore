@@ -1,0 +1,96 @@
+{
+  "format": "jin-math-preproject-attempt/v1",
+  "attempt_id": "A-TP-186-FACE-0004",
+  "issue": 53,
+  "actor": {
+    "kind": "agent",
+    "id": "openai-chatgpt",
+    "run_id": "run-20260905-twin-prime-face-04",
+    "role": "solver"
+  },
+  "base_commit": "39002c5a6af8c7b7f093589e6a76cfd218fcbb99",
+  "branch": "attempt/preproject-twin-prime/186-face-marginal-04",
+  "authority": "solver_candidate_only",
+  "independent_verification": false,
+  "claims": [
+    {
+      "id": "F4-01",
+      "statement": "The finite-difference sliding identity exactly evaluates every polynomial fiber correlation with separate rigorous weight-error radii.",
+      "grade": "proof_candidate"
+    },
+    {
+      "id": "F4-02",
+      "statement": "294792 genuine cap-cell mass intervals and2104058 genuine prefix coefficients enclose the pinned physical marginal quantities under the stated measure identity.",
+      "grade": "proof_candidate_and_exact_computation"
+    },
+    {
+      "id": "F4-03",
+      "statement": "The common positive-measure face upper envelope includes both mark locations and all physical normalization factors.",
+      "grade": "proof_candidate"
+    },
+    {
+      "id": "F4-04",
+      "statement": "physicalSourceOuterFace 0 0 / Iref <= 2.52164329e-18 < 10e-18, for Iref=23685317816/10^24.",
+      "grade": "proof_candidate_and_exact_computation"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "README.md",
+      "sha256": "eb0aef0b025a4493f4dec59161b6d69e267e90679ff72d0d3f864e9123e6e5ce"
+    },
+    {
+      "path": "marginal-proof.md",
+      "sha256": "e20147c00a871485e52c88ec5e4935bf1dc6155256d5e9c7c47a929d0b730628"
+    },
+    {
+      "path": "inputs.json",
+      "sha256": "2d22687c4842fa19b742a5dc4991cdbfdecbc12392d7eb0be938f6db222a5fbd"
+    },
+    {
+      "path": "exact_backend.py",
+      "sha256": "88d13057bfdf0ce3f123d428ec949d052dbc35f76fa34965ac99531632ed4a59"
+    },
+    {
+      "path": "marginals.py",
+      "sha256": "fff9738a3d752e6d73d5507a12fdc7a3bbee5c3de2bdd3953c630e5d96d72e26"
+    },
+    {
+      "path": "compute_face.py",
+      "sha256": "4c83991e9f2832d5d3df091f13bc5857cac38e02fe11a3659cfd3766dd13d4c9"
+    },
+    {
+      "path": "check_face.py",
+      "sha256": "c3443cf03b023242640da1ae1a0e3a6fcd3ec16603bae0b29c196739e0b092fe"
+    },
+    {
+      "path": "results.json",
+      "sha256": "a8fa366b59b1f776e87c1468d8bce6ea8d3c6bb6fbdae43289d86d950834b648"
+    },
+    {
+      "path": "source-lock.json",
+      "sha256": "dcd19d971ac5638ac8851c312922eeb566e4b14303b64f4545d7e6d6a8897131"
+    },
+    {
+      "path": "computation-record.json",
+      "sha256": "814137e1a2d9ea1e37ff6d03d14869c930f9dcf54a220ce432a3feea4f0dcc2a"
+    },
+    {
+      "path": "verification-ticket.md",
+      "sha256": "dcbca15d2f81fe137a42f7e8533f98a3652c4b25f50bde47e468e1b9ab267a78"
+    }
+  ],
+  "large_generated_artifacts": {
+    "remote_presence": false,
+    "regenerate": "python3 -B marginals.py --output-dir generated",
+    "hash_manifest": "computation-record.json"
+  },
+  "production_project_handoff": "not_applicable_no_Project_or_objective_exists",
+  "next_target": "G0:R01 source density/window and face evaluation using the same pinned marginal arrays where radius scope permits",
+  "cannot_imply": [
+    "Independent verification of this candidate or prior root.",
+    "All152 integral inputs.",
+    "An original Lean build or the full186 theorem.",
+    "A smaller prime-gap bound or twin-prime proof."
+  ]
+}
