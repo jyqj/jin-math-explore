@@ -1,0 +1,113 @@
+{
+  "record_version": 1,
+  "execution_profile": "reproducible",
+  "status": "completed",
+  "task_file": {
+    "path": "README.md",
+    "sha256": "0214039637db3f8bcbfa6ef4bc5ad2e6b5a059bb99b75853ce2a03499886c12b"
+  },
+  "task": {
+    "question": "Check the finite weighted prime-trace normalization, cutoff-order obstruction, variable-depth operator bounds and conditional ideal two-scale corollary.",
+    "domain": "Finite complex Fourier matrices; real positive depths; H_0^1 cosine taper for the cutoff example; real finite grid weights.",
+    "assumptions": [
+      "The source-facing proof uses a real even compact C^2 taper. The cosine test taper checks identities only and is not a source-profile instance.",
+      "All current numerical array and quadrature examples are bounded finite computations.",
+      "Source claims remain pinned read-only inputs, not verified mathematics."
+    ],
+    "deliverables": [
+      "README.md",
+      "check_weighted_trace.py",
+      "validation.txt",
+      "checkpoint.json",
+      "computation-record.json"
+    ]
+  },
+  "backend": {
+    "name": "Python",
+    "version": "3.13.5",
+    "interface": "local bounded foreground subprocess",
+    "libraries": {
+      "numpy": "2.3.5",
+      "scipy": "1.17.0",
+      "sympy": "1.14.0"
+    }
+  },
+  "backend_decision": {
+    "selected": "Python with NumPy/SciPy/SymPy",
+    "selection_reason": "A rerunnable NumPy-compatible successor to the repository finite-matrix checkers; SymPy supplies exact polynomial checks and SciPy one bounded prototype integral.",
+    "candidates": [
+      {
+        "name": "Mathematica",
+        "suitable_in_principle": true,
+        "readiness": "wolframscript not found on PATH in the current container; other installations not asserted absent"
+      },
+      {
+        "name": "SageMath",
+        "suitable_in_principle": true,
+        "readiness": "sage not found on PATH in the current container"
+      },
+      {
+        "name": "Python",
+        "readiness": "executable and selected package imports live-checked; script actually executed"
+      }
+    ],
+    "fallback_reason": "not-required; selected Python route completed",
+    "inventory_boundary": "Manual selected-backend readiness check. No persisted repository inventory snapshot; no Wolfram MCP or paid external execution was requested."
+  },
+  "precision": {
+    "mode": "mixed exact symbolic and binary64 numerical",
+    "seed": 20260905,
+    "samples": 80,
+    "rounding": "platform IEEE binary64",
+    "quad_abs_tolerance": 2e-08,
+    "quad_rel_tolerance": 2e-10
+  },
+  "execution": {
+    "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python check_weighted_trace.py --samples 80",
+    "exit_status": 0,
+    "input": "Parameters and bounded cases are frozen in the code; see validation.txt for versions and executed domains."
+  },
+  "code_artifacts": [
+    {
+      "path": "check_weighted_trace.py",
+      "sha256": "097add9a64cea47bd01b78f8e2a33d2818682485cb121fde31dec4c2b23f17b6"
+    }
+  ],
+  "result_artifacts": [
+    {
+      "path": "validation.txt",
+      "sha256": "8f24a777fb32681bf9d73026b3842dc51babfd8d9e329adea5318d6e320ec306"
+    }
+  ],
+  "result_summary": {
+    "all_program_assertions": "PASS",
+    "finite_prime_sum": 14.892948609544,
+    "prime_integral_residual": 3.496e-08,
+    "analytic_integral_tail_bound": 1.865e-05,
+    "cutoff_order_targets": [
+      -0.25132741228718347,
+      0.0
+    ],
+    "maximum_operator_identity_residual": 2.842e-13,
+    "critical_symbol_residual": 3.109e-15,
+    "conditional_ideal_simple_floor": 0.6668529661330036
+  },
+  "verification": {
+    "evidence_level": "numerical-evidence",
+    "methods": [
+      "Exact symbolic expansions for d=1..8 and an exact radical identity.",
+      "Direct finite prime-part integration compared with the finite prime-power formula.",
+      "Two separately ordered cutoff sequences.",
+      "Seeded finite matrix checks of exact identities, sign comparison and contraction inequalities.",
+      "Package relative paths, JSON structure and SHA-256 checked locally."
+    ],
+    "exact_subchecks": "Polynomial/hyperbolic and radical identities only; not a formal verification of the general analytic theorems."
+  },
+  "limitations": [
+    "Solver self-checks, not an independent-verifier run or Lean proof.",
+    "Numerical quadrature errors are not interval certified; an analytic truncation bound is reported separately.",
+    "No full repository CI, schema suite, source Lean build or bundled backend-inventory/record script was executed.",
+    "Ideal exact-grid operator assumptions and unit-atom normalization are not proved for actual zeta zeros.",
+    "No source-level microscopic localized trace lower bound or unconditional zeta proportion improvement."
+  ]
+}

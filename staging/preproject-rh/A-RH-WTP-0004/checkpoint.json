@@ -1,0 +1,176 @@
+{
+  "schema": "jin-math-preproject-checkpoint/v1",
+  "checkpoint_id": "CP-RH-WTP-OPERATOR-TRANSFER-01",
+  "parent_attempt": "A-RH-LCI-0003",
+  "attempt_id": "A-RH-WTP-0004",
+  "issue": 40,
+  "status": "solver_proof_candidate",
+  "frozen": true,
+  "freeze_policy": "Files are immutable after the publishing commit. Repairs require a new successor checkpoint. The commit identifier is recorded externally in Issue #40 to avoid a self-reference.",
+  "actor": {
+    "kind": "agent",
+    "id": "openai-gpt-6-pro",
+    "run_id": "run-20260905-rh-weighted-trace-04",
+    "role": "solver"
+  },
+  "branch": "attempt/preproject-rh/weighted-trace-audit-04",
+  "observed_parent_head": "95e3e56329cc124166ed80cfd25628bedd845d35",
+  "observed_main_head": "70484b065fc3b6a64f06955a5f9c895531750891",
+  "corrects_source_interpretation_of": [
+    "CP-RH-LCI-NESTED-SCALE-COLLAPSE-01",
+    "principal-angle-and-depth.md Sections 4-6"
+  ],
+  "source_dependencies": [
+    {
+      "repository": "anthropics/formal-math",
+      "commit": "2bafb8c88f177284a2123b5fefa2ff84e2365eb6",
+      "paths": [
+        "zeta23/Zeta23/PrimeSideA/Defs.lean",
+        "zeta23/Zeta23/Taper.lean"
+      ],
+      "build_replayed": false
+    }
+  ],
+  "artifacts": [
+    "README.md",
+    "check_weighted_trace.py",
+    "validation.txt",
+    "computation-record.json",
+    "checkpoint.json"
+  ],
+  "artifact_hashes": [
+    {
+      "path": "README.md",
+      "sha256": "0214039637db3f8bcbfa6ef4bc5ad2e6b5a059bb99b75853ce2a03499886c12b"
+    },
+    {
+      "path": "check_weighted_trace.py",
+      "sha256": "097add9a64cea47bd01b78f8e2a33d2818682485cb121fde31dec4c2b23f17b6"
+    },
+    {
+      "path": "validation.txt",
+      "sha256": "8f24a777fb32681bf9d73026b3842dc51babfd8d9e329adea5318d6e320ec306"
+    },
+    {
+      "path": "computation-record.json",
+      "sha256": "f30a3d0e8b2c05737905fa1109781f0bdd7a35dd2ae73019f8b2d178325979e0"
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "C-WTP-FINITE-PRIME-TRACE",
+      "evidence_grade": "proof_candidate",
+      "statement": "Finite weighted trace formula (2.1), quadratic generating operator (2.2), and conditional Chebyshev/variation bound (2.4)."
+    },
+    {
+      "claim_id": "C-WTP-CUTOFF-ORDER",
+      "evidence_grade": "proof_candidate",
+      "statement": "The finite-pair derivative identity survives, but its full-grid trace and an infinite homogeneous-pair sum have different cutoff-order limits. Every trace-class observable of the homogeneous signed frame is depth-independent."
+    },
+    {
+      "claim_id": "C-WTP-NORMALIZED-DEPTH-SCOPE",
+      "evidence_grade": "scope_correction",
+      "statement": "The old finite selected-block bound needs o(L^-2), not merely o(1), error to force a=L*delta to vanish. External-zero localization and single-vector tails are different obligations."
+    },
+    {
+      "claim_id": "C-WTP-VARIABLE-MODERATE-OPERATOR",
+      "evidence_grade": "proof_candidate",
+      "statement": "In the finite exact master-lattice mixed 0/1/2 model with multiplicity-one pairs and arbitrary site-dependent depths in [0,2*pi], ||G-G0||_F^2 <= Delta. A common depth or finite alphabet is unnecessary."
+    },
+    {
+      "claim_id": "C-WTP-HIGH-DEPTH-CHARGE",
+      "evidence_grade": "proof_candidate",
+      "statement": "For arbitrary finite depths, ||G-G0||_F^2 <= Delta+2 B_high, with the explicit positive pair-versus-nonpair leakage in (4.4). Pure all-pair configurations have equality Delta=||G-2I||_F^2 without a depth cutoff."
+    },
+    {
+      "claim_id": "C-WTP-SHORT-OPERATOR-TRANSFER",
+      "evidence_grade": "proof_candidate",
+      "statement": "For a d-row contraction, unit-atom short normalization is alpha^-1. The Hilbert-Schmidt discrepancy divided by sqrt(P) is at most sqrt(eta)/alpha, not sqrt(eta)."
+    },
+    {
+      "claim_id": "C-WTP-EXPLICIT-IDEAL-GAP",
+      "evidence_grade": "proof_candidate",
+      "statement": "With critical mean load one, P divisible by four, moderate variable depths and the two exact ideal moment assumptions (6.2), s >= 2/3 + (sqrt(119/72)-sqrt(19/12))^2/4 = 0.666852966133... . This is not an unconditional zeta bound."
+    },
+    {
+      "claim_id": "C-WTP-WEIGHTED-CHANNEL-ROUTE-CORRECTION",
+      "evidence_grade": "scope_correction",
+      "statement": "A weighted trace is not automatically a usable new independent depth channel, nor established as necessary: direct operator transfer bypasses depth classification in the specified model. It may still be useful with additional arithmetic/localization control."
+    }
+  ],
+  "validation": {
+    "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python check_weighted_trace.py --samples 80",
+    "result": "PASS program assertions; see actual validation.txt",
+    "scope": "Exact symbolic subchecks and finite numerical tests, not proof of all claims. Full repository contracts and CI not run."
+  },
+  "computation_handoff": {
+    "schema": "jin-math-computation-handoff/v1",
+    "problem_id": "preproject-rh",
+    "window_id": "successor-04",
+    "attempt_id": "A-RH-WTP-0004",
+    "claim_id": null,
+    "objective_sha256": "0214039637db3f8bcbfa6ef4bc5ad2e6b5a059bb99b75853ce2a03499886c12b",
+    "question": "Check the finite weighted prime-trace normalization, cutoff-order obstruction, variable-depth operator bounds and conditional ideal two-scale corollary.",
+    "domain": "Finite complex Fourier matrices; real positive depths; H_0^1 cosine taper for the cutoff example; real finite grid weights.",
+    "assumptions": [
+      "The source-facing proof uses a real even compact C^2 taper. The cosine test taper checks identities only and is not a source-profile instance.",
+      "All current numerical array and quadrature examples are bounded finite computations.",
+      "Source claims remain pinned read-only inputs, not verified mathematics."
+    ],
+    "requested_evidence": "numerical_evidence",
+    "backend": {
+      "name": "Python/NumPy/SciPy/SymPy",
+      "version": "3.13.5",
+      "interface": "local foreground subprocess",
+      "inventory_snapshot_sha256": null
+    },
+    "exact_input": {
+      "seed": 20260905,
+      "samples": 80,
+      "scope": "The objective hash pins the bounded computation task in README.md; it is NOT a canonical v13 Project objective."
+    },
+    "reproduction_command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python check_weighted_trace.py --samples 80",
+    "code_artifacts": [
+      {
+        "path": "check_weighted_trace.py",
+        "sha256": "097add9a64cea47bd01b78f8e2a33d2818682485cb121fde31dec4c2b23f17b6"
+      }
+    ],
+    "result_artifacts": [
+      {
+        "path": "validation.txt",
+        "sha256": "8f24a777fb32681bf9d73026b3842dc51babfd8d9e329adea5318d6e320ec306"
+      }
+    ],
+    "computation_record": {
+      "path": "computation-record.json",
+      "sha256": "f30a3d0e8b2c05737905fa1109781f0bdd7a35dd2ae73019f8b2d178325979e0"
+    },
+    "evidence_grade": "numerical_evidence",
+    "cannot_imply": [
+      "Solver self-checks, not an independent-verifier run or Lean proof.",
+      "Numerical quadrature errors are not interval certified; an analytic truncation bound is reported separately.",
+      "No full repository CI, schema suite, source Lean build or bundled backend-inventory/record script was executed.",
+      "Ideal exact-grid operator assumptions and unit-atom normalization are not proved for actual zeta zeros.",
+      "No source-level microscopic localized trace lower bound or unconditional zeta proportion improvement."
+    ]
+  },
+  "current_frontier": [
+    "Prove a source-compatible near-lattice operator approximation for actual reflection pairs, including collisions and higher multiplicities.",
+    "Control positive high-depth leakage for variable depths, or give an arithmetic obstruction to it.",
+    "Match actual short matrices to correctly normalized contractions and charge taper, resampling, tails and boundary contributions.",
+    "Use (6.5) as a quantitative target; do not demand full recovery of the depth field first.",
+    "Audit finite weights as localized observables without exchanging infinite cutoff orders."
+  ],
+  "cannot_imply": [
+    "Solver self-checks, not an independent-verifier run or Lean proof.",
+    "Numerical quadrature errors are not interval certified; an analytic truncation bound is reported separately.",
+    "No full repository CI, schema suite, source Lean build or bundled backend-inventory/record script was executed.",
+    "Ideal exact-grid operator assumptions and unit-atom normalization are not proved for actual zeta zeros.",
+    "No source-level microscopic localized trace lower bound or unconditional zeta proportion improvement.",
+    "The exact-grid assumptions and the two ideal moment inequalities are hypotheses, not conclusions about zeta.",
+    "No claim of mathematical novelty against the full literature or improvement over the source paper optimized constant."
+  ],
+  "independent_verifier_required": true,
+  "independent_verifier_receipt": null
+}

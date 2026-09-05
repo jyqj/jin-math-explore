@@ -1,0 +1,33 @@
+Python 3.13.5; NumPy 2.3.5; SciPy 1.17.0; SymPy 1.14.0
+PASS exact symbolic quadratic-weight, Abel and hyperbolic identities (d=1..8)
+PASS finite weighted prime-part identity (numerical quadrature)
+  L=4, prime powers n<=floor(exp(L))=54, weights=(tau-c)^2
+  prime-side finite sum=14.892948609544
+  truncated direct integral=14.892948644503
+  residual=3.496e-08; analytic integral tail bound=1.865e-05
+  scipy internal error estimate=1.972e-08 (not interval-certified)
+  finite C_X=1.029370509, triangle bound=98.885723, coarse Abel bound=5626.481505
+PASS unequal cutoff-order limits: numerical signal for the proved model formulas
+  target at fixed zero cutoff, then full grid: -2*pi*delta^2=-0.251327412287
+  cutoff=  32: fixed M=3, K growing: -0.260242984003; fixed K=3, M growing: -1.244e-06
+  cutoff= 128: fixed M=3, K growing: -0.253556337748; fixed K=3, M growing: -4.911e-09
+  cutoff= 512: fixed M=3, K growing: -0.251885862630; fixed K=3, M growing: -1.936e-11
+  cutoff=2048: fixed M=3, K growing: -0.251467120628; fixed K=3, M growing: -7.586e-14
+PASS variable-depth pure-pair contraction and conditional mixed transfer
+  samples=80, seed=20260905, periods=3..24, depths in [0,5]
+  maximum exact-defect-identity residual=2.842e-13
+  minimum second-moment-bound slack=2.056e+00
+  minimum variable-moderate-depth D-||K||^2 slack=-2.274e-13
+  homogeneous pair/tangent operator residual=4.074e-14
+  correctly normalized general eta threshold: 5.62700696918392e-05
+  critical mean-load-one eta threshold: 8.42236062791574e-05
+  both reserve the entire 5/108 gap for operator error only; other source losses are not included
+PASS arbitrary mixed depths with explicit positive high-depth leakage charge
+  samples=80, depths in [0.05,10], minimum slack=0.000e+00
+PASS critical-density short-scale normalization and explicit ideal gap
+  direct/symbol residual=3.109e-15; finite kernel residual=2.117e-12
+  configurations satisfying both zero-error model budgets=20/80
+  epsilon_ideal=0.000186299466336929; conditional simple density >= 0.666852966133004
+  pure ideal model, pair multiplicity one, normalized depths <=2*pi; not a zeta record
+BOUNDARY: exact symbolic identities plus numerical finite models; no Lean verification,
+no source-level microscopic weighted-trace asymptotic, and no unconditional zeta improvement.
