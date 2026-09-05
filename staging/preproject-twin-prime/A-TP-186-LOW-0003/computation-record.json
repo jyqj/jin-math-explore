@@ -1,0 +1,104 @@
+{
+  "format": "jin-math-preproject-computation-record/v1",
+  "project_bridge_status": "not_a_production_Project_handoff; no dummy Project identity/objective",
+  "attempt_id": "A-TP-186-LOW-0003",
+  "run_id": "run-20260905-twin-prime-low-03",
+  "question": "Construct a genuine upper enclosure for physicalSourceOuterRoot 0 0 / Iref and test <=11e-18.",
+  "domain": "fixed 40-coordinate trial; nonnegative finite fragment measures under the specified Poisson law",
+  "backend": {
+    "python": "3.13.5",
+    "gmp": "6.3.0",
+    "compiler": "14.2.0",
+    "interface": "Python stdlib Fraction + embedded C/GMP mpz import/multiply/export",
+    "modified_dependency": false,
+    "flint_used": false
+  },
+  "resource_plan": {
+    "method": "O(N) renewal envelope followed by exact truncated positive products and signed-square interval contraction",
+    "maximum_density_cells": 98264,
+    "fixed_point_bits": 160,
+    "worker_processes": 1,
+    "expected_peak_memory_gib": 2.5,
+    "observed_wall_seconds": 196.786,
+    "observed_peak_rss_kib": 2083464
+  },
+  "execution": {
+    "full_run": "python3 -B compute_envelopes.py --run --output results.json",
+    "full_run_exit": 0,
+    "self_tests": [
+      "python3 -B check_low_kernel.py --self-test",
+      "python3 -O -B check_low_kernel.py --self-test"
+    ],
+    "receipt_checks": [
+      "python3 -B check_low_kernel.py --check-result results.json",
+      "python3 -O -B check_low_kernel.py --check-result results.json"
+    ],
+    "all_test_exits": 0,
+    "normal_and_optimized_test_stdout_equal": true,
+    "full_optimized_run_performed": false,
+    "self_test_groups": [
+      "exact_first_row_radial_geometry",
+      "exact_GMP_products_and_rejected_negative_input",
+      "outward_exponential_vs_independent_rational_series",
+      "rolling_renewal_vs_direct_exact_sums_and_domain_rejection",
+      "Eulerian_carry_vs_cube_volume_formula",
+      "all_orders_tail_formal_identity_finite_projection",
+      "designated_moments_vs_direct_labeled_assignments",
+      "signed_square_requires_common_measure",
+      "linear_truncation_distinguished_from_cyclic_aliasing",
+      "frozen_input_commitment"
+    ]
+  },
+  "exploration_and_interruptions": [
+    {
+      "event": "an exploratory foreground prototype was terminated by a tool timeout after beginning products",
+      "recovery": "confirmed no surviving process before restart; no duplicate job; final published program subsequently ran from frozen input without cache"
+    },
+    {
+      "event": "coarse positive absolute-polynomial bound and short cyclic FFT scout were insufficient",
+      "interpretation": "not target refutations; neither is accepted as evidence for the published bound"
+    },
+    {
+      "event": "a finite tail-identity unit test initially used Python division on an integer identity coefficient",
+      "repair": "changed the test coefficient to Fraction before division; exact test now passes; production integration code was unaffected"
+    }
+  ],
+  "evidence_grade": "exact_check",
+  "analytic_verdict": "proof_candidate; independent_review_pending",
+  "code_artifacts": [
+    {
+      "path": "compute_envelopes.py",
+      "sha256": "acdebea1ef8d7194eae232590c2e7da2414b5af29fca24497f375ad213b724b8"
+    },
+    {
+      "path": "check_low_kernel.py",
+      "sha256": "b2cfe87518043f8761a28432838087e20665e33b50f52535f1a242fde6ce3ca5"
+    }
+  ],
+  "input_artifacts": [
+    {
+      "path": "inputs.json",
+      "sha256": "a259961ab3354229b7d205188399136f2fd614b8ddf9d4b1fa193e292fbd1b8e"
+    },
+    {
+      "path": "source-lock.json",
+      "sha256": "95d8bf7df8c48039e473c55d23371a699508dfc58f6227e1bf2c37e504059b8d"
+    }
+  ],
+  "result_artifacts": [
+    {
+      "path": "results.json",
+      "sha256": "f0862f6b5aba883c3eec34f1312d3a5603f9dbc5151f6ed52abaa02e3ca022b5"
+    }
+  ],
+  "proof_artifact": {
+    "path": "low-kernel-proof.md",
+    "sha256": "0224b3d4ac7ce9ad57485d59e28e94ceda2c7d057cb9dbc1a261b4c7a6141929"
+  },
+  "cannot_imply": [
+    "This is an independent-verifier PASS.",
+    "The second G0:R00 face target 10 is proved.",
+    "All 152 numerical inputs hold.",
+    "A new prime-gap bound or the twin prime conjecture is proved."
+  ]
+}

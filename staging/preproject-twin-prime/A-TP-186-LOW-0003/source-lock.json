@@ -1,0 +1,93 @@
+{
+  "format": "tp-186-low-source-lock/v1",
+  "as_of": "2026-09-05",
+  "base_commit": "39002c5a6af8c7b7f093589e6a76cfd218fcbb99",
+  "upstream_commit": "61340d0b74163003b32756bb16e91d9209a5e330",
+  "sources": [
+    {
+      "id": "SPEC",
+      "repository": "openai/PrimeGaps186",
+      "path": "Challenge.lean",
+      "git_blob": "2331eeeb808008cee37bac7aa0fb17e36f1f3c17",
+      "raw_payload_sha256": null,
+      "checked_objects": [
+        "fragmentLaw",
+        "trialPhysicalMeasure",
+        "trialCoefficientInteger",
+        "trialCore",
+        "trialPhysicalNormalizer",
+        "physicalSourceCover",
+        "physicalSourceOuterRoot",
+        "outerOrderTwoBounds row0"
+      ],
+      "read_boundary": "bounded connector text reads and inherited frozen excerpts; no full proof-module build"
+    },
+    {
+      "id": "PY",
+      "repository": "openai/PrimeGaps186",
+      "path": "prime_gap_186_certificate.py",
+      "git_blob": "93121b6b12a6b69fdb2a1166c30f9d614160c042",
+      "raw_payload_sha256": null,
+      "fresh_read_lines": [
+        1590,
+        1840
+      ],
+      "checked_objects": [
+        "SourceJets.rows",
+        "_low_positive_dickman",
+        "_low_eulerian_envelopes",
+        "source_low_measures"
+      ],
+      "read_boundary": "the original Python integral engine was not executed"
+    },
+    {
+      "id": "PAPER",
+      "url": "https://cdn.openai.com/pdf/51126fac-1b68-4128-9666-c908bcc16033/short_gaps.pdf",
+      "version": "39-page manuscript dated 2026-08-30, retrieved 2026-09-05",
+      "locators": [
+        "section3.3 equations(3.24)-(3.25)",
+        "sections4.5-4.6"
+      ],
+      "screenshots_pages_1based": [
+        20,
+        30
+      ],
+      "raw_payload_sha256": null
+    },
+    {
+      "id": "POISSON",
+      "authors": "Guenter Last, Mathew Penrose",
+      "title": "Lectures on the Poisson Process",
+      "url": "https://stoch.math.kit.edu/img/Last/lastpenrose2017.pdf",
+      "locators": [
+        "Theorem3.9",
+        "Theorem4.1"
+      ],
+      "raw_payload_sha256": null
+    }
+  ],
+  "predecessor": {
+    "commit": "f9a4116daad92d241feb2e40e04046900ff4e182",
+    "geometry_git_blob": "75e2952a896cd0fb2b79fd03b0c8af8d11dc7f05",
+    "geometry_sha256": "a33d336ddf585d23f6bf4cfd17c8eb7ec23aaf9114d5a1ce65a10d3cb4d4914b",
+    "usage": "exact parameter transcription cross-check, not independent verification",
+    "reviews_not_consumed": [
+      39,
+      47
+    ]
+  },
+  "input_file": {
+    "path": "inputs.json",
+    "sha256": "a259961ab3354229b7d205188399136f2fd614b8ddf9d4b1fa193e292fbd1b8e"
+  },
+  "source_debts": [
+    "whole original source-byte acquisition",
+    "independent statement/transcription audit",
+    "original Lean proof module and build"
+  ],
+  "no_dependency_on": [
+    "physical_integral_bounds axiom",
+    "previous Young-parameter optimization proof candidate",
+    "synthetic receipt fixtures"
+  ]
+}

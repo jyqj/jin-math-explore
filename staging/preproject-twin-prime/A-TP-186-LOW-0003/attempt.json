@@ -1,0 +1,92 @@
+{
+  "format": "jin-math-preproject-attempt/v1",
+  "attempt_id": "A-TP-186-LOW-0003",
+  "issue": 49,
+  "actor": {
+    "kind": "agent",
+    "id": "openai-chatgpt",
+    "run_id": "run-20260905-twin-prime-low-03",
+    "role": "solver"
+  },
+  "base_sha": "39002c5a6af8c7b7f093589e6a76cfd218fcbb99",
+  "branch": "attempt/preproject-twin-prime/186-low-kernel-03",
+  "authority": "solver_stage_no_Project_authority",
+  "candidate_status": "frozen_for_independent_review",
+  "claims": [
+    {
+      "id": "L3-01",
+      "statement": "Tilted low-fragment total law and its designated convolution are correctly normalized.",
+      "grade": "proof_candidate"
+    },
+    {
+      "id": "L3-02",
+      "statement": "Positive renewal recurrence gives outward cell density bounds; original all-orders carry tail has the stated formal identity.",
+      "grade": "proof_candidate"
+    },
+    {
+      "id": "L3-03",
+      "statement": "Common dominating measures and labeled-set-partition moments permit sound signed-square interval contraction.",
+      "grade": "proof_candidate"
+    },
+    {
+      "id": "L3-04",
+      "statement": "For the fixed target, physicalSourceOuterRoot 0 0 / Iref <= 10.42897229e-18 < 11e-18.",
+      "grade": "proof_candidate",
+      "computation_grade": "exact_check"
+    },
+    {
+      "id": "L3-05",
+      "statement": "The saved final rational factors recompute the printed bound; finite algebra/backend tests pass.",
+      "grade": "exact_check"
+    }
+  ],
+  "unresolved": [
+    "Independent proof and source-transcription review",
+    "G0:R00 face target 10",
+    "Other source integrals and cap inputs",
+    "Full 186 theorem and prime-gap transfer"
+  ],
+  "independent_verification": false,
+  "new_prime_gap_bound": null,
+  "next_target": "physicalSourceOuterFace 0 0 / Iref <=10e-18",
+  "artifact_hashes": [
+    {
+      "path": "README.md",
+      "sha256": "8e6c4b0e286001c345d7f823fc9354cf0532584deaeb502cd23e6a5743942b64"
+    },
+    {
+      "path": "low-kernel-proof.md",
+      "sha256": "0224b3d4ac7ce9ad57485d59e28e94ceda2c7d057cb9dbc1a261b4c7a6141929"
+    },
+    {
+      "path": "inputs.json",
+      "sha256": "a259961ab3354229b7d205188399136f2fd614b8ddf9d4b1fa193e292fbd1b8e"
+    },
+    {
+      "path": "compute_envelopes.py",
+      "sha256": "acdebea1ef8d7194eae232590c2e7da2414b5af29fca24497f375ad213b724b8"
+    },
+    {
+      "path": "check_low_kernel.py",
+      "sha256": "b2cfe87518043f8761a28432838087e20665e33b50f52535f1a242fde6ce3ca5"
+    },
+    {
+      "path": "results.json",
+      "sha256": "f0862f6b5aba883c3eec34f1312d3a5603f9dbc5151f6ed52abaa02e3ca022b5"
+    },
+    {
+      "path": "source-lock.json",
+      "sha256": "95d8bf7df8c48039e473c55d23371a699508dfc58f6227e1bf2c37e504059b8d"
+    },
+    {
+      "path": "computation-record.json",
+      "sha256": "e1645b663dc0945fb77b319ca6ff257d350496f9f3728f03a849ae7671129da2"
+    }
+  ],
+  "cannot_imply": [
+    "This is an independent-verifier PASS.",
+    "The second G0:R00 face target 10 is proved.",
+    "All 152 numerical inputs hold.",
+    "A new prime-gap bound or the twin prime conjecture is proved."
+  ]
+}
