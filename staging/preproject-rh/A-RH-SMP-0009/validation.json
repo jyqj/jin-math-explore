@@ -1,0 +1,167 @@
+{
+  "backend": {
+    "python": "3.13.5",
+    "numpy": "2.3.5",
+    "mpmath": "1.3.0"
+  },
+  "exact": {
+    "partitions": 510,
+    "exact_lag_count_checks": 3586,
+    "gap": "7/36",
+    "conditional_slow_modulation_floor": "13/16"
+  },
+  "regression": {
+    "status": "PASS",
+    "samples": 120,
+    "seed": 2026090609,
+    "periods": "3..48",
+    "metrics": {
+      "max_kernel_integral_residual": 1.3841372492606752e-11,
+      "max_mosaic_bound_ratio": 0.01618759340882481,
+      "max_self_block_ratio": 0.1527573745338012,
+      "max_cross_bound_ratio": 0.0325487747892767,
+      "max_perturbation_ratio": 0.04980287110783395,
+      "max_norm_transfer_residual": 0.0
+    }
+  },
+  "families": {
+    "slow_modulation": [
+      {
+        "cells": 12,
+        "variation": 4.996981793192461,
+        "variation_density": 0.4164151494327051,
+        "long_defect_density": 0.053374307707106494,
+        "short_moment": 1.543657981677823,
+        "short_gap": -0.03967535165551017,
+        "coarsening_epsilon": 0.5,
+        "blocks": 5
+      },
+      {
+        "cells": 24,
+        "variation": 5.70170154831212,
+        "variation_density": 0.23757089784633834,
+        "long_defect_density": 0.03535119691081867,
+        "short_moment": 1.6319958050912564,
+        "short_gap": 0.048662471757923154,
+        "coarsening_epsilon": 0.5,
+        "blocks": 7
+      },
+      {
+        "cells": 48,
+        "variation": 5.81264006963464,
+        "variation_density": 0.12109666811738834,
+        "long_defect_density": 0.02179116540500803,
+        "short_moment": 1.6909404676232886,
+        "short_gap": 0.10760713428995539,
+        "coarsening_epsilon": 0.4947404252314028,
+        "blocks": 7
+      },
+      {
+        "cells": 96,
+        "variation": 5.903704678178847,
+        "variation_density": 0.061496923731029655,
+        "long_defect_density": 0.012973720762338159,
+        "short_moment": 1.7275938379134674,
+        "short_gap": 0.14426050458013417,
+        "coarsening_epsilon": 0.3947157571181669,
+        "blocks": 8
+      },
+      {
+        "cells": 192,
+        "variation": 5.954313269638597,
+        "variation_density": 0.031012048279367693,
+        "long_defect_density": 0.007483770673322843,
+        "short_moment": 1.74936174375702,
+        "short_gap": 0.16602841042368666,
+        "coarsening_epsilon": 0.3141787569912551,
+        "blocks": 12
+      },
+      {
+        "cells": 384,
+        "variation": 5.980272890670889,
+        "variation_density": 0.015573627319455441,
+        "long_defect_density": 0.004213964999314923,
+        "short_moment": 1.7619237913078738,
+        "short_gap": 0.17859045797454054,
+        "coarsening_epsilon": 0.24972571154385828,
+        "blocks": 14
+      },
+      {
+        "cells": 768,
+        "variation": 5.993335276218807,
+        "variation_density": 0.007803821974243238,
+        "long_defect_density": 0.0023321428464240235,
+        "short_moment": 1.76903219096821,
+        "short_gap": 0.1856988576348768,
+        "coarsening_epsilon": 0.19835163490446228,
+        "blocks": 18
+      }
+    ],
+    "many_blocks": [
+      {
+        "cells": 6,
+        "blocks": 3,
+        "interface_density": 0.3333333333333333,
+        "short_moment": 1.5360382979362068
+      },
+      {
+        "cells": 24,
+        "blocks": 6,
+        "interface_density": 0.20833333333333334,
+        "short_moment": 1.608081534525601
+      },
+      {
+        "cells": 96,
+        "blocks": 12,
+        "interface_density": 0.11458333333333333,
+        "short_moment": 1.6978219621965447
+      },
+      {
+        "cells": 384,
+        "blocks": 24,
+        "interface_density": 0.059895833333333336,
+        "short_moment": 1.7501479921294063
+      },
+      {
+        "cells": 1536,
+        "blocks": 48,
+        "interface_density": 0.030598958333333332,
+        "short_moment": 1.7564667691520244
+      }
+    ],
+    "rapid_interlacing": {
+      "cells": 120,
+      "defect": 0.0,
+      "variation_density": 0.49166666666666664,
+      "short_moment": 1.6292029755010067,
+      "scope": "one-scale exact equality does not force low variation"
+    }
+  },
+  "guards": {
+    "growing_depth_guard": [
+      {
+        "cells": 100,
+        "depth": "4.60517018598809136803598290936872841520220297725754595206666",
+        "short_energy_lower": "0.0"
+      },
+      {
+        "cells": 10000,
+        "depth": "9.21034037197618273607196581873745683040440595451509190413331",
+        "short_energy_lower": "0.0"
+      },
+      {
+        "cells": 1000000,
+        "depth": "13.8155105579642741041079487281061852456066089317726378562",
+        "short_energy_lower": "1.00666649002522306950438947767407974220337821101545420397434"
+      },
+      {
+        "cells": 100000000,
+        "depth": "18.4206807439523654721439316374749136608088119090301838082666",
+        "short_energy_lower": "15.7094038167120015134283925961215559715945911031519677888602"
+      }
+    ],
+    "small_block_integral_residual": "1.24460305557222834142881281075602484811805043374423342662022e-60",
+    "scope": "mpmath high precision is not interval certification"
+  },
+  "boundary": "Analytic proof candidates plus exact finite combinatorics and floating/high-precision checks. No independent verification, general-near-extremizer classification, zeta proportion, or RH claim."
+}
