@@ -1,0 +1,98 @@
+{
+  "schema": "jin-math-preproject-source-lock/v1",
+  "attempt_id": "A-GB-ERR-0001",
+  "checkpoint": "CP-ERR-0001",
+  "as_of": "2026-09-05",
+  "base_commit": "39002c5a6af8c7b7f093589e6a76cfd218fcbb99",
+  "sources": [
+    {
+      "id": "LLv2",
+      "title": "Theorem (1+1.9) on the Goldbach Conjecture",
+      "authors": [
+        "Jiamin Li",
+        "Jianya Liu"
+      ],
+      "identifier": "arXiv:2606.05224v2",
+      "revision": "2026-08-08",
+      "html": "https://arxiv.org/html/2606.05224v2",
+      "pdf": "https://arxiv.org/pdf/2606.05224v2",
+      "byte_sha256": null,
+      "access": "version-pinned parsed HTML/PDF and visually inspected PDF equations",
+      "visual_pages": [
+        {
+          "printed_page": 35,
+          "zero_based_page": 34,
+          "objects": [
+            "5.19-5.24",
+            "reciprocal denominator change"
+          ]
+        },
+        {
+          "printed_page": 40,
+          "zero_based_page": 39,
+          "objects": [
+            "5.39-5.44",
+            "G3 endpoint"
+          ]
+        },
+        {
+          "printed_page": 43,
+          "zero_based_page": 42,
+          "objects": [
+            "5.51",
+            "twelve displayed decimals"
+          ]
+        }
+      ],
+      "other_read_objects": [
+        "1.3",
+        "2.13",
+        "4.18",
+        "5.1-5.16",
+        "5.26-5.32",
+        "5.33-5.50"
+      ],
+      "status": "preprint_source_under_audit",
+      "no_silent_version_substitution": true
+    }
+  ],
+  "legacy_references": [
+    {
+      "name": "External_Theorem_Interface_Audit_v0.3.md",
+      "reported_sha256": "ad5f9036fb0c85211c0f3e2f8c4cba5039762047698dae326e4044963e620749",
+      "read_scope": "Sections 4-5, signed error and quantifier obligations; File Library text"
+    },
+    {
+      "name": "Goldbach_Research_Ledger_v0.3.md",
+      "reported_sha256": "7c235de78814873f789d1276eb961a49f555e249f9c03d0be2da692345243169",
+      "read_scope": "GB-R005/R007/T011 and legacy numeric/repair history; File Library text"
+    },
+    {
+      "name": "MANIFEST_v0.3.sha256",
+      "read_scope": "reported commitments, not current byte rehash"
+    }
+  ],
+  "legacy_raw_payload_replayed": false,
+  "supplied_g7_archive": {
+    "path": "goldbach_g7_CP-G7-0001.zip",
+    "role": "conversation handoff/provenance only; no numerical improvement used"
+  },
+  "pending_reviews": [
+    {
+      "issue": 35,
+      "comments_seen": 0,
+      "receipt_imported": false
+    },
+    {
+      "issue": 42,
+      "comments_seen": 0,
+      "receipt_imported": false
+    }
+  ],
+  "limitations": [
+    "Git clone failed with DNS resolution error; no repository-wide tests ran.",
+    "No raw PDF bytes were downloaded or hashed.",
+    "Solver context is exposed; this run is not an independent verifier.",
+    "Only specified source passages and relevant legacy records were read; no exhaustive literature novelty claim."
+  ]
+}

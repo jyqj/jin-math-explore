@@ -1,0 +1,166 @@
+{
+  "schema": "jin-math-common-threshold-plan/v1",
+  "attempt_id": "A-GB-ERR-0001",
+  "policy": "hypothetical_order_only_not_a_certified_dependency_graph_of_the_paper",
+  "nodes": [
+    "geometry",
+    "target",
+    "J",
+    "d",
+    "uniform_coefficients",
+    "epsilon",
+    "eta",
+    "delta_dist",
+    "A",
+    "B",
+    "L",
+    "decay_constants",
+    "N0"
+  ],
+  "edges": [
+    [
+      "geometry",
+      "uniform_coefficients"
+    ],
+    [
+      "target",
+      "uniform_coefficients"
+    ],
+    [
+      "uniform_coefficients",
+      "epsilon"
+    ],
+    [
+      "uniform_coefficients",
+      "eta"
+    ],
+    [
+      "uniform_coefficients",
+      "delta_dist"
+    ],
+    [
+      "target",
+      "epsilon"
+    ],
+    [
+      "J",
+      "d"
+    ],
+    [
+      "d",
+      "A"
+    ],
+    [
+      "A",
+      "B"
+    ],
+    [
+      "eta",
+      "L"
+    ],
+    [
+      "epsilon",
+      "decay_constants"
+    ],
+    [
+      "eta",
+      "decay_constants"
+    ],
+    [
+      "delta_dist",
+      "decay_constants"
+    ],
+    [
+      "A",
+      "decay_constants"
+    ],
+    [
+      "B",
+      "decay_constants"
+    ],
+    [
+      "J",
+      "decay_constants"
+    ],
+    [
+      "L",
+      "decay_constants"
+    ],
+    [
+      "decay_constants",
+      "N0"
+    ],
+    [
+      "epsilon",
+      "N0"
+    ],
+    [
+      "eta",
+      "N0"
+    ],
+    [
+      "B",
+      "N0"
+    ],
+    [
+      "L",
+      "N0"
+    ]
+  ],
+  "fixed_before_N": [
+    "geometry",
+    "J",
+    "d",
+    "epsilon",
+    "eta",
+    "delta_dist",
+    "A",
+    "B",
+    "L",
+    "decay_constants"
+  ],
+  "small_parameter_rules": [
+    {
+      "parameter": "epsilon",
+      "bound_coefficient": "uniform_coefficients",
+      "requires_independence_from": "epsilon"
+    },
+    {
+      "parameter": "eta",
+      "bound_coefficient": "uniform_coefficients",
+      "requires_independence_from": "eta"
+    },
+    {
+      "parameter": "delta_dist",
+      "bound_coefficient": "uniform_coefficients",
+      "requires_independence_from": "delta_dist"
+    }
+  ],
+  "actual_uniform_coefficients": null,
+  "vanishing_fixed_loss_modulus": null,
+  "binding_to_shared_paper_epsilon": "NOT_PROVED: the paper reuses epsilon. Separating its roles is diagnostic only unless every use is reconstructed; alternatively use one epsilon with coefficients uniform on a fixed interval.",
+  "numeric_test_plan": {
+    "J": 4,
+    "dimension_model": 5,
+    "d": 25,
+    "A": 28,
+    "normalized_log_exponent": -1,
+    "condition": "A>d+2",
+    "semantic_cell_count_established": false
+  },
+  "allocation": {
+    "reserve": "3/25000",
+    "fixed_loss_budget": "3/100000",
+    "N_decaying_budget": "3/100000",
+    "unspent_reserve": "3/50000",
+    "resulting_conditional_D_over_S": "83/200000"
+  },
+  "source_onsets_required": true,
+  "explicit_N0": null,
+  "common_N0_for_actual_paper_certified": false,
+  "negative_control": [
+    "add edge epsilon->uniform_coefficients to create a dependency cycle",
+    "allow eta(N) with exp(8*eta(N)^(-3)) growing faster than log savings",
+    "choose A=d+1 and miss the log(N)^2 normalization"
+  ]
+}

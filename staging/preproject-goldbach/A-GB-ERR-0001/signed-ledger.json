@@ -1,0 +1,205 @@
+{
+  "schema": "jin-math-signed-budget/v1",
+  "attempt_id": "A-GB-ERR-0001",
+  "checkpoint": "CP-ERR-0001",
+  "source": "LLv2",
+  "normalization": "S(N)=C(N)*N/log(N)^2",
+  "left_multiplier": 4,
+  "target_for_D_over_S": "0.0004",
+  "input_policy": "paper_displayed_decimals_as_hypotheses_not_verified_bounds",
+  "fresh_integral_evaluation": false,
+  "sibling_numeric_improvement_imported": false,
+  "rows": [
+    {
+      "id": "G1",
+      "weight": 3,
+      "displayed_bound": "14.87710",
+      "needed_direction": "lower",
+      "source_equations": [
+        "5.11",
+        "5.12"
+      ],
+      "analytic_assumption": "H-G1",
+      "analytic_status": "uninstantiated",
+      "deficit": "d_1(N,parameters)>=0",
+      "coefficient_uniformity": "not_certified",
+      "completion_obligation": "Reconstruct uniform constants from (5.11) before reducing to O(e^K epsilon)."
+    },
+    {
+      "id": "G2",
+      "weight": 1,
+      "displayed_bound": "9.11587",
+      "needed_direction": "lower",
+      "source_equations": [
+        "5.15",
+        "5.16"
+      ],
+      "analytic_assumption": "H-G2",
+      "analytic_status": "uninstantiated",
+      "deficit": "d_2(N,parameters)>=0",
+      "coefficient_uniformity": "not_certified",
+      "completion_obligation": "Uniform lower-sieve/PNT constants and the G2 mass bound."
+    },
+    {
+      "id": "G3",
+      "weight": -4,
+      "displayed_bound": "0.84289",
+      "needed_direction": "upper",
+      "source_equations": [
+        "5.42",
+        "5.43"
+      ],
+      "analytic_assumption": "H-G3",
+      "analytic_status": "uninstantiated",
+      "deficit": "d_3(N,parameters)>=0",
+      "coefficient_uniformity": "not_certified",
+      "completion_obligation": "Finite tau cutoff, switching distribution and the upper coefficient."
+    },
+    {
+      "id": "G4",
+      "weight": -1,
+      "displayed_bound": "23.60636",
+      "needed_direction": "upper",
+      "source_equations": [
+        "5.24",
+        "5.25"
+      ],
+      "analytic_assumption": "H-G4",
+      "analytic_status": "uninstantiated",
+      "deficit": "d_4(N,parameters)>=0",
+      "coefficient_uniformity": "not_certified",
+      "completion_obligation": "Repair (5.23) reciprocal replacement and finite-level/PNT transfer."
+    },
+    {
+      "id": "G5",
+      "weight": -1,
+      "displayed_bound": "19.51976",
+      "needed_direction": "upper",
+      "source_equations": [
+        "5.26",
+        "5.27"
+      ],
+      "analytic_assumption": "H-G5",
+      "analytic_status": "uninstantiated",
+      "deficit": "d_5(N,parameters)>=0",
+      "coefficient_uniformity": "not_certified",
+      "completion_obligation": "Apply the same bounded reciprocal correction and source-specific transfer."
+    },
+    {
+      "id": "G6",
+      "weight": 1,
+      "displayed_bound": "1.63357",
+      "needed_direction": "lower",
+      "source_equations": [
+        "5.29",
+        "5.30"
+      ],
+      "analytic_assumption": "H-G6",
+      "analytic_status": "uninstantiated",
+      "deficit": "d_6(N,parameters)>=0",
+      "coefficient_uniformity": "not_certified",
+      "completion_obligation": "Two-prime sum, coprime removal and lower-sieve transfer with uniform errors."
+    },
+    {
+      "id": "G7",
+      "weight": 1,
+      "displayed_bound": "3.79029",
+      "needed_direction": "lower",
+      "source_equations": [
+        "5.31",
+        "5.32"
+      ],
+      "analytic_assumption": "H-G7",
+      "analytic_status": "uninstantiated",
+      "deficit": "d_7(N,parameters)>=0",
+      "coefficient_uniformity": "not_certified",
+      "completion_obligation": "Legal-domain repair and coefficient require pending independent review #42; not imported here."
+    },
+    {
+      "id": "G8",
+      "weight": -2,
+      "displayed_bound": "0.60962",
+      "needed_direction": "upper",
+      "source_equations": [
+        "5.40",
+        "5.41"
+      ],
+      "analytic_assumption": "H-G8",
+      "analytic_status": "uninstantiated",
+      "deficit": "d_8(N,parameters)>=0",
+      "coefficient_uniformity": "not_certified",
+      "completion_obligation": "Switching exceptions, signed remainder and main-mass transfer."
+    },
+    {
+      "id": "G9",
+      "weight": -1,
+      "displayed_bound": "5.27231",
+      "needed_direction": "upper",
+      "source_equations": [
+        "5.44",
+        "5.45"
+      ],
+      "analytic_assumption": "H-G9",
+      "analytic_status": "uninstantiated",
+      "deficit": "d_9(N,parameters)>=0",
+      "coefficient_uniformity": "not_certified",
+      "completion_obligation": "Low-p1 interface pending #35; separate main-mass/numerical transfer remains uninstantiated."
+    },
+    {
+      "id": "G10",
+      "weight": -1,
+      "displayed_bound": "5.40996",
+      "needed_direction": "upper",
+      "source_equations": [
+        "5.44",
+        "5.46"
+      ],
+      "analytic_assumption": "H-G10",
+      "analytic_status": "uninstantiated",
+      "deficit": "d_10(N,parameters)>=0",
+      "coefficient_uniformity": "not_certified",
+      "completion_obligation": "High-scale switching and the source-specific mass/exceptional branches."
+    },
+    {
+      "id": "G11",
+      "weight": -1,
+      "displayed_bound": "0.10191",
+      "needed_direction": "upper",
+      "source_equations": [
+        "5.47",
+        "5.48"
+      ],
+      "analytic_assumption": "H-G11",
+      "analytic_status": "uninstantiated",
+      "deficit": "d_11(N,parameters)>=0",
+      "coefficient_uniformity": "not_certified",
+      "completion_obligation": "Interface pending #35; rough-residual Buchstab mass and uniformity are separate inputs."
+    },
+    {
+      "id": "G12",
+      "weight": -1,
+      "displayed_bound": "0.66821",
+      "needed_direction": "upper",
+      "source_equations": [
+        "5.47",
+        "5.50"
+      ],
+      "analytic_assumption": "H-G12",
+      "analytic_status": "uninstantiated",
+      "deficit": "d_12(N,parameters)>=0",
+      "coefficient_uniformity": "not_certified",
+      "completion_obligation": "Interface pending #35; piecewise Buchstab mass and endpoint/uniformity inputs."
+    }
+  ],
+  "combination_input": {
+    "id": "H-COMB",
+    "source_equation": "5.2 / 4.18",
+    "status": "uninstantiated",
+    "raw_error": "O(N^(49/53))",
+    "normalized_deficit": "d_0>=0"
+  },
+  "cannot_imply": [
+    "The exact decimal sum does not certify a single analytic G_i estimate.",
+    "The larger legacy interval margins are preserved as history but are not silently mixed into this budget."
+  ]
+}

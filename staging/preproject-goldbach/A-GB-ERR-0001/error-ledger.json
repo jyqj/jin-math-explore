@@ -1,0 +1,362 @@
+{
+  "schema": "jin-math-error-inventory/v1",
+  "attempt_id": "A-GB-ERR-0001",
+  "checkpoint": "CP-ERR-0001",
+  "normalization": "C(N)*N/log(N)^2",
+  "mode": "mechanism_inventory_not_a_summable_list",
+  "double_count_policy": "ERR-FIXED-REL is the native compressed loss model; expanded mechanisms replace portions of it only after a proved mapping. Do not add all entries blindly.",
+  "errors": [
+    {
+      "id": "ERR-COMB",
+      "targets": [
+        "combination"
+      ],
+      "kind": "N_decaying",
+      "normalized_expression": "2*K_comb*N^(-4/53)*log(N)^2",
+      "source_locator": "LLv2 (5.2); legacy GB-D044",
+      "status": "uninstantiated",
+      "final_sign": "harmful_subtraction",
+      "uniformity_requirement": "All indicated constants must be finite and uniform over even N after the declared parameters are fixed.",
+      "derivation": "C(N)>=1/2 in proof.md section 3; raw bound itself uninstantiated"
+    },
+    {
+      "id": "ERR-FIXED-REL",
+      "targets": [
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "G6",
+        "G7",
+        "G8",
+        "G9",
+        "G10",
+        "G11",
+        "G12"
+      ],
+      "kind": "fixed_parameter",
+      "normalized_expression": "sum_i abs(c_i)*a_i*k_i*exp(K)*epsilon",
+      "source_locator": "LLv2 (5.11)-(5.50)",
+      "status": "uninstantiated",
+      "final_sign": "harmful_subtraction",
+      "uniformity_requirement": "All indicated constants must be finite and uniform over even N after the declared parameters are fixed.",
+      "constant_dependencies": "k_i and K must be controlled uniformly as epsilon tends to zero, or an explicit vanishing modulus must be supplied.",
+      "do_not_assume": "C(epsilon)*epsilon tends to zero"
+    },
+    {
+      "id": "ERR-SIEVE-TAIL",
+      "targets": [
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "G6",
+        "G7",
+        "G8",
+        "G9",
+        "G10",
+        "G11",
+        "G12"
+      ],
+      "kind": "N_decaying",
+      "normalized_expression": "K_sieve*eta^(-8)*exp(K)*(log(N))^(-1/3)",
+      "source_locator": "LLv2 (2.13),(5.11)",
+      "status": "uninstantiated",
+      "final_sign": "harmful_subtraction",
+      "uniformity_requirement": "All indicated constants must be finite and uniform over even N after the declared parameters are fixed.",
+      "fixed_before_N": [
+        "eta",
+        "K",
+        "K_sieve"
+      ],
+      "main_error_multiplier": "The finite weight count L is NOT automatically attached to the main eta term."
+    },
+    {
+      "id": "ERR-FINITE-L",
+      "targets": [
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "G6",
+        "G7",
+        "G8",
+        "G9",
+        "G10",
+        "G11",
+        "G12"
+      ],
+      "kind": "N_decaying",
+      "normalized_expression": "2*K_rem*exp(8*eta^(-3))*(log(N))^(d+2-A)",
+      "source_locator": "LLv2 (5.10),(5.20) and generic cell summation",
+      "status": "uninstantiated",
+      "final_sign": "harmful_subtraction",
+      "uniformity_requirement": "All indicated constants must be finite and uniform over even N after the declared parameters are fixed.",
+      "condition": "A>d+2; fixed eta, d and constants; arbitrary A must truly be available uniformly",
+      "d_is_conditional": true
+    },
+    {
+      "id": "ERR-PNT",
+      "targets": [
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "G6",
+        "G7",
+        "G8",
+        "G9",
+        "G10",
+        "G11",
+        "G12"
+      ],
+      "kind": "N_decaying",
+      "normalized_expression": "K_PNT/log(N)",
+      "source_locator": "LLv2 (5.4),(5.23),(5.28),(5.39)",
+      "status": "uninstantiated",
+      "final_sign": "harmful_subtraction",
+      "uniformity_requirement": "All indicated constants must be finite and uniform over even N after the declared parameters are fixed.",
+      "condition": "Stieltjes/PNT transfer with bounded variation and uniform constants; not a literal sum <= integral shortcut."
+    },
+    {
+      "id": "ERR-RECIPROCAL-G45",
+      "targets": [
+        "G4",
+        "G5"
+      ],
+      "kind": "N_decaying",
+      "normalized_expression": "K_pref*2*M_F*N^(-4/53)",
+      "source_locator": "LLv2 (5.22)-(5.23); F-ERR-005",
+      "status": "elementary_correction_proved_conditionally",
+      "final_sign": "harmful_subtraction",
+      "uniformity_requirement": "All indicated constants must be finite and uniform over even N after the declared parameters are fixed.",
+      "condition": "0<=F(s_p)<=M_F in the fixed compact range, z=N^(4/53)>=2; K_pref includes the normalized outside factor.",
+      "deduplication": "Pay separately OR include in a proved transfer remainder, not both."
+    },
+    {
+      "id": "ERR-TAU-G3",
+      "targets": [
+        "G3"
+      ],
+      "kind": "fixed_parameter",
+      "normalized_expression": "(115520000/897739)*xi",
+      "source_locator": "LLv2 (5.1),(5.43); F-ERR-006",
+      "status": "elementary_correction_proved_conditionally",
+      "final_sign": "harmful_subtraction",
+      "uniformity_requirement": "All indicated constants must be finite and uniform over even N after the declared parameters are fixed.",
+      "already_weighted": true,
+      "condition": "0<xi<=1/100; this bound already contains abs(c_3)=4.",
+      "deduplication": "If a uniform O(e^K epsilon) estimate already includes the cutoff, do not pay it twice."
+    },
+    {
+      "id": "ERR-Y-CUTOFF",
+      "targets": [
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "G6",
+        "G7",
+        "G8",
+        "G9",
+        "G10",
+        "G11",
+        "G12"
+      ],
+      "kind": "fixed_parameter",
+      "normalized_expression": "K_Y*epsilon0",
+      "source_locator": "LLv2 (5.3)-(5.4),(5.39)",
+      "status": "uninstantiated",
+      "final_sign": "harmful_subtraction",
+      "uniformity_requirement": "All indicated constants must be finite and uniform over even N after the declared parameters are fixed.",
+      "condition": "Keep (1-epsilon0) or a one-sided loss, preserving the upper/lower signs.",
+      "deduplication": "An expanded mechanism, not automatically additive to ERR-FIXED-REL."
+    },
+    {
+      "id": "ERR-LEVEL-DRIFT",
+      "targets": [
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "G6",
+        "G7",
+        "G8",
+        "G9",
+        "G10",
+        "G11",
+        "G12"
+      ],
+      "kind": "N_decaying",
+      "normalized_expression": "K_level*B*loglog(N)/log(N)",
+      "source_locator": "LLv2 (5.19),(5.23) and finite Q=D/m",
+      "status": "uninstantiated",
+      "final_sign": "harmful_subtraction",
+      "uniformity_requirement": "All indicated constants must be finite and uniform over even N after the declared parameters are fixed.",
+      "condition": "A uniformly Lipschitz sieve kernel on the actual legal compact domain must be justified."
+    },
+    {
+      "id": "ERR-COPRIME-G6",
+      "targets": [
+        "G6"
+      ],
+      "kind": "N_decaying",
+      "normalized_expression": "2*K_coprime*N^(-kappa)*log(N)^3",
+      "source_locator": "LLv2 (5.28)",
+      "status": "uninstantiated",
+      "final_sign": "harmful_subtraction",
+      "uniformity_requirement": "All indicated constants must be finite and uniform over even N after the declared parameters are fixed.",
+      "condition": "Fixed kappa>0 and uniform raw O(N^(1-kappa)*log(N)) bound."
+    },
+    {
+      "id": "ERR-G8-SQRT",
+      "targets": [
+        "G8"
+      ],
+      "kind": "N_decaying",
+      "normalized_expression": "4*K_8*N^(-1/2)*log(N)^2",
+      "source_locator": "LLv2 (5.36)",
+      "status": "uninstantiated",
+      "final_sign": "harmful_subtraction",
+      "uniformity_requirement": "All indicated constants must be finite and uniform over even N after the declared parameters are fixed.",
+      "already_weighted": true
+    },
+    {
+      "id": "ERR-G8-R2",
+      "targets": [
+        "G8"
+      ],
+      "kind": "N_decaying",
+      "normalized_expression": "4*K_R2*N^(-3/11)*log(N)^4",
+      "source_locator": "LLv2 (5.38)",
+      "status": "uninstantiated",
+      "final_sign": "harmful_subtraction",
+      "uniformity_requirement": "All indicated constants must be finite and uniform over even N after the declared parameters are fixed.",
+      "already_weighted": true,
+      "condition": "Raw R2 estimate and its uniformity are not proved by this bookkeeping."
+    },
+    {
+      "id": "ERR-MESH",
+      "targets": [
+        "G9",
+        "G11",
+        "G12"
+      ],
+      "kind": "N_decaying",
+      "normalized_expression": "2*K_mesh*(log(N))^(2-J)",
+      "source_locator": "generic raw boundary estimate N/log(N)^J",
+      "status": "uninstantiated",
+      "final_sign": "harmful_subtraction",
+      "uniformity_requirement": "All indicated constants must be finite and uniform over even N after the declared parameters are fixed.",
+      "condition": "J>2; actual boundary coverage and raw estimate remain hypotheses."
+    },
+    {
+      "id": "ERR-POWER-O1",
+      "targets": [
+        "G9",
+        "G11",
+        "G12"
+      ],
+      "kind": "N_decaying",
+      "normalized_expression": "2*K_power*N^(-kappa/2)*log(N)^r",
+      "source_locator": "generic raw N^(1-kappa+o(1)) input",
+      "status": "uninstantiated",
+      "final_sign": "harmful_subtraction",
+      "uniformity_requirement": "All indicated constants must be finite and uniform over even N after the declared parameters are fixed.",
+      "condition": "The o(1) must be uniform enough to be <=kappa/2 eventually; finite r fixed."
+    },
+    {
+      "id": "GATE-G7",
+      "targets": [
+        "G7"
+      ],
+      "kind": "semantic_gate",
+      "status": "uninstantiated",
+      "description": "Independent receipt for the legal-domain, kernel-drift and corrected-coefficient transfer; #42 pending.",
+      "numeric_cost": null,
+      "cannot_imply": "This gate is not an error of size zero and cannot be absorbed by enlarging N."
+    },
+    {
+      "id": "GATE-L35",
+      "targets": [
+        "G9",
+        "G11",
+        "G12"
+      ],
+      "kind": "semantic_gate",
+      "status": "uninstantiated",
+      "description": "Independent receipt for all call interfaces; #35 pending. No sibling theorem consumed here.",
+      "numeric_cost": null,
+      "cannot_imply": "This gate is not an error of size zero and cannot be absorbed by enlarging N."
+    },
+    {
+      "id": "GATE-MASS",
+      "targets": [
+        "G9",
+        "G11",
+        "G12"
+      ],
+      "kind": "semantic_gate",
+      "status": "uninstantiated",
+      "description": "Source-to-Buchstab main-mass and displayed-decimal transfer with uniform constants, not supplied by the call-interface verdict.",
+      "numeric_cost": null,
+      "cannot_imply": "This gate is not an error of size zero and cannot be absorbed by enlarging N."
+    },
+    {
+      "id": "GATE-UNIFORM",
+      "targets": [
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "G6",
+        "G7",
+        "G8",
+        "G9",
+        "G10",
+        "G11",
+        "G12"
+      ],
+      "kind": "semantic_gate",
+      "status": "uninstantiated",
+      "description": "Uniform small-parameter coefficient bounds or explicit vanishing modulus for each native one-sided estimate.",
+      "numeric_cost": null,
+      "cannot_imply": "This gate is not an error of size zero and cannot be absorbed by enlarging N."
+    },
+    {
+      "id": "GATE-NUMERICAL",
+      "targets": [
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "G6",
+        "G7",
+        "G8",
+        "G9",
+        "G10",
+        "G11",
+        "G12"
+      ],
+      "kind": "semantic_gate",
+      "status": "uninstantiated",
+      "description": "Byte-bound validation of the adopted displayed bounds and repair compatibility; previous stronger numbers not imported.",
+      "numeric_cost": null,
+      "cannot_imply": "This gate is not an error of size zero and cannot be absorbed by enlarging N."
+    }
+  ],
+  "coverage_complete": false,
+  "global_absorption_complete": false,
+  "cannot_imply": [
+    "Knowing that an expression tends to zero does not prove it bounds the error of the actual paper.",
+    "Uninstantiated semantic gates cannot be assigned zero numeric cost."
+  ]
+}

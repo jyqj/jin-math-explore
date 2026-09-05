@@ -1,0 +1,52 @@
+{
+  "protocol": "jin-math-computation-handoff/v1",
+  "job_id": "J-GB-ERR-EXACT-0001",
+  "attempt_id": "A-GB-ERR-0001",
+  "profile": "reproducible",
+  "actor": {
+    "id": "openai-chatgpt",
+    "run_id": "run-20260905-goldbach-error-01",
+    "role": "solver"
+  },
+  "object": "Twelve displayed decimal coefficients, sign sensitivity, rational correction constants and declared parameter graph.",
+  "backend": {
+    "python": "3.13.5",
+    "libraries": "standard library only"
+  },
+  "selection_reason": "Small exact rational problem and portable rerunnable artifact; no CAS or optional remote evaluator is needed.",
+  "readiness": "Python executable actually ran the exact checker; no repository backend-inventory execution is claimed.",
+  "commands": [
+    "python check_budget.py --compute",
+    "python check_budget.py --check",
+    "python check_budget.py --require-global"
+  ],
+  "expected_global_check_exit": 1,
+  "arithmetic_result": {
+    "signed_main": "43/25000",
+    "reserve": "3/25000",
+    "amplifier": "5917017/50000"
+  },
+  "negative_controls": {
+    "wrong_bound_direction": "wrong one-sided direction",
+    "unreviewed_decimal_change": "frozen decimals differ",
+    "epsilon_coefficient_cycle": "parameter dependency cycle",
+    "missing_two_log_powers": "log normalization consumes two powers",
+    "uninstantiated_global_closure": "global closure blocked: G1, G2, G3, G4, G5, G6, G7, G8, G9, G10, G11, G12, GATE-G7, GATE-L35, GATE-MASS, GATE-UNIFORM, GATE-NUMERICAL",
+    "underestimated_amplifier": "signed mass cannot bound all errors",
+    "strict_target_at_equality": "equality is not strict",
+    "nonuniform_small_epsilon": "C(epsilon)*epsilon need not vanish"
+  },
+  "corner_count": 4096,
+  "code_sha256": "ff75aa4aa4b229c037515e3c14057996fee75d41d5e51b7768a52ac5b00d4b8b",
+  "result_sha256": "7f9d7e91099817792511e7ddfb3885f930192fee1f9188d0b4167b3281cd4845",
+  "evidence_grade": "exact_check_of_finite_arithmetic_and_declared_contracts",
+  "source_decimal_semantics_verified": false,
+  "independent_verification": false,
+  "repository_tests_run": false,
+  "source_pdf_byte_hashes_acquired": false,
+  "cannot_imply": [
+    "Does not instantiate analytic deficits or their uniform constants.",
+    "Does not certify a global N0 for the paper or prove Goldbach.",
+    "Declared DAG consistency is not verification of hidden mathematical dependencies."
+  ]
+}

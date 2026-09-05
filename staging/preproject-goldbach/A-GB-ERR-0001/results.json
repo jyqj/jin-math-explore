@@ -1,0 +1,161 @@
+{
+  "schema": "jin-math-signed-budget-result/v1",
+  "attempt_id": "A-GB-ERR-0001",
+  "checkpoint": "CP-ERR-0001",
+  "backend": {
+    "python": "3.13.5",
+    "arithmetic": "stdlib fractions.Fraction and exact integers"
+  },
+  "source_decimals_are_assumptions": true,
+  "arithmetic_check": "PASS",
+  "actual_paper_error_closure": "INCONCLUSIVE",
+  "independent_verification": false,
+  "positive_mass": {
+    "exact": "5917103/100000",
+    "decimal_truncated": "59.171030000000000000"
+  },
+  "negative_mass": {
+    "exact": "5916931/100000",
+    "decimal_truncated": "59.169310000000000000"
+  },
+  "signed_main": {
+    "exact": "43/25000",
+    "decimal_truncated": "0.001720000000000000"
+  },
+  "target_for_D_over_S": {
+    "exact": "1/2500",
+    "decimal_truncated": "0.000400000000000000"
+  },
+  "reserve_before_division_by_four": {
+    "exact": "3/25000",
+    "decimal_truncated": "0.000120000000000000"
+  },
+  "absolute_relative_error_amplifier": {
+    "exact": "5917017/50000",
+    "decimal_truncated": "118.340340000000000000"
+  },
+  "sum_absolute_integer_weights": 18,
+  "uniform_relative_ceiling_with_no_other_errors": {
+    "exact": "2/1972339",
+    "decimal_truncated": "0.000001014024465368"
+  },
+  "relative_error_sensitivity_rank": [
+    {
+      "term": "G1",
+      "weighted_mass": "446313/10000"
+    },
+    {
+      "term": "G4",
+      "weighted_mass": "590159/25000"
+    },
+    {
+      "term": "G5",
+      "weighted_mass": "243997/12500"
+    },
+    {
+      "term": "G2",
+      "weighted_mass": "911587/100000"
+    },
+    {
+      "term": "G10",
+      "weighted_mass": "135249/25000"
+    },
+    {
+      "term": "G9",
+      "weighted_mass": "527231/100000"
+    },
+    {
+      "term": "G7",
+      "weighted_mass": "379029/100000"
+    },
+    {
+      "term": "G3",
+      "weighted_mass": "84289/25000"
+    },
+    {
+      "term": "G6",
+      "weighted_mass": "163357/100000"
+    },
+    {
+      "term": "G8",
+      "weighted_mass": "30481/25000"
+    },
+    {
+      "term": "G12",
+      "weighted_mass": "66821/100000"
+    },
+    {
+      "term": "G11",
+      "weighted_mass": "10191/100000"
+    }
+  ],
+  "top_three_relative_sensitivity_share": "4387871/5917017",
+  "quarter_budget_uniform_relative_cap": {
+    "exact": "1/3944678",
+    "decimal_truncated": "0.000000253506116342"
+  },
+  "conditional_half_reserve_D_over_S": {
+    "exact": "83/200000",
+    "decimal_truncated": "0.000415000000000000"
+  },
+  "worst_sign_test": {
+    "r": "1/100000",
+    "corners_checked": 4096,
+    "minimum": {
+      "exact": "2682983/5000000000",
+      "decimal_truncated": "0.000536596600000000"
+    },
+    "invalid_common_error_prediction": {
+      "exact": "4299957/2500000000",
+      "decimal_truncated": "0.001719982800000000"
+    },
+    "counterexample_scope": "finite independent-error model, not a counterexample to the paper"
+  },
+  "tau_weighted_drift_coefficient": "115520000/897739",
+  "tau_cost_at_1e_minus10_upper": "361/28054343750",
+  "reciprocal_sign_witness": "1/20",
+  "singular_factor_lower_bound": "1/2",
+  "finite_telescoping_checks": 99,
+  "parameter_topological_order": [
+    "J",
+    "geometry",
+    "target",
+    "d",
+    "uniform_coefficients",
+    "A",
+    "delta_dist",
+    "epsilon",
+    "eta",
+    "B",
+    "L",
+    "decay_constants",
+    "N0"
+  ],
+  "model_normalized_log_exponent": -1,
+  "negative_controls": {
+    "wrong_bound_direction": "wrong one-sided direction",
+    "unreviewed_decimal_change": "frozen decimals differ",
+    "epsilon_coefficient_cycle": "parameter dependency cycle",
+    "missing_two_log_powers": "log normalization consumes two powers",
+    "uninstantiated_global_closure": "global closure blocked: G1, G2, G3, G4, G5, G6, G7, G8, G9, G10, G11, G12, GATE-G7, GATE-L35, GATE-MASS, GATE-UNIFORM, GATE-NUMERICAL",
+    "underestimated_amplifier": "signed mass cannot bound all errors",
+    "strict_target_at_equality": "equality is not strict",
+    "nonuniform_small_epsilon": "C(epsilon)*epsilon need not vanish"
+  },
+  "negative_control_count": 8,
+  "error_mechanisms": 14,
+  "semantic_gates": 5,
+  "input_sha256": {
+    "signed-ledger.json": "319fc6f82020f71bb3b5aef0d3a763953d1b110d0784c52d909e6e3dcafaacf2",
+    "error-ledger.json": "48cbca1c18fabd2323c95aa5d56761b6e3679d908082370dec28e865dd8b11dc",
+    "parameter-plan.json": "73de9439c44f97bb2813fdd2abe4f1c0bcd41e8a299f287ce1d7d530255319bc",
+    "source-lock.json": "950e6d7f980c67349717d8b4cc1436ebfd2d93a2c6cc1c8664c4109d2e039afd",
+    "check_budget.py": "ff75aa4aa4b229c037515e3c14057996fee75d41d5e51b7768a52ac5b00d4b8b"
+  },
+  "cannot_imply": [
+    "No analytic G_i estimate or source theorem is verified by this script.",
+    "A conditional common-N0 proof is not its application to the paper.",
+    "Acyclic declared dependencies do not detect hidden mathematical dependencies.",
+    "The toy sign/cycle witnesses do not refute the paper or binary Goldbach."
+  ]
+}

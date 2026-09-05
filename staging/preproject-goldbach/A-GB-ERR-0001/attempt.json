@@ -1,0 +1,66 @@
+{
+  "schema": "jin-math-preproject-attempt/v1",
+  "attempt_id": "A-GB-ERR-0001",
+  "checkpoint": "CP-ERR-0001",
+  "issue": 50,
+  "actor": {
+    "kind": "agent",
+    "id": "openai-chatgpt",
+    "run_id": "run-20260905-goldbach-error-01",
+    "role": "solver"
+  },
+  "base_commit": "39002c5a6af8c7b7f093589e6a76cfd218fcbb99",
+  "branch": "attempt/preproject-goldbach/error-budget-01",
+  "status": "frozen_partial_checkpoint",
+  "overall_verdict": "INCONCLUSIVE",
+  "subresults": {
+    "exact_arithmetic": "PASS",
+    "conditional_lemmas": "solver_derivations_pending_independent_review",
+    "source_corrections": "two_explicit_local_costs_identified",
+    "actual_common_N0": "NOT_INSTANTIATED"
+  },
+  "scope": "Signed budget and conditional common-threshold theorem; source-level error mechanisms, not full-paper verification.",
+  "artifact_sha256": {
+    "README.md": "e89914acfc412edcf5b64dee229ffe06925280d806600c8fc802212015a1e160",
+    "check_budget.py": "ff75aa4aa4b229c037515e3c14057996fee75d41d5e51b7768a52ac5b00d4b8b",
+    "computation-handoff.json": "0fa4305c9db1ab99c6cd2e588b83fe52c03508072e64451e73dd9549306893ee",
+    "error-ledger.json": "48cbca1c18fabd2323c95aa5d56761b6e3679d908082370dec28e865dd8b11dc",
+    "parameter-plan.json": "73de9439c44f97bb2813fdd2abe4f1c0bcd41e8a299f287ce1d7d530255319bc",
+    "proof.md": "4d5f09ca1382165c26cf6468c2b03c4a059b668e32e0a109037675c231fb32e5",
+    "results.json": "7f9d7e91099817792511e7ddfb3885f930192fee1f9188d0b4167b3281cd4845",
+    "signed-ledger.json": "319fc6f82020f71bb3b5aef0d3a763953d1b110d0784c52d909e6e3dcafaacf2",
+    "source-lock.json": "950e6d7f980c67349717d8b4cc1436ebfd2d93a2c6cc1c8664c4109d2e039afd"
+  },
+  "authority": {
+    "status": "pre_genesis_solver_output",
+    "independent_verification": false,
+    "mathematical_claim_upgrade": false,
+    "project_authority_changed": false
+  },
+  "legacy_delta": {
+    "GB-R007": "refined_into_signed_budget_and_uniformity_obligations_not_resolved",
+    "GB-T011": "error_compiler_first_checkpoint_complete"
+  },
+  "findings": [
+    "F-ERR-001",
+    "F-ERR-002",
+    "F-ERR-003",
+    "F-ERR-004",
+    "F-ERR-005",
+    "F-ERR-006",
+    "F-ERR-007",
+    "F-ERR-008"
+  ],
+  "earliest_unresolved": "Uniform vanishing fixed-loss bounds for the actual native one-sided G_i estimates, with source-level coverage and no epsilon-dependent coefficient cycle.",
+  "next_checkpoint": "Compile G4/G5 native one-sided error contracts and bind the reciprocal, finite-level, PNT and BV corrections before any global closure.",
+  "pending_reviews": [
+    35,
+    42
+  ],
+  "new_independent_review_executed": false,
+  "cannot_imply": [
+    "INCONCLUSIVE is not a refutation of the paper.",
+    "Arithmetic or a general conditional lemma cannot establish its actual analytic hypotheses.",
+    "No use of unverified sibling results, no explicit actual numerical N0, and no proof of binary Goldbach."
+  ]
+}
