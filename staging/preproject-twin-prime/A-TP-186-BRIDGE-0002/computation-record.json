@@ -1,0 +1,83 @@
+{
+  "format": "preproject-computation-record/v2",
+  "run_id": "run-20260905-twin-prime-bridge-02",
+  "question": "152 fixed numerical targets vs fresh aggregate acceptance; finite rational geometry correspondence",
+  "domain": "frozen integer/rational metadata and explicitly synthetic interval reports",
+  "backend": {
+    "python": "3.13.5",
+    "platform": "Linux-6.18.35-x86_64-with-glibc2.41",
+    "selected": "CPython exact integers and fractions.Fraction",
+    "flint_available": false,
+    "sage_path": null,
+    "wolfram_path": null,
+    "lean_path": null,
+    "network": "direct raw acquisition failed DNS; bounded connector reads used",
+    "route_reason": "portable exact arithmetic and bounded finite tests; production interval engine unavailable"
+  },
+  "execution_profile": "reproducible",
+  "commands": [
+    {
+      "command": "python -B check_bridge.py --self-test --write-results results.json --write-coverage coverage.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -O -B check_bridge.py --self-test",
+      "exit_code": 0,
+      "output_matches_normal": true
+    },
+    {
+      "command": "python -B check_bridge.py --receipt synthetic-1.json",
+      "fixture": "synthetic_fixture(...,1)",
+      "exit_code": 0
+    },
+    {
+      "command": "python -B check_bridge.py --receipt synthetic-2.json",
+      "fixture": "synthetic_fixture(...,2)",
+      "exit_code": 1,
+      "expected_failure": true
+    },
+    {
+      "command": "python -O -B check_bridge.py --receipt synthetic-2.json",
+      "exit_code": 1,
+      "expected_failure": true
+    }
+  ],
+  "evidence_grade": "exact_check",
+  "scope": "finite tests; mathematical derivations remain candidates",
+  "artifacts": [
+    {
+      "path": "targets.json",
+      "sha256": "4f398b1576b29b292a9ab709734ffcd28b95d7ba388e9dd063e11ccfed1a1467"
+    },
+    {
+      "path": "coverage.json",
+      "sha256": "7da3b78ed66c4f8f0983e2106855ef0a7ac262bc2d28d87d16caf9f78e9cfa94"
+    },
+    {
+      "path": "geometry.py",
+      "sha256": "a33d336ddf585d23f6bf4cfd17c8eb7ec23aaf9114d5a1ce65a10d3cb4d4914b"
+    },
+    {
+      "path": "upstream_assembler.py",
+      "sha256": "b845a081e84f07d3152fc0918b66d58efce95cc235cecf22c74f123ffdc00f6d"
+    },
+    {
+      "path": "check_bridge.py",
+      "sha256": "6832878ac849b4863f1251ab3cd3aa8b8c846209d5c2d1c814dc4299e88b17b8"
+    },
+    {
+      "path": "results.json",
+      "sha256": "d0d46af941fa17c2fccc4ea1682364ee7856bd78f720facd9071c005e95a19c2"
+    }
+  ],
+  "actual_integral_engine": "not_run",
+  "independent_verifier": "not_run",
+  "repository_CI": "not_run (isolated preproject attempt, no merge-intended PR)",
+  "production_handoff_v1": "inapplicable without a registered Project objective; no dummy P-ID or objective invented",
+  "cannot_imply": [
+    "any finite synthetic interval is an actual integral output",
+    "conditional endpoint success discharges Lean inputs",
+    "the prime gap bound was improved",
+    "independent verification occurred"
+  ]
+}

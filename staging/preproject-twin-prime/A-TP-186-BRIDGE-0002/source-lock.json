@@ -1,0 +1,97 @@
+{
+  "format": "tp-186-source-lock/v2",
+  "as_of": "2026-09-05",
+  "base_commit": "39002c5a6af8c7b7f093589e6a76cfd218fcbb99",
+  "predecessor": {
+    "commit": "d1281f07698255c7ade28edd438c7fc9c6c20646",
+    "numeric_file": "staging/preproject-twin-prime/A-TP-186-INPUT-0001/inputs.json",
+    "git_blob": "d60da233cf7a64f95d4d06e1970aabf1d3f9ce94",
+    "sha256": "4f398b1576b29b292a9ab709734ffcd28b95d7ba388e9dd063e11ccfed1a1467",
+    "local_bytes_equal": true,
+    "independent_verification": "pending #39"
+  },
+  "upstream_commit": "61340d0b74163003b32756bb16e91d9209a5e330",
+  "sources": [
+    {
+      "id": "PY",
+      "path": "prime_gap_186_certificate.py",
+      "git_blob": "93121b6b12a6b69fdb2a1166c30f9d614160c042",
+      "payload_sha256": null,
+      "focus": [
+        "build_inputs",
+        "_schedule",
+        "source_clipped_group",
+        "SourceContractions",
+        "source_component_raw",
+        "compute_fresh_cap",
+        "round_source_component",
+        "assemble_fresh_certificate"
+      ],
+      "limit": "bounded connector text slices; not a raw byte download; full engine not executed",
+      "requested_line_ranges": [
+        [
+          1,
+          640
+        ],
+        [
+          1110,
+          1340
+        ],
+        [
+          1780,
+          2155
+        ],
+        [
+          2170,
+          2445
+        ],
+        [
+          2440,
+          2850
+        ]
+      ]
+    },
+    {
+      "id": "LEAN_SPEC",
+      "path": "Challenge.lean",
+      "git_blob": "2331eeeb808008cee37bac7aa0fb17e36f1f3c17",
+      "payload_sha256": null,
+      "focus": [
+        "physical_integral_bounds",
+        "physicalSourceGroup",
+        "physicalSourceLowClipping",
+        "trialCore",
+        "trialIH",
+        "trialJLambdaH",
+        "physicalSourceFaceWeight"
+      ],
+      "limit": "readable specification only; original 10MB proof module not audited or built"
+    },
+    {
+      "id": "PAPER",
+      "url": "https://cdn.openai.com/pdf/51126fac-1b68-4128-9666-c908bcc16033/short_gaps.pdf",
+      "payload_sha256": null,
+      "version": "manuscript dated 2026-08-30,39 pages, fetched 2026-09-05",
+      "focus": [
+        "Theorem1.1",
+        "fixed trial and numerical bridge, section4"
+      ],
+      "limit": "web parsed PDF and first-page screenshot; not full numerical companion"
+    }
+  ],
+  "transcription_boundary": "geometry.py and upstream_assembler.py are separately authored finite models of the read definitions, not byte-identical source copies.",
+  "open_debts": [
+    "original PDF/Python full-byte hashes",
+    "low/Palm/factorial dominance and interval algorithm proofs",
+    "real numerical receipt",
+    "full Lean solution module and build",
+    "independent review"
+  ],
+  "cannot_imply": [
+    "the actual 152 integral inequalities have been checked",
+    "the full upstream program was reproduced",
+    "a manuscript error follows from the synthetic countermodel"
+  ],
+  "initial_base_commit": "70484b065fc3b6a64f06955a5f9c895531750891",
+  "base_refresh_reason": "baseline PR37 merged during run; same frozen baseline tree, no policy or attempt changes"
+}

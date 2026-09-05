@@ -1,0 +1,101 @@
+{
+  "ok": true,
+  "scope": "finite_arithmetic_and_transcribed_geometry_only",
+  "geometry_checks": {
+    "all_ladder_counts": [
+      29,
+      43
+    ],
+    "active_ladder_counts": [
+      28,
+      39
+    ],
+    "matched_cell_shells": 10,
+    "matched_group_fields": 48,
+    "matched_low_clippings": 61,
+    "nested_radius_checks": 98265,
+    "face_envelope_order_checked": true,
+    "task_count": 97,
+    "low_count": 61,
+    "rank_count": 30,
+    "high_count": 6
+  },
+  "geometry_sha256": "c6b8f4341456f71ba8348fa781e28f1b6e6a9ebf080402bc04ec694fa6e7fb41",
+  "target_count": 152,
+  "positive_fixture": {
+    "arithmetic_pass": true,
+    "fixture_kind": "synthetic"
+  },
+  "scaling_countermodel": {
+    "factor": "2",
+    "both_upstream_model_pass": true,
+    "margin": "69162467338708766984467/2960664736250000000000000000",
+    "failed_fixed_targets": 150,
+    "failed_source_targets": 149,
+    "failed_cap_targets": [
+      "CAP:I_upper"
+    ],
+    "same_relative_units": true,
+    "naive_relative_comparisons_passed": 149,
+    "interpretation": "countermodel to aggregate-predicate sufficiency; not to real integral bounds"
+  },
+  "rejected_mutations": [
+    {
+      "name": "missing_component",
+      "rejected": true
+    },
+    {
+      "name": "duplicate_component",
+      "rejected": true
+    },
+    {
+      "name": "missing_raw_form",
+      "rejected": true
+    },
+    {
+      "name": "changed_task_geometry",
+      "rejected": true
+    },
+    {
+      "name": "changed_geometry_digest",
+      "rejected": true
+    },
+    {
+      "name": "changed_source_commit",
+      "rejected": true
+    },
+    {
+      "name": "wrong_normalization_units",
+      "rejected": true
+    },
+    {
+      "name": "nonpositive_denominator",
+      "rejected": true
+    },
+    {
+      "name": "inverted_interval",
+      "rejected": true
+    },
+    {
+      "name": "float_input",
+      "rejected": true
+    },
+    {
+      "name": "stale_component_cache",
+      "rejected": true
+    },
+    {
+      "name": "stale_aggregate_cache",
+      "rejected": true
+    },
+    {
+      "name": "unsafe_tail_sign",
+      "rejected": true
+    }
+  ],
+  "boundary_equality_accepted": true,
+  "single_row_excess_localized": true,
+  "actual_integral_evaluation": false,
+  "independent_verification": false,
+  "remaining_obligation": "Authentic valid enclosures for the same 152 mathematical objects"
+}

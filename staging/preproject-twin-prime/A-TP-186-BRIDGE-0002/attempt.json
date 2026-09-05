@@ -1,0 +1,108 @@
+{
+  "format": "preproject-research-attempt/v2",
+  "attempt_id": "A-TP-186-BRIDGE-0002",
+  "issue": 44,
+  "parent_issue": 38,
+  "parent_verification_issue": 39,
+  "branch": "attempt/preproject-twin-prime/186-certificate-bridge-02",
+  "base_sha": "39002c5a6af8c7b7f093589e6a76cfd218fcbb99",
+  "actor": {
+    "id": "openai-chatgpt",
+    "run_id": "run-20260905-twin-prime-bridge-02",
+    "role": "solver"
+  },
+  "source_independence": false,
+  "claims": [
+    {
+      "id": "B2-01",
+      "statement": "Conditional endpoint-domination transfer for all152 targets",
+      "evidence_grade": "proof_candidate",
+      "independently_verified": false
+    },
+    {
+      "id": "B2-02",
+      "statement": "Fresh scaled integers require D*u<=I0*v, not just u<=v",
+      "evidence_grade": "proof_candidate",
+      "independently_verified": false
+    },
+    {
+      "id": "B2-03",
+      "statement": "Amplitude scaling preserves the ratio but not fixed numeric caps",
+      "evidence_grade": "proof_candidate",
+      "independently_verified": false
+    },
+    {
+      "id": "B2-04",
+      "statement": "Dyadic synthetic receipt model passes fresh margin while failing150 fixed target checks",
+      "evidence_grade": "exact_check",
+      "independently_verified": false
+    },
+    {
+      "id": "B2-05",
+      "statement": "10 masks,48 group fields and61 low clippings agree for the frozen schedule",
+      "evidence_grade": "exact_check",
+      "independently_verified": false
+    },
+    {
+      "id": "B2-06",
+      "statement": "Inner-mask nesting and radial face-weight domination for all measures under the specified cutoffs",
+      "evidence_grade": "proof_candidate",
+      "independently_verified": false
+    }
+  ],
+  "scoped_outcomes": {
+    "finite_arithmetic_and_geometry": "PASS",
+    "new_derivations": "proof_candidate",
+    "actual_152_inequalities": "INCONCLUSIVE",
+    "full186_theorem": "NOT_ASSESSED"
+  },
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "63fec5ce8ddf08889a47ef94242e1a05533001d9c67c21c1e521d8ad5161b11a"
+    },
+    {
+      "path": "bridge-theorem.md",
+      "sha256": "a4e3b3ed0774083ed64025eee60e164d0bf326d73b47d0e488fcbaccb0aaf6e8"
+    },
+    {
+      "path": "check_bridge.py",
+      "sha256": "6832878ac849b4863f1251ab3cd3aa8b8c846209d5c2d1c814dc4299e88b17b8"
+    },
+    {
+      "path": "computation-record.json",
+      "sha256": "88f274b36d4428ca72008d0deedf37ea29f6b9f9399ef4cb504625e835fc19f5"
+    },
+    {
+      "path": "coverage.json",
+      "sha256": "7da3b78ed66c4f8f0983e2106855ef0a7ac262bc2d28d87d16caf9f78e9cfa94"
+    },
+    {
+      "path": "geometry.py",
+      "sha256": "a33d336ddf585d23f6bf4cfd17c8eb7ec23aaf9114d5a1ce65a10d3cb4d4914b"
+    },
+    {
+      "path": "results.json",
+      "sha256": "d0d46af941fa17c2fccc4ea1682364ee7856bd78f720facd9071c005e95a19c2"
+    },
+    {
+      "path": "source-lock.json",
+      "sha256": "a32b1112f5575bcbac59401052befa3839b249299e255bcecae6e432782952cd"
+    },
+    {
+      "path": "targets.json",
+      "sha256": "4f398b1576b29b292a9ab709734ffcd28b95d7ba388e9dd063e11ccfed1a1467"
+    },
+    {
+      "path": "upstream_assembler.py",
+      "sha256": "b845a081e84f07d3152fc0918b66d58efce95cc235cecf22c74f123ffdc00f6d"
+    }
+  ],
+  "next_target": "G0:R00 low-kernel dominance and actual root/face enclosures",
+  "cannot_imply": [
+    "the scaling fixture refutes the fixed trial or theorem",
+    "all upstream code was audited",
+    "the original integral values have been reproduced",
+    "new Project authority or independent verification"
+  ]
+}
