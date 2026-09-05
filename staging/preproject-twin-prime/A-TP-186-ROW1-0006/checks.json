@@ -1,0 +1,52 @@
+{
+  "corruptions_rejected": [
+    "first_index",
+    "last_index",
+    "cap_index",
+    "radial_first",
+    "radial_last",
+    "slope",
+    "target"
+  ],
+  "error_budget_is_six_times_previous": true,
+  "face_pass": true,
+  "fresh_seed_endpoints_replayed": 196608,
+  "independent_verification": false,
+  "large_convolution_direct_probes": [
+    0,
+    1,
+    3497,
+    4704,
+    49151,
+    93607,
+    95638,
+    98263
+  ],
+  "root_pass": true,
+  "row0_regression_fields": 9,
+  "scope": "finite_exact_checks_not_isolated_verification",
+  "source_row_valid": true,
+  "term_count": 53,
+  "terminal_reassembly": true,
+  "tests": {
+    "test_contraction.py": {
+      "brute_force_moment_endpoint_checks": 196,
+      "exponential_shape_checks": 5,
+      "independent_verifier": false,
+      "packing": {
+        "exact_oracle_cases": 168,
+        "gmp_version": "6.3.0",
+        "negative_float_bool_rejected": true
+      }
+    },
+    "test_signed_contraction.py": {
+      "both_witness_locations_checked": true,
+      "fiber_index_oracle_checks": 7,
+      "independent_verifier": false,
+      "signed_face_enclosed": true,
+      "signed_face_exact": "5026554498529055865800476536693182629261901527937214344347487138523100035765494413304345305763557109/641852454281781225200328044836213828363471839515283942513074989999733124954991008782943773656508006400",
+      "signed_root_enclosed": true,
+      "signed_root_exact": "657587648442778479630031259628332841396263649626162833060752444301568218003618162533433119078900469/855803272375708300267104059781618437817962452687045256684099986666310833273321345043925031542010675200"
+    }
+  }
+}

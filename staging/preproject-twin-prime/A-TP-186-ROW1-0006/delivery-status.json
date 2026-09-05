@@ -1,0 +1,34 @@
+{
+  "base": "39002c5a6af8c7b7f093589e6a76cfd218fcbb99",
+  "branch": "attempt/preproject-twin-prime/186-row1-06",
+  "bulk_remote_presence": false,
+  "format": "tp-row1-delivery-scope/v1",
+  "issue": 62,
+  "local_only": [
+    "dependencies/attempt05.zip",
+    "data/",
+    "logs/",
+    "secondary-results.json",
+    "data-sha256.json",
+    "delivery-receipt.json"
+  ],
+  "mathematical_authority_advanced": false,
+  "note": "This file declares delivery scope, not a live ref receipt. Final branch/head/diff/hash readback and verifier ticket number are recorded in Issue62 and local delivery-receipt.json.",
+  "remote_declared_files": [
+    "README.md",
+    "proof.md",
+    "source-row.json",
+    "run_row.py",
+    "check_row.py",
+    "results.json",
+    "checks.json",
+    "rounding-budget.json",
+    "source-lock.json",
+    "computation-record.json",
+    "attempt.json",
+    "artifact-sha256.json",
+    "verification-ticket.md",
+    "delivery-status.json"
+  ],
+  "remote_relative_root": "staging/preproject-twin-prime/A-TP-186-ROW1-0006/"
+}

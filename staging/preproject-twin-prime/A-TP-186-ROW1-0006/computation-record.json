@@ -1,0 +1,64 @@
+{
+  "actual_evidence": "exact_check_plus_conditional_proof_candidate",
+  "attempt_id": "A-TP-186-ROW1-0006",
+  "backend": {
+    "gmp": "6.3.0",
+    "interface": "Python ctypes; exact GMP integer packing; directed rational endpoints",
+    "precision_bits": 320,
+    "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+    "seed_precision_bits": 640
+  },
+  "cannot_imply": [
+    "All152 physical inputs",
+    "Prime-gap improvement",
+    "Isolation-based independent verifier PASS",
+    "Physical lower bounds from majorant lower bounds"
+  ],
+  "checks": {
+    "both_exit_codes": 0,
+    "normal_command": "python -B check_row.py --work production-v2 --include-results",
+    "optimized_command": "python -O -B check_row.py --work production-v2 --include-results",
+    "stdout_byte_identical": true
+  },
+  "completion_observed": "PID absent; complete53 term files; execution-record status completed and FINAL marker; not a recorded waitpid exit code",
+  "format": "tp-preproject-computation-record/v1",
+  "full_repository_ci": "not_run",
+  "independent_verification": false,
+  "initial_preparation_failure": {
+    "old_process_confirmed_stopped": true,
+    "pid": 593,
+    "reason": "round03 archive has no per-file artifact-sha256.json",
+    "repair": "bind complete nested archive SHA-256 and ZIP CRC; no fabricated manifest",
+    "restart_used_new_directory": true,
+    "stage": "before seed/kernel mathematics"
+  },
+  "issue": 62,
+  "lean_build": "not_run",
+  "original_source_bytes_locked": false,
+  "peak_memory": {
+    "claim": "observed about2.4GiB RSS below4GiB cgroup limit, not a complete peak audit",
+    "strict_peak_measured": false
+  },
+  "process_exit_code_observed": null,
+  "production": {
+    "code_sha256": "98a109e91d82fa16a2bef02481cb34a7f10bfab785aef0bc6987078bed424562",
+    "gmp": "6.3.0",
+    "gmp_stats": {
+      "calls": 1820,
+      "max_slot_bytes": 83,
+      "seconds": 545.7464656270006
+    },
+    "numerical_targets_pass": true,
+    "pid": 643,
+    "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+    "seconds": 700.0042706009999,
+    "status": "completed"
+  },
+  "production_runs_completed": 1,
+  "profile": "reproducible",
+  "repeat_full_production": false,
+  "requested_evidence": "exact_check",
+  "role": "solver",
+  "run_id": "run-20260906-twin-prime-row1-06",
+  "upstream_flint_engine": "not_run"
+}

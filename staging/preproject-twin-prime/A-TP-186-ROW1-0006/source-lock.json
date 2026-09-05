@@ -1,0 +1,37 @@
+{
+  "format": "tp-row1-source-lock/v1",
+  "as_of": "2026-09-06",
+  "base_main": "39002c5a6af8c7b7f093589e6a76cfd218fcbb99",
+  "upstream": {
+    "repository": "openai/PrimeGaps186",
+    "commit": "61340d0b74163003b32756bb16e91d9209a5e330",
+    "spec_blob": "2331eeeb808008cee37bac7aa0fb17e36f1f3c17",
+    "python_blob": "93121b6b12a6b69fdb2a1166c30f9d614160c042",
+    "read_scope": [
+      "Challenge.lean: outerOrderTwoBounds row1",
+      "physicalSourceGroup/Rows/LowBoundaries",
+      "physicalSourceTheta/LowClipping/RadialMask",
+      "paper PDF pp18,20,29"
+    ],
+    "raw_upstream_payload_sha256": null,
+    "source_hash_debt": "Connector Git identity and bounded text/PDF read, not a full original-byte lock"
+  },
+  "predecessor": {
+    "archive": "twin-prime-attempt-05-2026-09-05.zip",
+    "sha256": "8e6827feed5d06a9ec49552fa863b7c389ee502e23dbb8040b2bcd3b06f14f38",
+    "relationship": "user-supplied frozen input, not #59 payload by inference",
+    "execution": "ctypes/GMP implementation",
+    "independently_verified": false
+  },
+  "geometry_comparator": {
+    "commit": "f9a4116daad92d241feb2e40e04046900ff4e182",
+    "path": "staging/preproject-twin-prime/A-TP-186-BRIDGE-0002/geometry.py",
+    "sha256": "a33d336ddf585d23f6bf4cfd17c8eb7ec23aaf9114d5a1ce65a10d3cb4d4914b",
+    "same_as_runtime_bytes": true
+  },
+  "independence": {
+    "role": "solver",
+    "solver_context_access": true,
+    "independent_review_performed": false
+  }
+}

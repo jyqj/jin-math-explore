@@ -1,0 +1,97 @@
+{
+  "actor": {
+    "id": "openai-chatgpt",
+    "role": "solver",
+    "run_id": "run-20260906-twin-prime-row1-06"
+  },
+  "artifacts": [
+    {
+      "path": "proof.md",
+      "sha256": "432d6440600dd6ad0cfb7cf7419c83c46084732d1f25ca60fa585ad4bc0d4578"
+    },
+    {
+      "path": "source-row.json",
+      "sha256": "0a907e2bb7c863fa6d82859018bda9a859f53c283be5691dd0fbdb0cbe572d72"
+    },
+    {
+      "path": "run_row.py",
+      "sha256": "98a109e91d82fa16a2bef02481cb34a7f10bfab785aef0bc6987078bed424562"
+    },
+    {
+      "path": "check_row.py",
+      "sha256": "6ccb610fb5f528d3710997d83e60523cca26480faacbf34a0aaa9751b782ceec"
+    },
+    {
+      "path": "results.json",
+      "sha256": "5341e18e5961ea57c8a67b77bb361ee09ad787624ed4099bd454844c2c5d55f7"
+    },
+    {
+      "path": "checks.json",
+      "sha256": "09772bd75d914bf72da28228b9f3dc22c4b12ac42cb2f664f5bc02fd2736663e"
+    },
+    {
+      "path": "rounding-budget.json",
+      "sha256": "32fd70f0d049947df0e1a370616faa5314a7445c7da5aeaac73fd50fee5489f2"
+    },
+    {
+      "path": "source-lock.json",
+      "sha256": "95314a7e44dfd0a63082c7b8e50dfa92bf1a39ac6e8e3481646ca84c6f8c4fb2"
+    },
+    {
+      "path": "computation-record.json",
+      "sha256": "6e977ea00619010f3f96a287e59847d8549034fbde93339dddff5527d610bb81"
+    },
+    {
+      "path": "verification-ticket.md",
+      "sha256": "7c8581c523c38d291a36d3b35085cbaf3b7b468c49950e512193595c37444d14"
+    }
+  ],
+  "attempt_id": "A-TP-186-ROW1-0006",
+  "base": "39002c5a6af8c7b7f093589e6a76cfd218fcbb99",
+  "branch": "attempt/preproject-twin-prime/186-row1-06",
+  "candidate_integer_pair": [
+    2285,
+    549
+  ],
+  "cannot_imply": [
+    "This run independently verified itself",
+    "All152 inequalities",
+    "A new global rounded loss budget",
+    "An improved prime-gap bound",
+    "Twin prime infinitude",
+    "Project genesis or main authority change"
+  ],
+  "claims": [
+    {
+      "grade": "proof_candidate",
+      "id": "R6-01",
+      "statement": "Given explicitly imported measure/array domination inputs, physicalSourceOuterRoot0,1 <=2284.962701188*I0/10^18"
+    },
+    {
+      "grade": "proof_candidate",
+      "id": "R6-02",
+      "statement": "With the proved source-cap prefix exclusion and stated marginal error bound, physicalSourceOuterFace0,1 <=548.917567093*I0/10^18"
+    },
+    {
+      "grade": "exact_check",
+      "id": "R6-03",
+      "statement": "A coarser three-prefix computed upper bound795.245299091 is insufficient for577; this does not refute the physical inequality"
+    },
+    {
+      "grade": "exact_check",
+      "id": "R6-04",
+      "statement": "Face integer upper bound549 is sufficient conditionally; fixed original Young rounded row budget remains1"
+    }
+  ],
+  "coarse_all_prefix_candidate_pass": false,
+  "face_target_pass": true,
+  "format": "tp-preproject-attempt/v6",
+  "independent_review_performed": false,
+  "issue": 62,
+  "next_solver_target": "G0:R02; sourceTheta special120; rederive geometry before new arithmetic",
+  "physical_input_verdict": "conditional_numeric_candidate",
+  "predecessor_archive_sha256": "8e6827feed5d06a9ec49552fa863b7c389ee502e23dbb8040b2bcd3b06f14f38",
+  "root_target_pass": true,
+  "row_id": "G0:R01",
+  "status": "frozen_solver_candidate_pending_isolated_review"
+}
