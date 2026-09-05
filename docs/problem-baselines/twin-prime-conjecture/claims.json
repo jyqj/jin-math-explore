@@ -1,0 +1,593 @@
+{
+  "baseline_format": "jin-math-reference-baseline/v1",
+  "baseline_id": "twin-prime-conjecture",
+  "as_of": "2026-09-05",
+  "issue": 36,
+  "branch": "program/i-0036/twin-prime-baseline-v1",
+  "observed_base_sha": "70484b065fc3b6a64f06955a5f9c895531750891",
+  "authority": "reference_only",
+  "open_status": "open_as_reported_in_scoped_sources",
+  "independent_admission_verdict": "INCONCLUSIVE",
+  "mathematical_truth_verified": false,
+  "prior_verified_twin_prime_attempts_imported": 0,
+  "execution": {
+    "lean_build": "not_run",
+    "numerical_186_certificate": "not_run",
+    "prime_enumeration": "not_run",
+    "full_repository_tests_locally": "not_run"
+  },
+  "sources": [
+    {
+      "id": "Maynard2019",
+      "title": "On the Twin Prime Conjecture",
+      "url": "https://arxiv.org/abs/1910.14674v1",
+      "version": "arXiv:1910.14674v1",
+      "publication_status": "author_survey",
+      "checked_locator": "Conjectures 1-2; section 2.1, Corollary 2 and Theorem 3",
+      "retrieved_on": "2026-09-05",
+      "payload_sha256": null,
+      "hash_status": "raw_payload_not_acquired"
+    },
+    {
+      "id": "Chen1973",
+      "title": "On the representation of a larger even integer as the sum of a prime and the product of at most two primes",
+      "url": "https://doi.org/10.1360/ya1973-16-2-157",
+      "version": "Scientia Sinica 16 (1973), 157-176",
+      "publication_status": "published_original_metadata_only",
+      "checked_locator": "Twin-prime theorem; checked through Maynard2019 Theorem 3; original full text not audited",
+      "retrieved_on": "2026-09-05",
+      "payload_sha256": null,
+      "hash_status": "raw_payload_not_acquired"
+    },
+    {
+      "id": "GPY2009",
+      "title": "Primes in tuples I",
+      "url": "https://annals.math.princeton.edu/2009/170-2/p10",
+      "version": "Annals 170 (2009), 819-862",
+      "publication_status": "published",
+      "checked_locator": "Abstract and main result",
+      "retrieved_on": "2026-09-05",
+      "payload_sha256": null,
+      "hash_status": "raw_payload_not_acquired"
+    },
+    {
+      "id": "Zhang2014",
+      "title": "Bounded gaps between primes",
+      "url": "https://annals.math.princeton.edu/2014/179-3/p07",
+      "version": "Annals 179 (2014), 1121-1174",
+      "publication_status": "published",
+      "checked_locator": "Abstract; strict upper bound 7*10^7",
+      "retrieved_on": "2026-09-05",
+      "payload_sha256": null,
+      "hash_status": "raw_payload_not_acquired"
+    },
+    {
+      "id": "Maynard2015",
+      "title": "Small gaps between primes",
+      "url": "https://annals.math.princeton.edu/2015/181-1/p07",
+      "version": "Annals 181 (2015), 383-413",
+      "publication_status": "published",
+      "checked_locator": "Abstract; H1<=600, fixed-m finiteness, EH<=12",
+      "retrieved_on": "2026-09-05",
+      "payload_sha256": null,
+      "hash_status": "raw_payload_not_acquired"
+    },
+    {
+      "id": "Polymath2014a",
+      "title": "New equidistribution estimates of Zhang type",
+      "url": "https://arxiv.org/abs/1402.0811",
+      "version": "arXiv:1402.0811; exact version not byte-locked",
+      "publication_status": "published",
+      "checked_locator": "4680 cross-checked in Polymath2014b section 1",
+      "retrieved_on": "2026-09-05",
+      "payload_sha256": null,
+      "hash_status": "raw_payload_not_acquired"
+    },
+    {
+      "id": "Polymath2014b",
+      "title": "Variants of the Selberg sieve, and bounded intervals containing many primes",
+      "url": "https://arxiv.org/abs/1407.4897v4",
+      "version": "arXiv:1407.4897v4; Res. Math. Sci. 1,12 (2014)",
+      "publication_status": "published",
+      "checked_locator": "Theorem 1.4(i),(xii); Claim 3.1; sections 2 and 8",
+      "retrieved_on": "2026-09-05",
+      "payload_sha256": null,
+      "hash_status": "raw_payload_not_acquired"
+    },
+    {
+      "id": "Pascadi2025",
+      "title": "On the exponents of distribution of primes and smooth numbers",
+      "url": "https://arxiv.org/abs/2505.00653v2",
+      "version": "arXiv:2505.00653v2; 2025-06-29",
+      "publication_status": "arxiv_journal_status_not_confirmed",
+      "checked_locator": "Theorem 1.3(i); Corollary 1.4",
+      "retrieved_on": "2026-09-05",
+      "payload_sha256": null,
+      "hash_status": "raw_payload_not_acquired"
+    },
+    {
+      "id": "Stadlmann2026",
+      "title": "Bounded gaps between primes",
+      "url": "https://arxiv.org/abs/2608.31126v1",
+      "version": "arXiv:2608.31126v1; 2026-08-31",
+      "publication_status": "preprint",
+      "checked_locator": "Abstract; section 1; Theorem 1 has H_m/H_1 notation mismatch in PDF and HTML",
+      "retrieved_on": "2026-09-05",
+      "payload_sha256": null,
+      "hash_status": "raw_payload_not_acquired"
+    },
+    {
+      "id": "OpenAI2026",
+      "title": "Improved short gaps between primes",
+      "url": "https://cdn.openai.com/pdf/51126fac-1b68-4128-9666-c908bcc16033/short_gaps.pdf",
+      "version": "Internal manuscript date 2026-08-30; observed 2026-09-05; 39 pages",
+      "publication_status": "public_manuscript_not_independently_verified_here",
+      "checked_locator": "Theorem 1.1, Corollary 1.2, equation (1.5); PDF pp.1-2",
+      "retrieved_on": "2026-09-05",
+      "payload_sha256": null,
+      "hash_status": "raw_payload_not_acquired"
+    },
+    {
+      "id": "PrimeGaps1862026",
+      "title": "Prime Gaps at Most 186: formalization and numerical certificate",
+      "url": "https://github.com/openai/PrimeGaps186/tree/61340d0b74163003b32756bb16e91d9209a5e330",
+      "version": "commit:61340d0b74163003b32756bb16e91d9209a5e330",
+      "publication_status": "author_code_conditional_formalization",
+      "checked_locator": "README.md and comparator/main.json; code builds/certificate not run here",
+      "retrieved_on": "2026-09-05",
+      "payload_sha256": null,
+      "hash_status": "raw_payload_not_acquired",
+      "git_commit": "61340d0b74163003b32756bb16e91d9209a5e330"
+    }
+  ],
+  "claims": [
+    {
+      "id": "TP-0001",
+      "label": "孪生素数猜想",
+      "statement": "For every X>0 there is a prime p>X with p+2 prime; equivalently pi_2(x)->infinity and H_1=2.",
+      "evidence_kind": "open_conjecture",
+      "source_refs": [
+        "Maynard2019",
+        "Stadlmann2026"
+      ],
+      "assumptions": [],
+      "depends_on": [],
+      "authority": "reference_only",
+      "independent_verification": "not_performed",
+      "cannot_imply": [
+        "An unconditional proof or disproof has been supplied."
+      ]
+    },
+    {
+      "id": "TP-0002",
+      "label": "Hardy-Littlewood 主项",
+      "statement": "pi_2(x) ~ 2*C2*x/log(x)^2, where C2=product_{q>2 prime}(1-1/(q-1)^2).",
+      "evidence_kind": "conjectural_asymptotic",
+      "source_refs": [
+        "Maynard2019"
+      ],
+      "assumptions": [],
+      "depends_on": [],
+      "authority": "reference_only",
+      "independent_verification": "not_performed",
+      "cannot_imply": [
+        "The asymptotic or a square-root error term is an available theorem."
+      ]
+    },
+    {
+      "id": "TP-0003",
+      "label": "Brun 收敛",
+      "statement": "The sum over twin pairs (p,p+2) of 1/p+1/(p+2) converges.",
+      "evidence_kind": "classical_theorem_via_author_survey",
+      "source_refs": [
+        "Maynard2019"
+      ],
+      "assumptions": [],
+      "depends_on": [],
+      "authority": "reference_only",
+      "independent_verification": "not_performed",
+      "cannot_imply": [
+        "Twin primes are finite.",
+        "Twin primes are infinite.",
+        "The displayed decimal approximations are rigorous exact constants."
+      ]
+    },
+    {
+      "id": "TP-0004",
+      "label": "Chen 固定差2",
+      "statement": "Infinitely many primes p satisfy Omega(p+2)<=2, with prime factors counted with multiplicity.",
+      "evidence_kind": "classical_theorem_via_author_survey",
+      "source_refs": [
+        "Chen1973",
+        "Maynard2019"
+      ],
+      "assumptions": [],
+      "depends_on": [],
+      "authority": "reference_only",
+      "independent_verification": "not_performed",
+      "cannot_imply": [
+        "Infinitely many of these p+2 are prime."
+      ]
+    },
+    {
+      "id": "TP-0005",
+      "label": "GPY 相对间隔",
+      "statement": "liminf_n (p_(n+1)-p_n)/log(p_n)=0.",
+      "evidence_kind": "published_theorem",
+      "source_refs": [
+        "GPY2009"
+      ],
+      "assumptions": [],
+      "depends_on": [],
+      "authority": "reference_only",
+      "independent_verification": "not_performed",
+      "cannot_imply": [
+        "This statement alone gives a fixed finite bound for H_1."
+      ]
+    },
+    {
+      "id": "TP-0006",
+      "label": "张益唐有界间隔",
+      "statement": "H_1 < 70000000.",
+      "evidence_kind": "published_theorem",
+      "source_refs": [
+        "Zhang2014"
+      ],
+      "assumptions": [],
+      "depends_on": [],
+      "authority": "reference_only",
+      "independent_verification": "not_performed",
+      "cannot_imply": [
+        "The twin prime conjecture has been proved by this repository."
+      ]
+    },
+    {
+      "id": "TP-0007",
+      "label": "Polymath8a",
+      "statement": "H_1 <= 4680.",
+      "evidence_kind": "published_theorem",
+      "source_refs": [
+        "Polymath2014a",
+        "Polymath2014b"
+      ],
+      "assumptions": [],
+      "depends_on": [],
+      "authority": "reference_only",
+      "independent_verification": "not_performed",
+      "cannot_imply": [
+        "The twin prime conjecture has been proved by this repository."
+      ]
+    },
+    {
+      "id": "TP-0008",
+      "label": "Maynard-Tao 主线",
+      "statement": "H_1 <= 600.",
+      "evidence_kind": "published_theorem",
+      "source_refs": [
+        "Maynard2015"
+      ],
+      "assumptions": [],
+      "depends_on": [],
+      "authority": "reference_only",
+      "independent_verification": "not_performed",
+      "cannot_imply": [
+        "The twin prime conjecture has been proved by this repository."
+      ]
+    },
+    {
+      "id": "TP-0009",
+      "label": "固定多素数聚集",
+      "statement": "For each fixed integer m>=1, H_m=liminf_n(p_(n+m)-p_n) is finite.",
+      "evidence_kind": "published_theorem",
+      "source_refs": [
+        "Maynard2015"
+      ],
+      "assumptions": [],
+      "depends_on": [],
+      "authority": "reference_only",
+      "independent_verification": "not_performed",
+      "cannot_imply": [
+        "One bound works for every m.",
+        "The gaps or prime tuple offsets are prescribed."
+      ]
+    },
+    {
+      "id": "TP-0010",
+      "label": "246 已发表参考层",
+      "statement": "H_1 <= 246.",
+      "evidence_kind": "published_theorem",
+      "source_refs": [
+        "Polymath2014b"
+      ],
+      "assumptions": [],
+      "depends_on": [],
+      "authority": "reference_only",
+      "independent_verification": "not_performed",
+      "cannot_imply": [
+        "246 is the smallest current source-reported bound as of 2026-09-05.",
+        "H_1=246.",
+        "H_1=2."
+      ]
+    },
+    {
+      "id": "TP-0011",
+      "label": "EH 条件界",
+      "statement": "H_1 <= 12.",
+      "evidence_kind": "conditional_published_theorem",
+      "source_refs": [
+        "Maynard2015"
+      ],
+      "assumptions": [
+        "EH[theta] for every 0<theta<1 (sufficient hypothesis)"
+      ],
+      "depends_on": [],
+      "authority": "reference_only",
+      "independent_verification": "not_performed",
+      "cannot_imply": [
+        "An unconditional bound of 12 has been established here.",
+        "Ordinary EH and GEH are interchangeable."
+      ]
+    },
+    {
+      "id": "TP-0012",
+      "label": "GEH 条件界",
+      "statement": "H_1 <= 6.",
+      "evidence_kind": "conditional_published_theorem",
+      "source_refs": [
+        "Polymath2014b"
+      ],
+      "assumptions": [
+        "GEH[theta] for every 0<theta<1 (sufficient hypothesis)"
+      ],
+      "depends_on": [],
+      "authority": "reference_only",
+      "independent_verification": "not_performed",
+      "cannot_imply": [
+        "The same cited theorem assumes only ordinary EH.",
+        "The recurrent gap must be 2."
+      ]
+    },
+    {
+      "id": "TP-0013",
+      "label": "240 新预印本",
+      "statement": "The abstract reports H_1 <= 240; Theorem 1 contains an H_m/H_1 notation mismatch.",
+      "evidence_kind": "preprint_theorem_claim",
+      "source_refs": [
+        "Stadlmann2026"
+      ],
+      "assumptions": [],
+      "depends_on": [],
+      "authority": "reference_only",
+      "independent_verification": "not_performed",
+      "cannot_imply": [
+        "The full proof has been independently audited here.",
+        "H_m<=240 for every m."
+      ]
+    },
+    {
+      "id": "TP-0014",
+      "label": "186 新报告",
+      "statement": "The manuscript asserts DHL[40,2] and deduces H_1<=186 from a diameter-186 admissible 40-tuple.",
+      "evidence_kind": "public_manuscript_theorem_claim",
+      "source_refs": [
+        "OpenAI2026"
+      ],
+      "assumptions": [],
+      "depends_on": [],
+      "authority": "reference_only",
+      "independent_verification": "not_performed",
+      "cannot_imply": [
+        "The manuscript has been independently verified by this repository.",
+        "Twin primes are infinite.",
+        "All formalization inputs have been proved in Lean."
+      ]
+    },
+    {
+      "id": "TP-0015",
+      "label": "186 形式化依赖",
+      "statement": "The comparator permits three domain-specific axioms in addition to propext, Quot.sound and Classical.choice.",
+      "evidence_kind": "source_code_contract",
+      "source_refs": [
+        "PrimeGaps1862026"
+      ],
+      "assumptions": [
+        "PrimeGap186.kloosterman3_bound",
+        "PrimeGap186.kloosterman2_correlation_bound",
+        "PrimeGap186.physical_integral_bounds"
+      ],
+      "depends_on": [],
+      "authority": "reference_only",
+      "independent_verification": "not_performed",
+      "cannot_imply": [
+        "The domain-specific inputs have been discharged by a local Lean build.",
+        "These inputs are automatically unsolved mathematical conjectures."
+      ]
+    },
+    {
+      "id": "TP-0016",
+      "label": "计数上界3.203",
+      "statement": "pi_2(x) <= (3.203+o(1))*2*C2*x/log(x)^2 as x->infinity.",
+      "evidence_kind": "arxiv_theorem_claim",
+      "source_refs": [
+        "Pascadi2025"
+      ],
+      "assumptions": [],
+      "depends_on": [],
+      "authority": "reference_only",
+      "independent_verification": "not_performed",
+      "cannot_imply": [
+        "The upper bound is a positive lower bound.",
+        "pi_2(x) diverges.",
+        "The coefficient 3.203 multiplies x/log(x)^2 without 2*C2."
+      ]
+    },
+    {
+      "id": "TP-0017",
+      "label": "带权分布5/8",
+      "statement": "For fixed nonzero residue a, the prime distribution estimate in Theorem 1.3(i) holds at Q<=x^(5/8-epsilon) with triply-well-factorable weights.",
+      "evidence_kind": "arxiv_theorem_claim",
+      "source_refs": [
+        "Pascadi2025"
+      ],
+      "assumptions": [
+        "Theorem 1.3(i) exact weight, residue, coprimality and error conventions"
+      ],
+      "depends_on": [],
+      "authority": "reference_only",
+      "independent_verification": "not_performed",
+      "cannot_imply": [
+        "Unrestricted absolute-value Bombieri-Vinogradov holds to exponent 5/8.",
+        "All Maynard sieve moduli automatically satisfy this interface."
+      ]
+    },
+    {
+      "id": "TP-0018",
+      "label": "可容许性与DHL",
+      "statement": "An admissible k-tuple omits a residue modulo every prime. DHL[k,2] plus one such tuple of diameter B implies H_1<=B.",
+      "evidence_kind": "definition_and_elementary_implication",
+      "source_refs": [
+        "Polymath2014b"
+      ],
+      "assumptions": [
+        "DHL[k,2] is actually established with its full quantifiers."
+      ],
+      "depends_on": [],
+      "authority": "reference_only",
+      "independent_verification": "not_performed",
+      "cannot_imply": [
+        "Admissibility alone proves prime k-tuples."
+      ]
+    },
+    {
+      "id": "TP-0019",
+      "label": "抽屉原理边界",
+      "statement": "H_1<=B with finite B implies some even d in [2,B] occurs infinitely often as a consecutive prime gap.",
+      "evidence_kind": "elementary_implication",
+      "source_refs": [
+        "Polymath2014b"
+      ],
+      "assumptions": [
+        "Finite integer B>=2; ignore the unique initial odd gap"
+      ],
+      "depends_on": [],
+      "authority": "reference_only",
+      "independent_verification": "not_performed",
+      "cannot_imply": [
+        "The d is 2.",
+        "The d equals B."
+      ]
+    },
+    {
+      "id": "TP-0020",
+      "label": "奇偶障碍",
+      "statement": "The standard sieve-information framework has a parity obstruction; Polymath8b section 8 discusses the barrier at 6 for its sieve approach.",
+      "evidence_kind": "method_obstruction",
+      "source_refs": [
+        "Polymath2014b",
+        "Maynard2019"
+      ],
+      "assumptions": [],
+      "depends_on": [],
+      "authority": "reference_only",
+      "independent_verification": "not_performed",
+      "cannot_imply": [
+        "No new mathematical method could solve twin primes.",
+        "The heuristic scope discussion is a universal formal impossibility theorem."
+      ]
+    },
+    {
+      "id": "TP-0021",
+      "label": "有限计算边界",
+      "statement": "A finite enumeration or isolated certified twin pair has only finite coverage.",
+      "evidence_kind": "logical_boundary",
+      "source_refs": [
+        "Maynard2019"
+      ],
+      "assumptions": [],
+      "depends_on": [],
+      "authority": "reference_only",
+      "independent_verification": "not_performed",
+      "cannot_imply": [
+        "Any arbitrary future scale contains a twin pair.",
+        "This run executed a prime enumeration."
+      ]
+    },
+    {
+      "id": "TP-0022",
+      "label": "分布输入不可只搬指数",
+      "statement": "BV and stronger restricted-modulus estimates have different modulus, weight and uniformity contracts.",
+      "evidence_kind": "method_interface",
+      "source_refs": [
+        "Polymath2014b"
+      ],
+      "assumptions": [],
+      "depends_on": [],
+      "authority": "reference_only",
+      "independent_verification": "not_performed",
+      "cannot_imply": [
+        "A numerical exponent alone authorizes a distribution-theorem call."
+      ]
+    },
+    {
+      "id": "TP-0023",
+      "label": "非负权检测",
+      "statement": "For nonnegative weights, S2>S1 implies at least one supported translate has two prime entries.",
+      "evidence_kind": "elementary_implication",
+      "source_refs": [
+        "OpenAI2026"
+      ],
+      "assumptions": [
+        "S1=sum w_n; S2=sum w_n*sum_i 1_prime(n+h_i); fixed finite sums"
+      ],
+      "depends_on": [],
+      "authority": "reference_only",
+      "independent_verification": "not_performed",
+      "cannot_imply": [
+        "A single finite-scale check proves infinitely many translates."
+      ]
+    },
+    {
+      "id": "TP-0024",
+      "label": "240 符号异常",
+      "statement": "PDF page 1 and HTML Theorem 1 define H_1 but display H_m<=240; the abstract states H_1<=240.",
+      "evidence_kind": "source_text_observation",
+      "source_refs": [
+        "Stadlmann2026"
+      ],
+      "assumptions": [],
+      "depends_on": [],
+      "authority": "reference_only",
+      "independent_verification": "not_performed",
+      "cannot_imply": [
+        "The full proof is mathematically invalid solely because of this notation mismatch."
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "from_id": "TP-0015",
+      "to_id": "TP-0014",
+      "relation": "formalization_input_boundary_not_validation"
+    },
+    {
+      "from_id": "TP-0017",
+      "to_id": "TP-0016",
+      "relation": "related_distribution_input_not_sufficient_alone"
+    },
+    {
+      "from_id": "TP-0014",
+      "to_id": "TP-0018",
+      "relation": "instance_of_sieve_to_gap_interface"
+    }
+  ],
+  "next_task": "A-TP-186-INPUT-0001",
+  "source_debts": [
+    "D-TP-01",
+    "D-TP-02",
+    "D-TP-03",
+    "D-TP-04",
+    "D-TP-05",
+    "D-TP-06",
+    "D-TP-07"
+  ]
+}

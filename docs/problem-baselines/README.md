@@ -19,3 +19,4 @@
 ## Registered baselines
 
 - [哥德巴赫猜想](goldbach-conjecture/README.md)
+- [孪生素数猜想](twin-prime-conjecture/README.md)：截至 2026-09-05 的文献基线，区分已发表结论、新预印本与形式化输入债务。
