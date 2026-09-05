@@ -1,0 +1,33 @@
+{
+  "format": "tp-low-kernel-input/v1",
+  "attempt": "A-TP-186-LOW-0003",
+  "upstream_commit": "61340d0b74163003b32756bb16e91d9209a5e330",
+  "predecessor_commit": "f9a4116daad92d241feb2e40e04046900ff4e182",
+  "h": "2742997/258046918656",
+  "cells": 98304,
+  "source_dimension": 40,
+  "precision_bits": 640,
+  "low": "29068686916144971709156469/1172752030899844388101008936",
+  "high": "29068686916144971709156469/781834687266562925400672624",
+  "hard_cap": "2742997/5249978",
+  "slope": 189,
+  "threshold": "7200342320019/6890569875110",
+  "first_index": 2331,
+  "last_index": 3498,
+  "cap_index": 49152,
+  "low_rounded": "2131308669/86015639552",
+  "high_rounded": "1599167251/43007819776",
+  "cap_rounded": "2742997/5249978",
+  "radial_first": 94919,
+  "radial_last": 95638,
+  "exact_prefix_count": 32,
+  "background_max_count": 42,
+  "designated_max_unmarked": 41,
+  "relative_targets": {
+    "root": 11,
+    "face": 10
+  },
+  "I0": "23685317816/1000000000000000000000000",
+  "source_scale": 1000000000000000000,
+  "finite_array_scope": "Dickman density and tilted seed only; not root/face integral values"
+}

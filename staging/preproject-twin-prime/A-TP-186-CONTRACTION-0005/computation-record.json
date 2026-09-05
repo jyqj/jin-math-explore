@@ -1,0 +1,102 @@
+{
+  "format": "preproject-computation-record/v1",
+  "attempt": "A-TP-186-CONTRACTION-0005",
+  "actor": {
+    "id": "openai-chatgpt",
+    "run_id": "run-20260905-twin-prime-contraction-05",
+    "role": "solver"
+  },
+  "backend": {
+    "python": "3.13.5",
+    "gmp": "6.3.0",
+    "native_wrapper": "packed_gmp.cpp",
+    "interface": "C++17 shared library + ctypes",
+    "arithmetic": "exact nonnegative integer products with directed dyadic division; signed rational aggregation"
+  },
+  "commands": [
+    "g++ -O3 -std=c++17 -shared -fPIC packed_gmp.cpp -lgmp -o packed_gmp.so",
+    "python3 -B test_contraction.py",
+    "python3 -O -B test_contraction.py",
+    "python3 -B kernel_stage.py --output kernel",
+    "python3 -B contract_stage.py --kernel kernel --output contraction",
+    "python3 -O -B run_pipeline.py --output fresh-replay --compare contraction"
+  ],
+  "first_run": {
+    "kernel_seconds": 24.756652929999973,
+    "contraction_seconds": 798.1920476339999,
+    "kernel_gmp_products": 130,
+    "contraction_gmp_products": 1244,
+    "contribution_count": 77,
+    "peak_observed_rss_mib": 1582.6
+  },
+  "finite_tests": {
+    "ok": true,
+    "scope": "exact finite arithmetic tests; not independent mathematical review",
+    "packed": {
+      "naive_and_headroom_tests": 110,
+      "production_coefficients_checked": 98264,
+      "gmp_version": "6.3.0",
+      "counts": {
+        "multiplications": 54,
+        "seconds": 0.9102792909994832,
+        "max_coefficient_slot_bytes": 128
+      }
+    },
+    "kernel": {
+      "full_finite_channels_checked": 144,
+      "largest_tested_high_count": 35,
+      "max_upper_gap": "14203435568580278057423062748688105343109329930941116979695106589324361/323956802973384797544036242618698796949996487270196161230253210760062595140251618275596703505580032000000000000000000"
+    },
+    "squares": {
+      "enumerated_configurations": 920,
+      "direct_normal_and_marked_squares": 48,
+      "dimensions": [
+        1,
+        3,
+        5
+      ]
+    },
+    "fiber_configurations": 120,
+    "eulerian_formula_coefficients": 990,
+    "rejected_invalid_inputs": [
+      "negative",
+      "floating",
+      "boolean"
+    ]
+  },
+  "optimized_tests_passed": true,
+  "full_optimized_replay": {
+    "completed": true,
+    "elapsed_seconds": 862.283346084,
+    "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+    "optimize": 1,
+    "scientific_replay_equal": true,
+    "source_sha256": {
+      "exact_poly.py": "baf2efd20ddbf301bcea12582cf58a0bb9ef69daf39a98e26aa875370c875f18",
+      "contract_stage.py": "c3d6246451c11ecf9e8e15427964d4000c18f5f7f5b8c65ffb6364810f687841",
+      "test_contraction.py": "ba3342f91757e92cab3fb0fee829dd6bf4d85f839c18b54e6c432634f6b18741",
+      "kernel_stage.py": "ef136552a57a9b410f2aed42106368820c2f1196232d5b755e60a954d2b56c93",
+      "run_pipeline.py": "d5268dd4c528647b378afc9a13ac19b8233194a6d2cb5ee14af4a00951491bc4"
+    }
+  },
+  "source_only_predecessor_rebuild": {
+    "completed": true,
+    "seed_hash_equal": true,
+    "marginal_generation_and_all_36_data_hashes_equal": true
+  },
+  "result_summary_sha256": "aa07fc290417020122936a600e64d19fe7a63fd7c42bb7d5d456418a8c746f38",
+  "full_result_sha256": "4936a544045b5e3ae0bc7695979caf4274239e5432a0b3cdced421484235c612",
+  "execution_events": [
+    "Initial 20-second foreground tool attempt terminated; process absence confirmed before restart.",
+    "Streaming sessions unavailable; subsequently used monitored local Popen with unique pid and log.",
+    "First successful run preceded only a portability/path-hash-guard refactor; arithmetic unchanged. Original code hashes kept in the full artifact.",
+    "Full -O replay tests the final source bytes and compares every scientific field including all 77 contributions; timing fields are excluded."
+  ],
+  "not_run": [
+    "full repository CI",
+    "original Lean build",
+    "original FLINT program",
+    "isolated independent mathematical verification"
+  ],
+  "production_project_handoff": "not applicable before Project genesis; no dummy Project ID/objective created"
+}

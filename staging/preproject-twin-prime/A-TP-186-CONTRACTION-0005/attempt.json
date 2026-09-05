@@ -1,0 +1,66 @@
+{
+  "format": "preproject-attempt/v1",
+  "attempt_id": "A-TP-186-CONTRACTION-0005",
+  "issue": 59,
+  "branch": "attempt/preproject-twin-prime/186-square-contraction-05",
+  "base_sha": "39002c5a6af8c7b7f093589e6a76cfd218fcbb99",
+  "actor": {
+    "kind": "agent",
+    "id": "openai-chatgpt",
+    "run_id": "run-20260905-twin-prime-contraction-05",
+    "role": "solver"
+  },
+  "authority": "proof_candidate",
+  "solver_verdict": "PASS",
+  "verdict_scope": "Two fixed first-row root/face bounds, conditional on the explicitly stated physical identities and continuous-to-finite domination; exact local computation completed.",
+  "independent_verification": false,
+  "statement": {
+    "unit": "23685317816/10^42",
+    "root_upper_units": "10396041/1000000",
+    "root_required_units": 11,
+    "face_upper_units_including_marginal_error": "502641/200000",
+    "face_required_units": 10
+  },
+  "dependencies": [
+    {
+      "path": "proof.md",
+      "sha256": "fdcb14463fa28c03992e3c1bbe31b6a14ccef05752615ecd8cf86ad8158af939"
+    },
+    {
+      "path": "result.json",
+      "sha256": "aa07fc290417020122936a600e64d19fe7a63fd7c42bb7d5d456418a8c746f38"
+    },
+    {
+      "path": "source-lock.json",
+      "sha256": "94516e07cfc7c4b997984f69ecc3993632ac2974eeb98b606be4de1eb1194f83"
+    },
+    {
+      "path": "computation-record.json",
+      "sha256": "4a1a95b2f4bf7af09a05bf61129195ebe08e6f12a5feb0954b1a349c12de1a44"
+    },
+    {
+      "path": "verification-ticket.md",
+      "sha256": "f1e4a029b4100abe313fa295b26492ebeb9397ef6368425f8382cf435ba1a752"
+    }
+  ],
+  "completion": {
+    "all_77_blocks_computed": true,
+    "all_finite_fragment_counts_included": true,
+    "full_optimized_replay_equal": true,
+    "source_only_reconstruction_checked": true,
+    "github_payload_kind": "20-file reproducible source/result package; bulk data is in the downloadable artifact or regenerated"
+  },
+  "unresolved": [
+    "Independent audit of all semantic domination, normalization, inherited marginal and error-bound steps.",
+    "Remaining150 numerical scalar targets and two finite-field inputs are not certified here.",
+    "No original Lean build or full186 analytic/sieve verification."
+  ],
+  "next_solver_target": "Generalize the certified low-bin contraction to G0:R01 with a fresh row lock; do not reuse row00 constants without derivation.",
+  "cannot_imply": [
+    "Twin-prime conjecture has been proved.",
+    "The prime-gap bound186 has been lowered.",
+    "All152 fixed numerical inequalities are certified.",
+    "A local exact-check is an independent verifier PASS.",
+    "The computed majorant lower endpoint is a physical-integral lower bound."
+  ]
+}

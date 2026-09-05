@@ -1,0 +1,80 @@
+{
+  "format": "tp-contraction-source-lock/v1",
+  "base_commit": "39002c5a6af8c7b7f093589e6a76cfd218fcbb99",
+  "upstream": {
+    "repository": "openai/PrimeGaps186",
+    "commit": "61340d0b74163003b32756bb16e91d9209a5e330",
+    "Challenge.lean_git_blob": "2331eeeb808008cee37bac7aa0fb17e36f1f3c17",
+    "prime_gap_186_certificate.py_git_blob": "93121b6b12a6b69fdb2a1166c30f9d614160c042",
+    "complete_raw_source_payload_acquired": false,
+    "actual_10mb_solution_lean_read": false
+  },
+  "primary_paper": {
+    "url": "https://cdn.openai.com/pdf/51126fac-1b68-4128-9666-c908bcc16033/short_gaps.pdf",
+    "locators": [
+      "(3.15)",
+      "(3.16)",
+      "(3.24)",
+      "(3.25)",
+      "(4.38)",
+      "(4.39)"
+    ],
+    "pdf_pages_visually_checked": [
+      18,
+      20,
+      29
+    ],
+    "raw_pdf_sha256": null
+  },
+  "gmp_documentation": [
+    "https://gmplib.org/manual/Integer-Import-and-Export.html",
+    "https://gmplib.org/manual/Integer-Arithmetic.html"
+  ],
+  "predecessor_archives": [
+    {
+      "name": "twin-prime-attempt-03-2026-09-05.zip",
+      "sha256": "f7f339ae129851bf547bbb691c70ece6688bf993a2da67d10772dab1b1034907"
+    },
+    {
+      "name": "twin-prime-attempt-04-2026-09-05.zip",
+      "sha256": "812b8352aba30599edd4fdd9426710b6afd0380fb3d3ff186ee38bf9a230cf8a"
+    }
+  ],
+  "copied_source_files": [
+    {
+      "path": "predecessors/inputs.json",
+      "sha256": "10f1b1cd8df483d49e30974c07595a0fbe57d13e560d3e99a5b88238bccadadc"
+    },
+    {
+      "path": "predecessors/source-row.json",
+      "sha256": "22425b898aa326e4a2bd9d46d6d4363d2d8e8930586c3a5de92138b94f4b4158"
+    },
+    {
+      "path": "predecessors/rounding-budget.json",
+      "sha256": "53c83802d2af4f4b4af2a1d30d185f64b829c2f263225451cdf27ef8bbfe03e2"
+    },
+    {
+      "path": "predecessors/low_kernel.py",
+      "sha256": "3e572e431237c385fd898b842048f77524a8d4404cc6b56099728e9cd1a51d41"
+    },
+    {
+      "path": "predecessors/marginal.py",
+      "sha256": "33632439dc6b0ce0b8695af399a690d217bafd7f64abbf83ed4a4077d2498ff6"
+    },
+    {
+      "path": "predecessors/run_marginals.py",
+      "sha256": "2661009527f4a13b7069f27a5b655f2f661198b2df1a5851f01be678239ebb68"
+    }
+  ],
+  "seed": {
+    "path": "predecessors/seed-enclosures.bin.zlib",
+    "sha256": "7d4ca048cd34981def5e16c8d0ce0af366b8b2154a7b9c53aa1932ba6aed7a1c"
+  },
+  "marginal_generation": {
+    "path": "predecessors/arrays/generation.json",
+    "sha256": "6806eb35348db6792d3ebdcab5a0d0159123790aef013c418242e4ac7002e115"
+  },
+  "source_only_reconstruction_performed": true,
+  "bulk_data_remote_status": "intentionally not GitHub payload; exact reconstruction source included",
+  "missing_source_bytes_are_not_fabricated": true
+}

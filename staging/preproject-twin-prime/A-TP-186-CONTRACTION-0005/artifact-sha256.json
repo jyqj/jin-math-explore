@@ -1,0 +1,133 @@
+{
+  "format": "tp-artifact-hashes/v1",
+  "remote_payload_count": 20,
+  "self_hash_excluded": true,
+  "remote_files": [
+    {
+      "path": "README.md",
+      "sha256": "f07f3f3efdcc50ce1fa12e91497807e3fc3f21c382e025ed3fb72dc6f72ccdf7",
+      "git_blob": "94788e94de80a5940918379d5f960291a53de095"
+    },
+    {
+      "path": "attempt.json",
+      "sha256": "384f12273952146f5693e460b46c5627173fa699c36a8a995931cf633a881271",
+      "git_blob": "9de9a731995804fbc50ec471e3528d7909ceb394"
+    },
+    {
+      "path": "computation-record.json",
+      "sha256": "4a1a95b2f4bf7af09a05bf61129195ebe08e6f12a5feb0954b1a349c12de1a44",
+      "git_blob": "b004276615fc7213eb36d27c63c4ad136e387c65"
+    },
+    {
+      "path": "contract_stage.py",
+      "sha256": "c3d6246451c11ecf9e8e15427964d4000c18f5f7f5b8c65ffb6364810f687841",
+      "git_blob": "7b4588bbd638d60c0e0f08a2ae02d6835210d592"
+    },
+    {
+      "path": "exact_poly.py",
+      "sha256": "baf2efd20ddbf301bcea12582cf58a0bb9ef69daf39a98e26aa875370c875f18",
+      "git_blob": "5ec676e557abaf9a6c518f62ed94caedd2112673"
+    },
+    {
+      "path": "kernel_stage.py",
+      "sha256": "ef136552a57a9b410f2aed42106368820c2f1196232d5b755e60a954d2b56c93",
+      "git_blob": "9e9d256ad3c6e73ce6e9eec547ffb2bf3698705b"
+    },
+    {
+      "path": "packed_gmp.cpp",
+      "sha256": "5d93bd727e5a8f0f3dccac337b7dbd2ba0a2dde7adbb652c054bb86fcb9805b8",
+      "git_blob": "a899fdf5a81b4db7265c3c9bc831fd5b2a1aa612"
+    },
+    {
+      "path": "predecessors/inputs.json",
+      "sha256": "10f1b1cd8df483d49e30974c07595a0fbe57d13e560d3e99a5b88238bccadadc",
+      "git_blob": "677dcce439741d520152957b3f292fe157779172"
+    },
+    {
+      "path": "predecessors/low_kernel.py",
+      "sha256": "3e572e431237c385fd898b842048f77524a8d4404cc6b56099728e9cd1a51d41",
+      "git_blob": "6f8f521eabed4fe6d2b53ad882d10ddfddbcd4c5"
+    },
+    {
+      "path": "predecessors/marginal.py",
+      "sha256": "33632439dc6b0ce0b8695af399a690d217bafd7f64abbf83ed4a4077d2498ff6",
+      "git_blob": "7800489dab8a933e16470af21b893b068b612e4c"
+    },
+    {
+      "path": "predecessors/rounding-budget.json",
+      "sha256": "53c83802d2af4f4b4af2a1d30d185f64b829c2f263225451cdf27ef8bbfe03e2",
+      "git_blob": "356cc9336f99c5b21de5031c59f451ecdc477aa7"
+    },
+    {
+      "path": "predecessors/run_marginals.py",
+      "sha256": "2661009527f4a13b7069f27a5b655f2f661198b2df1a5851f01be678239ebb68",
+      "git_blob": "9fa887c04fbe5dff48df38f7855827deb4092362"
+    },
+    {
+      "path": "predecessors/source-row.json",
+      "sha256": "22425b898aa326e4a2bd9d46d6d4363d2d8e8930586c3a5de92138b94f4b4158",
+      "git_blob": "d665dcbf9c465e96533dbbb97013f21784310e68"
+    },
+    {
+      "path": "proof.md",
+      "sha256": "fdcb14463fa28c03992e3c1bbe31b6a14ccef05752615ecd8cf86ad8158af939",
+      "git_blob": "c6fb1ec3657223c5e1ff00921b9f3bb8e938d9f0"
+    },
+    {
+      "path": "result.json",
+      "sha256": "aa07fc290417020122936a600e64d19fe7a63fd7c42bb7d5d456418a8c746f38",
+      "git_blob": "19a6c00c9308fe50efd9c14a7691059889bfe1b2"
+    },
+    {
+      "path": "run_pipeline.py",
+      "sha256": "d5268dd4c528647b378afc9a13ac19b8233194a6d2cb5ee14af4a00951491bc4",
+      "git_blob": "b80fc3277083f3aaaaa1cc37a8dfd978736b3b8d"
+    },
+    {
+      "path": "source-lock.json",
+      "sha256": "94516e07cfc7c4b997984f69ecc3993632ac2974eeb98b606be4de1eb1194f83",
+      "git_blob": "349f509f317e007380d499e59fffabb5b17118d5"
+    },
+    {
+      "path": "test_contraction.py",
+      "sha256": "ba3342f91757e92cab3fb0fee829dd6bf4d85f839c18b54e6c432634f6b18741",
+      "git_blob": "b20e79f40745e15980c1ecabb8873143a68677cb"
+    },
+    {
+      "path": "verification-ticket.md",
+      "sha256": "f1e4a029b4100abe313fa295b26492ebeb9397ef6368425f8382cf435ba1a752",
+      "git_blob": "209421550074467443a24678b568b91862b3ef89"
+    }
+  ],
+  "bulk_local_only": [
+    {
+      "path": "predecessors/seed-enclosures.bin.zlib",
+      "sha256": "7d4ca048cd34981def5e16c8d0ce0af366b8b2154a7b9c53aa1932ba6aed7a1c"
+    },
+    {
+      "path": "predecessors/arrays/generation.json",
+      "sha256": "6806eb35348db6792d3ebdcab5a0d0159123790aef013c418242e4ac7002e115"
+    },
+    {
+      "path": "kernel/kernel.json",
+      "sha256": "68272f9e426b9de57da6b81d410285ec148f7fb6fe074dd59bf549c43cc83a29"
+    },
+    {
+      "path": "contraction/result.json",
+      "sha256": "4936a544045b5e3ae0bc7695979caf4274239e5432a0b3cdced421484235c612"
+    },
+    {
+      "path": "dependency-proofs/low-kernel-proof.md",
+      "sha256": "da07c2dfbbc9bf64d400ea3c1ae5e93af0365e6d4efc9cd78ed60141eed9c69d"
+    },
+    {
+      "path": "dependency-proofs/marginal-proof.md",
+      "sha256": "add7c88b6cf379b0725b62e6c3cbe83a14ef56e0853a0b663262f03721b9cdf6"
+    },
+    {
+      "path": "execution/replay-comparison.json",
+      "sha256": "62289ff0a54915ddc343d6686bc5dc33efefdae1f6bb1b1b39b9b05bcb2837e3"
+    }
+  ],
+  "bulk_closure": "generation.json hashes all36 marginal data columns; kernel.json hashes all8 positive arrays; full archive manifest hashes every included file. Numerical files are not implicitly assumed present on GitHub."
+}

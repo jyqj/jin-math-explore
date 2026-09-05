@@ -1,0 +1,132 @@
+{
+  "format": "tp-first-row-certificate-summary/v1",
+  "attempt": "A-TP-186-CONTRACTION-0005",
+  "row": "G0:R00",
+  "solver_verdict": "PASS_FOR_TWO_FIXED_INPUTS_CONDITIONAL_ON_STATED_DOMINATION",
+  "evidence_grade": "proof_candidate_with_exact_finite_certificate",
+  "unit": "2960664727/125000000000000000000000000000000000000000",
+  "I0": "23685317816/1000000000000000000000000",
+  "root": {
+    "target_units": 11,
+    "certified_upper_units": "10396041/1000000",
+    "majorant_interval_units": [
+      "10396040185127013394944167/1000000000000000000000000",
+      "1299505023140876674368021/125000000000000000000000"
+    ],
+    "physical_upper": "30779191889145807/125000000000000000000000000000000000000000000000",
+    "passed": true
+  },
+  "face": {
+    "target_units": 10,
+    "certified_upper_units": "502641/200000",
+    "approximate_majorant_interval_units": [
+      "2513204435147038902084157/1000000000000000000000000",
+      "1256602217573519451042079/500000000000000000000000"
+    ],
+    "after_marginal_error_upper_units": "100528177405881556083367/40000000000000000000000",
+    "physical_upper": "1488151479044007/25000000000000000000000000000000000000000000000",
+    "marginal_energy_error_upper": "50240764582180625494032186444917958288522335759346034308939031409840490573190703668124343435544187080196887205/69109321841441502675321497600793240099331055090210444359046064144087119547927921501311255173547766223851220006190159877439015888154220620897152614018043809075522613677585497849048546148352",
+    "passed": true
+  },
+  "coverage": {
+    "radial_grid_size": 98264,
+    "source_radius_first": 94919,
+    "source_radius_last": 95638,
+    "square_signatures": 53,
+    "block_sum_tuples": 77,
+    "computed_block_sum_tuples": 77,
+    "unmarked_counts": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42
+    ],
+    "marked_effective_max_unmarked_count": 41,
+    "tail_majorant_approximation_used": false,
+    "marginal_prefixes": [
+      2,
+      3
+    ],
+    "both_witness_channels_included": true,
+    "common_fixed_positive_measure": true,
+    "complete_integral_targets_in_this_attempt": 2,
+    "total_fixed_scalar_inputs": 152
+  },
+  "arithmetic": {
+    "fixed_bits": 320,
+    "backend": "GMP",
+    "version": "6.3.0",
+    "finite_tests_normal": true,
+    "finite_tests_optimized": true,
+    "full_replay_complete": true,
+    "full_replay_equal": true,
+    "all_77_contribution_totals_recomputed": true,
+    "source_only_predecessor_regeneration": "PASS"
+  },
+  "full_transcript": {
+    "path": "contraction/result.json",
+    "sha256": "4936a544045b5e3ae0bc7695979caf4274239e5432a0b3cdced421484235c612",
+    "location": "downloadable full artifact; regenerate with run_pipeline.py"
+  },
+  "kernel_record": {
+    "path": "kernel/kernel.json",
+    "sha256": "68272f9e426b9de57da6b81d410285ec148f7fb6fe074dd59bf549c43cc83a29",
+    "location": "downloadable full artifact; arrays individually bound in this record"
+  },
+  "assumptions": [
+    "Physical Poisson/Dickman density, cap restriction and Mecke identities at the pinned source.",
+    "The frozen first-row source geometry and continuous-to-cell domination proved in the supplied candidate documents.",
+    "The predecessor marginal enclosure and its L2 error budget have the stated semantics; not merely matching JSON keys.",
+    "Correct arbitrary-precision arithmetic in Python and GMP and a correct C++ compiler/ABI."
+  ],
+  "cannot_imply": [
+    "Independent mathematical verification has occurred.",
+    "The other 150 fixed numerical inequalities have been certified.",
+    "The original Lean or FLINT program was executed or all three Lean inputs discharged.",
+    "A new prime-gap upper bound or the twin-prime conjecture has been proved.",
+    "A computed lower endpoint is a lower bound for the original physical integral."
+  ],
+  "independent_verification": false,
+  "full_152_certified": false,
+  "original_lean_build": false,
+  "original_flint_run": false
+}
