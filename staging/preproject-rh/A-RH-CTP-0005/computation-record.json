@@ -1,0 +1,132 @@
+{
+  "record_version": 1,
+  "execution_profile": "reproducible",
+  "status": "completed",
+  "task_file": {
+    "path": "README.md",
+    "sha256": "13d8192092241ebd75bb15b22b6af3a5df6a6a6aa816d6239f8a57bdf82a3f3e"
+  },
+  "task": {
+    "question": "Check centered two-scale transfer, sharp Toeplitz compression, supplied-matching displacement stability, taper losses, and the projection remainder.",
+    "domain": "Finite Hermitian Fourier/Toeplitz matrices and finite-dimensional Hilbert spaces.",
+    "assumptions": [
+      "All analytic theorem assumptions are explicit in README; tests use bounded samples.",
+      "Parent is a frozen proof candidate, not independently verified."
+    ],
+    "deliverables": [
+      "README.md",
+      "check_centered_transfer.py",
+      "validation.json",
+      "source-update.md",
+      "computation-record.json",
+      "checkpoint.json",
+      "computation-handoff.json"
+    ]
+  },
+  "backend": {
+    "name": "Python",
+    "version": "3.13.5",
+    "interface": "local bounded foreground subprocess",
+    "libraries": {
+      "python": "3.13.5",
+      "numpy": "2.3.5",
+      "mpmath": "1.3.0"
+    }
+  },
+  "backend_decision": {
+    "selected": "Python/NumPy/mpmath with fractions.Fraction",
+    "selection_reason": "Reproducible small finite linear algebra; exact rational identities require no external CAS.",
+    "candidates": [
+      {
+        "name": "Mathematica",
+        "suitable_in_principle": true,
+        "readiness": "wolframscript, WolframKernel and math not on PATH; no other installation asserted absent"
+      },
+      {
+        "name": "SageMath",
+        "suitable_in_principle": true,
+        "readiness": "sage not on PATH"
+      },
+      {
+        "name": "Python",
+        "readiness": "Executable/imports live checked; frozen script executed successfully"
+      }
+    ],
+    "fallback_reason": "not-required; selected backend completed",
+    "inventory_boundary": "Direct selected-backend check; no persisted bundled inventory snapshot. Container direct GitHub download failed DNS; connector reads/writes remained available."
+  },
+  "precision": {
+    "mode": "exact rational subchecks, binary64 matrices, 70-decimal scalar evaluation",
+    "seed": 2026090505,
+    "samples": 160,
+    "rounding": "IEEE binary64",
+    "matrix_acceptance": "Explicit scale-aware tolerances in code; not interval certification"
+  },
+  "execution": {
+    "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python check_centered_transfer.py --samples 160 --output validation.json",
+    "exit_status": 0,
+    "input": "Seed, periods, depth/displacement ranges and rational checks frozen in code and validation.json",
+    "rerun_reason": "The final primary run includes newly added taper-normalization and projection-remainder tests; earlier output was superseded before freeze."
+  },
+  "code_artifacts": [
+    {
+      "path": "check_centered_transfer.py",
+      "sha256": "29d621f99acb253f72ed2f2637f4641f275dab0d4a894201b0dd2a69cf50086a"
+    }
+  ],
+  "result_artifacts": [
+    {
+      "path": "validation.json",
+      "sha256": "8413e7a2beb482de2b0e3331d7dd9479fa6624cbbb280c91c77e753b12461340"
+    }
+  ],
+  "result_summary": {
+    "all_assertions": "PASS",
+    "conditional_model_simple_floor": "0.6680655478851949952630394580370367503195179786476206461663309093790291",
+    "gain_ratio_to_parent": "7.508777378880968279677594244343103758908132662770683417455483806120697",
+    "metrics": {
+      "max_defect_residual": 1.0913936421275139e-11,
+      "max_tangent_symbol_residual": 5.773159728050814e-15,
+      "min_coercivity_slack": -2.4158453015843406e-13,
+      "max_toeplitz_contraction_ratio": 0.8703858280397844,
+      "max_displacement_ratio": 0.33294766349575483,
+      "max_taper_loss_ratio": 0.21200580599461524,
+      "max_normalized_taper_ratio": 0.3868937947947045,
+      "max_taper_center_residual": 6.439293542825908e-15,
+      "max_projection_identity_residual": 1.1368683772161603e-13,
+      "min_perturbed_budget_slack": 0.5927985380717015,
+      "accepted_zero_error_models": 41
+    },
+    "scope_guards": {
+      "alpha_squared_contraction_false": {
+        "observed_ratio": 0.7474747474747475,
+        "false_bound": 0.5625
+      },
+      "small_edge_count_without_toeplitz_false": {
+        "lost_fraction": 1.0,
+        "false_bound": 0.07692307692307693
+      }
+    }
+  },
+  "verification": {
+    "evidence_level": "numerical-evidence",
+    "methods": [
+      "Exact rational coefficient and projection-identity subchecks.",
+      "Direct finite matrices compared with their Fourier formulas.",
+      "Seeded inequality regressions and explicit stronger-claim counterexamples.",
+      "Local relative-path/JSON and SHA-256 checks."
+    ],
+    "exact_subchecks": "Do not certify the universal analytic theorem or actual-zeta assumptions."
+  },
+  "limitations": [
+    "Solver derivations and self-checks, not an independent-verifier receipt or Lean proof.",
+    "Seeded floating-point tests are not exhaustive or interval-certified; rational subchecks have only their recorded scope.",
+    "The gain is conditional on the exact finite mean-one 0/1/2 model, pair multiplicity one, depths <=2*pi, P divisible by four, and both ideal moment bounds.",
+    "No lattice matching, high-depth leakage bound, collision/multiplicity control, or full source normalization is proved for actual zeta zeros.",
+    "Displacement stability assumes a supplied matching and bounded normalized depth; the constant grows exponentially with the depth cap.",
+    "Taper edge control requires Toeplitz structure and a proper support separated from the full-support endpoint.",
+    "The lattice-free projection Q has no proved occupancy or arithmetic compression bound.",
+    "No full repository CI, bundled inventory/record script, or upstream formal build was executed; package-local structure and hashes are checked separately.",
+    "No unconditional zeta-zero proportion improvement, RH proof/refutation, or literature-level novelty is claimed."
+  ]
+}

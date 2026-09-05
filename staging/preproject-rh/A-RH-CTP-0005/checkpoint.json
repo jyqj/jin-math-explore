@@ -1,0 +1,178 @@
+{
+  "schema": "jin-math-preproject-checkpoint/v1",
+  "checkpoint_id": "CP-RH-CTP-CENTERED-TRANSFER-01",
+  "attempt_id": "A-RH-CTP-0005",
+  "parent_attempt": "A-RH-WTP-0004",
+  "issue": 45,
+  "status": "solver_proof_candidate",
+  "frozen": true,
+  "freeze_policy": "These files become immutable at the publishing commit. The commit SHA is recorded externally in Issue #45 to avoid self-reference.",
+  "actor": {
+    "kind": "agent",
+    "id": "openai-gpt-6-pro",
+    "run_id": "run-20260905-rh-centered-transfer-05",
+    "role": "solver"
+  },
+  "branch": "attempt/preproject-rh/centered-transfer-05",
+  "observed_parent_head": "340d6c4a3f2101d2cd08834ee3fe9cc9aed8f202",
+  "observed_main_head": "70484b065fc3b6a64f06955a5f9c895531750891",
+  "source_dependencies": [
+    {
+      "identifier": "arXiv:2609.02882v1",
+      "date": "2026-09-02",
+      "url": "https://arxiv.org/html/2609.02882v1",
+      "scope": "Proposition 2.1 motivates an elementary remainder extraction; Sections 3 and Remark 3.4 are source context only.",
+      "formal_replay": false
+    }
+  ],
+  "parent_artifact": {
+    "repository_path": "staging/preproject-rh/A-RH-WTP-0004/README.md",
+    "sha256": "0214039637db3f8bcbfa6ef4bc5ad2e6b5a059bb99b75853ce2a03499886c12b"
+  },
+  "artifacts": [
+    "README.md",
+    "check_centered_transfer.py",
+    "validation.json",
+    "source-update.md",
+    "computation-record.json",
+    "checkpoint.json",
+    "computation-handoff.json"
+  ],
+  "artifact_hashes": [
+    {
+      "path": "README.md",
+      "sha256": "13d8192092241ebd75bb15b22b6af3a5df6a6a6aa816d6239f8a57bdf82a3f3e"
+    },
+    {
+      "path": "check_centered_transfer.py",
+      "sha256": "29d621f99acb253f72ed2f2637f4641f275dab0d4a894201b0dd2a69cf50086a"
+    },
+    {
+      "path": "validation.json",
+      "sha256": "8413e7a2beb482de2b0e3331d7dd9479fa6624cbbb280c91c77e753b12461340"
+    },
+    {
+      "path": "source-update.md",
+      "sha256": "2fc886d933e7b08dcef7d1ce1be65bbae5c08ee3f25666ad9b1f60756aa30258"
+    },
+    {
+      "path": "computation-record.json",
+      "sha256": "709e2c409c76903b99b07a54234bc2db385059a3bbe495aaea2f2dd741e20b6e"
+    },
+    {
+      "path": "computation-handoff.json",
+      "sha256": "1cb9c89f31a02db026daa10c5bd36f79629ef07d3277bd3b1a26a40bf951922b"
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "C-CTP-SHARP-TOEPLITZ",
+      "statement": "For every zero-diagonal Hermitian P-by-P Toeplitz T and d consecutive rows, ||RTR*||_F^2 <= ((d-1)/(P-1))||T||_F^2; sharp in that class.",
+      "evidence_grade": "proof_candidate",
+      "evidence": [
+        "README.md#2-sharp-zero-diagonal-toeplitz-subcompression"
+      ],
+      "quantifier_scope": "Only the domains, hypotheses and explicit equations in the referenced section; not actual zeta-zero configurations.",
+      "novelty_boundary": "No literature-wide novelty claim.",
+      "independent_verifier_receipt": null
+    },
+    {
+      "claim_id": "C-CTP-CENTERED-IDEAL-GAIN",
+      "statement": "Under the exact moderate-depth mean-one finite model and both ideal moment budgets, simple density >=2/3+(sqrt(106)-9)^2/1200.",
+      "evidence_grade": "proof_candidate",
+      "evidence": [
+        "README.md#3-center-first-then-compare-a-larger-explicit-ideal-gain"
+      ],
+      "quantifier_scope": "Only the domains, hypotheses and explicit equations in the referenced section; not actual zeta-zero configurations.",
+      "novelty_boundary": "No literature-wide novelty claim.",
+      "independent_verifier_receipt": null
+    },
+    {
+      "claim_id": "C-CTP-NEAR-LATTICE-STABILITY",
+      "statement": "Given one orbit per matched residue, m<=2, |e_p|<=h and depths<=A, normalized operator discrepancy <=sqrt(2)*pi*exp(A)*(exp(pi*h)+1)*sqrt(sum m_p e_p^2/P).",
+      "evidence_grade": "proof_candidate",
+      "evidence": [
+        "README.md#4-dimension-independent-stability-of-a-supplied-near-lattice-matching"
+      ],
+      "quantifier_scope": "Only the domains, hypotheses and explicit equations in the referenced section; not actual zeta-zero configurations.",
+      "novelty_boundary": "No literature-wide novelty claim.",
+      "independent_verifier_receipt": null
+    },
+    {
+      "claim_id": "C-CTP-TAPER-LEDGER",
+      "statement": "For zero-diagonal Hermitian Toeplitz X, a d<P row section and at most r tapered rows have squared unnormalized discrepancy <=2r/(P-d+1)||X||_F^2; normalized and diagonal corrections are (15)-(16).",
+      "evidence_grade": "proof_candidate",
+      "evidence": [
+        "README.md#5-taper-loss-when-edge-size-really-does-control-energy"
+      ],
+      "quantifier_scope": "Only the domains, hypotheses and explicit equations in the referenced section; not actual zeta-zero configurations.",
+      "novelty_boundary": "No literature-wide novelty claim.",
+      "independent_verifier_receipt": null
+    },
+    {
+      "claim_id": "C-CTP-PERTURBED-BUDGET",
+      "statement": "Equation (17) propagates a given matching discrepancy, two moment errors and explicit variable-high-depth charge, retaining square-root domains.",
+      "evidence_grade": "proof_candidate",
+      "evidence": [
+        "README.md#6-perturbed-budget-with-a-place-for-every-error"
+      ],
+      "quantifier_scope": "Only the domains, hypotheses and explicit equations in the referenced section; not actual zeta-zero configurations.",
+      "novelty_boundary": "No literature-wide novelty claim.",
+      "independent_verifier_receipt": null
+    },
+    {
+      "claim_id": "C-CTP-PROJECTION-REMAINDER",
+      "statement": "For H=U+E+F orthogonal and self-adjoint A with tr(P_U A)>=2 dim U, tr(P_F A)<=0 and n>=dim E, equation (18) is an exact nonnegative remainder decomposition.",
+      "evidence_grade": "proof_candidate",
+      "evidence": [
+        "README.md#7-a-lattice-free-projection-remainder-suggested-by-the-new-source"
+      ],
+      "quantifier_scope": "Only the domains, hypotheses and explicit equations in the referenced section; not actual zeta-zero configurations.",
+      "novelty_boundary": "No literature-wide novelty claim.",
+      "independent_verifier_receipt": null
+    },
+    {
+      "claim_id": "C-CTP-SCOPE-COUNTEREXAMPLES",
+      "statement": "First-diagonal Toeplitz matrices refute an alpha^2 contraction factor; an edge-localized rank-two Hermitian matrix refutes edge-count control without Toeplitz structure.",
+      "evidence_grade": "proof_candidate",
+      "evidence": [
+        "check_centered_transfer.py"
+      ],
+      "quantifier_scope": "Only the domains, hypotheses and explicit equations in the referenced section; not actual zeta-zero configurations.",
+      "novelty_boundary": "No literature-wide novelty claim.",
+      "independent_verifier_receipt": null
+    }
+  ],
+  "computation_handoff": {
+    "path": "computation-handoff.json",
+    "sha256": "1cb9c89f31a02db026daa10c5bd36f79629ef07d3277bd3b1a26a40bf951922b"
+  },
+  "validation": {
+    "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python check_centered_transfer.py --samples 160 --output validation.json",
+    "result": "PASS program assertions; see frozen validation.json",
+    "evidence_grade": "numerical_evidence",
+    "repository_ci_run": false,
+    "lean_build_run": false,
+    "isolated_verifier_run": false
+  },
+  "current_frontier": [
+    "Extract source-compatible local matchings with a weighted mean-square displacement bound, rather than assume a global fixed lattice.",
+    "Bound variable-high-depth positive leakage and higher multiplicity/collision errors.",
+    "Match source taper/resampling normalization to the centered finite operator ledger.",
+    "For the lattice-free projection route, derive an arithmetic or realizability bound for compressions of 2P_U+P_E.",
+    "Audit the frozen candidate independently before promoting mathematical authority."
+  ],
+  "cannot_imply": [
+    "Solver derivations and self-checks, not an independent-verifier receipt or Lean proof.",
+    "Seeded floating-point tests are not exhaustive or interval-certified; rational subchecks have only their recorded scope.",
+    "The gain is conditional on the exact finite mean-one 0/1/2 model, pair multiplicity one, depths <=2*pi, P divisible by four, and both ideal moment bounds.",
+    "No lattice matching, high-depth leakage bound, collision/multiplicity control, or full source normalization is proved for actual zeta zeros.",
+    "Displacement stability assumes a supplied matching and bounded normalized depth; the constant grows exponentially with the depth cap.",
+    "Taper edge control requires Toeplitz structure and a proper support separated from the full-support endpoint.",
+    "The lattice-free projection Q has no proved occupancy or arithmetic compression bound.",
+    "No full repository CI, bundled inventory/record script, or upstream formal build was executed; package-local structure and hashes are checked separately.",
+    "No unconditional zeta-zero proportion improvement, RH proof/refutation, or literature-level novelty is claimed."
+  ],
+  "independent_verifier_required": true,
+  "independent_verifier_receipt": null
+}

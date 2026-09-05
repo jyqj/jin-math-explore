@@ -1,0 +1,48 @@
+{
+  "backend": {
+    "python": "3.13.5",
+    "numpy": "2.3.5",
+    "mpmath": "1.3.0"
+  },
+  "exact_and_scalar": {
+    "status": "PASS",
+    "rational_scope": "all p=2..99,d=1..p,n=1..d-1 plus analytic proof in README",
+    "epsilon": "0.001398881218528328596372791370370083652851311980953979499664242712362401",
+    "simple_floor": "0.6680655478851949952630394580370367503195179786476206461663309093790291",
+    "gain_ratio_to_parent": "7.508777378880968279677594244343103758908132662770683417455483806120697",
+    "rational_epsilon_lower": "699/500000",
+    "scalar_residual": "5.659799424266695229693199556804869862926581998836961368489134306209688e-73"
+  },
+  "finite_regression": {
+    "status": "PASS",
+    "samples": 160,
+    "seed": 2026090505,
+    "periods": "multiples of 4 in [8,64]",
+    "depths": "site dependent in [0,2*pi]",
+    "displacements": "[-0.08,0.08]",
+    "metrics": {
+      "max_defect_residual": 1.0913936421275139e-11,
+      "max_tangent_symbol_residual": 5.773159728050814e-15,
+      "min_coercivity_slack": -2.4158453015843406e-13,
+      "max_toeplitz_contraction_ratio": 0.8703858280397844,
+      "max_displacement_ratio": 0.33294766349575483,
+      "max_taper_loss_ratio": 0.21200580599461524,
+      "max_normalized_taper_ratio": 0.3868937947947045,
+      "max_taper_center_residual": 6.439293542825908e-15,
+      "max_projection_identity_residual": 1.1368683772161603e-13,
+      "min_perturbed_budget_slack": 0.5927985380717015,
+      "accepted_zero_error_models": 41
+    },
+    "scope_guards": {
+      "alpha_squared_contraction_false": {
+        "observed_ratio": 0.7474747474747475,
+        "false_bound": 0.5625
+      },
+      "small_edge_count_without_toeplitz_false": {
+        "lost_fraction": 1.0,
+        "false_bound": 0.07692307692307693
+      }
+    }
+  },
+  "boundary": "Exact rational subchecks and seeded floating-point finite tests. Analytic lemmas are proof candidates, not independently verified. No zeta-zero bound or full source transfer is asserted."
+}

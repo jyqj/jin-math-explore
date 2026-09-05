@@ -1,0 +1,55 @@
+{
+  "schema": "jin-math-computation-handoff/v1",
+  "problem_id": "preproject-rh",
+  "window_id": "pre-genesis-sequential",
+  "attempt_id": "A-RH-CTP-0005",
+  "claim_id": null,
+  "objective_sha256": "13d8192092241ebd75bb15b22b6af3a5df6a6a6aa816d6239f8a57bdf82a3f3e",
+  "question": "Check centered two-scale transfer, sharp Toeplitz compression, supplied-matching displacement stability, taper losses, and the projection remainder.",
+  "domain": "Finite Hermitian Fourier/Toeplitz matrices and finite-dimensional Hilbert spaces.",
+  "assumptions": [
+    "All analytic theorem assumptions are explicit in README; tests use bounded samples.",
+    "Parent is a frozen proof candidate, not independently verified."
+  ],
+  "requested_evidence": "numerical_evidence",
+  "backend": {
+    "name": "Python/NumPy/mpmath/Fraction",
+    "version": "3.13.5",
+    "interface": "local foreground subprocess",
+    "inventory_snapshot_sha256": null
+  },
+  "exact_input": {
+    "seed": 2026090505,
+    "samples": 160,
+    "scope": "objective_sha256 pins the bounded task README, NOT a canonical v13 Project objective."
+  },
+  "reproduction_command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python check_centered_transfer.py --samples 160 --output validation.json",
+  "code_artifacts": [
+    {
+      "path": "check_centered_transfer.py",
+      "sha256": "29d621f99acb253f72ed2f2637f4641f275dab0d4a894201b0dd2a69cf50086a"
+    }
+  ],
+  "result_artifacts": [
+    {
+      "path": "validation.json",
+      "sha256": "8413e7a2beb482de2b0e3331d7dd9479fa6624cbbb280c91c77e753b12461340"
+    }
+  ],
+  "computation_record": {
+    "path": "computation-record.json",
+    "sha256": "709e2c409c76903b99b07a54234bc2db385059a3bbe495aaea2f2dd741e20b6e"
+  },
+  "evidence_grade": "numerical_evidence",
+  "cannot_imply": [
+    "Solver derivations and self-checks, not an independent-verifier receipt or Lean proof.",
+    "Seeded floating-point tests are not exhaustive or interval-certified; rational subchecks have only their recorded scope.",
+    "The gain is conditional on the exact finite mean-one 0/1/2 model, pair multiplicity one, depths <=2*pi, P divisible by four, and both ideal moment bounds.",
+    "No lattice matching, high-depth leakage bound, collision/multiplicity control, or full source normalization is proved for actual zeta zeros.",
+    "Displacement stability assumes a supplied matching and bounded normalized depth; the constant grows exponentially with the depth cap.",
+    "Taper edge control requires Toeplitz structure and a proper support separated from the full-support endpoint.",
+    "The lattice-free projection Q has no proved occupancy or arithmetic compression bound.",
+    "No full repository CI, bundled inventory/record script, or upstream formal build was executed; package-local structure and hashes are checked separately.",
+    "No unconditional zeta-zero proportion improvement, RH proof/refutation, or literature-level novelty is claimed."
+  ]
+}
