@@ -1,0 +1,44 @@
+{
+  "format": "rh-hole-0013-checkpoint/v1",
+  "attempt": "A-RH-HOLE-0013",
+  "issue": 79,
+  "actor": {
+    "kind": "agent",
+    "id": "openai-chatgpt",
+    "run_id": "run-20260907-rh-hole-depth-13",
+    "role": "solver"
+  },
+  "git_base_sha": "39002c5a6af8c7b7f093589e6a76cfd218fcbb99",
+  "git_base_tree_sha": "d6ac23dc843e26ba123ae167228e3a0c1ff6b750",
+  "mathematical_parent": {
+    "commit": "e1042ef83ff3a468dc0faf2d82d19e07b1e5be87",
+    "path": "docs/problem-baselines/riemann-hypothesis/rounds/A-RH-LOC-0012/proof.md",
+    "git_blob_sha1": "a39aa5e3b2d146d50b33d27dd21d7a711499d7b0",
+    "evidence_grade": "proof_candidate",
+    "verifier_receipt": null
+  },
+  "branch": "program/i-0079/rh-hole-depth-13",
+  "archive_status": "reference_only",
+  "mathematical_status": "proof_candidate",
+  "independent_verifier_receipt": null,
+  "sha256": {
+    "README.md": "678104aa72287c43bfddd72109b2e33958d885eb078bd855d196804e8cc74c63",
+    "proof.md": "5009d7cece822f8506b6e946df6acaa1366804ab07cb032d1fd8757d40602270",
+    "check_hole_depth.py": "c6bb74ec45b4d1106ef605fc2143e4ca0e02482443a42271e0927dc754651d88",
+    "validation.json": "012dbba6247b7bc5e1ab0b2457fbac8ece24fa379d7f879f223e68c538c6a383",
+    "claims.json": "addcb7659b11f89ffd3ecbbdcd031057ffa04e5ca5b0f69055687562d004c478",
+    "source-scope.md": "ff571de00a55ff579275eb8383939f99532e80a92e281cdd5740e8983b69ed67",
+    "computation-record.json": "864fe9b267896ec067deb5ebefce1c71c094762b13e821bc6def894354f5627b",
+    "computation-handoff.json": "627adc844dee9f45ba9b334e1e3bb0232a1d518472a5c244717814842b615f4d"
+  },
+  "hash_boundary": "Eight files are covered. This manifest excludes itself; the PR binds its Git blob and final commit.",
+  "scope": {
+    "only_additions": true,
+    "modifies_predecessors": false,
+    "advances_authority": false,
+    "full_repository_local_tests": false,
+    "upstream_lean_build": false,
+    "remote_ci": "Observe separately in the PR; not predicted by this frozen file."
+  },
+  "next_attempt": "A-RH-DISP-0014: signed depth-covariance control for depth-incoherent anchor-free blocks, or a genuine two-budget escape sequence."
+}
