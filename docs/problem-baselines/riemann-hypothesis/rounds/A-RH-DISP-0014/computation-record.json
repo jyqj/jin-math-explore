@@ -1,0 +1,174 @@
+{
+  "record_version": 1,
+  "execution_profile": "reproducible",
+  "status": "completed",
+  "task_file": {
+    "path": "README.md",
+    "sha256": "f44b8a6e885637a43412e938869156114a93d20a28d2b8d751a5536ddb262851"
+  },
+  "task": {
+    "question": "Extract local depth covariance and classify exact saturated anchor-free periodic models.",
+    "domain": "Finite signed Fourier matrices and periodic cell models, not actual zeta zeros.",
+    "assumptions": [
+      "Generalized cell mean rho=sum m/Q is retained; only rho=1 matches the preceding whole-model normalization.",
+      "Quantitative covariance uses exact common-coset centers, or the explicitly supplied cell-preserving phase error; a=0 off pair sites.",
+      "The lower nonlinear constant requires kappa_A>0; combining with the signed defect uses A<=2*pi. A<=log 2 gives the rational bound.",
+      "Exact equality classification uses m in {0,2} and every occupied center in its own supplied cell, without a small-depth condition.",
+      "Local block length is fixed before taking sequence limits; no global uniform phase/depth coherence is inferred."
+    ],
+    "deliverables": [
+      "README.md",
+      "proof.md",
+      "check_depth_covariance.py",
+      "validation.json",
+      "claims.json",
+      "source-scope.md",
+      "computation-record.json",
+      "computation-handoff.json",
+      "checkpoint.json"
+    ]
+  },
+  "backend": {
+    "name": "Python/NumPy/mpmath/Fraction",
+    "version": "3.13.5",
+    "interface": "local foreground process",
+    "libraries": {
+      "mpmath": "1.3.0",
+      "numpy": "2.3.5",
+      "python": "3.13.5"
+    }
+  },
+  "backend_decision": {
+    "selected": "Python",
+    "reason": "Portable finite Fourier tests and exact Fraction/integer regressions; selected local imports live-checked.",
+    "local_readiness": "Python/NumPy/mpmath callable; sage and wolframscript absent from PATH.",
+    "inventory_snapshot_sha256": null,
+    "inventory_boundary": "Bundled inventory/record runner not executed; direct local readiness only, not a global MCP availability claim.",
+    "fallback": "Not required."
+  },
+  "precision": {
+    "mode": "Exact Python integers/Fraction; binary64 finite matrices; 80-digit mpmath scalar evaluations.",
+    "seed": 2026090714,
+    "samples": 120,
+    "acceptance": "Inequality slack >= -3e-9*(1+abs(left)+abs(right)); equality residual <=3e-9*(1+max(abs(right))).",
+    "certification": "No interval arithmetic and no formal proof."
+  },
+  "execution": {
+    "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python check_depth_covariance.py --samples 120 --output validation.json",
+    "actual_command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python /mnt/data/rh14/check_depth_covariance.py --samples 120 --output /mnt/data/rh14/validation.json",
+    "exit_status": 0,
+    "full_range_runs": 1,
+    "development_run": "An eight-sample run preceded the added phase-error and equality-short-floor checks. Final full run included both additions and passed. No failed program assertion occurred.",
+    "stdout": {
+      "ok": true,
+      "counts": {
+        "arbitrary_phase_models": 120,
+        "compositions": 504,
+        "equality_short_floors": 216,
+        "exact_equality_models": 72,
+        "grid_models": 126,
+        "local_variances": 630,
+        "phase_perturbations": 126,
+        "reciprocal_polynomials": 120,
+        "toeplitz_projection_cases": 24
+      },
+      "exact_checks": {
+        "cyclic_weight_recurrences": 8255,
+        "integer_toeplitz_displacements": 4324,
+        "rational_composition_bounds": 486,
+        "rational_constant_checks": 6,
+        "rational_newton_checks": 600,
+        "rational_symbol_bounds": 8255
+      },
+      "output": "/mnt/data/rh14/validation.json"
+    },
+    "no_background_job": true
+  },
+  "code_artifacts": [
+    {
+      "path": "check_depth_covariance.py",
+      "sha256": "c3d287fd439fe9ccc670cf9230ab19f99db16567d8ffd0a1110e9331ad645c39"
+    }
+  ],
+  "result_artifacts": [
+    {
+      "path": "validation.json",
+      "sha256": "2a7aca220858284a1b8cc9e362d6d28e4d8d9045cf43888702799d6a97cbad95"
+    }
+  ],
+  "result_summary": {
+    "all_assertions": "PASS",
+    "counts": {
+      "arbitrary_phase_models": 120,
+      "compositions": 504,
+      "equality_short_floors": 216,
+      "exact_equality_models": 72,
+      "grid_models": 126,
+      "local_variances": 630,
+      "phase_perturbations": 126,
+      "reciprocal_polynomials": 120,
+      "toeplitz_projection_cases": 24
+    },
+    "exact_check_total": 21926,
+    "maximum_residuals": {
+      "Dirichlet_spatial_Fourier": 2.220446049250313e-15,
+      "anchor_free_signed_slack": 4.618527782440651e-14,
+      "correction_matrix_spectrum": 3.9968028886505635e-15,
+      "equality_defect": 8.526512829121202e-14,
+      "equality_idempotence": 8.773642130070151e-15,
+      "off_grid_counterexample": 5.715913853343579e-16,
+      "projection_idempotence": 1.9839607564000647e-15,
+      "projection_rank_one_boundary": 7.211272167233882e-16,
+      "projection_twist": 2.5035563822814996e-15,
+      "self_inversive_coefficients": 1.0462425111247755e-13,
+      "signed_defect_identity": 7.549516567451064e-15,
+      "slow_wave_Dirichlet": 0,
+      "slow_wave_global_variance": 0
+    },
+    "float_boundary": "Tiny negative slacks are preserved in validation.json and are within declared tolerance.",
+    "exactness_boundary": "Rational/integer tests check recurrences, compositions, symbol bounds, Newton recurrences and scalar comparisons, not universal mathematical truth."
+  },
+  "verification": {
+    "evidence_level": "numerical-evidence",
+    "methods": [
+      "DFT versus csc-square spatial form; signed matrix versus coefficient expansion.",
+      "Constructed equality models, exact integer Toeplitz displacement and rational reciprocal-binomial Newton identities.",
+      "Local variance, phase-error, shallow-depth and slow-wave regressions."
+    ],
+    "limitations": [
+      "No proof of RH or unconditional zero-proportion improvement.",
+      "No independent-verifier receipt or formal proof; finite checks do not cover the universal quantifiers.",
+      "No actual-zeta cell representation, source weight/localization transfer or arithmetic moment budget.",
+      "No full-repository local tests, bundled inventory/record validation, upstream Lean build or isolated verifier.",
+      "Random models and constructed equality examples are not exhaustive classification tests.",
+      "The high-depth sign guard is numerical and not used as an analytic certificate.",
+      "Exact equality does not provide a period-uniform near-equality modulus."
+    ]
+  },
+  "artifacts": [
+    {
+      "path": "README.md",
+      "sha256": "f44b8a6e885637a43412e938869156114a93d20a28d2b8d751a5536ddb262851"
+    },
+    {
+      "path": "proof.md",
+      "sha256": "76967b81468b488faeb5d5b825672ef1e82af8529766938384b308ddee608b02"
+    },
+    {
+      "path": "check_depth_covariance.py",
+      "sha256": "c3d287fd439fe9ccc670cf9230ab19f99db16567d8ffd0a1110e9331ad645c39"
+    },
+    {
+      "path": "validation.json",
+      "sha256": "2a7aca220858284a1b8cc9e362d6d28e4d8d9045cf43888702799d6a97cbad95"
+    },
+    {
+      "path": "claims.json",
+      "sha256": "8f81b392315a6d033e01ab8fb006f864f4a6d7fc7fc2ddbe42ca25480c1175ef"
+    },
+    {
+      "path": "source-scope.md",
+      "sha256": "cf9bee7ee9d5946454fde0eaa41bd4b2735bb28f8f0c47c5839b8e424b7cd399"
+    }
+  ]
+}

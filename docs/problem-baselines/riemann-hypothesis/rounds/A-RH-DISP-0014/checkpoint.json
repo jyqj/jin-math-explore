@@ -1,0 +1,52 @@
+{
+  "format": "rh-disp-0014-checkpoint/v1",
+  "attempt": "A-RH-DISP-0014",
+  "issue": 86,
+  "date": "2026-09-07",
+  "actor": {
+    "kind": "agent",
+    "id": "openai-chatgpt",
+    "run_id": "run-20260907-rh-depth-covariance-14",
+    "role": "solver"
+  },
+  "git_base_sha": "39002c5a6af8c7b7f093589e6a76cfd218fcbb99",
+  "git_base_tree_sha": "d6ac23dc843e26ba123ae167228e3a0c1ff6b750",
+  "mathematical_parent": {
+    "commit": "d344b72c6c8f4e1d0057a295675f5b1637c5f5ce",
+    "path": "docs/problem-baselines/riemann-hypothesis/rounds/A-RH-HOLE-0013/proof.md",
+    "git_blob_sha1": "802f8f01fd3d1178064b43109aa59b28ce5b0401",
+    "status": "proof_candidate",
+    "receipt": null
+  },
+  "earlier_operator_input": {
+    "commit": "340d6c4a3f2101d2cd08834ee3fe9cc9aed8f202",
+    "path": "staging/preproject-rh/A-RH-WTP-0004/README.md",
+    "git_blob_sha1": "49c16fe11d858345ecfbe1f351f694bb41a4d116",
+    "status": "proof_candidate",
+    "receipt": null
+  },
+  "branch": "program/i-0086/rh-depth-covariance-14",
+  "archive_status": "reference_only",
+  "mathematical_status": "proof_candidate",
+  "independent_verifier_receipt": null,
+  "sha256": {
+    "README.md": "f44b8a6e885637a43412e938869156114a93d20a28d2b8d751a5536ddb262851",
+    "proof.md": "76967b81468b488faeb5d5b825672ef1e82af8529766938384b308ddee608b02",
+    "check_depth_covariance.py": "c3d287fd439fe9ccc670cf9230ab19f99db16567d8ffd0a1110e9331ad645c39",
+    "validation.json": "2a7aca220858284a1b8cc9e362d6d28e4d8d9045cf43888702799d6a97cbad95",
+    "claims.json": "8f81b392315a6d033e01ab8fb006f864f4a6d7fc7fc2ddbe42ca25480c1175ef",
+    "source-scope.md": "cf9bee7ee9d5946454fde0eaa41bd4b2735bb28f8f0c47c5839b8e424b7cd399",
+    "computation-record.json": "3223558d21401b84594abd7061ad259f443fdac1487ed6244d20987691b1bf45",
+    "computation-handoff.json": "05194dc80ac345653c4ceddd7d3bc39103c24439ca149133d46f1bd464352eec"
+  },
+  "hash_boundary": "Eight files covered; this manifest excludes itself. Its Git blob and commit are to be bound in the PR.",
+  "scope": {
+    "only_additions": true,
+    "modifies_predecessors": false,
+    "advances_authority": false,
+    "full_repository_local_tests": false,
+    "upstream_lean_build": false,
+    "remote_ci": "Observe separately in PR; not predicted here."
+  },
+  "next_attempt": "A-RH-HSTAB-0015: a period-uniform approximate saturated-hole floor, exactly stated in proof.md (28)."
+}
