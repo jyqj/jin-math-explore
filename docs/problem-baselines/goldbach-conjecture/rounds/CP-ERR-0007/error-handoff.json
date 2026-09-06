@@ -1,0 +1,99 @@
+{
+  "schema": "goldbach-error-handoff/v1",
+  "checkpoint": "CP-ERR-0007",
+  "findings": [
+    {
+      "id": "F-ERR-041",
+      "statement": "literal strict-support level1 makes every well-factorable weight zero",
+      "grade": "proof_candidate",
+      "locator": "section1"
+    },
+    {
+      "id": "F-ERR-042",
+      "statement": "N-uniform pre-sieving condition and legal D=R/P0",
+      "grade": "proof_candidate",
+      "locator": "(6)-(9)"
+    },
+    {
+      "id": "F-ERR-043",
+      "statement": "actual-mass rebasing with reciprocal-totient logarithmic cost",
+      "grade": "proof_candidate",
+      "locator": "(10), Proposition H"
+    },
+    {
+      "id": "F-ERR-044",
+      "statement": "explicit G8 sieve main term using imported constant154, no Cs or L_eta",
+      "grade": "conditional_proof_candidate",
+      "locator": "(11)-(12)"
+    },
+    {
+      "id": "F-ERR-045",
+      "statement": "six-term normalized contract, including the extra logarithmic loss",
+      "grade": "conditional_proof_candidate",
+      "locator": "(13)-(15)"
+    },
+    {
+      "id": "F-ERR-046",
+      "statement": "local parameter choice preserves .60962 without unknown Cs",
+      "grade": "conditional_proof_candidate",
+      "locator": "section8"
+    },
+    {
+      "id": "F-ERR-047",
+      "statement": "exact fixed-integral replay and finite interface regressions",
+      "grade": "bounded_and_exact_checks",
+      "locator": "section9; results.json"
+    }
+  ],
+  "dependency_delta": [
+    [
+      "S2:Theorem6",
+      "F-ERR-044"
+    ],
+    [
+      "U-M",
+      "F-ERR-042"
+    ],
+    [
+      "U-WBV:CP6-pending",
+      "F-ERR-044"
+    ],
+    [
+      "F-ERR-043",
+      "F-ERR-044"
+    ],
+    [
+      "F-ERR-044",
+      "F-ERR-045"
+    ],
+    [
+      "F-ERR-045",
+      "F-ERR-046"
+    ],
+    [
+      "F-ERR-047",
+      "F-ERR-046"
+    ]
+  ],
+  "old_gate_status": "original Iwaniec Cs audit unresolved; NOT relabeled PASS",
+  "local_gate_change": "G8 replacement does not require Cs or well-factorable finite-family L_eta",
+  "cost_of_replacement": [
+    "fixed primorial divisor P0 reduces level",
+    "actual-mass rebase adds one logarithm"
+  ],
+  "harmful_weighted_distribution_cost_before_dividing_four": "38*C_A*logN^(3-A)",
+  "parameter_order": [
+    "fix K",
+    "choose epsilon",
+    "fix w and P0",
+    "fix A>=4,B=A+8 and distribution constants",
+    "choose N"
+  ],
+  "global_ledger_modified": false,
+  "old_coefficient_modified": false,
+  "independent_review": "pending",
+  "global_status": "INCONCLUSIVE",
+  "background_verifier_started": false,
+  "next_task": "instantiate the pre-sieve/actual-mass replacement for G1/G2 lower bounds, including negative main-factor signs and fixed-level margin",
+  "factorable_branch_boundary": "G9/G11/G12 cannot replace signed weighted averages by absolute sums without new distribution input"
+}

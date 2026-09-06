@@ -1,0 +1,90 @@
+{
+  "schema": "goldbach-preproject-computation-handoff/v1",
+  "checkpoint": "CP-ERR-0007",
+  "profile": "reproducible",
+  "actor": {
+    "id": "openai-chatgpt",
+    "run_id": "run-20260907-goldbach-explicit-sieve-07",
+    "role": "solver"
+  },
+  "question": "Check finite identities of explicit pre-sieve/mass-rebasing transfer and exactly enclose the fixed g8 integral.",
+  "intent": "Exact integer/Fraction arithmetic. No empirical verification of asymptotic distribution or source sieve theorem.",
+  "domain": "96 scalar series terms; finite cases and exact rational grids defined in check_sieve.py.",
+  "backend": {
+    "name": "CPython standard-library fractions",
+    "version": "3.13.5",
+    "dependencies": []
+  },
+  "choice_reason": "Portable exact small certificates require no CAS, prime database or external computation. Python live check passed.",
+  "feasibility": "Bounded small finite loops, under a few seconds observed; no long job or background worker.",
+  "commands": [
+    {
+      "command": "python check_sieve.py --compute --output results.json",
+      "exit_code": 0,
+      "purpose": "first generation"
+    },
+    {
+      "command": "python check_sieve.py --compute",
+      "exit_code": 0,
+      "elapsed_seconds": 0.67,
+      "peak_rss_kib": 93992,
+      "purpose": "final full finite/scalar replay"
+    },
+    {
+      "command": "python -O check_sieve.py --compute",
+      "exit_code": 0,
+      "elapsed_seconds": 2.08,
+      "peak_rss_kib": 105568,
+      "purpose": "assert-disabled full replay; stdout identical"
+    },
+    {
+      "command": "cmp normal.stdout optimized.stdout",
+      "exit_code": 0,
+      "purpose": "actual byte comparison of captured stdout"
+    },
+    {
+      "command": "python check_sieve.py --self-test",
+      "exit_code": 0
+    },
+    {
+      "command": "python check_sieve.py --require-global",
+      "exit_code": 1,
+      "expected": true
+    }
+  ],
+  "code": {
+    "path": "check_sieve.py",
+    "sha256": "720d12b6c8ba8edd6fb84ae5b56c85174698f7108a947f6d8442147289b82bd8"
+  },
+  "output": {
+    "path": "results.json",
+    "sha256": "2999fbc3d7f4fb0d6be9d3a46e3ffc5cb51495ee0e592e1d5da6aa0f281c41bd"
+  },
+  "finite_output": {
+    "path": "validation.json",
+    "sha256": "ceeba052b662abf9e930aec98e866c35fcc16409c4865778970cca05746cd814"
+  },
+  "evidence_grade": [
+    "exact_check for the finite rational output",
+    "bounded_check for finite identity grids",
+    "analytic proof candidate for series tail and universal transfer"
+  ],
+  "not_executed": [
+    "original BJS table computation",
+    "original Iwaniec full proof audit",
+    "independent mathematical verifier",
+    "full local repository tests",
+    "bundled backend-inventory/Project computation-handoff validator",
+    "numerical N0 or enormous P0 enumeration"
+  ],
+  "cannot_imply": [
+    "source theorem independently verified",
+    "whole Goldbach proof",
+    "global twelve-term closure",
+    "effective numerical N0"
+  ],
+  "preproject_boundary": "This is a reference-only archival computation record, not a formal v13 Project transaction or an asserted schema-validator receipt.",
+  "final_hash_check": "Run --check after artifact-sha256.json is frozen; observed result recorded in PR handoff.",
+  "transport": "Direct git access failed DNS. GitHub connector used to persist; remote identities and CI observed separately.",
+  "preflight_correction": "A source label adjacent to an equation number parsed as a broken Markdown link; spacing was repaired before publication. No mathematical field changed."
+}

@@ -1,0 +1,95 @@
+{
+  "schema": "goldbach-cp7-results/v1",
+  "scalar": {
+    "degree": 96,
+    "center": "1299094305587499006275691272163914338378094961660365344930262248845493738999188635046733117165681548352/2131019755356848621746134052457606639961289270051235140100963907677891965904784271046366947987025962875",
+    "tail_radius": "1267650600228229401496703205376/935314759846983526695799828093164531940861799187",
+    "exact_lower": "1299094305587499003387478033212924260146905698600025909947710329820903770262386220227045813615082380352/2131019755356848621746134052457606639961289270051235140100963907677891965904784271046366947987025962875",
+    "exact_upper": "1299094305587499009163904511114904416609284224720704779912814167870083707735991049866420420716280716352/2131019755356848621746134052457606639961289270051235140100963907677891965904784271046366947987025962875",
+    "outward_decimal": [
+      "0.609611573201938690",
+      "0.609611573201938694"
+    ],
+    "retained_cap": "304805787/500000000",
+    "coefficient_changed": false
+  },
+  "finite_tests": {
+    "schema": "goldbach-cp7-finite-tests/v1",
+    "ok": true,
+    "counts": {
+      "level_one_and_convolution": 1024,
+      "totient_divisor_identities": 512,
+      "reciprocal_totient_bounds": 512,
+      "presieve_modulus_containment": 748,
+      "rebase_identities": 805,
+      "rebase_sum_bounds": 315,
+      "actual_switched_rebase": 22,
+      "actual_smooth_coprimality": 102,
+      "main_coefficient_inequalities": 243,
+      "parameter_budgets": 4
+    },
+    "actual_B_plus_cases": [
+      {
+        "N": 254,
+        "products": 2,
+        "mass": 8,
+        "moduli": 1
+      },
+      {
+        "N": 512,
+        "products": 1,
+        "mass": 4,
+        "moduli": 2
+      },
+      {
+        "N": 1000,
+        "products": 2,
+        "mass": 13,
+        "moduli": 2
+      },
+      {
+        "N": 2048,
+        "products": 2,
+        "mass": 12,
+        "moduli": 4
+      },
+      {
+        "N": 4032,
+        "products": 6,
+        "mass": 52,
+        "moduli": 2
+      },
+      {
+        "N": 4096,
+        "products": 6,
+        "mass": 52,
+        "moduli": 7
+      },
+      {
+        "N": 10000,
+        "products": 8,
+        "mass": 93,
+        "moduli": 4
+      }
+    ],
+    "source_theorem_verified": false,
+    "scope": "finite rational identities and inequality regressions only"
+  },
+  "new_contract_coefficients": {
+    "q_X": "48",
+    "q_V": "2",
+    "h_star": "4",
+    "epsilon": "462",
+    "C_A*logN^(3-A)": "19",
+    "E_exc*logN^2/N": "2"
+  },
+  "Cs_used": false,
+  "L_eta_used": false,
+  "distribution_power": "3-A",
+  "requires_A_at_least": 4,
+  "presieve_divisor": "P0",
+  "rebasing_includes_d1": true,
+  "original_Cs_audit": "UNRESOLVED",
+  "global_status": "INCONCLUSIVE",
+  "independently_verified": false
+}
