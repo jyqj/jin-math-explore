@@ -1,0 +1,13 @@
+{
+  "README.md": "e0ae2013100caff19085c58f9208eba98bb965402d27e90fcc6706e9c1e0dc37",
+  "certificate.json": "063c889ffff6733dd66771392a754efc42aaa665127a00ca9d198880081f46c2",
+  "computation-handoff.json": "398816da1ca99222c51cddaa27d8dbc45e33245e5c85ae67edb77bcdaaad944d",
+  "computation-record.json": "27cb12acb2bcde60f9013eef4b02b3fa9d9ffffd4d713e71b9c88564e4812c43",
+  "enumerate_tuples.py": "aafd392029d8555a31b9a3ce24e25e7a74008d5e22b4d47b6fd5e0505826b162",
+  "inputs.json": "9e09373a12e65436f60fab231ce0b7a9e02a460e42dc8d3167c177f92d8797ba",
+  "proof.md": "783333b57774420bae054aea8ca2c4e6a094d441fd5e8c9f76062b7c041d0cc6",
+  "results.json": "e99bca85d8d3a0e545b5c8fc04d129fafe1aa8f84741013ba01f5b1ec5b8e315",
+  "source-lock.json": "0a654c6a5299e1762087582ebf5762b92f1d2242ec13e89fe29c740758b732d3",
+  "verification-ticket.md": "fb634f57133c85eaf1e907db3f6faa813da596fa29f5d49996513dfb9dc8138c",
+  "verify_tuples.py": "06c2dca3b6db66a1628497d4cb686926863caa1bda97ce18d5047cd161d539c1"
+}
