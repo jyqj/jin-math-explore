@@ -1,0 +1,144 @@
+{
+  "attempt": "A-RH-LOC-0012",
+  "bad_block_evaluations": 560,
+  "boundary_configs": 4,
+  "exact_checks": {
+    "cross_boundary_counts": 3162,
+    "cyclic_strain_Qdelta_lower": "1/96",
+    "relaxed_floor": "286/189",
+    "relaxed_gap": "53/756",
+    "rounding_assignments": 480,
+    "ten_percent_gap": "31/10260",
+    "wrap_counts": 627
+  },
+  "good_block_evaluations": 1804,
+  "hole_family": [
+    {
+      "Q": 36,
+      "delta": 0.014633057787749149,
+      "h_L6": 0.3333333333333333,
+      "short": 1.7282903261837606
+    },
+    {
+      "Q": 72,
+      "delta": 0.009016823083721537,
+      "h_L6": 0.3333333333333333,
+      "short": 1.7480906106192062
+    },
+    {
+      "Q": 144,
+      "delta": 0.005361062215942347,
+      "h_L6": 0.3333333333333333,
+      "short": 1.7603204452747148
+    },
+    {
+      "Q": 288,
+      "delta": 0.0031071730328924296,
+      "h_L6": 0.3333333333333333,
+      "short": 1.7677468890063692
+    },
+    {
+      "Q": 576,
+      "delta": 0.0017669471689694127,
+      "h_L6": 0.3333333333333333,
+      "short": 1.772111841087098
+    }
+  ],
+  "hole_threshold": "0.1072024833157714264997606750983466415818148377422",
+  "independent_verification": false,
+  "mathematical_truth_verified": false,
+  "maximum_residuals": {
+    "continuous_quadrature": 5.329070518200751e-15,
+    "strain_holes": 0
+  },
+  "minimum_slacks": {
+    "combined_integer_floor": 1.5236159020363158,
+    "finite_integer_floor": 14.221585167116132,
+    "finite_signed_block": 0.0,
+    "good_block_RMS": 0.0,
+    "hole_capacity": 0.0,
+    "integer_wrap_nonnegative": -1.0658141036401503e-14,
+    "integer_wrap_upper": 14.221585167116132,
+    "local_anchor_cost": -6.573840876841765e-32,
+    "local_ledger_actual_cost": 1.8784428394580321,
+    "local_ledger_defect_cost": 1.8784428394580321,
+    "nontrivial_finite_margin": 0.04607001886808426,
+    "signed_cross_localization": 1.827054721247517,
+    "signed_delta": 0.0,
+    "strain_lower_Qdelta": 0.26418227043237447,
+    "strain_upper_Qdelta": 5.80295368151528
+  },
+  "model_scale_checks": 496,
+  "nontrivial_scalar_certificate": {
+    "A": 0.6931471805599453,
+    "L": 1000000,
+    "budget": 1.5833333333333333,
+    "delta": 0,
+    "h": 0,
+    "lower": 1.6294033522014175
+  },
+  "ok": true,
+  "quadrature": [
+    {
+      "alpha": 0.75,
+      "direct": 13.288125962271664,
+      "integral": 13.288125962271659
+    },
+    {
+      "alpha": 1.0,
+      "direct": 13.710787972750826,
+      "integral": 13.710787972750827
+    }
+  ],
+  "rounded_collision_evaluations": 144,
+  "samples": 120,
+  "scope": "exact finite combinatorics and numerical regressions only; analytic statements remain proof candidates",
+  "seed": 2026090612,
+  "strain": [
+    {
+      "Q": 36,
+      "Q_delta": 0.27459893709904115,
+      "delta": 0.007627748252751143,
+      "h_L6": 0.0,
+      "local_cost_L6": 0.0021969251151283615,
+      "short": 1.637995189922867
+    },
+    {
+      "Q": 72,
+      "Q_delta": 0.2801662289265714,
+      "delta": 0.0038911976239801582,
+      "h_L6": 0.0,
+      "local_cost_L6": 0.0005523376172520039,
+      "short": 1.6378953365023168
+    },
+    {
+      "Q": 144,
+      "Q_delta": 0.28298459098272133,
+      "delta": 0.0019651707707133426,
+      "h_L6": 0.0,
+      "local_cost_L6": 0.00013868984954456062,
+      "short": 1.6378690799509381
+    },
+    {
+      "Q": 288,
+      "Q_delta": 0.28440296251891084,
+      "delta": 0.000987510286523996,
+      "h_L6": 0.0,
+      "local_cost_L6": 3.469912803041857e-05,
+      "short": 1.6378623546968603
+    },
+    {
+      "Q": 576,
+      "Q_delta": 0.2851145081098707,
+      "delta": 0.0004949904654685255,
+      "h_L6": 0.0,
+      "local_cost_L6": 8.676079175763388e-06,
+      "short": 1.6378606532734328
+    }
+  ],
+  "versions": {
+    "mpmath": "1.3.0",
+    "numpy": "2.3.5",
+    "python": "3.13.5"
+  }
+}

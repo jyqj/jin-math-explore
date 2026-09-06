@@ -1,0 +1,126 @@
+{
+  "record_version": 1,
+  "execution_profile": "reproducible",
+  "status": "completed",
+  "task_file": {
+    "path": "README.md",
+    "sha256": "08ecd24ceb970013a692fac9cf602c78fc2e8c7490bd544288e7362757bb99a1"
+  },
+  "task": {
+    "question": "Localize the two-scale transfer and retain an explicit anchor-free mass budget.",
+    "domain": "Finite signed exponential operators and exact periodic-limit models.",
+    "assumptions": [
+      "Supplied mean-one periodic cells, m in {0,1,2}, tau in [0,1), a=0 unless m=2.",
+      "A common finite depth bound A; no actual-zeta representation is asserted.",
+      "Arbitrary local length L via superperiod lcm(Q,L); bad-block mass h and cell fraction beta are explicitly charged.",
+      "The period-free corollary requires the two-limit H condition; its source applicability is not established."
+    ]
+  },
+  "backend": {
+    "name": "Python/NumPy/mpmath/Fraction",
+    "version": "3.13.5",
+    "interface": "bounded local foreground process",
+    "libraries": {
+      "mpmath": "1.3.0",
+      "numpy": "2.3.5",
+      "python": "3.13.5"
+    }
+  },
+  "backend_decision": {
+    "selected": "Python",
+    "reason": "Portable exact finite counting and complex-kernel regressions; executable and imports live-checked.",
+    "local_alternatives": "sage and wolframscript were not on PATH.",
+    "inventory_snapshot_sha256": null,
+    "inventory_boundary": "Bundled backend-inventory and computation-record validators were not executed; no external MCP availability claim."
+  },
+  "precision": {
+    "mode": "Fraction/integer finite checks; binary64 kernels and 96-node quadrature; 70-digit scalar threshold.",
+    "seed": 2026090612,
+    "samples": 120,
+    "tolerance": "5e-9 times the stated scale in the code; tiny negative floating slacks are retained.",
+    "interval_certification": false
+  },
+  "execution": {
+    "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python check_local_gauges.py --samples 120 --output validation.json",
+    "working_directory": "this package",
+    "exit_status": 0,
+    "full_runs": 2,
+    "rerun_reason": "After the first run, the new exact scalar-relaxation regression was added. The final complete code was rerun successfully; not independent verification.",
+    "initial_absolute_paths": "The actual commands used /mnt/data/rh-local-12; the portable command is equivalent.",
+    "background_job": false
+  },
+  "code_artifacts": [
+    {
+      "path": "check_local_gauges.py",
+      "sha256": "253f1706328e450550ad3570db8e7719bb0d45ebafecb7daf5d51c9b29000667"
+    }
+  ],
+  "result_artifacts": [
+    {
+      "path": "validation.json",
+      "sha256": "a2c5276201730aa0be3565d9dce67aa8e51da04ee0ab1ae0247293fa32d0a888"
+    }
+  ],
+  "result_summary": {
+    "ok": true,
+    "model_scale_checks": 496,
+    "exact_checks": {
+      "cross_boundary_counts": 3162,
+      "cyclic_strain_Qdelta_lower": "1/96",
+      "relaxed_floor": "286/189",
+      "relaxed_gap": "53/756",
+      "rounding_assignments": 480,
+      "ten_percent_gap": "31/10260",
+      "wrap_counts": 627
+    },
+    "good_block_evaluations": 1804,
+    "bad_block_evaluations": 560,
+    "rounded_collision_evaluations": 144,
+    "maximum_residuals": {
+      "continuous_quadrature": 5.329070518200751e-15,
+      "strain_holes": 0
+    },
+    "hole_threshold": "0.1072024833157714264997606750983466415818148377422"
+  },
+  "verification": {
+    "evidence_level": "numerical-evidence",
+    "exact_subscope": "4269 integer/rational combinatorial cases and the named rational identities; not infinite-quantifier verification.",
+    "independent_verifier_receipt": null,
+    "full_repository_local_tests": false,
+    "upstream_lean_build": false,
+    "scalar_certificate_field": "This legacy-named output field is a floating evaluation of a conditional lower bound, not a certified interval or a formal proof.",
+    "limitations": [
+      "No proof of RH, independent verification, or improved unconditional zero proportion.",
+      "No unrestricted period-free two-budget theorem: the explicit H hypothesis remains.",
+      "No source cell extraction, weight/localization bridge, discarded-energy bound or arithmetic moment estimate.",
+      "Exact finite counts and numerical regressions do not establish the universal analytic claims.",
+      "The macroscopic-hole family fails the short budget; the scalar point is not a realized configuration."
+    ]
+  },
+  "artifacts": [
+    {
+      "path": "README.md",
+      "sha256": "08ecd24ceb970013a692fac9cf602c78fc2e8c7490bd544288e7362757bb99a1"
+    },
+    {
+      "path": "proof.md",
+      "sha256": "22d427c4cbbd4027224ca4ac19220671d4d6e7bd61522791af01d3c60b02552f"
+    },
+    {
+      "path": "check_local_gauges.py",
+      "sha256": "253f1706328e450550ad3570db8e7719bb0d45ebafecb7daf5d51c9b29000667"
+    },
+    {
+      "path": "validation.json",
+      "sha256": "a2c5276201730aa0be3565d9dce67aa8e51da04ee0ab1ae0247293fa32d0a888"
+    },
+    {
+      "path": "claims.json",
+      "sha256": "7d77020ba4c313558b048261f184e560154b576be53f4f0e184914d9131ea267"
+    },
+    {
+      "path": "source-scope.md",
+      "sha256": "06c10ac9972dffefd0cb5ba77f19115e0cd1e8b6912ecdf00ac2701bca3eaab4"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "format": "rh-local-gauges-checkpoint/v1",
+  "attempt": "A-RH-LOC-0012",
+  "issue": 75,
+  "date": "2026-09-06",
+  "actor": {
+    "kind": "agent",
+    "id": "openai-chatgpt",
+    "run_id": "run-20260906-rh-local-gauges-12",
+    "role": "solver"
+  },
+  "git_base_sha": "39002c5a6af8c7b7f093589e6a76cfd218fcbb99",
+  "git_base_tree_sha": "d6ac23dc843e26ba123ae167228e3a0c1ff6b750",
+  "mathematical_parent": {
+    "commit": "215e35afba58d1a80b0783a41fa4651c6841afba",
+    "path": "docs/problem-baselines/riemann-hypothesis/rounds/A-RH-RMS-0011/proof.md",
+    "git_blob_sha1": "fe0e14d28ddf5116a8ddef690b7718652dbe92df",
+    "status": "proof_candidate",
+    "receipt": null
+  },
+  "branch": "program/i-0075/rh-local-gauges-12",
+  "archive_status": "reference_only",
+  "mathematical_status": "proof_candidate",
+  "independent_verifier_receipt": null,
+  "sha256": {
+    "README.md": "08ecd24ceb970013a692fac9cf602c78fc2e8c7490bd544288e7362757bb99a1",
+    "proof.md": "22d427c4cbbd4027224ca4ac19220671d4d6e7bd61522791af01d3c60b02552f",
+    "check_local_gauges.py": "253f1706328e450550ad3570db8e7719bb0d45ebafecb7daf5d51c9b29000667",
+    "validation.json": "a2c5276201730aa0be3565d9dce67aa8e51da04ee0ab1ae0247293fa32d0a888",
+    "claims.json": "7d77020ba4c313558b048261f184e560154b576be53f4f0e184914d9131ea267",
+    "source-scope.md": "06c10ac9972dffefd0cb5ba77f19115e0cd1e8b6912ecdf00ac2701bca3eaab4",
+    "computation-record.json": "b02244cd3af2c438b1e0ba27290f03719b5e13e05aeac9c7286b6e763a1338fa",
+    "computation-handoff.json": "e124a976a904f35ccccb41c265cbb217d232a4a0c587fa3ea1e340516609461c"
+  },
+  "hash_boundary": "Eight files covered; this manifest excludes itself. Its Git blob and final commit are pinned in the PR.",
+  "scope": {
+    "additions_only": true,
+    "predecessor_edits": false,
+    "project_authority_change": false,
+    "remote_ci": "Report observed result separately in PR."
+  },
+  "next_attempt": "A-RH-HOLE-0013: stronger short-energy information for anchor-free near-extremal blocks or actual two-budget escape model."
+}
