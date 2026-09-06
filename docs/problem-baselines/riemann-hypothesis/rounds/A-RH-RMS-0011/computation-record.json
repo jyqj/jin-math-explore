@@ -1,0 +1,162 @@
+{
+  "record_version": 1,
+  "execution_profile": "reproducible",
+  "status": "completed",
+  "task_file": {
+    "path": "README.md",
+    "sha256": "25c10136fa94db6445c889852a813740016a7391a1c6b2fb7e69f0837d047bfc"
+  },
+  "task": {
+    "question": "Improve the period loss in finite RMS/short-moment transfer and retain an exact global-phase obstruction.",
+    "domain": "Supplied periodic conjugation-invariant cell models, not actual zeta zeros.",
+    "assumptions": [
+      "Q is a positive integer; m in {0,1,2}; sum m=Q; one supplied center p+tau_p per occupied unit cell, tau in [0,1).",
+      "0<=a_p<=A<infinity; a_p=0 for m_p!=2. L_alpha is the precisely normalized periodic spectral expression in proof.md (1).",
+      "RMS transfer allows s=0; use of the inherited anchor estimate and the improved defect tradeoff requires s>0.",
+      "For growing-Q corollaries the depth cap is uniform and s tends to 2/3; the short arithmetic-style budget is an additional hypothesis, not an actual-zeta theorem."
+    ],
+    "deliverables": [
+      "README.md",
+      "proof.md",
+      "history.md",
+      "check_rms_transfer.py",
+      "validation.json",
+      "claims.json",
+      "source-scope.md",
+      "computation-record.json",
+      "computation-handoff.json",
+      "checkpoint.json"
+    ]
+  },
+  "backend": {
+    "name": "Python/NumPy/mpmath/Fraction",
+    "version": "3.13.5",
+    "interface": "local foreground process",
+    "libraries": {
+      "mpmath": "1.3.0",
+      "numpy": "2.3.5",
+      "python": "3.13.5"
+    }
+  },
+  "backend_decision": {
+    "selected": "Python",
+    "selection_reason": "Portable finite matrix and Fraction regression artifacts; exact scalar thresholds use mpmath.",
+    "local_readiness": "Python and library versions live-checked; neither sage nor wolframscript on PATH.",
+    "inventory_snapshot_sha256": null,
+    "inventory_boundary": "Direct executable/import check only; bundled backend-inventory runner not executed. No broader MCP availability assertion.",
+    "fallback": "Not used: the primary checker completed."
+  },
+  "precision": {
+    "mode": "Fraction finite subchecks; binary64 matrices; 70-decimal-digit scalar threshold arithmetic",
+    "seed": 2026090611,
+    "samples": 120,
+    "acceptance": "2e-9*(1+abs(left)+abs(right)) for inequalities; corresponding relative-scale residual checks. Code is authoritative for tolerances.",
+    "certification": "No interval arithmetic."
+  },
+  "execution": {
+    "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python check_rms_transfer.py --samples 120 --output validation.json",
+    "working_directory": "this package",
+    "exit_status": 0,
+    "full_range_runs": 1,
+    "rerun_reason": null,
+    "stdout": {
+      "ok": true,
+      "samples": 120,
+      "phase_comparisons": 370,
+      "exact_checks": {
+        "period_six_short_energy": "398/243",
+        "period_six_short_excess": "53/972",
+        "rounding_assignments": 480,
+        "strain_variance": "1/128",
+        "weight_inequalities": 10080
+      },
+      "output": "validation.json"
+    },
+    "stdout_path_boundary": "Actual initial command used absolute /mnt/data paths; the portable command above has identical inputs.",
+    "no_background_job": true
+  },
+  "code_artifacts": [
+    {
+      "path": "check_rms_transfer.py",
+      "sha256": "ed580fd875e51a0e4d11add74fdc84c99e2a4798cd9e7739c0d05019f0cd8f15"
+    }
+  ],
+  "result_artifacts": [
+    {
+      "path": "validation.json",
+      "sha256": "d3f431ac4d9d3974958cee95fd83f4f947789e6d040e134b781f75d4429e3c3c"
+    }
+  ],
+  "result_summary": {
+    "all_assertions": "PASS",
+    "random_configurations": 120,
+    "near_equality_real_configurations": 40,
+    "boundary_configurations": 4,
+    "phase_comparisons": 370,
+    "anchor_configurations": 122,
+    "comparisons_with_mass_above_two": 121,
+    "exact_weight_checks": 10080,
+    "exact_rounding_configurations": 480,
+    "maximum_residuals": {
+      "finite_reconstruction": 9.63806118727532e-15,
+      "long_moment": 6.217248937900877e-15,
+      "rounded_operator": 4.440892098500626e-15,
+      "strain_variance": 3.469446951953614e-18,
+      "trace_cancel": 6.661338147750939e-16
+    },
+    "small_negative_slack_boundary": "Tiny negative floating slacks are preserved in validation.json and fall within the stated tolerance."
+  },
+  "verification": {
+    "evidence_level": "numerical-evidence",
+    "exact_subchecks": [
+      "10080 rational scalar weight inequalities",
+      "480 rational rounding assignments (cap tested even at mean load two)",
+      "Period-six rational energy 398/243 and rational constants 1/128 and 53/972; the all-Q trigonometric identities are proved separately, not by Fraction."
+    ],
+    "methods": [
+      "Signed matrix versus sampled-coefficient reconstruction",
+      "Operator/RMS/centered short-moment regressions, including collisions and s=0 boundaries",
+      "Cyclic strain samples Q=18,36,72,144,288,576 and a finite phase grid",
+      "70-digit old/new threshold comparisons"
+    ],
+    "limitations": [
+      "No proof of RH or improved unconditional proportion of zeta zeros.",
+      "No extraction of the supplied cell/periodic representation from actual zeros or an arbitrary small signed defect.",
+      "No period-independent two-scale separation, source weights/localization transfer, or exceptional operator-energy control.",
+      "Numerical tests and exact finite checks do not verify the universal analytic quantifiers.",
+      "No independent-verifier receipt, upstream Lean build, or full-repository local test run.",
+      "The global-phase counterexample fails the short budget; it is not a counterexample to a period-free two-scale theorem.",
+      "The new conservative threshold is weaker than the old one for some small Q; only its growth order improves."
+    ]
+  },
+  "artifacts": [
+    {
+      "path": "README.md",
+      "sha256": "25c10136fa94db6445c889852a813740016a7391a1c6b2fb7e69f0837d047bfc"
+    },
+    {
+      "path": "proof.md",
+      "sha256": "631226a66263d1dfa13705defcd580581c48e3a4804a34c6515b2a3a5623ade8"
+    },
+    {
+      "path": "history.md",
+      "sha256": "ba977a05a8574b7062fae31f81baa1257fe5eed6c4a6e95c06250a8837b4d12a"
+    },
+    {
+      "path": "check_rms_transfer.py",
+      "sha256": "ed580fd875e51a0e4d11add74fdc84c99e2a4798cd9e7739c0d05019f0cd8f15"
+    },
+    {
+      "path": "validation.json",
+      "sha256": "d3f431ac4d9d3974958cee95fd83f4f947789e6d040e134b781f75d4429e3c3c"
+    },
+    {
+      "path": "claims.json",
+      "sha256": "fe294400cf5879fe9f368ca27394e73d05a3a1c69f7682145be7a410e7545bc6"
+    },
+    {
+      "path": "source-scope.md",
+      "sha256": "1392e2510d9269344f84a2227f2c2c23eef8c202a7ff0a75aaf756ee3fffc8d1"
+    }
+  ]
+}

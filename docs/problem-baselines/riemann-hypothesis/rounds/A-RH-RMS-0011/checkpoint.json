@@ -1,0 +1,46 @@
+{
+  "format": "rh-rms-0011-checkpoint/v1",
+  "attempt": "A-RH-RMS-0011",
+  "issue": 69,
+  "date": "2026-09-06",
+  "actor": {
+    "kind": "agent",
+    "id": "openai-chatgpt",
+    "run_id": "run-20260906-rh-rms-transfer-11",
+    "role": "solver"
+  },
+  "git_base_sha": "39002c5a6af8c7b7f093589e6a76cfd218fcbb99",
+  "git_base_tree_sha": "d6ac23dc843e26ba123ae167228e3a0c1ff6b750",
+  "mathematical_parent": {
+    "commit": "d00192b4b2cfb5669c2560c5f02e8d6ed3988a59",
+    "path": "staging/preproject-rh/A-RH-PER-0010/README.md",
+    "git_blob_sha1": "0757e3da76c7a22b1945fbab133ba46fe5c73f8a",
+    "status": "proof_candidate",
+    "receipt": null
+  },
+  "branch": "program/i-0069/rh-rms-transfer-11",
+  "archive_status": "reference_only",
+  "mathematical_status": "proof_candidate",
+  "independent_verifier_receipt": null,
+  "sha256": {
+    "README.md": "25c10136fa94db6445c889852a813740016a7391a1c6b2fb7e69f0837d047bfc",
+    "proof.md": "631226a66263d1dfa13705defcd580581c48e3a4804a34c6515b2a3a5623ade8",
+    "history.md": "ba977a05a8574b7062fae31f81baa1257fe5eed6c4a6e95c06250a8837b4d12a",
+    "check_rms_transfer.py": "ed580fd875e51a0e4d11add74fdc84c99e2a4798cd9e7739c0d05019f0cd8f15",
+    "validation.json": "d3f431ac4d9d3974958cee95fd83f4f947789e6d040e134b781f75d4429e3c3c",
+    "claims.json": "fe294400cf5879fe9f368ca27394e73d05a3a1c69f7682145be7a410e7545bc6",
+    "source-scope.md": "1392e2510d9269344f84a2227f2c2c23eef8c202a7ff0a75aaf756ee3fffc8d1",
+    "computation-record.json": "da973782526d12931f9fa00e8af1ddf8a7f26c0fade2834315c114571ae0bdc1",
+    "computation-handoff.json": "4ac7909672e07453c3a7f7c2e0db0414e28594c4214b5ed41f0e63e53c3f6b9e"
+  },
+  "hash_boundary": "Nine files are covered; this manifest excludes itself. Its Git blob and the final commit are pinned in the PR/issue handoff.",
+  "scope": {
+    "only_additions": true,
+    "modifies_predecessors": false,
+    "advances_project_authority": false,
+    "full_repository_local_tests": false,
+    "upstream_lean_build": false,
+    "remote_ci": "Observe and report separately in the PR; this frozen file does not predict a future CI result."
+  },
+  "next_attempt": "A-RH-LOC-0012: period-free local-gauge two-budget separation, as precisely stated in proof.md section 8."
+}
