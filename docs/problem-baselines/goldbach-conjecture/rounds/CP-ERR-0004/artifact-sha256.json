@@ -1,0 +1,18 @@
+{
+  "schema": "goldbach-artifact-manifest/v1",
+  "checkpoint": "CP-ERR-0004",
+  "scope": "these eleven local UTF-8 files; manifest itself bound by Git tree/commit and remote handoff",
+  "sha256": {
+    "README.md": "093d1f469c6058bd2f36732c6ed20d9b7c5a4082142d842651dc4f06e3ecc661",
+    "proof.md": "2f10332d9781136869dbfea5fa5d75017bc0f48a3137606e663b599dcb985236",
+    "contracts.json": "abbd2e23c2f9b4585ce654c3f538129461a97283fd7f604d61c7680cabd875b3",
+    "prior-work.json": "775999c42296df8549e0482c6c48e28308231169c81fa6302468fb7783301cab",
+    "source-lock.json": "50b51a03c83fee68f9adb1777317b034f3333e532cdb8f59f85d815b53cb8df6",
+    "check_g6.py": "195a70f2cd3c120d8964bd534c29f11895f463c62e399fd60f06bcb6aa07c598",
+    "results.json": "68a25eefa3beafad360c14fc937874c7f9399b1579a6a30496878de52e8aee75",
+    "error-handoff.json": "ea908c4a2648e2e0315756fb81820bac9e639ae1724abeb809e70959c5d1bc87",
+    "computation-handoff.json": "571f07eaf282148d144d8648e4ffd535b97721150792468af5b17a526d902314",
+    "verification-ticket.md": "de1289fe3738e0e9c40d549a3c9a784035f163d161a389baf5ae4802e377361c",
+    "validation.json": "126eaa83f0cdaaaf4e7a826e36d7ab0b0f4083453533009a1887110a6c80545b"
+  }
+}

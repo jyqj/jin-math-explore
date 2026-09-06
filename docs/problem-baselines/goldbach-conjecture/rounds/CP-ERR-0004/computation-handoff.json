@@ -1,0 +1,80 @@
+{
+  "schema": "goldbach-computation-handoff/v1",
+  "profile": "reproducible",
+  "work_issue": 70,
+  "actor": {
+    "kind": "agent",
+    "id": "openai-chatgpt",
+    "run_id": "run-20260906-goldbach-g6-04",
+    "role": "solver"
+  },
+  "base_sha": "39002c5a6af8c7b7f093589e6a76cfd218fcbb99",
+  "parent_sha": "a16d365d91a7859e12a213012473775cf47259db",
+  "branch": "program/i-0070/goldbach-g6-cp4",
+  "lease_id": "L-0070-goldbach-g6-cp4",
+  "backend_choice": "portable Fraction + mpmath.iv fits a self-contained source/result archive; no large exact integer or prime-count task",
+  "environment": {
+    "python": "3.13.5",
+    "mpmath": "1.3.0",
+    "sage_on_path": null,
+    "wolframscript_on_path": null
+  },
+  "actual_execution": [
+    {
+      "command": "python check_g6.py --compute --output results.json",
+      "exit_code": 0,
+      "scope": "full three-piece directed quadrature; first certificate generation",
+      "observed_elapsed_seconds": 3.1,
+      "observed_peak_rss_kib": 97200
+    },
+    {
+      "command": "python check_g6.py --compute",
+      "exit_code": 0,
+      "scope": "final source replay compared exactly with frozen numerical fields; tests/guards were refined after first generation"
+    },
+    {
+      "command": "python check_g6.py --self-test",
+      "exit_code": 0,
+      "scope": "output equals validation.json"
+    },
+    {
+      "command": "python -O check_g6.py --self-test",
+      "exit_code": 0,
+      "scope": "identical output with Python assertions disabled"
+    },
+    {
+      "command": "python check_g6.py --require-global",
+      "exit_code": 1,
+      "expected": true,
+      "scope": "fail-closed global claim rejection"
+    }
+  ],
+  "self_test_counts": {
+    "schema": "goldbach-g6-self-tests/v1",
+    "ok": true,
+    "interval_conversion_cases": 5,
+    "taylor_coefficients_checked": 46,
+    "taylor_ode_identities": 46,
+    "injectivity_cases": 122,
+    "signed_cases": 486,
+    "negative_controls_rejected": 8,
+    "mathematical_truth_verified": false,
+    "scope": "finite algebra/arithmetic regression tests, not source theorem verification"
+  },
+  "preliminary_experiment": {
+    "method": "25-digit noninterval mpmath.quad",
+    "used_for_certificate": false,
+    "observation": "log-only about 1.6330804326; full about 1.6335735235; motivated keeping the T term"
+  },
+  "integrity": "artifact-sha256.json binds all other eleven files; --check verifies hashes plus saved-result guards, not a quadrature replay",
+  "not_executed": [
+    "independent verification",
+    "original linear-sieve proof replay",
+    "legacy MPFR suite",
+    "full local repository tests",
+    "bundled backend inventory/record runner",
+    "effective numeric N0 computation"
+  ],
+  "transport": "direct git clone failed DNS; connected GitHub API used for read/write; final remote postconditions and observed CI belong to PR/issue handoff",
+  "authority": "reference-only solver candidate; numerical integral certificate is not a two-sided G6 count bound"
+}

@@ -1,0 +1,72 @@
+{
+  "schema": "goldbach-predecessor-map/v1",
+  "read_date_utc": "2026-09-06",
+  "main_base": "39002c5a6af8c7b7f093589e6a76cfd218fcbb99",
+  "method": "live GitHub reads, issue handoffs and pinned CP3 README; not memory-only reconstruction",
+  "stability": "all predecessors read-only; no mathematical result imported as independently verified",
+  "baseline": {
+    "issue": 27,
+    "merged_pr": 33,
+    "path": "docs/problem-baselines/goldbach-conjecture/",
+    "frontier_read": "frontier-and-migration.md",
+    "status": "reference-only pre-genesis baseline"
+  },
+  "sequential_error_work": [
+    {
+      "checkpoint": "CP-ERR-0001",
+      "issue": 50,
+      "commit": "388c958afb2c89c571e43483b2154eb56e2e2e67",
+      "branch": "attempt/preproject-goldbach/error-budget-01",
+      "retained": "displayed signed difference 43/25000; usable reserve 3/25000 before dividing by four; common-N0/source-uniformity debt",
+      "evidence_read": "released issue handoff; not a replay of its checker"
+    },
+    {
+      "checkpoint": "CP-ERR-0002",
+      "issue": 50,
+      "review_issue": 56,
+      "commit": "55f97ee95dc8d6341f42012dd1a618be25fe150d",
+      "branch": "attempt/preproject-goldbach/error-g45-02",
+      "retained": "G4/G5 conditional upper contracts; source gate not resolved",
+      "evidence_read": "frozen handoff/review scope; not a theorem premise or numerical replay"
+    },
+    {
+      "checkpoint": "CP-ERR-0003",
+      "issue": 50,
+      "review_issue": 66,
+      "commit": "a16d365d91a7859e12a213012473775cf47259db",
+      "branch": "attempt/preproject-goldbach/error-g12-03",
+      "path": "staging/preproject-goldbach/A-GB-ERR-0001/CP-ERR-0003/",
+      "readme_git_blob_read_back": "b576e6de47b43089f5363d8a6b9ad5689b05937e",
+      "retained": "G1/G2 conditional lower contracts; fixed/fixed versus fixed/log separation; next task G6 diagonal/coprime lower branch",
+      "evidence_read": "pinned README and #50/#66 handoff; #66 comments freshly read empty",
+      "old_package_hashes_recomputed_this_round": false
+    }
+  ],
+  "other_frozen_work_not_used_as_theorems": [
+    {
+      "issue": 34,
+      "review_issue": 35,
+      "commit": "9777a19362c3d4a49126e31f29663eb3bb61f0b7",
+      "scope": "L35 call compiler"
+    },
+    {
+      "issue": 41,
+      "review_issue": 42,
+      "commit": "e926ad53cd7174c024a671c02188a1a46e936f02",
+      "scope": "G7 legal domain and numerical candidate"
+    }
+  ],
+  "this_round": {
+    "issue": 70,
+    "branch": "program/i-0070/goldbach-g6-cp4",
+    "path": "docs/problem-baselines/goldbach-conjecture/rounds/CP-ERR-0004/",
+    "publication": "actual docs-only archival PR; no formal Project result promotion",
+    "reason_for_new_work_packet": "user explicitly requires PR; old #50 write set authorized staging only"
+  },
+  "remaining_global_debt": [
+    "uniform source constants and onsets",
+    "unreconciled other eleven terms and combination remainder",
+    "independent review of frozen local candidates",
+    "common parameter choice and actual global N0"
+  ]
+}

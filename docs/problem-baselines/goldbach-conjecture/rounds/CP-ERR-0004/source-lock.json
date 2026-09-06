@@ -1,0 +1,75 @@
+{
+  "schema": "goldbach-source-scope/v1",
+  "access_date_utc": "2026-09-06",
+  "primary": {
+    "authors": [
+      "Jiamin Li",
+      "Jianya Liu"
+    ],
+    "title": "Theorem (1+1.9) on the Goldbach Conjecture",
+    "arxiv_id": "2606.05224v2",
+    "html": "https://arxiv.org/html/2606.05224v2",
+    "pdf": "https://arxiv.org/pdf/2606.05224v2",
+    "pdf_pages": 66,
+    "locators": [
+      "(1.3)",
+      "(1.11)",
+      "Lemma 2.2",
+      "(2.8)-(2.13)",
+      "(5.2)-(5.3)",
+      "(5.10)",
+      "section 5.2 definition of G6",
+      "(5.28)-(5.30)",
+      "(5.51)"
+    ],
+    "pdf_printed_pages_visually_read": [
+      7,
+      9,
+      33,
+      35,
+      36,
+      37,
+      43
+    ],
+    "reading_channels": [
+      "arXiv HTML parsed formulas",
+      "PDF screenshots"
+    ],
+    "pdf_byte_sha256": null,
+    "pdf_byte_hash_status": "not_acquired; rendered/parsed access is not raw-byte acquisition",
+    "paper_status_in_this_package": "source under audit; no claim that whole paper has been independently verified"
+  },
+  "imported_classical_inputs": [
+    {
+      "id": "U-BV",
+      "location": "Li-Liu (1.11)/(5.10); exact adopted formulation in proof.md (3)",
+      "boundary": "maximal-endpoint Li prime-counting form imported as an explicit input; no classical proof replay"
+    },
+    {
+      "id": "U-PNT",
+      "location": "standard reciprocal/product Mertens and Li estimates, adopted formulation and uniform reduction in proof.md section 4",
+      "boundary": "qualitative asymptotic input, not an effective numeric constant certificate"
+    },
+    {
+      "id": "U-LS",
+      "location": "Li-Liu Lemma 2.5 / (2.13)",
+      "boundary": "Cs(K) independence of eta, epsilon0 and extracted primes remains an unreviewed explicit hypothesis"
+    }
+  ],
+  "exact_formula": {
+    "normalization": "psi=f/(2*exp(gamma_E)); g6=53*integral_triangle psi/(u*v)",
+    "a": "4/53",
+    "b": "4/33",
+    "source_displayed_lower": "1.63357",
+    "final_combination_weight": "1",
+    "sequence_cutoff": "p < (1-epsilon0)*N",
+    "prime_pair_order": "p1<=p2 in original; p1<p2 for lower comparison"
+  },
+  "not_imported": [
+    "G7/L35 unreviewed mathematical claims",
+    "numerical intervals from CP2/CP3",
+    "an unconditional full-paper status from the abstract",
+    "a finite numerical N0"
+  ],
+  "novelty_scope": "repository-local new explicit contract and reproducible reduction/certificate; no literature-wide novelty claim"
+}

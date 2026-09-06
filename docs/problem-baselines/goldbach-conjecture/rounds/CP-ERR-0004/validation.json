@@ -1,0 +1,12 @@
+{
+  "schema": "goldbach-g6-self-tests/v1",
+  "ok": true,
+  "interval_conversion_cases": 5,
+  "taylor_coefficients_checked": 46,
+  "taylor_ode_identities": 46,
+  "injectivity_cases": 122,
+  "signed_cases": 486,
+  "negative_controls_rejected": 8,
+  "mathematical_truth_verified": false,
+  "scope": "finite algebra/arithmetic regression tests, not source theorem verification"
+}

@@ -1,0 +1,102 @@
+{
+  "schema": "goldbach-native-contract/v1",
+  "checkpoint": "CP-ERR-0004",
+  "finding_ids": [
+    "F-ERR-021",
+    "F-ERR-022",
+    "F-ERR-023",
+    "F-ERR-024",
+    "F-ERR-025",
+    "F-ERR-026",
+    "F-ERR-027"
+  ],
+  "authority": "reference_only_solver_candidate",
+  "work_issue": 70,
+  "parent_issue": 50,
+  "quantity": "original G6, including nonnegative diagonal, on p < (1-epsilon0)N",
+  "direction": "lower",
+  "combination_coefficient": "1",
+  "normalization": "S_N=C(N)*N/log(N)^2",
+  "sieve_exponents": {
+    "a": "4/53",
+    "b": "4/33"
+  },
+  "level": {
+    "mode": "fixed/log",
+    "D": "N^(1/2)/log(N)^B0",
+    "Q_m": "D/(p1*p2)",
+    "h": "B0*loglog(N)/log(N)",
+    "s0_min": "901/264",
+    "s0_max": "37/8",
+    "legal_h_max": "373/3498",
+    "adopted_h_max": "109/3498",
+    "adopted_s_range": [
+      "3",
+      "37/8"
+    ],
+    "log_Q_min": "3*a*log(N)"
+  },
+  "defects": {
+    "theta": "1-Li((1-epsilon0)*N)/Li(N)",
+    "R_N": "2*exp(gamma_E)*Li(N)*V_N(z)/(53*S_N)",
+    "q_N": "abs(R_N-1)",
+    "r_N": "sup_{a<=t<=b}|sum_{N^a<=p<=N^t}1/p-log(t/a)|; both prime endpoints included",
+    "e_star": "Cs*(eta+eta^(-8)*exp(K)*(3*a*log(N))^(-1/3))",
+    "L": "exp(8*eta^(-3))"
+  },
+  "domain": [
+    "N even, N>=16, z=N^a>=2",
+    "0<epsilon0<=1/2",
+    "0<eta<1/8",
+    "q_N<=1",
+    "r_N<=1/2",
+    "0<=h<=109/3498",
+    "A0>2"
+  ],
+  "statement": "G6/S_N >= g6 - deficit",
+  "deficit_coefficients": {
+    "epsilon0": "64/21",
+    "q_N": "2",
+    "r_N": "2809/44",
+    "1/z": "2915/4",
+    "h": "2809/8",
+    "e_star": "212",
+    "L*C_BV*logN^(2-A0)": "2"
+  },
+  "main_coefficient": {
+    "definition": "53*integral_{a<=u<=v<=b} psi((1/2-u-v)/a) du dv/(u*v)",
+    "enclosure_file": "results.json",
+    "certified_floor": "16335733/10000000",
+    "upper_cap_for_error_estimate": "2",
+    "is_upper_bound_for_G6_count": false
+  },
+  "source_gate": {
+    "uniform_Cs": "assumption_not_discharged",
+    "U_LS": "normalized one-sided linear sieve with Cs(K) independent of eta, epsilon0, N and extracted primes",
+    "U_BV": "maximal-endpoint classical prime-counting BV, fixed B0 and C_BV after A0",
+    "U_PNT": "standard reciprocal and product Mertens estimates plus Li asymptotic; no effective numeric constants supplied"
+  },
+  "no_double_charge": [
+    "actual nonnegative diagonal dropped before sieve; only discrete main diagonal is charged",
+    "bad-prime main measure charged once; no second raw (5.28) subtraction",
+    "reciprocal phi correction is favorable only in positive main; penalty separately enlarged",
+    "h is charged once; fixed-level zero-drift mode is not used"
+  ],
+  "local_eventual_comparator": {
+    "conditional_on": "U-LS/U-BV/U-PNT with fixed uniform Cs",
+    "loss_target": "3/1000000",
+    "eventual_floor": "16335703/10000000",
+    "preserves_printed_1_63357": true,
+    "numeric_N0_provided": false
+  },
+  "global_status": "INCONCLUSIVE",
+  "independent_review": "pending",
+  "cannot_imply": [
+    "unconditional twelve-term closure",
+    "effective numeric N0",
+    "Li-Liu full theorem verification",
+    "new Goldbach exponent",
+    "binary Goldbach",
+    "independent verification receipt"
+  ]
+}
