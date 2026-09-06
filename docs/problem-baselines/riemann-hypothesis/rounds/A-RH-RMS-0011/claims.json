@@ -1,0 +1,183 @@
+{
+  "format": "rh-rms-0011-claims/v1",
+  "attempt": "A-RH-RMS-0011",
+  "archive_status": "reference_only",
+  "mathematical_status": "proof_candidate",
+  "dependencies": {
+    "parent": {
+      "commit": "d00192b4b2cfb5669c2560c5f02e8d6ed3988a59",
+      "path": "staging/preproject-rh/A-RH-PER-0010/README.md",
+      "git_blob_sha1": "0757e3da76c7a22b1945fbab133ba46fe5c73f8a",
+      "status": "proof_candidate",
+      "receipt": null
+    }
+  },
+  "claims": [
+    {
+      "id": "A-RH-RMS-0011-C01",
+      "title": "Exact signed finite reconstruction",
+      "statement": "For every model, T=GG*-HH* has unit diagonal and ||T||_F^2/Q=L_1; L_alpha is also the fixed-pattern infinite-repetition limit.",
+      "quantifier_scope": "All finite Q>=1 and 0<alpha<=1.",
+      "assumptions": [
+        "model as defined"
+      ],
+      "dependency_refs": [
+        "parent"
+      ],
+      "evidence_grade": "proof_candidate",
+      "evidence_refs": [
+        "proof.md sections 1 and 5",
+        "validation.json: finite_reconstruction and long_moment residuals"
+      ],
+      "cannot_imply": [
+        "Finite-prefix errors uniform in growing Q.",
+        "Independent verification or a theorem about actual zeta zeros."
+      ],
+      "verifier_receipt": null
+    },
+    {
+      "id": "A-RH-RMS-0011-C02",
+      "title": "Collision-safe bounded rounded occupancy",
+      "statement": "For any nearest-coset phase with the stated tie convention, max M<=4, sum M=Q, sum M^2>=sum m^2, and ||G0||op^2=max M.",
+      "quantifier_scope": "Every supplied one-cell model and every theta in [0,1).",
+      "assumptions": [
+        "m_p<=2 and supplied integer cells"
+      ],
+      "dependency_refs": [],
+      "evidence_grade": "proof_candidate",
+      "evidence_refs": [
+        "proof.md section 2",
+        "validation.json: 480 exact rounding configurations; explicit mass-four collision"
+      ],
+      "cannot_imply": [
+        "Injective rounding, preservation of the simple count, or an occupancy cap without the cell hypothesis.",
+        "Independent verification or a theorem about actual zeta zeros."
+      ],
+      "verifier_receipt": null
+    },
+    {
+      "id": "A-RH-RMS-0011-C03",
+      "title": "Dimension-free RMS transfer",
+      "statement": "||T-T0||_F/sqrt(Q)<=X_A sqrt(E_ph)+Y_A sqrt(E_dep)<=R_A sqrt(4E_ph+E_dep/4), with explicit Q-independent constants.",
+      "quantifier_scope": "All finite models including s=0 and A=0.",
+      "assumptions": [
+        "bounded depth; collision cap C02"
+      ],
+      "dependency_refs": [],
+      "evidence_grade": "proof_candidate",
+      "evidence_refs": [
+        "proof.md section 3",
+        "validation.json: G/H operator bounds and 370 phase-comparison regressions"
+      ],
+      "cannot_imply": [
+        "A small matching error inferred from delta alone.",
+        "Independent verification or a theorem about actual zeta zeros."
+      ],
+      "verifier_receipt": null
+    },
+    {
+      "id": "A-RH-RMS-0011-C04",
+      "title": "All-alpha centered comparison and occupancy floor",
+      "statement": "sqrt(f_alpha(1-s))<=sqrt(L_alpha-1/alpha)+(X_A sqrt(E_ph)+Y_A sqrt(E_dep))/sqrt(alpha).",
+      "quantifier_scope": "Every 1/2<alpha<=1; alpha Q need not be integer.",
+      "assumptions": [
+        "C03; mean mass one; integer aggregated occupancy"
+      ],
+      "dependency_refs": [],
+      "evidence_grade": "proof_candidate",
+      "evidence_refs": [
+        "proof.md section 4",
+        "validation.json: 10080 exact scalar weight checks and finite spectral comparisons"
+      ],
+      "cannot_imply": [
+        "Any prime-side or actual-zeta upper moment budget.",
+        "Independent verification or a theorem about actual zeta zeros."
+      ],
+      "verifier_receipt": null
+    },
+    {
+      "id": "A-RH-RMS-0011-C05",
+      "title": "Improved growing-period sufficient condition",
+      "statement": "For bounded A, s->2/3, Q delta->0 and u2->0, L_(3/4)<=19/12+u2 is impossible in the model.",
+      "quantifier_scope": "Sequences of supplied finite periodic models.",
+      "assumptions": [
+        "C04; parent anchor bound (8), re-derived in section 5; s>0"
+      ],
+      "dependency_refs": [
+        "parent"
+      ],
+      "evidence_grade": "proof_candidate",
+      "evidence_refs": [
+        "proof.md sections 5-6",
+        "validation.json: 122 finite anchor configurations and conditional comparison regressions"
+      ],
+      "cannot_imply": [
+        "Period-independent separation under delta->0 alone.",
+        "Independent verification or a theorem about actual zeta zeros."
+      ],
+      "verifier_receipt": null
+    },
+    {
+      "id": "A-RH-RMS-0011-C06",
+      "title": "Explicit order-Q-inverse threshold",
+      "statement": "At s=2/3 and L_(3/4)<=19/12, delta>= (3/4)(2/3)Q g^2/[R_A^2 C_A(pi^2 Q^2+A^2/4)], g=sqrt(8/27)-1/2.",
+      "quantifier_scope": "Every admissible Q and finite A>=0.",
+      "assumptions": [
+        "C05 finite inequality; exact stipulated short budget"
+      ],
+      "dependency_refs": [
+        "parent"
+      ],
+      "evidence_grade": "proof_candidate",
+      "evidence_refs": [
+        "proof.md section 6",
+        "validation.json: 70-digit evaluation for Q=6,12,24,48,96,384 at A=log(2)"
+      ],
+      "cannot_imply": [
+        "Global optimization, interval certification, or uniformly superior small-Q constants.",
+        "Independent verification or a theorem about actual zeta zeros."
+      ],
+      "verifier_receipt": null
+    },
+    {
+      "id": "A-RH-RMS-0011-C07",
+      "title": "Global-phase order obstruction",
+      "statement": "For Q=6k,k>=3 and the cyclic strain (13), min_theta E_ph=1/128 and delta<=4 pi^4 h^2/Q with h=1/8. No uniform E_ph<=c(Q)delta with c(Q)=o(Q) is possible.",
+      "quantifier_scope": "Entire explicitly defined cyclic-strain family.",
+      "assumptions": [
+        "all a=0; six-period marks; periodic smooth phase; Q>=18"
+      ],
+      "dependency_refs": [],
+      "evidence_grade": "proof_candidate",
+      "evidence_refs": [
+        "proof.md section 7 equations (13)-(15)",
+        "validation.json: Six sampled Q values; finite phase grid is only a regression"
+      ],
+      "cannot_imply": [
+        "Necessity of Q in the two-scale conclusion itself.",
+        "Independent verification or a theorem about actual zeta zeros."
+      ],
+      "verifier_receipt": null
+    },
+    {
+      "id": "A-RH-RMS-0011-C08",
+      "title": "The obstruction does not meet both budgets",
+      "statement": "The cyclic-strain short moment tends to 398/243=19/12+53/972.",
+      "quantifier_scope": "Q=6k tending to infinity in C07 at alpha=3/4.",
+      "assumptions": [
+        "C07; uniform summable sinc-square domination"
+      ],
+      "dependency_refs": [],
+      "evidence_grade": "proof_candidate",
+      "evidence_refs": [
+        "proof.md section 7 equation (16)",
+        "validation.json: Exact period-six rational constant plus finite strain samples"
+      ],
+      "cannot_imply": [
+        "An admissible two-budget escape configuration or RH refutation.",
+        "Independent verification or a theorem about actual zeta zeros."
+      ],
+      "verifier_receipt": null
+    }
+  ]
+}

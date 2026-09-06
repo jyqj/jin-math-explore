@@ -1,0 +1,128 @@
+{
+  "anchor_configurations": 122,
+  "attempt": "A-RH-RMS-0011",
+  "backend": {
+    "mpmath": "1.3.0",
+    "numpy": "2.3.5",
+    "python": "3.13.5"
+  },
+  "boundary_configurations": 4,
+  "comparisons_with_mass_above_two": 121,
+  "exact_checks": {
+    "period_six_short_energy": "398/243",
+    "period_six_short_excess": "53/972",
+    "rounding_assignments": 480,
+    "strain_variance": "1/128",
+    "weight_inequalities": 10080
+  },
+  "independent_verification": false,
+  "mathematical_truth_verified": false,
+  "maximum_residuals": {
+    "finite_reconstruction": 9.63806118727532e-15,
+    "long_moment": 6.217248937900877e-15,
+    "rounded_operator": 4.440892098500626e-15,
+    "strain_variance": 3.469446951953614e-18,
+    "trace_cancel": 6.661338147750939e-16
+  },
+  "minimum_slacks": {
+    "G_operator": 4.803350750566463,
+    "H_operator": 0.0,
+    "RMS_transfer": -2.1425604743385663e-16,
+    "conditional_new_floor": 0.0,
+    "elliptic_RMS": 0.0,
+    "inherited_anchor": 0.0,
+    "integer_floor": -1.3322676295501878e-15,
+    "short_RMS_floor": 0.0,
+    "signed_defect_nonnegative": 0.0,
+    "strain_delta": 0.010074572363741806,
+    "strain_phase_grid": 3.7850686611419493e-06,
+    "weighted_contraction": -3.613667524937636e-14
+  },
+  "ok": true,
+  "phase_comparisons": 370,
+  "random_samples": 120,
+  "scope": "exact finite subchecks and numerical regressions; proofs are separately stated candidates",
+  "seed": 2026090611,
+  "strain": [
+    {
+      "Q": 18,
+      "Q_delta": 0.2636009976575169,
+      "delta": 0.014644499869862049,
+      "phase_variance": 0.0078125,
+      "short_energy": 1.6383798575168993
+    },
+    {
+      "Q": 36,
+      "Q_delta": 0.27459893709904115,
+      "delta": 0.007627748252751143,
+      "phase_variance": 0.0078125,
+      "short_energy": 1.637995189922867
+    },
+    {
+      "Q": 72,
+      "Q_delta": 0.2801662289265714,
+      "delta": 0.0038911976239801582,
+      "phase_variance": 0.007812500000000003,
+      "short_energy": 1.6378953365023168
+    },
+    {
+      "Q": 144,
+      "Q_delta": 0.28298459098272133,
+      "delta": 0.0019651707707133426,
+      "phase_variance": 0.0078125,
+      "short_energy": 1.6378690799509381
+    },
+    {
+      "Q": 288,
+      "Q_delta": 0.28440296251891084,
+      "delta": 0.000987510286523996,
+      "phase_variance": 0.0078125,
+      "short_energy": 1.6378623546968603
+    },
+    {
+      "Q": 576,
+      "Q_delta": 0.2851145081098707,
+      "delta": 0.0004949904654685255,
+      "phase_variance": 0.0078125,
+      "short_energy": 1.6378606532734328
+    }
+  ],
+  "thresholds_A_log2": [
+    {
+      "Q": 6,
+      "new": "0.00000000521429905446137938127563794223",
+      "new_over_old": "0.19793453793520975406",
+      "old": "0.0000000263435533225039516849084616069"
+    },
+    {
+      "Q": 12,
+      "new": "0.00000000260781049333028788286158050729",
+      "new_over_old": "0.39499354166621418929",
+      "old": "0.00000000660215982856245065820509579357"
+    },
+    {
+      "Q": 24,
+      "new": "0.00000000130398789361183435400151309729",
+      "new_over_old": "0.78874772541449846447",
+      "old": "0.00000000165323823016614044267184902187"
+    },
+    {
+      "Q": 48,
+      "new": "6.52004278492783291836613952822e-10",
+      "new_over_old": "1.575741562772552453",
+      "old": "4.13776150795671854954998354537e-10"
+    },
+    {
+      "Q": 96,
+      "new": "3.26003430732831094945123731458e-10",
+      "new_over_old": "3.1490015779234554566",
+      "old": "1.03525966140609994561616128932e-10"
+    },
+    {
+      "Q": 384,
+      "new": "8.15009585811104808713008578442e-11",
+      "new_over_old": "12.584019136818354208",
+      "old": "6.47654439293204627830110544898e-12"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "schema": "jin-math-computation-handoff/v1",
+  "problem_id": "preproject-rh",
+  "window_id": "pre-genesis-sequential",
+  "attempt_id": "A-RH-RMS-0011",
+  "claim_id": null,
+  "objective_sha256": "25c10136fa94db6445c889852a813740016a7391a1c6b2fb7e69f0837d047bfc",
+  "question": "Replace coefficientwise periodic transfer by RMS control, and test the sharpness boundary of global phase locking.",
+  "domain": "Finite signed Fourier matrices and fixed-pattern repetition limits.",
+  "assumptions": [
+    "Q is a positive integer; m in {0,1,2}; sum m=Q; one supplied center p+tau_p per occupied unit cell, tau in [0,1).",
+    "0<=a_p<=A<infinity; a_p=0 for m_p!=2. L_alpha is the precisely normalized periodic spectral expression in proof.md (1).",
+    "RMS transfer allows s=0; use of the inherited anchor estimate and the improved defect tradeoff requires s>0.",
+    "For growing-Q corollaries the depth cap is uniform and s tends to 2/3; the short arithmetic-style budget is an additional hypothesis, not an actual-zeta theorem."
+  ],
+  "requested_evidence": "numerical_evidence",
+  "backend": {
+    "name": "Python/NumPy/mpmath/Fraction",
+    "version": "3.13.5",
+    "interface": "local foreground process",
+    "inventory_snapshot_sha256": null
+  },
+  "exact_input": {
+    "seed": 2026090611,
+    "samples": 120,
+    "rational_weight_Q_range": [
+      1,
+      64
+    ],
+    "weight_alphas": [
+      "1/2",
+      "3/4",
+      "7/8",
+      "1",
+      "51/100"
+    ],
+    "rounding_Q_range": [
+      1,
+      4
+    ],
+    "objective_boundary": "README hash pins this bounded preproject task, not a v13 Project objective."
+  },
+  "reproduction_command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python check_rms_transfer.py --samples 120 --output validation.json",
+  "integrity_command": "python check_rms_transfer.py --check-package",
+  "code_artifacts": [
+    {
+      "path": "check_rms_transfer.py",
+      "sha256": "ed580fd875e51a0e4d11add74fdc84c99e2a4798cd9e7739c0d05019f0cd8f15"
+    }
+  ],
+  "result_artifacts": [
+    {
+      "path": "validation.json",
+      "sha256": "d3f431ac4d9d3974958cee95fd83f4f947789e6d040e134b781f75d4429e3c3c"
+    }
+  ],
+  "computation_record": {
+    "path": "computation-record.json",
+    "sha256": "da973782526d12931f9fa00e8af1ddf8a7f26c0fade2834315c114571ae0bdc1"
+  },
+  "evidence_grade": "numerical_evidence",
+  "cannot_imply": [
+    "No proof of RH or improved unconditional proportion of zeta zeros.",
+    "No extraction of the supplied cell/periodic representation from actual zeros or an arbitrary small signed defect.",
+    "No period-independent two-scale separation, source weights/localization transfer, or exceptional operator-energy control.",
+    "Numerical tests and exact finite checks do not verify the universal analytic quantifiers.",
+    "No independent-verifier receipt, upstream Lean build, or full-repository local test run.",
+    "The global-phase counterexample fails the short budget; it is not a counterexample to a period-free two-scale theorem.",
+    "The new conservative threshold is weaker than the old one for some small Q; only its growth order improves."
+  ]
+}
