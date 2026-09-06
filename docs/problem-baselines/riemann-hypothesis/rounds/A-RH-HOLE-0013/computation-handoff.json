@@ -1,0 +1,76 @@
+{
+  "schema": "jin-math-computation-handoff/v1",
+  "problem_id": "preproject-rh",
+  "window_id": "pre-genesis-sequential",
+  "attempt_id": "A-RH-HOLE-0013",
+  "claim_id": null,
+  "objective_sha256": "678104aa72287c43bfddd72109b2e33958d885eb078bd855d196804e8cc74c63",
+  "objective_boundary": "Pins this bounded README task, not a canonical v13 objective.",
+  "question": "Control anchor-free energy using a common-depth gauge and explicit dispersion cost; identify a signed obstruction to erasing arbitrary depths.",
+  "domain": "Finite supplied-cell signed box operators and periodic model limits.",
+  "assumptions": [
+    "Model M in claims.json.",
+    "A fixed finite depth cap; parent localization and anchor estimates remain candidate dependencies.",
+    "Limit claims require the explicitly ordered depth-dispersion hypothesis."
+  ],
+  "requested_evidence": "numerical_evidence",
+  "backend": {
+    "name": "Python/NumPy/mpmath/Fraction",
+    "version": "3.13.5",
+    "interface": "local foreground process",
+    "libraries": {
+      "mpmath": "1.3.0",
+      "numpy": "2.3.5",
+      "python": "3.13.5"
+    }
+  },
+  "exact_input": {
+    "seed": 2026090713,
+    "samples": 120,
+    "boundary_models": 4,
+    "alphas": [
+      "5/8",
+      "3/4",
+      "1"
+    ],
+    "block_lengths": [
+      2,
+      3,
+      5,
+      8
+    ],
+    "real_floor_lengths": [
+      2,
+      7,
+      8192
+    ]
+  },
+  "reproduction_command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python check_hole_depth.py --samples 120 --output validation.json",
+  "integrity_command": "python check_hole_depth.py --check-package",
+  "code_artifacts": [
+    {
+      "path": "check_hole_depth.py",
+      "sha256": "c6bb74ec45b4d1106ef605fc2143e4ca0e02482443a42271e0927dc754651d88"
+    }
+  ],
+  "result_artifacts": [
+    {
+      "path": "validation.json",
+      "sha256": "012dbba6247b7bc5e1ab0b2457fbac8ece24fa379d7f879f223e68c538c6a383"
+    }
+  ],
+  "computation_record": {
+    "path": "computation-record.json",
+    "sha256": "864fe9b267896ec067deb5ebefce1c71c094762b13e821bc6def894354f5627b"
+  },
+  "evidence_grade": "numerical_evidence",
+  "cannot_imply": [
+    "No RH proof, actual-zeta representation or improved unconditional zero proportion.",
+    "No proof that local depth dispersion is small for every small-defect sequence; the unrestricted period-free two-budget model problem remains open.",
+    "No source weight/localization, exceptional operator energy or arithmetic moment-budget transfer.",
+    "Numerical self-checks and exact finite arithmetic do not verify the analytic universal quantifiers.",
+    "No independent-verifier receipt, full-repository local test suite or upstream Lean build.",
+    "The variable-depth counterexample refutes only an unqualified finite-block comparison, not the two-budget target.",
+    "The positive dispersion tolerance is conservative; sampled R values are not a global optimization certificate."
+  ]
+}

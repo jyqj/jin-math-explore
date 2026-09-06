@@ -1,0 +1,138 @@
+{
+  "record_version": 1,
+  "execution_profile": "reproducible",
+  "status": "completed",
+  "task_file": {
+    "path": "README.md",
+    "sha256": "678104aa72287c43bfddd72109b2e33958d885eb078bd855d196804e8cc74c63"
+  },
+  "task": {
+    "question": "Control anchor-free energy using a common-depth gauge and explicit dispersion cost; identify a signed obstruction to erasing arbitrary depths.",
+    "domain": "Finite supplied-cell signed box operators and periodic model limits.",
+    "assumptions": [
+      "Model M in claims.json.",
+      "A fixed finite depth cap; parent localization and anchor estimates remain candidate dependencies.",
+      "Limit claims require the explicitly ordered depth-dispersion hypothesis."
+    ],
+    "deliverables": [
+      "README.md",
+      "proof.md",
+      "check_hole_depth.py",
+      "validation.json",
+      "claims.json",
+      "source-scope.md",
+      "computation-record.json",
+      "computation-handoff.json",
+      "checkpoint.json"
+    ]
+  },
+  "backend": {
+    "name": "Python/NumPy/mpmath/Fraction",
+    "version": "3.13.5",
+    "interface": "local foreground process",
+    "libraries": {
+      "mpmath": "1.3.0",
+      "numpy": "2.3.5",
+      "python": "3.13.5"
+    }
+  },
+  "backend_decision": {
+    "selected": "Python",
+    "reason": "Small signed matrices, rational inequalities and portable reproduction code. Executable/imports live-checked; sage and wolframscript are not on PATH.",
+    "inventory_snapshot_sha256": null,
+    "inventory_boundary": "The repository inventory entrypoint was inspected, but its companion probe and full checkout are not available locally; bundled runner not executed. This is a direct local capability check, not an assertion about all MCP backends.",
+    "fallback": "Not used; selected computation completed."
+  },
+  "precision": {
+    "seed": 2026090713,
+    "samples": 120,
+    "exact": "Fraction variance and rational threshold/counterexample inequalities.",
+    "numeric": "binary64 complex kernels; two-panel 96-node Gauss-Legendre integration per panel; 70-digit scalar integration and threshold arithmetic.",
+    "tolerance": "5e-9*(1+abs(left)+abs(right)) for inequalities; explicitly stated quadrature and counterexample residual tolerances in code.",
+    "interval_certified": false
+  },
+  "execution": {
+    "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python check_hole_depth.py --samples 120 --output validation.json",
+    "exit_status": 0,
+    "development_pilot_samples": 6,
+    "full_range_runs": 1,
+    "rerun_reason": null,
+    "path_boundary": "The actual foreground invocation used absolute /mnt/data/rh13/A-RH-HOLE-0013 paths; the portable command has the same inputs.",
+    "counts": {
+      "bad_blocks": 2031,
+      "block_checks": 10020,
+      "model_scale_checks": 1488,
+      "positive_depth_common_blocks": 1167,
+      "quadrature_checks": 16
+    },
+    "background_worker": false
+  },
+  "result_summary": {
+    "all_assertions": "PASS",
+    "random_models": 120,
+    "boundary_models": 4,
+    "weighted_variance_exact_cases": 324,
+    "rational_certificate_checks": 7,
+    "max_kernel_quadrature_residual": 1.0622613899613498e-12,
+    "counterexample": {
+      "analytic_upper_bound": "-3/3125",
+      "binary64_kernel_difference": -0.0013902434614294634,
+      "coefficient": "-0.13959142756283400293593762997442148",
+      "energy_difference": "-0.0013902434614302648237122753558216877"
+    },
+    "nonvacuous_real_floor": 1.6123458126148156,
+    "finite_bound_strength": "The combined finite ledger is conservative and numerically vacuous on the small random models; universal/asymptotic claims rely on the candidate argument, not those samples."
+  },
+  "code_artifacts": [
+    {
+      "path": "check_hole_depth.py",
+      "sha256": "c6bb74ec45b4d1106ef605fc2143e4ca0e02482443a42271e0927dc754651d88"
+    }
+  ],
+  "result_artifacts": [
+    {
+      "path": "validation.json",
+      "sha256": "012dbba6247b7bc5e1ab0b2457fbac8ece24fa379d7f879f223e68c538c6a383"
+    }
+  ],
+  "verification": {
+    "evidence_level": "numerical-evidence",
+    "exact_subchecks": "324 finite weighted-variance cases and seven rational sufficiency/remainder comparisons; these do not cover the analytic universal quantifiers.",
+    "independent_verifier_receipt": null,
+    "limitations": [
+      "No RH proof, actual-zeta representation or improved unconditional zero proportion.",
+      "No proof that local depth dispersion is small for every small-defect sequence; the unrestricted period-free two-budget model problem remains open.",
+      "No source weight/localization, exceptional operator energy or arithmetic moment-budget transfer.",
+      "Numerical self-checks and exact finite arithmetic do not verify the analytic universal quantifiers.",
+      "No independent-verifier receipt, full-repository local test suite or upstream Lean build.",
+      "The variable-depth counterexample refutes only an unqualified finite-block comparison, not the two-budget target.",
+      "The positive dispersion tolerance is conservative; sampled R values are not a global optimization certificate."
+    ]
+  },
+  "artifacts": [
+    {
+      "path": "README.md",
+      "sha256": "678104aa72287c43bfddd72109b2e33958d885eb078bd855d196804e8cc74c63"
+    },
+    {
+      "path": "proof.md",
+      "sha256": "5009d7cece822f8506b6e946df6acaa1366804ab07cb032d1fd8757d40602270"
+    },
+    {
+      "path": "check_hole_depth.py",
+      "sha256": "c6bb74ec45b4d1106ef605fc2143e4ca0e02482443a42271e0927dc754651d88"
+    },
+    {
+      "path": "validation.json",
+      "sha256": "012dbba6247b7bc5e1ab0b2457fbac8ece24fa379d7f879f223e68c538c6a383"
+    },
+    {
+      "path": "claims.json",
+      "sha256": "addcb7659b11f89ffd3ecbbdcd031057ffa04e5ca5b0f69055687562d004c478"
+    },
+    {
+      "path": "source-scope.md",
+      "sha256": "ff571de00a55ff579275eb8383939f99532e80a92e281cdd5740e8983b69ed67"
+    }
+  ]
+}
