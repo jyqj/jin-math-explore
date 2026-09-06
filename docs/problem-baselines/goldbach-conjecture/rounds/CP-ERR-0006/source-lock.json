@@ -1,0 +1,89 @@
+{
+  "schema": "goldbach-source-lock/v1",
+  "run_id": "run-20260907-goldbach-wbv-06",
+  "sources": [
+    {
+      "id": "S1",
+      "authors": [
+        "Jiamin Li",
+        "Jianya Liu"
+      ],
+      "title": "Theorem (1+1.9) on the Goldbach Conjecture",
+      "version": "arXiv:2606.05224v2",
+      "html": "https://arxiv.org/html/2606.05224v2",
+      "pdf": "https://arxiv.org/pdf/2606.05224v2",
+      "locators": [
+        "(1.12)-(1.13)",
+        "Lemma2.5",
+        "Lemma3.1",
+        "section5.3/(5.37)"
+      ],
+      "successful_pdf_screenshot_printed_pages_this_run": [
+        9,
+        39
+      ],
+      "role": "actual G8 source object and missing weighted interface; whole theorem not accepted as a premise",
+      "raw_pdf_sha256": null
+    },
+    {
+      "id": "S2",
+      "authors": [
+        "Amir Akbary",
+        "Kyle Hambrook"
+      ],
+      "title": "A variant of the Bombieri-Vinogradov theorem with explicit constants and applications",
+      "version": "arXiv:1309.2730v2",
+      "version_date": "2013-12-04",
+      "html": "https://arxiv.org/html/1309.2730v2",
+      "pdf": "https://arxiv.org/pdf/1309.2730v2",
+      "locators": [
+        "introduction SW character statement",
+        "(6.1)",
+        "Lemma6.1/(6.2)",
+        "proof (6.3)-(6.4) and following estimates"
+      ],
+      "actual_access": "primary arXiv HTML formulas/proof plus parsed PDF; abstract confirms v2",
+      "successful_pdf_screenshot_printed_pages_this_run": [
+        2
+      ],
+      "unsuccessful_screenshot_printed_pages": [
+        16,
+        17,
+        18
+      ],
+      "screenshot_failure": "cache miss; the critical formulas were read in primary HTML and PDF text, not claimed visually checked",
+      "publisher_download": "AMS PDF paths returned403; no later version silently substituted",
+      "raw_pdf_sha256": null,
+      "role": "explicitly imported maximal bilinear large-sieve lemma and classical SW/PNT input; no complete source-proof independent audit"
+    },
+    {
+      "id": "S3",
+      "author": "Pan Chengdong",
+      "title": "A new mean value theorem and its applications",
+      "journal": "Chinese Annals of Mathematics",
+      "volume_issue": "1(1)",
+      "year": 1980,
+      "pages": "149-160",
+      "url": "https://camath.fudan.edu.cn/camaen/ch/reader/view_abstract.aspx?file_no=1B114&flag=1",
+      "actual_access": "publisher abstract including a mean-value statement; full-text click failed",
+      "boundary": "pi-main statement and different f hypotheses; not the full Pan-Ding1979 paper",
+      "used_as_proof_premise": false,
+      "raw_pdf_sha256": null
+    },
+    {
+      "id": "S4",
+      "citation": "C.D. Pan and X.X. Ding, A new mean value theorem, Sci. Sinica (1979), Special Issue II,149-161",
+      "url": "https://www.prime.sdu.edu.cn/info/1011/1005.htm",
+      "actual_access": "author university bibliography",
+      "original_full_text_acquired": false,
+      "used_as_proof_premise": false
+    }
+  ],
+  "byte_integrity_boundary": "No source PDF bytes downloaded/hash-locked; text rendering and screenshots do not supply a PDF byte hash.",
+  "novelty": "Repository-local explicit application/quantifier bridge, not a claim of a new general distribution theorem. Large sieve and SW are classical.",
+  "remaining_source_debt": [
+    "independent validation of exact source use",
+    "Pan-Ding1979 archival full text",
+    "linear-sieve Cs uniformity outside this checkpoint"
+  ]
+}

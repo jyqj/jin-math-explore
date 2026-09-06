@@ -1,0 +1,24 @@
+{
+  "schema": "goldbach-wbv-validation/v1",
+  "stats": {
+    "orthogonality_cases": 26712,
+    "totient_identities": 200,
+    "totient_product_cases": 1600,
+    "arbitrary_weight_AP_cases": 2142,
+    "G8_N_cases": 253,
+    "G8_nonempty_cases": 175,
+    "G8_AP_cases": 1277,
+    "smooth_support_cases": 288,
+    "nonzero_D_on_smooth_support": 113,
+    "endpoint_checks": 238,
+    "dyadic_pair_checks": 9568,
+    "exact_large_sieve_cases": 432,
+    "radical_envelope_cases": 200,
+    "conductor_partition_cases": 12
+  },
+  "contract_mutations_rejected": 17,
+  "result_mutations_rejected_by_check": 5,
+  "total_negative_controls": 22,
+  "scope": "exact finite regressions and structural mutations, not asymptotic source verification",
+  "mathematical_truth_verified": false
+}

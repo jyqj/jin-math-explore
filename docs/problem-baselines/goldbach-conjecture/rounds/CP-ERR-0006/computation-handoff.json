@@ -1,0 +1,69 @@
+{
+  "schema": "goldbach-pregenesis-computation-handoff/v1",
+  "profile": "reproducible",
+  "checkpoint": "CP-ERR-0006",
+  "issue": 81,
+  "actor": {
+    "id": "openai-chatgpt",
+    "run_id": "run-20260907-goldbach-wbv-06",
+    "role": "solver"
+  },
+  "intent": "exact finite arithmetic tests of the new analytic proof interfaces; no numeric estimate of asymptotic N_A",
+  "backend": "CPython standard library Fraction and integers",
+  "python": "3.13.5",
+  "third_party_dependencies": [],
+  "backend_selection": "bounded character-kernel/factorization tests are exact integer tasks; portable standard-library delivery is sufficient",
+  "backend_live_check": {
+    "python": true,
+    "sage_on_path": null,
+    "wolframscript_on_path": null
+  },
+  "inputs": "exact domains, coefficient classes and examples in check_wbv.py; parameter cases A=3..12; analytic target A>=3 remains a separate proof",
+  "code_sha256": "6af368e13e5a6197b7701944d602009bd3297f4a0d1da3bfd14dc4b8bd7f8d2b",
+  "result_sha256": "607fec5d2960cc4932eb6d386d942f5df64be3f9a60e8bc48f047d0edcf803c6",
+  "proof_sha256": "edc950bdaa4a63140661931b9cbd5bff7da33141e6429500e677039d334aa225",
+  "actual_runs": [
+    {
+      "command": "python check_wbv.py --compute --output results.json",
+      "exit_code": 0,
+      "elapsed_seconds": 0.78,
+      "maxrss_kib": 100520,
+      "scope": "full finite suite, first result generation"
+    },
+    {
+      "command": "python -O check_wbv.py --compute",
+      "exit_code": 0,
+      "elapsed_seconds": 2.42,
+      "maxrss_kib": 108912,
+      "scope": "full finite replay, identical output with assertions disabled"
+    },
+    {
+      "command": "cmp normal-output optimized-output",
+      "exit_code": 0,
+      "scope": "the two full stdout files were byte-identical"
+    },
+    {
+      "command": "validate_contract + negative_controls",
+      "exit_code": 0,
+      "scope": "17 deliberately invalid contract variants rejected"
+    }
+  ],
+  "final_checks": "--check and --require-global are rerun after manifest freeze; their actual observed status is in the PR/Issue handoff",
+  "evidence_grade": "exact_check for finite identities; proof_candidate for the asymptotic bridge",
+  "not_run": [
+    "independent mathematical verifier",
+    "full local repository suite",
+    "legacy interval or prime-enumeration suites",
+    "bundled project computation-handoff validator/backend inventory",
+    "effective N0 calculation"
+  ],
+  "project_protocol_boundary": "pre-genesis documentation; no invented Project/window/objective IDs or v13 computation receipt",
+  "network": "direct Git access failed DNS; source PDF raw bytes not acquired; connected GitHub API used for persistence",
+  "cannot_imply": [
+    "the finite ranges prove the infinite statement",
+    "source theorem proof replay",
+    "independent acceptance",
+    "numerical N0",
+    "full Goldbach theorem"
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "schema": "goldbach-wbv-exact-regressions/v1",
+  "stats": {
+    "orthogonality_cases": 26712,
+    "totient_identities": 200,
+    "totient_product_cases": 1600,
+    "arbitrary_weight_AP_cases": 2142,
+    "G8_N_cases": 253,
+    "G8_nonempty_cases": 175,
+    "G8_AP_cases": 1277,
+    "smooth_support_cases": 288,
+    "nonzero_D_on_smooth_support": 113,
+    "endpoint_checks": 238,
+    "dyadic_pair_checks": 9568,
+    "exact_large_sieve_cases": 432,
+    "radical_envelope_cases": 200,
+    "conductor_partition_cases": 12
+  },
+  "principal_correction_witness": {
+    "N": 254,
+    "q": 3,
+    "residue": 2,
+    "count": 3,
+    "pi_mass": 8,
+    "removed_prime_mass": 2,
+    "nonprincipal_sum": 0,
+    "error_pi": "-1",
+    "character_only": "0"
+  },
+  "imprimitive_witness": {
+    "q": 6,
+    "d": 3,
+    "n": 2,
+    "primitive_value": -1,
+    "induced_value": 0
+  },
+  "hyperbola_witness": {
+    "N": 64,
+    "m": 13,
+    "p": 5,
+    "M": 8,
+    "rectangle_includes": true,
+    "product_cutoff_includes": false
+  },
+  "finite_only": true,
+  "mathematical_truth_verified": false,
+  "effective_numeric_N0": null,
+  "global_status": "INCONCLUSIVE",
+  "parameter_cases": [
+    {"A":3,"B":11,"D":11,"J":18,"rows":[{"id":"large_Q","N_power":"1","log_power":-7},{"id":"large_smallest_conductor","N_power":"1","log_power":-7},{"id":"large_m_side","N_power":"5/6","log_power":4},{"id":"large_p_side","N_power":"8/11","log_power":4},{"id":"small_SW","N_power":"1","log_power":-5},{"id":"small_removed_primes","N_power":"2/3","log_power":13},{"id":"principal_correction","N_power":"2/3","log_power":2},{"id":"pi_to_Li","N_power":"1","log_power":-16}],"normalized_G8_log_power":-1,"G8_multiplier":2,"lower_combination_multiplier_before_dividing_four":4},
+    {"A":4,"B":12,"D":12,"J":20,"rows":[{"id":"large_Q","N_power":"1","log_power":-8},{"id":"large_smallest_conductor","N_power":"1","log_power":-8},{"id":"large_m_side","N_power":"5/6","log_power":4},{"id":"large_p_side","N_power":"8/11","log_power":4},{"id":"small_SW","N_power":"1","log_power":-6},{"id":"small_removed_primes","N_power":"2/3","log_power":14},{"id":"principal_correction","N_power":"2/3","log_power":2},{"id":"pi_to_Li","N_power":"1","log_power":-18}],"normalized_G8_log_power":-2,"G8_multiplier":2,"lower_combination_multiplier_before_dividing_four":4},
+    {"A":5,"B":13,"D":13,"J":22,"rows":[{"id":"large_Q","N_power":"1","log_power":-9},{"id":"large_smallest_conductor","N_power":"1","log_power":-9},{"id":"large_m_side","N_power":"5/6","log_power":4},{"id":"large_p_side","N_power":"8/11","log_power":4},{"id":"small_SW","N_power":"1","log_power":-7},{"id":"small_removed_primes","N_power":"2/3","log_power":15},{"id":"principal_correction","N_power":"2/3","log_power":2},{"id":"pi_to_Li","N_power":"1","log_power":-20}],"normalized_G8_log_power":-3,"G8_multiplier":2,"lower_combination_multiplier_before_dividing_four":4},
+    {"A":6,"B":14,"D":14,"J":24,"rows":[{"id":"large_Q","N_power":"1","log_power":-10},{"id":"large_smallest_conductor","N_power":"1","log_power":-10},{"id":"large_m_side","N_power":"5/6","log_power":4},{"id":"large_p_side","N_power":"8/11","log_power":4},{"id":"small_SW","N_power":"1","log_power":-8},{"id":"small_removed_primes","N_power":"2/3","log_power":16},{"id":"principal_correction","N_power":"2/3","log_power":2},{"id":"pi_to_Li","N_power":"1","log_power":-22}],"normalized_G8_log_power":-4,"G8_multiplier":2,"lower_combination_multiplier_before_dividing_four":4},
+    {"A":7,"B":15,"D":15,"J":26,"rows":[{"id":"large_Q","N_power":"1","log_power":-11},{"id":"large_smallest_conductor","N_power":"1","log_power":-11},{"id":"large_m_side","N_power":"5/6","log_power":4},{"id":"large_p_side","N_power":"8/11","log_power":4},{"id":"small_SW","N_power":"1","log_power":-9},{"id":"small_removed_primes","N_power":"2/3","log_power":17},{"id":"principal_correction","N_power":"2/3","log_power":2},{"id":"pi_to_Li","N_power":"1","log_power":-24}],"normalized_G8_log_power":-5,"G8_multiplier":2,"lower_combination_multiplier_before_dividing_four":4},
+    {"A":8,"B":16,"D":16,"J":28,"rows":[{"id":"large_Q","N_power":"1","log_power":-12},{"id":"large_smallest_conductor","N_power":"1","log_power":-12},{"id":"large_m_side","N_power":"5/6","log_power":4},{"id":"large_p_side","N_power":"8/11","log_power":4},{"id":"small_SW","N_power":"1","log_power":-10},{"id":"small_removed_primes","N_power":"2/3","log_power":18},{"id":"principal_correction","N_power":"2/3","log_power":2},{"id":"pi_to_Li","N_power":"1","log_power":-26}],"normalized_G8_log_power":-6,"G8_multiplier":2,"lower_combination_multiplier_before_dividing_four":4},
+    {"A":9,"B":17,"D":17,"J":30,"rows":[{"id":"large_Q","N_power":"1","log_power":-13},{"id":"large_smallest_conductor","N_power":"1","log_power":-13},{"id":"large_m_side","N_power":"5/6","log_power":4},{"id":"large_p_side","N_power":"8/11","log_power":4},{"id":"small_SW","N_power":"1","log_power":-11},{"id":"small_removed_primes","N_power":"2/3","log_power":19},{"id":"principal_correction","N_power":"2/3","log_power":2},{"id":"pi_to_Li","N_power":"1","log_power":-28}],"normalized_G8_log_power":-7,"G8_multiplier":2,"lower_combination_multiplier_before_dividing_four":4},
+    {"A":10,"B":18,"D":18,"J":32,"rows":[{"id":"large_Q","N_power":"1","log_power":-14},{"id":"large_smallest_conductor","N_power":"1","log_power":-14},{"id":"large_m_side","N_power":"5/6","log_power":4},{"id":"large_p_side","N_power":"8/11","log_power":4},{"id":"small_SW","N_power":"1","log_power":-12},{"id":"small_removed_primes","N_power":"2/3","log_power":20},{"id":"principal_correction","N_power":"2/3","log_power":2},{"id":"pi_to_Li","N_power":"1","log_power":-30}],"normalized_G8_log_power":-8,"G8_multiplier":2,"lower_combination_multiplier_before_dividing_four":4},
+    {"A":11,"B":19,"D":19,"J":34,"rows":[{"id":"large_Q","N_power":"1","log_power":-15},{"id":"large_smallest_conductor","N_power":"1","log_power":-15},{"id":"large_m_side","N_power":"5/6","log_power":4},{"id":"large_p_side","N_power":"8/11","log_power":4},{"id":"small_SW","N_power":"1","log_power":-13},{"id":"small_removed_primes","N_power":"2/3","log_power":21},{"id":"principal_correction","N_power":"2/3","log_power":2},{"id":"pi_to_Li","N_power":"1","log_power":-32}],"normalized_G8_log_power":-9,"G8_multiplier":2,"lower_combination_multiplier_before_dividing_four":4},
+    {"A":12,"B":20,"D":20,"J":36,"rows":[{"id":"large_Q","N_power":"1","log_power":-16},{"id":"large_smallest_conductor","N_power":"1","log_power":-16},{"id":"large_m_side","N_power":"5/6","log_power":4},{"id":"large_p_side","N_power":"8/11","log_power":4},{"id":"small_SW","N_power":"1","log_power":-14},{"id":"small_removed_primes","N_power":"2/3","log_power":22},{"id":"principal_correction","N_power":"2/3","log_power":2},{"id":"pi_to_Li","N_power":"1","log_power":-34}],"normalized_G8_log_power":-10,"G8_multiplier":2,"lower_combination_multiplier_before_dividing_four":4}
+  ]
+}
