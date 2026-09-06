@@ -1,0 +1,74 @@
+{
+  "schema": "goldbach-pre-genesis-computation-record/v1",
+  "handoff_protocol_reference": "jin-math-computation-handoff/v1",
+  "registered_Project_handoff": false,
+  "reason": "pre-genesis docs archive, no objective or Project identity is fabricated",
+  "profile": "reproducible",
+  "work_issue": 74,
+  "actor": {
+    "id": "openai-chatgpt",
+    "run_id": "run-20260906-goldbach-g8-05",
+    "role": "solver"
+  },
+  "base_sha": "39002c5a6af8c7b7f093589e6a76cfd218fcbb99",
+  "parent_sha": "34e3da5875d04fdbcb6dfe21e9166d27a8a16a04",
+  "branch": "program/i-0074/goldbach-g8-cp5",
+  "question": "certify the fixed g8 integral and test the stated finite switching/upper-contract models",
+  "backend": {
+    "python": "3.13.5",
+    "implementation": "CPython",
+    "arithmetic": "stdlib Fraction and integers",
+    "external_dependencies": [],
+    "sage_on_path": null,
+    "wolframscript_on_path": null
+  },
+  "feasibility": "96 rational terms plus 593 finite N models; seconds and under128MiB observed, no long/background job",
+  "executions": [
+    {
+      "command": "python check_g8.py --compute --output results.json",
+      "exit_code": 0,
+      "observed_elapsed_seconds": 0.88,
+      "observed_maxrss_kib": 93868
+    },
+    {
+      "command": "python check_g8.py --compute",
+      "exit_code": 0,
+      "scope": "final scalar replay matches frozen numerical fields"
+    },
+    {
+      "command": "python check_g8.py --self-test",
+      "exit_code": 0,
+      "scope": "final 593-N regression output saved in validation.json"
+    },
+    {
+      "command": "python -O check_g8.py --self-test",
+      "exit_code": 0,
+      "scope": "identical output with Python assertions disabled"
+    },
+    {
+      "command": "python check_g8.py --require-global",
+      "exit_code": 1,
+      "expected": true
+    }
+  ],
+  "refinement_history": "Initial finite checker passed; added strict-cutoff/triple-count coverage and JSON-stable list serialization, then replayed final scalar and finite tests. This is solver self-checking, not independent verification.",
+  "code_sha256": "364f19ad71e2d68efc8f1708be4ef540231690c5f57af12ec2a4417117ddecd8",
+  "result_sha256": "3acd8eb88f0f9e12f7ab369fd458ac2f246edf89d66fedb1b67f6b105da11c67",
+  "finite_evidence_sha256": "0d4065f099ac177c9f05cf04e97ae4f429ce0c3fa9f5f90a124be20b1b6d315b",
+  "evidence_grade": "exact_check for finite arithmetic; analytic implications remain proof_candidate",
+  "not_executed": [
+    "independent verifier",
+    "whole local repository suite",
+    "original Pan-Ding/Iwaniec proof audit",
+    "raw PDF byte acquisition",
+    "bundled backend inventory or formal Project handoff validator"
+  ],
+  "transport": "direct git ls-remote failed DNS; connected GitHub used for repository persistence; remote CI recorded separately in PR handoff",
+  "cannot_imply": [
+    "full Goldbach proof",
+    "paper theorem refutation",
+    "actual finite-N G8 count enclosure",
+    "numeric N0",
+    "source-uniformity verification"
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "schema": "goldbach-source-scope/v1",
+  "access_date_utc": "2026-09-06",
+  "primary": {
+    "id": "S1",
+    "authors": [
+      "Jiamin Li",
+      "Jianya Liu"
+    ],
+    "title": "Theorem (1+1.9) on the Goldbach Conjecture",
+    "version": "arXiv:2606.05224v2",
+    "revision_displayed": "2026-08-08",
+    "html": "https://arxiv.org/html/2606.05224v2",
+    "pdf": "https://arxiv.org/pdf/2606.05224v2",
+    "printed_pages_screenshotted": [
+      9,
+      38,
+      39,
+      40,
+      43
+    ],
+    "locators": [
+      "(1.3)",
+      "(1.12)-(1.13)",
+      "Lemma 2.5 / (2.10)-(2.13)",
+      "Lemma 3.1",
+      "(5.33)-(5.41)",
+      "(5.51)"
+    ],
+    "raw_pdf_sha256": null,
+    "raw_pdf_status": "not_acquired; HTML/PDF screenshots are not byte hashes",
+    "whole_paper_independently_verified": false
+  },
+  "classical_sources": [
+    {
+      "id": "S2",
+      "citation": "C.D. Pan and X.X. Ding, A new mean value theorem, Sci. Sinica (1979), Special Issue II,149-161",
+      "primary_bibliography": "https://www.prime.sdu.edu.cn/info/1011/1005.htm",
+      "access": "university publication list and S1 bibliography; original theorem text not acquired",
+      "cannot_imply": "uniform weighted input for this N-dependent f_N has been audited"
+    },
+    {
+      "id": "S3",
+      "citation": "H. Iwaniec, A new form of the error term in the linear sieve, Acta Arith.37 (1980),307-320",
+      "doi": "10.4064/aa-37-1-307-320",
+      "publisher": "https://www.impan.pl/en/publishing-house/journals-and-series/acta-arithmetica/all/37/0/102638/a-new-form-of-the-error-term-in-the-linear-sieve",
+      "access": "publisher metadata; no original proof replay",
+      "metadata_correction": "S1 reference[22] lists volume114; publisher lists37",
+      "cannot_imply": "Cs uniformity has been discharged"
+    }
+  ],
+  "diagnoses": [
+    {
+      "id": "ISS-G8-RESIDUAL-P1",
+      "scope": "exact identity before/after (5.33)",
+      "status": "counterexample_and_infinite_family_candidate",
+      "repair": "T<=G8<=T+E0; retain square, unit and gcd branches"
+    },
+    {
+      "id": "ISS-G8-SWITCHED-SEQUENCE",
+      "scope": "(5.35) and AP count",
+      "status": "explicit_multiplicity_and_composite_examples",
+      "repair": "indexed B+ with composite elements allowed"
+    },
+    {
+      "id": "ISS-G8-LEGAL-SIEVE",
+      "scope": "(2.10) versus (5.36) invocation",
+      "status": "missing_monotone_cutoff_step",
+      "repair": "sieve at Z=sqrt(Q), not sqrt(N)"
+    },
+    {
+      "id": "ISS-G8-TRUNCATED-ENDPOINT",
+      "scope": "X with two endpoints versus displayed R1",
+      "status": "avoided_by_upper_enlargement",
+      "repair": "enlarge entire B and use X=sum Li(N/m), no mixed truncated main/untruncated error"
+    }
+  ],
+  "adopted_not_proved": [
+    "U-LS with eta-uniform Cs",
+    "U-WBV for specified N-dependent weights",
+    "classical Mertens/Li asymptotics",
+    "Bertrand theorem"
+  ],
+  "novelty_scope": "new repository-local candidate, not a literature-wide novelty claim"
+}
