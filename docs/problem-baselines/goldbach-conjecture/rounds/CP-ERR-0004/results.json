@@ -1,0 +1,33 @@
+{
+  "schema": "goldbach-g6-certificate/v1",
+  "object": "g6=53 integral_triangle psi((1/2-u-v)/a) du dv/(u v)",
+  "backend": "mpmath.iv",
+  "backend_version": "1.3.0",
+  "decimal_precision": 50,
+  "cells_per_piece": 4096,
+  "midpoint_evaluations": 12288,
+  "breakpoints": [
+    "8/53",
+    "344/1749",
+    "21/106",
+    "8/33"
+  ],
+  "taylor_degree": 48,
+  "outer_second_derivative_bound": "102576253/256",
+  "outer_error": "168374375/926089438298112",
+  "taylor_uniform_tail": "17763568394002504646778106689453125/13112838176736006407223002344317236565516484608",
+  "integrated_tail_allowance": "941469124882132746279239654541015625/78677029060416038443338014065903419393098907648",
+  "g6_enclosure": [
+    "1.633573342946618456",
+    "1.633573706594987299"
+  ],
+  "log_only_enclosure": [
+    "1.633080252089732671",
+    "1.633080615714169010"
+  ],
+  "safe_floor": "16335733/10000000",
+  "floor_gain_over_printed": "33/10000000",
+  "actual_G6_two_sided_enclosure": false,
+  "global_paper_closure": "INCONCLUSIVE",
+  "independently_verified": false
+}

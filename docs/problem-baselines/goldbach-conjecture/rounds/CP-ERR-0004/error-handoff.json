@@ -1,0 +1,68 @@
+{
+  "schema": "goldbach-error-handoff/v1",
+  "checkpoint": "CP-ERR-0004",
+  "contract": "contracts.json",
+  "findings": [
+    {
+      "id": "F-ERR-021",
+      "claim": "delete real nonnegative diagonal before squarefree BV; restore discrete-main diagonal cost separately",
+      "status": "solver_proof_candidate",
+      "proof": "sections 3-4"
+    },
+    {
+      "id": "F-ERR-022",
+      "claim": "whole G6 triangle legal under h<=109/3498 with s>=3; drift still paid",
+      "status": "solver_proof_candidate",
+      "proof": "section 2"
+    },
+    {
+      "id": "F-ERR-023",
+      "claim": "one-sided seven-term normalized G6 deficit, including coprime mass and sign-safe phi treatment",
+      "status": "conditional_solver_proof_candidate",
+      "proof": "(13)-(15)"
+    },
+    {
+      "id": "F-ERR-024",
+      "claim": "single-variable slice reduction and rational Taylor-tail certificate",
+      "status": "solver_proof_candidate",
+      "proof": "(16)-(20)"
+    },
+    {
+      "id": "F-ERR-025",
+      "claim": "g6>=1.6335733 by directed arithmetic plus proved analytic error bounds",
+      "status": "computed_certificate_pending_independent_review",
+      "evidence": "results.json"
+    },
+    {
+      "id": "F-ERR-026",
+      "claim": "log-only comparison cannot reach 1.63357; positive T correction is necessary for this target",
+      "status": "computed_certificate_pending_independent_review",
+      "evidence": "results.json"
+    },
+    {
+      "id": "F-ERR-027",
+      "claim": "under fixed uniform source constants, G6/S_N eventually exceeds 1.63357 with a separated small loss",
+      "status": "conditional_solver_proof_candidate",
+      "proof": "section 5"
+    }
+  ],
+  "fixed_loss": "(64/21)*epsilon0 + 212*Cs*eta",
+  "decaying_loss": "2*q_N+(2809/44)*r_N+2915/(4*z)+(2809/8)*h+212*Cs*eta^(-8)*exp(K)*(3*a*log(N))^(-1/3)+2*L*C_BV*log(N)^(2-A0)",
+  "parameter_order": [
+    "fix dimension-one K and source Cs uniform in small parameters",
+    "choose eta=epsilon0 small",
+    "fix A0>2 and associated B0,C_BV",
+    "choose N after all preceding parameters"
+  ],
+  "earliest_source_gate": "original linear-sieve implied constant Cs uniform in eta and all required sequence parameters",
+  "sensitivity_only": {
+    "old_displayed_margin": "43/25000",
+    "old_usable_reserve": "3/25000",
+    "new_g6_floor_gain": "33/10000000",
+    "gain_inserted_into_global_ledger": false
+  },
+  "next_solver_task": "G8 native upper contract: moving sieve boundary and two-prime modulus multiplicities before applying BV",
+  "next_independent_role": "audit source uniformity and this frozen local proof/certificate without solver context",
+  "background_verifier_started": false,
+  "global_status": "INCONCLUSIVE"
+}
