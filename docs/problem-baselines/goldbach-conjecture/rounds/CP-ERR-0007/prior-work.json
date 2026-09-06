@@ -1,0 +1,43 @@
+{
+  "schema": "goldbach-prior-work/v1",
+  "base_main": "39002c5a6af8c7b7f093589e6a76cfd218fcbb99",
+  "parent_issue": 81,
+  "parent_pr": 84,
+  "parent_commit": "de47073ced039039a376304d7db545eb8c06fb55",
+  "parent_subtree": "d249f14e959ff2c318ecf1bf61be954b1c22258f",
+  "parent_handoff_blob": "ff4015e00daebf427f0baf70d023763e32812367",
+  "fresh_reads": [
+    "main ref",
+    "PR84 open and unmerged",
+    "CP6 error-handoff.json",
+    "issue81 released lease",
+    "CP-ERR-0007 issue search returned zero"
+  ],
+  "inherited_frontier": "original linear-sieve Cs(K) dependence",
+  "older_predecessors": [
+    {
+      "checkpoint": "CP-ERR-0005",
+      "pr": 76,
+      "commit": "cfda3faea232564bb1bcd53347df3868552f5d97",
+      "retained": "indexed G8 switching and g8 cap; mathematical acceptance not assumed"
+    },
+    {
+      "checkpoint": "CP-ERR-0004",
+      "pr": 73,
+      "commit": "34e3da5875d04fdbcb6dfe21e9166d27a8a16a04",
+      "retained": "G6 lower contract; unchanged"
+    },
+    {
+      "issue": 50,
+      "retained": "global margin .00172 differs from reserve .00012; not altered"
+    }
+  ],
+  "not_replayed": [
+    "full CP6 checker",
+    "full earlier candidate packages",
+    "legacy MPFR suite"
+  ],
+  "new_delta": "explicit-sieve replacement for G8, with preproduct/actual-mass costs; original Cs gate separated from local dependency",
+  "all_predecessor_bytes_unchanged": true,
+  "no_independent_receipt_imported": true
+}

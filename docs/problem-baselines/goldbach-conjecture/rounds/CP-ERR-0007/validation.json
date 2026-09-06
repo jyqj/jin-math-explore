@@ -1,0 +1,62 @@
+{
+  "schema": "goldbach-cp7-finite-tests/v1",
+  "ok": true,
+  "counts": {
+    "level_one_and_convolution": 1024,
+    "totient_divisor_identities": 512,
+    "reciprocal_totient_bounds": 512,
+    "presieve_modulus_containment": 748,
+    "rebase_identities": 805,
+    "rebase_sum_bounds": 315,
+    "actual_switched_rebase": 22,
+    "actual_smooth_coprimality": 102,
+    "main_coefficient_inequalities": 243,
+    "parameter_budgets": 4
+  },
+  "actual_B_plus_cases": [
+    {
+      "N": 254,
+      "products": 2,
+      "mass": 8,
+      "moduli": 1
+    },
+    {
+      "N": 512,
+      "products": 1,
+      "mass": 4,
+      "moduli": 2
+    },
+    {
+      "N": 1000,
+      "products": 2,
+      "mass": 13,
+      "moduli": 2
+    },
+    {
+      "N": 2048,
+      "products": 2,
+      "mass": 12,
+      "moduli": 4
+    },
+    {
+      "N": 4032,
+      "products": 6,
+      "mass": 52,
+      "moduli": 2
+    },
+    {
+      "N": 4096,
+      "products": 6,
+      "mass": 52,
+      "moduli": 7
+    },
+    {
+      "N": 10000,
+      "products": 8,
+      "mass": 93,
+      "moduli": 4
+    }
+  ],
+  "source_theorem_verified": false,
+  "scope": "finite rational identities and inequality regressions only"
+}

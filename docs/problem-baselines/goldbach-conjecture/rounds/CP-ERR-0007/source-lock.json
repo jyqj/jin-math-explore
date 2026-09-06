@@ -1,0 +1,86 @@
+{
+  "schema": "goldbach-source-lock/v1",
+  "access_asof": "2026-09-07",
+  "raw_pdf_hashes_acquired": false,
+  "sources": [
+    {
+      "id": "S1",
+      "title": "Theorem (1+1.9) on the Goldbach Conjecture",
+      "authors": [
+        "Jiamin Li",
+        "Jianya Liu"
+      ],
+      "version": "arXiv:2606.05224v2",
+      "html": "https://arxiv.org/html/2606.05224v2",
+      "pdf": "https://arxiv.org/pdf/2606.05224v2",
+      "locators": [
+        "(2.6)",
+        "(2.8)-(2.13)",
+        "section5.3",
+        "(5.41)",
+        "(5.51)"
+      ],
+      "successful_printed_page_screenshots": [
+        9
+      ],
+      "raw_sha256": null,
+      "status": "source under audit; literal level-one endpoint issue identified; no main theorem refutation"
+    },
+    {
+      "id": "S2",
+      "title": "An explicit version of Chen's theorem and the linear sieve",
+      "authors": [
+        "Matteo Bordignon",
+        "Daniel R. Johnston",
+        "Valeriia Starichkova"
+      ],
+      "version": "arXiv:2207.09452v6",
+      "html": "https://arxiv.org/html/2207.09452v6",
+      "pdf": "https://arxiv.org/pdf/2207.09452v6",
+      "locators": [
+        "Theorem6",
+        "(3)-(11)",
+        "Table1",
+        "monotonicity after Table1"
+      ],
+      "successful_printed_page_screenshots": [
+        5
+      ],
+      "failed_printed_page_screenshots": [
+        4
+      ],
+      "other_access": "exact-version HTML and parsed PDF include missing screenshot page assumptions",
+      "observed_arxiv_version_date": "2025-06-25",
+      "observed_internal_pdf_date": "2025-06-26",
+      "observed_internal_html_date": "2026-08-24",
+      "raw_sha256": null,
+      "date_discrepancy": "recorded, not silently treated as byte-equivalent HTML/PDF",
+      "adopted_constant": "154 for 0<epsilon<=1/200, using Table1 and its monotonicity",
+      "original_table_computation_rerun": false,
+      "status": "imported theorem and reported constant, not independently rebuilt"
+    },
+    {
+      "id": "S3",
+      "title": "A new form of the error term in the linear sieve",
+      "author": "H. Iwaniec",
+      "journal": "Acta Arithmetica 37 (1980),307-320",
+      "doi": "10.4064/aa-37-1-307-320",
+      "publisher": "https://www.impan.pl/en/publishing-house/journals-and-series/acta-arithmetica/all/37/0/102638/a-new-form-of-the-error-term-in-the-linear-sieve",
+      "download_attempt": "https://www.impan.pl/shop/en/publication/transaction/download/product/102638",
+      "status": "publisher metadata read; full PDF returned403; container download also failed",
+      "raw_sha256": null,
+      "Cs_audit": "UNRESOLVED"
+    }
+  ],
+  "source_comparisons_not_used_as_dependencies": [
+    {
+      "source": "arXiv:2109.02851, Theorem2.10/Remark2.9",
+      "observation": "modified-sieve statement has a stronger two-sided product hypothesis; do not silently transfer it to N-dependent deletions"
+    },
+    {
+      "source": "arXiv:1512.03213, LemmaA.1",
+      "observation": "O_K(epsilon) comparison located, but this round selects the explicit BJS contract rather than treating a restatement as original-proof verification"
+    }
+  ],
+  "novelty_scope": "new repository-local interface proof, not a literature-wide priority claim"
+}

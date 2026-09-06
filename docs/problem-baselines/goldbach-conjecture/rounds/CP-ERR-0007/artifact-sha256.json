@@ -1,0 +1,18 @@
+{
+  "schema": "goldbach-artifact-manifest/v1",
+  "checkpoint": "CP-ERR-0007",
+  "scope": "Eleven payload files; this manifest is bound by the Git tree/head in the PR receipt.",
+  "sha256": {
+    "README.md": "7b87bfebfa4ca6dc36f256b1fb640dfe2726efc43811736b3ff9cc9768a94187",
+    "check_sieve.py": "720d12b6c8ba8edd6fb84ae5b56c85174698f7108a947f6d8442147289b82bd8",
+    "computation-handoff.json": "5ebebb575d5c150f0ac5df47ab199d97f1819cfb0ea066687cdc650b325908d4",
+    "contracts.json": "1cde2a5bf7a85ca675cce5d61795156cd138a172083b3938d86626dbb93f37d6",
+    "error-handoff.json": "b0352bbe562c6ef38bb742358583ac268877b97c4c8ae72f032a7aab3f62de08",
+    "prior-work.json": "73ea32236bcbd18ba80dbdd4de5ab2355e3b4f28160f9cb817e89647a0e9cbad",
+    "proof.md": "0b1bb277f1c59214c773eaa0efe74036088944120ecfcf2f7ae47409d28070e9",
+    "results.json": "2999fbc3d7f4fb0d6be9d3a46e3ffc5cb51495ee0e592e1d5da6aa0f281c41bd",
+    "source-lock.json": "eb05524cd16556035e31bd0c15a270ca2f8b97c2ad3ded99275691abd93c5851",
+    "validation.json": "ceeba052b662abf9e930aec98e866c35fcc16409c4865778970cca05746cd814",
+    "verification-ticket.md": "348981a174f4637494fee5e54ef0f34c4c8802658f159d69fdb766b948337b99"
+  }
+}
