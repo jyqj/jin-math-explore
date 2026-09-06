@@ -1,0 +1,78 @@
+{
+  "schema": "twin-tuple-source-lock/v1",
+  "as_of": "2026-09-07",
+  "authority": "reference_only",
+  "main_commit": "39002c5a6af8c7b7f093589e6a76cfd218fcbb99",
+  "upstream": {
+    "repository": "openai/PrimeGaps186",
+    "commit": "61340d0b74163003b32756bb16e91d9209a5e330",
+    "path": "Challenge.lean",
+    "git_blob": "2331eeeb808008cee37bac7aa0fb17e36f1f3c17",
+    "url": "https://github.com/openai/PrimeGaps186/blob/61340d0b74163003b32756bb16e91d9209a5e330/Challenge.lean",
+    "read_scope": "connector text lines1-100 and800-end; admissibleTuple and dhl_40_2 definitions",
+    "full_raw_sha256": null,
+    "used": "only fixed tuple and statement locator; no axiom or theorem conclusion assumed"
+  },
+  "predecessor": {
+    "issue": 38,
+    "review_issue": 39,
+    "commit": "d1281f07698255c7ade28edd438c7fc9c6c20646",
+    "path": "staging/preproject-twin-prime/A-TP-186-INPUT-0001/arithmetic-certificate.md",
+    "git_blob": "6828201e461553bba08af995e3d81ade9dc8ede8",
+    "read_scope": "full connector text; section6 checks one tuple only",
+    "new_dependency_on_unreviewed_mathematics": false
+  },
+  "history": [
+    {
+      "issue": 36,
+      "pr": 37,
+      "status": "baseline merged; reference_only"
+    },
+    {
+      "issues": [
+        44,
+        47,
+        49,
+        52,
+        53,
+        57,
+        59,
+        61,
+        62,
+        65
+      ],
+      "status": "frozen source/numerical candidates and review-ticket metadata consulted; no imported numerical premise or fresh rerun"
+    },
+    {
+      "issue": 80,
+      "status": "live round07 cap-stratification lease observed; unfrozen staging not consumed; files untouched"
+    }
+  ],
+  "primary_context": [
+    {
+      "url": "https://math.mit.edu/~primegaps/",
+      "title": "Narrow admissible tuples",
+      "read_scope": "web-rendered table shell only; dynamic rows not returned",
+      "used_as_numerical_input": false
+    },
+    {
+      "url": "https://kskedlaya.org/ant/chap-k-tuples.html",
+      "title": "Prime k-tuples",
+      "read_scope": "primary author lecture webpage; general context only",
+      "used_as_numerical_input": false
+    }
+  ],
+  "novelty_boundary": "This is a new repository certificate/classification asset, not a claim that H38/H39/H40 or endpoint detectors are new to the literature. Search was limited and does not establish global novelty.",
+  "unavailable_or_not_run": [
+    "full original source byte hashes",
+    "isolated mathematical verifier",
+    "prior local-only bulk archives",
+    "Lean/FLINT build",
+    "full repository checkout/local suite"
+  ],
+  "calculation_dependencies": [
+    "inputs.json",
+    "Python standard library",
+    "elementary finite-set proof in proof.md"
+  ]
+}

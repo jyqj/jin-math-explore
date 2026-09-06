@@ -1,0 +1,579 @@
+{
+  "schema": "twin-tuple-certificate/v1",
+  "case_order": [
+    [
+      38,
+      174
+    ],
+    [
+      38,
+      176
+    ],
+    [
+      39,
+      180
+    ],
+    [
+      39,
+      182
+    ],
+    [
+      40,
+      184
+    ],
+    [
+      40,
+      186
+    ]
+  ],
+  "cases": [
+    {
+      "k": 38,
+      "diameter": 174,
+      "layers": [
+        {
+          "prime": 2,
+          "count": 1,
+          "maximum_size": 88,
+          "sha256": "0f458116c1bd7a054145557dffa3d3afc7b5f1b624fe09b3e0ffef9902e29e00"
+        },
+        {
+          "prime": 3,
+          "count": 2,
+          "maximum_size": 59,
+          "sha256": "605f834bbb82c811303b449b95ba9b3de223a0e2902ddad128166ce34227c33e"
+        },
+        {
+          "prime": 5,
+          "count": 8,
+          "maximum_size": 48,
+          "sha256": "047b206018f742fd5108f6fe0ed5a0cec0324f8090f4549a971ef47cae65193f"
+        },
+        {
+          "prime": 7,
+          "count": 48,
+          "maximum_size": 42,
+          "sha256": "da562da876d6882fe13be2fcd90a4687162ec5f0d1049fdb86819f49f8ab7516"
+        },
+        {
+          "prime": 11,
+          "count": 135,
+          "maximum_size": 40,
+          "sha256": "8ea6e9440b1fd535cb25ced07f52fe36da8fe06cb60ce2fee21cb87447a407d9"
+        },
+        {
+          "prime": 13,
+          "count": 4,
+          "maximum_size": 38,
+          "sha256": "f18d3e609b9b3096a5c945e1294c6d9ce08b7c7d5b41bf2f608012c5b27111a5"
+        },
+        {
+          "prime": 17,
+          "count": 0,
+          "maximum_size": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "prime": 19,
+          "count": 0,
+          "maximum_size": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "prime": 23,
+          "count": 0,
+          "maximum_size": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "prime": 29,
+          "count": 0,
+          "maximum_size": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "prime": 31,
+          "count": 0,
+          "maximum_size": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "prime": 37,
+          "count": 0,
+          "maximum_size": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        }
+      ],
+      "final_masks": [],
+      "critical_after_17": []
+    },
+    {
+      "k": 38,
+      "diameter": 176,
+      "layers": [
+        {
+          "prime": 2,
+          "count": 1,
+          "maximum_size": 89,
+          "sha256": "0f529bb93f9322d67513ba87af46d49cfdad02d2e42d9d78f2f563dbc587c459"
+        },
+        {
+          "prime": 3,
+          "count": 2,
+          "maximum_size": 60,
+          "sha256": "fc1ab0140437539c5ebf35add51c5d9e11456c5ccbe4445fb2ab2e7b3ab4a69e"
+        },
+        {
+          "prime": 5,
+          "count": 8,
+          "maximum_size": 48,
+          "sha256": "b81d759956289f84e20e11e711c6e9ccf22169b53e4d7c1375ef8fd3db396574"
+        },
+        {
+          "prime": 7,
+          "count": 48,
+          "maximum_size": 42,
+          "sha256": "9a8682cfa784571d347ba6ce445089b95008772de8d41644bc307b10e128f968"
+        },
+        {
+          "prime": 11,
+          "count": 185,
+          "maximum_size": 40,
+          "sha256": "1cb51003c16560c1a943d3357e450144f8842273cdd8f0672769e1afce1fb8c9"
+        },
+        {
+          "prime": 13,
+          "count": 24,
+          "maximum_size": 38,
+          "sha256": "762d21b65c81118ff21f95824a5c8707578000c7fffe066eea1a2622bc1660fb"
+        },
+        {
+          "prime": 17,
+          "count": 8,
+          "maximum_size": 38,
+          "sha256": "7add701a1d8637c112f0dc1fe1e0f6c262e5c619231ad812d81eeb120c90f040"
+        },
+        {
+          "prime": 19,
+          "count": 6,
+          "maximum_size": 38,
+          "sha256": "17954881e494cc1d22cd77af762b2c12de7e87cc32ad34687e0fbe5bdac950c0"
+        },
+        {
+          "prime": 23,
+          "count": 6,
+          "maximum_size": 38,
+          "sha256": "17954881e494cc1d22cd77af762b2c12de7e87cc32ad34687e0fbe5bdac950c0"
+        },
+        {
+          "prime": 29,
+          "count": 6,
+          "maximum_size": 38,
+          "sha256": "17954881e494cc1d22cd77af762b2c12de7e87cc32ad34687e0fbe5bdac950c0"
+        },
+        {
+          "prime": 31,
+          "count": 6,
+          "maximum_size": 38,
+          "sha256": "17954881e494cc1d22cd77af762b2c12de7e87cc32ad34687e0fbe5bdac950c0"
+        },
+        {
+          "prime": 37,
+          "count": 6,
+          "maximum_size": 38,
+          "sha256": "17954881e494cc1d22cd77af762b2c12de7e87cc32ad34687e0fbe5bdac950c0"
+        }
+      ],
+      "final_masks": [
+        "0x112d265148b28949325a65b",
+        "0x132d264948a68945325a45b",
+        "0x132d265948b6814c325261b",
+        "0x1b0c94986502da2534c9699",
+        "0x1b44b4994522ca2524c9699",
+        "0x1b4cb49925229a2514c9691"
+      ],
+      "critical_after_17": []
+    },
+    {
+      "k": 39,
+      "diameter": 180,
+      "layers": [
+        {
+          "prime": 2,
+          "count": 1,
+          "maximum_size": 91,
+          "sha256": "eb36665329dc9e10848b4b4731f7e29bb975d1acc8b27721b0e89cad5256cad8"
+        },
+        {
+          "prime": 3,
+          "count": 2,
+          "maximum_size": 61,
+          "sha256": "4df37b011660042f2ff17b11ff5880ef7c20396fd6565824457707e521ac78d0"
+        },
+        {
+          "prime": 5,
+          "count": 8,
+          "maximum_size": 49,
+          "sha256": "b905cc2d2dc10f75c4f553159d003b2e3c95f52b3ef6da1b67cbfcce30972cb3"
+        },
+        {
+          "prime": 7,
+          "count": 48,
+          "maximum_size": 43,
+          "sha256": "a041b34edf90f5ce5f40564bd279e3cc930cc8b019e21a6fdc431d149d82f97f"
+        },
+        {
+          "prime": 11,
+          "count": 180,
+          "maximum_size": 41,
+          "sha256": "c929acf3ea41465a58dfaf4a3703932b459e99694bbcf00795102ede16b62c27"
+        },
+        {
+          "prime": 13,
+          "count": 20,
+          "maximum_size": 39,
+          "sha256": "d6502cbe409eba3e04d91ed7a07559f4befa632330ed3f3d7cae9ea59ef9d09f"
+        },
+        {
+          "prime": 17,
+          "count": 10,
+          "maximum_size": 39,
+          "sha256": "e92f36f71fefe2564a38655fa09334c816a59f7219e0f1689362ba752e3eb8e5"
+        },
+        {
+          "prime": 19,
+          "count": 0,
+          "maximum_size": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "prime": 23,
+          "count": 0,
+          "maximum_size": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "prime": 29,
+          "count": 0,
+          "maximum_size": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "prime": 31,
+          "count": 0,
+          "maximum_size": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "prime": 37,
+          "count": 0,
+          "maximum_size": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        }
+      ],
+      "final_masks": [],
+      "critical_after_17": []
+    },
+    {
+      "k": 39,
+      "diameter": 182,
+      "layers": [
+        {
+          "prime": 2,
+          "count": 1,
+          "maximum_size": 92,
+          "sha256": "7a1dd45af628a64c6f38c0f075dae1d555cd6f22fab11d15856810fb826200a6"
+        },
+        {
+          "prime": 3,
+          "count": 2,
+          "maximum_size": 62,
+          "sha256": "b4744f049e3fd897069142d3f0d75d2bfb516ed3acff4d208f6b4e2b11bcbf26"
+        },
+        {
+          "prime": 5,
+          "count": 8,
+          "maximum_size": 50,
+          "sha256": "2195922d61c40c8bdbcff19bbb1be4875e01f8e7f1e41670fd4d52e36daa8c0a"
+        },
+        {
+          "prime": 7,
+          "count": 48,
+          "maximum_size": 44,
+          "sha256": "eb34153a330cb5ae8c809a16b1bb8c69c10e5c4f2e2d2d2ef3eb5da6cb832be6"
+        },
+        {
+          "prime": 11,
+          "count": 246,
+          "maximum_size": 42,
+          "sha256": "282591afedbe386ff9d35f970c0b22e4afe1141ff6867a806b9c294f8f07a17a"
+        },
+        {
+          "prime": 13,
+          "count": 80,
+          "maximum_size": 40,
+          "sha256": "6158c9a36a005e4185c612da943c9c844bbd8ed60c25cee1fea431143d6e16dc"
+        },
+        {
+          "prime": 17,
+          "count": 22,
+          "maximum_size": 40,
+          "sha256": "e0379f77f8483e35e016fd2c10d3706fabb9e10644a0b2fd28ca539f49f5e529"
+        },
+        {
+          "prime": 19,
+          "count": 26,
+          "maximum_size": 39,
+          "sha256": "775b60ebdc7f50d8d31347735ea675d2faec10e1b6f845d413c4c244b82481e4"
+        },
+        {
+          "prime": 23,
+          "count": 26,
+          "maximum_size": 39,
+          "sha256": "775b60ebdc7f50d8d31347735ea675d2faec10e1b6f845d413c4c244b82481e4"
+        },
+        {
+          "prime": 29,
+          "count": 26,
+          "maximum_size": 39,
+          "sha256": "775b60ebdc7f50d8d31347735ea675d2faec10e1b6f845d413c4c244b82481e4"
+        },
+        {
+          "prime": 31,
+          "count": 26,
+          "maximum_size": 39,
+          "sha256": "775b60ebdc7f50d8d31347735ea675d2faec10e1b6f845d413c4c244b82481e4"
+        },
+        {
+          "prime": 37,
+          "count": 26,
+          "maximum_size": 39,
+          "sha256": "775b60ebdc7f50d8d31347735ea675d2faec10e1b6f845d413c4c244b82481e4"
+        }
+      ],
+      "final_masks": [
+        "0x912d265148b28949325a65b",
+        "0x932d264948a68945325a45b",
+        "0xd02d265148b28949325a65b",
+        "0xd12d265148928949325a65b",
+        "0xd12d265148b28949321a65b",
+        "0xd12d265148b28949325a64b",
+        "0xd22534c969868305a25a4cb",
+        "0xd225a4ca29165129264b4cb",
+        "0xd265a4c92914d128a64b48b",
+        "0xd325a45a0c16196932ca44b",
+        "0xd325a6580c06196932ca45b",
+        "0xd325a6580c06996132ca45b",
+        "0xd32d264948a48945325a45b",
+        "0xd32d264948a68945321a45b",
+        "0xd32d264948a68945325a05b",
+        "0xd32d264948a68945325a44b",
+        "0xda05a4ca29165129264b4cb",
+        "0xda2534c869960301a65a4cb",
+        "0xda2534c969860301a65a4cb",
+        "0xda2584ca29165129264b4cb",
+        "0xda25a4ca29125129264b4cb",
+        "0xda25a4ca29165129264b4c9",
+        "0xda6584c92914d128a64b48b",
+        "0xda65a4c929149128a64b48b",
+        "0xda65a4c92914d128a64b40b",
+        "0xda65a4c92914d128a64b489"
+      ],
+      "critical_after_17": []
+    },
+    {
+      "k": 40,
+      "diameter": 184,
+      "layers": [
+        {
+          "prime": 2,
+          "count": 1,
+          "maximum_size": 93,
+          "sha256": "2cadae862bd60c2cd7dc6931d3b371839108225e337885696e6ee22fbee508da"
+        },
+        {
+          "prime": 3,
+          "count": 2,
+          "maximum_size": 62,
+          "sha256": "14459daa61822b4852dd7bc1ccc4cf0a6d250e1d1349390462cb395c96396365"
+        },
+        {
+          "prime": 5,
+          "count": 8,
+          "maximum_size": 50,
+          "sha256": "b855bee9a53580325b23f6a7d993e6b3462f57cbfdeee5593498c6451ccab443"
+        },
+        {
+          "prime": 7,
+          "count": 48,
+          "maximum_size": 44,
+          "sha256": "726d9ba9a75ed764e84415d4889250e1e244e1668f439fbc804b8b83b973b891"
+        },
+        {
+          "prime": 11,
+          "count": 119,
+          "maximum_size": 42,
+          "sha256": "9d852842aa0d7298d3fd12842b37b00c25519c002b9227fb7c61c3e88c998e8f"
+        },
+        {
+          "prime": 13,
+          "count": 12,
+          "maximum_size": 40,
+          "sha256": "b9b37fd17d6a146dbc8cebb955e04f541ea21cb40ec6aa3fa487b32ad114b242"
+        },
+        {
+          "prime": 17,
+          "count": 6,
+          "maximum_size": 40,
+          "sha256": "2f29b04ae9f8eb6fbc47f88a651c5d84a881b0b43f2ca64c63816fff1ffa12f5"
+        },
+        {
+          "prime": 19,
+          "count": 0,
+          "maximum_size": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "prime": 23,
+          "count": 0,
+          "maximum_size": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "prime": 29,
+          "count": 0,
+          "maximum_size": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "prime": 31,
+          "count": 0,
+          "maximum_size": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "prime": 37,
+          "count": 0,
+          "maximum_size": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        }
+      ],
+      "final_masks": [],
+      "critical_after_17": [
+        "0xd12d265148b28949325a65b",
+        "0xd32d264948a68945325a45b",
+        "0xda25a4ca29165129264b4cb",
+        "0xda65a4c92914d128a64b48b",
+        "0x168969328a45944a4992d32d",
+        "0x169969324a45344a2992d22d"
+      ]
+    },
+    {
+      "k": 40,
+      "diameter": 186,
+      "layers": [
+        {
+          "prime": 2,
+          "count": 1,
+          "maximum_size": 94,
+          "sha256": "3af5c53f207ca700958d47bddb1128dfb66ea5a8e3799c45df2a938d73d562fa"
+        },
+        {
+          "prime": 3,
+          "count": 2,
+          "maximum_size": 63,
+          "sha256": "5c1aa5fc20ddb458608d93d532b71e276ef4117dce2343b31169be633233862a"
+        },
+        {
+          "prime": 5,
+          "count": 8,
+          "maximum_size": 51,
+          "sha256": "0c1aac5b10d8606cf29bb4ed6ce8adfd2ca6b0303a621236ddc58bcba3c91346"
+        },
+        {
+          "prime": 7,
+          "count": 48,
+          "maximum_size": 45,
+          "sha256": "15d41d7c71c1c305527a199d2a30b00190ec222445241ca53752ba578f89037e"
+        },
+        {
+          "prime": 11,
+          "count": 209,
+          "maximum_size": 43,
+          "sha256": "42976af5253cba07de9fbc3e2357d542a787a7c5ffd234ed44e0356720ad706e"
+        },
+        {
+          "prime": 13,
+          "count": 52,
+          "maximum_size": 41,
+          "sha256": "6b36ffc411ed43c20a672023c14157eba12adedf9c2296de66e38fab5dfb8dbd"
+        },
+        {
+          "prime": 17,
+          "count": 14,
+          "maximum_size": 41,
+          "sha256": "f9aab6cf358366b9cd59e631dbcf467406edca9525db43ce48d2a6ba54ee0dcb"
+        },
+        {
+          "prime": 19,
+          "count": 26,
+          "maximum_size": 40,
+          "sha256": "21b0efe2bb19817129e129c9ba4880452de9f1ffa76a7872539901f38251fccd"
+        },
+        {
+          "prime": 23,
+          "count": 26,
+          "maximum_size": 40,
+          "sha256": "21b0efe2bb19817129e129c9ba4880452de9f1ffa76a7872539901f38251fccd"
+        },
+        {
+          "prime": 29,
+          "count": 26,
+          "maximum_size": 40,
+          "sha256": "21b0efe2bb19817129e129c9ba4880452de9f1ffa76a7872539901f38251fccd"
+        },
+        {
+          "prime": 31,
+          "count": 26,
+          "maximum_size": 40,
+          "sha256": "21b0efe2bb19817129e129c9ba4880452de9f1ffa76a7872539901f38251fccd"
+        },
+        {
+          "prime": 37,
+          "count": 26,
+          "maximum_size": 40,
+          "sha256": "21b0efe2bb19817129e129c9ba4880452de9f1ffa76a7872539901f38251fccd"
+        }
+      ],
+      "final_masks": [
+        "0x2912d265148b28949325a65b",
+        "0x2932d264948a68945325a45b",
+        "0x2d02d265148b28949325a65b",
+        "0x2d12d265148928949325a65b",
+        "0x2d12d265148b28949321a65b",
+        "0x2d12d265148b28949325a64b",
+        "0x2d22534c969868305a25a4cb",
+        "0x2d32d264948a48945325a45b",
+        "0x2d32d264948a68945321a45b",
+        "0x2d32d264948a68945325a05b",
+        "0x2d32d264948a68945325a44b",
+        "0x2da2534c869960301a65a4cb",
+        "0x2da2534c969860301a65a4cb",
+        "0x348969328a45944a4992d32d",
+        "0x349969324a45344a2992d22d",
+        "0x34c969168305865a4cb2912d",
+        "0x34c969960301865a4cb2916d",
+        "0x34c969960301a6584cb2916d",
+        "0x368169328a45944a4992d32d",
+        "0x368961328a45944a4992d32d",
+        "0x368969328a44944a4992d32d",
+        "0x368969328a45944a4992d325",
+        "0x369961324a45344a2992d22d",
+        "0x369969324a45244a2992d22d",
+        "0x369969324a45344a2992d02d",
+        "0x369969324a45344a2992d225"
+      ],
+      "critical_after_17": []
+    }
+  ]
+}

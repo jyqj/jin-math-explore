@@ -1,0 +1,114 @@
+{
+  "schema": "twin-tuple-computation-record/v1",
+  "attempt": "A-TP-TUPLE-0008",
+  "as_of": "2026-09-07",
+  "actor": {
+    "id": "openai-chatgpt",
+    "run_id": "run-20260907-twin-tuple-08",
+    "role": "solver"
+  },
+  "profile": "reproducible certificate with distinct implementation replay",
+  "intent": "exact finite combinatorial enumeration and conditional algebraic transfer",
+  "backend": {
+    "primary": "CPython int bitsets",
+    "cross_check": "CPython frozenset transitions and literal combinations",
+    "version": "3.13.5",
+    "implementation": "CPython",
+    "dependencies": "Python standard library only",
+    "floating_point_acceptance": false
+  },
+  "feasibility": {
+    "maximum_half_grid_points": 94,
+    "maximum_retained_states_observed": 246,
+    "full_cases": 6,
+    "largest_prime_tested": 37,
+    "method": "cardinality pruning over every omitted residue; no heuristic cuts or budget cutoff"
+  },
+  "backend_selection_reason": "A portable, self-contained finite certificate is the engineering constraint. Integer and set primitives exactly implement the proved recurrence; no external CAS is needed. No CAS/Lean/FLINT execution is claimed.",
+  "results": {
+    "checked_positive_tuples": 58,
+    "corruptions_rejected": 20,
+    "endpoint_truth_table_states": 156,
+    "independently_verified": false,
+    "literal_subset_cases": 75,
+    "literal_subsets_examined": 9933,
+    "new_prime_gap_bound": false,
+    "ok": true,
+    "p17_critical_survivors": 6,
+    "replayed_cases": 6,
+    "source_missing_residues": {
+      "11": 7,
+      "13": 5,
+      "17": 11,
+      "19": 8,
+      "2": 1,
+      "23": 16,
+      "29": 9,
+      "3": 1,
+      "31": 4,
+      "37": 3,
+      "5": 4,
+      "7": 3
+    }
+  },
+  "commands": [
+    {
+      "command": "python -B enumerate_tuples.py --output-dir <new-empty-directory>",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "stdout": "{\"cases\": 6, \"ok\": true, \"summaries\": [{\"k\": 38, \"lexicographic_first\": [0, 2, 6, 8, 12, 18, 20, 26, 30, 32, 36, 42, 48, 50, 56, 62, 68, 72, 78, 86, 90, 96, 98, 102, 110, 116, 120, 128, 132, 138, 140, 146, 152, 156, 158, 162, 168, 176], \"minimum_diameter_candidate\": 176, \"normalized_minimizers\": 6, \"reflection_classes\": 3, \"self_reflecting\": 0, \"source_tuple_present\": false}, {\"k\": 39, \"lexicographic_first\": [0, 2, 6, 8, 12, 18, 20, 26, 30, 32, 36, 42, 48, 50, 56, 62, 68, 72, 78, 86, 90, 96, 98, 102, 110, 116, 120, 128, 132, 138, 140, 146, 152, 156, 158, 162, 168, 176, 182], \"minimum_diameter_candidate\": 182, \"normalized_minimizers\": 26, \"reflection_classes\": 13, \"self_reflecting\": 0, \"source_tuple_present\": false}, {\"k\": 40, \"lexicographic_first\": [0, 2, 6, 8, 12, 18, 20, 26, 30, 32, 36, 42, 48, 50, 56, 62, 68, 72, 78, 86, 90, 96, 98, 102, 110, 116, 120, 128, 132, 138, 140, 146, 152, 156, 158, 162, 168, 176, 182, 186], \"minimum_diameter_candidate\": 186, \"normalized_minimizers\": 26, \"reflection_classes\": 13, \"self_reflecting\": 0, \"source_tuple_present\": true}]}",
+      "stderr": "",
+      "elapsed_seconds": 0.67268,
+      "fresh_files_equal_frozen": true
+    },
+    {
+      "command": "python -B verify_tuples.py --self-test",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "stdout": "{\"checked_positive_tuples\": 58, \"corruptions_rejected\": 20, \"endpoint_truth_table_states\": 156, \"independently_verified\": false, \"literal_subset_cases\": 75, \"literal_subsets_examined\": 9933, \"new_prime_gap_bound\": false, \"ok\": true, \"p17_critical_survivors\": 6, \"replayed_cases\": 6, \"source_missing_residues\": {\"11\": 7, \"13\": 5, \"17\": 11, \"19\": 8, \"2\": 1, \"23\": 16, \"29\": 9, \"3\": 1, \"31\": 4, \"37\": 3, \"5\": 4, \"7\": 3}}",
+      "stderr": "",
+      "elapsed_seconds": 1.495009
+    },
+    {
+      "command": "python -O -B verify_tuples.py --self-test",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "stdout": "{\"checked_positive_tuples\": 58, \"corruptions_rejected\": 20, \"endpoint_truth_table_states\": 156, \"independently_verified\": false, \"literal_subset_cases\": 75, \"literal_subsets_examined\": 9933, \"new_prime_gap_bound\": false, \"ok\": true, \"p17_critical_survivors\": 6, \"replayed_cases\": 6, \"source_missing_residues\": {\"11\": 7, \"13\": 5, \"17\": 11, \"19\": 8, \"2\": 1, \"23\": 16, \"29\": 9, \"3\": 1, \"31\": 4, \"37\": 3, \"5\": 4, \"7\": 3}}",
+      "stderr": "",
+      "elapsed_seconds": 1.572939
+    },
+    {
+      "command": "python -B verify_tuples.py --require-global",
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "stdout": "",
+      "stderr": "{\"ok\": false, \"error\": \"refused: this package cannot certify a prime-gap theorem or twin primes\"}",
+      "elapsed_seconds": 0.57642
+    }
+  ],
+  "normal_and_optimized_stdout_equal": true,
+  "payload_sha256": {
+    "enumerate_tuples.py": "aafd392029d8555a31b9a3ce24e25e7a74008d5e22b4d47b6fd5e0505826b162",
+    "verify_tuples.py": "06c2dca3b6db66a1628497d4cb686926863caa1bda97ce18d5047cd161d539c1",
+    "inputs.json": "9e09373a12e65436f60fab231ce0b7a9e02a460e42dc8d3167c177f92d8797ba",
+    "certificate.json": "063c889ffff6733dd66771392a754efc42aaa665127a00ca9d198880081f46c2",
+    "results.json": "e99bca85d8d3a0e545b5c8fc04d129fafe1aa8f84741013ba01f5b1ec5b8e315",
+    "proof.md": "783333b57774420bae054aea8ca2c4e6a094d441fd5e8c9f76062b7c041d0cc6"
+  },
+  "coverage_proof": "proof.md sections1-3; general claims remain proof_candidate",
+  "independent_mathematical_verifier": false,
+  "not_run": [
+    "full repository checkout/local unit suite (git DNS resolution failed)",
+    "repository handoff validator (pre-project archive, not a Project transaction)",
+    "upstream Lean/FLINT",
+    "physical integral calculations",
+    "independent reviewer"
+  ],
+  "cannot_imply": [
+    "global prime-gap improvement",
+    "twin-prime conjecture",
+    "external theorem input validation",
+    "Project authority"
+  ],
+  "hash_check_note": "The final eleven-payload manifest is checked after writing this record and the handoff; its actual stdout is attached to Issue/PR to avoid self-referential log hashes."
+}

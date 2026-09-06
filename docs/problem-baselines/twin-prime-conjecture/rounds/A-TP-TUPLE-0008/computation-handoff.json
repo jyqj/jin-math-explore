@@ -1,0 +1,84 @@
+{
+  "protocol": "jin-math-computation-handoff/v1",
+  "scope": "pre_project_reference_only_archive",
+  "project_id": null,
+  "window_id": null,
+  "objective_sha256": null,
+  "attempt_id": "A-TP-TUPLE-0008",
+  "claim_ids": [
+    "T8-01",
+    "T8-02",
+    "T8-03",
+    "T8-04",
+    "T8-05"
+  ],
+  "identity_note": "No dummy Project ID or formal Project authority is created. This is an archive binding with explicit null Project identity; no Project-schema validation PASS is claimed.",
+  "issue": 85,
+  "lease_id": "L-0085-twin-tuple-08",
+  "branch": "program/i-0085/twin-tuple-obstruction-08",
+  "base_sha": "39002c5a6af8c7b7f093589e6a76cfd218fcbb99",
+  "question": "Exhaust all normalized admissible 38/39/40-tuples at the six locked diameters; classify minimizers and test the endpoint-exclusion detector.",
+  "domain": "finite subsets of integers; all primes reduced by normalization/cardinality; endpoint indicators in {0,1}, interior count0..38",
+  "assumptions": [
+    "elementary finite arithmetic and the explicit coverage proof",
+    "nonnegative finite weights only for conditional detector transfer"
+  ],
+  "requested_evidence_grade": "exact_check",
+  "actual_evidence_grade": "exact_check plus solver proof_candidate; no isolated review",
+  "backend": "CPython3.13.5 standard-library integers/finite sets",
+  "reproduce": [
+    "python -B enumerate_tuples.py --output-dir <new-empty-directory>",
+    "compare generated certificate.json and results.json byte-for-byte with the frozen copies",
+    "python -B verify_tuples.py --self-test --check-hashes",
+    "python -O -B verify_tuples.py --self-test --check-hashes",
+    "python -B verify_tuples.py --require-global (expected exit1)"
+  ],
+  "artifacts": [
+    {
+      "path": "inputs.json",
+      "sha256": "9e09373a12e65436f60fab231ce0b7a9e02a460e42dc8d3167c177f92d8797ba"
+    },
+    {
+      "path": "enumerate_tuples.py",
+      "sha256": "aafd392029d8555a31b9a3ce24e25e7a74008d5e22b4d47b6fd5e0505826b162"
+    },
+    {
+      "path": "verify_tuples.py",
+      "sha256": "06c2dca3b6db66a1628497d4cb686926863caa1bda97ce18d5047cd161d539c1"
+    },
+    {
+      "path": "certificate.json",
+      "sha256": "063c889ffff6733dd66771392a754efc42aaa665127a00ca9d198880081f46c2"
+    },
+    {
+      "path": "results.json",
+      "sha256": "e99bca85d8d3a0e545b5c8fc04d129fafe1aa8f84741013ba01f5b1ec5b8e315"
+    },
+    {
+      "path": "proof.md",
+      "sha256": "783333b57774420bae054aea8ca2c4e6a094d441fd5e8c9f76062b7c041d0cc6"
+    },
+    {
+      "path": "source-lock.json",
+      "sha256": "0a654c6a5299e1762087582ebf5762b92f1d2242ec13e89fe29c740758b732d3"
+    },
+    {
+      "path": "computation-record.json",
+      "sha256": "27cb12acb2bcde60f9013eef4b02b3fa9d9ffffd4d713e71b9c88564e4812c43"
+    },
+    {
+      "path": "verification-ticket.md",
+      "sha256": "fb634f57133c85eaf1e907db3f6faa813da596fa29f5d49996513dfb9dc8138c"
+    }
+  ],
+  "next_action": "New isolated reviewer audits T8-01..05; next solver estimates the fixed40 endpoint correlation or develops a39-dimensional analytic certificate. No worker is launched.",
+  "blocking_mathematics": "The weighted endpoint pair term is not bounded by a demonstrated positive detection margin. DHL39/38 are not established here.",
+  "cannot_imply": [
+    "a new prime-gap upper bound",
+    "a lower bound on actual prime gaps",
+    "DHL39 or DHL38",
+    "infinitely many twins",
+    "independent verification or Project completion"
+  ],
+  "delivery": "All twelve small files are intended for the actual PR; final remote head/tree and observed CI belong to its append-only handoff. No bulk data is required."
+}
