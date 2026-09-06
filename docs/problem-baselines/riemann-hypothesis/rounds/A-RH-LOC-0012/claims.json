@@ -1,0 +1,192 @@
+{
+  "format": "rh-local-gauges-claims/v1",
+  "attempt": "A-RH-LOC-0012",
+  "archive_status": "reference_only",
+  "dependencies": {
+    "parent": {
+      "commit": "215e35afba58d1a80b0783a41fa4651c6841afba",
+      "path": "docs/problem-baselines/riemann-hypothesis/rounds/A-RH-RMS-0011/proof.md",
+      "git_blob_sha1": "fe0e14d28ddf5116a8ddef690b7718652dbe92df",
+      "status": "proof_candidate",
+      "receipt": null
+    }
+  },
+  "claims": [
+    {
+      "id": "A-RH-LOC-0012-C01",
+      "title": "Signed block localization",
+      "statement": "Equation (4) bounds the difference between the periodic moment and finite block-energy average by B_alpha,A(L), uniformly in Q.",
+      "quantifier_scope": "All finite cell models, integer L>=2, integer shifts, 0<alpha<=1.",
+      "assumptions": [
+        "Uniform finite depth cap; supplied one-orbit-per-cell model."
+      ],
+      "dependency_refs": [],
+      "evidence_refs": [
+        "proof.md sections 1-2",
+        "validation.json"
+      ],
+      "evidence_grade": "proof_candidate",
+      "verifier_receipt": null,
+      "cannot_imply": [
+        "No independent mathematical verification or unconditional zeta-zero improvement.",
+        "No coverage theorem for actual zeros or proof of RH.",
+        "No unrestricted period-free conclusion after deleting the explicit H condition."
+      ]
+    },
+    {
+      "id": "A-RH-LOC-0012-C02",
+      "title": "Local anchor cost",
+      "statement": "Equation (9) bounds summed best-anchor local phase/depth cost by C_A(pi^2 L^2+A^2/4)delta/k_*.",
+      "quantifier_scope": "All block partitions; good blocks have at least one simple atom.",
+      "assumptions": [
+        "Inherited signed slack and positive two-channel energy; no global phase."
+      ],
+      "dependency_refs": [
+        "parent"
+      ],
+      "evidence_refs": [
+        "proof.md section 3",
+        "validation.json"
+      ],
+      "evidence_grade": "proof_candidate",
+      "verifier_receipt": null,
+      "cannot_imply": [
+        "No independent mathematical verification or unconditional zeta-zero improvement.",
+        "No coverage theorem for actual zeros or proof of RH.",
+        "No unrestricted period-free conclusion after deleting the explicit H condition."
+      ]
+    },
+    {
+      "id": "A-RH-LOC-0012-C03",
+      "title": "Local RMS and finite wrap",
+      "statement": "Equations (10)-(13) control independent block roundings, finite boundary corrections and the aggregated integer floor.",
+      "quantifier_scope": "Every 1/2<alpha<=1, all allowed finite blocks.",
+      "assumptions": [
+        "Finite normalized continuous boxes; rounded mass cap four; bounded depth."
+      ],
+      "dependency_refs": [],
+      "evidence_refs": [
+        "proof.md section 4",
+        "validation.json"
+      ],
+      "evidence_grade": "proof_candidate",
+      "verifier_receipt": null,
+      "cannot_imply": [
+        "No independent mathematical verification or unconditional zeta-zero improvement.",
+        "No coverage theorem for actual zeros or proof of RH.",
+        "No unrestricted period-free conclusion after deleting the explicit H condition."
+      ]
+    },
+    {
+      "id": "A-RH-LOC-0012-C04",
+      "title": "Finite local-gauge budget",
+      "statement": "Equation (14) gives a period-independent-constant lower bound retaining h,beta,eta and both positive parts.",
+      "quantifier_scope": "All Q, integer L>=2 and shifts; includes entirely bad partitions by stated convention.",
+      "assumptions": [
+        "C01-C03; finite bad-block signed inequality."
+      ],
+      "dependency_refs": [
+        "parent"
+      ],
+      "evidence_refs": [
+        "proof.md section 5",
+        "validation.json"
+      ],
+      "evidence_grade": "proof_candidate",
+      "verifier_receipt": null,
+      "cannot_imply": [
+        "No independent mathematical verification or unconditional zeta-zero improvement.",
+        "No coverage theorem for actual zeros or proof of RH.",
+        "No unrestricted period-free conclusion after deleting the explicit H condition."
+      ]
+    },
+    {
+      "id": "A-RH-LOC-0012-C05",
+      "title": "Conditional period-free separation",
+      "statement": "With H defined by (15), liminf L_3/4>=F(H). H<(101-sqrt(7321))/144 excludes the short budget; H<=1/10 gives gap 31/10260.",
+      "quantifier_scope": "Sequences with arbitrary periods, uniform A, s_n->2/3 and delta_n->0.",
+      "assumptions": [
+        "Correct fixed-L-then-sequence limit order; explicit anchor-free mass condition."
+      ],
+      "dependency_refs": [
+        "parent"
+      ],
+      "evidence_refs": [
+        "proof.md section 6",
+        "validation.json"
+      ],
+      "evidence_grade": "proof_candidate",
+      "verifier_receipt": null,
+      "cannot_imply": [
+        "No independent mathematical verification or unconditional zeta-zero improvement.",
+        "No coverage theorem for actual zeros or proof of RH.",
+        "No unrestricted period-free conclusion after deleting the explicit H condition."
+      ]
+    },
+    {
+      "id": "A-RH-LOC-0012-C06",
+      "title": "Strict extension on cyclic strain",
+      "statement": "For the given strain and Q divisible by 36, Q delta>=1/96 while H=0. The new condition applies where Q delta->0 fails.",
+      "quantifier_scope": "All multiples Q of 36 in the explicit family.",
+      "assumptions": [
+        "Parent real defect identity and cyclic strain construction."
+      ],
+      "dependency_refs": [
+        "parent"
+      ],
+      "evidence_refs": [
+        "proof.md section 7",
+        "validation.json"
+      ],
+      "evidence_grade": "proof_candidate",
+      "verifier_receipt": null,
+      "cannot_imply": [
+        "No independent mathematical verification or unconditional zeta-zero improvement.",
+        "No coverage theorem for actual zeros or proof of RH.",
+        "No unrestricted period-free conclusion after deleting the explicit H condition."
+      ]
+    },
+    {
+      "id": "A-RH-LOC-0012-C07",
+      "title": "Coverage cannot follow from small defect",
+      "statement": "The three-run bounded-depth family has delta->0 and H=1/3; its short moment tends to 16/9, so it is not a two-budget counterexample.",
+      "quantifier_scope": "Q=6k, k->infinity, with the specified marks, phases and depth.",
+      "assumptions": [
+        "Fixed L first for the h limit; bounded-depth homogeneous-run energy."
+      ],
+      "dependency_refs": [],
+      "evidence_refs": [
+        "proof.md section 8 equation (20)",
+        "validation.json"
+      ],
+      "evidence_grade": "proof_candidate",
+      "verifier_receipt": null,
+      "cannot_imply": [
+        "No independent mathematical verification or unconditional zeta-zero improvement.",
+        "No coverage theorem for actual zeros or proof of RH.",
+        "No unrestricted period-free conclusion after deleting the explicit H condition."
+      ]
+    },
+    {
+      "id": "A-RH-LOC-0012-C08",
+      "title": "Residual scalar obstruction",
+      "statement": "At s=2/3,h=1/3,beta=2/9 the stated scalar constraints allow the floor 286/189, below 19/12 by 53/756.",
+      "quantifier_scope": "The explicitly defined scalar relaxation only.",
+      "assumptions": [
+        "No assertion that the scalar point is realized by an exponential configuration."
+      ],
+      "dependency_refs": [],
+      "evidence_refs": [
+        "proof.md section 8 equation (21)",
+        "validation.json"
+      ],
+      "evidence_grade": "proof_candidate",
+      "verifier_receipt": null,
+      "cannot_imply": [
+        "No independent mathematical verification or unconditional zeta-zero improvement.",
+        "No coverage theorem for actual zeros or proof of RH.",
+        "No unrestricted period-free conclusion after deleting the explicit H condition."
+      ]
+    }
+  ]
+}

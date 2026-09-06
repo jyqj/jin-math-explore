@@ -1,0 +1,76 @@
+{
+  "schema": "jin-math-computation-handoff/v1",
+  "problem_id": "preproject-rh",
+  "window_id": "pre-genesis-sequential",
+  "attempt_id": "A-RH-LOC-0012",
+  "claim_id": null,
+  "objective_sha256": "08ecd24ceb970013a692fac9cf602c78fc2e8c7490bd544288e7362757bb99a1",
+  "objective_boundary": "Bounded task README hash, not a v13 Project objective.",
+  "question": "Localize the two-scale transfer and retain an explicit anchor-free mass budget.",
+  "domain": "Finite signed exponential operators and exact periodic-limit models.",
+  "assumptions": [
+    "Supplied mean-one periodic cells, m in {0,1,2}, tau in [0,1), a=0 unless m=2.",
+    "A common finite depth bound A; no actual-zeta representation is asserted.",
+    "Arbitrary local length L via superperiod lcm(Q,L); bad-block mass h and cell fraction beta are explicitly charged.",
+    "The period-free corollary requires the two-limit H condition; its source applicability is not established."
+  ],
+  "requested_evidence": "numerical_evidence",
+  "backend": {
+    "name": "Python/NumPy/mpmath/Fraction",
+    "version": "3.13.5",
+    "interface": "bounded local foreground process",
+    "libraries": {
+      "mpmath": "1.3.0",
+      "numpy": "2.3.5",
+      "python": "3.13.5"
+    }
+  },
+  "exact_input": {
+    "seed": 2026090612,
+    "samples": 120,
+    "cross_L_range": [
+      2,
+      32
+    ],
+    "wrap_K_range": [
+      2,
+      20
+    ],
+    "rational_rounding_L_range": [
+      1,
+      4
+    ],
+    "numerical_alphas": [
+      0.6,
+      0.75,
+      0.9,
+      1.0
+    ]
+  },
+  "reproduction_command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python check_local_gauges.py --samples 120 --output validation.json",
+  "integrity_command": "python check_local_gauges.py --check-package",
+  "code_artifacts": [
+    {
+      "path": "check_local_gauges.py",
+      "sha256": "253f1706328e450550ad3570db8e7719bb0d45ebafecb7daf5d51c9b29000667"
+    }
+  ],
+  "result_artifacts": [
+    {
+      "path": "validation.json",
+      "sha256": "a2c5276201730aa0be3565d9dce67aa8e51da04ee0ab1ae0247293fa32d0a888"
+    }
+  ],
+  "computation_record": {
+    "path": "computation-record.json",
+    "sha256": "b02244cd3af2c438b1e0ba27290f03719b5e13e05aeac9c7286b6e763a1338fa"
+  },
+  "evidence_grade": "numerical_evidence",
+  "cannot_imply": [
+    "No proof of RH, independent verification, or improved unconditional zero proportion.",
+    "No unrestricted period-free two-budget theorem: the explicit H hypothesis remains.",
+    "No source cell extraction, weight/localization bridge, discarded-energy bound or arithmetic moment estimate.",
+    "Exact finite counts and numerical regressions do not establish the universal analytic claims.",
+    "The macroscopic-hole family fails the short budget; the scalar point is not a realized configuration."
+  ]
+}
