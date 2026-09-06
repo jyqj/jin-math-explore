@@ -1,0 +1,89 @@
+{
+  "schema": "goldbach-error-handoff/v1",
+  "checkpoint": "CP-ERR-0006",
+  "parent_checkpoint": "CP-ERR-0005",
+  "findings": [
+    {
+      "id": "F-ERR-035",
+      "statement": "Exact G8 bounded-slab U-WBV candidate with uniform N-dependent weights",
+      "grade": "proof_candidate",
+      "locator": "(1),(8)-(15)"
+    },
+    {
+      "id": "F-ERR-036",
+      "statement": "Principal-character p|q correction is distinct from the zero extracted-product H term",
+      "grade": "exact_identity_and_proof_candidate",
+      "locator": "(5)-(6)"
+    },
+    {
+      "id": "F-ERR-037",
+      "statement": "Conductor descent retains the l-coprimality filter; no coprime d,l assumption",
+      "grade": "proof_candidate",
+      "locator": "(7)-(8)"
+    },
+    {
+      "id": "F-ERR-038",
+      "statement": "Explicit eight-term logarithmic ledger with B=D=A+8 and J=2A+12",
+      "grade": "proof_candidate_with_exact_algebra_checks",
+      "locator": "(10)-(15)"
+    },
+    {
+      "id": "F-ERR-039",
+      "statement": "Exact G8 endpoint/support/residue transfer and signed normalization",
+      "grade": "proof_candidate",
+      "locator": "(16)-(17)"
+    },
+    {
+      "id": "F-ERR-040",
+      "statement": "Finite character-kernel and large-sieve regression suite with negative scope controls",
+      "grade": "bounded_check",
+      "locator": "check_wbv.py,results.json"
+    }
+  ],
+  "dependency_edges": [
+    [
+      "S2:SW",
+      "F-ERR-038"
+    ],
+    [
+      "S2:Lemma6.1",
+      "F-ERR-035"
+    ],
+    [
+      "F-ERR-036",
+      "F-ERR-035"
+    ],
+    [
+      "F-ERR-037",
+      "F-ERR-035"
+    ],
+    [
+      "F-ERR-038",
+      "F-ERR-035"
+    ],
+    [
+      "F-ERR-035",
+      "F-ERR-039"
+    ]
+  ],
+  "local_gate_change": "CP5 U-WBV no longer left as an unexplained assumption in this successor: a proof candidate from named classical inputs is supplied. Independent acceptance remains pending.",
+  "raw_remainder": "C_A*N/log(N)^A",
+  "sieve_family_remainder": "L_eta*C_A*N/log(N)^A",
+  "normalized_G8_remainder": "2*L_eta*C_A*log(N)^(2-A)",
+  "harmful_combination_cost_before_dividing_four": "4*L_eta*C_A*log(N)^(2-A)",
+  "no_double_charge": "principal and imprimitive removed-prime terms, SW and pi-to-Li conversion are inside C_A; do not add them to this remainder again",
+  "parameter_order": [
+    "fix A>=3 and B=D=A+8,J=2A+12",
+    "fix the classical source constants and onsets (independent of eta)",
+    "fix eta before taking N to infinity",
+    "choose a common N only after all other term contracts are available"
+  ],
+  "Cs_gate": "unresolved; this WBV candidate does not address it",
+  "effective_N0": null,
+  "global_ledger_modified": false,
+  "old_g8_coefficient_modified": false,
+  "independent_review": "pending",
+  "global_status": "INCONCLUSIVE",
+  "next_task": "Audit Cs(K) uniformity in the original linear-sieve source; recompile G3/G10 endpoints separately before reuse.",
+  "background_verifier_started": false
+}

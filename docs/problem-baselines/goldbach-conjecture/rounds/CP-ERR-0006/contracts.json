@@ -1,0 +1,81 @@
+{
+  "schema": "goldbach-wbv-bridge/v1",
+  "checkpoint": "CP-ERR-0006",
+  "issue": 81,
+  "grade": "proof_candidate_from_named_classical_inputs",
+  "authority": "reference_only",
+  "statement": "sum_{q<=Q} max_{gcd(b,q)=1} |sum_{gcd(m,q)=1} a_N(m)*(pi(N/m;q,b*m^-1)-Li(N/m)/phi(q))| <= C_A*N/log(N)^A",
+  "quantifier_order": [
+    "for every fixed real A>=3",
+    "there exist C_A,N_A",
+    "for every integer N>=N_A",
+    "for every admissible bounded complex weight a_N"
+  ],
+  "support": [
+    "6/11",
+    "2/3"
+  ],
+  "weight_bound": "1",
+  "weights_may_depend_on_N": true,
+  "weights_may_depend_on_q": false,
+  "cutoff": "mp<=N",
+  "arbitrary_m_endpoints": false,
+  "absolute_value": "outside_complete_m_sum",
+  "parameters": {
+    "minimum_A": 3,
+    "B": "A+8",
+    "D": "A+8",
+    "J": "2*A+12"
+  },
+  "Q": "sqrt(N)/log(N)^B",
+  "small_conductor_cutoff": "log(N)^D",
+  "principal_correction": "-D_q/phi(q)",
+  "D_q": "sum_{gcd(m,q)=1} a_N(m)*#{prime p<=N/m:p divides q}",
+  "imprimitive_identity": "chi(n)=chi_star(n)*1_gcd(n,l)=1",
+  "induction_note": "q=d*l; d and l need not be coprime; the indicator equals one iff gcd(n,l)=1",
+  "external_inputs": [
+    "Akbary-Hambrook arXiv:1309.2730v2 Lemma6.1/(6.2)",
+    "Siegel-Walfisz as stated in the same paper introduction; PNT at q=1"
+  ],
+  "G8_source_gate_delta": "U-WBV now has a self-contained solver derivation for the exact bounded slab and common cutoff; still pending independent review",
+  "normalized_remainder_multiplier": 2,
+  "combination_multiplier": 4,
+  "normalization": "S_N=C(N)*N/log(N)^2 with C(N)>=1/2; combination coefficient for G8 is -2, then divide by four",
+  "strict_endpoint_G8": "m>1 and gcd(m,N)=1 imply N/m noninteger, so pi_< = pi_<= exactly",
+  "linear_sieve_Cs_uniformity": "unresolved",
+  "original_Pan_Ding_full_text_audited": false,
+  "effective_numeric_N0": null,
+  "independently_verified": false,
+  "global_status": "INCONCLUSIVE",
+  "cannot_imply": [
+    "all endpoint variants of WEH",
+    "q-dependent weights",
+    "distribution beyond one half",
+    "an effective numeric N0",
+    "full G8 or twelve-term independent verification",
+    "binary Goldbach",
+    "a change to previous numerical coefficients"
+  ],
+  "source_interface_matrix": [
+    {
+      "gate": "bounded N-dependent weight",
+      "resolution": "uniform for every bounded sequence on the slab; unique unordered factorization gives f_N<=1"
+    },
+    {
+      "gate": "support N^(2/3)",
+      "resolution": "proved lower6/11 upper2/3; both bilinear lengths are polynomially below N"
+    },
+    {
+      "gate": "variable residue N",
+      "resolution": "maximum over all reduced residues; choose N mod q when gcd(N,q)=1"
+    },
+    {
+      "gate": "strict endpoint",
+      "resolution": "m>1,gcd(m,N)=1 gives N/m noninteger"
+    },
+    {
+      "gate": "sieve-family weight",
+      "resolution": "outer absolute-value estimate times number of rows; no well-factorability assumed by the mean-value theorem"
+    }
+  ]
+}

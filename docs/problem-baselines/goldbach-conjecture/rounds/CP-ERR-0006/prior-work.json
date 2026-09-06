@@ -1,0 +1,55 @@
+{
+  "schema": "goldbach-continuation-map/v1",
+  "main_base": "39002c5a6af8c7b7f093589e6a76cfd218fcbb99",
+  "parent_commit": "cfda3faea232564bb1bcd53347df3868552f5d97",
+  "parent_issue": 74,
+  "parent_pr": 76,
+  "parent_path": "docs/problem-baselines/goldbach-conjecture/rounds/CP-ERR-0005/",
+  "parent_files_read": {
+    "proof.md": "23197788770f758ab0d7f7ba91506678499b329f",
+    "source-lock.json": "66f00be969023d8dc16e0ab5954dbe1587b51268",
+    "error-handoff.json": "ac426ccfcc55cc018edf4224d24ed23308ca3604"
+  },
+  "read_status": "live connector reads at pinned commit; old finite suite not replayed, old hashes not independently reacquired as bytes",
+  "prior_chain": [
+    {
+      "checkpoint": "CP-ERR-0001",
+      "issue": 50,
+      "scope": "signed margin versus usable reserve"
+    },
+    {
+      "checkpoint": "CP-ERR-0002",
+      "commit": "55f97ee95dc8d6341f42012dd1a618be25fe150d",
+      "scope": "G4/G5"
+    },
+    {
+      "checkpoint": "CP-ERR-0003",
+      "commit": "a16d365d91a7859e12a213012473775cf47259db",
+      "scope": "G1/G2"
+    },
+    {
+      "checkpoint": "CP-ERR-0004",
+      "pr": 73,
+      "commit": "34e3da5875d04fdbcb6dfe21e9166d27a8a16a04",
+      "scope": "G6"
+    },
+    {
+      "checkpoint": "CP-ERR-0005",
+      "pr": 76,
+      "commit": "cfda3faea232564bb1bcd53347df3868552f5d97",
+      "scope": "G8 repair, integral and unresolved U-WBV"
+    }
+  ],
+  "new_work": "CP-ERR-0006 derives exactly the U-WBV specialization requested in CP5; no old file modified",
+  "not_reused_as_theorems": [
+    "unreviewed L35 and G7 siblings",
+    "parent solver status word",
+    "old CI or hash checks as mathematical evidence"
+  ],
+  "preserved_limits": [
+    "Cs uniformity unresolved",
+    "no independent receipt assumed",
+    "no global numerical reserve updated",
+    "PR73 and PR76 not merged by this run"
+  ]
+}
