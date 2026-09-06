@@ -1,0 +1,56 @@
+{
+  "schema": "goldbach-predecessor-map/v1",
+  "as_of": "2026-09-06",
+  "base_sha": "39002c5a6af8c7b7f093589e6a76cfd218fcbb99",
+  "baseline": {
+    "issue": 27,
+    "merged_pr": 33,
+    "path": "docs/problem-baselines/goldbach-conjecture/"
+  },
+  "earlier_error_checkpoints": [
+    {
+      "checkpoint": "CP-ERR-0001",
+      "commit": "388c958afb2c89c571e43483b2154eb56e2e2e67",
+      "scope": "signed budget"
+    },
+    {
+      "checkpoint": "CP-ERR-0002",
+      "commit": "55f97ee95dc8d6341f42012dd1a618be25fe150d",
+      "scope": "G4/G5 upper contracts"
+    },
+    {
+      "checkpoint": "CP-ERR-0003",
+      "commit": "a16d365d91a7859e12a213012473775cf47259db",
+      "scope": "G1/G2 lower contracts"
+    }
+  ],
+  "direct_predecessor": {
+    "checkpoint": "CP-ERR-0004",
+    "issue": 70,
+    "pr": 73,
+    "commit": "34e3da5875d04fdbcb6dfe21e9166d27a8a16a04",
+    "observed_pr_state": "open_unmerged",
+    "read_file": "docs/problem-baselines/goldbach-conjecture/rounds/CP-ERR-0004/error-handoff.json",
+    "read_file_git_blob": "b4bb1d7d5f8a83568e928f30ac2796a907ba70c9",
+    "handoff": "G8 native upper bound, beginning with modulus multiplicity",
+    "lease": "released_in_issue_70",
+    "mathematics_used_as_verified_input": false,
+    "numerical_replay_this_round": false
+  },
+  "new_information": "G8 requires switching; native product is above BV range. Corrected legal switched support kills H exactly, with weighted input still required.",
+  "this_round": {
+    "issue": 74,
+    "branch": "program/i-0074/goldbach-g8-cp5",
+    "directory": "docs/problem-baselines/goldbach-conjecture/rounds/CP-ERR-0005/",
+    "publication": "new docs-only PR with all twelve artifacts; predecessor unchanged"
+  },
+  "independence": {
+    "solver_context_access": true,
+    "independent_verifier_executed": false
+  },
+  "old_reserve_reference_only": {
+    "displayed_margin": "0.00172",
+    "usable_reserve_before_division_by_four": "0.00012"
+  },
+  "no_global_import": true
+}

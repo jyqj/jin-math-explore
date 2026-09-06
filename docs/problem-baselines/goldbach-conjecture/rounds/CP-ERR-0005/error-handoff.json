@@ -1,0 +1,66 @@
+{
+  "schema": "goldbach-error-handoff/v1",
+  "checkpoint": "CP-ERR-0005",
+  "findings": [
+    {
+      "id": "F-ERR-028",
+      "statement": "native direct BV level <1 throughout G8",
+      "grade": "proof_candidate",
+      "proof": "section2"
+    },
+    {
+      "id": "F-ERR-029",
+      "statement": "literal prime-triple identity has an unbounded repeated-p1 counterfamily",
+      "grade": "proof_candidate",
+      "proof": "section3"
+    },
+    {
+      "id": "F-ERR-030",
+      "statement": "uniform exceptional budget and correct indexed switching",
+      "grade": "proof_candidate",
+      "proof": "(3)-(6)"
+    },
+    {
+      "id": "F-ERR-031",
+      "statement": "legal Z-smooth support forces H=0 exactly",
+      "grade": "proof_candidate",
+      "proof": "(7)-(8)"
+    },
+    {
+      "id": "F-ERR-032",
+      "statement": "curved-domain Stieltjes error <=7*r_N",
+      "grade": "proof_candidate",
+      "proof": "(12)-(14)"
+    },
+    {
+      "id": "F-ERR-033",
+      "statement": "explicit conditional signed G8 upper contract",
+      "grade": "proof_candidate",
+      "proof": "(16)-(17)"
+    },
+    {
+      "id": "F-ERR-034",
+      "statement": "fixed g8 integral <=0.609611574 via exact rational series and tail",
+      "grade": "exact_check_with_analytic_candidate",
+      "proof": "(18) and results.json"
+    }
+  ],
+  "fixed_loss": "32*Cs*eta; multiply by2 for the global lower combination",
+  "decaying_loss": "ell_N+112*r_N+16*q_N+32*h+32*Cs*eta^(-8)*exp(K)*(log(Q))^(-1/3)+2*L*C_W*log(N)^(2-A)+2*E_exc*log(N)^2/N",
+  "zero_or_avoided_costs": [
+    "H=0 only on actual smooth support",
+    "no epsilon0 loss after upper enlargement",
+    "no second diagonal charge in closed-endpoint Stieltjes transfer"
+  ],
+  "sensitivity_only": {
+    "new_upper": "0.609611574",
+    "coefficient_gain": "0.000008426",
+    "weighted_gain": "0.000016852",
+    "inserted_into_global_ledger": false
+  },
+  "earliest_source_gate": "U-WBV original theorem: N-dependent f_N, support N^(2/3), variable reduced residue, strict endpoints",
+  "other_source_gate": "uniform Cs for the actual linear sieve family",
+  "next_task": "audit the original weighted mean-value input before reusing the G8 repair in G3/G10; missing access must remain explicit",
+  "global_status": "INCONCLUSIVE",
+  "background_verifier_started": false
+}

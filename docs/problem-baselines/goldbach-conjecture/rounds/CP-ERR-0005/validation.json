@@ -1,0 +1,86 @@
+{
+  "schema": "goldbach-g8-finite-regressions/v1",
+  "ok": true,
+  "scalar_coefficients_checked": 96,
+  "outward_cases": 5,
+  "even_N_range_inclusive": [
+    16,
+    1200
+  ],
+  "even_N_cases": 593,
+  "original_summands_checked": 1141,
+  "finite_cutoff_epsilon0": "1/100000000000",
+  "ordered_prime_triples": 776,
+  "literal_identity_mismatch_N_cases": 268,
+  "classification_counts": {
+    "good_triple": 141,
+    "output_divides_N": 26,
+    "repeated_p1": 898,
+    "residual_one": 76
+  },
+  "max_native_multiplicity": 2,
+  "switched_modulus_identities": 908,
+  "upper_product_cases": 96,
+  "infinite_family_samples": [
+    {
+      "N": 258742,
+      "p1": 37,
+      "p2": 41,
+      "output_prime": 202613,
+      "residual": 37
+    },
+    {
+      "N": 347982,
+      "p1": 41,
+      "p2": 43,
+      "output_prime": 275699,
+      "residual": 41
+    },
+    {
+      "N": 1033860,
+      "p1": 59,
+      "p2": 61,
+      "output_prime": 821519,
+      "residual": 59
+    },
+    {
+      "N": 5171916,
+      "p1": 101,
+      "p2": 103,
+      "output_prime": 4121213,
+      "residual": 101
+    }
+  ],
+  "literal_residual_witness": {
+    "N": 254,
+    "p1": 5,
+    "p2": 7,
+    "output_prime": 79,
+    "residual": 5
+  },
+  "multiset_witness": {
+    "N": 4032,
+    "b": 1601,
+    "representations": [
+      [
+        143,
+        17
+      ],
+      [
+        187,
+        13
+      ],
+      [
+        221,
+        11
+      ]
+    ]
+  },
+  "composite_B_witness": {
+    "N": 254,
+    "m": 35,
+    "p": 2,
+    "b": 184
+  },
+  "mathematical_truth_verified": false
+}

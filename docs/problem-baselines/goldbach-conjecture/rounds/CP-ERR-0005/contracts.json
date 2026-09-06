@@ -1,0 +1,78 @@
+{
+  "schema": "goldbach-g8-upper-contract/v1",
+  "checkpoint": "CP-ERR-0005",
+  "authority": "reference_only_solver_candidate",
+  "work_issue": 74,
+  "parent_issue": 50,
+  "domain": [
+    "N even >=16",
+    "0<epsilon0<1",
+    "0<eta<1/8",
+    "Z>=2",
+    "0<=h<=1/4",
+    "r_N<=1/32",
+    "ell_N<=1",
+    "q_N<=1",
+    "A>2"
+  ],
+  "original_quantity": "G8 on A={N-b: b prime, b<(1-epsilon0)N}; p1<=p2; p1*p2^2<=N; p1>=N^(3/11)",
+  "combination_coefficient": "-2",
+  "direction": "upper",
+  "normalization": "S_N=C(N)*N/log(N)^2",
+  "switching": {
+    "object": "indexed_multiset",
+    "indices": "m in M_N, p prime, m*p<N",
+    "M_N": "m=p1*p2, N^(3/11)<=p1<=p2, p1*p2^2<=N, gcd(m,N)=1",
+    "Q": "sqrt(N)/log(N)^B",
+    "cutoff": "Z=sqrt(Q)",
+    "s": "2",
+    "H_term": "identically_zero_on_q_divides_P_N_Z",
+    "native_direct_BV_level_exponent_max": "-1/22",
+    "multiplicity_bound_per_output": "3"
+  },
+  "source_gates": {
+    "U_WBV": "assumed_not_originally_audited",
+    "uniform_Cs": "assumed_not_discharged",
+    "U_PNT": "adopted_classical_reciprocal_product_Mertens_and_Li"
+  },
+  "defects": {
+    "r_N": "sup_[3/11,4/11] |sum_(N^(3/11)<=p<=N^t) 1/p - log(t/(3/11))|",
+    "ell_N": "sup_(N^(1/3)<=y<=N^(5/11)) max(0,Li(y)*log(y)/y-1)",
+    "q_N": "abs(exp(gamma_E)*log(Z)*V_N(Z)/(2*C(N))-1)",
+    "h": "B*loglog(N)/log(N)",
+    "e_N": "Cs*(eta+eta^(-8)*exp(K)*(log(Q))^(-1/3))",
+    "L": "exp(8*eta^(-3))",
+    "E_exc": "N^(2/3)+3*N/(N^(3/11)-1)+3*log(N)/log(2)+3*Z"
+  },
+  "statement": "G8/S_N <= g8 + sum(error_coefficients * named_defects)",
+  "error_coefficients": {
+    "ell_N": "1",
+    "r_N": "112",
+    "q_N": "16",
+    "h": "32",
+    "e_N": "32",
+    "L*C_W*logN^(2-A)": "2",
+    "E_exc*logN^2/N": "2"
+  },
+  "coefficient": {
+    "definition": "8*integral_2^(8/3) log(t-1)/t dt",
+    "safe_upper": "0.609611574",
+    "old_displayed_upper": "0.60962",
+    "is_finite_N_count_bound": false
+  },
+  "parameter_order": [
+    "fix A>2 and source B,C_W,K,Cs",
+    "choose eta small",
+    "choose N after all fixed constants"
+  ],
+  "global_status": "INCONCLUSIVE",
+  "independent_review": "pending",
+  "cannot_imply": [
+    "original weighted mean-value theorem audit",
+    "numeric effective N0",
+    "whole twelve-term closure",
+    "refutation of the paper theorem",
+    "improved Goldbach exponent",
+    "binary Goldbach proof"
+  ]
+}
