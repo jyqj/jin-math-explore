@@ -1,0 +1,175 @@
+{
+  "attempt": "A-RH-DISP-0014",
+  "backend": {
+    "mpmath": "1.3.0",
+    "numpy": "2.3.5",
+    "python": "3.13.5"
+  },
+  "counts": {
+    "arbitrary_phase_models": 120,
+    "compositions": 504,
+    "equality_short_floors": 216,
+    "exact_equality_models": 72,
+    "grid_models": 126,
+    "local_variances": 630,
+    "phase_perturbations": 126,
+    "reciprocal_polynomials": 120,
+    "toeplitz_projection_cases": 24
+  },
+  "evidence": "finite exact subchecks and numerical evidence; analytic statements are proof candidates",
+  "exact_checks": {
+    "cyclic_weight_recurrences": 8255,
+    "integer_toeplitz_displacements": 4324,
+    "rational_composition_bounds": 486,
+    "rational_constant_checks": 6,
+    "rational_newton_checks": 600,
+    "rational_symbol_bounds": 8255
+  },
+  "high_depth_scope_counterexample_gap": 1.644973058433152,
+  "independent_verification": false,
+  "kappa_log2": "0.41797871933327744448005648924858089693",
+  "mathematical_truth_verified": false,
+  "maximum_residuals": {
+    "Dirichlet_spatial_Fourier": 2.220446049250313e-15,
+    "anchor_free_signed_slack": 4.618527782440651e-14,
+    "correction_matrix_spectrum": 3.9968028886505635e-15,
+    "equality_defect": 8.526512829121202e-14,
+    "equality_idempotence": 8.773642130070151e-15,
+    "off_grid_counterexample": 5.715913853343579e-16,
+    "projection_idempotence": 1.9839607564000647e-15,
+    "projection_rank_one_boundary": 7.211272167233882e-16,
+    "projection_twist": 2.5035563822814996e-15,
+    "self_inversive_coefficients": 1.0462425111247755e-13,
+    "signed_defect_identity": 7.549516567451064e-15,
+    "slow_wave_Dirichlet": 0,
+    "slow_wave_global_variance": 0
+  },
+  "minimum_slacks": {
+    "Dirichlet_composition": 0.0,
+    "anchor_free_nonnegative": 0.0,
+    "exact_hole_short_floor": -1.7763568394002505e-15,
+    "local_variance_Dirichlet": -2.465190328815662e-32,
+    "local_variance_defect": 0.0,
+    "moderate_depth_coercivity": -2.220446049250313e-15,
+    "neighbor_covariance": 0.0,
+    "nonlinear_lower": 0.0,
+    "nonlinear_upper": -5.742376995612099e-35,
+    "phase_covariance_interface": 0.0,
+    "phase_defect_transfer": 0.0,
+    "rational_covariance_coercivity": -8.881784197001252e-16,
+    "slow_wave_upper": 7.893592434196617e-07
+  },
+  "ok": true,
+  "phase_scope_counterexample": 0.007359312880714913,
+  "random_samples": 120,
+  "seed": 2026090714,
+  "shallow_depth_boundary": [
+    {
+      "delta_cell": "0.000986782844044040294521745660579",
+      "epsilon": "0.5",
+      "variance": "0.125",
+      "variance_over_delta": "126.674273630177976301540526254",
+      "variance_over_sqrt_delta": "3.97923160971716335174726977153"
+    },
+    {
+      "delta_cell": "0.0000611942883648683857483377193447",
+      "epsilon": "0.25",
+      "variance": "0.03125",
+      "variance_over_delta": "510.668574388400133203601034878",
+      "variance_over_sqrt_delta": "3.99479573315551444387060823939"
+    },
+    {
+      "delta_cell": "0.00000381718152021424037342349501639",
+      "epsilon": "0.125",
+      "variance": "0.0078125",
+      "variance_over_delta": "2046.66714397211093770615784481",
+      "variance_over_sqrt_delta": "3.99869817094040203588872052495"
+    },
+    {
+      "delta_cell": "0.000000238457387051133918346288438762",
+      "epsilon": "0.0625",
+      "variance": "0.001953125",
+      "variance_over_delta": "8190.66678601648483786403439834",
+      "variance_over_sqrt_delta": "3.99967449506062267373954353199"
+    },
+    {
+      "delta_cell": "0.0000000149017675347511903503525928633",
+      "epsilon": "0.03125",
+      "variance": "0.00048828125",
+      "variance_over_delta": "32766.6666965055875743045483386",
+      "variance_over_sqrt_delta": "3.99991862078506778872285673034"
+    },
+    {
+      "delta_cell": "9.31332048561990189571101620389e-10",
+      "epsilon": "0.015625",
+      "variance": "0.0001220703125",
+      "variance_over_delta": "131070.666674126488546002427664",
+      "variance_over_sqrt_delta": "3.99997965501000468792860483648"
+    },
+    {
+      "delta_cell": "5.82078089433734306198060261309e-11",
+      "epsilon": "0.0078125",
+      "variance": "0.000030517578125",
+      "variance_over_delta": "524286.666668531627864849501573",
+      "variance_over_sqrt_delta": "3.99999491374085967504455405635"
+    }
+  ],
+  "slow_depth_wave": [
+    {
+      "Dirichlet": 0.0008544921875,
+      "Q": 8,
+      "Q_delta": 0.004892883505305184,
+      "delta_cell": 0.000611610438163148,
+      "local_variance_R4": 0.014425903296145562,
+      "squared_depth_global_variance": 0.0078125
+    },
+    {
+      "Dirichlet": 0.000457763671875,
+      "Q": 16,
+      "Q_delta": 0.006492399340456798,
+      "delta_cell": 0.0004057749587785499,
+      "local_variance_R4": 0.0030652023050501335,
+      "squared_depth_global_variance": 0.0078125
+    },
+    {
+      "Dirichlet": 0.00023651123046875,
+      "Q": 32,
+      "Q_delta": 0.007436918727137899,
+      "delta_cell": 0.00023240371022305935,
+      "local_variance_R4": 0.0007914260546930822,
+      "squared_depth_global_variance": 0.0078125
+    },
+    {
+      "Dirichlet": 0.0001201629638671875,
+      "Q": 64,
+      "Q_delta": 0.007948201623412143,
+      "delta_cell": 0.00012419065036581474,
+      "local_variance_R4": 0.00020077186175944446,
+      "squared_depth_global_variance": 0.0078125
+    },
+    {
+      "Dirichlet": 6.0558319091796875e-05,
+      "Q": 128,
+      "Q_delta": 0.008213965511443974,
+      "delta_cell": 6.417160555815605e-05,
+      "local_variance_R4": 5.037873016143437e-05,
+      "squared_depth_global_variance": 0.0078125
+    },
+    {
+      "Dirichlet": 3.039836883544922e-05,
+      "Q": 256,
+      "Q_delta": 0.008349424724474966,
+      "delta_cell": 3.2614940329980334e-05,
+      "local_variance_R4": 1.2606325308887396e-05,
+      "squared_depth_global_variance": 0.0078125
+    },
+    {
+      "Dirichlet": 1.5228986740112305e-05,
+      "Q": 512,
+      "Q_delta": 0.008417804533932271,
+      "delta_cell": 1.6441024480336467e-05,
+      "local_variance_R4": 3.152309508977681e-06,
+      "squared_depth_global_variance": 0.0078125
+    }
+  ]
+}

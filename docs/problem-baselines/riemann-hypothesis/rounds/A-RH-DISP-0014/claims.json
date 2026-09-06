@@ -1,0 +1,225 @@
+{
+  "format": "rh-disp-0014-claims/v1",
+  "attempt": "A-RH-DISP-0014",
+  "archive_status": "reference_only",
+  "dependencies": {
+    "parent": {
+      "commit": "d344b72c6c8f4e1d0057a295675f5b1637c5f5ce",
+      "path": "docs/problem-baselines/riemann-hypothesis/rounds/A-RH-HOLE-0013/proof.md",
+      "git_blob_sha1": "802f8f01fd3d1178064b43109aa59b28ce5b0401",
+      "status": "proof_candidate",
+      "receipt": null
+    },
+    "earlier_operator": {
+      "commit": "340d6c4a3f2101d2cd08834ee3fe9cc9aed8f202",
+      "path": "staging/preproject-rh/A-RH-WTP-0004/README.md",
+      "git_blob_sha1": "49c16fe11d858345ecfbe1f351f694bb41a4d116",
+      "status": "proof_candidate",
+      "receipt": null
+    }
+  },
+  "claims": [
+    {
+      "id": "A-RH-DISP-0014-C01",
+      "title": "Positive squared-depth Dirichlet form",
+      "statement": "D_Q(x)=sum_j (j/Q)(1-j/Q)|xhat_j|^2 equals the ordered csc-square pair form; Lipschitz composition contracts it.",
+      "quantifier_scope": "Every Q>=1 and real finite field; power version for x in [0,M].",
+      "assumptions": [
+        "Exactly the model and hypotheses named in the cited proof section."
+      ],
+      "dependency_refs": [],
+      "local_claim_refs": [],
+      "evidence_grade": "proof_candidate",
+      "evidence_refs": [
+        "proof.md section 2",
+        "validation.json: cyclic_weight_recurrences, rational_composition_bounds, Dirichlet_spatial_Fourier"
+      ],
+      "cannot_imply": [
+        "Does not bound the mean or global variance uniformly in Q.",
+        "No proof of RH or unconditional zero-proportion improvement.",
+        "No independent-verifier receipt or formal proof; finite checks do not cover the universal quantifiers.",
+        "No actual-zeta cell representation, source weight/localization transfer or arithmetic moment budget."
+      ],
+      "verifier_receipt": null
+    },
+    {
+      "id": "A-RH-DISP-0014-C02",
+      "title": "Nonlinear correction/covariance comparison",
+      "statement": "For exact common-coset centers, ||T-T0||_F^2/Q <= gamma_A^2 D_Q(a^2); if kappa_A=3/2-gamma_A>0 the reverse lower bound is kappa_A^2 D_Q(a^2).",
+      "quantifier_scope": "Every finite Q, all m in {0,1,2}, a=0 off pair sites, depths in [0,A]; gamma_A=sinh(A)/A.",
+      "assumptions": [
+        "Exactly the model and hypotheses named in the cited proof section."
+      ],
+      "dependency_refs": [],
+      "local_claim_refs": [
+        "C01"
+      ],
+      "evidence_grade": "proof_candidate",
+      "evidence_refs": [
+        "proof.md section 3 equations (5)-(8)",
+        "validation.json: nonlinear_lower, nonlinear_upper, compositions"
+      ],
+      "cannot_imply": [
+        "The lower bound is not claimed when kappa_A<=0.",
+        "The exact-grid upper bound fails at arbitrary phases.",
+        "No proof of RH or unconditional zero-proportion improvement.",
+        "No independent-verifier receipt or formal proof; finite checks do not cover the universal quantifiers.",
+        "No actual-zeta cell representation, source weight/localization transfer or arithmetic moment budget."
+      ],
+      "verifier_receipt": null
+    },
+    {
+      "id": "A-RH-DISP-0014-C03",
+      "title": "Local depth coherence from signed defect and an explicit phase error",
+      "statement": "On the exact lattice with A<=log 2: D_Q(a^2)<=(64/9)delta and V_R<=(32*pi/3)R^2 sqrt(delta). A cell-preserving supplied phase error Phi adds C_(A,rho)sqrt(Phi) to delta.",
+      "quantifier_scope": "Every Q and fixed integer R; arbitrary mean mass rho in [0,2]. The asymptotic limit is n first with R fixed.",
+      "assumptions": [
+        "Exactly the model and hypotheses named in the cited proof section."
+      ],
+      "dependency_refs": [
+        "earlier_operator"
+      ],
+      "local_claim_refs": [
+        "C01",
+        "C02"
+      ],
+      "evidence_grade": "proof_candidate",
+      "evidence_refs": [
+        "proof.md sections 3-4 equations (9)-(17)",
+        "validation.json: moderate_depth_coercivity, rational_covariance_coercivity, local_variances, phase_perturbations"
+      ],
+      "cannot_imply": [
+        "Does not extract a small phase error for arbitrary holes.",
+        "Does not establish a new exact-grid two-budget result relative to the older operator route; it adds covariance/variance information.",
+        "No proof of RH or unconditional zero-proportion improvement.",
+        "No independent-verifier receipt or formal proof; finite checks do not cover the universal quantifiers.",
+        "No actual-zeta cell representation, source weight/localization transfer or arithmetic moment budget."
+      ],
+      "verifier_receipt": null
+    },
+    {
+      "id": "A-RH-DISP-0014-C04",
+      "title": "Twisted Fourier structure of Toeplitz projections",
+      "statement": "Every nontrivial Hermitian Toeplitz orthogonal projection is a phase-twisted circulant Fourier projection, by the rank-one boundary identity.",
+      "quantifier_scope": "All finite Q; zero and identity projections handled separately.",
+      "assumptions": [
+        "Exactly the model and hypotheses named in the cited proof section."
+      ],
+      "dependency_refs": [],
+      "local_claim_refs": [],
+      "evidence_grade": "proof_candidate",
+      "evidence_refs": [
+        "proof.md section 6 equation (22)",
+        "validation.json: integer_toeplitz_displacements, projection_rank_one_boundary, projection_twist"
+      ],
+      "cannot_imply": [
+        "No quantitative period-uniform stability is inferred for approximate projections.",
+        "No novelty claim is made for this elementary Toeplitz lemma.",
+        "No proof of RH or unconditional zero-proportion improvement.",
+        "No independent-verifier receipt or formal proof; finite checks do not cover the universal quantifiers.",
+        "No actual-zeta cell representation, source weight/localization transfer or arithmetic moment budget."
+      ],
+      "verifier_receipt": null
+    },
+    {
+      "id": "A-RH-DISP-0014-C05",
+      "title": "Exact anchor-free equality dichotomy",
+      "statement": "For m in {0,2}, delta=0: if 0<r<Q, all occupied depths vanish and phases coincide; if r=Q, phases and depths are both common; r=0 is empty. Conversely every listed class saturates.",
+      "quantifier_scope": "Every finite Q, every occupancy r, arbitrary supplied phases and finite depths; no small-depth hypothesis.",
+      "assumptions": [
+        "Exactly the model and hypotheses named in the cited proof section."
+      ],
+      "dependency_refs": [],
+      "local_claim_refs": [
+        "C04"
+      ],
+      "evidence_grade": "proof_candidate",
+      "evidence_refs": [
+        "proof.md section 6 equations (21)-(25)",
+        "validation.json: anchor_free_signed_slack, exact_equality_models, reciprocal_polynomials, rational_newton_checks"
+      ],
+      "cannot_imply": [
+        "Does not classify all growing-period near-extremizers.",
+        "The full-density positive-depth class has mean mass two, not the original mean-one whole-model normalization.",
+        "No proof of RH or unconditional zero-proportion improvement.",
+        "No independent-verifier receipt or formal proof; finite checks do not cover the universal quantifiers.",
+        "No actual-zeta cell representation, source weight/localization transfer or arithmetic moment budget."
+      ],
+      "verifier_receipt": null
+    },
+    {
+      "id": "A-RH-DISP-0014-C06",
+      "title": "Exact saturated-hole short floor and scalar repair",
+      "statement": "At exact anchor-free equality, E_alpha>=2 f_alpha rho+c_alpha rho^2 for 1/2<alpha<=1; the earlier scalar point becomes 314/189=19/12+59/756.",
+      "quantifier_scope": "Every finite exactly saturated periodic anchor-free model; scalar mixture arithmetic separately scoped.",
+      "assumptions": [
+        "Exactly the model and hypotheses named in the cited proof section."
+      ],
+      "dependency_refs": [],
+      "local_claim_refs": [
+        "C05"
+      ],
+      "evidence_grade": "proof_candidate",
+      "evidence_refs": [
+        "proof.md section 7 equations (26)-(27)",
+        "validation.json: equality_short_floors and rational_constant_checks"
+      ],
+      "cannot_imply": [
+        "Cannot be inserted into a finite-block or approximate-equality ledger without a new uniform stability/boundary bridge.",
+        "No proof of RH or unconditional zero-proportion improvement.",
+        "No independent-verifier receipt or formal proof; finite checks do not cover the universal quantifiers.",
+        "No actual-zeta cell representation, source weight/localization transfer or arithmetic moment budget."
+      ],
+      "verifier_receipt": null
+    },
+    {
+      "id": "A-RH-DISP-0014-C07",
+      "title": "Sharp-rate and growing-period scope obstructions",
+      "statement": "For the two-cell shallow pair model V_2/sqrt(delta)->4 while V_2/delta diverges; a full-density slow squared-depth wave has delta=O(1/Q) and fixed positive global variance.",
+      "quantifier_scope": "The two explicitly defined mean-two model families, not mean-one two-budget sequences.",
+      "assumptions": [
+        "Exactly the model and hypotheses named in the cited proof section."
+      ],
+      "dependency_refs": [],
+      "local_claim_refs": [
+        "C02"
+      ],
+      "evidence_grade": "proof_candidate",
+      "evidence_refs": [
+        "proof.md section 5 equations (18)-(19)",
+        "validation.json: shallow_depth_boundary and slow_depth_wave"
+      ],
+      "cannot_imply": [
+        "Not a counterexample to the original two-scale exclusion target.",
+        "Does not preclude uniform local stability.",
+        "No proof of RH or unconditional zero-proportion improvement.",
+        "No independent-verifier receipt or formal proof; finite checks do not cover the universal quantifiers.",
+        "No actual-zeta cell representation, source weight/localization transfer or arithmetic moment budget."
+      ],
+      "verifier_receipt": null
+    },
+    {
+      "id": "A-RH-DISP-0014-C08",
+      "title": "Exact phase-scope counterexample",
+      "statement": "At Q=2, m=(2,2), tau=(1/4,3/4), a=(log2,log2), D_Q(a^2)=0 but ||T-T0||_F^2/Q=17/4-3sqrt(2)>0.",
+      "quantifier_scope": "One fully specified finite off-grid model.",
+      "assumptions": [
+        "Exactly the model and hypotheses named in the cited proof section."
+      ],
+      "dependency_refs": [],
+      "local_claim_refs": [],
+      "evidence_grade": "proof_candidate",
+      "evidence_refs": [
+        "proof.md section 5 equation (20)",
+        "validation.json: phase_scope_counterexample and rational_constant_checks"
+      ],
+      "cannot_imply": [
+        "Refutes only the uncharged extension of the covariance upper bound to arbitrary phases, not the phase-error interface or the RH target.",
+        "No proof of RH or unconditional zero-proportion improvement.",
+        "No independent-verifier receipt or formal proof; finite checks do not cover the universal quantifiers.",
+        "No actual-zeta cell representation, source weight/localization transfer or arithmetic moment budget."
+      ],
+      "verifier_receipt": null
+    }
+  ]
+}
