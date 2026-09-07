@@ -1,0 +1,40 @@
+{
+  "schema": "goldbach-predecessor-map/v1",
+  "as_of": "2026-09-07",
+  "base": "39002c5a6af8c7b7f093589e6a76cfd218fcbb99",
+  "immediate_predecessor": {
+    "issue": 99,
+    "pr": 103,
+    "commit": "8da33b8fe196df5d47b87ae0781cfedc4ce54bbb",
+    "handoff_path": "docs/problem-baselines/goldbach-conjecture/rounds/CP-ERR-0009/error-handoff.json",
+    "handoff_blob": "de12d15914c11f07d1c22e28692f1e9e6b2976c9",
+    "next_task_read": "G6 explicit lower replacement"
+  },
+  "earlier_G6": {
+    "issue": 70,
+    "pr": 73,
+    "commit": "34e3da5875d04fdbcb6dfe21e9166d27a8a16a04",
+    "proof_blob": "a5a0234666fcc05f965c7f02cd8e16a3dc541106",
+    "proof_lines_read_this_run": [
+      150,
+      270
+    ],
+    "retained": "original G6, two-diagonal distinction and one-variable kernel reduction"
+  },
+  "other_frozen_context": [
+    {
+      "pr": 89,
+      "commit": "40661581b969d0ffa70359e3f51e4b214d9160e3",
+      "role": "pre-sieve replacement method, not assumed verified"
+    },
+    {
+      "pr": 97,
+      "commit": "a36c66d3906bcefee7adf5e595f055f835338ade",
+      "role": "signed lower transfer and fixed-level tradeoff"
+    }
+  ],
+  "history_read_mode": "fresh GitHub main/PR103/#99 release/handoff; pinned CP4 proof; current conversation for earlier context",
+  "full_predecessor_packages_hash_replayed_this_run": false,
+  "mathematical_import_of_unreviewed_predecessor": false,
+  "old_files_modified": false
+}

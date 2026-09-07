@@ -1,0 +1,37 @@
+{
+  "schema": "goldbach-g6-explicit-finite/v1",
+  "counts": {
+    "native_AP": 2558,
+    "rebasing": 2558,
+    "unit_modulus": 1524,
+    "injection": 2558,
+    "aggregate_budget": 66,
+    "true_diagonal": 66,
+    "measure_diagonal": 66,
+    "signed_mass": 135,
+    "signed_main": 162,
+    "taylor_ODE": 46,
+    "serialization": 5,
+    "totient": 512,
+    "parameter_budget": 4
+  },
+  "finite_cases": 10260,
+  "negative_controls": [
+    "net_mass_is_not_absolute_mass",
+    "squareful_phi_not_square",
+    "strict_pair_needs_half",
+    "measure_diagonal_not_free",
+    "missing_P0_support",
+    "shared_large_prime_filter_needed",
+    "negative_bracket_denominator",
+    "larger_sequence_not_lower_bound",
+    "fixed_gap_onset_cannot_be_log_onset",
+    "factorable_bound_not_absolute_sum",
+    "A0_three_does_not_decay",
+    "swapping_two_large_primes_not_injective"
+  ],
+  "negative_controls_rejected": 12,
+  "AP_model": "N=200..1200 step100,z=5/7/11,w=3/5,upper31,R=8N,Y=3N/4,X=3N/7; synthetic, not Li or BV data",
+  "independently_verified": false,
+  "global_status": "INCONCLUSIVE"
+}

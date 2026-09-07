@@ -1,0 +1,77 @@
+{
+  "schema": "goldbach-error-handoff/v1",
+  "checkpoint": "CP-ERR-0010",
+  "findings": [
+    {
+      "id": "F-ERR-060",
+      "statement": "two-large-prime injection includes unit moduli; one BV budget bounds total absolute pair-mass deviations",
+      "grade": "proof_candidate",
+      "locator": "proof.md sections4-5"
+    },
+    {
+      "id": "F-ERR-061",
+      "statement": "sign-safe explicit lower replacement keeps real/discrete diagonals separate, pays full P0 and rebasing logarithm",
+      "grade": "conditional_proof_candidate",
+      "locator": "proof.md(15),(18)-(21)"
+    },
+    {
+      "id": "F-ERR-062",
+      "statement": "fixed exponent-gap mode removes N-dependent kernel drift only with h_star<=sigma and shifted coefficient",
+      "grade": "conditional_proof_candidate",
+      "locator": "proof.md(7),(3)"
+    },
+    {
+      "id": "F-ERR-063",
+      "statement": "g_(1e-6)>=1.6335722 from directed computation plus analytic error",
+      "grade": "computed_certificate_pending_review",
+      "locator": "results.json"
+    },
+    {
+      "id": "F-ERR-064",
+      "statement": "sigma=4e-6 fails the fixed-kernel comparator, not a count theorem",
+      "grade": "computed_certificate_pending_review",
+      "locator": "results.json"
+    },
+    {
+      "id": "F-ERR-065",
+      "statement": "conditional local onset preserves1.63357 after explicit positive losses",
+      "grade": "conditional_proof_candidate",
+      "locator": "proof.md section9"
+    }
+  ],
+  "fixed_loss": "(64/21)*epsilon0+8162*epsilon",
+  "fixed_mode_decaying_loss": "2*q_N+(2809/44)*r_N+2915/(4*z)+23*C_BV*T^(3-A0)",
+  "log_mode_extra_loss": "(2809/8)*h_star",
+  "parameter_order": [
+    "K_dim",
+    "sigma and loss budget",
+    "epsilon0,epsilon",
+    "w,P0",
+    "A0,B,C_BV and source onsets",
+    "N"
+  ],
+  "removed_dependencies": [
+    "Cs",
+    "L_eta",
+    "CP6 weighted BV"
+  ],
+  "costs_not_removed": [
+    "fixed P0 onset",
+    "one extra logarithm from actual-mass rebasing",
+    "original cutoff",
+    "coprime and discrete diagonal costs"
+  ],
+  "coefficient_tradeoff": {
+    "old_CP4_floor": "1.6335733",
+    "selected_floor": "1.6335722",
+    "is_coefficient_improvement": false,
+    "effective_N0_improvement_claimed": false
+  },
+  "global_ledger_modified": false,
+  "original_Cs_audit": "unresolved",
+  "independent_review": "pending",
+  "global_status": "INCONCLUSIVE",
+  "background_verifier_started": false,
+  "next_task": "G7 explicit lower replacement: moving s>=2 legal region and boundary-strip losses; do not copy the whole-domain s>=3 argument",
+  "factorable_boundary": "G9/G11/G12 cannot replace signed factorable averages by absolute sums without a new input"
+}
