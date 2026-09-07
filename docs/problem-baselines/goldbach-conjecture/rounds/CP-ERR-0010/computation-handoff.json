@@ -1,0 +1,62 @@
+{
+  "schema": "goldbach-computation-handoff/v1",
+  "checkpoint": "CP-ERR-0010",
+  "issue": 107,
+  "base_sha": "39002c5a6af8c7b7f093589e6a76cfd218fcbb99",
+  "branch": "program/i-0107/goldbach-g6-explicit-cp10",
+  "lease_id": "L-0107-goldbach-g6-explicit-cp10",
+  "actor": {
+    "id": "openai-chatgpt",
+    "run_id": "run-20260907-goldbach-g6-explicit-10",
+    "role": "solver"
+  },
+  "question": "Enclose g_sigma for sigma0,1e-6,4e-6 with a signed analytic certificate, and check finite two-prime/rebase interfaces.",
+  "input": {
+    "a": "4/53",
+    "b": "4/33",
+    "sigmas": [
+      "0",
+      "1/1000000",
+      "1/250000"
+    ],
+    "precision": 50,
+    "cells_per_piece": 4096,
+    "taylor_degree": 48
+  },
+  "computed_evidence": [
+    "directed interval quadrature plus analytic proof candidate",
+    "exact finite algebra and integer regressions"
+  ],
+  "artifacts": {
+    "check_g6_explicit.py": {
+      "path": "check_g6_explicit.py",
+      "sha256": "09aee888ca14055e710ce9c5e1de7d1c17c57d90269704d06f5988d9d65c3d57"
+    },
+    "results.json": {
+      "path": "results.json",
+      "sha256": "18dda91831774e7660846dcb6c6501159a9700bc30c386c2ad69db8b4f1465f5"
+    },
+    "validation.json": {
+      "path": "validation.json",
+      "sha256": "9e9ea7e32d23d3f74d69e2b4cf68876bab076a9c5b1955d0b1ebc5b604c4afa4"
+    },
+    "computation-record.json": {
+      "path": "computation-record.json",
+      "sha256": "b71ce5b0228822650ef5210fd2a5f02605be4dafd57ea1e13fe07963754d017f"
+    }
+  },
+  "reproduction": [
+    "python check_g6_explicit.py --compute",
+    "python check_g6_explicit.py --check",
+    "python -O check_g6_explicit.py --self-test",
+    "python check_g6_explicit.py --require-global"
+  ],
+  "acceptance": "selected floor1.6335722 exceeds1.63357; large-gap upper is below comparator; all finite algebra checks pass; global request rejected",
+  "dependency_boundary": "source table/theorem imported; old research candidates not promoted; no Project objective commitment fabricated for this preproject archive",
+  "cannot_imply": [
+    "independent verification",
+    "full theorem or twelve-term closure",
+    "effective numerical N0",
+    "original Cs audit solved"
+  ]
+}
