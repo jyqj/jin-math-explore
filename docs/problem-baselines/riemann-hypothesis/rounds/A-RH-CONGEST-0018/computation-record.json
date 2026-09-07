@@ -1,0 +1,161 @@
+{
+  "record_version": 1,
+  "execution_profile": "reproducible",
+  "status": "completed",
+  "task_file": {
+    "path": "README.md",
+    "sha256": "1a2f78551bdff8e6161e16b108896e5a875628d9bb0a818efe820fc6083a4cda"
+  },
+  "task": {
+    "question": "Bypass congestion through a mixed selected-row bound and a direct discrete/continuous source sampling estimate.",
+    "domain": "Finite conjugation-symmetric exponential lists with original multiplicities; source corollary has explicit external inputs.",
+    "assumptions": [
+      "Integer matrix dimension independent of orbit count; simple count refers to original multiset multiplicities.",
+      "Real-diameter margin theta<1 for alias estimate, and integer alpha*q for finite compression.",
+      "Source corollary uses fixed-test PC, critical strip, reflection symmetry and zero-count asymptotics."
+    ]
+  },
+  "backend": {
+    "name": "Python/NumPy/mpmath/Fraction",
+    "interface": "bounded local foreground process",
+    "versions": {
+      "mpmath": "1.3.0",
+      "numpy": "2.3.5",
+      "python": "3.13.5"
+    }
+  },
+  "backend_decision": {
+    "primary": "Python",
+    "reason": "Portable exact finite counts and rerunnable numerical matrix/kernel regressions.",
+    "live_check": "Python and imports succeeded; sage and wolframscript absent from PATH.",
+    "fallback": "Not used; primary completed.",
+    "inventory_snapshot_sha256": null,
+    "inventory_boundary": "Direct executable/import readiness; bundled inventory runner not executed."
+  },
+  "precision": {
+    "floating_type": "binary64/complex128",
+    "mpmath_digits": 80,
+    "seed": 2026090718,
+    "tolerance": 2e-08,
+    "acceptance": "2e-8 times 1+absolute sizes; see code for each comparison.",
+    "range_threshold": "1e-10*max(1,largest singular value)",
+    "quadrature": "160-point Gauss-Legendre on each half of the box",
+    "interval_certification": false
+  },
+  "execution": {
+    "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python check_direct_bridge.py --samples 120 --output validation.json",
+    "exit_status": 0,
+    "final_full_range_runs": 1,
+    "prior_work": [
+      "150-model generalized-row prototype (separate exploratory code, not an additional verifier).",
+      "One six-sample development run of the frozen checker."
+    ],
+    "actual_command_boundary": "The executed command used absolute /mnt/data paths, with otherwise identical arguments.",
+    "stdout": {
+      "ok": true,
+      "counts": {
+        "alias_scale_comparisons": 360,
+        "complex_remainder_cases": 120,
+        "exact_block_multiplier_checks": 9,
+        "exact_central_coefficients": 87700,
+        "exact_scalar_checks": 5,
+        "independent_integral_evaluations": 24,
+        "integer_short_dimensions": 1278,
+        "mixed_models": 126,
+        "positive_mixed_floors": 437,
+        "resonant_alias_guards": 15,
+        "selected_coordinate_tests": 1530
+      },
+      "output": "validation.json"
+    },
+    "background_job": false
+  },
+  "result_summary": {
+    "all_final_assertions": "PASS",
+    "counts": {
+      "alias_scale_comparisons": 360,
+      "complex_remainder_cases": 120,
+      "exact_block_multiplier_checks": 9,
+      "exact_central_coefficients": 87700,
+      "exact_scalar_checks": 5,
+      "independent_integral_evaluations": 24,
+      "integer_short_dimensions": 1278,
+      "mixed_models": 126,
+      "positive_mixed_floors": 437,
+      "resonant_alias_guards": 15,
+      "selected_coordinate_tests": 1530
+    },
+    "maximum_residuals": {
+      "alias_remainder_identity": 1.626953582672133e-11,
+      "central_row_identity": 3.4924596548080444e-10,
+      "flat_simple_diagonal": 6.661338147750939e-16,
+      "integral_kernel": 3.375077994860476e-13,
+      "mixed_selected_expansion": 2.980941644636914e-07,
+      "resonant_alias_guard": 8.881784197001252e-16,
+      "sampled_pair_dictionary": 2.0961010704922955e-13,
+      "signed_slack": 2.9103830456733704e-10
+    },
+    "minimum_slacks": {
+      "alias_comparison": 0.006423346252304833,
+      "alias_weight_majorant": 0.0,
+      "allocated_defect": -1.776356839400254e-15,
+      "block_multiplier_norm": -1.4210854715202004e-14,
+      "defect_nonnegative": -1.7763568394002505e-15,
+      "mixed_selected_bound": -1.5543122344752192e-15,
+      "mixed_short_floor": -8.881784197001252e-16,
+      "partial_fraction_bound": 0.2114758124107638
+    },
+    "scalar": {
+      "epsilon_root": "0.00020185216007809590759621745277813630996524910425397",
+      "not_a_new_best_bound": true,
+      "rational_epsilon_lower": "1/5000",
+      "rational_squared_gap": "89617/14400000000",
+      "source_candidate_fraction": "0.66686851882674476257426288411944480297663191577092",
+      "source_reference_stronger_fraction": "0.67250070367941164573437979080329518859340302862626"
+    },
+    "largest_residual_boundary": "The ~2.98e-7 unnormalized selected expansion residual occurs within the declared scale-relative tolerance and is not suppressed."
+  },
+  "verification": {
+    "evidence_grade": "numerical_evidence",
+    "exact_components": [
+      "87700 integer Toeplitz coefficient identities",
+      "9 integer block-multiplier checks",
+      "5 rational scalar identities/comparisons"
+    ],
+    "limitations": [
+      "No actual zeta zero enumeration or matrix assembly at source heights.",
+      "No independent-verifier receipt, upstream Lean build, full-repository local tests or bundled computation inventory/record runner.",
+      "Finite rational checks and floating regressions do not cover universal analytic quantifiers.",
+      "Numerical subspaces use the stated SVD rank threshold; this does not prove rank.",
+      "The source consequence is conditional on PC and standard source facts, and is weaker than the inspected 0.672500703679 benchmark.",
+      "The new route bypasses matching; it does not prove small congestion, matching cost or depth tails.",
+      "No RH proof, new best proportion or mathematical-authority promotion."
+    ]
+  },
+  "artifacts": [
+    {
+      "path": "README.md",
+      "sha256": "1a2f78551bdff8e6161e16b108896e5a875628d9bb0a818efe820fc6083a4cda"
+    },
+    {
+      "path": "proof.md",
+      "sha256": "38125cbcd95257ac0e6a04b493cd786fe51801287af97c5cc3bdb87bd0760a22"
+    },
+    {
+      "path": "check_direct_bridge.py",
+      "sha256": "8c0876ded22cd492f5a46275a1d3bebf041eeed00af513fcc147da58793cb755"
+    },
+    {
+      "path": "validation.json",
+      "sha256": "0e88a6d70cbceb88400a48b576d7db0c1ba040707d354c21cf1356ecf8e769fb"
+    },
+    {
+      "path": "claims.json",
+      "sha256": "c74e4b60e299c6e0a0aeb5702294e23b4b60c16d83b05ad337e37c1ae8021620"
+    },
+    {
+      "path": "source-scope.md",
+      "sha256": "98e85bccdf1b4bce8e189d70ab5ede2ccd84e5bc9ba9a819001693e31ae0466e"
+    }
+  ]
+}

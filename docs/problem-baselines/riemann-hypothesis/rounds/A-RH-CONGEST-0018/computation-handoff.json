@@ -1,0 +1,72 @@
+{
+  "schema": "jin-math-computation-handoff/v1",
+  "problem_id": "preproject-rh",
+  "window_id": "pre-genesis-sequential",
+  "attempt_id": "A-RH-CONGEST-0018",
+  "claim_id": null,
+  "objective_sha256": "1a2f78551bdff8e6161e16b108896e5a875628d9bb0a818efe820fc6083a4cda",
+  "question": "Bypass congestion through a mixed selected-row bound and a direct discrete/continuous source sampling estimate.",
+  "domain": "Finite conjugation-symmetric exponential lists with original multiplicities; source corollary has explicit external inputs.",
+  "assumptions": [
+    "Integer matrix dimension independent of orbit count; simple count refers to original multiset multiplicities.",
+    "Real-diameter margin theta<1 for alias estimate, and integer alpha*q for finite compression.",
+    "Source corollary uses fixed-test PC, critical strip, reflection symmetry and zero-count asymptotics."
+  ],
+  "requested_evidence": "numerical_evidence",
+  "backend": {
+    "name": "Python/NumPy/mpmath/Fraction",
+    "version": "3.13.5",
+    "interface": "local foreground process",
+    "inventory_snapshot_sha256": null
+  },
+  "exact_input": {
+    "seed": 2026090718,
+    "samples": 120,
+    "coefficient_q_range": [
+      1,
+      80
+    ],
+    "q_choices_main": [
+      8,
+      12,
+      16,
+      24,
+      32,
+      36
+    ],
+    "alias_alphas": [
+      "1/2",
+      "3/4",
+      "1"
+    ],
+    "objective_boundary": "README hash pins this bounded task, not a v13 Project objective."
+  },
+  "reproduction_command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python check_direct_bridge.py --samples 120 --output validation.json",
+  "integrity_command": "python check_direct_bridge.py --check-package",
+  "code_artifacts": [
+    {
+      "path": "check_direct_bridge.py",
+      "sha256": "8c0876ded22cd492f5a46275a1d3bebf041eeed00af513fcc147da58793cb755"
+    }
+  ],
+  "result_artifacts": [
+    {
+      "path": "validation.json",
+      "sha256": "0e88a6d70cbceb88400a48b576d7db0c1ba040707d354c21cf1356ecf8e769fb"
+    }
+  ],
+  "computation_record": {
+    "path": "computation-record.json",
+    "sha256": "27b384e0d4629a64d89301af07b287489ee2e5200a31554eae12648b2a505f22"
+  },
+  "evidence_grade": "numerical_evidence",
+  "cannot_imply": [
+    "No actual zeta zero enumeration or matrix assembly at source heights.",
+    "No independent-verifier receipt, upstream Lean build, full-repository local tests or bundled computation inventory/record runner.",
+    "Finite rational checks and floating regressions do not cover universal analytic quantifiers.",
+    "Numerical subspaces use the stated SVD rank threshold; this does not prove rank.",
+    "The source consequence is conditional on PC and standard source facts, and is weaker than the inspected 0.672500703679 benchmark.",
+    "The new route bypasses matching; it does not prove small congestion, matching cost or depth tails.",
+    "No RH proof, new best proportion or mathematical-authority promotion."
+  ]
+}

@@ -1,0 +1,187 @@
+{
+  "format": "rh-congest-0018-claims/v1",
+  "attempt": "A-RH-CONGEST-0018",
+  "archive_status": "reference_only",
+  "mathematical_status": "proof_candidate",
+  "historical_parent": {
+    "commit": "3be6e0543aee9f26180a90a6ceac5ca288c3bd51",
+    "proof_blob": "16eba095fcf5c94a39a07d77355a2d3202236a48",
+    "receipt": null
+  },
+  "external_inputs": [
+    {
+      "id": "PC",
+      "locator": "arXiv:2609.02882v1 Lemma 3.1",
+      "raw_sha256": null,
+      "status": "external_theorem_not_independently_audited"
+    },
+    {
+      "id": "DLMF",
+      "locator": "NIST DLMF 4.22.4",
+      "raw_sha256": null,
+      "status": "classical_formula_input"
+    }
+  ],
+  "claims": [
+    {
+      "id": "A-RH-CONGEST-0018-C01",
+      "title": "Arbitrary-multiplicity signed slack",
+      "statement": "D=n+||T||_F^2-2N equals (3), hence D>=||R||_F^2+2xi>=0.",
+      "quantifier_scope": "Every finite conjugation-invariant multiset and every integer matrix dimension q>=1.",
+      "assumptions": [
+        "Simple real points are identified using original multiplicities; nonsimple real mass>=2 and pair total mass is even."
+      ],
+      "evidence_grade": "proof_candidate",
+      "evidence_refs": [
+        "proof.md sections 1-2",
+        "check_direct_bridge.py",
+        "validation.json"
+      ],
+      "cannot_imply": [
+        "Numerical rank determinations are not exact rank proofs.",
+        "No independent mathematical verification or authority promotion."
+      ],
+      "verifier_receipt": null
+    },
+    {
+      "id": "A-RH-CONGEST-0018-C02",
+      "title": "Mixed selected-row estimate",
+      "statement": "tr C(T^2-2T+S)>=-sqrt((4rank(C)+2n)D).",
+      "quantifier_scope": "Every coordinate projection C and every signed operator in C01.",
+      "assumptions": [
+        "U,E,F and R are the exact subspaces and residual in section 2."
+      ],
+      "evidence_grade": "proof_candidate",
+      "evidence_refs": [
+        "proof.md section 3",
+        "check_direct_bridge.py",
+        "validation.json"
+      ],
+      "cannot_imply": [
+        "No flat-simple-diagonal replacement for arbitrary nonconstant vector profiles.",
+        "No independent mathematical verification or authority promotion."
+      ],
+      "verifier_receipt": null
+    },
+    {
+      "id": "A-RH-CONGEST-0018-C03",
+      "title": "Cell-free mixed Toeplitz energy floor",
+      "statement": "E_alpha^(q)>=f_alpha(2rho-s)+c_alpha rho^2-sqrt((4(2alpha-1)+2s)delta)/alpha^2.",
+      "quantifier_scope": "ceil(q/2)<=d<=q, alpha=d/q; arbitrary centers, depths and integer multiplicities.",
+      "assumptions": [
+        "C01-C02; exponential sampling makes T Toeplitz and gives diag S=s."
+      ],
+      "evidence_grade": "proof_candidate",
+      "evidence_refs": [
+        "proof.md section 4",
+        "check_direct_bridge.py",
+        "validation.json"
+      ],
+      "cannot_imply": [
+        "No direct assertion for noninteger alpha*q on an unchanged finite source matrix.",
+        "No independent mathematical verification or authority promotion."
+      ],
+      "verifier_receipt": null
+    },
+    {
+      "id": "A-RH-CONGEST-0018-C04",
+      "title": "Direct sampled-to-continuous energy bound",
+      "statement": "|M_alpha^(q)-M_alpha^cont|<=C_theta(sum exp(alpha a_i))^2/(N alpha^2 q^2).",
+      "quantifier_scope": "Every finite list with real diameter<=theta*q, 0<=theta<1 and alpha*q an integer.",
+      "assumptions": [
+        "Conjugation invariance and complete multiplicity counting; classical csc-square partial fractions."
+      ],
+      "evidence_grade": "proof_candidate",
+      "evidence_refs": [
+        "proof.md section 5",
+        "check_direct_bridge.py",
+        "validation.json"
+      ],
+      "cannot_imply": [
+        "No estimate with the real-diameter margin silently removed.",
+        "No independent mathematical verification or authority promotion."
+      ],
+      "verifier_receipt": null
+    },
+    {
+      "id": "A-RH-CONGEST-0018-C05",
+      "title": "Fixed interior rectangular source moment",
+      "statement": "M_b(T)->1/b+b/3 for every fixed 0<b<1.",
+      "quantifier_scope": "First T->infinity for fixed b and smoothing width, then smoothing width->0.",
+      "assumptions": [
+        "External PC from Lamzouri v1 Lemma 3.1; standard N(T)~T log(T)/(2pi)."
+      ],
+      "evidence_grade": "proof_candidate",
+      "evidence_refs": [
+        "proof.md section 6 first half",
+        "check_direct_bridge.py",
+        "validation.json"
+      ],
+      "cannot_imply": [
+        "Not an independent audit of PC; not b=1 or b=b(T) uniformity.",
+        "No independent mathematical verification or authority promotion."
+      ],
+      "verifier_receipt": null
+    },
+    {
+      "id": "A-RH-CONGEST-0018-C06",
+      "title": "Full-source direct sampling without deleting deep zeros",
+      "statement": "For q=4ceil(V_T/4), the sampling error at scale alpha is O_theta,alpha(T^(alpha theta-1)/log T).",
+      "quantifier_scope": "Actual zeros 0<gamma<=T; fixed 0<theta<1; alpha=1 or 3/4.",
+      "assumptions": [
+        "C04; source critical strip, reflection symmetry and N(T)~V_T; all original multiplicities retained."
+      ],
+      "evidence_grade": "proof_candidate",
+      "evidence_refs": [
+        "proof.md section 6 second half",
+        "check_direct_bridge.py",
+        "validation.json"
+      ],
+      "cannot_imply": [
+        "Does not prove a low-cost cell matching or bounded normalized depths.",
+        "No independent mathematical verification or authority promotion."
+      ],
+      "verifier_receipt": null
+    },
+    {
+      "id": "A-RH-CONGEST-0018-C07",
+      "title": "Weaker source-conditional proportion consequence",
+      "statement": "liminf N_0^s(T)/N(T)>=2/3+(10sqrt(4162)-645)/672; the increment exceeds 1/5000.",
+      "quantifier_scope": "Asymptotic zero count, with height first and fixed theta then theta->1.",
+      "assumptions": [
+        "C03,C05,C06 and the nonnegative signed slack."
+      ],
+      "evidence_grade": "proof_candidate",
+      "evidence_refs": [
+        "proof.md section 7",
+        "check_direct_bridge.py",
+        "validation.json"
+      ],
+      "cannot_imply": [
+        "Weaker than the inspected 0.672500703679... benchmark; not a new best bound or an RH proof.",
+        "No independent mathematical verification or authority promotion."
+      ],
+      "verifier_receipt": null
+    },
+    {
+      "id": "A-RH-CONGEST-0018-C08",
+      "title": "Resonant alias scope obstruction",
+      "statement": "For distinct simple real points 0,q, sampled and continuous moments differ by exactly 1.",
+      "quantifier_scope": "q divisible by 4; alpha in {1/2,3/4,1}.",
+      "assumptions": [
+        "Finite constructed list of mass two, real diameter exactly q."
+      ],
+      "evidence_grade": "proof_candidate",
+      "evidence_refs": [
+        "proof.md section 5 scope guard",
+        "check_direct_bridge.py",
+        "validation.json"
+      ],
+      "cannot_imply": [
+        "Not a zeta-zero configuration or a counterexample to the correctly margin-restricted sampling lemma.",
+        "No independent mathematical verification or authority promotion."
+      ],
+      "verifier_receipt": null
+    }
+  ]
+}
