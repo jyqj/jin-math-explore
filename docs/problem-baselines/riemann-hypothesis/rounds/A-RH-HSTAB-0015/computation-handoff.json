@@ -1,0 +1,59 @@
+{
+  "schema": "jin-math-computation-handoff/v1",
+  "problem_id": "preproject-rh",
+  "window_id": "pre-genesis-sequential",
+  "attempt_id": "A-RH-HSTAB-0015",
+  "claim_id": null,
+  "objective_sha256": "74bf8ef2e5ed5569e007b0ecb2008e57de99330749e60f6fa6e370958b90bd48",
+  "objective_boundary": "README hash identifies this scoped preproject task, not a v13 Project objective.",
+  "question": "Prove a period-independent saturated-hole energy modulus and its finite-block mixed-model bridge.",
+  "domain": "Finite Hermitian Toeplitz matrices and supplied periodic paired-exponential cell models.",
+  "assumptions": [
+    "Hole model: marks 0/2 and finite depths; no common phase or uniform depth cap.",
+    "Mixed model: mean mass one, marks 0/1/2, one orbit per supplied cell, fixed finite depth cap A."
+  ],
+  "requested_evidence": "numerical_evidence",
+  "backend": {
+    "name": "Python/NumPy/mpmath/Fraction",
+    "version": "3.13.5",
+    "interface": "local foreground process",
+    "inventory_snapshot_sha256": null
+  },
+  "exact_input": {
+    "seed": 2026090715,
+    "samples": 120,
+    "row_coefficient_Q_range": [
+      1,
+      96
+    ],
+    "certificate_L": 16777216,
+    "certificate_delta_cap": "1e-24"
+  },
+  "reproduction_command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python check_hole_stability.py --samples 120 --output validation.json",
+  "integrity_command": "python check_hole_stability.py --check-package",
+  "code_artifacts": [
+    {
+      "path": "check_hole_stability.py",
+      "sha256": "77dfc8f92eb262893db2d169f5e1f710deb6a7b5f6de4f0fde2a165fd0121af0"
+    }
+  ],
+  "result_artifacts": [
+    {
+      "path": "validation.json",
+      "sha256": "4e2ace4ed6e75db3e1891a62df2fd937e4ead5ece76678993b275eeab766452f"
+    }
+  ],
+  "computation_record": {
+    "path": "computation-record.json",
+    "sha256": "b11556a7a3cb2c29321ae18323b2ab175bc9494eb7f0f283cf42d4c00fb0632d"
+  },
+  "evidence_grade": "numerical_evidence",
+  "cannot_imply": [
+    "All analytic statements remain proof candidates; no independent receipt or formal proof.",
+    "The standalone hole theorem has no uniform depth cap; the mixed theorem retains a fixed finite cap and supplied unit-cell representation.",
+    "No actual-zeta representation, multiplicity reduction, depth-tail bound, source profile/localization or arithmetic moment transfer.",
+    "Small random mixed-model checks are vacuous under the conservative assembled bound; the finite tolerance rests on the analytic majorants and rational comparisons.",
+    "No full-repository local tests, bundled inventory/record runner or upstream Lean build.",
+    "The 2^24 partition scale is a scalar parameter, not a simulated matrix dimension."
+  ]
+}

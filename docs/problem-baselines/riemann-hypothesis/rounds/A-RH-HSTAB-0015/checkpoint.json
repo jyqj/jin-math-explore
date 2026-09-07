@@ -1,0 +1,46 @@
+{
+  "format": "rh-hstab-0015-checkpoint/v1",
+  "attempt": "A-RH-HSTAB-0015",
+  "issue": 93,
+  "date": "2026-09-07",
+  "actor": {
+    "kind": "agent",
+    "id": "openai-chatgpt",
+    "run_id": "run-20260907-rh-hole-stability-15",
+    "role": "solver"
+  },
+  "git_base_sha": "39002c5a6af8c7b7f093589e6a76cfd218fcbb99",
+  "git_base_tree_sha": "d6ac23dc843e26ba123ae167228e3a0c1ff6b750",
+  "mathematical_parent": {
+    "commit": "2f5bc3bf2ad050a363caa4cb08ea81d5679531bf",
+    "path": "docs/problem-baselines/riemann-hypothesis/rounds/A-RH-DISP-0014/proof.md",
+    "git_blob_sha1": "5866044343f85fa6574bb18f42162927a5fe5c62",
+    "status": "proof_candidate",
+    "receipt": null
+  },
+  "mixed_model_dependency": "Mixed model: mean mass one, marks 0/1/2, one orbit per supplied cell, fixed finite depth cap A. See claims.json round12 pin.",
+  "branch": "program/i-0093/rh-hole-stability-15",
+  "archive_status": "reference_only",
+  "mathematical_status": "proof_candidate",
+  "independent_verifier_receipt": null,
+  "sha256": {
+    "README.md": "74bf8ef2e5ed5569e007b0ecb2008e57de99330749e60f6fa6e370958b90bd48",
+    "check_hole_stability.py": "77dfc8f92eb262893db2d169f5e1f710deb6a7b5f6de4f0fde2a165fd0121af0",
+    "claims.json": "41a9ffcd88d25788bb4ec1459b2e635e8f7b91f3430b0068dc19d92419cd2164",
+    "computation-handoff.json": "78deb477aaec60c5a05dbed0f693aab629222d7c0f9130b3035f1d6c2685391f",
+    "computation-record.json": "b11556a7a3cb2c29321ae18323b2ab175bc9494eb7f0f283cf42d4c00fb0632d",
+    "proof.md": "78f4cade51ab181578e758001d180f310c477a1362e9bda8fe417f5b1252b06d",
+    "source-scope.md": "ca9efc3c3a9de3e5f122bc60e5afaab3fbbf9af7a706118666d3cfdd7a6518d1",
+    "validation.json": "4e2ace4ed6e75db3e1891a62df2fd937e4ead5ece76678993b275eeab766452f"
+  },
+  "hash_boundary": "Eight files covered; this file excludes itself. The PR pins the checkpoint Git blob and final commit.",
+  "scope": {
+    "only_additions": true,
+    "modifies_predecessors": false,
+    "advances_authority": false,
+    "full_repository_local_tests": false,
+    "upstream_lean_build": false,
+    "remote_ci": "Observe separately in PR; not predicted here."
+  },
+  "next_attempt": "A-RH-SOURCE-0016: source-to-cell approximation with operator-energy, multiplicity and depth-tail accounting."
+}

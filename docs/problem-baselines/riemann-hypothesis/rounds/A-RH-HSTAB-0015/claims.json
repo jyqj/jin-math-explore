@@ -1,0 +1,188 @@
+{
+  "format": "rh-hstab-0015-claims/v1",
+  "attempt": "A-RH-HSTAB-0015",
+  "archive_status": "reference_only",
+  "mathematical_status": "proof_candidate",
+  "dependencies": {
+    "round12": {
+      "commit": "e1042ef83ff3a468dc0faf2d82d19e07b1e5be87",
+      "path": "docs/problem-baselines/riemann-hypothesis/rounds/A-RH-LOC-0012/proof.md",
+      "git_blob_sha1": "a39aa5e3b2d146d50b33d27dd21d7a711499d7b0",
+      "evidence_grade": "proof_candidate",
+      "receipt": null
+    }
+  },
+  "claims": [
+    {
+      "id": "A-RH-HSTAB-0015-C01",
+      "title": "Central-row Toeplitz identity",
+      "statement": "||T_d||_F^2=||T_(Q-d)||_F^2+sum_(Q-d<=i<d)(T^2)_ii.",
+      "quantifier_scope": "Every Hermitian Toeplitz matrix and ceil(Q/2)<=d<=Q.",
+      "assumptions": [
+        "Hermitian Toeplitz matrix; full-row convention."
+      ],
+      "dependency_refs": [],
+      "evidence_grade": "proof_candidate",
+      "evidence_refs": [
+        "proof.md sections 1-2",
+        "validation.json: 153272 exact integer coefficient checks and 366 sampled matrix identities"
+      ],
+      "cannot_imply": [
+        "Does not imply a phase representation or approximate circulant structure.",
+        "Independent mathematical verification, source transfer or RH."
+      ],
+      "verifier_receipt": null
+    },
+    {
+      "id": "A-RH-HSTAB-0015-C02",
+      "title": "Selected-row projection perturbation",
+      "statement": "For T=2Pi+R, sum_C(T^2-2T)_ii >= -[|C|-(sqrt(|C|)-sqrt(D))_+^2] when ||R||_F^2<=D.",
+      "quantifier_scope": "All finite Hermitian T, all orthogonal Pi, every coordinate subset.",
+      "assumptions": [
+        "Hermitian R; orthogonal Pi."
+      ],
+      "dependency_refs": [],
+      "evidence_grade": "proof_candidate",
+      "evidence_refs": [
+        "proof.md section 2",
+        "validation.json: 120 abstract projection-row comparisons"
+      ],
+      "cannot_imply": [
+        "No optimality claim for the resulting model modulus.",
+        "Independent mathematical verification, source transfer or RH."
+      ],
+      "verifier_receipt": null
+    },
+    {
+      "id": "A-RH-HSTAB-0015-C03",
+      "title": "Period-uniform saturated-hole modulus",
+      "statement": "E_(3/4)>=(16/9)rho+(4/9)rho^2-(16sqrt(2)/9)sqrt(delta), with the stronger clipped all-alpha form (8).",
+      "quantifier_scope": "All finite periods, hole marks 0/2, 0<=rho<=2, 1/2<=alpha<=1.",
+      "assumptions": [
+        "Finite depths; paired exponentials and normalization (1). No uniform cap or common phase required."
+      ],
+      "dependency_refs": [],
+      "evidence_grade": "proof_candidate",
+      "evidence_refs": [
+        "proof.md sections 1-3",
+        "validation.json: 125 hole models; 750 short comparisons; 125 replication/slack tests"
+      ],
+      "cannot_imply": [
+        "Not valid unchanged for models containing simple marks.",
+        "Not a source theorem for zeta zeros.",
+        "Independent mathematical verification, source transfer or RH."
+      ],
+      "verifier_receipt": null
+    },
+    {
+      "id": "A-RH-HSTAB-0015-C04",
+      "title": "Finite bad-block averaging bridge",
+      "statement": "The bad-block contribution satisfies (15), with both periodicization charges included.",
+      "quantifier_scope": "All finite mixed mean-one supplied-cell configurations and integer L>=2.",
+      "assumptions": [
+        "Uniform finite cap A; signed localization; nonnegative individual finite block slack."
+      ],
+      "dependency_refs": [
+        "round12"
+      ],
+      "evidence_grade": "proof_candidate",
+      "evidence_refs": [
+        "proof.md section 4",
+        "validation.json: 848 bad periodization checks; 360 averaged defects; 1080 bad-floor comparisons"
+      ],
+      "cannot_imply": [
+        "Does not assert every individual block has small defect.",
+        "Independent mathematical verification, source transfer or RH."
+      ],
+      "verifier_receipt": null
+    },
+    {
+      "id": "A-RH-HSTAB-0015-C05",
+      "title": "Explicit good-block input",
+      "statement": "Equations (17)-(19) retain anchor cost, mass-four collisions and finite wrap error.",
+      "quantifier_scope": "Every finite supplied-cell mixed model, 1/2<alpha<=1 and L>=2.",
+      "assumptions": [
+        "Frozen round-12 candidate mechanism, re-derived here; bounded depth; at least one simple atom per good block."
+      ],
+      "dependency_refs": [
+        "round12"
+      ],
+      "evidence_grade": "proof_candidate",
+      "evidence_refs": [
+        "proof.md section 5",
+        "validation.json: Full analytic re-derivation and assembled finite checks; no isolated predecessor verification"
+      ],
+      "cannot_imply": [
+        "Same-run re-derivation is not an independent receipt.",
+        "Independent mathematical verification, source transfer or RH."
+      ],
+      "verifier_receipt": null
+    },
+    {
+      "id": "A-RH-HSTAB-0015-C06",
+      "title": "Mixed model without H or Omega assumptions",
+      "statement": "For every L>=2, E_alpha>=f_alpha(2-s)+c_alpha-Err_(alpha,A)(L,delta); at fixed A, s_n->2/3 and delta_n->0 imply liminf E_(3/4)>=44/27.",
+      "quantifier_scope": "Arbitrary periods and phases in the mean-one marks-0/1/2 cell model; common finite A.",
+      "assumptions": [
+        "C04-C05; fixed alpha>1/2; exact normalization."
+      ],
+      "dependency_refs": [
+        "round12"
+      ],
+      "evidence_grade": "proof_candidate",
+      "evidence_refs": [
+        "proof.md section 6",
+        "validation.json: 1080 assembled finite checks, plus proof of error limit; small random assembled bounds are vacuous"
+      ],
+      "cannot_imply": [
+        "No uniform mixed result as A grows.",
+        "No actual-zeta one-cell representation or arithmetic budget.",
+        "Independent mathematical verification, source transfer or RH."
+      ],
+      "verifier_receipt": null
+    },
+    {
+      "id": "A-RH-HSTAB-0015-C07",
+      "title": "Exact finite tolerance certificate",
+      "statement": "At A<=log2, L=2^24 and delta<=10^-24, Err<13/500. Under both stipulated budgets the model must have s>2/3+10^-24.",
+      "quantifier_scope": "Specified cap and rational tolerances in the same finite mixed model.",
+      "assumptions": [
+        "C06 and analytic constant majorants in section 7."
+      ],
+      "dependency_refs": [
+        "round12"
+      ],
+      "evidence_grade": "proof_candidate",
+      "evidence_refs": [
+        "proof.md section 7",
+        "validation.json: 8 exact rational comparisons and a separate binary64 scalar evaluation"
+      ],
+      "cannot_imply": [
+        "The partition scale is not a simulated matrix size.",
+        "The simple fraction is only a model bound, not an actual zeta proportion.",
+        "Independent mathematical verification, source transfer or RH."
+      ],
+      "verifier_receipt": null
+    },
+    {
+      "id": "A-RH-HSTAB-0015-C08",
+      "title": "Scope counterexample for naive mixed extension",
+      "statement": "The fully simple real integer lattice has delta=0 and E_(3/4)=4/3, contradicting the incorrect hole floor 20/9.",
+      "quantifier_scope": "The explicitly defined period-one all-simple model.",
+      "assumptions": [
+        "m=1; a=0; exact lattice."
+      ],
+      "dependency_refs": [],
+      "evidence_grade": "proof_candidate",
+      "evidence_refs": [
+        "proof.md sections 3 and 8",
+        "validation.json: Exact elementary expression and numerical regression"
+      ],
+      "cannot_imply": [
+        "Does not refute the correctly stratified mixed theorem.",
+        "Independent mathematical verification, source transfer or RH."
+      ],
+      "verifier_receipt": null
+    }
+  ]
+}
