@@ -1,0 +1,201 @@
+{
+  "format": "rh-source-0016-claims/v1",
+  "attempt": "A-RH-SOURCE-0016",
+  "archive_status": "reference_only",
+  "dependencies": {
+    "PC": {
+      "id": "PC",
+      "locator": "arXiv:2609.02882v1 Lemma 3.1",
+      "url": "https://arxiv.org/html/2609.02882v1",
+      "raw_sha256": null,
+      "status": "external_theorem_input_not_independently_audited"
+    },
+    "parent": {
+      "commit": "bea93a0308a7ddfd6bacc35c547ffd4ab6d5cee9",
+      "path": "docs/problem-baselines/riemann-hypothesis/rounds/A-RH-HSTAB-0015/proof.md",
+      "git_blob_sha1": "3daba85264af382ae65dbae2924be4e1d74f9160",
+      "status": "proof_candidate",
+      "receipt": null
+    }
+  },
+  "claims": [
+    {
+      "id": "A-RH-SOURCE-0016-C01",
+      "title": "Fixed-test deweighting and polynomial envelope",
+      "statement": "Equations (4)-(6) hold for the stated fixed C^2 compact profiles; applying PC gives (5).",
+      "quantifier_scope": "Fixed p>=0,e>0,p+2e<1, and T tending to infinity after fixing them.",
+      "assumptions": [
+        "PC; q and q'' meet its support and Lipschitz hypotheses"
+      ],
+      "dependency_refs": [
+        "PC"
+      ],
+      "evidence_grade": "proof_candidate",
+      "evidence_refs": [
+        "proof.md sections 1-2",
+        "check_source_bridge.py",
+        "validation.json"
+      ],
+      "cannot_imply": [
+        "Uniform estimates for e=e(T), or independent validation of PC.",
+        "Formal or independent verification; a proof of RH."
+      ],
+      "verifier_receipt": null
+    },
+    {
+      "id": "A-RH-SOURCE-0016-C02",
+      "title": "Actual source rectangular moment below critical bandwidth",
+      "statement": "For every fixed 0<b<1, M_b(T) tends to 1/b+b/3, via the two-sided signed-safe sandwich.",
+      "quantifier_scope": "All fixed b strictly between zero and one.",
+      "assumptions": [
+        "PC and N_T/V_T->1; the conjugation symmetry of the full source multiset"
+      ],
+      "dependency_refs": [
+        "PC"
+      ],
+      "evidence_grade": "proof_candidate",
+      "evidence_refs": [
+        "proof.md section 3 equations (7)-(9)",
+        "check_source_bridge.py",
+        "validation.json"
+      ],
+      "cannot_imply": [
+        "A new unconditional zero proportion, a b=1 upper bound, or a one-cell representation.",
+        "Formal or independent verification; a proof of RH."
+      ],
+      "verifier_receipt": null
+    },
+    {
+      "id": "A-RH-SOURCE-0016-C03",
+      "title": "Two-scale dictionary and endpoint boundary",
+      "statement": "The same source rescaled by fixed theta has budgets kappa(alpha theta); (11) is exact; interior limiting control alone does not imply endpoint control.",
+      "quantifier_scope": "Fixed theta in (0,1); fixed alpha=1 or 3/4; positive-measure countermodel for the abstract limit inference.",
+      "assumptions": [
+        "C02; normalization by actual source mass rather than spatial cell count"
+      ],
+      "dependency_refs": [
+        "PC"
+      ],
+      "evidence_grade": "proof_candidate",
+      "evidence_refs": [
+        "proof.md section 3 equations (10)-(11) and endpoint guard",
+        "check_source_bridge.py",
+        "validation.json"
+      ],
+      "cannot_imply": [
+        "That the actual endpoint asymptotic is false, or that the abstract measure is a zero configuration.",
+        "Formal or independent verification; a proof of RH."
+      ],
+      "verifier_receipt": null
+    },
+    {
+      "id": "A-RH-SOURCE-0016-C04",
+      "title": "Unbounded-depth local deletion charge",
+      "statement": "||A_E||_HS^2 <= (3+1/(3 alpha^2)) sum_k W_k(alpha)^2.",
+      "quantifier_scope": "Every finite signed orbit list, arbitrary cell occupancy and finite depths, 0<alpha<=1.",
+      "assumptions": [
+        "Real centers, nonnegative depths, real coefficients, half-open integer cells"
+      ],
+      "dependency_refs": [],
+      "evidence_grade": "proof_candidate",
+      "evidence_refs": [
+        "proof.md section 4",
+        "check_source_bridge.py",
+        "validation.json"
+      ],
+      "cannot_imply": [
+        "Smallness of the charge from a small deleted count.",
+        "Formal or independent verification; a proof of RH."
+      ],
+      "verifier_receipt": null
+    },
+    {
+      "id": "A-RH-SOURCE-0016-C05",
+      "title": "Supplied injective transport",
+      "statement": "The normalized operator error obeys the explicit weighted phase/depth bound (13).",
+      "quantifier_scope": "Every retained core with marks 1/2 and an injective assigned-cell map.",
+      "assumptions": [
+        "Both depth fields <=A; source-target displacement <=h; supplied assignment"
+      ],
+      "dependency_refs": [],
+      "evidence_grade": "proof_candidate",
+      "evidence_refs": [
+        "proof.md section 5",
+        "check_source_bridge.py",
+        "validation.json"
+      ],
+      "cannot_imply": [
+        "Existence of a low-cost assignment for actual zeros or automatic torus matching.",
+        "Formal or independent verification; a proof of RH."
+      ],
+      "verifier_receipt": null
+    },
+    {
+      "id": "A-RH-SOURCE-0016-C06",
+      "title": "Charged source-to-model feasibility",
+      "statement": "The target periodic energies are bounded by U_alpha and must satisfy (16), with exact r,sigma,d normalization.",
+      "quantifier_scope": "Every finite source and eligible matched core with Q>=2; every L>=2 and 1/2<alpha<=1.",
+      "assumptions": [
+        "C04-C05 and the parent finite periodicization/mixed-model theorem; Delta>=0"
+      ],
+      "dependency_refs": [
+        "parent"
+      ],
+      "evidence_grade": "proof_candidate",
+      "evidence_refs": [
+        "proof.md section 6 equations (14)-(16)",
+        "check_source_bridge.py",
+        "validation.json"
+      ],
+      "cannot_imply": [
+        "Any actual-zeta source realization or an independently verified parent theorem.",
+        "Formal or independent verification; a proof of RH."
+      ],
+      "verifier_receipt": null
+    },
+    {
+      "id": "A-RH-SOURCE-0016-C07",
+      "title": "Count-only deletion obstructions",
+      "statement": "The distinct real cluster has vanishing removed mass ratio but residual energy >=4/pi^2; the single deep pair has exact energy (18).",
+      "quantifier_scope": "Entire stated k and N families; finite-list normalization as specified.",
+      "assumptions": [
+        "No claim that these lists are zeta zeros or near-extremizers"
+      ],
+      "dependency_refs": [],
+      "evidence_grade": "proof_candidate",
+      "evidence_refs": [
+        "proof.md section 7",
+        "check_source_bridge.py",
+        "validation.json"
+      ],
+      "cannot_imply": [
+        "An RH counterexample or failure of a future tail bound with arithmetic hypotheses.",
+        "Formal or independent verification; a proof of RH."
+      ],
+      "verifier_receipt": null
+    },
+    {
+      "id": "A-RH-SOURCE-0016-C08",
+      "title": "Multiplicity clipping count and no new simple atoms",
+      "statement": "Clipping nonsimple real multiplicity to 2 and pair multiplicity to 1 removes mass <=D/2 without creating simple atoms.",
+      "quantifier_scope": "Finite symmetric integer-multiplicity lists under the inherited signed slack.",
+      "assumptions": [
+        "D is the raw finite signed defect, not a periodic model defect; no additional deletion is free"
+      ],
+      "dependency_refs": [
+        "parent"
+      ],
+      "evidence_grade": "proof_candidate",
+      "evidence_refs": [
+        "proof.md section 6 final subsection",
+        "check_source_bridge.py",
+        "validation.json"
+      ],
+      "cannot_imply": [
+        "Small HS deletion error or novelty of the already inherited multiplicity consequence.",
+        "Formal or independent verification; a proof of RH."
+      ],
+      "verifier_receipt": null
+    }
+  ]
+}

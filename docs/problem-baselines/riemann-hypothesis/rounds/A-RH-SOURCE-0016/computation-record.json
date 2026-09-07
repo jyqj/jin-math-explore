@@ -1,0 +1,145 @@
+{
+  "record_version": 1,
+  "execution_profile": "reproducible",
+  "status": "completed",
+  "task_file": {
+    "path": "README.md",
+    "sha256": "7af5077bc1aac3f90d57fd0231bb1cc6af86c8978c0a436cc626291ae739f194"
+  },
+  "task": {
+    "question": "Resolve the fixed subcritical rectangular source moment and quantify deletion/transport into the frozen cell model.",
+    "domain": "Actual-source analytic corollary conditional on PC; computation uses finite synthetic lists only.",
+    "assumptions": [
+      "Precise scopes in proof.md and claims.json; no numerical test supplies source asymptotic hypotheses."
+    ],
+    "deliverables": [
+      "README.md",
+      "proof.md",
+      "check_source_bridge.py",
+      "validation.json",
+      "claims.json",
+      "source-scope.md",
+      "computation-record.json",
+      "computation-handoff.json",
+      "checkpoint.json"
+    ]
+  },
+  "backend": {
+    "name": "Python/NumPy/mpmath/SymPy/Fraction",
+    "version": "3.13.5",
+    "libraries": {
+      "mpmath": "1.3.0",
+      "numpy": "2.3.5",
+      "python": "3.13.5",
+      "sympy": "1.14.0"
+    },
+    "interface": "local foreground process"
+  },
+  "backend_decision": {
+    "selected": "Python",
+    "reason": "Portable exact polynomial/Fraction and finite complex-kernel checks. Local versions live checked; sage/wolframscript not on PATH.",
+    "inventory_snapshot_sha256": null,
+    "inventory_boundary": "Direct local capability check only; bundled inventory runner not executed.",
+    "fallback": "not needed"
+  },
+  "precision": {
+    "symbolic": "SymPy polynomial identities; Fraction integer/rational cases",
+    "numeric": "binary64; 64-node Gauss-Legendre per profile piece; 96 nodes per half-box integral; 70-digit deep-pair evaluation",
+    "tolerance": "5e-8 times (1+comparison scales), as implemented in checker",
+    "seed": 2026090716,
+    "interval_certificate": false
+  },
+  "execution": {
+    "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python check_source_bridge.py --samples 120 --output validation.json",
+    "exit_status": 0,
+    "development_run_samples": 6,
+    "final_full_runs": 1,
+    "actual_path_boundary": "Executed at /mnt/data/rh16 with absolute script/output paths; portable command has identical inputs.",
+    "background_worker": false
+  },
+  "result_summary": {
+    "samples": 120,
+    "counts": {
+      "cluster_obstruction": 7,
+      "combined_residual": 360,
+      "deep_pair_formula": 5,
+      "defect_upper_nonnegative": 120,
+      "fixed_test_deweight": 240,
+      "inner_profile": 120,
+      "integral_vs_kernel": 36,
+      "outer_profile": 120,
+      "parent_feasibility": 240,
+      "periodization": 360,
+      "profile_imaginary": 240,
+      "simple_count_ledger": 120,
+      "source_energy_nonnegative": 360,
+      "source_to_model_upper": 360,
+      "transport": 360,
+      "weighted_tail": 360
+    },
+    "exact_checks": {
+      "integer_multiplicity_cases": 99,
+      "rational_bandwidth_cases": 208,
+      "rational_endpoint_cases": 759,
+      "rational_envelopes": 342,
+      "symbolic_profile_identities": 11
+    },
+    "exact_check_total": 1419,
+    "maximum_residuals": {
+      "deep_pair_formula": 9.094947017729282e-12,
+      "fixed_test_deweight": 6.641068869276067e-16,
+      "integral_vs_kernel": 7.844391802791506e-12,
+      "profile_imaginary": 1.6653345369377348e-16,
+      "simple_count_ledger": 2.220446049250313e-16
+    }
+  },
+  "verification": {
+    "evidence_level": "numerical-evidence with separately identified exact finite subchecks",
+    "limitations": [
+      "Synthetic finite lists only: no actual zero enumeration or evaluation of the PC asymptotic.",
+      "Proofs are candidates; external PC and parent theorem are separate dependencies without a new independent receipt.",
+      "No actual matching or small depth-weighted deletion charge is established.",
+      "Fixed b<1 is not b=1, and no moving-bandwidth uniform estimate is proved.",
+      "Small random parent feasibility inequalities are conservative and vacuous.",
+      "No full repository local tests, bundled inventory/record runner, upstream Lean or independent verifier was executed."
+    ]
+  },
+  "code_artifacts": [
+    {
+      "path": "check_source_bridge.py",
+      "sha256": "163a35a6499038e0a8475643a686be34bc151f2ce1e8671036fcff0dbb303312"
+    }
+  ],
+  "result_artifacts": [
+    {
+      "path": "validation.json",
+      "sha256": "418739ee0a9e812ef7c04362cd53f7cbb81b147fd208aeadfc5350b49d700bed"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "README.md",
+      "sha256": "7af5077bc1aac3f90d57fd0231bb1cc6af86c8978c0a436cc626291ae739f194"
+    },
+    {
+      "path": "proof.md",
+      "sha256": "e9e7817f0b1fc06fe9082f3eb7bfb64f44695d28e8d574e3907b9f5b247c5473"
+    },
+    {
+      "path": "check_source_bridge.py",
+      "sha256": "163a35a6499038e0a8475643a686be34bc151f2ce1e8671036fcff0dbb303312"
+    },
+    {
+      "path": "validation.json",
+      "sha256": "418739ee0a9e812ef7c04362cd53f7cbb81b147fd208aeadfc5350b49d700bed"
+    },
+    {
+      "path": "claims.json",
+      "sha256": "b6d7111dba4174270d0ddf8cccd68a86a7f3190d57c3ca5f19a2b07f0da22563"
+    },
+    {
+      "path": "source-scope.md",
+      "sha256": "d51ed1217b448495e27e7dd89c9e1ecc35bc47aec00996e6b73ea7f68fd88073"
+    }
+  ]
+}

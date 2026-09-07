@@ -1,0 +1,125 @@
+{
+  "attempt": "A-RH-SOURCE-0016",
+  "backend": {
+    "mpmath": "1.3.0",
+    "numpy": "2.3.5",
+    "python": "3.13.5",
+    "sympy": "1.14.0"
+  },
+  "clusters": [
+    {
+      "deleted_fraction": 0.5,
+      "k": 2,
+      "normalized_residual_energy": 0.9748206017758918
+    },
+    {
+      "deleted_fraction": 0.25,
+      "k": 4,
+      "normalized_residual_energy": 0.9688109652072994
+    },
+    {
+      "deleted_fraction": 0.125,
+      "k": 8,
+      "normalized_residual_energy": 0.9673254755784887
+    },
+    {
+      "deleted_fraction": 0.0625,
+      "k": 16,
+      "normalized_residual_energy": 0.9669551472295803
+    },
+    {
+      "deleted_fraction": 0.03125,
+      "k": 32,
+      "normalized_residual_energy": 0.9668626301892147
+    },
+    {
+      "deleted_fraction": 0.015625,
+      "k": 64,
+      "normalized_residual_energy": 0.9668395049913319
+    },
+    {
+      "deleted_fraction": 0.0078125,
+      "k": 128,
+      "normalized_residual_energy": 0.9668337239456988
+    }
+  ],
+  "counts": {
+    "cluster_obstruction": 7,
+    "combined_residual": 360,
+    "deep_pair_formula": 5,
+    "defect_upper_nonnegative": 120,
+    "fixed_test_deweight": 240,
+    "inner_profile": 120,
+    "integral_vs_kernel": 36,
+    "outer_profile": 120,
+    "parent_feasibility": 240,
+    "periodization": 360,
+    "profile_imaginary": 240,
+    "simple_count_ledger": 120,
+    "source_energy_nonnegative": 360,
+    "source_to_model_upper": 360,
+    "transport": 360,
+    "weighted_tail": 360
+  },
+  "deep_pairs": [
+    {
+      "N": 16,
+      "deleted_fraction": 0.125,
+      "normalized_residual_energy": "1.1575700225058719410436213972692"
+    },
+    {
+      "N": 256,
+      "deleted_fraction": 0.0078125,
+      "normalized_residual_energy": "4.1704234262994589742425628459615"
+    },
+    {
+      "N": 4096,
+      "deleted_fraction": 0.00048828125,
+      "normalized_residual_energy": "29.602176926755389136577584171155"
+    },
+    {
+      "N": 65536,
+      "deleted_fraction": 3.0517578125e-05,
+      "normalized_residual_energy": "266.41525996223666438239283397897"
+    },
+    {
+      "N": 1048576,
+      "deleted_fraction": 1.9073486328125e-06,
+      "normalized_residual_energy": "2728.091952686056515285746015879"
+    }
+  ],
+  "exact_checks": {
+    "integer_multiplicity_cases": 99,
+    "rational_bandwidth_cases": 208,
+    "rational_endpoint_cases": 759,
+    "rational_envelopes": 342,
+    "symbolic_profile_identities": 11
+  },
+  "independent_verification": false,
+  "mathematical_truth_verified": false,
+  "maximum_residuals": {
+    "deep_pair_formula": 9.094947017729282e-12,
+    "fixed_test_deweight": 6.641068869276067e-16,
+    "integral_vs_kernel": 7.844391802791506e-12,
+    "profile_imaginary": 1.6653345369377348e-16,
+    "simple_count_ledger": 2.220446049250313e-16
+  },
+  "minimum_slacks": {
+    "cluster_obstruction": 0.5615489893763477,
+    "combined_residual": 9.85294160500549,
+    "defect_upper_nonnegative": 121.71673637780887,
+    "inner_profile": 0.31927374025867916,
+    "outer_profile": 0.340652525229987,
+    "parent_feasibility": 22869.474175044128,
+    "periodization": 0.9999426648598542,
+    "source_energy_nonnegative": 9.59937388356807,
+    "source_to_model_upper": 23.45281352025219,
+    "transport": 1.097882379533611,
+    "weighted_tail": 0.6211171998334627
+  },
+  "ok": true,
+  "parent_feasibility_boundary": "Small random feasibility inequalities are conservative and vacuous; no actual source assignment is certified.",
+  "samples": 120,
+  "scope": "Finite synthetic lists, exact polynomial/rational checks and floating regressions; no actual zeta zeros or PC asymptotic evaluated.",
+  "seed": 2026090716
+}
