@@ -1,0 +1,35 @@
+{
+  "schema": "goldbach-prior-work/v1",
+  "as_of": "2026-09-07",
+  "base_sha": "39002c5a6af8c7b7f093589e6a76cfd218fcbb99",
+  "read_method": "live GitHub main/PR/issue reads and pinned CP2 proof; not memory-only continuation",
+  "immediate_parent": {
+    "checkpoint": "CP-ERR-0008",
+    "issue": 92,
+    "pr": 97,
+    "commit": "a36c66d3906bcefee7adf5e595f055f835338ade",
+    "status_observed": "open, unmerged; issue lease released",
+    "next_task": "G4/G5 per-prime actual-mass aggregation"
+  },
+  "same_object_parent": {
+    "checkpoint": "CP-ERR-0002",
+    "commit": "55f97ee95dc8d6341f42012dd1a618be25fe150d",
+    "path": "staging/preproject-goldbach/A-GB-ERR-0001/CP-ERR-0002/proof.md",
+    "read_scope": "full mathematical content in initial and continuation fetches",
+    "prior_caps": {
+      "g4": "23.60573",
+      "g5": "19.51913"
+    },
+    "prior_numeric_backend": "1D midpoint plus 64x64 K cubature",
+    "old_full_package_hashes_recomputed": false,
+    "accepted_as_theorem": false
+  },
+  "other_mechanism": {
+    "checkpoint": "CP-ERR-0007",
+    "commit": "40661581b969d0ffa70359e3f51e4b214d9160e3",
+    "relation": "pre-sieving and actual-mass rebasing mechanism, rederived here"
+  },
+  "no_imported_CP6_math": true,
+  "all_predecessors_unchanged": true,
+  "no_review_receipt_created": true
+}

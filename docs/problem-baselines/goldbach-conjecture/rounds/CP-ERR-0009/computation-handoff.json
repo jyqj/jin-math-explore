@@ -1,0 +1,46 @@
+{
+  "schema": "goldbach-preproject-computation-handoff/v1",
+  "checkpoint": "CP-ERR-0009",
+  "issue": 99,
+  "actor": {
+    "id": "openai-chatgpt",
+    "run_id": "run-20260907-goldbach-upper-explicit-09",
+    "role": "solver"
+  },
+  "input_contract": "BJS upper theorem, classical BV and Mertens, with exact geometric and mass-rebasing hypotheses in proof.md/contracts.json",
+  "computation": "J4/J5/common K directed midpoint integration and finite AP/rebase/support/normalization identities",
+  "primary_backend": "Python Fraction + mpmath.iv1.3.0",
+  "requested_evidence": "reproducible finite and interval certificate",
+  "delivered_evidence": "interval certificate conditional on proved analytic bounds; bounded exact regressions; same context only",
+  "artifacts": {
+    "check_upper.py": {
+      "path": "check_upper.py",
+      "sha256": "b86ba92e497593f3533788b3699e1d53566b8b34bc6f5f17b47e6799421aaf52"
+    },
+    "results.json": {
+      "path": "results.json",
+      "sha256": "bd978708dc7dd1530f4c1e982cc58eef74526f1d23aad43d97de9181f73b4356"
+    },
+    "validation.json": {
+      "path": "validation.json",
+      "sha256": "c969b656795a882d2047c457e62bbc6d69b35d5777486450d50ce161c6442002"
+    },
+    "computation-record.json": {
+      "path": "computation-record.json",
+      "sha256": "cafdae6286a0368179ca9d80b961de0db508053120c5ccd300c0d32877af96ab"
+    }
+  },
+  "reproduce": [
+    "python check_upper.py --compute",
+    "python check_upper.py --self-test",
+    "python check_upper.py --check"
+  ],
+  "cannot_imply": [
+    "source theorem independently rebuilt",
+    "actual G4/G5 two-sided count enclosure",
+    "full twelve-term closure",
+    "Goldbach proof"
+  ],
+  "global_status": "INCONCLUSIVE",
+  "background_worker_started": false
+}

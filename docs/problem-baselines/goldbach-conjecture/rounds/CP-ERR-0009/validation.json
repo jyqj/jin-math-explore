@@ -1,0 +1,20 @@
+{
+  "schema": "goldbach-upper-finite/v1",
+  "counts": {
+    "native_AP_and_rebase": 956,
+    "presieve_support": 956,
+    "unit_modulus": 450,
+    "upper_enlargement": 450,
+    "aggregate_budget": 63,
+    "overlap_bound": 63,
+    "totient_identities_and_bounds": 256,
+    "T_ODE": 46,
+    "K_ODE": 49,
+    "normalized_products": 648,
+    "serialization": 5
+  },
+  "total_counted": 3942,
+  "ok": true,
+  "AP_model_scope": "N=100..700 step30; z=5,7,11; cutoffs31/17; R=N; Xp=Mp+synthetic positive rational shift. Algebra only, not Li error observations or BJS/BV onsets.",
+  "mathematical_truth_verified": false
+}

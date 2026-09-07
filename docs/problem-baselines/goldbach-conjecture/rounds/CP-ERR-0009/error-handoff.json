@@ -1,0 +1,78 @@
+{
+  "schema": "goldbach-error-handoff/v1",
+  "checkpoint": "CP-ERR-0009",
+  "findings": [
+    {
+      "id": "F-ERR-054",
+      "statement": "Per-prime mass deviations sum within one BV budget, including unit sieve moduli",
+      "grade": "proof_candidate",
+      "locator": "proof.md section3"
+    },
+    {
+      "id": "F-ERR-055",
+      "statement": "BJS G4/G5 upper replacement with complete exceptional-prime support and rebasing cost",
+      "grade": "conditional_proof_candidate",
+      "locator": "proof.md (10),(15)-(17)"
+    },
+    {
+      "id": "F-ERR-056",
+      "statement": "Two overlapping extracted-prime ranges have maximum multiplicity2; net-mass cancellation is insufficient",
+      "grade": "proof_candidate_and_finite_controls",
+      "locator": "proof.md section3"
+    },
+    {
+      "id": "F-ERR-057",
+      "statement": "Common nested K correction equals one integral of T(w)/(4+w); rational tail and derivative bounds",
+      "grade": "proof_candidate",
+      "locator": "proof.md (19)-(21)"
+    },
+    {
+      "id": "F-ERR-058",
+      "statement": "Directed fixed-integral caps23.605688 and19.519083",
+      "grade": "computed_certificate_pending_review",
+      "locator": "results.json"
+    },
+    {
+      "id": "F-ERR-059",
+      "statement": "Uniform parameter order gives eventual local caps with a specified positive loss",
+      "grade": "conditional_proof_candidate",
+      "locator": "proof.md section8"
+    }
+  ],
+  "fixed_loss": "48972*epsilon",
+  "decaying_loss": "44*q_N+5618*h_star+(28090/33)*r_N+424/z+50*C_BV*T^(3-A0)",
+  "combination_direction": "subtract the entire nonnegative deficit; G4/G5 each coefficient-1; divide by4 only afterward",
+  "dependency_removal": [
+    "unknown Cs",
+    "L_eta",
+    "CP6 weighted-distribution bridge"
+  ],
+  "new_inputs_not_verified": [
+    "BJS explicit theorem/table",
+    "classical BV/Mertens"
+  ],
+  "sensitivity_only": {
+    "gain_vs_CP2": "0.000089",
+    "gain_vs_paper_displayed": "0.001349",
+    "global_ledger_changed": false
+  },
+  "parameter_order": [
+    "K_dim",
+    "epsilon",
+    "w,P0",
+    "A0,B,C_BV",
+    "N"
+  ],
+  "cannot_combine": [
+    "omitting P0 but retaining same s_p",
+    "using net Delta instead of sum absolute Delta",
+    "one-row injection with a two-row sum",
+    "dropping positive K",
+    "count interval from fixed-integral interval"
+  ],
+  "next_task": "Explicit G6 lower replacement: double-prime mass deviations, real/discrete diagonal, P0 level and finite-domain losses.",
+  "original_Cs_audit": "unresolved",
+  "independent_review": "pending",
+  "global_status": "INCONCLUSIVE",
+  "background_verifier_started": false
+}

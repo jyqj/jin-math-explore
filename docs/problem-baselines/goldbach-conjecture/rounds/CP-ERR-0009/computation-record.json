@@ -1,0 +1,93 @@
+{
+  "schema": "goldbach-computation-record/v1",
+  "checkpoint": "CP-ERR-0009",
+  "profile": "reproducible",
+  "environment": {
+    "python": "3.13.5",
+    "mpmath": "1.3.0",
+    "sage": null,
+    "wolframscript": null
+  },
+  "backend_reason": "Portable Fraction/mpmath.iv; bounded interval logs and exact finite regressions. No external CAS needed.",
+  "inventory": "Actual local Python/mpmath version and PATH scan; bundled backend inventory runner not executed.",
+  "feasibility": "28672 one-dimensional midpoints, degree48 Horner on4096 K nodes; small memory; no prime enumeration to a large asymptotic threshold.",
+  "commands": [
+    {
+      "command": [
+        "check_upper.py",
+        "--compute"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "elapsed_seconds": 2.796371,
+      "stdout_sha256": "bd978708dc7dd1530f4c1e982cc58eef74526f1d23aad43d97de9181f73b4356",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "-O",
+        "check_upper.py",
+        "--compute"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "elapsed_seconds": 4.58318,
+      "stdout_sha256": "bd978708dc7dd1530f4c1e982cc58eef74526f1d23aad43d97de9181f73b4356",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "check_upper.py",
+        "--self-test"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "elapsed_seconds": 0.774039,
+      "stdout_sha256": "c969b656795a882d2047c457e62bbc6d69b35d5777486450d50ce161c6442002",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "-O",
+        "check_upper.py",
+        "--self-test"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "elapsed_seconds": 0.726776,
+      "stdout_sha256": "c969b656795a882d2047c457e62bbc6d69b35d5777486450d50ce161c6442002",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "check_upper.py",
+        "--require-global"
+      ],
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "elapsed_seconds": 0.616076,
+      "stdout_sha256": "71cb67b4b72e4dc89785a4148db590c338ff3654ab4412f2258bdf3795745967",
+      "stderr": ""
+    }
+  ],
+  "full_normal_optimized_stdout_equal": true,
+  "finite_normal_optimized_stdout_equal": true,
+  "intentional_replay_reason": "Verify optimized-mode execution does not depend on Python assert; this is not independent mathematics.",
+  "initial_generation": "The same full integral and finite suites first created results.json/validation.json successfully; final commands above replay frozen scientific fields after the prime-sieve isqrt cleanup.",
+  "not_executed": [
+    "independent verifier",
+    "BJS table reconstruction",
+    "original Iwaniec proof audit",
+    "full local repository tests",
+    "effective numeric N0",
+    "huge P0 evaluation"
+  ],
+  "transport_observation": "git ls-remote failed DNS for github.com; persistence via connected GitHub API",
+  "evidence_boundary": "The interval certificate relies on the written analytic derivative/tail bounds and mpmath trust base. Finite identities are not asymptotic theorem validation.",
+  "sha256": {
+    "check_upper.py": "b86ba92e497593f3533788b3699e1d53566b8b34bc6f5f17b47e6799421aaf52",
+    "results.json": "bd978708dc7dd1530f4c1e982cc58eef74526f1d23aad43d97de9181f73b4356",
+    "validation.json": "c969b656795a882d2047c457e62bbc6d69b35d5777486450d50ce161c6442002"
+  },
+  "pre_freeze_packaging_fix": "Relative-link preflight detected source labels [S1](1.3) and [S2](4) as accidental links. Added spacing/wording; no mathematical formula, code or numerical output changed. Revalidated links and refreshed hashes."
+}

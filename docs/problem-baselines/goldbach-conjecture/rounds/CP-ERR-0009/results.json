@@ -1,0 +1,62 @@
+{
+  "schema": "goldbach-upper-1d-certificate/v1",
+  "backend": "mpmath.iv",
+  "backend_version": "1.3.0",
+  "dps": 50,
+  "J_cells_per_piece": 8192,
+  "K_cells": 4096,
+  "total_midpoints": 28672,
+  "two_dimensional_cells": 0,
+  "taylor_degree": 48,
+  "J_second_derivative_bound": "64",
+  "K_second_derivative_bound": "1",
+  "T_uniform_tail": "17763568394002504646778106689453125/13112838176736006407223002344317236565516484608",
+  "K_midpoint_error": "125/206158430208",
+  "K_integrated_tail": "88817841970012523233890533447265625/26225676353472012814446004688634473131032969216",
+  "K_enclosure": [
+    "0.000197235748259595",
+    "0.000197236967692548"
+  ],
+  "rows": {
+    "G4": {
+      "b": "1/3",
+      "sigma": "53/24",
+      "J_breakpoints": [
+        "2",
+        "37/8"
+      ],
+      "J_midpoint_error": "3087/4294967296",
+      "integral_enclosure": [
+        "23.605686437359609383",
+        "23.605687876075436255"
+      ],
+      "safe_upper": "23.605688",
+      "without_K_enclosure": [
+        "23.605489201611349788",
+        "23.605490639107743708"
+      ]
+    },
+    "G5": {
+      "b": "3/11",
+      "sigma": "265/88",
+      "J_breakpoints": [
+        "2",
+        "177/88",
+        "37/8"
+      ],
+      "J_midpoint_error": "368697/519691042816",
+      "integral_enclosure": [
+        "19.519080862878462493",
+        "19.519082283006322277"
+      ],
+      "safe_upper": "19.519083",
+      "without_K_enclosure": [
+        "19.518883627130202898",
+        "19.518885046038629730"
+      ]
+    }
+  },
+  "global_status": "INCONCLUSIVE",
+  "independently_verified": false,
+  "actual_counts_two_sided": false
+}

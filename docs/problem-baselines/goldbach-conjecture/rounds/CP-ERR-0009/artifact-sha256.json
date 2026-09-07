@@ -1,0 +1,19 @@
+{
+  "schema": "goldbach-artifact-manifest/v1",
+  "checkpoint": "CP-ERR-0009",
+  "scope": "Twelve UTF-8 payloads; the manifest itself is bound by the Git tree/commit.",
+  "sha256": {
+    "README.md": "4559f2ec567978a840c6659a51ab8654d7044084de5eed1e670413016ce1786f",
+    "proof.md": "fe0d696f7449b1d86d3cea9d6693c19edad6519f45172af147b9b0a0adf504f0",
+    "contracts.json": "2527fd77396d7d9fd8258bd02ca32123d59eb14b8f93db2d04223df461ff1372",
+    "prior-work.json": "aaa3c9674125bce1a67a8525f56d7a8f51ce9d2a2d23bfd44e68f4c559bd6836",
+    "source-lock.json": "2c34f7b6a92af2ad4c88705ae7488bb3ac88942776be137cbce4ed3ec977bd9a",
+    "check_upper.py": "b86ba92e497593f3533788b3699e1d53566b8b34bc6f5f17b47e6799421aaf52",
+    "results.json": "bd978708dc7dd1530f4c1e982cc58eef74526f1d23aad43d97de9181f73b4356",
+    "error-handoff.json": "fe92994e30488847021fcb5546cee239d4004571966454dcfd4e1f6bac225674",
+    "computation-record.json": "cafdae6286a0368179ca9d80b961de0db508053120c5ccd300c0d32877af96ab",
+    "computation-handoff.json": "78f4a5a51aa6af9114247d108f6cac769c9f38788c9c790fb97a532caa62b23a",
+    "verification-ticket.md": "abfd88616a95f99f62fc9f308bb7683007a1de7146f324454f9ca528c1a30fcd",
+    "validation.json": "c969b656795a882d2047c457e62bbc6d69b35d5777486450d50ce161c6442002"
+  }
+}
