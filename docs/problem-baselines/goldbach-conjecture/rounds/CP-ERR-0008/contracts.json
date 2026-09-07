@@ -1,0 +1,114 @@
+{
+  "schema": "goldbach-explicit-lower-contract/v1",
+  "checkpoint": "CP-ERR-0008",
+  "issue": 92,
+  "evidence_grade": "proof_candidate",
+  "authority": "reference_only",
+  "source_inputs": [
+    "U-BJS-v6",
+    "U-BV-classical",
+    "U-Mertens"
+  ],
+  "old_Cs_discharged": false,
+  "old_Cs_required": false,
+  "L_eta_required": false,
+  "CP6_WBV_required": false,
+  "objects": {
+    "sequence": "A={N-p: p prime, p<(1-epsilon0)N}; NOT enlarged",
+    "G1": "S(A;P(N),N^(4/53))",
+    "G2": "S(A;P(N),N^(4/33))",
+    "M": "|A|",
+    "X": "Li((1-epsilon0)N)",
+    "S_N": "C(N)*N/log(N)^2"
+  },
+  "domain": [
+    "N even, N>=16, N^(4/53)>2",
+    "0<epsilon0<=1/2",
+    "0<epsilon<=1/200",
+    "A0>=4, B=A0+8, R=N^(1/2)/log(N)^B>1",
+    "q_a<=1, q_b<=1",
+    "h_star=(B*loglog(N)+log(P0))/log(N)<=1/8250000",
+    "all imported source onsets"
+  ],
+  "presieve": {
+    "K": "fixed before epsilon and N",
+    "w": "max(3,exp(2K/epsilon))",
+    "P0": "product of primes p<w; finite, not numerically enumerated",
+    "W_N": "product of primes p<w, p not dividing N; W_N divides P0",
+    "actual_remainder_support": "d|P_N(z_i), d<W_N*D_i<=P0*D_i<=R"
+  },
+  "level": {
+    "mode": "fixed/fixed",
+    "rho": "1/1000000",
+    "D1": "N^(24/53)",
+    "D2": "N^(4124999/8250000)",
+    "s1": "6",
+    "s2": "4124999/1000000",
+    "sigma": "1/8250000",
+    "CP3_sigma": "1/825000000",
+    "margin_ratio": 100,
+    "kernel_drift": 0,
+    "P0_cost_removed": false
+  },
+  "definitions": {
+    "Delta": "M-X=r(1)",
+    "r_M(d)": "r(d)-Delta/phi(d)",
+    "R_i": "2 exp(gamma_E) Li(N) V_i/(c_i S_N); c=(53,33)",
+    "q_a": "abs(R_1-1)",
+    "q_b": "abs(R_2-1)",
+    "E": "C_BV*N/log(N)^A0"
+  },
+  "raw_lower": "G_i >= (f(s_i)-154*epsilon*H(s_i))*V_i*X-(6+3logR)*E",
+  "deficit_coefficients": {
+    "G1": {
+      "epsilon0": "160/7",
+      "q_a": "15",
+      "epsilon": "4081/50",
+      "C_BV*T^(3-A0)": "15"
+    },
+    "G2": {
+      "epsilon0": "320/21",
+      "q_b": "10",
+      "epsilon": "1089/2",
+      "C_BV*T^(3-A0)": "15"
+    },
+    "3G1+G2": {
+      "epsilon0": "1760/21",
+      "q_a": "45",
+      "q_b": "10",
+      "epsilon": "19734/25",
+      "C_BV*T^(3-A0)": "60"
+    }
+  },
+  "safe_floors": {
+    "k1": "14.877114",
+    "k2": "9.11587009",
+    "3k1+k2": "53.74721209"
+  },
+  "comparison_mode": {
+    "name": "fixed/log",
+    "D2": "R/P0",
+    "h_star_max": "1/66",
+    "G2_main": "33*psi(33/8)",
+    "additional_G2_loss": "(1089/16)*h_star",
+    "mixing_with_fixed_zero_drift_allowed": false
+  },
+  "parameter_order": [
+    "fix K",
+    "choose epsilon0 and epsilon",
+    "fix w,P0",
+    "fix A0>=4,B=A0+8,C_BV and source onsets",
+    "choose N last"
+  ],
+  "independent_review": "pending",
+  "global_status": "INCONCLUSIVE",
+  "cannot_imply": [
+    "effective numeric N0",
+    "independent BJS table verification",
+    "original Iwaniec Cs audit",
+    "actual two-sided bounds for G counts from the fixed integral intervals",
+    "full twelve-term closure",
+    "new Goldbach exponent",
+    "binary Goldbach"
+  ]
+}
