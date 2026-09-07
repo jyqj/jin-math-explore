@@ -1,0 +1,117 @@
+{
+  "schema": "twin-residual-computation-record/v1",
+  "attempt": "A-TP-RESIDUAL-0011",
+  "as_of": "2026-09-07",
+  "actor": {
+    "id": "openai-chatgpt",
+    "run_id": "run-20260907-twin-residual-11",
+    "role": "solver"
+  },
+  "profile": "reproducible exact certificate with separate literal finite oracles",
+  "intent": "exact finite local kernels, signed CRT counts, and convex quadratic helper certificates",
+  "backend": {
+    "version": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+    "implementation": "CPython",
+    "primary": "CPython int/Fraction, standard library only",
+    "cross_check": "literal residues, opposite divisor-sum order, direct intervals and exact quadratic completion",
+    "floating_point_acceptance": false
+  },
+  "feasibility": {
+    "local_states": 156,
+    "local_ordered_entries": 24336,
+    "literal_entries": 74752,
+    "CRT_coefficient_pairs": 104976,
+    "largest_direct_interval_length": 6000,
+    "bounded_memory": "finite arrays only; no full physical grid",
+    "backend_selection_reason": "Portable exact rational evidence; standard-library integer and Fraction operations directly implement finite identities. No CAS dependency or CAS execution claimed."
+  },
+  "commands": [
+    {
+      "command": "/opt/pyvenv/bin/python -B sieve_product.py --output-dir /mnt/data/twin11-fresh-ugiikbq0",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "elapsed_seconds": 1.857766,
+      "stdout": "{\"finite_pairs\": 104976, \"local_ordered_entries\": 24336, \"local_states\": 156, \"ok\": true}",
+      "stderr": ""
+    },
+    {
+      "command": "/opt/pyvenv/bin/python -B check_sieve_product.py --self-test",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "elapsed_seconds": 2.71369,
+      "stdout": "{\"certificate_replay\": true, \"corruptions_rejected\": 23, \"direct_interval_integers\": 1000, \"endpoint_prime_pairs\": 126, \"fibre_completions\": 81, \"finite_cross_correction\": \"-3515029929/3217813093040\", \"independently_verified\": false, \"literal_local_entries\": 74752, \"literal_residue_products\": 3202656, \"new_prime_gap_bound\": false, \"ok\": true, \"pair_square_sum\": \"868665843/752953600\", \"periodic_diagonal_checks\": 385, \"product_majorant\": \"7756487886477249/1801975332102400\"}",
+      "stderr": ""
+    },
+    {
+      "command": "/opt/pyvenv/bin/python -O -B check_sieve_product.py --self-test",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "elapsed_seconds": 5.539675,
+      "stdout": "{\"certificate_replay\": true, \"corruptions_rejected\": 23, \"direct_interval_integers\": 1000, \"endpoint_prime_pairs\": 126, \"fibre_completions\": 81, \"finite_cross_correction\": \"-3515029929/3217813093040\", \"independently_verified\": false, \"literal_local_entries\": 74752, \"literal_residue_products\": 3202656, \"new_prime_gap_bound\": false, \"ok\": true, \"pair_square_sum\": \"868665843/752953600\", \"periodic_diagonal_checks\": 385, \"product_majorant\": \"7756487886477249/1801975332102400\"}",
+      "stderr": ""
+    },
+    {
+      "command": "/opt/pyvenv/bin/python -B check_sieve_product.py --require-global",
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "elapsed_seconds": 1.414715,
+      "stdout": "",
+      "stderr": "{\"ok\": false, \"error\": \"refused: no actual restored residual bound or new prime-gap theorem is certified\"}"
+    }
+  ],
+  "fresh_generated_files_equal_frozen": true,
+  "normal_and_optimized_stdout_equal": true,
+  "checked_summary": {
+    "certificate_replay": true,
+    "corruptions_rejected": 23,
+    "direct_interval_integers": 1000,
+    "endpoint_prime_pairs": 126,
+    "fibre_completions": 81,
+    "finite_cross_correction": "-3515029929/3217813093040",
+    "independently_verified": false,
+    "literal_local_entries": 74752,
+    "literal_residue_products": 3202656,
+    "new_prime_gap_bound": false,
+    "ok": true,
+    "pair_square_sum": "868665843/752953600",
+    "periodic_diagonal_checks": 385,
+    "product_majorant": "7756487886477249/1801975332102400"
+  },
+  "payload_sha256": {
+    "sieve_product.py": "d739d413090e012fdac311eba94713e655ea3086045f5e86465e8ad3becf9ca7",
+    "check_sieve_product.py": "275c15308f6df914dff9b8a55291e1a60bb0b157a9cb4e9907a1401ba3cae479",
+    "inputs.json": "8bae441c6b8b2777ceb170c023f5579772e715998653b4df1fa5384265243db1",
+    "certificates.json": "dd262d5418d07afa823468abc9c1746a8731ff5ddbe0e30182a391dbafe6570a",
+    "results.json": "c95b94ea9b393e9590146c121e73da4f72af62d7abc83a254c033f7e9b9cd2b9",
+    "proof.md": "27ffe2774636112f777ec22c0b51a1efae18a8b254ac5a94c2a999c73dd8d42d",
+    "source-lock.json": "f3b88406dcc25ad6f59cb7469754559f32580f07267d12325869e59218e875ca",
+    "verification-ticket.md": "b2c0e85a9e237dbad08cb27a0290dab5bf3fc308c066b21b10fec1be6c971107"
+  },
+  "failures_or_access_limits": [
+    {
+      "operation": "git ls-remote https://github.com/jyqj/jin-math-explore.git HEAD",
+      "exit_code": 128,
+      "error": "Could not resolve host: github.com"
+    },
+    {
+      "operation": "web versioned Maynard PDF 1311.4600v3",
+      "error": "DisabledError",
+      "resolution": "unversioned URL returned header-confirmed v3; recorded in source-lock.json"
+    }
+  ],
+  "evidence_boundary": "Finite identities and certificates actually executed; universal/asymptotic arguments remain solver proof_candidate pending isolated review.",
+  "not_run": [
+    "full local repository suite",
+    "Project computation-handoff schema validator",
+    "upstream Lean/FLINT",
+    "actual restored186 profile/full-grid integral evaluation",
+    "independent mathematical verifier"
+  ],
+  "cannot_imply": [
+    "actual restored residual is within the detection surplus",
+    "new184 or twin-prime theorem",
+    "independent mathematical verification",
+    "Project authority"
+  ],
+  "final_hash_note": "Final11-payload hash checks follow creation of this record and handoff. Their stdout is recorded in Issue/PR to avoid circular content hashes."
+}

@@ -1,0 +1,89 @@
+{
+  "protocol": "jin-math-computation-handoff/v1",
+  "scope": "pre_project_reference_only_archive",
+  "project_id": null,
+  "window_id": null,
+  "objective_sha256": null,
+  "attempt_id": "A-TP-RESIDUAL-0011",
+  "claim_ids": [
+    "R11-01",
+    "R11-02",
+    "R11-03",
+    "R11-04",
+    "R11-05"
+  ],
+  "identity_note": "Explicit null Project identity; no dummy Project, authority transition or Project-schema PASS is claimed.",
+  "issue": 108,
+  "lease_id": "L-0108-residual-sieve-11",
+  "branch": "program/i-0108/twin-residual-sieve-11",
+  "base_sha": "39002c5a6af8c7b7f093589e6a76cfd218fcbb99",
+  "question": "Certify the full two-auxiliary local kernel and finite residual counts; derive and test a uniform asymptotic norm cost and soft helper optimization.",
+  "domain": "Fixed dimension and shifts; bounded signed squarefree/coprime residual arrays; strict fixed exponent budget; finite real helper coefficients and positive Young parameter.",
+  "assumptions": [
+    "Classical one-dimensional Selberg/Mertens input with variable W as explicitly checked in proof.md",
+    "Full finite local-state and coefficient total-variation argument",
+    "Separate legal-support single-prime evaluation is needed only for the helper term",
+    "No actual restored-profile residual size is assumed"
+  ],
+  "requested_evidence_grade": "exact_check plus proof_candidate",
+  "actual_evidence_grade": "exact_check plus solver proof_candidate; not isolated mathematical review",
+  "backend": "CPython3.13.5 standard-library integers/Fraction",
+  "reproduce": [
+    "python -B sieve_product.py --output-dir <new-empty-directory>",
+    "compare all three generated JSON files byte-for-byte with frozen inputs/certificates/results",
+    "python -B check_sieve_product.py --self-test --check-hashes",
+    "python -O -B check_sieve_product.py --self-test --check-hashes",
+    "python -B check_sieve_product.py --require-global (expected exit1)"
+  ],
+  "artifacts": [
+    {
+      "path": "inputs.json",
+      "sha256": "8bae441c6b8b2777ceb170c023f5579772e715998653b4df1fa5384265243db1"
+    },
+    {
+      "path": "sieve_product.py",
+      "sha256": "d739d413090e012fdac311eba94713e655ea3086045f5e86465e8ad3becf9ca7"
+    },
+    {
+      "path": "check_sieve_product.py",
+      "sha256": "275c15308f6df914dff9b8a55291e1a60bb0b157a9cb4e9907a1401ba3cae479"
+    },
+    {
+      "path": "certificates.json",
+      "sha256": "dd262d5418d07afa823468abc9c1746a8731ff5ddbe0e30182a391dbafe6570a"
+    },
+    {
+      "path": "results.json",
+      "sha256": "c95b94ea9b393e9590146c121e73da4f72af62d7abc83a254c033f7e9b9cd2b9"
+    },
+    {
+      "path": "proof.md",
+      "sha256": "27ffe2774636112f777ec22c0b51a1efae18a8b254ac5a94c2a999c73dd8d42d"
+    },
+    {
+      "path": "source-lock.json",
+      "sha256": "f3b88406dcc25ad6f59cb7469754559f32580f07267d12325869e59218e875ca"
+    },
+    {
+      "path": "computation-record.json",
+      "sha256": "2a27673cc55f55e02f3583724832f2dbabc4424bd81640b9cfa1819efd29050c"
+    },
+    {
+      "path": "verification-ticket.md",
+      "sha256": "b2c0e85a9e237dbad08cb27a0290dab5bf3fc308c066b21b10fec1be6c971107"
+    }
+  ],
+  "next_action": "A new isolated context audits R11-01..05. The next solver must bind actual restored y/P_OH, its double trace and legal helper support, then compare the priced residual and helper with the same-normalization detection surplus.",
+  "blockers": [
+    "actual restored trace/capacity distribution not evaluated",
+    "helper single-prime contract on actual self-pair moduli not discharged",
+    "same-normalization strict positive detector comparison absent"
+  ],
+  "cannot_imply": [
+    "new prime-gap bound",
+    "twin-prime conjecture",
+    "product factorization of root-dependent optimal-lift capacity",
+    "independent mathematical review or Project completion"
+  ],
+  "delivery": "All12 small files in the actual PR; final head/tree and observed CI in append-only Issue/PR handoff. No bulk array dependency or launched background worker."
+}

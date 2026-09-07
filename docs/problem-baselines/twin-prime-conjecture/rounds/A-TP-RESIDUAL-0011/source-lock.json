@@ -1,0 +1,90 @@
+{
+  "schema": "twin-residual-source-lock/v1",
+  "as_of": "2026-09-07",
+  "authority": "reference_only",
+  "base_commit": "39002c5a6af8c7b7f093589e6a76cfd218fcbb99",
+  "predecessor": {
+    "issue": 100,
+    "pr": 105,
+    "commit": "a527eb9b9f641408fd99050acb538e5dfb42c032",
+    "path": "docs/problem-baselines/twin-prime-conjecture/rounds/A-TP-PHYSICAL-0010/proof.md",
+    "git_blob": "3ee3c56927c88bfd949bb654cc080bb30b86e8e0",
+    "read_scope": "full file, two connector text slices",
+    "prior_scalar_bounds_used": false,
+    "independent_review_assumed": false
+  },
+  "primary_sources": [
+    {
+      "id": "S1",
+      "title": "Improved short gaps between primes",
+      "author": "OpenAI",
+      "date": "2026-08-30",
+      "url": "https://cdn.openai.com/pdf/51126fac-1b68-4128-9666-c908bcc16033/short_gaps.pdf",
+      "locators": [
+        "(3.1)-(3.5)",
+        "Propositions3.4-3.5",
+        "Lemma3.9",
+        "Proposition3.10 and its proof",
+        "(4.1)-(4.2)",
+        "section4.4"
+      ],
+      "successful_screenshot_zero_based_pages": [
+        14,
+        15,
+        20,
+        21,
+        23,
+        28
+      ],
+      "raw_sha256": null,
+      "import_boundary": "one-dimensional normalizer and existing local-kernel method; the two-auxiliary adaptation is derived in proof.md; no full186 theorem or integral axiom used"
+    },
+    {
+      "id": "S2",
+      "title": "Small gaps between primes",
+      "author": "James Maynard",
+      "arxiv_version": "1311.4600v3",
+      "version_date": "2019-10-28",
+      "url": "https://arxiv.org/pdf/1311.4600",
+      "locator": "Lemma6.1, printed page14; header identifies v3",
+      "successful_screenshot_zero_based_pages": [
+        13
+      ],
+      "raw_sha256": null,
+      "access_note": "Direct versioned /pdf/1311.4600v3 returned DisabledError. Unversioned PDF successfully returned v3 header; no version substitution is hidden.",
+      "import_boundary": "classical one-dimensional squarefree weighted harmonic-sum lemma; no two-prime distribution input"
+    },
+    {
+      "id": "S3",
+      "title": "Small gaps between almost-twin primes",
+      "author": "Bin Chen",
+      "arxiv_version": "2402.00748v2",
+      "url": "https://arxiv.org/html/2402.00748v2",
+      "locator": "Introduction; prior context for endpoint subtraction",
+      "raw_sha256": null,
+      "import_boundary": "historical context only; no new numerical input"
+    }
+  ],
+  "coordination": {
+    "read_open_prs": [
+      105
+    ],
+    "read_related_issue_metadata": [
+      80,
+      85,
+      94,
+      100
+    ],
+    "live_sibling_staging_consumed": false,
+    "predecessors_modified": false
+  },
+  "novelty_boundary": "New repository candidate/derivation and reproducible finite certificate; not a claim of world-first Selberg, CRT, regularization or convex-optimization principles.",
+  "not_acquired_or_not_run": [
+    "full original PDF bytes",
+    "full repository local checkout/test suite",
+    "upstream Lean/FLINT",
+    "actual restored186 profile arrays",
+    "isolated mathematical verifier"
+  ],
+  "missing_mathematics": "actual restored double trace and helper self-pair arithmetic contract, plus same-normalization positive detection comparison"
+}
