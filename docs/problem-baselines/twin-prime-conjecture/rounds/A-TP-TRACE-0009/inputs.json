@@ -1,0 +1,13 @@
+{
+  "schema": "twin-trace-inputs/v1",
+  "attempt": "A-TP-TRACE-0009",
+  "k": 40,
+  "degrees": [0, 1, 2, 3, 4, 5, 6],
+  "basis": "s^a t^b u^c v^e; a+b+c+e=d; u=sum(y_1,...,y_38); v=1-s-t-u",
+  "domain": "s,t,y_i>=0; s+t+sum(y_i)<=1",
+  "matrix_scale": "40!",
+  "rho_comparison": "1/4",
+  "endpoint_pair": [0, 186],
+  "actual_186_trial_imported": false,
+  "arithmetic_bridge": "conditional on the same-weight trace match and the stated single-prime asymptotic"
+}

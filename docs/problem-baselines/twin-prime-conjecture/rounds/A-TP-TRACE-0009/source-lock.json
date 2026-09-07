@@ -1,0 +1,49 @@
+{
+  "schema": "twin-trace-source-lock/v1",
+  "as_of": "2026-09-07",
+  "authority": "reference_only",
+  "main_commit": "39002c5a6af8c7b7f093589e6a76cfd218fcbb99",
+  "predecessor": {
+    "issue": 85,
+    "pr": 88,
+    "status_at_read": "open, unmerged, mergeable",
+    "commit": "026a454283b39c115a2a5e5c3ad47536519bcb7f",
+    "path": "docs/problem-baselines/twin-prime-conjecture/rounds/A-TP-TUPLE-0008/proof.md",
+    "git_blob": "4584e6d696255545dcb88f8d77bb6dc73270c4cf",
+    "used": "T8-05 exact detector rederived here; no imported physical-integral premise"
+  },
+  "sources": [
+    {
+      "id": "S1",
+      "author": "Bin Chen",
+      "title": "Small gaps between almost-twin primes",
+      "version": "arXiv:2402.00748v2, 2025-07-16",
+      "url": "https://arxiv.org/html/2402.00748v2",
+      "read_scope": "Introduction: endpoint-subtracted detector, trace replacement, fibre Cauchy-Schwarz extremum; reference list",
+      "raw_byte_sha256": null,
+      "attribution": "source attributes the method to Tao; the endpoint detector is prior art",
+      "restriction": "ordinary simplex support, mu*f divisor coefficients; not automatically the actual186 physical trial"
+    },
+    {
+      "id": "S2",
+      "author": "James Maynard",
+      "title": "Small gaps between primes",
+      "version": "arXiv:1311.4600v3, 2019-10-28",
+      "url": "https://arxiv.org/pdf/1311.4600v3",
+      "read_scope": "Propositions4.1-4.2, parsed text and successful screenshots of printed pages5-6; parsed section8 context",
+      "screenshots_pdf_zero_based": [4, 5],
+      "raw_byte_sha256": null,
+      "used": "I/J functional definitions and logR/logN ratio",
+      "restriction": "lambda uses an arithmetic transform, not the literal mu*f parameterization; no prefactor or byte identity is assumed"
+    }
+  ],
+  "live_scope_avoided": {"issue": 80, "description": "cap-stratification; no unfrozen staging read or write"},
+  "actual186_trial": {
+    "identity_context": "openai/PrimeGaps186@61340d0b74163003b32756bb16e91d9209a5e330",
+    "new_computation_or_source_audit_of_that_trial": false,
+    "physical_integral_bounds_assumed": false,
+    "old_positive_margin_imported": false
+  },
+  "novelty_boundary": "New repository derivations/finite certificates, not a claimed new endpoint principle, best prime-gap result or globally novel sieve theorem.",
+  "not_acquired_or_executed": ["raw source PDF bytes", "full repository checkout", "upstream Lean or FLINT", "isolated mathematical reviewer", "actual186 weighted endpoint correlation"]
+}

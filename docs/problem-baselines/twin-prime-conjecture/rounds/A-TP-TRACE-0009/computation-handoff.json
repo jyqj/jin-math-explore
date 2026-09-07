@@ -1,0 +1,84 @@
+{
+  "protocol": "jin-math-computation-handoff/v1",
+  "scope": "pre_project_reference_only_archive",
+  "project_id": null,
+  "window_id": null,
+  "objective_sha256": null,
+  "attempt_id": "A-TP-TRACE-0009",
+  "claim_ids": [
+    "T9-01",
+    "T9-02",
+    "T9-03",
+    "T9-04",
+    "T9-05"
+  ],
+  "identity_note": "No dummy Project or Project-schema PASS; exact archive inputs and claims are frozen by the manifest and final PR head.",
+  "issue": 94,
+  "lease_id": "L-0094-twin-trace-09",
+  "branch": "program/i-0094/twin-endpoint-trace-09",
+  "base_sha": "39002c5a6af8c7b7f093589e6a76cfd218fcbb99",
+  "question": "Reduce the endpoint-pair obligation to a same-trace single-prime interface and certify ordinary-simplex polynomial Rayleigh quotients with exact arithmetic.",
+  "domain": "k40; two free endpoint coordinates and sum of38 internal coordinates; degree<=6; arbitrary real coefficients",
+  "assumptions": [
+    "explicit finite divisor trace equality and strict endpoint cutoff",
+    "same coefficient parameterization and normalization for conditional single-prime asymptotics",
+    "ordinary simplex support, not the enlarged physical186 trial"
+  ],
+  "requested_evidence_grade": "exact_check",
+  "actual_evidence_grade": "exact_check with conditional solver proof_candidates",
+  "backend": "CPython3.13.5; NumPy2.3.5/SciPy1.17.0 proposals only; stdlib exact acceptance",
+  "reproduce": [
+    "python -B check_trace.py --self-test --check-hashes",
+    "python -O -B check_trace.py --self-test --check-hashes",
+    "python -B check_trace.py --require-global (expected exit1)",
+    "optional: python -B trace_forms.py --propose <new-empty-directory>"
+  ],
+  "artifacts": [
+    {
+      "path": "inputs.json",
+      "sha256": "338369c0a78eb941dc70671fe1423d61006db8e291cb13c57c5166d215d605d4"
+    },
+    {
+      "path": "trace_forms.py",
+      "sha256": "a0113a420d7dbe214babcb1dc47659d8fbebdb861c66a5943b926e1da483a4cc"
+    },
+    {
+      "path": "check_trace.py",
+      "sha256": "d1bdf65f1439c56f92c6697a5925a0a24889e0d5f7515e767d7e4cde0f42ebfd"
+    },
+    {
+      "path": "certificates.json",
+      "sha256": "7e3240730cd034151f010b8f9db3cf209b7404ae346004dc02cdfd51bf133482"
+    },
+    {
+      "path": "results.json",
+      "sha256": "0b66d068935ed317f5841a2741d534008c75252e7c137565e4dd3fa32fe7074c"
+    },
+    {
+      "path": "proof.md",
+      "sha256": "462d888e48006bd2b4ed646a7098a247759a281d34cc5b06ac87ddfafdc43b5d"
+    },
+    {
+      "path": "source-lock.json",
+      "sha256": "e88b1c0517a9ae498d883d206628c96fd02dc8acf8d8250c507e122b4a9eef78"
+    },
+    {
+      "path": "computation-record.json",
+      "sha256": "1d8d5aa4855ccc310e982c22bb089c40e209efd9eeb0b5d3a1b15e012a8c9a62"
+    },
+    {
+      "path": "verification-ticket.md",
+      "sha256": "613bf0986832e62807b0bb960642cd7699bc893c85beb12c93e8d795c798e657"
+    }
+  ],
+  "next_action": "New isolated reviewer audits T9-01..05; solver next identifies the actual186 coefficient trace, permitted two-coordinate marginal support, single-prime restoration and common-normalization error budget. No worker launched.",
+  "blocking_mathematics": "No mapping of the actual186 physical trial to the conditional same-trace asymptotic contract; the tested84-parameter simplex family fails even before endpoint subtraction.",
+  "cannot_imply": [
+    "new gap<=184",
+    "DHL39 or DHL38",
+    "all40-dimensional methods fail",
+    "the twin-prime conjecture",
+    "independent verification or Project completion"
+  ],
+  "delivery": "All twelve small files are in this packet; no external bulk arrays. Exact remote head/tree and CI observation belong to the final PR/Issue handoff."
+}

@@ -1,0 +1,119 @@
+{
+  "schema": "twin-trace-computation-record/v1",
+  "attempt": "A-TP-TRACE-0009",
+  "as_of": "2026-09-07",
+  "actor": {
+    "id": "openai-chatgpt",
+    "run_id": "run-20260907-twin-trace-09",
+    "role": "solver"
+  },
+  "backend": {
+    "exact_verifier": "CPython stdlib Fraction/integer arithmetic",
+    "python": "3.13.5",
+    "proposal_only": {
+      "numpy": "2.3.5",
+      "scipy": "1.17.0"
+    },
+    "floating_point_acceptance": false
+  },
+  "intent": "reproducible exact finite-dimensional variational certificates; solver proof candidates for the analytic bridge",
+  "feasibility": {
+    "largest_matrix": 84,
+    "degrees": 7,
+    "certified_objectives": 20,
+    "matrix_scale": "40!",
+    "production_integral_grid_used": false
+  },
+  "commands": [
+    {
+      "command": "python -B trace_forms.py --propose /mnt/data/trace9-fresh",
+      "exit_code": 0,
+      "elapsed_seconds": 15.57892,
+      "stdout": "{\"degree\": 0, \"dimension\": 1, \"nullity\": 0, \"ordinary\": [\"1951219/1000000\", \"97561/50000\"], \"penalized\": [\"957317/500000\", \"382927/200000\"], \"trace_rank\": 1}\n{\"degree\": 1, \"dimension\": 4, \"nullity\": 2, \"ordinary\": [\"1396593/500000\", \"2793187/1000000\"], \"penalized\": [\"1377397/500000\", \"550959/200000\"], \"trace_null\": [\"372093/200000\", \"930233/500000\"], \"trace_rank\": 2}\n{\"degree\": 2, \"dimension\": 10, \"nullity\": 7, \"ordinary\": [\"762893/250000\", \"3051573/1000000\"], \"penalized\": [\"3017651/1000000\", \"754413/250000\"], \"trace_null\": [\"1335513/500000\", \"2671027/1000000\"], \"trace_rank\": 3}\n{\"degree\": 3, \"dimension\": 20, \"nullity\": 16, \"ordinary\": [\"3130919/1000000\", \"78273/25000\"], \"penalized\": [\"155049/50000\", \"3100981/1000000\"], \"trace_null\": [\"2930203/1000000\", \"732551/250000\"], \"trace_rank\": 4}\n{\"degree\": 4, \"dimension\": 35, \"nullity\": 30, \"ordinary\": [\"3154767/1000000\", \"197173/62500\"], \"penalized\": [\"312843/100000\", \"3128431/1000000\"], \"trace_null\": [\"3023483/1000000\", \"755871/250000\"], \"trace_rank\": 5}\n{\"degree\": 5, \"dimension\": 56, \"nullity\": 50, \"ordinary\": [\"3161873/1000000\", \"1580937/500000\"], \"penalized\": [\"1569307/500000\", \"627723/200000\"], \"trace_null\": [\"1532209/500000\", \"3064419/1000000\"], \"trace_rank\": 6}\n{\"degree\": 6, \"dimension\": 84, \"nullity\": 77, \"ordinary\": [\"63283/20000\", \"3164151/1000000\"], \"penalized\": [\"1571563/500000\", \"3143127/1000000\"], \"trace_null\": [\"3086033/1000000\", \"1543017/500000\"], \"trace_rank\": 7}\n{\"proposal_versions\": {\"numpy\": \"2.3.5\", \"scipy\": \"1.17.0\"}, \"exact_acceptance\": \"Fraction LDL and rational quadratic witnesses\", \"cases\": 7}\n",
+      "stderr": "",
+      "fresh_certificate_bytes_equal": true,
+      "fresh_results_bytes_equal": true
+    },
+    {
+      "command": "python -B check_trace.py --self-test --progress",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "elapsed_seconds": 19.017507,
+      "stdout": "{\"bad_first_moment_law_states\": 41, \"certified_objectives\": 20, \"corruptions_rejected\": 15, \"degrees\": 7, \"evidence\": \"exact_check\", \"exact_positive_pivots\": 602, \"finite_pair_sum\": 12, \"finite_replacement_upper\": 342, \"finite_trace_integers\": 189, \"independently_verified\": false, \"last_recovery_energy\": \"791046/788225\", \"new_prime_gap_bound\": false, \"ok\": true, \"prime_pair_equalities\": 12, \"recovery_shapes\": 7, \"symbolic_entry_comparisons\": 2005, \"terminal_dimension\": 84, \"terminal_nullity\": 77, \"terminal_trace_rank\": 7, \"weighted_fibre_cases\": 27}\n",
+      "stderr": "stage: exact_certificates\nstage: exact_certificates_complete\nstage: symbolic_oracle\nstage: symbolic_oracle_complete\n"
+    },
+    {
+      "command": "python -O -B check_trace.py --self-test --progress",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "elapsed_seconds": 23.023014,
+      "stdout": "{\"bad_first_moment_law_states\": 41, \"certified_objectives\": 20, \"corruptions_rejected\": 15, \"degrees\": 7, \"evidence\": \"exact_check\", \"exact_positive_pivots\": 602, \"finite_pair_sum\": 12, \"finite_replacement_upper\": 342, \"finite_trace_integers\": 189, \"independently_verified\": false, \"last_recovery_energy\": \"791046/788225\", \"new_prime_gap_bound\": false, \"ok\": true, \"prime_pair_equalities\": 12, \"recovery_shapes\": 7, \"symbolic_entry_comparisons\": 2005, \"terminal_dimension\": 84, \"terminal_nullity\": 77, \"terminal_trace_rank\": 7, \"weighted_fibre_cases\": 27}\n",
+      "stderr": "stage: exact_certificates\nstage: exact_certificates_complete\nstage: symbolic_oracle\nstage: symbolic_oracle_complete\n"
+    },
+    {
+      "command": "python -B check_trace.py --require-global",
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "elapsed_seconds": 2.004381,
+      "stdout": "",
+      "stderr": "{\"ok\": false, \"error\": \"refused: no actual186 trial, new prime-gap bound or global proof is certified\"}\n"
+    }
+  ],
+  "normal_optimized_stdout_equal": true,
+  "result_summary": {
+    "bad_first_moment_law_states": 41,
+    "certified_objectives": 20,
+    "corruptions_rejected": 15,
+    "degrees": 7,
+    "evidence": "exact_check",
+    "exact_positive_pivots": 602,
+    "finite_pair_sum": 12,
+    "finite_replacement_upper": 342,
+    "finite_trace_integers": 189,
+    "independently_verified": false,
+    "last_recovery_energy": "791046/788225",
+    "new_prime_gap_bound": false,
+    "ok": true,
+    "prime_pair_equalities": 12,
+    "recovery_shapes": 7,
+    "symbolic_entry_comparisons": 2005,
+    "terminal_dimension": 84,
+    "terminal_nullity": 77,
+    "terminal_trace_rank": 7,
+    "weighted_fibre_cases": 27
+  },
+  "execution_corrections": [
+    "Pilot finite trace fixture produced C=U=0. Replaced its signed coefficients and required strict 0<C<U; final nonvacuous values are12 and342.",
+    "An earlier foreground wrapper returned a tool timeout after displaying normal-mode PASS. Its optimized receipt was not retained. A subsequent ps check found no remaining check_trace process; no unknown worker was duplicated.",
+    "Final complete normal/optimized/global commands were executed under trace9-job-01 with runner/child identity, one-second atomic heartbeat, stage markers and per-command receipts. Job completed and normal/-O stdout agree."
+  ],
+  "job": {
+    "id": "trace9-job-01",
+    "runner_pid_at_start": 615,
+    "status": "complete",
+    "monitor_is_not_mathematical_dependency": true
+  },
+  "payload_sha256": {
+    "trace_forms.py": "a0113a420d7dbe214babcb1dc47659d8fbebdb861c66a5943b926e1da483a4cc",
+    "check_trace.py": "d1bdf65f1439c56f92c6697a5925a0a24889e0d5f7515e767d7e4cde0f42ebfd",
+    "inputs.json": "338369c0a78eb941dc70671fe1423d61006db8e291cb13c57c5166d215d605d4",
+    "certificates.json": "7e3240730cd034151f010b8f9db3cf209b7404ae346004dc02cdfd51bf133482",
+    "results.json": "0b66d068935ed317f5841a2741d534008c75252e7c137565e4dd3fa32fe7074c",
+    "proof.md": "462d888e48006bd2b4ed646a7098a247759a281d34cc5b06ac87ddfafdc43b5d"
+  },
+  "not_run": [
+    "local full-repository suite: direct git failed DNS",
+    "repository Project handoff schema: pre-project archive with null identity",
+    "Lean/FLINT",
+    "actual186 physical weighted pair integral",
+    "isolated mathematical reviewer"
+  ],
+  "cannot_imply": [
+    "a new prime-gap bound",
+    "failure of all40-variable trial functions",
+    "actual186 input validation",
+    "twin primes",
+    "Project authority"
+  ],
+  "final_hash_check_note": "Manifest and handoff are written after this record. Actual final hash-check receipt is attached to Issue/PR to avoid self-referential record hashes."
+}
