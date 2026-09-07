@@ -1,0 +1,39 @@
+{
+  "schema": "goldbach-prior-work/v1",
+  "as_of": "2026-09-07",
+  "base": "39002c5a6af8c7b7f093589e6a76cfd218fcbb99",
+  "sequential_parent": {
+    "issue": 107,
+    "pr": 109,
+    "head": "94dfa6f78d509d333075bd2900fb832f1e13b3eb",
+    "read": "released Issue107 handoff and PR109 metadata",
+    "retained": "next target G7 explicit lower moving-domain treatment"
+  },
+  "older_g7": {
+    "issue": 41,
+    "head": "e926ad53cd7174c024a671c02188a1a46e936f02",
+    "path": "staging/preproject-goldbach/A-GB-G7-0001/proof.md",
+    "read": "proof sections on legal domain, cap, slice, derivative envelope and BV",
+    "retained": [
+      "ISS-G7-LEMMA2.5-DOMAIN",
+      "ISS-G7-CAP-5.32",
+      "GB-A009",
+      "zero-gap comparison integral"
+    ],
+    "legacy_checker_replayed": false,
+    "independent_receipt_imported": false
+  },
+  "pre_sieve_context": {
+    "pr": 89,
+    "head": "40661581b969d0ffa70359e3f51e4b214d9160e3",
+    "retained": "P0 support inflation and actual-mass rebase; rederived locally here"
+  },
+  "no_predecessor_changes": true,
+  "no_unfrozen_sibling_staging": true,
+  "this_round": {
+    "issue": 115,
+    "branch": "program/i-0115/goldbach-g7-explicit-cp11",
+    "checkpoint": "CP-ERR-0011"
+  },
+  "next_task": "Audit G3/G10 switching, support and endpoint compatibility before reusing absolute weighted distribution."
+}

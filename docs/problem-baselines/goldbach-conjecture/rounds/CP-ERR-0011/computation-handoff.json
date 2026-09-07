@@ -1,0 +1,39 @@
+{
+  "schema": "goldbach-preproject-computation-handoff/v1",
+  "checkpoint": "CP-ERR-0011",
+  "issue": 115,
+  "run_id": "run-20260907-goldbach-g7-explicit-11",
+  "base": "39002c5a6af8c7b7f093589e6a76cfd218fcbb99",
+  "branch": "program/i-0115/goldbach-g7-explicit-cp11",
+  "project_authority_transition": false,
+  "intent": "bound fixed integrals by directed arithmetic and run finite identity regressions",
+  "inputs": {
+    "a": "4/53",
+    "b": "4/33",
+    "g": "3/11",
+    "sigmas": [
+      "0",
+      "1/10000000",
+      "1/2000000"
+    ],
+    "cells_per_piece": 8192,
+    "dps": 50
+  },
+  "artifact_sha256": {
+    "check_g7_explicit.py": "2b8926c4df1a9ee532ddc0a2f2a0f2de83a906f6bd3dc6e243f43dca29e2ac4d",
+    "results.json": "f069684c99bd0cb49d55451de95b48975fcaaae78c2bee939bd7c35f9b0f5c44",
+    "validation.json": "64857a5600d23db031fa48605dad8314181b801bf587ea3197dba0ffc4fe470b",
+    "computation-record.json": "021f4423be426683e63eac8ad3e63fc7b63dc793bf460fce2001b0e479e8f5bc"
+  },
+  "reproduce": [
+    "python check_g7_explicit.py --compute",
+    "python check_g7_explicit.py --check"
+  ],
+  "record_validation": "local JSON/hash/shape checks only; no Project computation validator or authority harness claim",
+  "independent_review": "pending",
+  "cannot_imply": [
+    "count intervals",
+    "effective numerical N0",
+    "source theorem or global proof"
+  ]
+}

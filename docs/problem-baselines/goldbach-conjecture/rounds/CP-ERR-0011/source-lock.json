@@ -1,0 +1,74 @@
+{
+  "schema": "goldbach-source-scope/v1",
+  "access_date": "2026-09-07",
+  "sources": [
+    {
+      "id": "S1",
+      "title": "Theorem (1+1.9) on the Goldbach Conjecture",
+      "authors": [
+        "Jiamin Li",
+        "Jianya Liu"
+      ],
+      "version": "arXiv:2606.05224v2",
+      "html": "https://arxiv.org/html/2606.05224v2",
+      "pdf": "https://arxiv.org/pdf/2606.05224v2",
+      "locators": [
+        "Lemma2.2",
+        "section5.2 G7 definition",
+        "(5.2)",
+        "(5.31)-(5.32)"
+      ],
+      "successful_screenshot_printed_pages": [
+        37
+      ],
+      "scope": "definitions and compact kernel formulas only; whole-paper correctness not assumed",
+      "raw_pdf_sha256": null
+    },
+    {
+      "id": "S2",
+      "title": "An explicit version of Chen's theorem and the linear sieve",
+      "authors": [
+        "Matteo Bordignon",
+        "Daniel R. Johnston",
+        "Valeriia Starichkova"
+      ],
+      "version": "arXiv:2207.09452v6",
+      "html": "https://arxiv.org/html/2207.09452v6",
+      "pdf": "https://arxiv.org/pdf/2207.09452v6",
+      "locators": [
+        "Theorem6",
+        "equations(3)-(11)",
+        "Table1 and following monotonicity statement"
+      ],
+      "successful_screenshot_printed_pages": [
+        5
+      ],
+      "scope": "constant-density lower theorem and C2<=154 imported, not independently rebuilt",
+      "raw_pdf_sha256": null
+    },
+    {
+      "id": "S3",
+      "title": "The Bombieri-Vinogradov Theorem",
+      "author": "R. C. Vaughan",
+      "url": "https://personal.science.psu.edu/rcv4/Bombieri.pdf",
+      "successful_screenshot_printed_pages": [
+        3
+      ],
+      "scope": "maximal psi theorem; adopted pi/Li transfer and log-saving described in proof section1",
+      "raw_pdf_sha256": null
+    }
+  ],
+  "read_channels": [
+    "primary HTML",
+    "PDF screenshots"
+  ],
+  "raw_byte_status": "not acquired; rendered reading is not raw-byte hashing",
+  "inherited_diagnoses": [
+    "extra1/v in(5.31)",
+    "missing gamma cap in(5.32)",
+    "lower-sieve domain not entire rectangle"
+  ],
+  "novelty_scope": "repository-local explicit contract and refinements; no literature-wide novelty claim",
+  "source_theorem_or_table_rebuild": false,
+  "original_Cs_audit": "unresolved"
+}

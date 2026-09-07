@@ -1,0 +1,75 @@
+{
+  "schema": "goldbach-computation-record/v1",
+  "checkpoint": "CP-ERR-0011",
+  "profile": "reproducible",
+  "actor": {
+    "id": "openai-chatgpt",
+    "run_id": "run-20260907-goldbach-g7-explicit-11",
+    "role": "solver"
+  },
+  "question": "certify three fixed log-comparison integrals and analytic full-kernel envelopes; test finite interfaces",
+  "backend": {
+    "executable": "/opt/pyvenv/bin/python",
+    "python": "3.13.5",
+    "mpmath": "1.3.0",
+    "primary": "Fraction and mpmath.iv",
+    "fallback": "exact rational log series if interval backend fails",
+    "selection_reason": "portable bounded 1D certificate; no callable Sage/Mathematica executable located",
+    "bundled_backend_inventory_run": false,
+    "live_version_check": true
+  },
+  "feasibility": {
+    "planned_midpoints": 73728,
+    "dps": 50,
+    "estimated_runtime": "tens of seconds",
+    "expected_memory": "below 256 MiB"
+  },
+  "actual_primary": {
+    "command": "python check_g7_explicit.py --compute --output results.json",
+    "exit_code": 0,
+    "elapsed_seconds": 16.1,
+    "peak_rss_kib": 97580,
+    "full_runs": 1,
+    "proof_error": "analytic second derivative bound plus exact fifth-order correction"
+  },
+  "executed_other_commands": [
+    {
+      "command": "python check_g7_explicit.py --self-test --output validation.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -O check_g7_explicit.py --self-test",
+      "exit_code": 0,
+      "output_equals": "validation.json"
+    },
+    {
+      "command": "python -m py_compile check_g7_explicit.py",
+      "exit_code": 0
+    }
+  ],
+  "pre_freeze_change": "One negative-control condition and source-label Markdown spacing clarified; four LaTeX \\rm control-word transport corruptions corrected before freeze and matched to the read-back Git blob. Numerical algorithm/results unchanged.",
+  "exploratory_only": "35-digit noninterval quadrature used to choose candidate sigmas, not certificate acceptance",
+  "artifacts": {
+    "check_g7_explicit.py": "2b8926c4df1a9ee532ddc0a2f2a0f2de83a906f6bd3dc6e243f43dca29e2ac4d",
+    "proof.md": "d699ed95cbe160b7f7cb8267e4cc21e81c1950669f06c578403f281ff2b3235d",
+    "results.json": "f069684c99bd0cb49d55451de95b48975fcaaae78c2bee939bd7c35f9b0f5c44",
+    "validation.json": "64857a5600d23db031fa48605dad8314181b801bf587ea3197dba0ffc4fe470b"
+  },
+  "finite_scope": "synthetic rational X, integer AP identities and discrete monotone surrogate measures",
+  "packaging_checks": "final manifest/check outcome is recorded in the PR handoff, not a second integral execution",
+  "not_executed": [
+    "independent verification",
+    "BJS table reconstruction",
+    "full local repository suite",
+    "raw source PDF-byte acquisition",
+    "enormous P0 enumeration",
+    "effective numerical N0"
+  ],
+  "grade": "directed numerical certificate conditional on written analytic bounds; bounded exact regressions",
+  "cannot_imply": [
+    "source theorem proof",
+    "formal proof",
+    "binary Goldbach",
+    "global twelve-term closure"
+  ]
+}
