@@ -1,0 +1,53 @@
+{
+  "format": "rh-source-0016-checkpoint/v1",
+  "attempt": "A-RH-SOURCE-0016",
+  "issue": 101,
+  "date": "2026-09-07",
+  "actor": {
+    "kind": "agent",
+    "id": "openai-chatgpt",
+    "run_id": "run-20260907-rh-source-bridge-16",
+    "role": "solver"
+  },
+  "git_base_sha": "39002c5a6af8c7b7f093589e6a76cfd218fcbb99",
+  "git_base_tree_sha": "d6ac23dc843e26ba123ae167228e3a0c1ff6b750",
+  "mathematical_parent": {
+    "commit": "bea93a0308a7ddfd6bacc35c547ffd4ab6d5cee9",
+    "path": "docs/problem-baselines/riemann-hypothesis/rounds/A-RH-HSTAB-0015/proof.md",
+    "git_blob_sha1": "3daba85264af382ae65dbae2924be4e1d74f9160",
+    "status": "proof_candidate",
+    "receipt": null
+  },
+  "external_source": {
+    "id": "PC",
+    "locator": "arXiv:2609.02882v1 Lemma 3.1",
+    "url": "https://arxiv.org/html/2609.02882v1",
+    "raw_sha256": null,
+    "status": "external_theorem_input_not_independently_audited"
+  },
+  "branch": "program/i-0101/rh-source-bridge-16",
+  "archive_status": "reference_only",
+  "mathematical_status": "proof_candidate",
+  "independent_verifier_receipt": null,
+  "sha256": {
+    "README.md": "7af5077bc1aac3f90d57fd0231bb1cc6af86c8978c0a436cc626291ae739f194",
+    "proof.md": "e9e7817f0b1fc06fe9082f3eb7bfb64f44695d28e8d574e3907b9f5b247c5473",
+    "check_source_bridge.py": "163a35a6499038e0a8475643a686be34bc151f2ce1e8671036fcff0dbb303312",
+    "validation.json": "418739ee0a9e812ef7c04362cd53f7cbb81b147fd208aeadfc5350b49d700bed",
+    "claims.json": "b6d7111dba4174270d0ddf8cccd68a86a7f3190d57c3ca5f19a2b07f0da22563",
+    "source-scope.md": "d51ed1217b448495e27e7dd89c9e1ecc35bc47aec00996e6b73ea7f68fd88073",
+    "computation-record.json": "523f85afcfda21a469d83afb7addb36e6ffa3f514175545f9ba4b3b7af2e7157",
+    "computation-handoff.json": "d97002725eecbe299076b1f303c06f09d992cd90fb06c088dee8c1227fd97d38"
+  },
+  "hash_boundary": "Eight files covered; checkpoint excludes itself. Its Git blob and final commit are recorded in PR.",
+  "scope": {
+    "only_additions": true,
+    "modifies_predecessors": false,
+    "advances_authority": false,
+    "actual_zero_computation": false,
+    "full_repository_local_tests": false,
+    "upstream_lean_build": false,
+    "remote_ci": "Observe separately in PR; not predicted here."
+  },
+  "next_attempt": "A-RH-MATCH-0017: orbit-level cell matching with simultaneous weighted deletion and displacement control."
+}
