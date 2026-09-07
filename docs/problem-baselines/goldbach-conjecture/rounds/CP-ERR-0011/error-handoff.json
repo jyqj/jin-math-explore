@@ -1,0 +1,69 @@
+{
+  "schema": "goldbach-error-handoff/v1",
+  "checkpoint": "CP-ERR-0011",
+  "findings": [
+    {
+      "id": "F-ERR-066",
+      "statement": "G7 common prime endpoint is impossible for integer N; rectangular measure has no half/diagonal correction",
+      "locator": "section1",
+      "grade": "proof_candidate_with_bounded_checks"
+    },
+    {
+      "id": "F-ERR-067",
+      "statement": "G7 BJS lower replacement with full P0 support and one absolute BV budget for pair masses",
+      "locator": "sections2,4",
+      "grade": "proof_candidate_with_bounded_checks"
+    },
+    {
+      "id": "F-ERR-068",
+      "statement": "continuous monotone zero extension gives uniform tensor-CDF loss <=r_N",
+      "locator": "sections3,5",
+      "grade": "proof_candidate_with_bounded_checks"
+    },
+    {
+      "id": "F-ERR-069",
+      "statement": "signed G7 contract without Cs,L_eta or CP6; local eventual target retained",
+      "locator": "section6",
+      "grade": "proof_candidate_with_bounded_checks"
+    },
+    {
+      "id": "F-ERR-070",
+      "statement": "total log-kernel loss is bounded above and below linearly; strip-only loss is quadratic",
+      "locator": "section7",
+      "grade": "proof_candidate_with_bounded_checks"
+    },
+    {
+      "id": "F-ERR-071",
+      "statement": "positive higher correction has explicit fifth-order small-triangle bound",
+      "locator": "section8",
+      "grade": "proof_candidate_with_bounded_checks"
+    },
+    {
+      "id": "F-ERR-072",
+      "statement": "fixed sigma1e-7 certificate succeeds; sigma5e-7 full fixed-kernel comparator fails",
+      "locator": "results.json",
+      "grade": "proof_candidate_with_bounded_checks"
+    }
+  ],
+  "fixed_loss": "(128/21)*epsilon0+48972*epsilon",
+  "decaying_loss": "4*q_N+53*r_N+11925/(16*z)+17*C_BV*T^(3-A0)",
+  "logarithmic_mode_extra_loss": "(2809/16)*h_star, already including the strip; no repeated strip charge",
+  "fixed_mode": "I_(1e-7)>=3.7902931; require h_star<=1e-7; not a coefficient record",
+  "parameter_order": [
+    "fix dimension constant K",
+    "choose epsilon0,epsilon",
+    "fix w,P0",
+    "fix A0,B,C_BV",
+    "choose N"
+  ],
+  "endpoint_warning": "prime endpoint impossible only for the actual rational exponent and integer N",
+  "source_dependencies": [
+    "BJS theorem/table",
+    "classical BV and Mertens"
+  ],
+  "independent_review": "pending",
+  "global_ledger_changed": false,
+  "global_status": "INCONCLUSIVE",
+  "next_task": "G3/G10 switching and exact support/endpoint compatibility; factorable-only branches need separate input.",
+  "background_verifier_started": false
+}

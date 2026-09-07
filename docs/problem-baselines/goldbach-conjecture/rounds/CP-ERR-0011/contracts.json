@@ -1,0 +1,88 @@
+{
+  "schema": "goldbach-explicit-g7-contract/v1",
+  "checkpoint": "CP-ERR-0011",
+  "issue": 115,
+  "authority": "reference_only_solver_candidate",
+  "quantity": "G7 on original p<(1-epsilon0)N sequence",
+  "direction": "lower",
+  "combination_coefficient": "1",
+  "normalization": "S_N=C(N)*N/log(N)^2",
+  "exponents": {
+    "a": "4/53",
+    "b": "4/33",
+    "g": "3/11",
+    "c": "37/106"
+  },
+  "source_inputs": [
+    "BJS arXiv:2207.09452v6 Theorem6/Table1",
+    "classical maximal-endpoint BV",
+    "Mertens/Li"
+  ],
+  "not_required": [
+    "original Iwaniec Cs",
+    "L_eta",
+    "CP6 weighted-BV candidate"
+  ],
+  "conditions": [
+    "N even, N>=16",
+    "0<epsilon0<=1/2",
+    "0<epsilon<=1/200",
+    "z=N^a>w",
+    "A0>=4, B=A0+8",
+    "q_N<=1",
+    "r_N<=1/2",
+    "all source onsets met",
+    "restrict u+v<=c-delta before lower sieve"
+  ],
+  "level_modes": {
+    "logarithmic": {
+      "D_m": "R/(P0*m)",
+      "delta": "h_star",
+      "R": "sqrt(N)/log(N)^B"
+    },
+    "fixed": {
+      "D_m": "N^(1/2-sigma)/m",
+      "sigma": "1/10000000",
+      "delta": "sigma",
+      "onset": "h_star<=sigma"
+    },
+    "h_star": "(B*loglog(N)+log(P0))/log(N)",
+    "full_support": "m*W_N*D_m<=R, W_N divides P0"
+  },
+  "defects": {
+    "q_N": "abs(2*exp(gamma_E)*Li(N)*V_N(z)/(53*S_N)-1)",
+    "r_N": "maximum closed-CDF discrepancy of the two prime reciprocal measures against dt/t"
+  },
+  "statement": "G7/S_N >= I_delta - deficit",
+  "deficit_coefficients": {
+    "epsilon0": "128/21",
+    "q_N": "4",
+    "r_N": "53",
+    "1/z": "11925/16",
+    "epsilon": "48972",
+    "C_BV*T^(3-A0)": "17"
+  },
+  "moving_comparison": {
+    "domain": "0<=delta<=a/2",
+    "total_lower": "(53/120)*delta",
+    "total_upper": "(2809/16)*delta",
+    "strip_only_upper": "(14045/16)*delta^2",
+    "add_strip_again_to_total_upper": false
+  },
+  "higher_correction": "0<=g_delta-I_delta<=max(0,1/2-delta-4*a-a-b)^5/(720*a^5*b)",
+  "endpoint": "N^(4/33) cannot be prime for integer N; hence no shared-prime diagonal and no triangle factor",
+  "selected_comparison_floor": "3.7902931",
+  "conditional_total_loss": "0.000003",
+  "conditional_eventual_floor": "3.7902901",
+  "numeric_N0": null,
+  "original_Cs_audit": "unresolved",
+  "independent_review": "pending",
+  "global_status": "INCONCLUSIVE",
+  "cannot_imply": [
+    "independent verification",
+    "a two-sided interval for actual G7 counts",
+    "effective numerical N0",
+    "full twelve-term closure",
+    "binary Goldbach"
+  ]
+}

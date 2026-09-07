@@ -1,0 +1,20 @@
+{
+  "schema": "goldbach-g7-finite/v1",
+  "ok": true,
+  "counts": {
+    "ap_rebase_injection": 723,
+    "unit_mass": 630,
+    "aggregate_rebase": 132,
+    "nonnegative_restriction": 132,
+    "monotone_tensor": 147,
+    "signed_mass": 108,
+    "normalized_sign": 162,
+    "totient": 256,
+    "exponent_endpoint": 25,
+    "geometry": 12
+  },
+  "finite_cases": 2327,
+  "structural_negative_controls": 12,
+  "scope": "synthetic AP identities and rational monotone-measure models, not small-N BV or source verification",
+  "mathematical_truth_verified": false
+}
