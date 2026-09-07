@@ -1,0 +1,61 @@
+{
+  "schema": "jin-math-computation-handoff/v1",
+  "problem_id": "preproject-rh",
+  "window_id": "pre-genesis-sequential",
+  "attempt_id": "A-RH-MATCH-0017",
+  "claim_id": null,
+  "objective_sha256": "86069be48be156df883de43c3b200bb8396b6f41bb15600c7fe34cc19a534b1c",
+  "question": "Construct and certify finite orbit-to-cell assignments with exact retained mass and charged deletion/transport.",
+  "domain": "Rational finite graphs and synthetic exponential lists, not actual zeta zeros.",
+  "assumptions": [
+    "Whole conjugation orbits; mandatory clipping leaves marks1/2.",
+    "Target Q,inset,radius,cap and nonnegative scalar objective weights are fixed.",
+    "Analytic source-to-model consequence is conditional on pinned parent proofs."
+  ],
+  "requested_evidence": "exact_check",
+  "backend": {
+    "name": "Python Fraction / NumPy / mpmath",
+    "version": "3.13.5",
+    "interface": "bounded local foreground process",
+    "libraries": {
+      "mpmath": "1.3.0",
+      "numpy": "2.3.5",
+      "python": "3.13.5"
+    }
+  },
+  "exact_input": {
+    "seed": 2026090717,
+    "samples": 120,
+    "input_binding": "The three saved certificates contain their canonical rational inputs and SHA-256.",
+    "objective_boundary": "README hash binds this bounded task, not a v13 Project objective."
+  },
+  "reproduction_command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python check_matching.py --samples 120 --output validation.json",
+  "integrity_command": "python check_matching.py --check-package",
+  "code_artifacts": [
+    {
+      "path": "matching.py",
+      "sha256": "d474df4302e105ea8c5e1afb768176db9fef9f101e1a9e62c6ae693b436fc04c"
+    },
+    {
+      "path": "check_matching.py",
+      "sha256": "31101dcfc2ddfc49e9dcea01c648dd02f49c8f739e60ecb5112044bcbc5b220f"
+    }
+  ],
+  "result_artifacts": [
+    {
+      "path": "validation.json",
+      "sha256": "b841fcc218d450f8c532d9b4bc07c21927451880ac94312642c35e796042ea70"
+    }
+  ],
+  "computation_record": {
+    "path": "computation-record.json",
+    "sha256": "8d815e67885ab681760e4471e88a03d3602b286da0c137d9e51ccd10dae4bd67"
+  },
+  "evidence_grade": "exact_check",
+  "cannot_imply": [
+    "No actual zeta-zero data or asymptotically small matching cost is established.",
+    "No independent mathematical verification, unconditional zero-proportion improvement or RH proof.",
+    "The optimum concerns a conservative linear surrogate, not the true quadratic charge or signed operator norm.",
+    "Numerical operator checks are numerical_evidence,not exact certificates or formal proof."
+  ]
+}

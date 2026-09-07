@@ -1,0 +1,636 @@
+{
+  "attempt": "A-RH-MATCH-0017",
+  "backend": {
+    "mpmath": "1.3.0",
+    "numpy": "2.3.5",
+    "python": "3.13.5"
+  },
+  "counts": {
+    "bruteforce_feasible_assignments": 771,
+    "bruteforce_optimization_cases": 120,
+    "certificate_quotas": 674,
+    "charged_Hall_witness_checks": 54,
+    "cosh_enclosures": 37,
+    "exact_feasible_models": 56,
+    "integral_comparisons": 24,
+    "interval_families": 4637,
+    "operator_models": 120,
+    "operator_scale_checks": 360,
+    "repeated_cluster_cases": 8,
+    "tamper_rejections": 7
+  },
+  "crossing_example": {
+    "best_r2": 1,
+    "format": "rh-matching-certificate/v1",
+    "input": {
+      "Q": 3,
+      "depth_cap": "0",
+      "margin": "1/2",
+      "orbits": [
+        {
+          "a": "0",
+          "mass": 1,
+          "x": "0"
+        },
+        {
+          "a": "0",
+          "mass": 2,
+          "x": "1/10"
+        }
+      ],
+      "radius": "3/2",
+      "weights": [
+        "1",
+        "0",
+        "0"
+      ]
+    },
+    "input_sha256": "6d40eac702043220cd875c95a3bb96c9ead9c0cb1e3a562c315b8ae38bbe0863",
+    "ledger": {
+      "P": "257/300",
+      "Xi_enclosed": "0",
+      "Xi_surrogate": "0",
+      "assignment": [
+        [
+          0,
+          1,
+          "3/2"
+        ],
+        [
+          1,
+          0,
+          "1/2"
+        ]
+      ],
+      "objective": "257/100",
+      "removed_mass": 0,
+      "retained_mass": 3,
+      "s_model": "1/3",
+      "simple_deleted": 0,
+      "source_mass": 3,
+      "source_mass_ratio": "1"
+    },
+    "quotas": [
+      {
+        "cut": [
+          0,
+          1
+        ],
+        "flows": [
+          1,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "objective": "1/4",
+        "r2": 0,
+        "status": "infeasible",
+        "value": 1
+      },
+      {
+        "flows": [
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          0
+        ],
+        "objective": "257/100",
+        "potentials": [
+          "-58/25",
+          "-9/4",
+          "-58/25",
+          "-9/4",
+          "-58/25",
+          "-2",
+          "0",
+          "0",
+          "0"
+        ],
+        "r2": 1,
+        "status": "optimal",
+        "value": 2
+      }
+    ]
+  },
+  "disjoint_Hall_example": {
+    "certificate": {
+      "best_r2": null,
+      "format": "rh-matching-certificate/v1",
+      "input": {
+        "Q": 3,
+        "depth_cap": "0",
+        "margin": "1/16",
+        "orbits": [
+          {
+            "a": "0",
+            "mass": 1,
+            "x": "9/20"
+          },
+          {
+            "a": "0",
+            "mass": 1,
+            "x": "11/20"
+          },
+          {
+            "a": "0",
+            "mass": 1,
+            "x": "49/20"
+          },
+          {
+            "a": "0",
+            "mass": 1,
+            "x": "51/20"
+          }
+        ],
+        "radius": "0",
+        "weights": [
+          "1",
+          "1",
+          "1"
+        ]
+      },
+      "input_sha256": "c569632a42b2cc66e684ecc19fc94b677363ec7e209c485717b1e62cdaec9069",
+      "quotas": [
+        {
+          "cut": [
+            0,
+            1,
+            3,
+            4,
+            5,
+            6,
+            7,
+            9
+          ],
+          "flows": [
+            2,
+            0,
+            1,
+            1,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            1,
+            0,
+            1
+          ],
+          "objective": "6",
+          "r2": 0,
+          "status": "infeasible",
+          "value": 2
+        },
+        {
+          "cut": [
+            0,
+            2
+          ],
+          "flows": [
+            1,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "objective": "9",
+          "r2": 1,
+          "status": "infeasible",
+          "value": 1
+        }
+      ]
+    },
+    "data": {
+      "Q": 3,
+      "depth_cap": "0",
+      "margin": "1/16",
+      "orbits": [
+        {
+          "mass": 1,
+          "x": "9/20"
+        },
+        {
+          "mass": 1,
+          "x": "11/20"
+        },
+        {
+          "mass": 1,
+          "x": "49/20"
+        },
+        {
+          "mass": 1,
+          "x": "51/20"
+        }
+      ],
+      "radius": "0"
+    },
+    "hall": {
+      "deficiency": 2,
+      "empty_orbits": [],
+      "maximizing_intervals": [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "witnesses": [
+        {
+          "Xi_lower": "1/3",
+          "excess": 1,
+          "interval": [
+            0,
+            0
+          ],
+          "orbits": [
+            0,
+            1
+          ]
+        },
+        {
+          "Xi_lower": "1/6",
+          "excess": 1,
+          "interval": [
+            0,
+            2
+          ],
+          "orbits": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "Xi_lower": "1/3",
+          "excess": 1,
+          "interval": [
+            2,
+            2
+          ],
+          "orbits": [
+            2,
+            3
+          ]
+        }
+      ]
+    }
+  },
+  "evidence_boundary": "Finite exact certificates and synthetic numerical tests; no actual zeta assignment, asymptotic theorem or independent verification.",
+  "exact_mass_parity_obstruction": {
+    "Q": 3,
+    "margin": "1/16",
+    "orbits": [
+      {
+        "mass": 2,
+        "x": "1/2"
+      },
+      {
+        "mass": 2,
+        "x": "3/2"
+      }
+    ],
+    "radius": "0"
+  },
+  "fixture_certificate": {
+    "best_r2": 2,
+    "format": "rh-matching-certificate/v1",
+    "input": {
+      "Q": 6,
+      "depth_cap": "1/2",
+      "margin": "1/8",
+      "orbits": [
+        {
+          "a": "0",
+          "mass": 1,
+          "x": "1/2"
+        },
+        {
+          "a": "0",
+          "mass": 1,
+          "x": "3/5"
+        },
+        {
+          "a": "1/2",
+          "mass": 2,
+          "x": "3/2"
+        },
+        {
+          "a": "0",
+          "mass": 3,
+          "x": "5/2"
+        },
+        {
+          "a": "0",
+          "mass": 1,
+          "x": "7/2"
+        },
+        {
+          "a": "3/4",
+          "mass": 2,
+          "x": "9/2"
+        },
+        {
+          "a": "0",
+          "mass": 1,
+          "x": "11/2"
+        }
+      ],
+      "radius": "1/4",
+      "weights": [
+        "1",
+        "1",
+        "1"
+      ]
+    },
+    "input_sha256": "ac9a3c1e51a9984a637126e4c26c16d5f6b8a88d14f7931e32d625e9e4ad9148",
+    "ledger": {
+      "P": "0",
+      "Xi_enclosed": "392689800123901213240803795602664125632699895542249/242780287276437602247499322707769101054377984000000",
+      "Xi_surrogate": "514079943762120014364553456956548676159888887542249/242780287276437602247499322707769101054377984000000",
+      "assignment": [
+        [
+          0,
+          0,
+          "1/2"
+        ],
+        [
+          2,
+          1,
+          "3/2"
+        ],
+        [
+          3,
+          2,
+          "5/2"
+        ],
+        [
+          4,
+          3,
+          "7/2"
+        ]
+      ],
+      "objective": "595006706187599215113719897859138376511348215542249/40463381212739600374583220451294850175729664000000",
+      "removed_mass": 5,
+      "retained_mass": 6,
+      "s_model": "1/3",
+      "simple_deleted": 2,
+      "source_mass": 11,
+      "source_mass_ratio": "11/6"
+    },
+    "quotas": [
+      {
+        "cut": [
+          0,
+          1,
+          3,
+          4,
+          10
+        ],
+        "flows": [
+          3,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0,
+          0,
+          1,
+          0,
+          1
+        ],
+        "objective": "1889415436064342041244993627718183085084735711309685328090149/79417300016493714081967316291170449944535767232754483200000",
+        "r2": 0,
+        "status": "infeasible",
+        "value": 3
+      },
+      {
+        "cut": [
+          0,
+          1,
+          3,
+          4,
+          10
+        ],
+        "flows": [
+          3,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          0,
+          1
+        ],
+        "objective": "1412911635965379756753189729971160385417521107913158428890149/79417300016493714081967316291170449944535767232754483200000",
+        "r2": 1,
+        "status": "infeasible",
+        "value": 4
+      },
+      {
+        "flows": [
+          2,
+          2,
+          1,
+          1,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ],
+        "objective": "595006706187599215113719897859138376511348215542249/40463381212739600374583220451294850175729664000000",
+        "potentials": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-3",
+          "-2",
+          "-2",
+          "-2",
+          "0",
+          "-2",
+          "-2"
+        ],
+        "r2": 2,
+        "status": "optimal",
+        "value": 4
+      },
+      {
+        "cut": [
+          0,
+          2,
+          8
+        ],
+        "flows": [
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        "objective": "797323612251297216986636000115612627389996535542249/40463381212739600374583220451294850175729664000000",
+        "r2": 3,
+        "status": "infeasible",
+        "value": 2
+      }
+    ]
+  },
+  "independent_verification": false,
+  "maximum_residuals": {
+    "integral_kernel": 1.4210854715202004e-14
+  },
+  "minimum_slacks": {
+    "deletion_enclosure": 0.0,
+    "joint_residual": -5.84023570245525e-17,
+    "linear_surrogate": 0.0,
+    "source_to_periodic_upper": 3.362476291245534,
+    "transport": -2.312964634635743e-16
+  },
+  "ok": true,
+  "repeated_cluster_obstruction": [
+    {
+      "Q": 6,
+      "Xi_lower": "3/2",
+      "minimum_unmatched_orbits": 3,
+      "simple_fraction": "2/3",
+      "source_mass": 6
+    },
+    {
+      "Q": 12,
+      "Xi_lower": "3/2",
+      "minimum_unmatched_orbits": 6,
+      "simple_fraction": "2/3",
+      "source_mass": 12
+    },
+    {
+      "Q": 18,
+      "Xi_lower": "3/2",
+      "minimum_unmatched_orbits": 9,
+      "simple_fraction": "2/3",
+      "source_mass": 18
+    },
+    {
+      "Q": 24,
+      "Xi_lower": "3/2",
+      "minimum_unmatched_orbits": 12,
+      "simple_fraction": "2/3",
+      "source_mass": 24
+    },
+    {
+      "Q": 30,
+      "Xi_lower": "3/2",
+      "minimum_unmatched_orbits": 15,
+      "simple_fraction": "2/3",
+      "source_mass": 30
+    },
+    {
+      "Q": 36,
+      "Xi_lower": "3/2",
+      "minimum_unmatched_orbits": 18,
+      "simple_fraction": "2/3",
+      "source_mass": 36
+    },
+    {
+      "Q": 42,
+      "Xi_lower": "3/2",
+      "minimum_unmatched_orbits": 21,
+      "simple_fraction": "2/3",
+      "source_mass": 42
+    },
+    {
+      "Q": 48,
+      "Xi_lower": "3/2",
+      "minimum_unmatched_orbits": 24,
+      "simple_fraction": "2/3",
+      "source_mass": 48
+    }
+  ],
+  "samples": 120,
+  "seed": 2026090717
+}

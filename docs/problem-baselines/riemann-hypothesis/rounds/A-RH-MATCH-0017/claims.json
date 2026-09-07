@@ -1,0 +1,204 @@
+{
+  "format": "rh-match-0017-claims/v1",
+  "attempt": "A-RH-MATCH-0017",
+  "archive_status": "reference_only",
+  "dependencies": {
+    "parent": {
+      "commit": "02e081262c0f1cadc1ad87043915bd7a2c65c27c",
+      "path": "docs/problem-baselines/riemann-hypothesis/rounds/A-RH-SOURCE-0016/proof.md",
+      "git_blob_sha1": "93b456345071bd34a794511ff29e620fee6d1ae5",
+      "status": "proof_candidate",
+      "receipt": null
+    },
+    "round15": {
+      "commit": "bea93a0308a7ddfd6bacc35c547ffd4ab6d5cee9",
+      "path": "docs/problem-baselines/riemann-hypothesis/rounds/A-RH-HSTAB-0015/proof.md",
+      "git_blob_sha1": "3daba85264af382ae65dbae2924be4e1d74f9160",
+      "status": "proof_candidate",
+      "receipt": null
+    }
+  },
+  "claims": [
+    {
+      "id": "A-RH-MATCH-0017-C01",
+      "title": "Exact interval-Hall deficiency",
+      "statement": "The minimum unmatched whole-orbit count equals empty neighborhoods plus the maximum sum of C(I)-|I| over disjoint cell intervals.",
+      "quantifier_scope": "All finite interval-neighborhood bipartite graphs.",
+      "assumptions": [
+        "Empty neighborhoods are counted separately; this statement does not impose exact retained mass."
+      ],
+      "dependency_refs": [],
+      "evidence_grade": "proof_candidate",
+      "evidence_refs": [
+        "proof.md section 2",
+        "validation.json: 4637 interval families versus subset and matching enumeration"
+      ],
+      "cannot_imply": [
+        "A count or total-capacity test alone decides matching.",
+        "No actual zeta-zero data or asymptotically small matching cost is established.",
+        "No independent mathematical verification, unconditional zero-proportion improvement or RH proof.",
+        "The optimum concerns a conservative linear surrogate, not the true quadratic charge or signed operator norm."
+      ],
+      "verifier_receipt": null
+    },
+    {
+      "id": "A-RH-MATCH-0017-C02",
+      "title": "Charged Hall obstruction",
+      "statement": "An interval with excess t forces Xi_1 >= (sum of t smallest m_i l_i)^2/(Q K_I), with l_i<=cosh(a_i).",
+      "quantifier_scope": "Any partial injection in the stated source/cell geometry.",
+      "assumptions": [
+        "K_I counts original source cells; sum witnesses only with disjoint source-cell supports."
+      ],
+      "dependency_refs": [],
+      "evidence_grade": "proof_candidate",
+      "evidence_refs": [
+        "proof.md section 2",
+        "validation.json: 54 charge-witness checks and repeated-cluster family"
+      ],
+      "cannot_imply": [
+        "A lower bound for the deletion charge is a lower bound for the signed operator norm.",
+        "No actual zeta-zero data or asymptotically small matching cost is established.",
+        "No independent mathematical verification, unconditional zero-proportion improvement or RH proof.",
+        "The optimum concerns a conservative linear surrogate, not the true quadratic charge or signed operator norm."
+      ],
+      "verifier_receipt": null
+    },
+    {
+      "id": "A-RH-MATCH-0017-C03",
+      "title": "Linear charge majorant and rational depth enclosures",
+      "statement": "Xi_alpha <= Xi_enc <= Xi_hat for every 0<alpha<=1, including mandatory multiplicity clipping; rational cosh bounds follow from the explicit series tail.",
+      "quantifier_scope": "All finite nonnegative orbit masses/depths; exact solver inputs rational.",
+      "assumptions": [
+        "Removed coefficients are charged at original centers and depths; upper cosh bounds are valid."
+      ],
+      "dependency_refs": [],
+      "evidence_grade": "proof_candidate",
+      "evidence_refs": [
+        "proof.md sections 3 and 7",
+        "matching.py cosh_bounds and charge_ledger",
+        "validation.json: 37 enclosure comparisons and 360 scale checks"
+      ],
+      "cannot_imply": [
+        "Large surrogate cost rules out small actual operator error.",
+        "No actual zeta-zero data or asymptotically small matching cost is established.",
+        "No independent mathematical verification, unconditional zero-proportion improvement or RH proof.",
+        "The optimum concerns a conservative linear surrogate, not the true quadratic charge or signed operator norm."
+      ],
+      "verifier_receipt": null
+    },
+    {
+      "id": "A-RH-MATCH-0017-C04",
+      "title": "Exact retained-mass optimization",
+      "statement": "Enumerating r2=0..floor(Q/2), r1=Q-2r2 and solving the stated integral flow gives a global minimizer of lambda QP+mu QXi_hat+nu n_del.",
+      "quantifier_scope": "Every finite rational instance accepted by the solver.",
+      "assumptions": [
+        "One matching object per clipped orbit; nonnegative objective weights; fixed Q,inset,radius and depth cap."
+      ],
+      "dependency_refs": [],
+      "evidence_grade": "proof_candidate",
+      "evidence_refs": [
+        "proof.md section 4",
+        "validation.json: 120 oracle comparisons and 771 feasible assignments enumerated"
+      ],
+      "cannot_imply": [
+        "Changing Q after solving preserves the certificate, or scalarization finds every multi-budget solution.",
+        "No actual zeta-zero data or asymptotically small matching cost is established.",
+        "No independent mathematical verification, unconditional zero-proportion improvement or RH proof.",
+        "The optimum concerns a conservative linear surrogate, not the true quadratic charge or signed operator norm."
+      ],
+      "verifier_receipt": null
+    },
+    {
+      "id": "A-RH-MATCH-0017-C05",
+      "title": "Exact optimality or infeasibility certificates",
+      "statement": "Conservation/capacity checks plus nonnegative residual reduced costs prove full-flow optimality; a cut of capacity below quota demand proves infeasibility.",
+      "quantifier_scope": "Each quota and the complete finite enumeration.",
+      "assumptions": [
+        "Certificate is bound to canonical input; graph and objective are reconstructed."
+      ],
+      "dependency_refs": [],
+      "evidence_grade": "proof_candidate",
+      "evidence_refs": [
+        "proof.md section 4",
+        "matching.py verify",
+        "validation.json: 674 quota checks and 7 rejected tamper variants"
+      ],
+      "cannot_imply": [
+        "Same-run software checks are an independent-mathematics receipt or formal verification.",
+        "No actual zeta-zero data or asymptotically small matching cost is established.",
+        "No independent mathematical verification, unconditional zero-proportion improvement or RH proof.",
+        "The optimum concerns a conservative linear surrogate, not the true quadratic charge or signed operator norm."
+      ],
+      "verifier_receipt": null
+    },
+    {
+      "id": "A-RH-MATCH-0017-C06",
+      "title": "Constructed matching to charged operator transfer",
+      "statement": "The constructed assignment gives eps_alpha in (10), the finite residual bound (11), and the parent-dependent periodic upper/feasibility bounds (12)-(13).",
+      "quantifier_scope": "Q>=2, 0<alpha<=1 for upper transfer; 1/2<alpha<=1 for the parent mixed lower bound.",
+      "assumptions": [
+        "Retained depth cap and displacement radius fixed; same depths transported; parent analytic lemmas accepted as candidate inputs."
+      ],
+      "dependency_refs": [
+        "parent",
+        "round15"
+      ],
+      "evidence_grade": "proof_candidate",
+      "evidence_refs": [
+        "proof.md section 5",
+        "validation.json: 120 synthetic sources,360 operator-scale checks,24 alternative integral comparisons"
+      ],
+      "cannot_imply": [
+        "An actual source assignment with F*/Q tending to zero is constructed, or source bandwidth theta equals one.",
+        "No actual zeta-zero data or asymptotically small matching cost is established.",
+        "No independent mathematical verification, unconditional zero-proportion improvement or RH proof.",
+        "The optimum concerns a conservative linear surrogate, not the true quadratic charge or signed operator norm."
+      ],
+      "verifier_receipt": null
+    },
+    {
+      "id": "A-RH-MATCH-0017-C07",
+      "title": "Weighted order and exact-mass scope guards",
+      "statement": "The two-orbit weighted displacement optimum is 257/100 versus ordered 417/100; two mass-two orbits cannot retain mass three even when Hall matches both.",
+      "quantifier_scope": "The exact rational configurations in proof.md section 6.",
+      "assumptions": [
+        "Fixed inset/radius and no splitting orbits; reference target mass is fixed."
+      ],
+      "dependency_refs": [],
+      "evidence_grade": "proof_candidate",
+      "evidence_refs": [
+        "proof.md section 6",
+        "validation.json crossing_example and exact_mass_parity_obstruction"
+      ],
+      "cannot_imply": [
+        "Order-preserving maximum-cardinality matching is impossible in general.",
+        "No actual zeta-zero data or asymptotically small matching cost is established.",
+        "No independent mathematical verification, unconditional zero-proportion improvement or RH proof.",
+        "The optimum concerns a conservative linear surrogate, not the true quadratic charge or signed operator norm."
+      ],
+      "verifier_receipt": null
+    },
+    {
+      "id": "A-RH-MATCH-0017-C08",
+      "title": "Repeated congestion at correct global mass/simple ratios",
+      "statement": "The explicit Q=6k real family has mass Q,simple fraction2/3,orbit count5Q/6,Hall deficiency3k and unavoidable deletion charge at least3/2 if mass constraint is relaxed.",
+      "quantifier_scope": "Every positive integer k in the stated real family.",
+      "assumptions": [
+        "Inset1/16,radius1/8; original cells supporting the k witnesses are disjoint."
+      ],
+      "dependency_refs": [],
+      "evidence_grade": "proof_candidate",
+      "evidence_refs": [
+        "proof.md section 6",
+        "validation.json: eight finite sizes; analytic all-k proof separate"
+      ],
+      "cannot_imply": [
+        "The family has small long signed defect, obeys source PC, or is a zeta/RH counterexample.",
+        "No actual zeta-zero data or asymptotically small matching cost is established.",
+        "No independent mathematical verification, unconditional zero-proportion improvement or RH proof.",
+        "The optimum concerns a conservative linear surrogate, not the true quadratic charge or signed operator norm."
+      ],
+      "verifier_receipt": null
+    }
+  ]
+}
