@@ -1,0 +1,47 @@
+{
+  "format": "rh-match-0017-checkpoint/v1",
+  "attempt": "A-RH-MATCH-0017",
+  "issue": 106,
+  "date": "2026-09-07",
+  "actor": {
+    "kind": "agent",
+    "id": "openai-chatgpt",
+    "run_id": "run-20260907-rh-certified-matching-17",
+    "role": "solver"
+  },
+  "git_base_sha": "39002c5a6af8c7b7f093589e6a76cfd218fcbb99",
+  "git_base_tree_sha": "d6ac23dc843e26ba123ae167228e3a0c1ff6b750",
+  "mathematical_parent": {
+    "commit": "02e081262c0f1cadc1ad87043915bd7a2c65c27c",
+    "path": "docs/problem-baselines/riemann-hypothesis/rounds/A-RH-SOURCE-0016/proof.md",
+    "git_blob_sha1": "93b456345071bd34a794511ff29e620fee6d1ae5",
+    "status": "proof_candidate",
+    "receipt": null
+  },
+  "branch": "program/i-0106/rh-certified-matching-17",
+  "archive_status": "reference_only",
+  "mathematical_status": "proof_candidate",
+  "independent_verifier_receipt": null,
+  "sha256": {
+    "README.md": "86069be48be156df883de43c3b200bb8396b6f41bb15600c7fe34cc19a534b1c",
+    "proof.md": "7a93ee3c86c70b955066a2cd5526e104784c8d7825ab7fe72c2045f4a3a63d19",
+    "matching.py": "d474df4302e105ea8c5e1afb768176db9fef9f101e1a9e62c6ae693b436fc04c",
+    "check_matching.py": "31101dcfc2ddfc49e9dcea01c648dd02f49c8f739e60ecb5112044bcbc5b220f",
+    "validation.json": "b841fcc218d450f8c532d9b4bc07c21927451880ac94312642c35e796042ea70",
+    "claims.json": "26e1528d673f5d9641fdc61f6e51cf5e8c9b5fa4798f24df3a86e6c922b91711",
+    "source-scope.md": "8ff966dcefb7a43e8250222b458b37f6ccc55ff8926c6529eb259c32d1977dfe",
+    "computation-record.json": "8d815e67885ab681760e4471e88a03d3602b286da0c137d9e51ccd10dae4bd67",
+    "computation-handoff.json": "3375418b0d3fd024760524c3106c2b7ab35d30510fa88f70310894aa17b8c30a"
+  },
+  "hash_boundary": "Nine files covered; this manifest excludes itself. Its Git blob and final commit are pinned in the PR.",
+  "scope": {
+    "only_additions": true,
+    "modifies_predecessors": false,
+    "advances_authority": false,
+    "actual_zero_computation": false,
+    "full_repository_local_tests": false,
+    "upstream_lean_build": false,
+    "remote_ci": "Observe separately in PR; not predicted here."
+  },
+  "next_attempt": "A-RH-CONGEST-0018: source-compatible control of Hall congestion and weighted optimal assignment charges."
+}
