@@ -1,0 +1,13 @@
+{
+  "README.md": "b0978069dbc078f7c8e3ff42dd7438a8f1584db5ea6cef7f76c90bb6cfc8806d",
+  "certificate.json": "a7a0e0fdbbd74d8e6c1fca6831a6e82f18f46a997c77fb549abe90e8beb26995",
+  "check_physical_trace.py": "5a340a7cffea2317e15977e8561fc853555ddde45d4db632ad4ecb0c929a0c0e",
+  "computation-handoff.json": "4b616b081a299a161fc62ea7eb208fdda5ac6733b90e65a72ccd52df1806fc4a",
+  "computation-record.json": "ad6cb27a748ac30eee4eaac3f895d663832f813a3ee55cca9b989ea34432e23e",
+  "inputs.json": "3b1b979ed4c48c839120791666f78e2f7b75a9bc570782f78233326de4e6c23b",
+  "physical_trace.py": "54edc04c4a7292db18241f8dc1cff12dee0bc76076a4444fdec5833447322eac",
+  "proof.md": "d3a3abf8315e970a9c4ab13f72519d487e91546f385cbf9787d63be86cfcd794",
+  "results.json": "430e2b743c19b808d2532242175ea6db622923d5c9bb37dd7fa702c790c50244",
+  "source-lock.json": "eea165703fe88e46ee57091eacca7126ce2b10e1292b652014ee9924f8406cd7",
+  "verification-ticket.md": "84a6eaefdde90bf156d82156786d470a3085f2703411630006a6f915bc02cc60"
+}

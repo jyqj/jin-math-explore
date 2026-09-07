@@ -1,0 +1,48 @@
+{
+  "schema": "physical-trace-source-lock/v1",
+  "as_of": "2026-09-07",
+  "authority": "reference_only",
+  "main": "39002c5a6af8c7b7f093589e6a76cfd218fcbb99",
+  "predecessor": {
+    "issue": 94,
+    "pr": 98,
+    "commit": "176e17e437a48360b97eec98bba9ad2675cbeb62",
+    "proof_git_blob": "b9041ed519a8406bf3dc2514a17a75e658652775",
+    "scope": "ordinary-simplex trace candidate; not imported as independently verified mathematics"
+  },
+  "upstream": {
+    "repository": "openai/PrimeGaps186",
+    "commit": "61340d0b74163003b32756bb16e91d9209a5e330",
+    "path": "Challenge.lean",
+    "git_blob": "2331eeeb808008cee37bac7aa0fb17e36f1f3c17",
+    "read_scope": "connector lines120-425,350-420,420-540; all77 coefficient entries and three mask bands",
+    "raw_file_sha256": null,
+    "used_axioms": []
+  },
+  "sources": [
+    {
+      "id": "S1",
+      "title": "Improved short gaps between primes",
+      "date": "2026-08-30",
+      "url": "https://cdn.openai.com/pdf/51126fac-1b68-4128-9666-c908bcc16033/short_gaps.pdf",
+      "parsed_sections": ["1.2", "3.1", "3.2", "3.3", "4.4"],
+      "screenshots_printed_pages": [2,14,15,18,20,29],
+      "raw_pdf_sha256": null,
+      "import_boundary": "physical capped-law/Dickman identities remain source inputs; finite diagonal extensions and local trial witness are rederived here"
+    },
+    {
+      "id": "S2",
+      "url": "https://github.com/openai/PrimeGaps186/blob/61340d0b74163003b32756bb16e91d9209a5e330/Challenge.lean",
+      "scope": "frozen numerical definitions, not source assertions of passing computations"
+    },
+    {
+      "id": "S3",
+      "url": "https://arxiv.org/html/2402.00748v2",
+      "title": "Small gaps between almost-twin primes",
+      "scope": "prior context for endpoint subtraction; no mu*f-to-diagonal identification assumed"
+    }
+  ],
+  "isolation": {"untouched_live_packet":80,"independent_verifier_run":false},
+  "novelty": "No global novelty claim. The new repository asset is a concrete real-trial support obstruction and exact residual accounting, not a new sieve principle.",
+  "not_acquired_or_run": ["full source byte hashes", "upstream Lean/FLINT", "restored P_O H data", "full local repository suite", "isolated mathematical review"]
+}
