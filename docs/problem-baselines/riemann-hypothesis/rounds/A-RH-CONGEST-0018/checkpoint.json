@@ -1,0 +1,44 @@
+{
+  "format": "rh-congest-0018-checkpoint/v1",
+  "attempt": "A-RH-CONGEST-0018",
+  "issue": 114,
+  "date": "2026-09-07",
+  "actor": {
+    "kind": "agent",
+    "id": "openai-chatgpt",
+    "run_id": "run-20260907-rh-congestion-bypass-18",
+    "role": "solver"
+  },
+  "git_base_sha": "39002c5a6af8c7b7f093589e6a76cfd218fcbb99",
+  "git_base_tree_sha": "d6ac23dc843e26ba123ae167228e3a0c1ff6b750",
+  "historical_parent": {
+    "commit": "3be6e0543aee9f26180a90a6ceac5ca288c3bd51",
+    "proof_blob": "16eba095fcf5c94a39a07d77355a2d3202236a48",
+    "receipt": null
+  },
+  "branch": "program/i-0114/rh-congestion-bypass-18",
+  "archive_status": "reference_only",
+  "mathematical_status": "proof_candidate",
+  "independent_verifier_receipt": null,
+  "sha256": {
+    "README.md": "1a2f78551bdff8e6161e16b108896e5a875628d9bb0a818efe820fc6083a4cda",
+    "proof.md": "38125cbcd95257ac0e6a04b493cd786fe51801287af97c5cc3bdb87bd0760a22",
+    "check_direct_bridge.py": "8c0876ded22cd492f5a46275a1d3bebf041eeed00af513fcc147da58793cb755",
+    "validation.json": "0e88a6d70cbceb88400a48b576d7db0c1ba040707d354c21cf1356ecf8e769fb",
+    "claims.json": "c74e4b60e299c6e0a0aeb5702294e23b4b60c16d83b05ad337e37c1ae8021620",
+    "source-scope.md": "98e85bccdf1b4bce8e189d70ab5ede2ccd84e5bc9ba9a819001693e31ae0466e",
+    "computation-record.json": "27b384e0d4629a64d89301af07b287489ee2e5200a31554eae12648b2a505f22",
+    "computation-handoff.json": "48630019bb24232d88c8879b513b85b771eb1488ea644e4042589c1dfcd25837"
+  },
+  "hash_boundary": "Eight files covered; checkpoint excludes itself. Its Git blob and final commit are pinned in the PR.",
+  "scope": {
+    "only_additions": true,
+    "modifies_predecessors": false,
+    "advances_authority": false,
+    "actual_zero_computation": false,
+    "full_repository_local_tests": false,
+    "upstream_lean_build": false,
+    "remote_ci": "Observed separately in PR, not predicted here."
+  },
+  "next_attempt": "A-RH-PROFILE-0019: isolate verification, then extend the direct-row/source bridge to nonconstant profiles and compare against the stronger Montgomery--Taylor benchmark."
+}

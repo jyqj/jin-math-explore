@@ -1,0 +1,79 @@
+{
+  "attempt": "A-RH-CONGEST-0018",
+  "backend": {
+    "mpmath": "1.3.0",
+    "numpy": "2.3.5",
+    "python": "3.13.5"
+  },
+  "counts": {
+    "alias_scale_comparisons": 360,
+    "complex_remainder_cases": 120,
+    "exact_block_multiplier_checks": 9,
+    "exact_central_coefficients": 87700,
+    "exact_scalar_checks": 5,
+    "independent_integral_evaluations": 24,
+    "integer_short_dimensions": 1278,
+    "mixed_models": 126,
+    "positive_mixed_floors": 437,
+    "resonant_alias_guards": 15,
+    "selected_coordinate_tests": 1530
+  },
+  "independent_verification": false,
+  "mathematical_truth_verified": false,
+  "maximum_residuals": {
+    "alias_remainder_identity": 1.626953582672133e-11,
+    "central_row_identity": 3.4924596548080444e-10,
+    "flat_simple_diagonal": 6.661338147750939e-16,
+    "integral_kernel": 3.375077994860476e-13,
+    "mixed_selected_expansion": 2.980941644636914e-07,
+    "resonant_alias_guard": 8.881784197001252e-16,
+    "sampled_pair_dictionary": 2.0961010704922955e-13,
+    "signed_slack": 2.9103830456733704e-10
+  },
+  "minimum_slacks": {
+    "alias_comparison": 0.006423346252304833,
+    "alias_weight_majorant": 0.0,
+    "allocated_defect": -1.776356839400254e-15,
+    "block_multiplier_norm": -1.4210854715202004e-14,
+    "defect_nonnegative": -1.7763568394002505e-15,
+    "mixed_selected_bound": -1.5543122344752192e-15,
+    "mixed_short_floor": -8.881784197001252e-16,
+    "partial_fraction_bound": 0.2114758124107638
+  },
+  "numerical_tolerance": 2e-08,
+  "ok": true,
+  "range_threshold": "1e-10*max(1,largest singular value)",
+  "resonant_alias_examples": [
+    {
+      "Q": 4,
+      "difference": 1.0
+    },
+    {
+      "Q": 8,
+      "difference": 0.9999999999999996
+    },
+    {
+      "Q": 16,
+      "difference": 1.0
+    },
+    {
+      "Q": 32,
+      "difference": 0.9999999999999996
+    },
+    {
+      "Q": 64,
+      "difference": 1.0
+    }
+  ],
+  "samples": 120,
+  "scalar": {
+    "epsilon_root": "0.00020185216007809590759621745277813630996524910425397",
+    "not_a_new_best_bound": true,
+    "rational_epsilon_lower": "1/5000",
+    "rational_squared_gap": "89617/14400000000",
+    "source_candidate_fraction": "0.66686851882674476257426288411944480297663191577092",
+    "source_reference_stronger_fraction": "0.67250070367941164573437979080329518859340302862626"
+  },
+  "scope": "finite exact checks and numerical regressions; no actual zero computation",
+  "seed": 2026090718
+}
