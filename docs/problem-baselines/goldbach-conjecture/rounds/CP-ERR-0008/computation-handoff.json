@@ -1,0 +1,105 @@
+{
+  "protocol": "jin-math-computation-handoff/v1",
+  "schema": "goldbach-preproject-computation-handoff/v1",
+  "scope": "pre-genesis documentation archive; not a formal Project authority receipt",
+  "project_id": null,
+  "window_id": null,
+  "objective_sha256": null,
+  "attempt_id": "A-GB-ERR-0001",
+  "checkpoint": "CP-ERR-0008",
+  "work_issue": 92,
+  "actor": {
+    "kind": "agent",
+    "id": "openai-chatgpt",
+    "run_id": "run-20260907-goldbach-lower-explicit-08",
+    "role": "solver"
+  },
+  "base_sha": "39002c5a6af8c7b7f093589e6a76cfd218fcbb99",
+  "branch": "program/i-0092/goldbach-lower-explicit-cp8",
+  "lease_id": "L-0092-goldbach-lower-explicit-cp8",
+  "question": "Enclose 53*psi(6) and four33*psi(s) values at s=33/8-rho, and test the exact support/rebasing/sign/parameter interfaces for the proposed explicit lower sieve.",
+  "domain": {
+    "psi": "f/(2 exp(gamma_E)),4<=s<=6",
+    "rho": [
+      "0",
+      "1/100000000",
+      "1/1000000",
+      "1/500000"
+    ],
+    "selected_rho": "1/1000000",
+    "original_sieve_exponents": [
+      "4/53",
+      "4/33"
+    ]
+  },
+  "assumptions": [
+    "U-BJS-v6 Theorem6/Table1 as an imported theorem and constant",
+    "U-BV-classical and stated prime-counting transfer",
+    "U-Mertens for uniform product/onset limits",
+    "proof.md derivative envelope for midpoint error",
+    "mpmath1.3.0 basic interval log/arithmetic and exact endpoint tuple interpretation"
+  ],
+  "requested_evidence": "directed numerical certificate with explicit analytic error plus bounded exact regression checks",
+  "achieved_evidence": {
+    "fixed_integrals": "interval enclosures, conditional on written analytic error bounds and backend semantics",
+    "finite_tests": "bounded_check / exact_check",
+    "native_inequalities": "proof_candidate",
+    "independent_verification": false
+  },
+  "acceptance": {
+    "selected_original_targets_survive": true,
+    "sigma_ratio_over_CP3": 100,
+    "old_CP3_G2_floor_preserved": false,
+    "overlarge_rho_fixed_kernel_fails_original_target": true,
+    "normal_and_O_equal": true,
+    "global_request_rejected": true
+  },
+  "artifacts": {
+    "check_lower.py": {
+      "path": "check_lower.py",
+      "sha256": "bd25f8f9d4b8e8baf00dd799b06685c78bf9258184ebdfcdc5eb54f6699e3e2c"
+    },
+    "proof.md": {
+      "path": "proof.md",
+      "sha256": "6346ec17e822e258b2e9f0ad83adbbf004939be2acd0a081e6d85936f4ba8521"
+    },
+    "contracts.json": {
+      "path": "contracts.json",
+      "sha256": "ded7f01134bf1bdf9245b98d0e560fa4beaa7b3f635f9c46b47246ee09e7cea5"
+    },
+    "results.json": {
+      "path": "results.json",
+      "sha256": "eb061faec27039605a6ae60b1297467b1c6c65b559b2d7b56d0c7db59ac7ff2f"
+    },
+    "validation.json": {
+      "path": "validation.json",
+      "sha256": "4474db127dbaa53ea6156341987cf575123cc07b128f12e114b658cc8fe5edea"
+    },
+    "source-lock.json": {
+      "path": "source-lock.json",
+      "sha256": "3184c37b4d986db708c8130243fd2e628e66b073aa4122c7357818de52018204"
+    },
+    "computation-record.json": {
+      "path": "computation-record.json",
+      "sha256": "b8dc3434ed14ecdbdbff3a8bcdaddb71d86553f2a5a153fa01075c6d835c39da"
+    }
+  },
+  "reproduction": [
+    "python check_lower.py --compute",
+    "python -O check_lower.py --compute",
+    "python check_lower.py --self-test",
+    "python -O check_lower.py --self-test",
+    "python check_lower.py --check",
+    "python check_lower.py --require-global"
+  ],
+  "formal_project_validator": "not invoked: no v13 Project/objective is created by this pre-genesis archive; no dummy identity or formal PASS is claimed",
+  "cannot_imply": [
+    "universal correctness from finite regression tests",
+    "two-sided bounds for actual G1/G2 counts",
+    "independent theorem verification",
+    "original Cs uniformity audit completion",
+    "full twelve-term closure",
+    "binary Goldbach",
+    "a numerical N0 improvement factor"
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "schema": "goldbach-source-scope/v1",
+  "access_date_utc": "2026-09-07",
+  "sources": [
+    {
+      "id": "S1",
+      "name": "Li-Liu",
+      "identifier": "arXiv:2606.05224v2",
+      "html": "https://arxiv.org/html/2606.05224v2",
+      "pdf": "https://arxiv.org/pdf/2606.05224v2",
+      "locators": [
+        "Lemma2.2",
+        "(5.1)-(5.16)"
+      ],
+      "screenshots_successful_printed_pages": [
+        32,
+        33,
+        34
+      ],
+      "raw_pdf_sha256": null,
+      "scope": "object/kernel normalization and original comparison constants; whole-paper acceptance not inferred"
+    },
+    {
+      "id": "S2",
+      "name": "Bordignon-Johnston-Starichkova",
+      "identifier": "arXiv:2207.09452v6",
+      "html": "https://arxiv.org/html/2207.09452v6",
+      "pdf": "https://arxiv.org/pdf/2207.09452v6",
+      "locators": [
+        "Theorem6",
+        "Table1",
+        "(4)-(11)",
+        "monotonicity following Table1"
+      ],
+      "screenshots_successful_printed_pages": [
+        5
+      ],
+      "screenshots_failed_printed_pages": [
+        4
+      ],
+      "raw_pdf_sha256": null,
+      "imported_constant": "C2(epsilon)<=154 for 0<epsilon<=1/200",
+      "trust_boundary": "theorem and reported table imported; numerical table derivation not independently replayed",
+      "display_note": "HTML header says v6 25 Jun2025 while HTML Date says August24,2026; parsed PDF Date says June26,2025. Theorem6/Table1 was visually compared; no byte identity asserted."
+    },
+    {
+      "id": "S3",
+      "name": "R.C. Vaughan, The Bombieri-Vinogradov Theorem",
+      "url": "https://personal.science.psu.edu/rcv4/Bombieri.pdf",
+      "locators": [
+        "p1 partial summation (4)",
+        "p3 maximal-endpoint psi theorem"
+      ],
+      "screenshots_successful_printed_pages": [
+        3
+      ],
+      "raw_pdf_sha256": null,
+      "scope": "classical named theorem imported, pi/Li/strict-endpoint conversion supplied in proof.md"
+    },
+    {
+      "id": "S4",
+      "name": "mpmath interval contexts documentation",
+      "url": "https://mpmath.org/doc/current/contexts.html",
+      "runtime_version": "1.3.0",
+      "scope": "basic interval arithmetic/log semantics; interval support is documented as experimental, not formal verification"
+    }
+  ],
+  "other_inputs": [
+    "classical Mertens product and Li asymptotics",
+    "0<gamma_E<1 and elementary exponential bounds"
+  ],
+  "raw_bytes_note": "PDF text/rendered pages available via web; original PDF bytes were not acquired locally",
+  "original_Cs_audit": "unresolved, not attempted again in this replacement",
+  "novelty_boundary": "repository-local explicit lower interface and parameter tradeoff, not a literature-wide novelty claim"
+}

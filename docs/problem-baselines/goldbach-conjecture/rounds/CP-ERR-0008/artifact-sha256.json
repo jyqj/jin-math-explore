@@ -1,0 +1,19 @@
+{
+  "schema": "goldbach-artifact-manifest/v1",
+  "checkpoint": "CP-ERR-0008",
+  "scope": "all twelve payload files; this manifest is itself bound by the final Git tree/commit",
+  "sha256": {
+    "README.md": "f86e32c702b660f81904079ec6e1c8d186d1ded88449cd1cfa751cf362a771ba",
+    "check_lower.py": "bd25f8f9d4b8e8baf00dd799b06685c78bf9258184ebdfcdc5eb54f6699e3e2c",
+    "computation-handoff.json": "8cb6dce6d6dfdfdb7fbec19ba99c730418935f426f764f9c68b77e8a2887bba7",
+    "computation-record.json": "b8dc3434ed14ecdbdbff3a8bcdaddb71d86553f2a5a153fa01075c6d835c39da",
+    "contracts.json": "ded7f01134bf1bdf9245b98d0e560fa4beaa7b3f635f9c46b47246ee09e7cea5",
+    "error-handoff.json": "f500f50eab9e9650e1440626b63eea1a532f7f8d21268ac11e6406625b3a2fc3",
+    "prior-work.json": "22e0b24557376e2956881caaa02f6be5d9e63de375e2f0307b4d0870c94149d7",
+    "proof.md": "6346ec17e822e258b2e9f0ad83adbbf004939be2acd0a081e6d85936f4ba8521",
+    "results.json": "eb061faec27039605a6ae60b1297467b1c6c65b559b2d7b56d0c7db59ac7ff2f",
+    "source-lock.json": "3184c37b4d986db708c8130243fd2e628e66b073aa4122c7357818de52018204",
+    "validation.json": "4474db127dbaa53ea6156341987cf575123cc07b128f12e114b658cc8fe5edea",
+    "verification-ticket.md": "05b2c5ccebe0ef05f0fb9b066342225d111e6d1593c964c93937f55e9e052911"
+  }
+}

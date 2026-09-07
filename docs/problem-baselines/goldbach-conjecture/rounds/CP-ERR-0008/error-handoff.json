@@ -1,0 +1,108 @@
+{
+  "schema": "goldbach-error-handoff/v1",
+  "checkpoint": "CP-ERR-0008",
+  "findings": [
+    {
+      "id": "F-ERR-048",
+      "statement": "fixed lower levels pay P0 through the full remainder onset, with no kernel drift",
+      "grade": "proof_candidate",
+      "locator": "(8)-(11)"
+    },
+    {
+      "id": "F-ERR-049",
+      "statement": "signed actual-mass lower transfer includes d=1 and works for negative main factors",
+      "grade": "proof_candidate",
+      "locator": "(5),(12)-(15)"
+    },
+    {
+      "id": "F-ERR-050",
+      "statement": "G1/G2 individual and weighted explicit lower contracts without Cs,L_eta or CP6 WBV",
+      "grade": "conditional_proof_candidate",
+      "locator": "(18)-(20)"
+    },
+    {
+      "id": "F-ERR-051",
+      "statement": "rho=1e-6 preserves both original displayed constants with 100-fold larger exponent gap",
+      "grade": "numerical_certificate_with_analytic_candidate",
+      "locator": "section6; results.json"
+    },
+    {
+      "id": "F-ERR-052",
+      "statement": "rho=2e-6 fails the fixed-G2-kernel comparator, not the G2 count theorem",
+      "grade": "numerical_certificate_with_analytic_candidate",
+      "locator": "section6"
+    },
+    {
+      "id": "F-ERR-053",
+      "statement": "fixed/log comparison must pay (1089/16)h_star, and a common local onset exists",
+      "grade": "conditional_proof_candidate",
+      "locator": "sections6-7"
+    }
+  ],
+  "fixed_combined_loss": "(1760/21)*epsilon0+(19734/25)*epsilon",
+  "decaying_combined_loss": "45*q_a+10*q_b+60*C_BV*T^(3-A0)",
+  "source_dependencies": [
+    "BJS v6 lower theorem/Table1",
+    "classical maximal BV",
+    "Mertens/Li"
+  ],
+  "excluded_dependencies": [
+    "unknown original Cs",
+    "L_eta",
+    "CP6 weighted distribution candidate"
+  ],
+  "global_input_sign": "3G1+G2 enters the lower combination positively; all deficits are harmful before division by4",
+  "numerical_tradeoff": {
+    "old_rho": "1e-8",
+    "new_rho": "1e-6",
+    "new_sigma": "1/8250000",
+    "margin_ratio": 100,
+    "old_G2_floor": "9.1158704",
+    "new_G2_floor": "9.11587009",
+    "new_floor_is_not_an_improvement_over_old_floor": true,
+    "comparison_to_original_printed_targets": "both retained after sufficiently small local losses",
+    "effective_N0_improvement_claimed": false
+  },
+  "scope_guards": [
+    "P0 may be enormous and is not computed",
+    "BJS constant/theorem imported, not rebuilt",
+    "old Iwaniec audit still unresolved",
+    "numerical interval is for fixed kernel, not actual G_i count",
+    "full remaining ten-term/combination/global closure unproved"
+  ],
+  "dependency_delta": [
+    [
+      "U-BJS-v6",
+      "F-ERR-050"
+    ],
+    [
+      "U-BV-classical",
+      "F-ERR-049"
+    ],
+    [
+      "U-Mertens",
+      "F-ERR-048"
+    ],
+    [
+      "F-ERR-048",
+      "F-ERR-050"
+    ],
+    [
+      "F-ERR-049",
+      "F-ERR-050"
+    ],
+    [
+      "F-ERR-051",
+      "F-ERR-053"
+    ],
+    [
+      "F-ERR-050",
+      "F-ERR-053"
+    ]
+  ],
+  "global_status": "INCONCLUSIVE",
+  "global_ledger_modified": false,
+  "independent_review": "pending",
+  "background_verifier_started": false,
+  "next_task": "G4/G5 explicit upper replacement: aggregate per-extracted-prime mass rebasings before pricing the P0 level reduction; do not reuse absolute sums in factorable-only branches"
+}

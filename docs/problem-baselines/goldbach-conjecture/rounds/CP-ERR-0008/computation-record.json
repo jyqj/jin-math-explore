@@ -1,0 +1,144 @@
+{
+  "schema": "goldbach-computation-record/v1",
+  "checkpoint": "CP-ERR-0008",
+  "profile": "reproducible",
+  "actor": {
+    "kind": "agent",
+    "id": "openai-chatgpt",
+    "run_id": "run-20260907-goldbach-lower-explicit-08",
+    "role": "solver"
+  },
+  "intent": {
+    "kernel": "directed interval enclosure of five specified fixed integrals with analytical quadrature remainder",
+    "finite": "exact rational/integer identities and counterexamples within the explicitly stated finite test domains",
+    "not_requested": "Goldbach enumeration or an effective numerical N0"
+  },
+  "feasibility": {
+    "primary_algorithm": "five one-dimensional midpoint quadratures, each4096 cells; no nested quadrature",
+    "expected_memory": "bounded small Python objects; no bulk prime data",
+    "completed_total_midpoints": 20480,
+    "finite_cases_per_full_test": 10106
+  },
+  "backend": {
+    "python": "3.13.5",
+    "mpmath": "1.3.0",
+    "selected": "Fraction/int + mpmath.iv",
+    "interval_decimal_precision": 50,
+    "live_check": "basic interval log(2) and callable Python verified before the main computation",
+    "alternative_path_observation": {
+      "sage": null,
+      "wolframscript": null
+    },
+    "engineering_reason": "portable small checker/source/result package; direct rational serialization and no specialist CAS dependency"
+  },
+  "generation_observations": [
+    {
+      "command": "python check_lower.py --compute --output results.json",
+      "exit_code": 0,
+      "elapsed_seconds": 1.46,
+      "peak_rss_kib": 97584,
+      "scope": "initial generation of all five integral certificates"
+    },
+    {
+      "command": "python check_lower.py --self-test --output validation.json",
+      "exit_code": 0,
+      "elapsed_seconds": 1.19,
+      "peak_rss_kib": 97456,
+      "scope": "initial finite exact regression output"
+    }
+  ],
+  "final_execution": [
+    {
+      "command": "python check_lower.py --compute",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "elapsed_seconds": 1.530875,
+      "stdout_sha256": "eb061faec27039605a6ae60b1297467b1c6c65b559b2d7b56d0c7db59ac7ff2f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": "",
+      "stdout_artifact": "results.json"
+    },
+    {
+      "command": "python -O check_lower.py --compute",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "elapsed_seconds": 3.704279,
+      "stdout_sha256": "eb061faec27039605a6ae60b1297467b1c6c65b559b2d7b56d0c7db59ac7ff2f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": "",
+      "stdout_artifact": "results.json"
+    },
+    {
+      "command": "python check_lower.py --self-test",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "elapsed_seconds": 1.201047,
+      "stdout_sha256": "4474db127dbaa53ea6156341987cf575123cc07b128f12e114b658cc8fe5edea",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": "",
+      "stdout_artifact": "validation.json"
+    },
+    {
+      "command": "python -O check_lower.py --self-test",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "elapsed_seconds": 1.162,
+      "stdout_sha256": "4474db127dbaa53ea6156341987cf575123cc07b128f12e114b658cc8fe5edea",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": "",
+      "stdout_artifact": "validation.json"
+    },
+    {
+      "command": "python check_lower.py --require-global",
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "elapsed_seconds": 0.621193,
+      "stdout_sha256": "f2a3a104f1b5cb8b31370aba9c3bfe776bedb730f013bceb8ad2f5aba7964c3c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": "",
+      "stdout": "REJECT: source imports, independent review and remaining ten-term/global closure are not certified.\n"
+    }
+  ],
+  "replay_reason": "The checker finite-integer implementation/guards and explanatory proof were finalized after initial data generation. Final source was replayed under normal and -O execution; this is same-context reproduction, not independent verification.",
+  "normal_vs_optimized_stdout_byte_identical": true,
+  "finite_domains": {
+    "native_AP": "even N=16,18,...,256 and epsilon0 in{1/16,1/2}; squarefree coprime d=1..32",
+    "rebase_oracle_X": "M plus rational shifts{-3/2,0,5/3}, to test the identity for arbitrary X; NOT estimates for Li(Y)",
+    "totient": "n=1..256",
+    "other": "exact finite combinatorial support/sign/parameter cases in check_lower.py",
+    "asymptotic_hypotheses_at_small_N_asserted": false
+  },
+  "scientific_artifacts": {
+    "check_lower.py": "bd25f8f9d4b8e8baf00dd799b06685c78bf9258184ebdfcdc5eb54f6699e3e2c",
+    "proof.md": "6346ec17e822e258b2e9f0ad83adbbf004939be2acd0a081e6d85936f4ba8521",
+    "results.json": "eb061faec27039605a6ae60b1297467b1c6c65b559b2d7b56d0c7db59ac7ff2f",
+    "validation.json": "4474db127dbaa53ea6156341987cf575123cc07b128f12e114b658cc8fe5edea",
+    "contracts.json": "ded7f01134bf1bdf9245b98d0e560fa4beaa7b3f635f9c46b47246ee09e7cea5",
+    "source-lock.json": "3184c37b4d986db708c8130243fd2e628e66b073aa4122c7357818de52018204"
+  },
+  "integrity_scope": "artifact-sha256.json binds all twelve payload files; --check verifies those hashes and replays finite tests, not quadrature. Its actual final result is recorded in the PR handoff, avoiding a circular file hash.",
+  "not_executed": [
+    "independent mathematical verification",
+    "original BJS theorem/table numerical derivation",
+    "original Iwaniec Cs audit",
+    "legacy full numerical suite",
+    "full local repository checkout tests",
+    "bundled backend inventory/record runner",
+    "primorial P0 enumeration",
+    "effective numerical N0 computation"
+  ],
+  "transport": {
+    "direct_git": "git ls-remote actually failed DNS",
+    "persistence": "connected GitHub API",
+    "remote_CI": "to be observed on actual PR; not presumed by this local record"
+  },
+  "cannot_imply": [
+    "universal correctness from finite regression tests",
+    "two-sided bounds for actual G1/G2 counts",
+    "independent theorem verification",
+    "original Cs uniformity audit completion",
+    "full twelve-term closure",
+    "binary Goldbach",
+    "a numerical N0 improvement factor"
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "schema": "goldbach-predecessor-map/v1",
+  "as_of": "2026-09-07",
+  "main_base": "39002c5a6af8c7b7f093589e6a76cfd218fcbb99",
+  "baseline": {
+    "issue": 27,
+    "merged_pr": 33,
+    "path": "docs/problem-baselines/goldbach-conjecture/"
+  },
+  "immediate_predecessor": {
+    "issue": 87,
+    "pr": 89,
+    "state_on_read": "open",
+    "commit": "40661581b969d0ffa70359e3f51e4b214d9160e3",
+    "path": "docs/problem-baselines/goldbach-conjecture/rounds/CP-ERR-0007/",
+    "proof_git_blob": "40b8be4ddd61ef784bb0502e8ef4036716b32ae4",
+    "handoff_git_blob": "05a064d84daa6675f00e45889f5f9e916eaece84",
+    "lease_observation": "released in freshly read #87 comments",
+    "read_scope": "proof, handoff, PR metadata; not accepting a verifier receipt"
+  },
+  "earlier_lower_checkpoint": {
+    "checkpoint": "CP-ERR-0003",
+    "issue": 50,
+    "review_issue": 66,
+    "commit": "a16d365d91a7859e12a213012473775cf47259db",
+    "proof_git_blob": "da829314c889163c0099c8da541bea44e74fe5c1",
+    "read_scope": "proof lines1-220 and source-lock, obtained from pinned GitHub commit",
+    "rho": "1/100000000",
+    "safe_floor_G2": "9.1158704",
+    "relationship": "new candidate removes its Cs/L_eta dependency and trades a small coefficient margin for a larger level gap"
+  },
+  "not_imported_as_mathematics": [
+    "CP6 weighted-BV candidate",
+    "unreviewed L35/G7 siblings",
+    "old full-paper or global closure"
+  ],
+  "old_package_sha256_replayed_this_round": false,
+  "retained_integrity": "old Git objects/pins are live connector identities; no claim to have recomputed all predecessor hashes",
+  "new_round": {
+    "issue": 92,
+    "branch": "program/i-0092/goldbach-lower-explicit-cp8",
+    "checkpoint": "CP-ERR-0008"
+  },
+  "global_ledger_modified": false,
+  "old_files_modified": false
+}
