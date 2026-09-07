@@ -1,0 +1,19 @@
+{
+  "schema": "physical-trace-result/v1",
+  "status": "proof_candidate_and_exact_check",
+  "actual_trial_nonzero_trace": true,
+  "exact_base_or_enlarged_helper_exists": false,
+  "diagonal_trace_is_point_evaluation": false,
+  "residual_bound_asymptotically_small": false,
+  "restored_profile_obstruction_proved": false,
+  "independently_verified": false,
+  "new_prime_gap_bound": false,
+  "twin_prime_conjecture_proved": false,
+  "cannot_imply": [
+    "restored P_O H has the same obstruction",
+    "a quantitatively large trace error",
+    "asymptotic residual smallness",
+    "a new prime-gap theorem",
+    "twin primes"
+  ]
+}

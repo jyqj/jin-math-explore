@@ -1,0 +1,79 @@
+{
+  "protocol": "jin-math-computation-handoff/v1",
+  "scope": "pre_project_reference_only_archive",
+  "project_id": null,
+  "window_id": null,
+  "objective_sha256": null,
+  "attempt_id": "A-TP-PHYSICAL-0010",
+  "claim_ids": [
+    "T10-01",
+    "T10-02",
+    "T10-03",
+    "T10-04",
+    "T10-05"
+  ],
+  "identity_note": "Null identities are explicit: no formal Project transaction or schema PASS is claimed.",
+  "issue": 100,
+  "lease_id": "L-0100-physical-trace-10",
+  "branch": "program/i-0100/twin-physical-trace-10",
+  "base_sha": "39002c5a6af8c7b7f093589e6a76cfd218fcbb99",
+  "question": "Reconstruct the actual diagonal double trace, prove a local physical inner-support obstruction, and retain exact residual accounting.",
+  "domain": "Fixed40 physical trial and general finite signed diagonal arrays; finite positive-measure Hilbert fibres",
+  "requested_evidence_grade": "exact_check",
+  "actual_evidence_grade": "proof_candidate plus exact_check; isolated review pending",
+  "backend": "CPython 3.13.5 standard library",
+  "reproduce": [
+    "python -B physical_trace.py --output-dir <new-empty-directory>",
+    "compare fresh certificate.json and results.json to frozen bytes",
+    "python -B check_physical_trace.py --self-test --check-hashes",
+    "python -O -B check_physical_trace.py --self-test --check-hashes",
+    "python -B check_physical_trace.py --require-global (expected exit1)"
+  ],
+  "artifacts": [
+    {
+      "path": "inputs.json",
+      "sha256": "3b1b979ed4c48c839120791666f78e2f7b75a9bc570782f78233326de4e6c23b"
+    },
+    {
+      "path": "physical_trace.py",
+      "sha256": "54edc04c4a7292db18241f8dc1cff12dee0bc76076a4444fdec5833447322eac"
+    },
+    {
+      "path": "check_physical_trace.py",
+      "sha256": "5a340a7cffea2317e15977e8561fc853555ddde45d4db632ad4ecb0c929a0c0e"
+    },
+    {
+      "path": "certificate.json",
+      "sha256": "a7a0e0fdbbd74d8e6c1fca6831a6e82f18f46a997c77fb549abe90e8beb26995"
+    },
+    {
+      "path": "results.json",
+      "sha256": "430e2b743c19b808d2532242175ea6db622923d5c9bb37dd7fa702c790c50244"
+    },
+    {
+      "path": "proof.md",
+      "sha256": "d3a3abf8315e970a9c4ab13f72519d487e91546f385cbf9787d63be86cfcd794"
+    },
+    {
+      "path": "source-lock.json",
+      "sha256": "eea165703fe88e46ee57091eacca7126ce2b10e1292b652014ee9924f8406cd7"
+    },
+    {
+      "path": "computation-record.json",
+      "sha256": "ad6cb27a748ac30eee4eaac3f895d663832f813a3ee55cca9b989ea34432e23e"
+    },
+    {
+      "path": "verification-ticket.md",
+      "sha256": "84a6eaefdde90bf156d82156786d470a3085f2703411630006a6f915bc02cc60"
+    }
+  ],
+  "remaining_mathematics": "Lock restored P_O H; choose valid helper; control retained-dependent G_Z capacities, coefficient norms and the residual majorant in the same arithmetic normalization as detection.",
+  "cannot_imply": [
+    "restored-profile obstruction",
+    "a large unpayable error",
+    "a new prime-gap theorem",
+    "independent verification",
+    "twin primes"
+  ],
+  "delivery": "All12 files in the PR; no bulk data needed; final remote commit/tree and CI belong to append-only Issue/PR handoff."
+}

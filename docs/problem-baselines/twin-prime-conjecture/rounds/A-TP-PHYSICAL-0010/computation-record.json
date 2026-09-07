@@ -1,0 +1,116 @@
+{
+  "schema": "physical-trace-computation-record/v1",
+  "attempt": "A-TP-PHYSICAL-0010",
+  "run_id": "run-20260907-twin-physical-trace-10",
+  "as_of": "2026-09-07",
+  "profile": "reproducible",
+  "backend": {
+    "implementation": "CPython",
+    "version": "3.13.5",
+    "acceptance": "stdlib Fraction and integer exact arithmetic",
+    "external_dependencies": []
+  },
+  "feasibility": {
+    "real_trial_values": 1,
+    "trial_coefficients": 77,
+    "finite_diagonal_roots": 125,
+    "finite_CRT_coefficient_pairs_max": 10816,
+    "method": "last-cell support reduction; no full-grid physical integration"
+  },
+  "engineering_reason": "Portable exact arithmetic makes the finite tests and certificate self-contained; no external CAS required. No backend-inventory script PASS or CAS run is claimed.",
+  "commands": [
+    {
+      "command": "python -B physical_trace.py --output-dir /mnt/data/physical10-gcei456d",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "stdout": "{\"finite_crt\": {\"coefficient_count\": 104, \"compatible_ordered_pairs\": 677, \"exact\": \"8294361849/1807841593600\", \"main\": \"6439681035/1392038027072\", \"rounding_error\": \"112869793521/28247524900\", \"upper\": \"139216577643747/34800950676800\"}, \"nonzero_double_trace\": true, \"ok\": true, \"trial_bracket\": [\"-3698061/500000000000000000000000000000\", \"-7396121/1000000000000000000000000000000\"]}",
+      "stderr": "",
+      "elapsed_seconds": 0.645263
+    },
+    {
+      "command": "python -B check_physical_trace.py --self-test",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "stdout": "{\"corruptions_rejected\": 16, \"crt_compatibility_tests\": 784, \"diagonal_equalities\": 152, \"endpoint_prime_pairs\": 24, \"exact_trial_replay\": true, \"fibre_recoveries\": 21, \"helper_single_prime_sum\": \"24152518521/903920796800\", \"independently_verified\": false, \"literal_progression_points\": 100, \"new_prime_gap_bound\": false, \"ok\": true, \"optimal_lift_counting_majorant\": \"14928945337530185757640263/3340593851170614820339712000\", \"optimal_lift_diagonal_norm\": \"1133874179337/904679774028800\", \"pair_square_sum\": \"3745833417/258263084800\", \"point_evaluation_counterexample\": {\"double_marginal\": \"-27/490\", \"point_value\": \"-2/7\", \"retained\": [1, 1]}, \"projection_tests\": 1670505, \"radius_values\": 98265, \"residual_pair_sum\": \"2269760859/903920796800\", \"two_sieve_majorant\": \"8294361849/1807841593600\", \"zero_capacity_cases\": 1}",
+      "stderr": "",
+      "elapsed_seconds": 1.653191
+    },
+    {
+      "command": "python -B -O check_physical_trace.py --self-test",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "stdout": "{\"corruptions_rejected\": 16, \"crt_compatibility_tests\": 784, \"diagonal_equalities\": 152, \"endpoint_prime_pairs\": 24, \"exact_trial_replay\": true, \"fibre_recoveries\": 21, \"helper_single_prime_sum\": \"24152518521/903920796800\", \"independently_verified\": false, \"literal_progression_points\": 100, \"new_prime_gap_bound\": false, \"ok\": true, \"optimal_lift_counting_majorant\": \"14928945337530185757640263/3340593851170614820339712000\", \"optimal_lift_diagonal_norm\": \"1133874179337/904679774028800\", \"pair_square_sum\": \"3745833417/258263084800\", \"point_evaluation_counterexample\": {\"double_marginal\": \"-27/490\", \"point_value\": \"-2/7\", \"retained\": [1, 1]}, \"projection_tests\": 1670505, \"radius_values\": 98265, \"residual_pair_sum\": \"2269760859/903920796800\", \"two_sieve_majorant\": \"8294361849/1807841593600\", \"zero_capacity_cases\": 1}",
+      "stderr": "",
+      "elapsed_seconds": 2.974537
+    },
+    {
+      "command": "python -B check_physical_trace.py --require-global",
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "stdout": "",
+      "stderr": "{\"ok\": false, \"error\": \"refused: neither a new prime-gap theorem nor a restored-profile certificate\"}",
+      "elapsed_seconds": 0.650326
+    }
+  ],
+  "fresh_generator_byte_match": true,
+  "normal_and_optimized_stdout_identical": true,
+  "checks": {
+    "corruptions_rejected": 16,
+    "crt_compatibility_tests": 784,
+    "diagonal_equalities": 152,
+    "endpoint_prime_pairs": 24,
+    "exact_trial_replay": true,
+    "fibre_recoveries": 21,
+    "helper_single_prime_sum": "24152518521/903920796800",
+    "independently_verified": false,
+    "literal_progression_points": 100,
+    "new_prime_gap_bound": false,
+    "ok": true,
+    "optimal_lift_counting_majorant": "14928945337530185757640263/3340593851170614820339712000",
+    "optimal_lift_diagonal_norm": "1133874179337/904679774028800",
+    "pair_square_sum": "3745833417/258263084800",
+    "point_evaluation_counterexample": {
+      "double_marginal": "-27/490",
+      "point_value": "-2/7",
+      "retained": [
+        1,
+        1
+      ]
+    },
+    "projection_tests": 1670505,
+    "radius_values": 98265,
+    "residual_pair_sum": "2269760859/903920796800",
+    "two_sieve_majorant": "8294361849/1807841593600",
+    "zero_capacity_cases": 1
+  },
+  "candidate_payload_sha256": {
+    "inputs.json": "3b1b979ed4c48c839120791666f78e2f7b75a9bc570782f78233326de4e6c23b",
+    "proof.md": "d3a3abf8315e970a9c4ab13f72519d487e91546f385cbf9787d63be86cfcd794",
+    "physical_trace.py": "54edc04c4a7292db18241f8dc1cff12dee0bc76076a4444fdec5833447322eac",
+    "check_physical_trace.py": "5a340a7cffea2317e15977e8561fc853555ddde45d4db632ad4ecb0c929a0c0e",
+    "certificate.json": "a7a0e0fdbbd74d8e6c1fca6831a6e82f18f46a997c77fb549abe90e8beb26995",
+    "results.json": "430e2b743c19b808d2532242175ea6db622923d5c9bb37dd7fa702c790c50244",
+    "source-lock.json": "eea165703fe88e46ee57091eacca7126ce2b10e1292b652014ee9924f8406cd7",
+    "verification-ticket.md": "84a6eaefdde90bf156d82156786d470a3085f2703411630006a6f915bc02cc60"
+  },
+  "actual_git_access": {
+    "command": "git ls-remote https://github.com/jyqj/jin-math-explore.git HEAD",
+    "exit_code": 128,
+    "error": "Could not resolve host: github.com"
+  },
+  "not_run": [
+    "full local repository suite",
+    "Lean/FLINT",
+    "production physical integral grid",
+    "restored-profile evaluation",
+    "isolated verifier",
+    "Project handoff schema validation"
+  ],
+  "cannot_imply": [
+    "new prime-gap bound",
+    "independent mathematical verification",
+    "asymptotic residual smallness",
+    "twin prime conjecture"
+  ],
+  "final_manifest_note": "Final hash-check occurs after this record/handoff are frozen; actual output is appended in PR/Issue to avoid self-reference."
+}
