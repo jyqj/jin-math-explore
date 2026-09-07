@@ -1,0 +1,143 @@
+{
+  "schema": "twin-trace-results/v1",
+  "status": "solver_candidate",
+  "rows": [
+    {
+      "degree": 0,
+      "dimension": 1,
+      "trace_rank": 1,
+      "nullity": 0,
+      "ordinary": [
+        "1951219/1000000",
+        "97561/50000"
+      ],
+      "penalized": [
+        "957317/500000",
+        "382927/200000"
+      ]
+    },
+    {
+      "degree": 1,
+      "dimension": 4,
+      "trace_rank": 2,
+      "nullity": 2,
+      "ordinary": [
+        "1396593/500000",
+        "2793187/1000000"
+      ],
+      "penalized": [
+        "1377397/500000",
+        "550959/200000"
+      ],
+      "trace_null": [
+        "372093/200000",
+        "930233/500000"
+      ]
+    },
+    {
+      "degree": 2,
+      "dimension": 10,
+      "trace_rank": 3,
+      "nullity": 7,
+      "ordinary": [
+        "762893/250000",
+        "3051573/1000000"
+      ],
+      "penalized": [
+        "3017651/1000000",
+        "754413/250000"
+      ],
+      "trace_null": [
+        "1335513/500000",
+        "2671027/1000000"
+      ]
+    },
+    {
+      "degree": 3,
+      "dimension": 20,
+      "trace_rank": 4,
+      "nullity": 16,
+      "ordinary": [
+        "3130919/1000000",
+        "78273/25000"
+      ],
+      "penalized": [
+        "155049/50000",
+        "3100981/1000000"
+      ],
+      "trace_null": [
+        "2930203/1000000",
+        "732551/250000"
+      ]
+    },
+    {
+      "degree": 4,
+      "dimension": 35,
+      "trace_rank": 5,
+      "nullity": 30,
+      "ordinary": [
+        "3154767/1000000",
+        "197173/62500"
+      ],
+      "penalized": [
+        "312843/100000",
+        "3128431/1000000"
+      ],
+      "trace_null": [
+        "3023483/1000000",
+        "755871/250000"
+      ]
+    },
+    {
+      "degree": 5,
+      "dimension": 56,
+      "trace_rank": 6,
+      "nullity": 50,
+      "ordinary": [
+        "3161873/1000000",
+        "1580937/500000"
+      ],
+      "penalized": [
+        "1569307/500000",
+        "627723/200000"
+      ],
+      "trace_null": [
+        "1532209/500000",
+        "3064419/1000000"
+      ]
+    },
+    {
+      "degree": 6,
+      "dimension": 84,
+      "trace_rank": 7,
+      "nullity": 77,
+      "ordinary": [
+        "63283/20000",
+        "3164151/1000000"
+      ],
+      "penalized": [
+        "1571563/500000",
+        "3143127/1000000"
+      ],
+      "trace_null": [
+        "3086033/1000000",
+        "1543017/500000"
+      ]
+    }
+  ],
+  "basis_family": "polynomials in two endpoints and the sum of38 interior coordinates; degree<=6",
+  "classical_endpoint_rho": "1/4",
+  "penalized_score_upper": "3143127/4000000",
+  "ordinary_score_upper": "3164151/4000000",
+  "trace_null_score_upper": "1543017/2000000",
+  "finite_family_positive_detector": false,
+  "actual_186_trial_evaluated": false,
+  "new_prime_gap_bound": false,
+  "independently_verified": false,
+  "cannot_imply": [
+    "all40-variable functions fail",
+    "enlarged186-support failure",
+    "a new prime-gap bound",
+    "the twin-prime conjecture"
+  ]
+}
