@@ -1,0 +1,78 @@
+{
+  "schema": "goldbach-source-scope/v1",
+  "access_date_utc": "2026-09-07",
+  "sources": [
+    {
+      "id": "S1",
+      "title": "Theorem (1+1.9) on the Goldbach Conjecture",
+      "authors": [
+        "Jiamin Li",
+        "Jianya Liu"
+      ],
+      "version": "arXiv:2606.05224v2",
+      "html": "https://arxiv.org/html/2606.05224v2",
+      "pdf": "https://arxiv.org/pdf/2606.05224v2",
+      "locators": [
+        "Lemma2.2",
+        "5.17-5.27",
+        "5.51"
+      ],
+      "successful_screenshot_printed_pages": [
+        35,
+        36
+      ],
+      "html_displayed_revision": "2026-08-08",
+      "html_internal_date": "2026-08-24",
+      "raw_pdf_sha256": null,
+      "source_status": "definitions/formulas, not whole-paper acceptance"
+    },
+    {
+      "id": "S2",
+      "title": "An explicit version of Chen's theorem and the linear sieve",
+      "authors": [
+        "Matteo Bordignon",
+        "Daniel R. Johnston",
+        "Valeriia Starichkova"
+      ],
+      "version": "arXiv:2207.09452v6",
+      "html": "https://arxiv.org/html/2207.09452v6",
+      "pdf": "https://arxiv.org/pdf/2207.09452v6",
+      "locators": [
+        "Theorem6",
+        "Table1",
+        "equations3-11"
+      ],
+      "successful_screenshot_printed_pages": [
+        5
+      ],
+      "html_displayed_revision": "2025-06-25",
+      "html_internal_date": "2026-08-24",
+      "raw_pdf_sha256": null,
+      "source_status": "explicit theorem and monotonic table constants imported; not independently rebuilt"
+    },
+    {
+      "id": "S3",
+      "author": "R. C. Vaughan",
+      "title": "The Bombieri-Vinogradov Theorem",
+      "pdf": "https://personal.science.psu.edu/rcv4/Bombieri.pdf",
+      "successful_screenshot_printed_pages": [
+        3
+      ],
+      "raw_pdf_sha256": null,
+      "source_status": "maximal psi theorem; prime-counting transfer stated in proof section1"
+    },
+    {
+      "id": "S4",
+      "title": "mpmath contexts documentation",
+      "url": "https://mpmath.org/doc/1.3.0/contexts.html",
+      "scope": "interval context trust boundary",
+      "note": "URL version1.3.0 page title says1.2.0; actual imported package reports1.3.0"
+    }
+  ],
+  "access_limits": [
+    "Rendered/parsed PDF access is not raw-byte hashing.",
+    "Dates are displayed metadata, not a claim of HTML/PDF byte equality.",
+    "No original Iwaniec full-text audit or BJS table reproduction this round."
+  ],
+  "source_novelty_boundary": "New repository-local aggregation contract and 1D certificate reduction; no literature-wide novelty claim"
+}

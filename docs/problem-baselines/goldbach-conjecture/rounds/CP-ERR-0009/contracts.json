@@ -1,0 +1,91 @@
+{
+  "schema": "goldbach-explicit-upper-contract/v1",
+  "checkpoint": "CP-ERR-0009",
+  "issue": 99,
+  "authority": "reference_only_solver_candidate",
+  "domain": [
+    "N even and sufficiently large, T=log(N)>=1, z=N^(4/53)>=2",
+    "0<epsilon0<1; original truncated objects retained, upper comparison enlarged",
+    "0<epsilon<=1/200; fixed K_dim, w=max(3,exp(2*K_dim/epsilon)), P0=product_{p<w}p",
+    "z>w; A0>=4, B=A0+8, R=sqrt(N)/T^B",
+    "h_star=(B*log(T)+log(P0))/T <=5/318",
+    "q_N<=1, r_N<=1/2"
+  ],
+  "definitions": {
+    "a": "4/53",
+    "b4": "1/3",
+    "b5": "3/11",
+    "D_p": "R/(P0*p)",
+    "X_p": "Li(N)/(p-1)",
+    "M_p": "pi_<(N;p,N)",
+    "Delta_p": "M_p-X_p",
+    "r_M_p(d)": "r_p(d)-Delta_p/phi(d)",
+    "q_N": "abs(2*exp(gamma)*Li(N)*V_N(z)/(53*S_N)-1)",
+    "r_N": "sup_{4/53<=t<=1/3}|sum_{z<=p<=N^t}1/p-log(t/(4/53))|"
+  },
+  "main_directions": {
+    "G4": "upper",
+    "G5": "upper"
+  },
+  "final_combination_weights": {
+    "G4": "-1",
+    "G5": "-1"
+  },
+  "requires_Cs": false,
+  "requires_L_eta": false,
+  "requires_CP6_weighted_BV": false,
+  "source_inputs": {
+    "U-BJS": "BJS v6 Theorem6/Table1, conservative C1<=154; imported not rebuilt",
+    "U-BV": "classical maximal-endpoint absolute BV including prime moduli for Delta_p",
+    "U-M": "PNT and Mertens reciprocal/product asymptotics with fixed exponents"
+  },
+  "aggregate_lemma": {
+    "sum_abs_Delta": "<=E",
+    "sum_abs_rebased_remainder": "<=(4+3log(R))*E",
+    "including_main_rebase": "<=(11+3log(R))*E per row",
+    "E": "C_BV*N/T^A0",
+    "two_row_max_multiplicity": 2,
+    "extracted_prime_count_multiplier": false
+  },
+  "row_coefficients": {
+    "G4": {
+      "q_N": "24",
+      "h_star": "2809",
+      "r_N": "2809/6",
+      "1/z": "212",
+      "epsilon": "24486",
+      "C_BV*T^(3-A0)": "25"
+    },
+    "G5": {
+      "q_N": "20",
+      "h_star": "2809",
+      "r_N": "8427/22",
+      "1/z": "212",
+      "epsilon": "24486",
+      "C_BV*T^(3-A0)": "25"
+    }
+  },
+  "combined_coefficients": {
+    "q_N": "44",
+    "h_star": "5618",
+    "r_N": "28090/33",
+    "1/z": "424",
+    "epsilon": "48972",
+    "C_BV*T^(3-A0)": "50"
+  },
+  "fixed_integral_caps": {
+    "g4": "23.605688",
+    "g5": "19.519083"
+  },
+  "counts_two_sided_enclosure": false,
+  "independent_review": "pending",
+  "global_status": "INCONCLUSIVE",
+  "cannot_imply": [
+    "full twelve-term closure",
+    "numeric N0",
+    "new Goldbach exponent",
+    "binary Goldbach",
+    "original Iwaniec Cs audit completed",
+    "factorable-only branch applicability"
+  ]
+}
