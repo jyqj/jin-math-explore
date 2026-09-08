@@ -1,0 +1,19 @@
+{
+  "schema": "goldbach-artifact-manifest/v1",
+  "checkpoint": "CP-ERR-0012",
+  "scope": "twelve payload files; manifest bound externally by Git tree and frozen PR handoff",
+  "sha256": {
+    "README.md": "4a8f20903b476b2efdc5e8e78eeb2f9eeec9e750060fea61712518816d093745",
+    "proof.md": "a0f91c1e9e49f70784aa55b5c76e2e8ce26f9d1a4add959dafb8d9c2e9d693d2",
+    "contracts.json": "19fa9d49fc9770960d74c57ac9fb9ceea34028a4668d3e496593ddb8a2712959",
+    "prior-work.json": "1012e5ead16e748af58b1665a45dbdf80f0fb8ed1e32cc2e668fdcbd9ba4afd4",
+    "source-lock.json": "2dfaf4c51a92dd2f94c8ca91d5489ab63d420a41dc9a632145f7f60e473951cd",
+    "check_switching.py": "35cd2fba01bb1bc25db4efa589ac309da084140c8477ff2ae659f84aa762863f",
+    "results.json": "8ae502b10cb23e9860b05cd869fcd89e09887e31b68e0b6134fee115a6ea76c2",
+    "error-handoff.json": "437282f39e7cb7a20baa5ed1ac9d869e5866e5cccf508af7f83b79ef73736bdc",
+    "computation-record.json": "30386ab3324750de215fcaf39a22f80c859b3ac907dc439e5bc56ed2d74239a3",
+    "computation-handoff.json": "e89b90e48b635ad49016d6e6e727b8faae7259afb6c8b6ce2e1224fe65c3bfab",
+    "verification-ticket.md": "a405a6da9f829c1ba7fb7573bd6719ab733b13274a7e3dd2bf67a431fce31d5e",
+    "validation.json": "3829c9ff4c67947ec117928adf3a8e45341d645e4ef9b7a20828c94b8e46a893"
+  }
+}

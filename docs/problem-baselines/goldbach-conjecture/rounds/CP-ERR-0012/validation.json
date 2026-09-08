@@ -1,0 +1,69 @@
+{
+  "schema": "goldbach-switching-regressions/v1",
+  "counts": {
+    "AP_rebase_models": 2198,
+    "G10_survivors": 1070,
+    "Stieltjes_models": 28,
+    "bilinear_envelopes": 48,
+    "empty_pair_sets": 10,
+    "exception_budgets": 226,
+    "hyperbola_points": 922,
+    "native_pair_sets": 204,
+    "nonzero_H_models": 425,
+    "normalization_models": 81,
+    "packing_cases": 21,
+    "parameter_ledgers": 5,
+    "serialization_cases": 5,
+    "sifted_upper_models": 346,
+    "switching_and_multiplicity_models": 226,
+    "unbounded_family_samples": 4
+  },
+  "total_counted_cases": 5819,
+  "structural_negative_controls": 12,
+  "examples": {
+    "composite_residual": [
+      170,
+      3,
+      7,
+      2,
+      8
+    ],
+    "specified_composite_residual": {
+      "N": 142,
+      "p1": 3,
+      "p2": 5,
+      "output": 7,
+      "residual": 9
+    },
+    "nonzero_H_witness": {
+      "N": 10002,
+      "m": 65,
+      "q": 5,
+      "illustrative_R": 100,
+      "illustrative_Z": 10,
+      "not_actual_large_N_level": true,
+      "H_single_mass": "Li(10002/65)/4 > 0"
+    },
+    "inactive_native_pair": [
+      1030,
+      3,
+      7
+    ],
+    "duplicate_index_witness": {
+      "N": 370,
+      "output": 139,
+      "indices": [
+        [
+          21,
+          11
+        ],
+        [
+          33,
+          7
+        ]
+      ]
+    }
+  },
+  "scope": "finite exact identities; synthetic AP masses and surrogate CDFs, not asymptotic source validation",
+  "mathematical_truth_verified": false
+}

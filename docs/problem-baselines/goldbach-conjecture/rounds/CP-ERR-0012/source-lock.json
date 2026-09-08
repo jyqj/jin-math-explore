@@ -1,0 +1,127 @@
+{
+  "schema": "goldbach-source-scope/v1",
+  "checkpoint": "CP-ERR-0012",
+  "access_date_utc": "2026-09-08",
+  "sources": [
+    {
+      "id": "S1",
+      "authors": [
+        "Jiamin Li",
+        "Jianya Liu"
+      ],
+      "title": "Theorem (1+1.9) on the Goldbach Conjecture",
+      "version": "arXiv:2606.05224v2",
+      "html": "https://arxiv.org/html/2606.05224v2",
+      "pdf": "https://arxiv.org/pdf/2606.05224v2",
+      "version_header_date": "2026-08-08",
+      "html_internal_date": "2026-08-24",
+      "parsed_pdf_internal_date": "2026-08-11",
+      "date_boundary": "version pinned; different displayed internal dates retained, no byte equivalence asserted",
+      "locators": [
+        "(1.3)",
+        "(2.1) and undivided A_d definition",
+        "(5.2)",
+        "section5.3 G3/G10 definitions",
+        "(5.43)",
+        "discussion before (5.44)",
+        "(5.46)"
+      ],
+      "successful_pdf_printed_pages": [
+        38,
+        40
+      ],
+      "reading": "primary HTML and parsed PDF; successful screenshots for listed pages",
+      "pdf_sha256": null,
+      "whole_paper_verified": false
+    },
+    {
+      "id": "S2",
+      "authors": [
+        "Matteo Bordignon",
+        "Daniel R. Johnston",
+        "Valeriia Starichkova"
+      ],
+      "title": "An explicit version of Chen's theorem and the linear sieve",
+      "version": "arXiv:2207.09452v6",
+      "html": "https://arxiv.org/html/2207.09452v6",
+      "pdf": "https://arxiv.org/pdf/2207.09452v6",
+      "locators": [
+        "Theorem6",
+        "Table1 epsilon=1/200 row",
+        "remainder range d<QD with exceptional-prime product"
+      ],
+      "successful_pdf_printed_pages": [
+        5
+      ],
+      "reading": "exact-version primary HTML/parsed PDF and Table1 screenshot",
+      "import": "constant-density upper theorem with reported constants bounded by154; s=2",
+      "table_independently_rebuilt": false,
+      "pdf_sha256": null
+    },
+    {
+      "id": "S3",
+      "authors": [
+        "Amir Akbary",
+        "Kyle Hambrook"
+      ],
+      "title": "A variant of the Bombieri-Vinogradov theorem with explicit constants and applications",
+      "version": "arXiv:1309.2730v2",
+      "html": "https://arxiv.org/html/1309.2730v2",
+      "pdf": "https://arxiv.org/pdf/1309.2730v2",
+      "locators": [
+        "introduction Siegel-Walfisz",
+        "(6.1)",
+        "Lemma6.1 and proof"
+      ],
+      "successful_pdf_printed_pages": [],
+      "failed_pdf_screenshot_printed_pages": [
+        17,
+        18
+      ],
+      "reading": "exact-version primary HTML and parsed PDF; two screenshot calls failed",
+      "import": "SW/PNT and maximal bilinear large sieve, not the entire paper result",
+      "pdf_sha256": null
+    },
+    {
+      "id": "S4",
+      "title": "mpmath contexts documentation",
+      "url": "https://mpmath.org/doc/1.3.0/contexts.html",
+      "observed_page_heading_version": "1.2.0",
+      "actual_runtime_version": "1.3.0",
+      "scope": "interval containment for basic arithmetic/log; iv experimental support warning retained"
+    }
+  ],
+  "raw_pdf_access": "No original PDF bytes acquired; rendered/parsed reading is not a source-byte hash",
+  "archival_debts": [
+    "original Iwaniec1980 full proof uniformity audit",
+    "Pan-Ding1979 full-text audit"
+  ],
+  "external_inputs": [
+    "BJS upper theorem and table",
+    "classical SW/PNT",
+    "maximal bilinear large sieve",
+    "Mertens reciprocal/product estimates",
+    "Bertrand theorem"
+  ],
+  "new_local_diagnoses": [
+    {
+      "id": "ISS-G10-ACTIVE-SUPPORT",
+      "scope": "original undivided A_p1p2 only",
+      "statement": "p1*p2^3<N forces whole native summand zero",
+      "grade": "proof_candidate"
+    },
+    {
+      "id": "ISS-G10-RESIDUAL-P1",
+      "scope": "local residual-primality argument near5.44",
+      "statement": "composite excluded-p1 residual; exact example and unbounded family",
+      "grade": "proof_candidate"
+    },
+    {
+      "id": "ISS-G10-NONCOPRIME-H",
+      "scope": "actual smooth support",
+      "statement": "G10 H need not vanish; H is not the principal-character removed-prime term",
+      "grade": "proof_candidate"
+    }
+  ],
+  "novelty_boundary": "repository-local development; no literature-wide priority claim, full-paper verdict or global coefficient promotion"
+}
