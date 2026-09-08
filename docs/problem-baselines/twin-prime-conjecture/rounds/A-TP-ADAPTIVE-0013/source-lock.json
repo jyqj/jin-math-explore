@@ -1,0 +1,57 @@
+{
+  "schema": "twin-adaptive-source-lock/v1",
+  "as_of": "2026-09-08",
+  "authority": "reference_only",
+  "main_commit": "39002c5a6af8c7b7f093589e6a76cfd218fcbb99",
+  "predecessor": {
+    "pr": 121,
+    "issue": 113,
+    "commit": "fff93cff6d0d0164fbdbc2f0dd342d4f394e8406",
+    "subtree": "1bfb2cbadc6e78db765d16d89e4a033b63056de0",
+    "zip_sha256": "22f980a22849b9defee30653c1caa75c1d987bfb7bbf918d5bdd65e655e33c00",
+    "manifest_sha256": "c3dd3143c03d8e5d4a32b8ce5afb0dfa62b648ae1f3af4e168831ab3e60e3e92",
+    "used": "complete local proof/code read, original hash closure and fresh normal/-O replay; not imported as independently verified theorem"
+  },
+  "sources": [
+    {
+      "id": "S1",
+      "author": "James Maynard",
+      "title": "Small gaps between primes",
+      "version": "arXiv:1311.4600v3",
+      "url": "https://arxiv.org/pdf/1311.4600v3",
+      "locator": "Lemma6.1",
+      "access": "versioned PDF parsed text; screenshot page13 failed with Cache miss",
+      "raw_sha256": null,
+      "input": "one-dimensional squarefree reciprocal-phi estimate with varying W"
+    },
+    {
+      "id": "S2",
+      "title": "Improved short gaps between primes",
+      "version": "30 August 2026; fixed named CDN PDF",
+      "url": "https://cdn.openai.com/pdf/51126fac-1b68-4128-9666-c908bcc16033/short_gaps.pdf",
+      "locators": [
+        "(1.7)",
+        "(3.15)-(3.16)",
+        "Lemma3.9",
+        "section4.4"
+      ],
+      "access": "parsed PDF and successful screenshots pages17,20,28, zero indexed",
+      "raw_sha256": null,
+      "input": "normalizer, parameters, physical density and restoration support definitions only"
+    }
+  ],
+  "prior_art_boundary": "Adaptive support allocation, diagonal Cauchy-Schwarz and tensor comparison are not claimed globally novel. This is a new scoped repository candidate and reproducible certificate; no exhaustive novelty audit.",
+  "unused_inputs": [
+    "old186 positive surplus",
+    "physical_integral_bounds axiom",
+    "unavailable physical bulk arrays",
+    "unfrozen #80 staging",
+    "independent verifier receipt"
+  ],
+  "remaining_contracts": [
+    "actual weighted double trace and deletion norm",
+    "legal helper single-prime estimate",
+    "same-scale discrete-to-physical convergence",
+    "positive endpoint-subtracted detection margin"
+  ]
+}
