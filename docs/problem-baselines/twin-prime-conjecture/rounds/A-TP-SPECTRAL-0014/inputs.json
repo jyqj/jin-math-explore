@@ -1,0 +1,18 @@
+{
+  "I_upper": "23685317890/1000000000000000000000000",
+  "J_lower": "90248755123/1000000000000000000000000",
+  "a_h": "2479900401/2500000000",
+  "annulus_amplification": "516335400854406779784975039/381184015251729692278295039",
+  "attempt": "A-TP-SPECTRAL-0014",
+  "b_h": "-843183/1000000000",
+  "cap_cells": 68225,
+  "coupled_cutoff": "9/40",
+  "gamma": "2742997/10000000",
+  "input_brackets_independently_verified": false,
+  "k": 40,
+  "mass_upper": "3/2",
+  "mesh": "2742997/258046918656",
+  "rho": "2624989/10000000",
+  "schema": "twin-spectral-input/v1",
+  "spectral_tangent": 2
+}

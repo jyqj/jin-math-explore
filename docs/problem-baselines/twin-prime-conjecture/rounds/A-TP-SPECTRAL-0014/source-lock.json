@@ -1,0 +1,85 @@
+{
+  "as_of": "2026-09-08",
+  "authority": "reference_only",
+  "cannot_imply": [
+    "independent numerical input verification",
+    "a lower bound on actual prime gaps",
+    "a universal obstruction after improving true margin bounds"
+  ],
+  "decomposition_context": {
+    "authors": "Rzeszut and Wojciechowski",
+    "failed_access": "attempted HTML v3 did not return the paper",
+    "read_scope": "abstract only; no H1 theorem imported; projection proof is self-contained",
+    "title": "Hoeffding decomposition in H1 spaces",
+    "url": "https://arxiv.org/abs/1906.01405v1",
+    "version": "arXiv:1906.01405v1"
+  },
+  "history": [
+    {
+      "head": "fff93cff6d0d0164fbdbc2f0dd342d4f394e8406",
+      "issue": 113,
+      "pr": 121,
+      "status": "round12 delivered elsewhere; read-only and not duplicated"
+    },
+    {
+      "git_blob": "48fdc6350de47eba8e41800329ea75ae412dc241",
+      "head": "0da0cc5df01e748cda1cb1676e3d618e6206f2bf",
+      "issue": 122,
+      "path": "docs/problem-baselines/twin-prime-conjecture/rounds/A-TP-ADAPTIVE-0013/proof.md",
+      "pr": 126,
+      "read_scope": "lines180-300; variable penalty expression and boundaries only; different archive from ANNULUS-0013"
+    },
+    {
+      "issue": 80,
+      "status": "distinct unfrozen cap staging not consumed"
+    }
+  ],
+  "main": "39002c5a6af8c7b7f093589e6a76cfd218fcbb99",
+  "novelty_boundary": "Classical orthogonal projections and integer-spectrum inequalities; new repository candidate application, not a global novelty or prime-gap claim.",
+  "primary_paper": {
+    "date": "2026-08-30",
+    "not_claimed": "whole-paper independent verification",
+    "raw_sha256": null,
+    "read_scope": [
+      "parsed equations3.15-3.19",
+      "parsed equations4.40-4.41"
+    ],
+    "successful_screenshot_pages_zero_based": [
+      17,
+      29
+    ],
+    "title": "Improved short gaps between primes",
+    "url": "https://cdn.openai.com/pdf/51126fac-1b68-4128-9666-c908bcc16033/short_gaps.pdf"
+  },
+  "schema": "twin-spectral-source-lock/v1",
+  "supplied_archive": {
+    "annulus_files_unchanged": {
+      "README.md": "b2f69bf8cd0e9762a2c2cbf9e4503a380a936b62f5a08f313d2c906d2609b7f0",
+      "annulus_credit.py": "95d3eca7e2335a2be7e5a04fd03f37060c36e9e224b8c85a0963e45d3d1ea694",
+      "artifact-sha256.json": "d7b0b9e35a5682766aaf66a6d8a412f1c33e0d7b3abbfe6b88878b48cebe237b",
+      "certificates.json": "b8683412aaf6906767afc6dadabb5474c76fd7d3a10d7b5d6289451583782200",
+      "check_annulus_credit.py": "9ae0b2863ac875e8a226b9dadd8e2e510e6dfe9ac1e9a28be8a5745685ffbdd2",
+      "computation-handoff.json": "0cf7435904863b68c6105eefe74ecf28eb40afe0502137c0654b6f7094a51d42",
+      "computation-record.json": "d26b38c1aa7e9d64a46f2df47435b2d314b2454fad52c7d0266a02db8d9b3608",
+      "inputs.json": "56b51351b456ed07be5d465490c01f127f91a00aafecaab396f6c6c1ea623963",
+      "proof.md": "0cd728e1cb4f73b3609ca1a0c24d90aa59138c5860b87ad48f4c39ab36add20e",
+      "results.json": "5df8b2b79573e695b8aef0f61de2d84f05d4a0f5be123b6f204d2761e703e686",
+      "source-lock.json": "a40b83c0d0c77e3088bbda42b3389b32c65d4b7d588e072a101f82bf5530f764",
+      "verification-ticket.md": "f18fce5d013fa0ccb637606a7dbdf3ab3ea6c20111230c1910f28c1e819e0530"
+    },
+    "annulus_manifest_sha256": "d7b0b9e35a5682766aaf66a6d8a412f1c33e0d7b3abbfe6b88878b48cebe237b",
+    "annulus_remote_delivery": "blocked: original check_annulus_credit.py upload rejected; not retried or routed around the rejection; excluded from current PR under issue129 amendment v1.1",
+    "bytes": 251187,
+    "file": "twin-prime-rounds-12-13-recovery-annulus.zip",
+    "sha256": "d9013e6bad0e70383a427abc8c13151b1941dfaf195076548834db89c6d556ed"
+  },
+  "upstream": {
+    "commit": "61340d0b74163003b32756bb16e91d9209a5e330",
+    "full_raw_sha256": null,
+    "git_blob": "2331eeeb808008cee37bac7aa0fb17e36f1f3c17",
+    "numerical_brackets": "conditional premises only; physical_integral_bounds not reverified",
+    "path": "Challenge.lean",
+    "read_scope": "Connector lines305-478 and917-950 in this run; measure, symmetric trial, same normalizer, JLambda and exact scalar inequalities. Earlier source definitions remain context.",
+    "repository": "openai/PrimeGaps186"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "actual_true_margin_upper_bound": false,
+  "all_helpers_and_young_parameters": "within 0<=capacity<=ambient mass and penalty>=rho/ambient mass",
+  "cannot_imply": [
+    "a lower bound on actual prime gaps",
+    "failure of all asymmetric trials",
+    "failure after obtaining a stronger true margin",
+    "an independent receipt or twin-prime proof"
+  ],
+  "cost_lower": "194022333770747849/7800000000000000000000000000000000",
+  "excluded": "closing the un-restored symmetric-trace sufficient test with the frozen I+/J- certificate",
+  "independently_verified": false,
+  "input_brackets_independently_verified": false,
+  "lossless_frozen_margin": "48810561568647/10000000000000000000000000000000",
+  "new_prime_gap_bound": false,
+  "ratio": "194022333770747849/38072238023544660",
+  "ratio_exceeds_five": true,
+  "schema": "twin-spectral-results/v1",
+  "status": "conditional_solver_candidate_and_exact_check"
+}

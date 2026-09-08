@@ -1,0 +1,213 @@
+{
+  "actor": {
+    "id": "openai-chatgpt",
+    "role": "solver",
+    "run_id": "run-20260908-twin-spectral-14"
+  },
+  "annulus_file_sha256": {
+    "README.md": "b2f69bf8cd0e9762a2c2cbf9e4503a380a936b62f5a08f313d2c906d2609b7f0",
+    "annulus_credit.py": "95d3eca7e2335a2be7e5a04fd03f37060c36e9e224b8c85a0963e45d3d1ea694",
+    "artifact-sha256.json": "d7b0b9e35a5682766aaf66a6d8a412f1c33e0d7b3abbfe6b88878b48cebe237b",
+    "certificates.json": "b8683412aaf6906767afc6dadabb5474c76fd7d3a10d7b5d6289451583782200",
+    "check_annulus_credit.py": "9ae0b2863ac875e8a226b9dadd8e2e510e6dfe9ac1e9a28be8a5745685ffbdd2",
+    "computation-handoff.json": "0cf7435904863b68c6105eefe74ecf28eb40afe0502137c0654b6f7094a51d42",
+    "computation-record.json": "d26b38c1aa7e9d64a46f2df47435b2d314b2454fad52c7d0266a02db8d9b3608",
+    "inputs.json": "56b51351b456ed07be5d465490c01f127f91a00aafecaab396f6c6c1ea623963",
+    "proof.md": "0cd728e1cb4f73b3609ca1a0c24d90aa59138c5860b87ad48f4c39ab36add20e",
+    "results.json": "5df8b2b79573e695b8aef0f61de2d84f05d4a0f5be123b6f204d2761e703e686",
+    "source-lock.json": "a40b83c0d0c77e3088bbda42b3389b32c65d4b7d588e072a101f82bf5530f764",
+    "verification-ticket.md": "f18fce5d013fa0ccb637606a7dbdf3ab3ea6c20111230c1910f28c1e819e0530"
+  },
+  "annulus_remote_delivery": "blocked: one original script upload rejected; no further attempt on that payload; partial trees are not a complete content commit",
+  "as_of": "2026-09-08",
+  "attempt": "A-TP-SPECTRAL-0014",
+  "backend": {
+    "acceptance": "stdlib int/Fraction; no floating acceptance",
+    "dependencies": "Python standard library only",
+    "name": "CPython",
+    "version": "3.13.5"
+  },
+  "cannot_imply": [
+    "the source numeric premises have been independently verified",
+    "the unknown true detection margin is at most U",
+    "a new prime-gap or twin-prime theorem"
+  ],
+  "commands": [
+    {
+      "archive": "A-TP-ANNULUS-0013",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-B",
+        "annulus_credit.py",
+        "--output-dir",
+        "/mnt/data/A-TP-ANNULUS-0013-fresh-2xx7uivc"
+      ],
+      "cwd": "/mnt/data/twin-work/docs/problem-baselines/twin-prime-conjecture/rounds/A-TP-ANNULUS-0013",
+      "elapsed_seconds": 2.008842,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "fresh_comparison": {
+        "certificates.json": true,
+        "inputs.json": true,
+        "results.json": true
+      },
+      "stderr": "",
+      "stdout": "{\"cost_multiplier\": \"516335400854406779784975039/381184015251729692278295039\", \"finite_model_robust_interval\": [\"19219612673/200000000000\", \"48049031683/500000000000\"], \"new_prime_gap_bound\": false, \"ok\": true, \"source_rows\": 67}\n"
+    },
+    {
+      "archive": "A-TP-ANNULUS-0013",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-B",
+        "check_annulus_credit.py",
+        "--self-test",
+        "--check-hashes"
+      ],
+      "cwd": "/mnt/data/twin-work/docs/problem-baselines/twin-prime-conjecture/rounds/A-TP-ANNULUS-0013",
+      "elapsed_seconds": 4.578221,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"Schur_completion_identities\": 540, \"attaining_fibre_witnesses\": 180, \"certificate_replay\": true, \"clipped_cell_integrals\": 588, \"closed_form_source_rows\": 67, \"global_optimum_brackets\": 2, \"hashes_verified\": 11, \"helper_fibres\": 27, \"independently_verified\": false, \"model_fibres\": 225, \"negative_controls_rejected\": 25, \"new_prime_gap_bound\": false, \"ok\": true, \"radial_mesh_points\": 98305, \"restoration_models\": 45, \"shifted_weight_checks\": 60, \"trace_increase_examples\": 78, \"zero_capacity_fibres\": 16}\n"
+    },
+    {
+      "archive": "A-TP-ANNULUS-0013",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-O",
+        "-B",
+        "check_annulus_credit.py",
+        "--self-test",
+        "--check-hashes"
+      ],
+      "cwd": "/mnt/data/twin-work/docs/problem-baselines/twin-prime-conjecture/rounds/A-TP-ANNULUS-0013",
+      "elapsed_seconds": 7.508269,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"Schur_completion_identities\": 540, \"attaining_fibre_witnesses\": 180, \"certificate_replay\": true, \"clipped_cell_integrals\": 588, \"closed_form_source_rows\": 67, \"global_optimum_brackets\": 2, \"hashes_verified\": 11, \"helper_fibres\": 27, \"independently_verified\": false, \"model_fibres\": 225, \"negative_controls_rejected\": 25, \"new_prime_gap_bound\": false, \"ok\": true, \"radial_mesh_points\": 98305, \"restoration_models\": 45, \"shifted_weight_checks\": 60, \"trace_increase_examples\": 78, \"zero_capacity_fibres\": 16}\n"
+    },
+    {
+      "archive": "A-TP-ANNULUS-0013",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-B",
+        "check_annulus_credit.py",
+        "--require-global"
+      ],
+      "cwd": "/mnt/data/twin-work/docs/problem-baselines/twin-prime-conjecture/rounds/A-TP-ANNULUS-0013",
+      "elapsed_seconds": 2.025512,
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "stderr": "{\"ok\": false, \"error\": \"refused: physical q, legal helper arithmetic and prime-gap positivity are not established\"}\n",
+      "stdout": ""
+    },
+    {
+      "archive": "A-TP-SPECTRAL-0014",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-B",
+        "spectral_gate.py",
+        "--output-dir",
+        "/mnt/data/A-TP-SPECTRAL-0014-fresh-20yrhtq8"
+      ],
+      "cwd": "/mnt/data/twin-work/docs/problem-baselines/twin-prime-conjecture/rounds/A-TP-SPECTRAL-0014",
+      "elapsed_seconds": 1.832603,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "fresh_comparison": {
+        "certificates.json": true,
+        "inputs.json": true,
+        "results.json": true
+      },
+      "stderr": "",
+      "stdout": "{\"conditional\": true, \"cost_lower\": \"194022333770747849/7800000000000000000000000000000000\", \"margin\": \"48810561568647/10000000000000000000000000000000\", \"ok\": true, \"ratio\": \"194022333770747849/38072238023544660\"}\n"
+    },
+    {
+      "archive": "A-TP-SPECTRAL-0014",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-B",
+        "check_spectral_gate.py",
+        "--self-test"
+      ],
+      "cwd": "/mnt/data/twin-work/docs/problem-baselines/twin-prime-conjecture/rounds/A-TP-SPECTRAL-0014",
+      "elapsed_seconds": 2.462629,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"asymmetry_counterexamples\": 1, \"certificate_replay\": true, \"common_normalization_checks\": 3, \"conditional_source_brackets\": true, \"corruptions_rejected\": 20, \"cube_models\": 24, \"cube_points\": 1008, \"deletion_noncommutation_counterexamples\": 1, \"direct_marginal_forms\": 332, \"future_margin_escape_examples\": 1, \"hypothesis_countermodels\": 2, \"independently_verified\": false, \"integer_spectral_levels\": 75638, \"invalid_fibres_rejected\": 3, \"mobius_energy_components\": 240, \"new_prime_gap_bound\": false, \"ok\": true, \"projection_pythagoras_checks\": 108, \"soft_weight_checks\": 648, \"supported_projection_fibres\": 42}\n"
+    },
+    {
+      "archive": "A-TP-SPECTRAL-0014",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-O",
+        "-B",
+        "check_spectral_gate.py",
+        "--self-test"
+      ],
+      "cwd": "/mnt/data/twin-work/docs/problem-baselines/twin-prime-conjecture/rounds/A-TP-SPECTRAL-0014",
+      "elapsed_seconds": 6.023977,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "stderr": "",
+      "stdout": "{\"asymmetry_counterexamples\": 1, \"certificate_replay\": true, \"common_normalization_checks\": 3, \"conditional_source_brackets\": true, \"corruptions_rejected\": 20, \"cube_models\": 24, \"cube_points\": 1008, \"deletion_noncommutation_counterexamples\": 1, \"direct_marginal_forms\": 332, \"future_margin_escape_examples\": 1, \"hypothesis_countermodels\": 2, \"independently_verified\": false, \"integer_spectral_levels\": 75638, \"invalid_fibres_rejected\": 3, \"mobius_energy_components\": 240, \"new_prime_gap_bound\": false, \"ok\": true, \"projection_pythagoras_checks\": 108, \"soft_weight_checks\": 648, \"supported_projection_fibres\": 42}\n"
+    },
+    {
+      "archive": "A-TP-SPECTRAL-0014",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-B",
+        "check_spectral_gate.py",
+        "--require-global"
+      ],
+      "cwd": "/mnt/data/twin-work/docs/problem-baselines/twin-prime-conjecture/rounds/A-TP-SPECTRAL-0014",
+      "elapsed_seconds": 2.147261,
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "stderr": "{\"ok\": false, \"error\": \"refused: this conditional certificate does not prove a prime-gap theorem\"}\n",
+      "stdout": ""
+    }
+  ],
+  "evidence": "exact_check and conditional solver proof_candidate",
+  "feasibility": {
+    "integer_levels_checked": 75638,
+    "largest_literal_cube_points": 128,
+    "production_dimension_spectral_levels": 41,
+    "reason": "Analytic spectral reduction removes the need for a 38-dimensional trace integration."
+  },
+  "final_hash_note": "The eleven-payload manifest is checked after this record/handoff are written. Actual final hash-check output is retained in Issue/PR, avoiding self-referential receipt hashes.",
+  "historical_payloads_changed": false,
+  "new_payload_sha256": {
+    "README.md": "9f3ae5475c4ce96206fec9d55538e03cd9e2a948bd62399b43cd9ee3376e472b",
+    "certificates.json": "3644397ef299510446aaf0098ec6ad2ef12edf58220916837ec58514b892d53f",
+    "check_spectral_gate.py": "cdb7342161fb90454a9137f453e59dfb4676df1b836294e589a656728bf3d397",
+    "inputs.json": "61b7c7e64e37bcd1fa9c099413a0faa49bbaa06986c5186811203e857de4342b",
+    "proof.md": "8fe2962c67abd03d6dfbf296b5eca9b73f32a4ef08ad19278a83c57ec4783ac1",
+    "results.json": "f6b931bd683a5e3c2485751a778e0c87162e9111a8dec29ce3fe0aad47158d0a",
+    "source-lock.json": "e189d88c1e4e1171c0118bee5cceff52b48c88e2c071017560938ec3e99bf7e6",
+    "spectral_gate.py": "2d375158732c444a45a4d2f189e26f92c6731d802d2ed18c4c8a22125b6254ae",
+    "verification-ticket.md": "ff27ae572be27c455af63394e6ff4efe8a267c30d638a1876d68bb544f797192"
+  },
+  "normal_and_optimized_stdout_equal": true,
+  "not_run": [
+    "full local repository checkout/test suite (fresh git DNS failure)",
+    "upstream Lean/FLINT",
+    "full-grid physical integration or verification of input axioms",
+    "isolated mathematical reviewer",
+    "Project handoff schema validation"
+  ],
+  "preserved_operational_failures": [
+    {
+      "event": "Container interactive exec rejected StreamingExecNotEnabledContainerError before script creation.",
+      "followup": "Process and file check returned no matching process or script; only then invoked a non-streaming foreground command. No duplicate computation was assumed."
+    }
+  ],
+  "profile": "reproducible exact certificates and byte-preserving archive replay",
+  "schema": "twin-spectral-computation-record/v1",
+  "text_corrections_before_freeze": [
+    "One accidental form-feed before a LaTeX fraction was removed.",
+    "The zero-function equality exception was stated explicitly in the fully symmetric trace-null detector inequality."
+  ]
+}
