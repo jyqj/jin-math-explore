@@ -1,0 +1,48 @@
+{
+  "format": "rh-profile-0019-checkpoint/v1",
+  "attempt": "A-RH-PROFILE-0019",
+  "issue": 120,
+  "date": "2026-09-08",
+  "actor": {
+    "kind": "agent",
+    "id": "openai-chatgpt",
+    "run_id": "run-20260908-rh-profile-saturation-19",
+    "role": "solver"
+  },
+  "git_base_sha": "39002c5a6af8c7b7f093589e6a76cfd218fcbb99",
+  "git_base_tree_sha": "d6ac23dc843e26ba123ae167228e3a0c1ff6b750",
+  "historical_parent": {
+    "commit": "92863a42864927d2a3a7a3c93aa87941d5c3150b",
+    "path": "docs/problem-baselines/riemann-hypothesis/rounds/A-RH-CONGEST-0018/proof.md",
+    "git_blob_sha1": "c27af2a5abe5a87c0f35e417fce35d8f147e169c",
+    "status": "proof_candidate",
+    "receipt": null
+  },
+  "branch": "program/i-0120/rh-profile-saturation-19",
+  "archive_status": "reference_only",
+  "mathematical_status": "proof_candidate",
+  "independent_verifier_receipt": null,
+  "sha256": {
+    "README.md": "0c6d981e262cbe6099cdc1371a72db7ae6e87bdf6c5c9707de5e6e802e98c012",
+    "proof.md": "4d8bb96ff597c19fd0e4ca6bac70a3a38abab8eec589bf40bbabd567da9e0742",
+    "profile_tools.py": "72fa130a9233688626076b8a073957f0ad58120744cf0b17105ec6225c1e1cf0",
+    "check_profiles.py": "c4bbaa55775299da0e38ea129f001ddf70d1a3009c7e7e7d58c491342c225499",
+    "validation.json": "df89b6e8a5c9881d08bb5a74e4ef66bea7527c1060de15e34bb2922e92788cdd",
+    "claims.json": "3c4b727396643edb267cb7b2214a7021ce9fedf46c1dc109b8efc4540c40983a",
+    "source-scope.md": "61f2b25212ed30c103e7ee0128d3d1eb03fc19317044caa28677725aa8ccb584",
+    "computation-record.json": "e649448770f86c38560828196cb0f12442f4162def83bca1da372dbe39226592",
+    "computation-handoff.json": "4b5af8c49c54030fd5e39fb9d05ef514b1c102c93ea73d7c0f7b92193dc6da9c"
+  },
+  "hash_boundary": "Nine files covered; this manifest excludes itself. Its Git blob and final commit are bound in the PR.",
+  "scope": {
+    "only_additions": true,
+    "modifies_predecessors": false,
+    "advances_authority": false,
+    "actual_zero_computation": false,
+    "full_repository_local_tests": false,
+    "bundled_inventory_executed": false,
+    "upstream_lean_build": false,
+    "remote_ci": "Observe separately, not predicted by this file."
+  },
+  "next_attempt": "A-RH-OFFDIAG-0020: source-evaluable non-diagonal positive-matrix tests or sharper slack, with the new arithmetic observable explicitly identified."
+}

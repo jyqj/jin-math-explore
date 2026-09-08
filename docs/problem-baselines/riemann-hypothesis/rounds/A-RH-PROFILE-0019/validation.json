@@ -1,0 +1,210 @@
+{
+  "actual_zeta_zero_computation": false,
+  "alias_guards": [
+    {
+      "discrepancy": 1.0,
+      "q": 4
+    },
+    {
+      "discrepancy": 1.0,
+      "q": 8
+    },
+    {
+      "discrepancy": 1.0,
+      "q": 16
+    },
+    {
+      "discrepancy": 1.0,
+      "q": 32
+    }
+  ],
+  "attempt": "A-RH-PROFILE-0019",
+  "backend": {
+    "mpmath": "1.3.0",
+    "numpy": "2.3.5",
+    "python": "3.13.5",
+    "sympy": "1.14.0"
+  },
+  "benchmark": {
+    "C_MT": "1.3274992963205883542656202091967048114065969713737359210704111301",
+    "simple_fraction": "0.67250070367941164573437979080329518859340302862626407892958886987",
+    "status": "recovered known constant; not a new record"
+  },
+  "boundary_cases": 6,
+  "counts": {
+    "alias_pair_checks": 240,
+    "alternative_integrals": 12,
+    "central_row_checks": 974,
+    "diagonal_weight_checks": 378,
+    "invalid_margin_rejections": 4,
+    "no_go_constraints": 480,
+    "normalizer_checks": 120,
+    "positive_matrix_checks": 126,
+    "shifted_product_checks": 120
+  },
+  "exact_case_total": 59808,
+  "exact_checks": {
+    "block_multipliers": 9,
+    "polynomial_norm_bounds": 84,
+    "rational_comparisons": 5,
+    "rational_values": {
+      "cosine_sup_margin_using_pi_lt_22_over_7": "1/35",
+      "endpoint_coefficient": "96/25",
+      "margin_below_four": "4/1125",
+      "near_endpoint_coefficient": "4496/1125",
+      "nonreflection_error": "1/9",
+      "nonreflection_lhs": "4/9",
+      "nonreflection_rhs": "1/3"
+    },
+    "reflection_coefficients": 59700,
+    "zero_mean_polynomial_identities": 10
+  },
+  "independent_verification": false,
+  "mathematical_truth_verified": false,
+  "maximum_alias_to_bound_ratio": 0.0005540758521094658,
+  "maximum_residuals": {
+    "alias_guard_continuous": 0.0,
+    "alias_guard_continuous_relative": 0.0,
+    "alias_guard_sampled": 0.0,
+    "alias_guard_sampled_relative": 0.0,
+    "central_rows": 6.821210263296962e-13,
+    "central_rows_relative": 1.1552391383547519e-15,
+    "continuous_integral": 4.1744385725905886e-14,
+    "continuous_integral_relative": 4.319668430844495e-15,
+    "nonreflection_guard": 1.1102230246251565e-16,
+    "nonreflection_guard_relative": 9.08364292875128e-17,
+    "optimal_profile_cancellation": 5.329070518200751e-15,
+    "optimal_profile_cancellation_relative": 1.4445621554226772e-15,
+    "profile_diagonal": 7.105427357601002e-15,
+    "profile_diagonal_relative": 4.0327197805810714e-16,
+    "reflection_symmetry": 0.0,
+    "reflection_symmetry_relative": 0.0,
+    "stationarity": 4.440892098500626e-16,
+    "stationarity_relative": 1.215018825846263e-16,
+    "trace_mass": 1.4210854715202004e-14,
+    "trace_mass_relative": 2.368475785867001e-16,
+    "unweighted_kernel_dictionary": 1.1368683772161603e-13,
+    "unweighted_kernel_dictionary_relative": 6.195704238946693e-16,
+    "variational_identity": 5.995204332975845e-15,
+    "variational_identity_relative": 5.024041246568409e-15,
+    "weighted_kernel_dictionary": 2.2737367544323206e-13,
+    "weighted_kernel_dictionary_relative": 9.594131000996152e-16
+  },
+  "minimum_slacks": {
+    "normalizer_error": 3.4021778637786075e-05,
+    "positive_matrix_row": 0.0,
+    "profile_alias": 0.20221317967262784,
+    "quadratic_Cauchy_bound": 0.024991992583460743,
+    "shifted_product": 0.03459232006914603,
+    "signed_defect": -2.220446049250313e-16,
+    "strong_scalar_no_go": 0.001799353257889047,
+    "weighted_row": -1.1102230246251565e-16
+  },
+  "mixed_model_count": 126,
+  "ok": true,
+  "optimal_profile_cancellation": [
+    {
+      "mass": 0.9999999999999999,
+      "predicted": 1.327499296320588,
+      "value": 1.327499296320589,
+      "weight": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          -1,
+          0.0
+        ],
+        [
+          1,
+          0.0
+        ]
+      ]
+    },
+    {
+      "mass": 1.053364045972087,
+      "predicted": 1.3983400297973534,
+      "value": 1.3983400297973578,
+      "weight": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          -1,
+          0.5
+        ],
+        [
+          1,
+          0.5
+        ]
+      ]
+    },
+    {
+      "mass": 1.0128276115535304,
+      "predicted": 1.3445279416313738,
+      "value": 1.3445279416313791,
+      "weight": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          -2,
+          -0.5
+        ],
+        [
+          2,
+          -0.5
+        ]
+      ]
+    }
+  ],
+  "positive_no_go_lower_tests": 480,
+  "random_samples": 120,
+  "scope": "Exact finite checks and numerical regressions; universal statements remain proof candidates.",
+  "seed": 2026090819,
+  "source_rate_scalars_only": [
+    {
+      "log_T": 10,
+      "rate_without_fixed_constant": 0.03678794411714424,
+      "theta": 0.9
+    },
+    {
+      "log_T": 20,
+      "rate_without_fixed_constant": 0.006766764161830638,
+      "theta": 0.9
+    },
+    {
+      "log_T": 40,
+      "rate_without_fixed_constant": 0.0004578909722183549,
+      "theta": 0.9
+    },
+    {
+      "log_T": 80,
+      "rate_without_fixed_constant": 4.1932828487814054e-06,
+      "theta": 0.9
+    },
+    {
+      "log_T": 10,
+      "rate_without_fixed_constant": 0.09048374180359595,
+      "theta": 0.99
+    },
+    {
+      "log_T": 20,
+      "rate_without_fixed_constant": 0.04093653765389908,
+      "theta": 0.99
+    },
+    {
+      "log_T": 40,
+      "rate_without_fixed_constant": 0.01675800115089098,
+      "theta": 0.99
+    },
+    {
+      "log_T": 80,
+      "rate_without_fixed_constant": 0.005616612051465266,
+      "theta": 0.99
+    }
+  ]
+}
