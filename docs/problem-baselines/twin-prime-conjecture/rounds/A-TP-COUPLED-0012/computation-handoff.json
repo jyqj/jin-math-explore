@@ -1,0 +1,92 @@
+{
+  "protocol": "jin-math-computation-handoff/v1",
+  "scope": "pre_project_reference_only_archive",
+  "project_id": null,
+  "window_id": null,
+  "objective_sha256": null,
+  "attempt_id": "A-TP-COUPLED-0012",
+  "claim_ids": [
+    "C12-01",
+    "C12-02",
+    "C12-03",
+    "C12-04",
+    "C12-05",
+    "C12-06"
+  ],
+  "identity_note": "Archive binding only; no dummy Project, no Project-schema PASS or mathematical authority.",
+  "issue": 113,
+  "lease_id": "L-0113-coupled-sieve-12",
+  "branch": "program/i-0113/twin-coupled-sieve-12",
+  "base_sha": "39002c5a6af8c7b7f093589e6a76cfd218fcbb99",
+  "question": "Construct a coupled auxiliary residual sieve, check complete finite kernels/CRT/capacities, compare soft costs, and bound restoration transfer without assuming missing physical data.",
+  "domain": "Fixed bounded real residual arrays on squarefree mutually coprime roots; fixed support exponents; separate finite model and physical Hilbert-space bridge.",
+  "assumptions": [
+    "one-dimensional source estimate with varying W and Mertens bounds",
+    "fixed residual sup bound and strict2gamma+2z<1",
+    "physical total-size density<=1 for restoration theorem",
+    "helper single-prime realization remains an unfulfilled separate contract"
+  ],
+  "requested_evidence_grade": "exact_check plus proof_candidate",
+  "actual_evidence_grade": "exact_check and unreviewed general proof_candidate",
+  "backend": "CPython3.13.5 standard-library integers/Fraction",
+  "reproduce": [
+    "python -B coupled_sieve.py --output-dir <new-empty-directory>",
+    "compare fresh inputs/certificates/results byte-for-byte with frozen copies",
+    "python -B check_coupled.py --self-test --check-hashes",
+    "python -O -B check_coupled.py --self-test --check-hashes",
+    "python -B check_coupled.py --require-global (expected exit1)"
+  ],
+  "artifacts": [
+    {
+      "path": "coupled_sieve.py",
+      "sha256": "8d20f49a02f023bdc068c8b82859bd5b6fe5ceca8693299e2b052879c76474b6"
+    },
+    {
+      "path": "check_coupled.py",
+      "sha256": "e91962c78189b47fd2d872ca21763eb82332342a39e2817b92f457ced24a7916"
+    },
+    {
+      "path": "inputs.json",
+      "sha256": "600c742f1c4cf73010e1cc7c0fb95b3abd5d5054c08914209633081375ae6107"
+    },
+    {
+      "path": "certificates.json",
+      "sha256": "53eb738cbcd15b9f94bf75eae6d9ead971d3be0a5d3b9ec1ec2b6ab94a12fad2"
+    },
+    {
+      "path": "results.json",
+      "sha256": "26143024290e0e8f2f07afa8986743514c6c311b0b0d9eeafd446ecbeb897731"
+    },
+    {
+      "path": "proof.md",
+      "sha256": "74927eb052f8cdc7052e6e889810c559d11c12801f38e4f4fdd952f32bf3d250"
+    },
+    {
+      "path": "source-lock.json",
+      "sha256": "90188d162aea9566cdf8dbab5b000a0cc543ae69eca974a69646dc2b2d199c42"
+    },
+    {
+      "path": "computation-record.json",
+      "sha256": "908f39e0f7ebfe24bf6b6aaf6c0fee93230ab95b306fea9d7b92b81e9f7e683f"
+    },
+    {
+      "path": "verification-ticket.md",
+      "sha256": "761c07e37ef07d172b4aa09b59d8bf89f90054370882d303804793837b78945e"
+    }
+  ],
+  "blockers": [
+    "q_plus for un-restored physical double trace",
+    "a_plus for actual outer deletion norm",
+    "legal helper support/realization and single-prime self-pair estimates",
+    "same-normalization detection margin and all implementation errors",
+    "isolated mathematical review"
+  ],
+  "next_action": "Use fixed theta and epsilon in the restoration bridge; certify q_plus/a_plus and legal capacity before claiming numerical positivity. Do not substitute old signed total loss for deletion norm.",
+  "cannot_imply": [
+    "new184 or twin-prime bound",
+    "whole objective is halved",
+    "every finite interval bound improves",
+    "Project completion or independent review"
+  ],
+  "delivery": "Twelve small files, no external bulk data; final remote commit/tree/diff and CI status in append-only PR handoff."
+}
