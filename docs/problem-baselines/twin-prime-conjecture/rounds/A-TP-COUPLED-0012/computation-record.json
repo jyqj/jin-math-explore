@@ -1,0 +1,115 @@
+{
+  "schema": "twin-coupled-computation-record/v1",
+  "attempt": "A-TP-COUPLED-0012",
+  "actor": {
+    "id": "openai-chatgpt",
+    "run_id": "run-20260907-twin-coupled-12",
+    "role": "solver"
+  },
+  "profile": "reproducible exact certificate with distinct literal checks",
+  "backend": {
+    "primary": "CPython int/Fraction",
+    "version": "3.13.5",
+    "implementation": "CPython",
+    "dependencies": "standard library only",
+    "floating_point_acceptance": false
+  },
+  "engineering_reason": "Portable integer and rational proof certificates; no external CAS, floating solver or online data is needed for the finite calculation.",
+  "feasibility": {
+    "largest_state_space": 117,
+    "largest_ordered_local_pairs": 13689,
+    "new_finite_coefficient_pairs": 263169,
+    "new_auxiliary_pairs": 19,
+    "all_jobs_completed_synchronously": true
+  },
+  "commands": [
+    {
+      "command": "python -B coupled_sieve.py --output-dir /mnt/data/twin12-fresh",
+      "exit_code": 0,
+      "stdout": "{\"new_helper\": [\"4938701401/62500000000\", \"79019222417/1000000000000\"], \"ok\": true, \"ordered_state_pairs\": 13689, \"penalty\": \"6890567250121/2531250000000\", \"states\": 117}\n",
+      "stderr": "",
+      "elapsed_seconds": 0.996294
+    },
+    {
+      "command": "python -B check_coupled.py --self-test",
+      "exit_code": 0,
+      "stdout": "{\"analytic_negative_examples\": 2, \"auxiliary_minimum_identities\": 180, \"capacity_cases\": 180, \"certificate_replay\": true, \"corruptions_rejected\": 26, \"direct_interval_integers\": 1000, \"double_trace_fibres\": 54, \"endpoint_prime_pairs\": 126, \"global_helper_brackets\": 2, \"independently_verified\": false, \"literal_kernel_entries\": 42048, \"literal_residue_products\": 1801494, \"new_prime_gap_bound\": false, \"noncoprime_CRT_cases\": 1296, \"ok\": true, \"periodic_diagonal_checks\": 385, \"residual_pair_sum\": \"868665843/752953600\", \"restoration_transfer_checks\": 27, \"soft_coefficient_comparisons\": 135, \"strict_collision_cases\": 100, \"zero_capacity_fibres\": 16}\n",
+      "stderr": "",
+      "elapsed_seconds": 1.456338
+    },
+    {
+      "command": "python -O -B check_coupled.py --self-test",
+      "exit_code": 0,
+      "stdout": "{\"analytic_negative_examples\": 2, \"auxiliary_minimum_identities\": 180, \"capacity_cases\": 180, \"certificate_replay\": true, \"corruptions_rejected\": 26, \"direct_interval_integers\": 1000, \"double_trace_fibres\": 54, \"endpoint_prime_pairs\": 126, \"global_helper_brackets\": 2, \"independently_verified\": false, \"literal_kernel_entries\": 42048, \"literal_residue_products\": 1801494, \"new_prime_gap_bound\": false, \"noncoprime_CRT_cases\": 1296, \"ok\": true, \"periodic_diagonal_checks\": 385, \"residual_pair_sum\": \"868665843/752953600\", \"restoration_transfer_checks\": 27, \"soft_coefficient_comparisons\": 135, \"strict_collision_cases\": 100, \"zero_capacity_fibres\": 16}\n",
+      "stderr": "",
+      "elapsed_seconds": 2.670386
+    },
+    {
+      "command": "python -B check_coupled.py --require-global",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "{\"ok\": false, \"error\": \"refused: no actual restored-trace positivity or global prime-gap certification\"}\n",
+      "elapsed_seconds": 0.591809
+    }
+  ],
+  "normal_and_optimized_stdout_equal": true,
+  "fresh_generation_byte_equal": [
+    "inputs.json",
+    "certificates.json",
+    "results.json"
+  ],
+  "actual_test_summary": {
+    "analytic_negative_examples": 2,
+    "auxiliary_minimum_identities": 180,
+    "capacity_cases": 180,
+    "certificate_replay": true,
+    "corruptions_rejected": 26,
+    "direct_interval_integers": 1000,
+    "double_trace_fibres": 54,
+    "endpoint_prime_pairs": 126,
+    "global_helper_brackets": 2,
+    "independently_verified": false,
+    "literal_kernel_entries": 42048,
+    "literal_residue_products": 1801494,
+    "new_prime_gap_bound": false,
+    "noncoprime_CRT_cases": 1296,
+    "ok": true,
+    "periodic_diagonal_checks": 385,
+    "residual_pair_sum": "868665843/752953600",
+    "restoration_transfer_checks": 27,
+    "soft_coefficient_comparisons": 135,
+    "strict_collision_cases": 100,
+    "zero_capacity_fibres": 16
+  },
+  "payload_sha256": {
+    "coupled_sieve.py": "8d20f49a02f023bdc068c8b82859bd5b6fe5ceca8693299e2b052879c76474b6",
+    "check_coupled.py": "e91962c78189b47fd2d872ca21763eb82332342a39e2817b92f457ced24a7916",
+    "inputs.json": "600c742f1c4cf73010e1cc7c0fb95b3abd5d5054c08914209633081375ae6107",
+    "certificates.json": "53eb738cbcd15b9f94bf75eae6d9ead971d3be0a5d3b9ec1ec2b6ab94a12fad2",
+    "results.json": "26143024290e0e8f2f07afa8986743514c6c311b0b0d9eeafd446ecbeb897731",
+    "proof.md": "74927eb052f8cdc7052e6e889810c559d11c12801f38e4f4fdd952f32bf3d250"
+  },
+  "failure_log": [
+    {
+      "command": "git ls-remote https://github.com/jyqj/jin-math-explore.git HEAD",
+      "exit_code": 128,
+      "error": "Could not resolve host: github.com",
+      "effect": "connector used for repository read/write; no full local checkout or repository suite"
+    }
+  ],
+  "preliminary_runs": "Generator and finite self-test were run while developing; all completed. The four commands above are the final recorded fresh regeneration/replay after replacing the integer prime-loop bound with isqrt. No lost process or timeout is present.",
+  "not_run": [
+    "full repository local tests",
+    "Lean/FLINT",
+    "actual restored186 trace or grid",
+    "isolated mathematical reviewer",
+    "repository Project handoff schema validator"
+  ],
+  "cannot_imply": [
+    "actual asymptotic positivity",
+    "new prime-gap bound",
+    "global sieve optimality",
+    "independent review"
+  ],
+  "hash_note": "Final manifest/handoff hashes are checked after this record is frozen; actual final check stdout is attached to Issue/PR to avoid self-referential logs."
+}

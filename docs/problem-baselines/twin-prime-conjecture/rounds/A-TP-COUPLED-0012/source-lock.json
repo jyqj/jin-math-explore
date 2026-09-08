@@ -1,0 +1,68 @@
+{
+  "schema": "twin-coupled-source-lock/v1",
+  "as_of": "2026-09-07",
+  "authority": "reference_only",
+  "main_commit": "39002c5a6af8c7b7f093589e6a76cfd218fcbb99",
+  "predecessor": {
+    "pr": 112,
+    "issue": 108,
+    "commit": "d16669bd797d7fc05e02ec84b6786a1bd5919b26",
+    "proof_path": "docs/problem-baselines/twin-prime-conjecture/rounds/A-TP-RESIDUAL-0011/proof.md",
+    "proof_git_blob": "1cfaeee1d4d13649a1192626e9191f27e4594c2c",
+    "code_path": "docs/problem-baselines/twin-prime-conjecture/rounds/A-TP-RESIDUAL-0011/sieve_product.py",
+    "code_git_blob": "8b69e767bdfd6aa67a587270ec49b2c508c9faf9",
+    "read_scope": "full proof and finite array/helper definitions via connector; no old test log treated as current execution",
+    "assumed_independently_verified": false
+  },
+  "sources": [
+    {
+      "id": "S1",
+      "author": "James Maynard",
+      "title": "Small gaps between primes",
+      "version": "arXiv:1311.4600v3; metadata confirms 2019-10-28",
+      "url": "https://arxiv.org/pdf/1311.4600",
+      "metadata_url": "https://arxiv.org/abs/1311.4600",
+      "locators": [
+        "Lemma6.1",
+        "equations6.5-6.9"
+      ],
+      "access": "Explicit v3 PDF open returned Internal Error; unversioned PDF then opened successfully; current abs identifies v3. Parsed text plus screenshots pages13 and14 (zero based).",
+      "raw_pdf_sha256": null
+    },
+    {
+      "id": "S2",
+      "title": "Improved short gaps between primes",
+      "version": "30 August 2026, fixed named CDN PDF",
+      "url": "https://cdn.openai.com/pdf/51126fac-1b68-4128-9666-c908bcc16033/short_gaps.pdf",
+      "locators": [
+        "Lemma3.9",
+        "Proposition3.10",
+        "sections4.1 and4.4",
+        "equations4.30-4.40"
+      ],
+      "access": "Parsed text and successful screenshots PDF pages20,21,27,28 (zero based). No full-paper independent audit.",
+      "raw_pdf_sha256": null,
+      "input_scope": "one-dimensional normalizer, parameters, physical density<=1 and restoration definition; not the full186 theorem or physical_integral_bounds"
+    },
+    {
+      "id": "S3",
+      "author": "Kiran Kedlaya",
+      "title": "Notes on analytic number theory, Chapter13: The Selberg sieve",
+      "url": "https://kskedlaya.org/ant/chap-selberg.html",
+      "input_scope": "primary-author background and novelty boundary only",
+      "raw_sha256": null
+    }
+  ],
+  "novelty_boundary": "Classical coupled Selberg/diagonal minimization and Cauchy-Schwarz ideas are not claimed new. The present tuple-specific residual adaptation, exact kernels, certificates and restoration interface are new repository assets only. No exhaustive novelty search.",
+  "unused_inputs": [
+    "prior physical bulk arrays",
+    "old186 positive surplus",
+    "independent receipts",
+    "unfrozen #80 staging"
+  ],
+  "cannot_imply": [
+    "new prime-gap theorem",
+    "source bytes integrity beyond recorded access",
+    "independent mathematical verification"
+  ]
+}
