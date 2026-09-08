@@ -1,0 +1,45 @@
+{
+  "schema": "goldbach-predecessor-map/v1",
+  "checkpoint": "CP-ERR-0013",
+  "read_date_utc": "2026-09-08",
+  "main_base": "39002c5a6af8c7b7f093589e6a76cfd218fcbb99",
+  "predecessor": {
+    "checkpoint": "CP-ERR-0012",
+    "issue": 119,
+    "pr": 125,
+    "head": "496bc8c886448573390ac315e347b02b88675e87",
+    "read_files": [
+      "proof.md §§5-7",
+      "error-handoff.json"
+    ],
+    "proof_git_blob": "4652b23fa6630130dc3278b128df602f0b1246ce",
+    "handoff_git_blob": "07fbdb0dc2e306f1df43dbcce4080967eaa7829b",
+    "live_pr_state": "open,unchanged",
+    "lease": "released",
+    "import_status": "named unreviewed U-SLAB dependency, no independent receipt"
+  },
+  "L35": {
+    "issue": 34,
+    "review_issue": 35,
+    "head": "9777a19362c3d4a49126e31f29663eb3bb61f0b7",
+    "path": "staging/preproject-goldbach/A-GB-L35-0001/",
+    "read_scope": "README and progress.md lines1-150 only",
+    "readme_git_blob": "402186e8a11deb7a5c90327fdd27d409a2b6d183",
+    "progress_git_blob": "8320bad4d6bff35cba87e4bd7e857181f6c6f75c",
+    "use": "route provenance and limitations, not an imported theorem"
+  },
+  "governance": "previously supplied contents at identical immutable base; main fresh-read this round",
+  "not_done": [
+    "legacy numerical replay",
+    "old package SHA256 manifests recomputed",
+    "independent receipts issued",
+    "old coefficients or authority state updated"
+  ],
+  "new_round": {
+    "branch": "program/i-0127/goldbach-g9-combination-cp13",
+    "issue": 127,
+    "path": "docs/problem-baselines/goldbach-conjecture/rounds/CP-ERR-0013/",
+    "goal": "G9 fallback and source-level combinatorial gate",
+    "old_CP12_G10_local_certificate_withdrawn": false
+  }
+}

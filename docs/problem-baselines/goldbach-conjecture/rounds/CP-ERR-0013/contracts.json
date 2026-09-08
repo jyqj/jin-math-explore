@@ -1,0 +1,108 @@
+{
+  "schema": "goldbach-g9-combination-contract/v1",
+  "checkpoint": "CP-ERR-0013",
+  "issue": 127,
+  "authority": "reference_only_solver_candidate",
+  "assumptions": [
+    "CP12 U-SLAB at exact pinned head, pending independent review",
+    "BJS 2207.09452v6 Theorem6/Table1",
+    "PNT, Li and Mertens"
+  ],
+  "exponents": {
+    "a": "4/53",
+    "b": "4/33",
+    "g": "3/11",
+    "c": "1/3",
+    "G9_product_min": "65/159",
+    "G9_product_max": "2/3"
+  },
+  "original_object": "G9 on A={N-r: r prime, r<(1-epsilon0)N}; A_m contains original divisible values",
+  "upper_enlargement": true,
+  "distribution": {
+    "A0_min": 4,
+    "B0": "A0+8",
+    "R": "sqrt(N)/log(N)^B0",
+    "E": "C_A*N/log(N)^A0",
+    "source_candidate": "CP12 §5",
+    "weight_uniformity": "|a_N(m)|<=1, N-dependent but q-independent, common mr<N only"
+  },
+  "sieve": {
+    "D": "R/P0",
+    "Z": "sqrt(D)",
+    "h_star": "(B0*loglog(N)+log(P0))/log(N)",
+    "actual_support": "q|P_N(Z),q<W_N*D<=R",
+    "P0": "fixed product of primes below w after epsilon is chosen",
+    "unknown_Cs_required": false,
+    "L_eta_required": false,
+    "L35_required": false
+  },
+  "domain": [
+    "N even,N>=16,T=logN>=1",
+    "0<epsilon0<=1/2",
+    "0<epsilon<=1/200",
+    "Z>w>=3",
+    "0<=h_star<=1/4",
+    "0<=q_V,ell_N,r_N<=1/2",
+    "source onsets"
+  ],
+  "statement": "G9/S_N <= g9_half + deficit",
+  "S_N": "C(N)*N/log(N)^2",
+  "deficit_coefficients": {
+    "q_V": "15",
+    "ell_N": "15",
+    "h_star": "24",
+    "r_N": "540",
+    "epsilon": "33264",
+    "C_A*T^(3-A0)": "19",
+    "T^2*(1+T)^2/(N^a-1)": "12",
+    "E9*T^2/N": "2"
+  },
+  "E9": "N^(2/3)+78*N/(N^a-1)+78*logN/log2+3*Z",
+  "fixed_cap": "5.291548",
+  "combination_weight": -1,
+  "exact_combinatorial_identities": [
+    "S5(beta,gamma)=G10+C_wedge-C_order",
+    "G16_literal=C_wedge"
+  ],
+  "C_wedge": "sum T_m where p1*p2^3<N",
+  "C_order": "sum(U_m-T_m) where p1*p2^3>N",
+  "pointwise_witness": {
+    "N": 144568,
+    "output_prime": 3,
+    "n_factors": [
+      5,
+      29,
+      997
+    ],
+    "G_vector": [
+      1,
+      1,
+      0,
+      2,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "weighted_rhs": 1,
+    "individual_D_indicator": 0
+  },
+  "combination_gate": "BLOCKED_POINTWISE_ROUTE",
+  "CP12_wedge_gain_globally_spendable": false,
+  "aggregate_theorem_refuted": false,
+  "independent_review": "pending",
+  "global_status": "INCONCLUSIVE",
+  "cannot_imply": [
+    "aggregate prime-sequence counterexample including big-O",
+    "failure density exceeding N^(1-a)",
+    "full-paper refutation or proof",
+    "Goldbach proof or refutation",
+    "three-prime W3 upper-bounds the full wedge",
+    "independent source/candidate acceptance",
+    "effective numeric N0"
+  ]
+}

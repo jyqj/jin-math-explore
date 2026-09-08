@@ -1,0 +1,75 @@
+{
+  "schema": "goldbach-source-scope/v1",
+  "checkpoint": "CP-ERR-0013",
+  "access_date_utc": "2026-09-08",
+  "sources": [
+    {
+      "id": "S1",
+      "authors": [
+        "Jiamin Li",
+        "Jianya Liu"
+      ],
+      "title": "Theorem (1+1.9) on the Goldbach Conjecture",
+      "version": "arXiv:2606.05224v2",
+      "html": "https://arxiv.org/html/2606.05224v2",
+      "pdf": "https://arxiv.org/pdf/2606.05224v2",
+      "locators": [
+        "§2.2 A_d convention",
+        "Proposition4.3/(4.18)",
+        "(4.27)-(4.36)",
+        "(5.45)"
+      ],
+      "successful_printed_page_screenshots": [
+        19,
+        20,
+        41
+      ],
+      "metadata_discrepancy": "arXiv version August8; displayed internal HTML August24 versus PDF August11; no version silently substituted",
+      "raw_pdf_sha256": null,
+      "status": "source under audit; literal formulas compared to screenshots, full theorem not accepted/refuted"
+    },
+    {
+      "id": "S2",
+      "authors": [
+        "Matteo Bordignon",
+        "Daniel R. Johnston",
+        "Valeriia Starichkova"
+      ],
+      "title": "An explicit version of Chen's theorem and the linear sieve",
+      "version": "arXiv:2207.09452v6",
+      "html": "https://arxiv.org/html/2207.09452v6",
+      "pdf": "https://arxiv.org/pdf/2207.09452v6",
+      "locators": [
+        "Theorem6",
+        "Table1,epsilon^-1=200 row",
+        "(9)-(11) actual mass and exceptional-prime remainder range"
+      ],
+      "successful_printed_page_screenshots": [
+        5
+      ],
+      "raw_pdf_sha256": null,
+      "adopted_constant": "154 for epsilon<=1/200; upper C1 row153 enlarged conservatively",
+      "status": "imported theorem/table, not independently reproduced"
+    },
+    {
+      "id": "S3",
+      "title": "CP12 bounded-slab distribution proof candidate",
+      "repository": "jyqj/jin-math-explore",
+      "head": "496bc8c886448573390ac315e347b02b88675e87",
+      "path": "docs/problem-baselines/goldbach-conjecture/rounds/CP-ERR-0012/proof.md",
+      "git_blob": "4652b23fa6630130dc3278b128df602f0b1246ce",
+      "locators": [
+        "§5, statement(10) and its explicit eight-term ledger"
+      ],
+      "status": "pending-review dependency; not a new audit of SW or maximal bilinear large sieve"
+    }
+  ],
+  "classical_inputs": "ordinary PNT (including fixed relative intervals), reciprocal/product Mertens and Li asymptotics; qualitative only",
+  "source_limits": [
+    "no raw PDF byte hashes",
+    "no original Iwaniec or Pan-Ding full-text proof audit",
+    "no full L35 proof or residue extension acceptance"
+  ],
+  "novelty_scope": "repository-local derivations and diagnosis; no literature-wide first-discovery claim",
+  "claim_scope": "pointwise combinatorial failure, not an aggregate or whole-theorem refutation"
+}
