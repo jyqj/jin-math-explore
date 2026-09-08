@@ -1,0 +1,188 @@
+{
+  "format": "rh-profile-0019-claims/v1",
+  "attempt": "A-RH-PROFILE-0019",
+  "archive_status": "reference_only",
+  "historical_parent": {
+    "commit": "92863a42864927d2a3a7a3c93aa87941d5c3150b",
+    "path": "docs/problem-baselines/riemann-hypothesis/rounds/A-RH-CONGEST-0018/proof.md",
+    "git_blob_sha1": "c27af2a5abe5a87c0f35e417fce35d8f147e169c",
+    "status": "proof_candidate",
+    "receipt": null
+  },
+  "external_inputs": {
+    "PC": "Lamzouri arXiv:2609.02882v1 Lemma 3.1; not independently audited",
+    "classical_benchmark": "Montgomery-Taylor, attributed in the same source Lemma 3.2/Remark 3.4"
+  },
+  "claims": [
+    {
+      "id": "A-RH-PROFILE-0019-C01",
+      "title": "Positive-matrix weighted signed row inequality",
+      "statement": "tr C(T^2-2T+S)>=-sqrt((4||C||F^2+2n||C||op^2)D).",
+      "quantifier_scope": "All finite conjugation-invariant multisets with integer multiplicities, q>=1, positive sampled profile total, and Hermitian C>=0.",
+      "assumptions": [
+        "Keep full multiplicities; real sample weights are nonnegative and sum to one."
+      ],
+      "dependency_refs": [],
+      "evidence_grade": "proof_candidate",
+      "evidence_refs": [
+        "proof.md sections 1-2",
+        "validation.json"
+      ],
+      "cannot_imply": [
+        "No positive-semidefinite assertion about T itself; no extension to arbitrary signed C.",
+        "No RH proof, improved best-known zero proportion, independent verification or mathematical-authority promotion.",
+        "Numerical and exact finite checks do not cover the universal analytic quantifiers."
+      ],
+      "verifier_receipt": null
+    },
+    {
+      "id": "A-RH-PROFILE-0019-C02",
+      "title": "Reflection central-block identity",
+      "statement": "||T_d||F^2-||T_(q-d)||F^2=tr(P_C T^2).",
+      "quantifier_scope": "All Hermitian matrices with modulus reflection symmetry and ceil(q/2)<=d<=q.",
+      "assumptions": [
+        "Full central rows, not rows of the principal submatrix."
+      ],
+      "dependency_refs": [],
+      "evidence_grade": "proof_candidate",
+      "evidence_refs": [
+        "proof.md section 3",
+        "validation.json"
+      ],
+      "cannot_imply": [
+        "General non-reflection profiles need an additional error; weighted diagonals are not constant.",
+        "No RH proof, improved best-known zero proportion, independent verification or mathematical-authority promotion.",
+        "Numerical and exact finite checks do not cover the universal analytic quantifiers."
+      ],
+      "verifier_receipt": null
+    },
+    {
+      "id": "A-RH-PROFILE-0019-C03",
+      "title": "Shifted profile-product sampling and normalizers",
+      "statement": "The raw profile-pair sampling error is bounded by proof.md (7); Z_q has the explicit O(q^-2) bound (8).",
+      "quantifier_scope": "Fixed finite real even exponential-polynomial profiles, every finite conjugation-symmetric list with the shifted real-diameter margin.",
+      "assumptions": [
+        "Retain coefficient norms, maximal frequency, cosh(pi Y/q), and discrete normalization."
+      ],
+      "dependency_refs": [],
+      "evidence_grade": "proof_candidate",
+      "evidence_refs": [
+        "proof.md section 4",
+        "validation.json"
+      ],
+      "cannot_imply": [
+        "No error bound at the alias boundary without its margin, and no termwise replacement by absolute squares.",
+        "No RH proof, improved best-known zero proportion, independent verification or mathematical-authority promotion.",
+        "Numerical and exact finite checks do not cover the universal analytic quantifiers."
+      ],
+      "verifier_receipt": null
+    },
+    {
+      "id": "A-RH-PROFILE-0019-C04",
+      "title": "Source-conditional profile functional",
+      "statement": "The full unweighted mixed moment tends to B_theta(f,g); the normalized source inequalities are (10).",
+      "quantifier_scope": "Each fixed 0<theta<1 and fixed admissible nonnegative even trigonometric profiles.",
+      "assumptions": [
+        "External PC; standard strip/symmetry/zero-count facts; height before smoothing width and before theta approaches one."
+      ],
+      "dependency_refs": [
+        "PC"
+      ],
+      "evidence_grade": "proof_candidate",
+      "evidence_refs": [
+        "proof.md section 5",
+        "validation.json"
+      ],
+      "cannot_imply": [
+        "No actual zero computation, endpoint upper asymptotic, moving-bandwidth uniformity or independent audit of PC.",
+        "No RH proof, improved best-known zero proportion, independent verification or mathematical-authority promotion.",
+        "Numerical and exact finite checks do not cover the universal analytic quantifiers."
+      ],
+      "verifier_receipt": null
+    },
+    {
+      "id": "A-RH-PROFILE-0019-C05",
+      "title": "Attributed Montgomery-Taylor variational recovery",
+      "statement": "B_theta(r,r)-lambda_theta=B_theta(r-r_theta,r-r_theta)>0 unless r=r_theta.",
+      "quantifier_scope": "Real normalized L2 profiles on [-1/2,1/2], 0<theta<=1.",
+      "assumptions": [
+        "r_theta and lambda_theta as in (12)."
+      ],
+      "dependency_refs": [],
+      "evidence_grade": "proof_candidate",
+      "evidence_refs": [
+        "proof.md section 6",
+        "validation.json"
+      ],
+      "cannot_imply": [
+        "Classical extremizer and benchmark are not new discoveries; this does not improve the published constant.",
+        "No RH proof, improved best-known zero proportion, independent verification or mathematical-authority promotion.",
+        "Numerical and exact finite checks do not cover the universal analytic quantifiers."
+      ],
+      "verifier_receipt": null
+    },
+    {
+      "id": "A-RH-PROFILE-0019-C06",
+      "title": "Simultaneous scalar saturation boundary",
+      "statement": "All constraints (10) admit sigma=2-lambda_1 for 9/10<=theta<=1 and nonnegative normalized ||r||infinity<=8/5.",
+      "quantifier_scope": "Every such r and every nonnegative bounded c simultaneously.",
+      "assumptions": [
+        "The constraints considered are precisely the limiting nonnegative diagonal-row scalar inequalities."
+      ],
+      "dependency_refs": [],
+      "evidence_grade": "proof_candidate",
+      "evidence_refs": [
+        "proof.md section 7",
+        "validation.json"
+      ],
+      "cannot_imply": [
+        "Not an actual-zero extremizer, a universal profile barrier, or a no-go for off-diagonal or higher-order methods.",
+        "No RH proof, improved best-known zero proportion, independent verification or mathematical-authority promotion.",
+        "Numerical and exact finite checks do not cover the universal analytic quantifiers."
+      ],
+      "verifier_receipt": null
+    },
+    {
+      "id": "A-RH-PROFILE-0019-C07",
+      "title": "Cosine-family inclusion and exact cancellation",
+      "statement": "Every normalized positive cosine with frequency 0<=omega<=pi and every convex mixture lies in the class; at r_1 all diagonal main terms cancel.",
+      "quantifier_scope": "Entire stated cosine family and all bounded nonnegative tests c at the endpoint optimizer.",
+      "assumptions": [
+        "The endpoint is a scalar limit after fixed subcritical source limits."
+      ],
+      "dependency_refs": [],
+      "evidence_grade": "proof_candidate",
+      "evidence_refs": [
+        "proof.md sections 6-7",
+        "validation.json"
+      ],
+      "cannot_imply": [
+        "A profile scan is not the proof; no conclusion for profiles outside the stated class.",
+        "No RH proof, improved best-known zero proportion, independent verification or mathematical-authority promotion.",
+        "Numerical and exact finite checks do not cover the universal analytic quantifiers."
+      ],
+      "verifier_receipt": null
+    },
+    {
+      "id": "A-RH-PROFILE-0019-C08",
+      "title": "Normalization, reflection and alias scope guards",
+      "statement": "Non-reflection rank-one example has central-identity error 1/9; the resonant real pair has sampling discrepancy one.",
+      "quantifier_scope": "The exact finite examples in sections 3-4.",
+      "assumptions": [
+        "Each example is synthetic and must retain its specified dimension/profile."
+      ],
+      "dependency_refs": [],
+      "evidence_grade": "proof_candidate",
+      "evidence_refs": [
+        "proof.md sections 3-4",
+        "validation.json"
+      ],
+      "cannot_imply": [
+        "Neither example is a zeta-zero configuration or a counterexample to the correctly scoped positive results.",
+        "No RH proof, improved best-known zero proportion, independent verification or mathematical-authority promotion.",
+        "Numerical and exact finite checks do not cover the universal analytic quantifiers."
+      ],
+      "verifier_receipt": null
+    }
+  ]
+}

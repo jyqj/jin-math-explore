@@ -1,0 +1,61 @@
+{
+  "schema": "jin-math-computation-handoff/v1",
+  "problem_id": "preproject-rh",
+  "window_id": "pre-genesis-sequential",
+  "attempt_id": "A-RH-PROFILE-0019",
+  "claim_id": null,
+  "objective_sha256": "0c6d981e262cbe6099cdc1371a72db7ae6e87bdf6c5c9707de5e6e802e98c012",
+  "question": "Extend direct source sampling to nonconstant profiles and delimit the information in positive diagonal row tests.",
+  "domain": "Finite signed profile matrices, fixed subcritical source limits and a bounded class of scalar profile constraints.",
+  "assumptions": [
+    "Definitions and domains are exactly those of proof.md.",
+    "PC is an explicit external source input only for source claims."
+  ],
+  "requested_evidence": "numerical_evidence",
+  "backend": {
+    "name": "Python/NumPy/mpmath/SymPy/Fraction",
+    "version": "3.13.5",
+    "interface": "local foreground process",
+    "inventory_snapshot_sha256": null
+  },
+  "exact_input": {
+    "seed": 2026090819,
+    "samples": 120,
+    "reflection_Q_range": [
+      1,
+      48
+    ],
+    "source_rate_values_are_scalar_only": true,
+    "objective_boundary": "README pins a bounded preproject task, not a v13 Project objective."
+  },
+  "reproduction_command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python check_profiles.py --samples 120 --output validation.json",
+  "integrity_command": "python check_profiles.py --check-package",
+  "code_artifacts": [
+    {
+      "path": "profile_tools.py",
+      "sha256": "72fa130a9233688626076b8a073957f0ad58120744cf0b17105ec6225c1e1cf0"
+    },
+    {
+      "path": "check_profiles.py",
+      "sha256": "c4bbaa55775299da0e38ea129f001ddf70d1a3009c7e7e7d58c491342c225499"
+    }
+  ],
+  "result_artifacts": [
+    {
+      "path": "validation.json",
+      "sha256": "df89b6e8a5c9881d08bb5a74e4ef66bea7527c1060de15e34bb2922e92788cdd"
+    }
+  ],
+  "computation_record": {
+    "path": "computation-record.json",
+    "sha256": "e649448770f86c38560828196cb0f12442f4162def83bca1da372dbe39226592"
+  },
+  "evidence_grade": "numerical_evidence",
+  "cannot_imply": [
+    "No RH proof, improved best-known zero proportion, independent verification or mathematical-authority promotion.",
+    "Numerical and exact finite checks do not cover the universal analytic quantifiers.",
+    "The recovered 0.672500703679... is the existing benchmark, not a new record.",
+    "Saturation is limited to the scalar test family and profile/bandwidth bounds; it does not rule out other approaches.",
+    "No full repository local tests, bundled inventory/record runner, upstream Lean build, actual zeta enumeration or isolated verifier was executed."
+  ]
+}
