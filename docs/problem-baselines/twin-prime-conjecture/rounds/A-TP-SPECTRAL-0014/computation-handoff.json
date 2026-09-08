@@ -1,0 +1,92 @@
+{
+  "actor": {
+    "id": "openai-chatgpt",
+    "role": "solver",
+    "run_id": "run-20260908-twin-spectral-14"
+  },
+  "actual_evidence_grade": "same-context exact checks and conditional proof candidates, not independent review",
+  "annulus_delivery": "Twelve original ANNULUS-0013 files preserved byte-for-byte locally and freshly replayed, but their full publication remains blocked after the original checker upload was rejected. The rejected file was not retried or routed elsewhere. Under amendment v1.1 this PR includes only the new SPECTRAL-0014 package. Round12 remains in PR121.",
+  "artifacts": [
+    {
+      "path": "README.md",
+      "sha256": "9f3ae5475c4ce96206fec9d55538e03cd9e2a948bd62399b43cd9ee3376e472b"
+    },
+    {
+      "path": "certificates.json",
+      "sha256": "3644397ef299510446aaf0098ec6ad2ef12edf58220916837ec58514b892d53f"
+    },
+    {
+      "path": "check_spectral_gate.py",
+      "sha256": "cdb7342161fb90454a9137f453e59dfb4676df1b836294e589a656728bf3d397"
+    },
+    {
+      "path": "computation-record.json",
+      "sha256": "f3311eb481e51e7a2fe258c9b86e844b55798161bca7b9108353ded64e9d1669"
+    },
+    {
+      "path": "inputs.json",
+      "sha256": "61b7c7e64e37bcd1fa9c099413a0faa49bbaa06986c5186811203e857de4342b"
+    },
+    {
+      "path": "proof.md",
+      "sha256": "8fe2962c67abd03d6dfbf296b5eca9b73f32a4ef08ad19278a83c57ec4783ac1"
+    },
+    {
+      "path": "results.json",
+      "sha256": "f6b931bd683a5e3c2485751a778e0c87162e9111a8dec29ce3fe0aad47158d0a"
+    },
+    {
+      "path": "source-lock.json",
+      "sha256": "e189d88c1e4e1171c0118bee5cceff52b48c88e2c071017560938ec3e99bf7e6"
+    },
+    {
+      "path": "spectral_gate.py",
+      "sha256": "2d375158732c444a45a4d2f189e26f92c6731d802d2ed18c4c8a22125b6254ae"
+    },
+    {
+      "path": "verification-ticket.md",
+      "sha256": "ff27ae572be27c455af63394e6ff4efe8a267c30d638a1876d68bb544f797192"
+    }
+  ],
+  "attempt_id": "A-TP-SPECTRAL-0014",
+  "backend": {
+    "acceptance": "stdlib int/Fraction; no floating acceptance",
+    "dependencies": "Python standard library only",
+    "name": "CPython",
+    "version": "3.13.5"
+  },
+  "base_sha": "39002c5a6af8c7b7f093589e6a76cfd218fcbb99",
+  "branch": "program/i-0129/twin-spectral-barrier-14",
+  "cannot_imply": [
+    "failure of all asymmetric functions or stronger future margin certificates",
+    "a new prime-gap bound or twin primes",
+    "Project completion or isolated mathematical review"
+  ],
+  "claim_ids": [
+    "R14-01",
+    "R14-02",
+    "R14-03",
+    "R14-04",
+    "R14-05"
+  ],
+  "delivery": "Final commit, subtree identities and observed CI belong to the actual PR/Issue handoff.",
+  "domain": "finite positive product measures, real L2 functions, symmetric trial for a specified-pair bound; conditional exact source brackets",
+  "interpretation": "U is the no-loss margin furnished by frozen lower/upper brackets, not an upper bound on the unknown true margin. The lower bound concerns an upper-bound method cost, not a prime-pair count.",
+  "issue": 129,
+  "lease_id": "L-0129-spectral-only-14",
+  "next_action": "Isolated review of R14-01..05; a future solver may implement a supported non-fully-symmetric trace-null trial and recompute all detection/restoration terms. No worker launched.",
+  "objective_sha256": null,
+  "project_id": null,
+  "protocol": "jin-math-computation-handoff/v1",
+  "question": "Can the un-restored symmetric trial close the endpoint soft-cost sufficient test using the frozen scalar brackets? Establish its cost lower bound and a supported asymmetric trace-null construction.",
+  "reproduce": [
+    "python -B spectral_gate.py --output-dir <new-empty-directory>",
+    "compare generated inputs/certificates/results byte-for-byte",
+    "python -B check_spectral_gate.py --self-test --check-hashes",
+    "python -O -B check_spectral_gate.py --self-test --check-hashes",
+    "python -B check_spectral_gate.py --require-global (expected exit1)"
+  ],
+  "requested_evidence_grade": "exact_check plus proof_candidate",
+  "scope": "pre_project_reference_only_archive",
+  "window_id": null
+}
