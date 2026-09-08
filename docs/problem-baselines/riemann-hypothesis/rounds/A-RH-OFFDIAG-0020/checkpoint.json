@@ -1,0 +1,48 @@
+{
+  "format": "rh-offdiag-0020-checkpoint/v1",
+  "attempt": "A-RH-OFFDIAG-0020",
+  "issue": 128,
+  "date": "2026-09-08",
+  "actor": {
+    "kind": "agent",
+    "id": "openai-chatgpt",
+    "run_id": "run-20260908-rh-offdiag-height-20",
+    "role": "solver"
+  },
+  "git_base_sha": "39002c5a6af8c7b7f093589e6a76cfd218fcbb99",
+  "git_base_tree_sha": "d6ac23dc843e26ba123ae167228e3a0c1ff6b750",
+  "historical_parent": {
+    "commit": "0017c5895a91327adc18e0964a25f365cd60e4a3",
+    "path": "docs/problem-baselines/riemann-hypothesis/rounds/A-RH-PROFILE-0019/proof.md",
+    "git_blob_sha1": "65b686c2dd56958a88daf9d35b3fecc7835f1d5b",
+    "status": "proof_candidate",
+    "receipt": null
+  },
+  "branch": "program/i-0128/rh-offdiag-height-20",
+  "archive_status": "reference_only",
+  "mathematical_status": "proof_candidate",
+  "independent_verifier_receipt": null,
+  "sha256": {
+    "README.md": "1237faccad9d86d6e2aadbde270ad1d8fc28fdc2399607d3b8518b39437421ee",
+    "proof.md": "d00ff017a082218368441365bbebcb5ada5adf0f80887c350dfcd2fe10fa9db9",
+    "offdiag_tools.py": "432441353488908263ad03b253b88a70a0f0482b5adba1a3249ff9356c325230",
+    "check_offdiag.py": "955d1214b78e488ae4da8abed6cfcfd9716202499a4c3428af5cf869be330594",
+    "validation.json": "af9ba26d7467f06dcb4fe6687c284c727e2d9c05e0fb24debe21630a50997afb",
+    "claims.json": "7b9d7d56c289ab31e2fd8f4a7b90b467a4632c05e98303dc380c69f782a91fa5",
+    "source-scope.md": "c109711d776e8d8cd219246682ff577daa416c02957d149f110c628012f8a3fa",
+    "computation-record.json": "07b69e015e5aca3f0ced2f518537ba6e9697869114946505bd8e16ac7fa91938",
+    "computation-handoff.json": "ac448b43eacdee9e8dd9b9eafc79ca6414b64b47ec85cffedf1f93157ed4c8fc"
+  },
+  "hash_boundary": "Nine other files; checkpoint excludes itself. Its Git blob and final commit are pinned in PR.",
+  "scope": {
+    "only_additions": true,
+    "modifies_predecessors": false,
+    "advances_authority": false,
+    "actual_zero_computation": false,
+    "full_repository_local_tests": false,
+    "bundled_inventory_executed": false,
+    "upstream_lean_build": false,
+    "remote_ci": "Observe separately in PR; not predicted."
+  },
+  "next_attempt": "A-RH-JOINT-0021: source-evaluable coupled tests retaining shared operator-defect information, or a common joint moment witness."
+}

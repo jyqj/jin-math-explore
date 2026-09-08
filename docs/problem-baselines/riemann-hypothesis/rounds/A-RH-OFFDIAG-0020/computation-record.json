@@ -1,0 +1,148 @@
+{
+  "record_version": 1,
+  "execution_profile": "reproducible",
+  "status": "completed",
+  "task_file": {
+    "path": "README.md",
+    "sha256": "1237faccad9d86d6e2aadbde270ad1d8fc28fdc2399607d3b8518b39437421ee"
+  },
+  "task": {
+    "question": "Evaluate a fixed-band non-diagonal source test family, retaining height information and the scope of its scalar consistency boundary.",
+    "domain": "Finite exponential matrices; source limits separately assume PC and RVM.",
+    "assumptions": [
+      "Finite tests retain original multiplicity; source profiles and matrix bandwidth are fixed before height limits.",
+      "No actual zero list or unknown PC remainder is numerically evaluated."
+    ],
+    "deliverables": [
+      "README.md",
+      "proof.md",
+      "offdiag_tools.py",
+      "check_offdiag.py",
+      "validation.json",
+      "claims.json",
+      "source-scope.md",
+      "computation-record.json",
+      "computation-handoff.json",
+      "checkpoint.json"
+    ]
+  },
+  "backend": {
+    "name": "Python/Fraction/NumPy/mpmath",
+    "version": "3.13.5",
+    "interface": "local foreground process",
+    "libraries": {
+      "mpmath": "1.3.0",
+      "numpy": "2.3.5",
+      "python": "3.13.5"
+    }
+  },
+  "backend_decision": {
+    "selected": "Python",
+    "reason": "Portable finite exact-rational and matrix regression artifacts; NumPy/mpmath live checked.",
+    "fallback": "Not needed; primary checker completed.",
+    "readiness": "sage and wolframscript not on PATH; no broader installation/MCP claim.",
+    "inventory_snapshot_sha256": null,
+    "inventory_boundary": "Selected backend import/PATH readiness executed. Canonical inventory source was read via GitHub but raw-file export attempts failed; bundled inventory/record runner was not executed."
+  },
+  "execution": {
+    "development_runs": 1,
+    "development_samples": 6,
+    "full_runs": 1,
+    "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python check_offdiag.py --samples 120 --output validation.json",
+    "working_directory": "this package",
+    "exit_status": 0,
+    "development_note": "The development output hardcoded twelve integral comparisons although ten models existed; reporting was corrected to increment the actual counter before the final full run. No mathematical formula changed.",
+    "background_job": false
+  },
+  "precision": {
+    "exact": "Python Fraction integer/rational subchecks",
+    "numerical": "binary64 matrices and 80-node alternate double integrals; 80-digit classical benchmark",
+    "tolerance": "2e-9*(1+abs(left)+abs(right)); arrays use maximum modulus",
+    "interval_certificate": false
+  },
+  "result_summary": {
+    "counts": {
+      "PSD_tests": 124,
+      "alternative_integrals": 12,
+      "detected_missing_height_phases": 397,
+      "endpoint_estimate_checks": 521,
+      "finite_models": 124,
+      "lag_pair_and_linear_checks": 521,
+      "positive_observed_row_values": 123,
+      "scalar_consistency_checks": 480
+    },
+    "exact_counts": {
+      "interface_harmonic_bounds": 576,
+      "interface_lag_multiplicities": 13824,
+      "rational_scope_constants": 5,
+      "signed_stieltjes_identities": 64,
+      "toeplitz_psd_gram": 168,
+      "weighted_lag_norms": 168
+    },
+    "exact_total": 14805,
+    "maximum_residuals": {
+      "alternative_continuous_integral": 3.5527196344959194e-15,
+      "alternative_continuous_integral_relative": 1.1156483638527552e-16,
+      "exact_lag_linear": 8.881784197001252e-16,
+      "exact_lag_linear_relative": 4.470999265777403e-16,
+      "exact_lag_pair": 4.440894167387022e-15,
+      "exact_lag_pair_relative": 9.262691878031536e-16,
+      "growing_lag_endpoint": 1.1102230246251565e-16,
+      "growing_lag_endpoint_relative": 5.551115123125783e-17,
+      "optimizer_stationarity": 1.9984014443252818e-15,
+      "optimizer_stationarity_relative": 5.384101521181045e-16,
+      "test_Frobenius_lags": 2.842170943040401e-14,
+      "test_Frobenius_lags_relative": 2.8120071298496164e-16,
+      "trace_reconstruction": 3.5596458096434965e-15,
+      "trace_reconstruction_relative": 1.971599253251473e-16,
+      "translation_difference_invariance": 1.7763568394002505e-15,
+      "translation_difference_invariance_relative": 2.537652627714643e-16,
+      "translation_exact_squared_traces": 2.6645352591003757e-15,
+      "translation_exact_squared_traces_relative": 2.9605947323337496e-16,
+      "translation_exact_traces": 8.881784197001252e-16,
+      "translation_exact_traces_relative": 1.480297366166875e-16
+    },
+    "all_assertions": "PASS",
+    "tiny_negative_slacks": "Preserved in validation.json within the explicit tolerance."
+  },
+  "verification": {
+    "evidence_level": "numerical-evidence",
+    "exact_subchecks": "14805 specified integer/rational cases, not infinite-quantifier verification.",
+    "independent_verifier": false,
+    "cannot_imply": [
+      "No actual zero/source-asymptotic computation.",
+      "No independent PC audit, formal proof or universal profile barrier.",
+      "No higher known zero proportion or RH proof."
+    ]
+  },
+  "artifacts": [
+    {
+      "path": "README.md",
+      "sha256": "1237faccad9d86d6e2aadbde270ad1d8fc28fdc2399607d3b8518b39437421ee"
+    },
+    {
+      "path": "proof.md",
+      "sha256": "d00ff017a082218368441365bbebcb5ada5adf0f80887c350dfcd2fe10fa9db9"
+    },
+    {
+      "path": "offdiag_tools.py",
+      "sha256": "432441353488908263ad03b253b88a70a0f0482b5adba1a3249ff9356c325230"
+    },
+    {
+      "path": "check_offdiag.py",
+      "sha256": "955d1214b78e488ae4da8abed6cfcfd9716202499a4c3428af5cf869be330594"
+    },
+    {
+      "path": "validation.json",
+      "sha256": "af9ba26d7467f06dcb4fe6687c284c727e2d9c05e0fb24debe21630a50997afb"
+    },
+    {
+      "path": "claims.json",
+      "sha256": "7b9d7d56c289ab31e2fd8f4a7b90b467a4632c05e98303dc380c69f782a91fa5"
+    },
+    {
+      "path": "source-scope.md",
+      "sha256": "c109711d776e8d8cd219246682ff577daa416c02957d149f110c628012f8a3fa"
+    }
+  ]
+}
