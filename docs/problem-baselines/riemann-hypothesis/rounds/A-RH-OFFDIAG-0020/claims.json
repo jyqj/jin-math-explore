@@ -1,0 +1,226 @@
+{
+  "format": "rh-offdiag-0020-claims/v1",
+  "attempt": "A-RH-OFFDIAG-0020",
+  "status": "reference_only",
+  "dependencies": {
+    "PC": {
+      "locator": "arXiv:2609.02882v1 Lemma3.1",
+      "status": "external_theorem_input_not_independently_audited"
+    },
+    "RVM": {
+      "locator": "Classical Riemann-von Mangoldt O(log T) counting formula; arXiv:1307.5723v7 introduction",
+      "status": "external_classical_input"
+    },
+    "historical_parent": {
+      "commit": "0017c5895a91327adc18e0964a25f365cd60e4a3",
+      "path": "docs/problem-baselines/riemann-hypothesis/rounds/A-RH-PROFILE-0019/proof.md",
+      "git_blob_sha1": "65b686c2dd56958a88daf9d35b3fecc7835f1d5b",
+      "status": "proof_candidate",
+      "receipt": null
+    }
+  },
+  "claims": [
+    {
+      "id": "A-RH-OFFDIAG-0020-C01",
+      "title": "Positive separable banded tests and signed slack",
+      "statement": "For every finite conjugation-invariant multiset with original multiplicities, C_q in (2) is PSD and satisfies (3)-(5).",
+      "domain": "Finite signed exponential operators; explicit source/asymptotic domains are given per claim.",
+      "quantifier_scope": "All finite q and fixed nonnegative symbols; no spatial cell, gap or depth cap.",
+      "assumptions": [
+        "positive sampled r",
+        "d>=0",
+        "g>=0",
+        "original repeated points grouped before counting simple members"
+      ],
+      "dependency_refs": [],
+      "evidence_grade": "proof_candidate",
+      "evidence_refs": [
+        "proof.md section 1",
+        "validation.json: Finite PSD/Gram/norm and mixed inequality tests"
+      ],
+      "proof_sha256": "d00ff017a082218368441365bbebcb5ada5adf0f80887c350dfcd2fe10fa9db9",
+      "cannot_imply": [
+        "An arbitrary signed test matrix or an independent-verifier verdict.",
+        "No RH proof, mathematical authority promotion or independent verification."
+      ],
+      "source_novelty_boundary": "Classical inputs are attributed; no literature-wide novelty claim.",
+      "verifier_receipt": null
+    },
+    {
+      "id": "A-RH-OFFDIAG-0020-C02",
+      "title": "Exact lag dictionary and endpoint charge",
+      "statement": "The off-diagonal product is (6), including its second-point phase, with the Lipschitz endpoint error (7).",
+      "domain": "Finite signed exponential operators; explicit source/asymptotic domains are given per claim.",
+      "quantifier_scope": "All 0<=h<q; (7) assumes a supplied Lipschitz bound for sqrt(dr).",
+      "assumptions": [
+        "r even",
+        "r,d positive for Lipschitz estimate"
+      ],
+      "dependency_refs": [],
+      "evidence_grade": "proof_candidate",
+      "evidence_refs": [
+        "proof.md section 2",
+        "validation.json: 521 numerical lag/linear identities and endpoint comparisons"
+      ],
+      "proof_sha256": "d00ff017a082218368441365bbebcb5ada5adf0f80887c350dfcd2fe10fa9db9",
+      "cannot_imply": [
+        "An uncharged difference-only formula or fixed-h convergence for h comparable with q.",
+        "No RH proof, mathematical authority promotion or independent verification."
+      ],
+      "source_novelty_boundary": "Classical inputs are attributed; no literature-wide novelty claim.",
+      "verifier_receipt": null
+    },
+    {
+      "id": "A-RH-OFFDIAG-0020-C03",
+      "title": "Height-weighted source pair moment",
+      "statement": "For every fixed theta<1 and C1 height test, equation (8) follows from PC and RVM, with uniform signed interface control.",
+      "domain": "Finite signed exponential operators; explicit source/asymptotic domains are given per claim.",
+      "quantifier_scope": "All fixed nonnegative even exponential profiles and fixed C1 height functions, height tending to infinity.",
+      "assumptions": [
+        "external PC",
+        "RVM with O(log T) remainder",
+        "critical strip",
+        "reflection symmetry"
+      ],
+      "dependency_refs": [
+        "PC",
+        "RVM"
+      ],
+      "evidence_grade": "proof_candidate",
+      "evidence_refs": [
+        "proof.md section 3",
+        "validation.json: 14,400 exact interface counts/majorants; 64 signed finite Stieltjes identities"
+      ],
+      "proof_sha256": "d00ff017a082218368441365bbebcb5ada5adf0f80887c350dfcd2fe10fa9db9",
+      "cannot_imply": [
+        "An independently verified PC theorem, quantitative PC remainder, endpoint theta=1 source asymptotic or moving-to-endpoint uniformity.",
+        "No RH proof, mathematical authority promotion or independent verification."
+      ],
+      "source_novelty_boundary": "Classical inputs are attributed; no literature-wide novelty claim.",
+      "verifier_receipt": null
+    },
+    {
+      "id": "A-RH-OFFDIAG-0020-C04",
+      "title": "Off-diagonal source values and a common simple-height measure",
+      "statement": "Equations (15)-(18) evaluate full-source traces and retain the same weak-limit simple-height measure nu in every constraint.",
+      "domain": "Finite signed exponential operators; explicit source/asymptotic domains are given per claim.",
+      "quantifier_scope": "Fixed finite bandwidth H and fixed profiles before the height limit; nonnegative d by epsilon approximation.",
+      "assumptions": [
+        "C03",
+        "source dimension q=4ceil(V_T/4)",
+        "positive r",
+        "external PC and counting inputs"
+      ],
+      "dependency_refs": [
+        "PC",
+        "RVM"
+      ],
+      "evidence_grade": "proof_candidate",
+      "evidence_refs": [
+        "proof.md sections 4-5",
+        "validation.json: Finite lag formulas; twelve alternate continuous integrals; finite normalizations"
+      ],
+      "proof_sha256": "d00ff017a082218368441365bbebcb5ada5adf0f80887c350dfcd2fe10fa9db9",
+      "cannot_imply": [
+        "Uniform simple-height density, growing-H source limits, or a bounded trace norm for the signed source operator.",
+        "No RH proof, mathematical authority promotion or independent verification."
+      ],
+      "source_novelty_boundary": "Classical inputs are attributed; no literature-wide novelty claim.",
+      "verifier_receipt": null
+    },
+    {
+      "id": "A-RH-OFFDIAG-0020-C05",
+      "title": "Simultaneous scalar consistency",
+      "statement": "sigma_MT and nu=sigma_MT dy satisfy every (18) in the class (19), using 281/72<4.",
+      "domain": "Finite signed exponential operators; explicit source/asymptotic domains are given per claim.",
+      "quantifier_scope": "All fixed separable band symbols, theta in [9/10,1], integral r=1 and sup r<=3/2; endpoint is iterated algebraic limit.",
+      "assumptions": [
+        "nonnegative r,d,g",
+        "the specified scalar necessary-inequality family"
+      ],
+      "dependency_refs": [],
+      "evidence_grade": "proof_candidate",
+      "evidence_refs": [
+        "proof.md section 6",
+        "validation.json: 480 numerical scalar comparisons and exact rational coefficient check"
+      ],
+      "proof_sha256": "d00ff017a082218368441365bbebcb5ada5adf0f80887c350dfcd2fe10fa9db9",
+      "cannot_imply": [
+        "An actual extremizing zero configuration, a joint matrix moment realization, or a barrier for all PSD tests.",
+        "No RH proof, mathematical authority promotion or independent verification."
+      ],
+      "source_novelty_boundary": "Classical inputs are attributed; no literature-wide novelty claim.",
+      "verifier_receipt": null
+    },
+    {
+      "id": "A-RH-OFFDIAG-0020-C06",
+      "title": "Classical optimizer inclusion and cancellation",
+      "statement": "The classical r_theta has supremum <=12/11 and at theta=1 the witness makes every added main term vanish.",
+      "domain": "Finite signed exponential operators; explicit source/asymptotic domains are given per claim.",
+      "quantifier_scope": "Every theta in (0,1]; cancellation at the endpoint optimizer.",
+      "assumptions": [
+        "classical variational functional re-derived in section 6"
+      ],
+      "dependency_refs": [],
+      "evidence_grade": "proof_candidate",
+      "evidence_refs": [
+        "proof.md section 6",
+        "validation.json: Rational 12/11<3/2 and numerical constant-potential test"
+      ],
+      "proof_sha256": "d00ff017a082218368441365bbebcb5ada5adf0f80887c350dfcd2fe10fa9db9",
+      "cannot_imply": [
+        "A new optimizer, higher known simple-zero proportion or proof that the actual fraction equals the benchmark.",
+        "No RH proof, mathematical authority promotion or independent verification."
+      ],
+      "source_novelty_boundary": "Classical inputs are attributed; no literature-wide novelty claim.",
+      "verifier_receipt": null
+    },
+    {
+      "id": "A-RH-OFFDIAG-0020-C07",
+      "title": "Translation guard",
+      "statement": "The q=2 translated simple pair preserves all difference-only data but changes tr CT from 5/2 to 3/2 and tr CT^2 from 4 to 2.",
+      "domain": "Finite signed exponential operators; explicit source/asymptotic domains are given per claim.",
+      "quantifier_scope": "The two exact configurations in (21).",
+      "assumptions": [
+        "r=d=1",
+        "g=1+cos(2pi y)"
+      ],
+      "dependency_refs": [],
+      "evidence_grade": "proof_candidate",
+      "evidence_refs": [
+        "proof.md section 7",
+        "validation.json: Exact constants and numerical direct matrix reconstructions"
+      ],
+      "proof_sha256": "d00ff017a082218368441365bbebcb5ada5adf0f80887c350dfcd2fe10fa9db9",
+      "cannot_imply": [
+        "A contradiction to the source theorem or a zero configuration satisfying all arithmetic source restrictions.",
+        "No RH proof, mathematical authority promotion or independent verification."
+      ],
+      "source_novelty_boundary": "Classical inputs are attributed; no literature-wide novelty claim.",
+      "verifier_receipt": null
+    },
+    {
+      "id": "A-RH-OFFDIAG-0020-C08",
+      "title": "Growing-lag and simple-measure guards",
+      "statement": "Equation (22) retains an endpoint loss 1/2 at h=q/2; equal total simple measure alone does not fix its cosine moment.",
+      "domain": "Finite signed exponential operators; explicit source/asymptotic domains are given per claim.",
+      "quantifier_scope": "Every even q for the one-point guard; the two explicitly stated measures.",
+      "assumptions": [
+        "fixed definitions in section 7"
+      ],
+      "dependency_refs": [],
+      "evidence_grade": "proof_candidate",
+      "evidence_refs": [
+        "proof.md section 7",
+        "validation.json: Five growing-lag matrices and exact analytic measure integration"
+      ],
+      "proof_sha256": "d00ff017a082218368441365bbebcb5ada5adf0f80887c350dfcd2fe10fa9db9",
+      "cannot_imply": [
+        "Failure of all smaller growing-lag regimes or the true simple-zero height distribution.",
+        "No RH proof, mathematical authority promotion or independent verification."
+      ],
+      "source_novelty_boundary": "Classical inputs are attributed; no literature-wide novelty claim.",
+      "verifier_receipt": null
+    }
+  ]
+}

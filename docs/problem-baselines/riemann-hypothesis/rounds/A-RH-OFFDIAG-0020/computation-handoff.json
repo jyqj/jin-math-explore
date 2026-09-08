@@ -1,0 +1,76 @@
+{
+  "schema": "jin-math-computation-handoff/v1",
+  "problem_id": "preproject-rh",
+  "window_id": "pre-genesis-sequential",
+  "attempt_id": "A-RH-OFFDIAG-0020",
+  "claim_id": null,
+  "objective_sha256": "1237faccad9d86d6e2aadbde270ad1d8fc28fdc2399607d3b8518b39437421ee",
+  "objective_boundary": "Bounded archive README hash, not a v13 Project objective.",
+  "question": "Evaluate a fixed-band non-diagonal source test family, retaining height information and the scope of its scalar consistency boundary.",
+  "domain": "Finite exponential matrices; source limits separately assume PC and RVM.",
+  "assumptions": [
+    "Finite tests retain original multiplicity; source profiles and matrix bandwidth are fixed before height limits.",
+    "No actual zero list or unknown PC remainder is numerically evaluated."
+  ],
+  "requested_evidence": "numerical_evidence",
+  "backend": {
+    "name": "Python/Fraction/NumPy/mpmath",
+    "version": "3.13.5",
+    "interface": "local foreground process",
+    "libraries": {
+      "mpmath": "1.3.0",
+      "numpy": "2.3.5",
+      "python": "3.13.5"
+    }
+  },
+  "exact_input": {
+    "seed": 2026090820,
+    "samples": 120,
+    "interface_bin_lengths": [
+      1,
+      24
+    ],
+    "exact_PSD_dimensions": [
+      1,
+      24
+    ],
+    "exact_PSD_bandwidths": [
+      0,
+      6
+    ],
+    "signed_Stieltjes_sizes": [
+      1,
+      16
+    ]
+  },
+  "reproduction_command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python check_offdiag.py --samples 120 --output validation.json",
+  "integrity_command": "python check_offdiag.py --check-package",
+  "code_artifacts": [
+    {
+      "path": "offdiag_tools.py",
+      "sha256": "432441353488908263ad03b253b88a70a0f0482b5adba1a3249ff9356c325230"
+    },
+    {
+      "path": "check_offdiag.py",
+      "sha256": "955d1214b78e488ae4da8abed6cfcfd9716202499a4c3428af5cf869be330594"
+    }
+  ],
+  "result_artifacts": [
+    {
+      "path": "validation.json",
+      "sha256": "af9ba26d7467f06dcb4fe6687c284c727e2d9c05e0fb24debe21630a50997afb"
+    }
+  ],
+  "computation_record": {
+    "path": "computation-record.json",
+    "sha256": "07b69e015e5aca3f0ced2f518537ba6e9697869114946505bd8e16ac7fa91938"
+  },
+  "evidence_grade": "numerical_evidence",
+  "cannot_imply": [
+    "No actual zero/source-asymptotic computation.",
+    "No independent PC audit, formal proof or universal profile barrier.",
+    "No higher known zero proportion or RH proof.",
+    "The simultaneous measure witness is not an actual extremizing zero configuration or a full joint operator state.",
+    "Fixed bandwidth is essential; no growing-bandwidth or moving-to-endpoint estimate."
+  ]
+}
