@@ -1,0 +1,68 @@
+{
+  "schema": "goldbach-error-handoff/v1",
+  "checkpoint": "CP-ERR-0013",
+  "findings": [
+    {
+      "id": "F-ERR-080",
+      "statement": "G9 half-level indexed switching/support with power-saving exceptions",
+      "grade": "conditional_proof_candidate",
+      "locator": "proof.md §§2-3"
+    },
+    {
+      "id": "F-ERR-081",
+      "statement": "G9 nonzero H, actual-mass and P0 support yield explicit signed upper contract",
+      "grade": "conditional_proof_candidate",
+      "locator": "proof.md §§4-5"
+    },
+    {
+      "id": "F-ERR-082",
+      "statement": "fixed half-level cap5.291548 and positive mixed-level penalty",
+      "grade": "computed_certificate_pending_review",
+      "locator": "proof.md §6,results.json"
+    },
+    {
+      "id": "F-ERR-083",
+      "statement": "S5=G10+C_wedge-C_order and literal G16=C_wedge",
+      "grade": "proof_candidate_with_bounded_checks",
+      "locator": "proof.md §7"
+    },
+    {
+      "id": "F-ERR-084",
+      "statement": "actual prime-difference singleton and unbounded family fail the pointwise covering route",
+      "grade": "proof_candidate_with_exact_witness",
+      "locator": "proof.md §8,validation.json"
+    },
+    {
+      "id": "F-ERR-085",
+      "statement": "ordering correction and four-prime wedge prevent two naive repairs",
+      "grade": "exact_witness_and_proof_candidate",
+      "locator": "proof.md §8"
+    },
+    {
+      "id": "F-ERR-086",
+      "statement": "local G10 zero-domain gain cannot be booked before the signed combination repair",
+      "grade": "dependency_boundary",
+      "locator": "proof.md §9"
+    }
+  ],
+  "G9_fixed_loss": "33264*epsilon",
+  "G9_decaying_loss": "15*q_V+15*ell_N+24*h_star+540*r_N+19*C_A*T^(3-A0)+12*T^2*(1+T)^2/(N^a-1)+2*E9*T^2/N",
+  "half_level_cap_increase_vs_printed": "0.019238",
+  "half_level_penalty_vs_mixed_formula": "[0.019247081455916009,0.019247084204649121]",
+  "wedge_comparison_integral": "[0.215661673734091411,0.215661687555650617] is NOT an established full C_wedge bound",
+  "combination_gate": "BLOCKED_POINTWISE_ROUTE",
+  "CP12_local_results_withdrawn": false,
+  "CP12_gain_globally_spendable": false,
+  "aggregate_theorem_refuted": false,
+  "unproved_next_obligations": [
+    "exact signed Buchstab reconstruction of(4.27)-(4.31)",
+    "three/four-prime wedge and ordering reconciliation",
+    "aggregate estimate including the source error",
+    "independent review of all dependencies"
+  ],
+  "next_task": "Repair the signed combinatorial bridge before more coefficient optimization; preserve the negative C_order and all factor-count branches.",
+  "global_ledger_changed": false,
+  "global_status": "INCONCLUSIVE",
+  "independent_review": "pending",
+  "background_verifier_started": false
+}

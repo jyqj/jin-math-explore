@@ -1,0 +1,45 @@
+{
+  "schema": "jin-math-computation-handoff/v1",
+  "checkpoint": "CP-ERR-0013",
+  "profile": "reproducible",
+  "work_issue": 127,
+  "actor": {
+    "kind": "agent",
+    "id": "openai-chatgpt",
+    "run_id": "run-20260908-goldbach-g9-combination-13",
+    "role": "solver"
+  },
+  "base_sha": "39002c5a6af8c7b7f093589e6a76cfd218fcbb99",
+  "branch": "program/i-0127/goldbach-g9-combination-cp13",
+  "lease_id": "L-0127-goldbach-g9-combination-cp13",
+  "record": "computation-record.json",
+  "record_sha256": "4c83dd8e3b658ebc0ee2ec070f8a7fb615fb74cfe4648d09935385f7a9d121ba",
+  "results": "results.json",
+  "results_sha256": "54ca456e78a0053310814b970ec7616fed091258891e9b766400fdfeee9ac812",
+  "finite_validation": "validation.json",
+  "finite_validation_sha256": "a6c8d67fdc3b1d4ae2e2833f2a157526b1c52738a540326ea7fe069470e99aae",
+  "reproduce": "python check_g9_combination.py --compute",
+  "saved_check": "python check_g9_combination.py --check",
+  "saved_check_recomputes_integrals": false,
+  "output_summary": {
+    "G9_half_cap": "5.291548",
+    "half_minus_mixed": "positive, about0.01924708",
+    "actual_prime_difference": "144568-3=5*29*997",
+    "finite_cases": 1998
+  },
+  "publication": "all13 new files through actual archival PR; head/tree/remote bytes/CI in final receipt",
+  "source_and_scope_gates": [
+    "CP12 U-SLAB pending review",
+    "BJS/table imported",
+    "pointwise failure not aggregate theorem refutation",
+    "G10 gain not globally spendable before repair"
+  ],
+  "independent_verifier_started": false,
+  "global_status": "INCONCLUSIVE",
+  "cannot_imply": [
+    "independent verification",
+    "aggregate theorem refutation",
+    "effective numeric N0",
+    "Goldbach resolution"
+  ]
+}

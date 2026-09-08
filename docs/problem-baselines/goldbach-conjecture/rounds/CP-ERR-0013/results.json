@@ -1,0 +1,46 @@
+{
+  "schema": "goldbach-g9-combination-integrals/v1",
+  "checkpoint": "CP-ERR-0013",
+  "backend": "mpmath.iv",
+  "backend_version": "1.3.0",
+  "decimal_precision": 50,
+  "cells_per_piece": 8192,
+  "distinct_midpoint_nodes": 24576,
+  "derivative_bounds": {
+    "base_derived": "187481/4",
+    "mixed_derived": "5694921/80",
+    "base_used": "50000",
+    "mixed_used": "100000",
+    "penalty_used": "150000"
+  },
+  "g9_half_level": [
+    "5.291546934149039330",
+    "5.291547723815019734"
+  ],
+  "g9_mixed_formula": [
+    "5.272299850860634580",
+    "5.272300641442859354"
+  ],
+  "half_minus_mixed": [
+    "0.019247081455916009",
+    "0.019247084204649121"
+  ],
+  "wedge_comparison": [
+    "0.215661673734091411",
+    "0.215661687555650617"
+  ],
+  "errors": {
+    "half": "639051625/1618536548007936",
+    "mixed": "1279586225/3237073096015872",
+    "penalty": "54925/39963865382912",
+    "wedge": "3125/452192108544"
+  },
+  "g9_half_safe_cap": "1322887/250000",
+  "cap_increase_vs_printed": "9619/500000",
+  "mixed_formula_is_accepted_G9_bound": false,
+  "intervals_are_actual_counts": false,
+  "CP12_wedge_gain_globally_spendable": false,
+  "independently_verified": false,
+  "aggregate_theorem_refuted": false,
+  "global_status": "INCONCLUSIVE"
+}

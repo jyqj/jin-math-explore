@@ -1,0 +1,93 @@
+{
+  "schema": "jin-math-computation-record/v1",
+  "checkpoint": "CP-ERR-0013",
+  "profile": "reproducible",
+  "actor": {
+    "id": "openai-chatgpt",
+    "run_id": "run-20260908-goldbach-g9-combination-13",
+    "role": "solver"
+  },
+  "intent": "directed fixed-integral enclosures plus exact finite identity models; no aggregate theorem verification",
+  "runtime": {
+    "python": "3.13.5",
+    "mpmath": "1.3.0",
+    "backend": "Fraction/integers and mpmath.iv",
+    "precision_decimal": 50
+  },
+  "backend_reason": "portable bounded reproducible files; no large prime-count or algebraic-structure task; direct Git transport failed DNS",
+  "inputs": {
+    "exponents": {
+      "a": "4/53",
+      "b": "4/33",
+      "g": "3/11",
+      "c": "1/3"
+    },
+    "cells_per_segment": 8192,
+    "distinct_nodes": 24576,
+    "source_assumptions": "source-lock.json,contracts.json"
+  },
+  "primary_execution": {
+    "command": "python check_g9_combination.py --compute --output results.json",
+    "exit_code": 0,
+    "full_primary_runs": 1,
+    "elapsed_seconds_observed": 2.13,
+    "peak_rss_kib_observed": 97836,
+    "output": "results.json"
+  },
+  "finite_execution": {
+    "normal_command": "python check_g9_combination.py --self-test",
+    "optimized_command": "python -O check_g9_combination.py --self-test",
+    "exit_codes": [
+      0,
+      0
+    ],
+    "stdout_equal": true,
+    "finite_cases": 1998,
+    "structural_negative_controls": 12,
+    "output": "validation.json"
+  },
+  "synthetic_model_boundary": {
+    "AP_X_m": "2N/(3m), NOT measured Li errors",
+    "native_N_values": [
+      502,
+      1002,
+      2002,
+      5002,
+      10002
+    ],
+    "finite_sieve": "R=floor(N/2),P0=6,W=3 if 3 does not divide N else1,Z=floor(sqrt(R/6)); algebra models, no source-onset assertion",
+    "singletons": "odd n<N at N=100,200,...700",
+    "family_corners": "X=729/1000/10000, endpoint multipliers1/2, not prime enumeration"
+  },
+  "pre_freeze_refinements": [
+    "finite N choices include nonzero H rather than only multiples of all small factors",
+    "added four-prime wedge witness to prevent using W3 as a full correction bound",
+    "corrected proposed two-cutoff equality by retaining negative C_order",
+    "proof spelling, tau clarification and source-label spacing after a local-link check failure; numerical algorithm/results unchanged"
+  ],
+  "artifact_bindings": {
+    "proof.md": "62c05394885756c9dd14db51fa8f529411b11df35b8691d1970fbe3a5e75a75b",
+    "check_g9_combination.py": "b572f542ea3430753fc9b9e101e8e06ca7b11c53d53ba9d559264a74d4216a45",
+    "results.json": "54ca456e78a0053310814b970ec7616fed091258891e9b766400fdfeee9ac812",
+    "validation.json": "a6c8d67fdc3b1d4ae2e2833f2a157526b1c52738a540326ea7fe069470e99aae"
+  },
+  "other_checks": "final package-hash and result-mutation outcomes are recorded after execution in the PR/issue receipt",
+  "not_executed": [
+    "second full numerical run",
+    "optimized-mode quadrature",
+    "independent verifier",
+    "formal proof kernel",
+    "original BJS table rebuild",
+    "huge P0 evaluation",
+    "effective numeric N0",
+    "full local repository tests",
+    "bundled computation-record schema validator"
+  ],
+  "evidence": "same-context interval certificate under analytic candidate + bounded exact regressions",
+  "cannot_imply": [
+    "full prime-sequence aggregate refutation",
+    "Goldbach proof/refutation",
+    "independent source acceptance",
+    "full combination closure"
+  ]
+}
