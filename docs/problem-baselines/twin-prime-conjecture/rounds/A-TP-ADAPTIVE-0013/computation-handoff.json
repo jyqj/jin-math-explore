@@ -1,0 +1,83 @@
+{
+  "protocol": "jin-math-computation-handoff/v1",
+  "scope": "pre_project_reference_only_archive",
+  "project_id": null,
+  "window_id": null,
+  "objective_sha256": null,
+  "attempt_id": "A-TP-ADAPTIVE-0013",
+  "claim_ids": [
+    "A13-01",
+    "A13-02",
+    "A13-03",
+    "A13-04"
+  ],
+  "identity_note": "No Project transaction or schema PASS claimed; this is a hash-bound archive.",
+  "issue": 122,
+  "lease_id": "L-0122-adaptive-sieve-13",
+  "branch": "program/i-0122/twin-adaptive-sieve-13",
+  "base_sha": "39002c5a6af8c7b7f093589e6a76cfd218fcbb99",
+  "question": "Root-adaptive two-endpoint sieve, compact-uniform capacity, signed counting error, variable helper and sharper restoration stability.",
+  "domain": "Fixed dimension and sup-bounded real root arrays; fixed 0<gamma<ell<1/2; physical theorem conditional on density/support and separate arithmetic realization.",
+  "actual_evidence_grade": "proof_candidate and exact_check; no independent review",
+  "backend": "CPython3.13.5 stdlib int/Fraction",
+  "reproduce": [
+    "python -B adaptive_sieve.py --output-dir <new-empty-directory>",
+    "compare fresh inputs/certificates/results with frozen copies",
+    "python -B check_adaptive.py --self-test --check-hashes",
+    "python -O -B check_adaptive.py --self-test --check-hashes",
+    "python -B check_adaptive.py --require-global (expected exit1)"
+  ],
+  "artifacts": [
+    {
+      "path": "adaptive_sieve.py",
+      "sha256": "23e49bb92ff606a99747fbba4b8a0f3489f3e9c11fb6b95437a75124571cf2c9"
+    },
+    {
+      "path": "check_adaptive.py",
+      "sha256": "dc1c4f2c6e61963b9800728393429968f4e264ebef7aca57f5a989dd72a84e21"
+    },
+    {
+      "path": "proof.md",
+      "sha256": "c831efae6d5de8f9454c0e7578c58da167401057e08f8f17c3be58bdb589de3d"
+    },
+    {
+      "path": "inputs.json",
+      "sha256": "ffd0cb26628b162a991ce55ec83c5d123a82fe24aafd24068e45bded1ff2df14"
+    },
+    {
+      "path": "certificates.json",
+      "sha256": "b8ad64e1d2308e670b9f7b32864c4e54041440de924eae94f1a0a433c61dab9d"
+    },
+    {
+      "path": "results.json",
+      "sha256": "2a16bfdc9a3f21b46a8a36c6e4425c57aa5818942bc8f7768d01c83ce0f1eb1d"
+    },
+    {
+      "path": "source-lock.json",
+      "sha256": "08f654748620d4cb83f9c7b308e61f3694d371258744df11ee7ba85077163f33"
+    },
+    {
+      "path": "computation-record.json",
+      "sha256": "582a0a01006f0f48ac0249461fd378834946aed4e588f6fec02a9cc2215385c1"
+    },
+    {
+      "path": "verification-ticket.md",
+      "sha256": "bb32bf6b1d531b82a2527aa31c0506e063a2d8f251977229be81378ff9fd6ae4"
+    }
+  ],
+  "next_action": "Obtain same-normalizer q_plus and deletion energy a_plus, or radial error bins; validate legal helper and weighted discrete-to-physical bridge, then test endpoint-subtracted detection positivity.",
+  "blockers": [
+    "actual physical trace and deletion data not evaluated",
+    "helper prime contract and approximation errors not discharged",
+    "no detection positivity",
+    "isolated mathematics review pending"
+  ],
+  "cannot_imply": [
+    "new prime-gap theorem or twin primes",
+    "lower worst-root uniform penalty",
+    "true physical error reduction by79.69%",
+    "all finite CRT bounds decrease",
+    "Project completion"
+  ],
+  "delivery": "All twelve small files in the PR; no bulk dependencies. Predecessor C12 separately recovered unchanged in PR121. Final commit/tree, compare and observed CI in issue/PR handoff."
+}

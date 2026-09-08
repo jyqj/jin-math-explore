@@ -1,0 +1,134 @@
+{
+  "schema": "twin-adaptive-computation-record/v1",
+  "as_of": "2026-09-08",
+  "attempt": "A-TP-ADAPTIVE-0013",
+  "actor": {
+    "id": "openai-chatgpt",
+    "run_id": "run-20260908-twin-adaptive-13",
+    "role": "solver"
+  },
+  "backend": {
+    "name": "CPython",
+    "version": "3.13.5",
+    "acceptance": "stdlib Fraction/int only",
+    "floating_point_acceptance": false
+  },
+  "profile": "reproducible exact finite certificates",
+  "feasibility": {
+    "adaptive_states": 665,
+    "largest_ordered_CRT_pairs": 442225,
+    "period": 385,
+    "execution": "all foreground commands completed with observed exit codes"
+  },
+  "commands": [
+    {
+      "command": "/opt/pyvenv/bin/python -B adaptive_sieve.py --output-dir /mnt/data/twin13_work/fresh-final",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "stdout": "{\"finite\": {\"adaptive\": {\"TV_squared\": \"14572565664409/9489097744\", \"coefficient_count\": 665, \"compatible_pairs\": 2197, \"independent_mean\": \"1288215/267298528\", \"interval_sum\": \"6392398925234849/1749030496174080\", \"mean\": \"15920831510501/4372576240435200\", \"ordered_pairs\": 442225, \"raw_count\": 665, \"tensor_error_bound\": \"5659200/84724087\"}, \"fixed\": {\"TV_squared\": \"94653441/117649\", \"coefficient_count\": 513, \"compatible_pairs\": 2077, \"independent_mean\": \"326511/66824632\", \"interval_sum\": \"56551681841247/15182556390400\", \"mean\": \"1006294833/271117078400\", \"ordered_pairs\": 263169, \"raw_count\": 513, \"tensor_error_bound\": \"5659200/84724087\"}}, \"ok\": true, \"restoration_bound_ratio\": \"5062500000000/24930019042009\"}\n",
+      "stderr": "",
+      "elapsed_seconds": 1.307788
+    },
+    {
+      "command": "/opt/pyvenv/bin/python -B check_adaptive.py --self-test",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "stdout": "{\"certificate_replay\": true, \"convex_brackets\": 2, \"corruptions_rejected\": 25, \"endpoint_pairs\": 126, \"first_increase\": {\"W_class_representative\": 1043, \"adaptive\": \"-5031/3896480\", \"fixed\": \"-3519/3896480\", \"n_mod_period\": 273}, \"incompatible_divisor_deletion_validated\": true, \"independently_verified\": false, \"interval_integers\": 1000, \"literal_residue_products\": 561699, \"local_kernel_entries\": 13779, \"new_prime_gap_bound\": false, \"nonfactor_positions\": 250, \"ok\": true, \"periodic_transform_checks\": 770, \"pointwise_increases\": 2, \"raw_shared_prime_deletion_rejected\": true, \"raw_shared_prime_states\": 540, \"residual_pair_sum\": \"868665843/752953600\", \"restoration_fibres\": 36, \"restoration_transfer_checks\": 9, \"variable_helper_completions\": 81, \"worst_root_equality_checked\": true, \"zero_capacity_fibres\": 16}\n",
+      "stderr": "",
+      "elapsed_seconds": 3.342394
+    },
+    {
+      "command": "/opt/pyvenv/bin/python -O -B check_adaptive.py --self-test",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "stdout": "{\"certificate_replay\": true, \"convex_brackets\": 2, \"corruptions_rejected\": 25, \"endpoint_pairs\": 126, \"first_increase\": {\"W_class_representative\": 1043, \"adaptive\": \"-5031/3896480\", \"fixed\": \"-3519/3896480\", \"n_mod_period\": 273}, \"incompatible_divisor_deletion_validated\": true, \"independently_verified\": false, \"interval_integers\": 1000, \"literal_residue_products\": 561699, \"local_kernel_entries\": 13779, \"new_prime_gap_bound\": false, \"nonfactor_positions\": 250, \"ok\": true, \"periodic_transform_checks\": 770, \"pointwise_increases\": 2, \"raw_shared_prime_deletion_rejected\": true, \"raw_shared_prime_states\": 540, \"residual_pair_sum\": \"868665843/752953600\", \"restoration_fibres\": 36, \"restoration_transfer_checks\": 9, \"variable_helper_completions\": 81, \"worst_root_equality_checked\": true, \"zero_capacity_fibres\": 16}\n",
+      "stderr": "",
+      "elapsed_seconds": 4.921508
+    },
+    {
+      "command": "/opt/pyvenv/bin/python -B check_adaptive.py --require-global",
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "stdout": "",
+      "stderr": "{\"ok\": false, \"error\": \"refused: actual restored data, prime helper contract and detection positivity are absent\"}\n",
+      "elapsed_seconds": 0.86115
+    }
+  ],
+  "fresh_generation_equal": [
+    "inputs.json",
+    "certificates.json",
+    "results.json"
+  ],
+  "normal_and_optimized_stdout_equal": true,
+  "test_summary": {
+    "certificate_replay": true,
+    "convex_brackets": 2,
+    "corruptions_rejected": 25,
+    "endpoint_pairs": 126,
+    "first_increase": {
+      "W_class_representative": 1043,
+      "adaptive": "-5031/3896480",
+      "fixed": "-3519/3896480",
+      "n_mod_period": 273
+    },
+    "incompatible_divisor_deletion_validated": true,
+    "independently_verified": false,
+    "interval_integers": 1000,
+    "literal_residue_products": 561699,
+    "local_kernel_entries": 13779,
+    "new_prime_gap_bound": false,
+    "nonfactor_positions": 250,
+    "ok": true,
+    "periodic_transform_checks": 770,
+    "pointwise_increases": 2,
+    "raw_shared_prime_deletion_rejected": true,
+    "raw_shared_prime_states": 540,
+    "residual_pair_sum": "868665843/752953600",
+    "restoration_fibres": 36,
+    "restoration_transfer_checks": 9,
+    "variable_helper_completions": 81,
+    "worst_root_equality_checked": true,
+    "zero_capacity_fibres": 16
+  },
+  "preliminary_failures": [
+    {
+      "stage": "scratch diagnostic probe",
+      "error": "SyntaxError: else385 lacked a space in probe.py",
+      "exit_code": 1,
+      "scope": "outside research package; corrected before that diagnostic executed"
+    },
+    {
+      "stage": "first checker self-test",
+      "error": "global-squarefree deletion changes the sum",
+      "exit_code": 1,
+      "cause": "incorrect negative control conflated deleting shared raw roots with deleting already incompatible divisor coefficients",
+      "resolution": "retain raw shared states; separately confirm that incompatible divisor terms are zero after the full transform and that pre-transform raw deletion changes the answer",
+      "candidate_theorem_changed": false
+    }
+  ],
+  "reproduction_boundary": "different literal calculation paths are from the same solver context, not an independent mathematical reviewer",
+  "not_run": [
+    "full local repository suite (same-turn direct git DNS failure)",
+    "Lean/FLINT",
+    "actual186 full-grid double trace or deletion norm",
+    "helper single-prime arithmetic verification",
+    "isolated review"
+  ],
+  "payload_sha256": {
+    "adaptive_sieve.py": "23e49bb92ff606a99747fbba4b8a0f3489f3e9c11fb6b95437a75124571cf2c9",
+    "check_adaptive.py": "dc1c4f2c6e61963b9800728393429968f4e264ebef7aca57f5a989dd72a84e21",
+    "proof.md": "c831efae6d5de8f9454c0e7578c58da167401057e08f8f17c3be58bdb589de3d",
+    "inputs.json": "ffd0cb26628b162a991ce55ec83c5d123a82fe24aafd24068e45bded1ff2df14",
+    "certificates.json": "b8ad64e1d2308e670b9f7b32864c4e54041440de924eae94f1a0a433c61dab9d",
+    "results.json": "2a16bfdc9a3f21b46a8a36c6e4425c57aa5818942bc8f7768d01c83ce0f1eb1d",
+    "source-lock.json": "08f654748620d4cb83f9c7b308e61f3694d371258744df11ee7ba85077163f33",
+    "verification-ticket.md": "bb32bf6b1d531b82a2527aa31c0506e063a2d8f251977229be81378ff9fd6ae4"
+  },
+  "cannot_imply": [
+    "actual endpoint detection positivity",
+    "a new prime-gap bound",
+    "twin primes",
+    "independent verification"
+  ],
+  "final_hash_note": "The eleven-payload manifest is checked after this record and the handoff are frozen; resulting stdout is recorded in the final PR/issue handoff to avoid self-reference."
+}
