@@ -1,0 +1,52 @@
+{
+  "schema": "goldbach-computation-handoff/v1",
+  "checkpoint": "CP-ERR-0012",
+  "issue": 119,
+  "authority": "preproject documentation archive, no Project objective/head mutation",
+  "actor": {
+    "kind": "agent",
+    "id": "openai-chatgpt",
+    "run_id": "run-20260908-goldbach-switching-12",
+    "role": "solver"
+  },
+  "base_sha": "39002c5a6af8c7b7f093589e6a76cfd218fcbb99",
+  "branch": "program/i-0119/goldbach-switching-cp12",
+  "lease_id": "L-0119-goldbach-switching-cp12",
+  "inputs": {
+    "fixed_exponents": [
+      "4/33",
+      "2/11",
+      "3/11"
+    ],
+    "G3_tau0": "9/19",
+    "derivative_envelope": "21000",
+    "proof_file": "proof.md",
+    "proof_sha256": "a0f91c1e9e49f70784aa55b5c76e2e8ce26f9d1a4add959dafb8d9c2e9d693d2"
+  },
+  "outputs": {
+    "code": "check_switching.py",
+    "code_sha256": "35cd2fba01bb1bc25db4efa589ac309da084140c8477ff2ae659f84aa762863f",
+    "results": "results.json",
+    "results_sha256": "8ae502b10cb23e9860b05cd869fcd89e09887e31b68e0b6134fee115a6ea76c2",
+    "validation": "validation.json",
+    "validation_sha256": "3829c9ff4c67947ec117928adf3a8e45341d645e4ef9b7a20828c94b8e46a893",
+    "record": "computation-record.json",
+    "record_sha256": "30386ab3324750de215fcaf39a22f80c859b3ac907dc439e5bc56ed2d74239a3"
+  },
+  "reproduction": [
+    "python check_switching.py --compute",
+    "python check_switching.py --check",
+    "python -O check_switching.py --self-test",
+    "python check_switching.py --require-global"
+  ],
+  "replay_distinction": "--compute integrates; --check replays finite tests and hashes but never integrates",
+  "grade": "directed numeric certificate plus analytic proof candidate and finite exact regressions",
+  "cannot_imply": [
+    "source theorem correctness",
+    "independent verification",
+    "actual G3/G10 two-sided count interval",
+    "global coefficient/exponent improvement",
+    "effective numerical N0",
+    "binary Goldbach"
+  ]
+}

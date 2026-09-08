@@ -1,0 +1,48 @@
+{
+  "schema": "goldbach-predecessor-map/v1",
+  "checkpoint": "CP-ERR-0012",
+  "read_date_utc": "2026-09-08",
+  "base_sha": "39002c5a6af8c7b7f093589e6a76cfd218fcbb99",
+  "baseline": {
+    "issue": 27,
+    "merged_pr": 33,
+    "status": "reference-only pre-genesis; unchanged"
+  },
+  "parent_error_program": 50,
+  "sequential_predecessor": {
+    "checkpoint": "CP-ERR-0011",
+    "issue": 115,
+    "pr": 118,
+    "head": "8679065d5cf2146e959a6112542bbc4bcf1e67ef",
+    "handoff_blob": "1fa4c3d24955b2f1554b1664b6458dc9bb3da347",
+    "fresh_read": "PR open/unmerged; lease explicitly released; handoff selects G3/G10"
+  },
+  "support_predecessor": {
+    "checkpoint": "CP-ERR-0006",
+    "issue": 81,
+    "pr": 84,
+    "head": "de47073ced039039a376304d7db545eb8c06fb55",
+    "proof_blob": "2a0de992c34ee485dc20a1cc1b810b4a5aee6e4e",
+    "scope": "old slab [N^(6/11),N^(2/3)] is insufficient; current proof re-derives the wider slab",
+    "not_claimed": "old source/candidate independently verified or edited"
+  },
+  "presieve_predecessor": {
+    "checkpoint": "CP-ERR-0007",
+    "issue": 87,
+    "pr": 89,
+    "head": "40661581b969d0ffa70359e3f51e4b214d9160e3",
+    "proof_blob": "40b8be4ddd61ef784bb0502e8ef4036716b32ae4",
+    "retained": "P0 support and actual-mass rebasing mechanism; re-derived in current proof"
+  },
+  "provenance_boundary": "reads of frozen sources and released sequential handoffs, not import of unfrozen sibling staging or authority",
+  "old_package_full_replays": false,
+  "all_old_files_unchanged": true,
+  "run": {
+    "kind": "agent",
+    "id": "openai-chatgpt",
+    "run_id": "run-20260908-goldbach-switching-12",
+    "role": "solver"
+  },
+  "branch": "program/i-0119/goldbach-switching-cp12",
+  "next_task": "G9 mixed level and corresponding combinatorial input; frozen L35 applicability before reuse"
+}
